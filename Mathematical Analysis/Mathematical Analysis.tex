@@ -1,0 +1,1350 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+
+\renewcommand{\@chapapp}{}% Not necessary...
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Natural}{\mathbb{N}}
+\newcommand{\Zahlen}{\mathbb{Z}}
+\newcommand{\Quoziente}{\mathbb{Q}}
+\newcommand{\newpara}{\\ \newline}
+
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+\newtheorem{Theorem}{Theorem}[section]%Theorem
+\newtheorem*{Corollary}{Corollary} %Corollary
+\newtheorem*{Lemma}{Lemma}%Lemma
+\newtheorem*{Statement}{Statement} % Statement
+\theoremstyle{definition}
+\newtheorem*{Definition}{Definition} %Definition
+\newtheorem*{Proposition}{Proposition}%Proposition
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{Mathematical Analysis}}
+% Author
+\author{\textsc{Hechen Hu}}
+
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\chapter{Preface}
+	This note was took during my study of Mathematical Analysis using the book Zorich's \textit{Mathematical Analysis, Second Edition}. Some proof might just be summarized, and I'll make page references to the original proof in the book. The first 8 chapter come from the first book, the rest come from the second book.All page references goes to the corresponding book.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Auto-generated table of contents, list of figures and list of tables %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%
+% NEW CHAPTER! %
+%%%%%%%%%%%%%%%%
+\chapter{General Mathematical Concepts and Notation}
+
+\section{Mathematical Symbols and their meanings}
+\begin{tabular}{| l | l |}
+	\hline
+	Notation &Meaning\\ \hline
+	$L\Rightarrow P$ &L implies P \\ \hline
+	$L\Leftrightarrow P$ &L is equivalent to P \\ \hline
+	$((L\Rightarrow P)\land(\lnot P))\Rightarrow(\lnot L)$ &If P follows from L and P is false, then L is false \\ \hline
+	$\lnot((L\Leftrightarrow G)\lor(P\Leftrightarrow G)$ &G is not equivalent either to L or to P \\ \hline
+	$A \coloneqq B$ &The Definition of A is B (equality by definition)\\ \hline
+	$\square$ &End of proof \\
+	\hline
+\end{tabular}
+
+\section{Sets and Operations on Them}
+
+\subsection{Naive Set Theory}
+1$^0$.\quad A set may consist of any distinguishable objects($x\in A\Rightarrow\exists!x\in A$) \\
+2$^0$.\quad A set is unambiguously determined by the collection of objects that comprise it. \\
+3$^0$.\quad Any property defines the set of objects having that property($A = \{x|P(x)\}\Rightarrow P(A)$). \\ \\
+However, this will lead to Russell's Paradox: \\
+Let's have$P(M) \coloneqq M\notin M$ \\
+Consider the class $K = \{M|P(M)\}$. If so $K$ is not a set, since whether $P(K)$ is true or false, contradiction arises.\\
+
+\subsection{ZFC: Zermelo-Fraenkel Axioms and Axiom of Choice}
+1$^0$.\quad \textbf{(Axiom of Extensionality)} Sets $ A $ and $B$ are equal iff they have the same elements. $ (A=B)\Leftrightarrow(\forall x((x\in A)\Leftrightarrow(x \in B))) $\\
+2$^0$. \quad \textbf{(Axiom of Seperation)} To any set $A$ and any property P there corresponds a set $B$ whose elements are those elements of $A$, and only those, having property P(if $A$ is a set, then $B=\{x\in A|P(x)\}$ is also a set). \\
+3$^0$. \quad \textbf{(Union Axiom)} For any set $ M $ whose elements are sets there exists a set $\bigcup M$, called the union of $ M $ and consisting of those elements and only those that belong to some element of $ M $ $ (x\in \bigcup M \Leftrightarrow \exists X((X\in M)\land (x\in X))) $ \\
+Similarly, the intersection of the set $ M $ is defined as:
+\begin{equation}
+	\bigcap M  \coloneqq \{x\in \bigcup M | \forall X((X\in M)\Rightarrow (x\in X))\} \nonumber
+\end{equation}
+4$^0$ \quad \textbf{(Pairing Axiom)} For any sets $ X $ and $ Y $ there exists a set $ Z $ such that $ X $ and $ Y $ are its only elements. \\
+5$^0$ \quad \textbf{(Power Set Axiom)} For any set $ X $ there exists a set $ P(X)$ having each subset of $ X $ as an element, and having no other elements. \\
+\newline
+\begin{Definition}
+The \textit{successor} $X^+$ of the set $ X $ is $X^+ = X\cup \{X\}$.\\
+\end{Definition} 
+\begin{Definition}
+An \textit{inductive} set is a set that $\varnothing$ is one of its elements and the successor of each of its elements aso belongs to it.
+\end{Definition}
+6$^0$ \quad \textbf{(Axiom of Infinity)} There exist inductive sets (Example: $\mathbb{N}_0$).\\ 
+7$^0$ \quad \textbf{(Axiom of Replacement)} Let $ F(x,y) $ be a statement(a formula) such that for every $ x_0 \in X$ there exists a unique object $ y_0 $ such that $ F(x_0,y_0) $ is true. Then the objects $ y $ for which there exists an element $ x\in X $ such that $ F(x,y) $ is true form a set.\\
+And finally, an axiom that is independent of ZF. \\
+\newline
+\begin{Definition}
+A choice function is a function $ f $, defined on a collection $ X $ of nonempty sets, such that for every set $ A $ in $ X $, $ f(A) $ is an element of $ A $.
+\end{Definition}
+8$^0$ \quad \textbf{(Axiom of Choice/Zermelo's Axiom)}  For any set $ X$ of nonempty sets, there exists a choice function $ f $ defined on $ X $.$(\forall X[\varnothing \notin X \Rightarrow \exists f: X\mapsto \bigcup X \quad \forall A\in X(f(A)\in A)])$
+
+\subsection{The \textit{Cardinality} of a Set(\textit{Cardinal Numbers})}
+\begin{Definition}
+The set $ X $ is said to be \textit{equipollent} to the set $ Y $ if there exists a bijective mapping of $ X $ onto $ Y $(then $ X\sim Y $).
+\end{Definition}
+\begin{Definition}
+\textit{Cardinality} is a measure of the number of elements of the set. If $ X \sim Y $, we write $ card X = card Y $.
+\end{Definition}
+If $ X $ is equipollent to some subset of $ Y $, we say $ card X\leqslant card Y $, thus
+\begin{equation}
+	(card X \leqslant card Y)\coloneqq \exists Z\subset Y (card X = card Z) \nonumber
+\end{equation}
+A set is called \textit{finite} if it is not equipollent to any proper subset of itself; otherwise it is called \textit{infinite}. \\
+It has the  properties below:\\
+\newline
+1$^0  \quad (cardX\leqslant card Y)\land(card Y \leqslant card Z)\Rightarrow(card X \leqslant card Z)$.\\
+2$^0 \quad (card X \leqslant card Y)\land(card Y \leqslant card X)\Rightarrow(card X = card Y)$(The Schröder–Bernstein theorem).\\
+3$^0 \quad \forall X\forall Y(card X \leqslant card Y)\lor(card Y \leqslant card X)$(Cantor's theorem).\\
+\newline
+We say $ card X < card Y $ if $ (card X \leqslant card Y) \land (card X \neq card Y)$.\\
+let $ \varnothing $ be the empty set and $ P(X) $ the set of all subsets(thus, the power set) of the set $ X $. Then:
+\begin{Theorem}
+	$ card X < card P(X) $
+\end{Theorem}
+\begin{proof}
+The assertion is obvious for the empty set, and we shall assume that $ X\neq \varnothing $.\\
+Since $ P(X) $ contains all the one-element subsets of $ X $, $ cardX \leqslant cardP(X)$.\\
+Suppose, contrary to the assertion, that there exists a bijective mapping $ f : X \to P(X) $. Let set $ A = \{x\in X:x\notin f(x)\}$ consisting of the elements $ x \in X $ that do not belong to the set $ f(x)\in P(X) $ assigned to them by the bijection. Because $ A \in P(X) $, there exists $ a\in X $ such that $ f(a) = A $. For the element $ a $ the relation $ a \in A $ or $ a \notin A $ is impossible by the definition of $ A $(Similar to Russell's Paradox).
+\end{proof}
+
+
+
+\subsection{Operations on Sets}
+\begin{tabular}{| l | l | l |}
+	\hline
+	Notation &Meaning &Definition \\ \hline
+	$A\subset B$ &$A$ is a subset of $B$ &$\forall x ((x\in A) \Rightarrow(x\in B))$ \\ \hline
+	$A = B$ &$A$ equals to $B$ &$(A \subset B)\land(B \subset A)$ \\ \hline
+	$\varnothing$ &Empty Set & $\{x|x\neq x\}$ \\ \hline
+	$A \cup B$ &The union of $ A $ and $ B $ &$ \{x|x\in A \lor x\in B\} $ \\
+	$ A \cap B $ &The intersection of $ A $ and $ B $ &$ \{x|x\in A \land x\in B\} $ \\ \hline
+	$ A\setminus B $ &The difference between $ A $ and $ B $ &$ \{x|x\in A \land x\notin B\} $ \\ \hline
+	$ C_M A $ &The complement of $A$ in M &$ \{x|x\in M \land x\notin A\} where A\subset M $ \\ \hline
+	$ A \times B $ &The Cartesian Product of $ A $ and $ B $ &$ \{(x,y)|x\in A \land y\in B\} $ \\ \hline
+	$ A^2 $ &$ A \times A $ & \\
+		\hline
+\end{tabular}
+ \newline \\
+In the ordered pair$ z = (x_1,x_2) $ where$ Z = X_1 \times X_2 ,z\in Z,x_1 \in X_1, x_2 \in X_2$, $ x_1 $ is called the \textit{first projection} of the pair $ z $ and denoted  pr$_1 z $ while $ x_2 $ is called the \textit{second projection} of the pair $ z $ and denoted  pr$_2 z $.
+
+
+
+
+
+
+\section{Relations and Functions}
+\subsection{Definitions of Functions}
+\begin{Definition} 
+We say that there is a \textit{function} defined on $ X $ with values in $ Y $ if, by virtue of some fule $ f $, to each element $ x\in X $ there corresponds an element $ y \in Y $.
+\begin{equation}
+f(X) \coloneqq \{y \in Y | \exists x((x\in X)\land(y = f(x)))\} \nonumber
+\end{equation}
+X is called the \textit{domain of definition} and Y is called \textit{set of values} or \textit{range} of the function.
+\end{Definition}
+\begin{Definition}
+If $ A \subset X$ and $ f:X \to Y $ is a function. We denote by $ f|_A $ the function $ \varphi:A \to Y $ that agrees with $ f $ on $ A $. More precisely, $ f|_A(x) \coloneqq \varphi(x)$ if $ x\in A  $. The function $ f|_A $ is called the restriction of $ f $ to $ A $, and the function $ f:X \to Y $ is called an extension or a continuation of $ \varphi $ to $ X $.
+\end{Definition}
+
+We use the term \textit{domain of departure} of the function to denote any set $ X $ containing the domain of a function, and \textit{domain of arrival} to denote any subset of $ Y $ containing its range.
+
+\subsection{Elementry Classification of Mappings}
+\begin{Definition}
+When a function $ f: X\to Y $ is called a mapping, the value $ f(x) \in Y $ that it assumes at the element $ x \in X$ is usually called the \textit{image} of $ x $. \\
+The \textit{image} of a set $ A \subset X $ under the mapping $  f: X\to Y $ is defined as the set
+\begin{equation}
+f(A) \coloneqq \{y\in Y | \exists x((x\in A)\land(y = f(x))\} \nonumber
+\end{equation}
+consisting of the elements of $ Y $ that are images of elements of $ A $.
+\end{Definition} 
+
+The set
+\begin{equation}
+	f^{-1}(B)\coloneqq \{x\in X | f(x)\in B\} \nonumber
+\end{equation}
+consisting of the elements of $ X $ whose images belong to $ B $ is called the \textit{pre-image} (or \textit{complete pre-image}) of the set $ B \subset Y $. \\
+\newline
+\begin{Definition}
+A mapping $  f: X\to Y  $ is said to be \\
+\textit{surjective} if $ f(X) = Y $\\
+\textit{injective} if $ \forall x_1,x_2 \in X $, $(f(x_1)=f(x_2))\Rightarrow(x_1=x_2)$ holds.\\
+\textit{bijective} if it's both surjective and injective.	
+\end{Definition}
+
+\begin{Definition}
+The inverse mapping of a bijective $ f $ is denoted as
+\begin{equation}
+f^{-1}:Y\to X \nonumber
+\end{equation}
+and defined as follows: if $ f(x) = y $, then $ f^{-1}(y) = x $. 
+\end{Definition}
+Note that the pre-image of a set is defined for any mapping $ f:X\to Y $, even if it is not bijective and hence has no inverse.
+
+\subsection{Composition of Functions and Mutually Inverse Mappings}
+\begin{Definition}
+For two mappings $ f:X\to Y $ and $ g:Y \to Z $,
+\begin{equation}
+g \circ f:X \to Z,\quad (g \circ f)(x)\coloneqq g(f(x)) \nonumber
+\end{equation}
+is called the \textit{composition} of the mapping $ f $ and the mapping $ g $.	
+\end{Definition}
+
+If all the terms of a composition $ f_n \circ ... \circ f_1 $ are equal to the same function $ f $, we abbreviate it to $ f^n $.\\
+\newline
+Function composition is associative, that is,
+\begin{equation}
+	h \circ (g\circ f) = (h \circ g)\circ f \nonumber
+\end{equation}
+But in general, $ g\circ f \neq f \circ g $. \\
+\newline
+\begin{Definition}
+The mapping $ f:X \to X $ that assigns each element in $ X $ to itself is called the \textit{identity mapping} on $ X $ and denoted $ e_X $.
+\end{Definition} 
+\begin{Lemma}
+	$	(g\circ f = e_X) \Rightarrow$($g$ is surjective) $\land$ ($f$ is injective).
+\end{Lemma}
+
+\begin{proof}
+	If $ f:X\to Y$,$ g:Y\to X $, and $ g \circ f = e_X:X\to X $, then
+	\begin{equation}
+		X = e_X(X) = (g\circ f)(X) = g(f(X))\subset g(Y) \nonumber
+	\end{equation}
+	and hence $ g $ is surjective. \\
+	Further, if$ x_1\in X $ and $ x_2 \in X $, then
+	\begin{align}
+		(x_1\neq x_2) &\Rightarrow (e_X(x_1)\neq e_X(x_2))\Rightarrow((g\circ f)(x-1)\neq (g\circ f)(x_2))\Rightarrow \nonumber \\
+							 &\Rightarrow (g(f(x_1))\neq g(f(x_2))) \Rightarrow(f(x_1)\neq f(x_2)) \nonumber
+	\end{align}
+	and therefore $ f $ is injective.
+\end{proof}
+
+\begin{Proposition}
+The mappings $ f :X\to Y $ and $ g:Y\to X $ are bijective and mutually inverse to each other if and only if $ g \circ f = e_X $ and $ f \circ g = e_Y $.
+\end{Proposition}
+
+
+\subsection{Functions as Relations. The Graph of a Function}
+\subsubsection{Relations}
+\begin{Definition}
+A Relation $ R $ is any set of ordered pairs $ (x,y) $. \\
+The set $ X $ is called the \textit{domain of definition} of $ R $, and the set $ Y $ is the \textit{range of values}. 
+\end{Definition}
+Any set containing the domain of definition of a relation is called a \textit{domain of departure} for that relation, and \textit{domain of arrival} is a set that contains the range of values of the relation. \\
+\newline
+Instead writing $ (x,y)\in R $, we write $ xRy $ and say that $ x $ is \textit{connected with} $ y $ \textit{by the relation $ R $}.\\
+If $ R \subset X^2 $, then we say that the relation $ R $ is defined on $ X $.
+
+\subsubsection{Classification of Relations}
+\begin{Definition}
+An \textit{equivalence relation} is a relation that satisfy the following properties: \\
+\newline
+$ aRa $ (Reflexivity);\\
+$ aRb \Rightarrow bRa $ (Symmetry); \\
+$ (aRb)\land (bRc) \Rightarrow aRc $ (Transitivity).\\
+\newline
+An equivalence relation is denoted by the special symbol $ \sim $. $ a\sim b $ means $ a $ is \textit{equivalent} to $ b $.	
+\end{Definition}
+
+\begin{Definition}
+A \textit{partial ordering} on a set $ X^2 $ is a relation $ R $ that have the following properties: \\
+\newline
+$ aRa $ (Reflexivity);\\
+$ (aRb)\land (bRc) \Rightarrow aRc $ (Transitivity).\\
+$ (aRb) \land (bRa )\Rightarrow (a=b) $ (Anti-symmetry);	
+\end{Definition}
+
+We often write $ a\preceq b $ and say that $ b $ \textit{follows} $ a $.
+If the condition
+\begin{equation}
+	\forall a \forall b((aRb)\lor(bRa) \nonumber
+\end{equation}
+holds in addition to transitivity and anti-symmetry defining a partial ordering relation(this means any two elements of $ X $ is comparable), the relation $ R $ is called an \textit{ordering}, and the set $ X $ is said to be \textit{linearly ordered}.
+
+\subsubsection{Functions and Their Graphs}
+\begin{Definition}
+	A relation $ R $ is said to be functional if
+	\begin{equation}
+	(xRy_1)\land(xRy_2)\Rightarrow (y_1=y_2) \nonumber
+	\end{equation}
+	and it is called a \textit{function}.\\
+	$ R\subset X \times Y $ is a \textit{mapping from $ X $ into $ Y $}, or a \textit{function from $ X $ into $ Y $}.\\
+\end{Definition}
+
+\begin{Definition}
+The \textit{graph} of a function $ f:X \to Y $, is the subset $ \Gamma $ of $ X \times Y $.
+\begin{equation}
+\Gamma \coloneqq \{(x,y)\in X \times Y | y = f(x)\} \nonumber
+\end{equation}
+\end{Definition} 
+
+
+\chapter{The Real Numbers}
+\section{The Axiom System and Some General Properties of the Set of Real Numbers}
+\subsection{The Axiom System of the Real Numbers}
+\subsubsection{Axioms for Addition:} An operation 
+\begin{equation}
+	+:\Real \times \Real \to \Real \nonumber
+\end{equation}
+is defined, assgining to each ordered pair $ (x,y) $ of elements $ x,y $ of $ \Real $ a certain element $ x+y \in \Real $. \\
+1$_+ $\quad There exists a neutral, or identity element $ 0 $ (called zero) such that 
+\begin{equation}
+	x+0 = 0+x = x \nonumber
+\end{equation} for every $ x \in \Real $. \\
+2$ _+ $\quad For every element $ x\in \Real $ there exists an element $ -x\in \Real $ called the \textit{negative of $ x $}.
+\begin{equation}
+	\forall x \in \Real \Rightarrow (\exists! (-x)\in \Real)\land (x +(-x) = (-x)+x=0) \nonumber
+\end{equation}
+3$ _+ $\quad The operation $ + $ is associative.
+\begin{equation}
+	\forall x \forall y \forall z \in \Real \Rightarrow x+(y+z) = (x+y)+z \nonumber
+\end{equation}
+4$ _+ $\quad The operation $ + $ is commutative.
+\begin{equation}
+	\forall x \forall y \in \Real \Rightarrow(x+y = y+x) \nonumber
+\end{equation}
+\newline
+\begin{Definition}
+A group structure is defined on the set $ G $ -- or $ G $ is a group -- if Axioms 1$_+ $, 2$ _+ $, and 3$ _+ $ holds for an operation defined on this set. The group is called \textit{additive} group if the operation is called addition. When the operation is also commutative, that is, Axiom 4$ _+ $ holds, the group is also called a \textit{commutative group} or an \textit{Abelian group}. 
+\end{Definition}
+According to Axioms 1$ _+ $ -- 4$ _+ $, $ \Real $ is an additive Abelian group.\\
+\subsubsection{Axioms for Multiplication:} An operation 
+\begin{equation}
+	\bullet:\Real \times \Real \to \Real \nonumber
+\end{equation}
+is defined, assigning to each ordered pair $ (x,y) $ of elements $ x,y\in \Real $ a certain element $ x \cdot y \in \Real $, called the product of $ x $ and $ y $. \\
+1$ _\bullet $\quad There exists a neutral, or identity element $ 1 \in \Real\setminus 0 $ such that
+\begin{equation}
+	\forall x \in \Real \Rightarrow (x \cdot 1 = 1 \cdot x = x) \nonumber
+\end{equation}
+2$ _\bullet $\quad  For every element $ x \in \Real\setminus 0 $ there exists an element $ x^{-1}\in \Real $, called the \textit{inverse} or \textit{reciprocal} of $ x $.
+\begin{equation}
+	\forall x \in \Real \Rightarrow (x\cdot x^{-1} = x^{-1} \cdot x = 1) \nonumber
+\end{equation}
+3$ _\bullet $\quad The operation $ \bullet $ is associative.
+\begin{equation}
+	\forall x \forall y \forall z \in \Real \Rightarrow x\cdot(y\cdot z) = (x\cdot y)\cdot z \nonumber
+\end{equation}
+4$ _\bullet $\quad The operation $ \bullet $ is commutative.
+\begin{equation}
+	\forall x \forall y \in \Real \Rightarrow x\cdot y = y \cdot x \nonumber
+\end{equation}
+The set $ \Real \setminus 0 $ is a \textit{multiplicative} group. \\
+\newline
+Multiplication is distributive with respect to addition.
+\begin{equation}
+		\forall x \forall y \forall z \in \Real \Rightarrow (x+y)z = xz+yz \nonumber
+\end{equation}
+\begin{Definition}
+If two operations satisfying the Axioms of Addition and Multiplication are defined on a set $ G $, then $ G $ is called a \textit{field}.
+\end{Definition}
+\subsubsection{Order Axioms}
+Between elements of $ \Real $ there is a relation $ \leqslant $ defined, and :\\
+0$ _{\leqslant} $\quad $ \forall x \in\Real(x\leqslant x) $ (Reflexivity) \nonumber \\
+1$ _{\leqslant} $\quad $ (x \leqslant y)\land (y \leqslant x) \Rightarrow (x=y) $(Anti-Symmetry)\nonumber \\
+2$ _{\leqslant} $\quad $ (x \leqslant y) \land (y \leqslant z) \Rightarrow (x \leqslant z) $ (Transitivity)\nonumber \\
+3$ _{\leqslant} $\quad $ \forall x \in \Real \forall y \in \Real(x\leqslant y)\lor(y\leqslant x) $\nonumber \\
+Thus, the relation $ \leqslant $ is an ordering, and $ \Real $ is linearly ordered.
+\subsubsection{The Connection between Addition and Order on $ \Real $}
+\begin{equation}
+	\forall x \forall y \forall z \in \Real \Rightarrow ((x\leqslant y)\Rightarrow (x +z \leqslant y + z) \nonumber
+\end{equation}
+\subsubsection{The Connection between Multiplication and Order on $ \Real $}
+\begin{equation}
+\forall x \forall y \in \Real \Rightarrow ((0\leqslant x)\land (0 \leqslant y)\Rightarrow(0 \leqslant x \cdot y)) \nonumber
+\end{equation}
+\subsubsection{The Axiom of Completeness(Continuity)}
+If $ X $ and $ Y $ are nonempty subsets of $ \Real $ having the property that $ x \leqslant y $ for every $ x \in X $ and every $ y \in Y $, then there exists $ c\in \Real $ such that $ x\leqslant c \leqslant y $ for all $ x \in X $ and $ y \in Y $.
+\begin{equation}
+	(\forall X \forall Y\subset \Real)\land(X,Y \neq \varnothing)\land(\forall x\in X \forall y \in Y \Rightarrow x \leqslant y)\Rightarrow (\exists c\in \Real \forall x\in X \forall y \in Y (x \leqslant c \leqslant y)) \nonumber
+\end{equation}
+\newline
+\textbf{Any set on which these axioms hold can be considered a \textit{model} of the real numbers.} \\
+\newline
+\begin{Definition}
+An axiom system is said to be \textit{categorical} if it determines an unique mathematical object.
+\end{Definition}
+
+\begin{Definition}
+If there are two models of independent number systems $ \Real_A $ and $ \Real _B $ that satisfying all the axioms, then a bijective correspondence can be established between these two systems, say $ f:\Real_A \to \Real_B $, preserving the arithmetic operations and the order, that is, 
+\begin{align}
+f(x+y) &= f(x) + f(y)\nonumber \\
+f(x\cdot y) &= f(x) \cdot f(y) \nonumber \\
+x\leqslant y &\Leftrightarrow f(x) \leqslant f(y) \nonumber 
+\end{align}
+and we can say that $ \Real_A $ and $ \Real _B $ are \textit{isomorphic} and the mapping $ f $ is called an \textit{isomorphism}.
+\end{Definition} 
+
+\begin{Theorem}
+	The Axiom System of The Real Numbers is categorical.
+\end{Theorem}
+
+\subsection{Some General Algebraic Properties of Real Numbers}
+\subsubsection{Consequences of the Addition Axioms}
+1$ ^0 $\quad There is only one zero in the set of real numbers.\\
+2$ ^0 $\quad Each element of the set of real numbers has a unique negative.\\
+3$ ^0 $\quad In $ \Real $ the equation
+\begin{equation}
+	a + x = b \nonumber
+\end{equation}
+has the unique solution 
+\begin{equation}
+	x = b+(-a) \nonumber
+\end{equation}
+
+\subsubsection{Consequences of the Multiplication Axioms}
+1$ ^0 $\quad There is only one multiplicative unit in the real numbers.\\
+2$ ^0 $\quad For each $ x \neq 0 $ there is only one reciprocal $ x^{-1} $.\\
+3$ ^0 $\quad For $ a\in \Real\setminus 0 $, the equation $ a\cdot x = b $ has the unique solution $ x = b\cdot a^{-1} $.
+
+\subsubsection{Consequences of the Axiom Connecting Addition and Multiplication}
+1$ ^0 $\quad For any $ x\in \Real $ 
+\begin{equation}
+	x\cdot 0 = 0 \cdot x = 0 \nonumber
+\end{equation}
+2$ ^0 $\quad $ (x\cdot y = 0)\Rightarrow(x=0)\lor(y=0) $. \\
+3$ ^0 $\quad For any $x \in \Real  $
+\begin{equation}
+	-x = (-1)\cdot x \nonumber
+\end{equation}
+4$ ^0 $\quad For any $ x\in\Real $
+\begin{equation}
+	(-1)\cdot(-x)=x \nonumber
+\end{equation}
+5$ ^0 $\quad For any $ x\in \Real $
+\begin{equation}
+	(-x)\cdot(-x) = x\cdot x \nonumber
+\end{equation}
+
+\subsubsection{Consequences of the Order Axioms}
+1$ ^0 $\quad For any $ x $ and $ y $ in $ \Real $ precisely one of the following relations holds:
+\begin{equation}
+	x < y, \quad x = y,\quad x>y \nonumber
+\end{equation}
+2$ ^0 $\quad For any $ x,y,z\in\Real $
+\begin{align}
+	(x<y)\land(y\leqslant z) &\Rightarrow (x<z) \nonumber \\	
+	(x\leqslant y)\land(y< z) &\Rightarrow (x<z) \nonumber
+\end{align}
+
+\subsubsection{Consequences of the Axiom Connecting Order with Addition and Multiplication}
+1$ ^0 $\quad For any $ x,y,z,w\in \Real $
+\begin{align}
+	(x<y)&\Rightarrow(x+z)<(y+z)\nonumber \\
+	(0<x)&\Rightarrow(-x<0) \nonumber\\
+	(x\leqslant y)\land(z\leqslant w)&\Rightarrow (x+z)\leqslant(y+w)\nonumber \\
+	(x< y)\land(z<w)&\Rightarrow (x+z)<(y+w)\nonumber \\
+\end{align}
+2$ ^0 $\quad If $ x,y,z \in \Real $,then
+\begin{align}
+	(0<x)\land(0<y)&\Rightarrow(0<xy) \nonumber \\
+	(x<0)\land(y<0)&\Rightarrow(0<xy) \nonumber \\
+	(x<0)\land(0<y)&\Rightarrow(xy<0) \nonumber \\
+	(x<y)\land(0<z)&\Rightarrow(xz<yz)\nonumber \\
+	(x<y)\land(z<0)&\Rightarrow(yz<xz)\nonumber
+\end{align}
+3$ ^0 $\quad $0<1$. \\
+4$ ^0 $\quad $ (0<x)\Rightarrow(0<x^{-1}) $ and $ (0<x)\land(x<y)\Rightarrow(0<y^{-1})\land(y^{-1}<x^{-1}) $.
+
+\subsection{The Completeness Axiom and the Existence of a Least Upper(or Greatest Lower) Bound of a Set of Numbers}
+\begin{Definition}
+	A set $ X\subset \Real $ is said to be \textit{bounded above} (resp. \textit{bounded below}) if there exists a number $ c\in\Real $ such that $ x\leqslant c $(resp.$ c\leqslant x $) for all $ x\in X $.
+\end{Definition}
+\begin{Definition}[Maximal and Minimal Elements]
+	\begin{align}
+	(a= maxX)&\coloneqq(a\in X\land \forall x\in X(x\leqslant a))\nonumber \\
+	(a= minX)&\coloneqq(a\in X\land \forall x\in X(a\leqslant x))\nonumber \\
+	\end{align}
+	It follows from the order Axiom 1$ _\leqslant $ that if there is a maximal (resp. minimal ) element in a set of numbers, it is the only one. \\
+	However, not every set, not even every bounded set, has a maximal or minimal element(e.g. $ X = \{x\in R|0\leqslant x<1\} $).
+\end{Definition}
+\begin{Definition}
+	The smallest number that bounds a set $ X\subset \Real $ from above is called the \textit{least upper bound}(or the \textit{eact upper bound}) of $ X $ and denoted $ sup X $("the supremum of $ X $").
+	\begin{equation}
+	(s=sup X)\coloneqq \forall x\in X((x\leqslant s)\land(\forall s^\prime<s\exists x^\prime \in X (s^\prime < x^\prime)))\nonumber
+	\end{equation}
+	Similarly, the greatest lower bound of $ X $, $ inf X $("the infimum of $ X $) can be defined as:
+	\begin{equation}
+	(i=inf X)\coloneqq \forall x\in X((i\leqslant x)\land(\forall i^\prime>i\exists x^\prime \in X (x^\prime < i^\prime)))\nonumber
+	\end{equation}
+\end{Definition}\textbf{}
+\begin{Lemma}
+	(The least upper bound principle) Every nonempty set of real numbers that is bounded from above has a unique least upper bound.
+\end{Lemma}
+\begin{proof}
+	Since we already know that the minimal element of a set of numbers is unique(the relation $ \leqslant $ is Anti-Symmetric), we need only verify that the least upper bound exists.\\
+	Let $ X\subset \Real $ be a given set and $ Y = \{y\in \Real|\forall x\in X (x \leqslant y)\} $. We know that $ X \neq \varnothing $ and $ Y \neq \varnothing $. Then, by the completeness axiom there exists $ c \in R $ such that $ \forall x \in X \forall y \in Y (x\leqslant c \leqslant y) $. Because $ c $ is  greater than all the elements in $ X $ and smaller than all the elements in $ Y $, we can see that $ c \in Y$ and $ c = min Y $. $ \forall c^\prime < c $ we have $ c^\prime \in X $, and according to the completeness axiom of real numbers, there exists some $ x^\prime \in X$ such that $ c^\prime \leqslant x^\prime \leqslant c $. Thus $ c $ is $ sup X $.
+\end{proof}
+The existence of greatest lower bound is analogous with the existence of least upper bound, so
+\begin{Lemma}
+	($ X $ is nonempty and bounded below)$ \Rightarrow(\exists! inf X) $.
+\end{Lemma}
+
+
+
+
+
+
+
+
+
+\section{The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers}
+\subsection{The Natural Numbers and the Principle of Mathematical Induction}
+\subsubsection{Definition of the Set of Natural Numbers}
+\begin{Definition}
+	A set $ X\subset \Real $ is \textit{inductive} if for each number $ x\in X $, it also contains $ x+1 $.
+\end{Definition}
+
+\begin{Definition}
+	The set of \textit{natural numbers} is the smallest inductive set(has the cardinality of $ \aleph_0 $) containing $ 1 $, that is, the intersection of all inductive sets that contain $ 1 $.
+\end{Definition}
+
+\subsubsection{The Principle of Mathematical Induction}
+\begin{Definition}
+	If a subset $ E $ of the set of natural numbers $ \Natural $ is such that $ 1 \in E $ and together with each number $ x\in E $, the number $ x+1 $ also belongs to $ E $, then $ E=\Natural $.
+	\begin{equation}
+		(E\subset \Natural)\land(1\in E)\land(x\in E \Rightarrow (x+1)\in E)\Rightarrow E = \Natural \nonumber
+	\end{equation}
+\end{Definition}
+Some properties of the natural numbers:\\
+1$ ^0 $\quad The sum and product of natural numbers are natural numbers.\\
+2$ ^0 $\quad $ (n\in \Natural)\land(n\neq 1)\Rightarrow ((n-1)\in \Natural) $. \\
+3$ ^0 $\quad For any $ n\in \Natural $ the set $ \{x\in \Natural | n <x\} $ contains a minimal element, namely
+\begin{equation}
+	min\{x\in \Natural | n <x\} = n+1 \nonumber
+\end{equation}
+4$ ^0 $\quad $ (n\in\Natural)\land(m \in \Natural)\land(n<m)\Rightarrow(n+1\leqslant m) $.\\
+5$ ^0 $\quad The number $ (n+1)\in\Natural $ is the immediate successor of the number $ n\in \Natural $; that is, if $ n\in \Natural $, there are no natural numbers $ x $ satisfying $ n-1<x<n $. \\
+6$ ^0 $\quad If $ n\in \Natural $ and $ n\neq 1 $, then $ (n-1)\in \Natural $ and $ (n-1) $ is the immediate predecessor of $ n\in \Natural $; that is , if $ n\in \Natural $, there are no natural numbers $ x $ satisfying $ n-1<x<n $.\\ 
+7$ ^0 $\quad In any nonempty subset of $ \Natural $ there is a minimal element.\\
+\begin{proof}
+	Let $ M \subset \Natural $. \\
+	Case 1: For $ 1\in M $, We'll have $ minM $ = 1, since $ \forall n \in \Natural (1\leqslant n)$. \\
+	Case 2: For $ 1 \notin M $, we find a set $ E $ such that $ 1 \in E = \Natural \setminus M $. If $ n $ is $ max E $, then $ \forall e \in E \Rightarrow e \leqslant n $. However, $ (n+1) \notin E $ because $ \forall n \in \Natural\Rightarrow(n+1)>n $, and thus $ (n+1)\in M $ (If such $ n $ do not exist, then $ E $  which contains $ 1 $ is not bounded from above, and we can see that $ (n\in E) \Rightarrow ((n+1)\in E) $. By the principle of induction, $ E = \Natural $. But this is impossible, since $ \Natural \setminus E = M \neq \varnothing $). \\
+	Therefore, $ (\forall x\in M)\Rightarrow (n\nleqslant x\nleqslant (n+1) ) \Rightarrow  (min M = (n+1)) $ .
+\end{proof}
+
+\subsection{Rational and Irrational Numbers}
+\subsubsection{The Integers}
+\begin{Definition}
+	The union of the set of natural numbers, the set of negatives of natural numbers, and zero is called the set of \textit{integers} and is denoted $ \Zahlen $.
+\end{Definition}
+The addition and multiplication of integers do not lead outside of $ \Zahlen $. Thus, $ \Zahlen $ is an Abelian group with respect to addition, but $ \Zahlen $ nor $ \Zahlen \setminus 0 $ is a group with respect to multiplication. \\
+\begin{Theorem}[The fundamental theorem of arithmetic]
+	Each natural number admits a representation as a product 
+	\begin{equation}
+		n = p_1 \cdot \cdot \cdot p_k \nonumber
+	\end{equation}
+	where $ p_1,..., p_k $ are prime numbers. This representation is unique except for the order of the factors.
+\end{Theorem}
+\begin{Corollary}
+	$ 1 $ is not a prime number, since the product representation can contain infinite numbers of $ 1 $, which makes the representation not unique.
+\end{Corollary}
+
+\subsubsection{The Rational Numbers}
+\begin{Definition}
+	Numbers of the form $ m \cdot n^{-1} $, where $ m,n \in \Zahlen $, are called rational numbers. The set of rational numbers is denoted as $ \Quoziente $.
+\end{Definition}
+
+\subsubsection{The Irrational Numbers}
+\begin{Definition}
+	The real numbers that are not rational are called \textit{irrational}. The set of irrational numbers is $ \Real \setminus \Quoziente $.
+\end{Definition}
+\begin{Statement}
+	$ \sqrt{2} $ is irrational.
+\end{Statement}
+
+\begin{proof}
+	Let $ X $ and $ Y $ be the sets of positive real numbers such that $ \forall x \in X (x^2<2) $ and $ \forall y \in Y (2<y^2) $. $ X \neq \varnothing $ and $ Y \neq \varnothing $, since $ 1 \in X $ and $ 2 \in Y $. \newpara
+	Further, $ (x<y)\Leftrightarrow(x^2<y^2) $, and by the completeness axiom there exists $ s \in \Real $ such that $\forall x \in X \forall y \in Y  (x \leqslant s \leqslant y )$. The next step is to show that $ s^2=2 $. \newpara
+	Case 1:$ s^2<2 $. Then we can see, for example, the number $ s+ \frac{2-s^2}{3s} $, which is larger than $ s $, would have a square less than $ 2 $. Indeed, we know that $ 1 \in X $, $ 1^2\leqslant s^2 <2 $, and $ 0< \Delta \coloneqq 2 - s^2 \leqslant 1 $. It follows that 
+	\begin{equation}
+		(s+\frac{\Delta}{3s})^2 = s^2 + 2\cdot \frac{\Delta}{3s} + (\frac{\Delta}{3s})^2 < s^2 + 3s\cdot \frac{\Delta}{3s} = s^2 + \Delta = 2 \nonumber
+	\end{equation}
+	Therefore $ (s+ \frac{\Delta}{3s})\in X $, and this contradicts to the fact that $ \forall x \in X (x\leqslant s) $. \newpara
+	Similarly, we can prove that $ s^2 \ngtr 2 $ by consider the number $ s -  \frac{\Delta}{3s}$ and $ 0<\Delta \coloneqq s^2 -2 <3 $, and we have $ s^2=2 $. \newpara
+	Finally, now we'll show that $ s \notin \Quoziente $. Let;s suppose the contrary that $\exists m \in \Natural \exists n \in \Natural (s=\frac{m}{n}) $ and $ m $ as well as $ n $ is a prime number. Because $ m $ and $ n $ are both prime, we can see that the only common factor between them is $ 1 $. But
+	\begin{align}
+		\frac{m}{n} &= \sqrt{2} \nonumber \\
+		(\frac{m}{n})^2&= 2 \nonumber \\
+		m^2 &= n^2 \cdot 2 \nonumber \\
+	\end{align}
+	Hence $ m $ is even. Now let $ m = 2k $, and $ 2 k^2 = n^2 $. Also, $ n $ has to be divisible by $ 2 $. This contradicts with the fact that the only common factors between $ m $ and $ n $ is 1.
+\end{proof}
+\begin{Definition}(Algebraic Numbers and Transcendental Numbers)
+	A real number is called \textit{algebraic} if it is the root of an algebraic equation
+	\begin{equation}
+		a_0x^n + \cdot \cdot \cdot + a_{n-1}x + a_n = 0 \nonumber
+	\end{equation}
+	with rational coefficients. Otherwise, it is called \textit{transcendental}.
+\end{Definition}
+
+\subsection{The Principle of Archimedes}
+1$ ^0 $\quad Any nonempty subset of natural numbers that is bounded from above contains a maximal element. \\
+ \begin{Corollary}
+ 	The set of natural numbers is not bounded above.
+ \end{Corollary}
+2$ ^0 $\quad Any nonempty subset of the integers that is bounded from above(resp. from below) contains a maximal element(resp. minimal element). \\
+3$ ^0 $\quad The set of integers is unbounded above and unbounded below. \\
+\begin{Theorem}[The principle of Archimedes]
+	For any fixed positive number $ h $ and any real number $ x $ there exists a unieuq integer $ k $ such that $ (k-1)h\leqslant x \leqslant kh $
+\end{Theorem}
+\begin{proof}
+	The set $ \{n \in \Zahlen | \frac{x}{h}<n\} $ is not empty, since we can always find an integer that is greater than $ \frac{x}{h} $ for any value of $ x $ and $ h $. This set is also bounded below and contains a minimal element $ k $. We can see that $ (k-1) \leqslant \frac{x}{h} < k $. These inequalities are equivalent to the principle of Archimedes because $ h >0 $. The uniqueness of $ k $ can be derived from the uniqueness of the minimal element of a set of numbers.
+\end{proof}
+
+\begin{Corollary}
+	For any positive number $ \varepsilon $ there exists a natural number $ n $ such that $ 0 < \frac{1}{n}<\varepsilon $.
+\end{Corollary}
+\begin{proof}
+	By the principle of Archimedes there exists $ n \in \Zahlen $ such tha $ 1 < \varepsilon \cdot n $. Since $ 0<1 $ and $ 0<\varepsilon $, we have $ 0<n $. Thus $ n\in \Natural $ and $ 0 < \frac{1}{n}<\varepsilon $.
+\end{proof}
+
+\begin{Corollary}
+	If the number $ x \in \Real $ is such that $ 0 \leqslant x $ and $ \forall n \in \Zahlen (x < \frac{1}{n} )$ , then $ x=0 $.
+\end{Corollary}
+
+\begin{Corollary}
+	For any numbers $ a,b \in \Real $ such that $ a < b $ there is a rational number $ r \in \Quoziente $ such that $ a<r<b $.
+\end{Corollary}
+\begin{proof}
+	According to what we had proved, we can choose $ n \in \Natural $ such that $ 0<\frac{1}{n} <(b-a) $. Then by the principle of Archimedes, there exists an integer $ m\in \Zahlen $ and $ \frac{m-1}{n} \leqslant a < \frac{m}{n} $. Hence the relationship $ b < \frac{m}{n} $ is impossible, since then we'll have $ \frac{m-1}{n} \leqslant a < b \leqslant \frac{m}{n} $. Now we substract each side by $ a $, and $ (b-a) \leqslant \frac{m}{n} -a $. Because $ \frac{m-1}{n} \leqslant a $, it is obvious that $ (b-a) \leqslant \frac{m}{n} - \frac{m-1}{n}  \Rightarrow (b-a) \leqslant \frac{1}{n}$, which contradicts with the fact that $ \frac{1}{n}< b-a $. We can choose $ r = \frac{m}{n} \in \Quoziente $ and $ a< \frac{m}{n} <b $.
+\end{proof}
+\begin{Corollary}
+	For any number $ x \in \Real $ there exists a unique integer $ k \in \Zahlen $ such that $ k \leqslant x < k+1 $.
+\end{Corollary}
+\begin{proof}
+	Replace $ h $ with $ 1 $ in the principle of Archimedes.
+\end{proof}
+The number $ k $ just mentioned is denoted $ [x] $ and is called the \textit{integer part} of x. The quantity $ \{x\}\coloneqq x - [x] $ is called the \textit{fractional part} of x. Thus $ x = [x] + \{x\} $, and $ \{x\} \geqslant 0 $.
+
+
+\subsection{Miscellaneous}
+\begin{Theorem}[Triangle Inequality]
+	$ |a+b|\leqslant |a|+|b| $ holds for all $ a,b \in \Real $.
+\end{Theorem}
+\begin{proof}
+	We know that $ |x| = max\{x,-x\}  $ and $ \pm x \leqslant |x| $. Thus
+	\begin{align}
+	a+b &\leqslant |a| + b \leqslant |a| + |b| \nonumber \\
+	-a-b &\leqslant |a| - b \leqslant |a| + |b| \nonumber \\
+	a-b & \leqslant |a| - b \leqslant |a| + |b| \nonumber
+	\end{align}
+\end{proof}
+By the principle of induction, we can prove the following theorem.
+\begin{Theorem}
+	The inequality
+	\begin{equation}
+	|x_1+ \cdot \cdot \cdot x_n| \leqslant |x_1| + \cdot \cdot \cdot |x_n| \nonumber
+	\end{equation}
+	holds and equality holds if $ \forall n \in \Natural(x_n \leqslant 0 )\lor \forall n \in \Natural (0 \leqslant x_n) $.
+\end{Theorem}
+
+
+
+
+\begin{Definition}
+	An open interval containing the point $ x \in \Real $ will be called a \textit{neighborhood} of this point. The interval $ (x- \delta, x+ \delta) $ is the \textit{$ \delta $-neighborhood} about $ x $.
+\end{Definition}
+
+
+\subsubsection{Estimation for errors in arithmetic operations}
+\begin{Definition}
+	If $ x $ is the exact value of a quantity and $ \tilde{x} $ is a known approximation to the quantity, the numbers
+	\begin{equation}
+		\Delta(\tilde{x}) \coloneqq |x-\tilde{x}|  \nonumber
+	\end{equation}
+	and 
+	\begin{equation}
+		\delta(\tilde{x}) \coloneqq \frac{\Delta(\tilde{x}) }{|\tilde{x}|}  \nonumber
+	\end{equation}
+	are called respectively the \textit{absolute} and \textit{relative} error of approximation by $ \tilde{x} $. The relative error is not defined when $ \tilde{x}=0 $.
+\end{Definition}
+
+\begin{Proposition}
+	If
+	\begin{equation}
+		|x-\tilde{x}| = \Delta(\tilde{x}) ,\quad \quad |y-\tilde{y}| = \Delta(\tilde{y}) ,\nonumber
+	\end{equation}
+	then
+	\begin{align}
+		\Delta(\tilde{x}+\tilde{y}) &\coloneqq |(x+y)-(\tilde{x}+\tilde{y})| \leqslant \Delta(\tilde{x}) + \Delta(\tilde{y}), \nonumber \\
+		\Delta(\tilde{x}\cdot \tilde{y}) &\coloneqq |(x\cdot y)-(\tilde{x}\cdot \tilde{y})| \leqslant |\tilde{x}|\Delta(\tilde{y}) + |\tilde{y}|\Delta(\tilde{x})+ \Delta(\tilde{x}) \cdot \Delta(\tilde{y}), \nonumber
+	\end{align}
+	if, inaddition
+	\begin{equation}
+		y \neq 0, \quad \quad \tilde{y} \neq 0, \quad \quad \delta(\tilde{y}) = \frac{\Delta(\tilde{y})}{|\tilde{y}|} < 1 \nonumber
+	\end{equation}
+	then
+	\begin{equation}
+		\Delta(\frac{\tilde{x}}{\tilde{y}}) \coloneqq |\frac{x}{y} - \frac{\tilde{x}}{\tilde{y}}| \leqslant \frac{|\tilde{x}|\Delta(\tilde{y}) + |\tilde{y}|\Delta(\tilde{x})}{\tilde{y}^2} \cdot \frac{1}{1-\delta(\tilde{y})}\nonumber
+	\end{equation}
+\end{Proposition}
+
+\begin{proof}
+	Let $ x = \tilde{x} + \alpha $ and $ y = \tilde{y} + \beta $. Thus, $ |\alpha| = \Delta(\tilde{x}) $ and $ |\beta| = \Delta(\tilde{y}) $Then
+	\begin{align}
+		\Delta(\tilde{x}+\tilde{y}) &= |(x+y)-(\tilde{x}+\tilde{y})| = |\alpha + \beta| \leqslant |\alpha| + |\beta| = \Delta(\tilde{x}) + \Delta(\tilde{y}) \nonumber \\
+		\Delta(\tilde{x} \cdot \tilde{y}) & = |(x\cdot y)-(\tilde{x}\cdot \tilde{y})| = |(\tilde{x} + \alpha)(\tilde{y} + \beta)- \tilde{x} \cdot \tilde{y}|	 = \nonumber\\
+		&= |\tilde{x}\beta + \tilde{y} \alpha + \alpha \beta| \leqslant |\tilde{x}||\beta| + |\tilde{y} ||\alpha |+ |\alpha ||\beta| = \nonumber\\
+		&= |\tilde{x}|\Delta(\tilde{y}) +  |\tilde{y}|\Delta(\tilde{x}) + \Delta(\tilde{x}) \cdot \Delta(\tilde{y}) \nonumber \\
+		\Delta(\frac{\tilde{x}}{\tilde{y}}) &= |\frac{x}{y} - \frac{\tilde{x}}{\tilde{y}}| = |\frac{x\tilde{y}-y\tilde{x}}{y\tilde{y}}| = \nonumber \\
+		&=|\frac{(\tilde{x} + \alpha)\tilde{y} - (\tilde{y} + \beta)\tilde{x}}{\tilde{y}^2}| \cdot |\frac{1}{1+\beta/\tilde{y}}| \leqslant  \frac{|\tilde{x}||\beta|+|\tilde{y}||\alpha|}{\tilde{y}^2} \cdot \frac{1}{1-\delta(\tilde{y})} = \nonumber \\
+		&= \frac{|\tilde{x}|\Delta(\tilde{y}) + |\tilde{y}|\Delta(\tilde{x})}{\tilde{y}^2} \cdot \frac{1}{1-\delta(\tilde{y})}\nonumber
+	\end{align}
+\end{proof}
+
+These statements imply that 
+\begin{align}
+	\delta(\tilde{x}+\tilde{y})& \leqslant \frac{\Delta(\tilde{x}+\Delta(\tilde{y}))}{|\tilde{x}+\tilde{y}|} \nonumber \\
+	\delta(\tilde{x}\cdot \tilde{y}) &\leqslant \delta(\tilde{x})+ \delta(\tilde{y}) + \delta(\tilde{y}) \cdot \delta(\tilde{y}) \nonumber \\
+	\delta(\frac{\tilde{x}}{\tilde{y}})& \leqslant \frac{\delta(\tilde{x})+\delta(\tilde{y})}{1-\delta(\tilde{y})} \nonumber
+\end{align}
+
+
+
+
+
+
+
+
+
+\subsubsection{The Positional Computation System}
+\begin{Lemma}
+	If a number $ q>1 $ is fixed, then for every positive number $ x \in
+	 \Real $ there exists a unique integer $ k \in \Zahlen $ such that
+	 \begin{equation}
+	 	q^{k-1} \leqslant x < q^k \nonumber
+	 \end{equation}
+\end{Lemma}
+\begin{proof}
+	We first verify that the set of numbers of the form $ q^k $, $ k \in \Natural $ is not bounded above. Suppose the contrary, we'll have a least upper bound such that there exists some $ m \in \Natural $ such that $ q^m < s $. Also, we can see that $ \frac{s}{q}<q^m $(If this is not the case, then we can have $ q^m \leqslant \frac{s}{q} \Rightarrow q^{m+1} \leqslant s$, which makes the biggest element in this set be $ q^{m+1} $, and this is impossible, since $ q^m $ must be the biggest element if the least upper bound is $ s $). Here we'll have $ \frac{s}{q}<q^m\leqslant s \Rightarrow s< q^{m+1} $, so $ s $ could not be the east upper bound of the set. \newpara
+	Because $ 1 < q $, $ \forall m,n \in \Zahlen \land (m<n)\Rightarrow  q^m < q^n$. We already show that this set is not bounded from above, so $ \forall c \in \Real \Rightarrow \exists N \in \Natural(\forall n>N(c<q^n)) $(or $ c $ will be the upper bound of this set). \newpara
+	Now let's set $ c = \frac{1}{\varepsilon} $ and $ M = N $, it follows that $ \forall \varepsilon>0 (\exists M \in \Natural \forall n > M(\frac{1}{q^m}< \varepsilon)) $. \newpara
+	The set $ K \subset \Zahlen $ that $ K\{m|(0<x)\land(x<q^m)\} $ is bounded below(because when $ x = \frac{1}{\varepsilon} $, for $ m <M $ we will have $ q^m<x $). Therefore if the minimal element is denoted as $ k $, for this integer $ x $ it is obvious that $ q^{k-1}<x<q^k $. \newpara
+	Next we have to prove the uniqueness of such integer $ k $. For $ m,n\in \Zahlen \Rightarrow ((m<n)\Rightarrow(m \leqslant n-1)$, and $ q >1 \Rightarrow(q^m \leqslant q^{n-1}) $. Thus, if $ m $ and $ n $ are both the minimal element of the set $ K $, it can be derived that $ q^{m-1}\leqslant x < q^m $ and $ q^{n-1} \leqslant x < q^n $, which imply $ q^{n-1} \leqslant x < q^m $, are incompatible if $ m \neq n $.
+\end{proof}
+
+\begin{Definition}
+	The number $ p $ satisfying the Lemma($ p=k $) is called the \textit{order of} $ x $ in the base $ q $ or(when $ q $ is fixed) simply the \textit{order} of $ x $.
+\end{Definition}
+By the principle of Archimedes, $ \exists! \alpha_p(\alpha_p q^p \leqslant x < (\alpha_p+1)q^p) $. \\
+We can use $ r_n $, a sequence of numbers, can be used to approximate some real number $ x $. Take $ \alpha_p, \alpha_{p-1}, ...., \alpha_{p-n}... $ from the set $ \{0,1,...,q-1\} $ then 
+\begin{equation}
+	r_n = \alpha_p q^p + \cdot \cdot\cdot \alpha_{p-n} q^{p-n} \nonumber
+\end{equation}
+and such that
+\begin{equation}
+	r_n \leqslant x < r_n + \frac{1}{q^{n-p}} \nonumber
+\end{equation}
+
+The set $ \{0,1,...,q-1\} $ is all the digits under base $ q $ while the power of $ q $ is the order of this corresponding digit.
+
+\section{Basic Lemmas Connected with the Completeness of the Real Numbers}
+\subsection{The Nested Interval Lemma(Cauchy-Cantor Principle)}
+
+\begin{Definition}
+	A function $ f : \Natural \to X$ of a natural-number argument is called a \textit{sequence} or a \textit{sequence of elements} of $ X $. $ f(n) $ corresponding to the number $ n \in \Natural $ is often denoted $ x_n $ and called the $ n $th term of the sequence.
+\end{Definition}
+\begin{Definition}
+	Let $ X_1,X_2,...,X_n... $ be a sequence of sets. If $ X_{n+1}\subset X_n $ for all $ n \in \Natural $, we say the sequence is \textit{nested}.
+\end{Definition}
+
+\begin{Lemma}[Cauchy-Cantor]
+	For any nested sequence $ I_1 \supset I_2 \supset \cdot \cdot \cdot \supset I_n \supset \cdot \cdot \cdot $ of closed intervals, there exists a point $ c\in \Real $ belonging to all of these intervals. \newpara
+	If in addition it is known that for any $ \varepsilon >0 $ there is an interval $ I_k $ such that $ |I_k|<\varepsilon $, then $ c $ is the unique point common to all the intervals.
+\end{Lemma}
+\begin{proof}
+	Lets find two sets in this sequence, denoted as $ M=[a_m,b_m] $ and $ N = [a_n,b_n] $ where $ m,n \in \Natural $. Suppose $ n <m $, and we obtain $ a_m \leqslant b_n $. Thus the two numerical sets $ A=\{a_m\} $ and $ B = \{b_n\} $ satisfy the axiom of completeness. So $ \exists c \in \Real (a_m\leqslant c \leqslant b_n) $. This also means that $ \forall n \in \Natural (a_n\leqslant c \leqslant b_n) $. Therefore this point $ c $ belongs to all the intervals. \newpara
+	Now let $ c_1 $ and $ c_2 $ be two points having this property. Without loss of generality, let $ c_1 < c_2 $, then $ \forall n \in \Natural(a_n \leqslant c_1 < c_2 \leqslant b_n) \Rightarrow(0< c_2 - c_1 < b_n - a_n)$, and the length of any interval in this sequence cannot be less than $ c_2 - c_1 $. Hence if there are intervals of arbitrarily small length in the sequene, their common point is unique.
+\end{proof}
+
+\subsection{The Finite Covering Lemma(Borel-Lebesgue Principle, or Heine-Borel Theorem)}
+\begin{Definition}
+	A system $ S = \{X\} $ of sets $ X $ is said to \textit{cover} a set $ Y $ if $ Y \subset \bigcup_{X \in S}X $.
+\end{Definition}
+A subset of $ S $ that is also a system of sets will be called a \textit{subsystem} of $ S $.
+
+\begin{Lemma}[Borel-Lebesgue]
+	Every system of open intervals covering a closed interval contains a finite subsystem that covers the closed interval.
+\end{Lemma}
+\begin{proof}
+	Let $ S = \{U\} $ be a system of open intervals $ U $ that cover the closed interval $ [a,b] = I_1 $. If the interval $ I_1 $ could not be covered by a finite set of intervals of the system $ S $, then, dividing $ I_1 $ into two halves, we could find that at least one of the two halves, which we denoted by $ I_2 $, does not admit a finite covering. We now repeat this procedure with the interval $ I_2 $, and so on. \newpara
+	In this way a nested sequence $ I_1 \supset I_2 \supset \cdot \cdot \cdot \supset I_n \supset \cdot \cdot \cdot $ of closed intervals arises,none of which admit a covering by a finite subsystem of $ S $. Since the length of the interval $ |I_n|=|I_1|\cdot 2^{-n} $, the sequence $ \{I_n\} $ contains intervals of arbitrarily small length(The second part of \textbf{Cauchy-Contor Principle}), and thus there exists a unique point $ c $ belonging to all the intervals $ I_n,n\in \Natural $. Since $ c \in I_1 = [a,b] $, there exists an open interval $ (\alpha, \beta) = U \in S $ containing $ c $. Let $ \varepsilon = min \{c-\alpha, \beta - c\} $. In the sequence just constructed, we find an interval $ I_n $ such that $ |I_n|<\varepsilon $. Since $ c \in I_n $ and $ |I_n|<\varepsilon $, we conclude that $ I_n \subset (\alpha, \beta) $. But this contradicts the fact that the interval $ I_n $ cannot be covered by a finite set of intervals from the system.
+\end{proof}
+
+
+\subsection{The Limit Point Lemma(Bolzano-Weierstrass Principle)}
+
+\begin{Definition}
+	A point $ p \in \Real $ is a \textit{limit point} of the set $ X \subset \Real $ if every neighborhood of the point contains an infinite subset of $ X $.
+\end{Definition}
+Examples:\\
+If $ X = \{\frac{1}{n}\in \Real | n\in \Natural\} $, the only limit point of $ X $ is the point $ 0 \in \Real $. \\
+For an open interval $ (a,b) $ every point of the closed interval $ [a,b] $ is a limit point, and there are no others. \\
+For the set $ \Quoziente $ every point of $ \Real $ is a limit point; for, as we know, every open interval of the real numbers contains rational numbers.
+\begin{Lemma}[Bolzano-Weierstrass]
+	Every bounded infinite set of real numbers has at least one limit point.
+\end{Lemma}
+
+\begin{proof}
+	Let $ X $ be the given subset of $ \Real $. It follows from the definition of boundedness that $ X $ is contained in some closed interval $ I \subset \Real $. The next step is to show that at least one point of $ I $ is a limit point of $ X $. \newpara
+	If, suppose the contrary, each point $ x \in I $ would have a neighborhood $ U(x) $ containing either no points of $ X $ or at most a finite number. The totality of such neighborhoods $ \{U(x)\} $ constructed for the points $ x \in I $ forms a covering of $ I $ by open intervals $ U(x) $. By the finite covering Lemma(Borel-Lebesgue) we can extract a system $ U(x_1), ..., U(x_n) $ of open intervals that cover $ I $. But, since $ X \subset I $, this same system also covers $ X $. However, there are only finitely many points of $ X $ in $ U(x_i) $(the definition of $ U(x) $), and hence only finitely many in their union. That is, $ X $ is a finite set. This contradiction completes the proof.
+\end{proof}
+
+
+
+\section{Countable and Uncountable Sets}
+
+\begin{Definition}
+	A set $ X $ is \textit{countable} if it is equipollent with the set $ \Natural $ of natural numbers, that is, $ card X = card \Natural $.
+\end{Definition}
+
+\begin{Proposition}
+ An infinite subset of a countable set is countable.
+\end{Proposition}
+\begin{proof}
+	Let's consider a countable set $ E $. There is a minimal element of $ E_1\coloneqq E $, which we assign to $ 1 \in \Natural $ and denote $ e_1 \in E $. $ E $ is infinite, so $ E_2 \coloneqq E \setminus e_1 $ is not empty. Following the principle of induction, we can construct a injective mapping from $ \{1,2...\} $ to $ \{e_1,e_2,...\} $. \newpara
+	Now we have to prove that this mapping is also surjective. Suppose the contrary, that an element $ e \in E$ does not have a natural number assigned to it. The set $ K=\{n \in E | n \leqslant e\} $ is finite, since it's a subset of $ \Natural $ bounded both from below and above. According to our previous construction, we assign $ 1 $ to $ minK $, denoted as $ e_1 $, and we can acquire a sequence $ e_1, e_2,...e_{k=cardK} $. But $ e_{k=cardK} $ is $ maxK $, and because $ e\in K \land (\forall n\in K (n\leqslant e))$, $ e = maxK$. Therefore $ e = e_k $, or otherwise it will contradict the uniqueness of maximal element.
+\end{proof}
+
+\begin{Proposition}
+	The Union of the sets of a finite or countable system of countable sets is also a countable set.
+\end{Proposition}
+\begin{proof}
+	Let $ X_1,X_2...,X_n,... $ is a countable system of sets and each set $ X_m = \{x^1_m,...,x^n_m,...\} $ is itself countable. Since $ \forall m\in \Natural (card (X=\bigcup_{n \in \Natural}X_n) \geqslant X_m)$, $ X $ is an infinite set. The ordered pair $ (m,n) $ identifies the element $ x^n_m \in X_m $. We can construct a mapping, like $ f : \Natural \times \Natural \to \Natural \coloneqq (m,n) \to \frac{(m+n-2)(m+n-1)}{2}+m $, such that it is bijective. Thus $ X $ is countable. Then because $ card X \leqslant card \Natural $ and the fact that $ X $ is infinite, we conclude that $ card X = card \Natural $.
+\end{proof}
+
+If it is known that a set is either finite or countable, we say it is \textit{at most countable}($ card X \leqslant \Natural $).
+
+\begin{Corollary}
+	$ card \Zahlen = card \Natural $
+\end{Corollary}
+
+\begin{Corollary}
+	$ card \Natural^2 = card \Natural $(The direct product of countable sets is countable).
+\end{Corollary}
+
+\begin{Corollary}
+	$ card \Quoziente = card \Natural $, that is, the set of rational numbers is countable.
+\end{Corollary}
+\begin{proof}
+	Let $ (m,n) $ denote a rational number $ \frac{m}{n} $. It is known that the pair $ (m,n) $ and $ (m^\prime, n^\prime) $ define the same number iff they are proportional. Thus $ \Quoziente $ is equipollent to some infinite subset of the set $ \Zahlen \times \Zahlen $. Since $ card \Zahlen^2 = card \Natural $, we can conclude that $ card \Quoziente = card \Natural $.
+\end{proof}
+
+\begin{Corollary}
+	The set of algebraic numbers is countable.
+\end{Corollary}
+\begin{proof}
+	It can be observed that $ card \Quoziente \times \Quoziente = card \Natural  $. By the principle of induction, $ \forall k \in \Natural (card \Quoziente^k = card \Natural) $. Let $ r \in \Quoziente^k $ be an ordered set $ (r_1,r_2,...,r_k) $ consists of $ k $ rational numbers. \newpara
+	An algebraic equation of degree $ k $ with rational coefficient can be writtne in the reduced form $ x^k + r_1x^{k-1}+ \cdot \cdot \cdot + r_k = 0 $. Thus there are as many different algebraic equations of degree $ k $ as there are different ordered sets $ (r_1,...,r_k) $ of rational numbers, that is, a countable set. \newpara
+	The algebraic equation with rational coefficients (of arbitrary degree) is the union of sets consisting of algebraic equation (of a fixed degree) which is countable, and this union is countable. Each such equation has only a finite number of roots. Hence the set of algebraic numbers is at most countable. But it is infinite, and therefore countable.
+\end{proof}
+
+\subsection{The Cardinality of the Continuum}
+\begin{Definition}
+	The set $ \Real $ of real numbers is also called the \textit{number continuum}(from Latin \textit{continuum}, meaning continuous, or solid), and its cardinality the \textit{cardinality of the continuum}.
+\end{Definition}
+
+\begin{Theorem}[Cantor]
+	$ card \Natural < card \Real $
+\end{Theorem}
+\begin{proof}[Proof by Nested Interval Lemma]
+	It is sufficient to show that even $ [0,1] $ in an uncountable set. \newpara
+	Assume it is countable, that is, can be written as a sequence $ x_1,x_2,...,x_n,.... $. Take $ x_1 $ on $ I_0 = [0,1] $, and find $ I_1 $ such that $ x_1 \notin I_1 $. Then construct the nested interval $ I_n $ such that $ x_{n+1} \notin I_{n+1} $ and $ |I_n| > 0 $. It follows the nested interval lemma that there exist a point $ c \in [0,1]$ belonging to all $ I_n $. But by our construction, $ c \in \Real $ and $ c $ cannot be any point of the sequence $ x_1,x_2,...,x_n,.... $.
+\end{proof}
+
+\begin{proof}[Proof by Cantor's Diagonal Argument]
+	Let's first consider an the set $ L $ and write out the infinite sequence of distinct binary numbers in it which has the form: 
+	\begin{align}
+		&s1 =	(0,	0,	0,	0,	0,	0,	0,	...) \\
+		&s2 =	(1,	1,	1,	1,	1,	1,	1,	...) \\
+		&s3 =	(0,	1,	0,	1,	0,	1,	0,	...)\\
+		&s4 =	(1,	0,	1,	0,	1,	0,	1,	...)\\
+		&s5 =	(1,	1,	0,	1,	0,	1,	1,	...)\\
+		&s6 =	(0,	0,	1,	1,	0,	1,	1,	...)\\
+		&s7 =	(1,	0,	0,	0,	1,	0,	0,	...)\\
+		&... \\		
+	\end{align}
+	We then constrcut a number $ s $ such that its first digit is the complementary (swapping 0s for 1s and vice versa) of the first digit of $ s_1 $ and etc.
+	\begin{align}
+		&s1 =	(\mathbf{0},	0,	0,	0,	0,	0,	0,	...) \\
+		&s2 =	(1,	\mathbf{1},	1,	1,	1,	1,	1,	...) \\
+		&s3 =	(0,	1,	\textbf{0},	1,	0,	1,	0,	...)\\
+		&s4 =	(1,	0,	1,	\textbf{0},	1,	0,	1,	...)\\
+		&s5 =	(1,	1,	0,	1,	\textbf{0},	1,	1,	...)\\
+		&s6 =	(0,	0,	1,	1,	0,	\textbf{1},	1,	...)\\
+		&s7 =	(1,	0,	0,	0,	1,	0,	\textbf{0},	...)\\
+		&... \\		
+		&s = (\textbf{1},\textbf{0},\textbf{1},\textbf{1},\textbf{1},\textbf{0},\textbf{1},..)
+	\end{align}
+	By construction $ s $ differs from $ s_n $ at the $ n $th digit, so $ s $ is not in this sequence, and thus $ L $ is uncountable. \newpara
+	We can now define a mapping $ f : L \to \Real $.$ f(s_n) = r_n\in \Real $ means that $ s_n $ and $ r_n $ have the same digit while $ r_n $ is under base 10 and $ s_n $ is under base 2. For $ s_n \neq s_m \Rightarrow (r_n=f(s_n)) \neq (r_m=f(s_m)) $, $ f $ is injective, and with the fact that all $ s_n $ corresponds to a $ r_n $ together give us $ cardf(L) = card L $. Since $ f(L) $ is a subset of $ \Real $, we can see that $ \Real $ is also uncountable.
+\end{proof}
+The cardinality of $ \Real $ is often denotes as $ \mathfrak{c} $.
+\begin{Corollary}
+	$ \Quoziente \neq \Real $, and so irrational numbers exist.
+\end{Corollary}
+
+\begin{Corollary}
+	There exist transcendental numbers, since the set of algebraic numbers is countable.
+\end{Corollary}
+
+\subsection{Miscellaneous}
+\begin{Statement}
+	The cardinality of $ P(X) $, which is the power set of $ X $, satisfy that if $ card X = n $, $ card P(X) = 2^{n} $.
+\end{Statement}
+\begin{proof}
+	We can use the principle of induction to complete the proof. If $ n= 1 $, $ X = \{x\} $, then $ P(X) =\{\varnothing, X\} $, then $ card P(X) = 2^{1} $. \newpara
+	Now if $ n \in \Natural \Rightarrow card P(X) = 2^{n}  $, let $ X $ be a set that has $ x $ as one of its elements and has the cardinality of $ n+1 $. Therefore $ Y = X \setminus \{x\} $ has $ n $ elements. We can divide $ P(X) $ into two parts: the ones containing $ x $ and the ones don't. If $ x\in A \subset P(X) $, then $ A \setminus \{x\} \subset P(Y) $ and vice versa. Thus we can set up a bijection between $ P(Y) $ and the elements in $ P(X) $ that contains $ x $. Similarly, we can clearly see that a bijection between the subsets of $ P(X) $ that does not contains $ x $ and $ P(Y) $. Thus $ card P(X) = 2^n + 2^n = 2^{n+1} $, and we complete the proof.
+\end{proof}
+
+
+
+
+
+
+
+\chapter{Limits}
+\section{The Limit of a Sequence}
+\subsection{Definitions and Examples}
+\begin{Definition}
+	A number $ A \in \Real$  is called the \textit{limit of the numerical sequence} $ \{x_n\} $ if for every neighborhood $ V(A) $ of $ A $ there exists an index $ N $ (depending on $ V(A) $) such that all terms of the sequence having index larger than $ N $ belong to $ V(A) $. $ ((\lim\limits_{n \to \infty} x_n = A) \coloneqq \forall V(A) \exists N \in \Natural \forall n > N(x_n \in V(A)) ) $
+	\newpara
+	An equivalent way (or more common) way to say this is that a number $ A \in \Real $ is called the \textit{limit of the sequence} $ \{x_n\} $ if $ \forall \varepsilon >0$ there exists an index $ N $such that $ \forall n>N(|x_n-A|<\varepsilon )$. $ ((\lim\limits_{n \to \infty} x_n = A) \coloneqq \forall \varepsilon > 0 \exists N \in \Natural \forall n > N (|x_n-A|<\varepsilon) ) $
+\end{Definition}
+
+\begin{Definition}
+	If $ \lim\limits_{n \to \infty} x_n = A $, we say that the sequence $ \{x_n\} $ \textit{converges} to $ A $ or \textit{tends} to $ A $ and write $ x_n \to A $ as $ n \to \infty $. Otherwise, it's called \textit{divergent}.
+\end{Definition}
+
+Examples: \\
+$ \lim\limits_{n \to \infty} \frac{1}{n} = 0 $, since $ |\frac{1}{n}-0| = \frac{1}{n} < \varepsilon $ when $ n > N = [\frac{1}{\varepsilon}] $ (the integer part of $ \frac{1}{\varepsilon} $ ). \\
+$ \lim\limits_{n \to \infty} \frac{n+1}{n} = 1 $, since $ |\frac{n+1}{n}-1| = \frac{1}{n} < \varepsilon $ if $ n > [\frac{1}{\varepsilon}] $. \\
+$ \lim\limits_{n \to \infty} \frac{\sin n}{n} = 0$, since $|\frac{\sin n}{n}-0| \leqslant \frac{1}{n} < \varepsilon $ if $ n > [\frac{1}{\varepsilon}] $. \\
+$ \lim\limits_{n \to \infty} \frac{1}{q^n} = 0$ if $ |q|>1 $.
+\begin{proof}
+	As shown in the proof in 2.2.4(Miscellaneous), for every $ \varepsilon >0 $ there exists $ N \in \Natural $ such that $ \frac{1}{|q|^N}<\varepsilon $. Since $ |q|>1 $, we have $ |\frac{1}{q^n}-0| \leqslant \frac{1}{|q|^n} <\frac{1}{|q|^N}<\varepsilon$ for $ n>N $. 
+\end{proof}
+The sequence $ 1,2,\frac{1}{3},4,\frac{1}{5},6,\frac{1}{7}... $ whose $ n $th term is $ x_n = n^{(-1)^n} $, $ n \in \Natural $, is divergent.
+\begin{proof}
+	If $ A $ is the limit of this sequence, then any neighborhood of $ A $ would contain all but a finite number of terms of the sequence. \\
+	A number $ A \neq 0 $ cannot be the limit, since when $ \varepsilon = \frac{|A|}{2} > 0 $, any point of the form $ \frac{1}{2k+1} $ for which $ \frac{1}{2k+1} < \frac{|A|}{2}$ lie outside the $ \varepsilon $-neighborhood of $ A $. At the same time $ A=0 $ cannot be the limit of this sequence because there are infinitely many terms lie outside of even $ 1 $-neighborhood of $ 0 $.
+\end{proof}
+
+
+
+
+
+
+
+\subsection{Properties of the Limit of a Sequence}
+\begin{Definition}
+	If there exists a number $ A $ and an index $ N $ such that $ x_n = A $ for all $ n>N $, the sequence $ \{x_n\} $ will be called \textit{ultimately constant}.
+\end{Definition}
+\begin{Definition}
+	A sequence $ \{x_n\} $ is \textit{bounded} if there exists $ M $ such that $ |x_n|<M $ for all $ n \in \Natural $.
+\end{Definition}
+
+\begin{Theorem}
+	An ultimately constant sequence converges.
+\end{Theorem}
+\begin{proof}
+	if $ x_N = A $, then $ \forall n > N (x_n \in V(A)) $.
+\end{proof}
+
+\begin{Theorem}
+	Any neighborhood of the limit of a sequence contains all but a finite number of terms of the sequence.
+\end{Theorem}
+
+\begin{Theorem}
+	A convergent sequence cannot have two different limits.
+\end{Theorem}
+\begin{proof}
+	Suppose the contrary, that is, $ A_1 $ and $ A_2 $ are both the limit of the sequence $ {x_n} $. Then we find two nonintersecting neighborhoods $ V(A_1) $ and $ V(A_2) $ of $ A_1 $ and $ A_2 $. By the definition of limits we find two indices $ N_1 $ and $ N_2 $ such that $ \forall n > N_1 (x_n \in V(A_1)) $ and $ \forall n > N_2 (x_n \in V(A_2)) $. But then for $ N = max\{N_1,N_2\} $, we'll have $ \forall n > N (x_n \in V(A_1) \cap V(A_2)) $, and this is impossible since $ V(A_1) \cap V(A_2) = \varnothing $.
+\end{proof}
+
+\begin{Theorem}
+	A convergent sequence is bounded.
+\end{Theorem}
+\begin{proof}
+	Let $ \lim\limits_{n \to \infty}x_n = A $.Set $ \varepsilon = 1 $ in the common definition of limit, we find $ N $ such that $ |x_n-A| <1 $ for all $ n > N $. Then by the triangle inequality we have $ |x_n| < |A| +1 $. Considering  $ n<N $, we take $ M > max \{|x_1|,|x_2|,...,|x_n|,|A|+1\} $, and for all $ n \in \Natural $ we have $ M > |x_n| $.
+\end{proof}
+
+\subsubsection{Passage to the Limit and the Arithmetic Operations}[p82-p84]
+\begin{Definition}
+	If $ \{x_n\} $ and $ \{y_n\} $ are two numerical sequences, their \textit{sum, product,} and \textit{quotient} are the sequences
+	\begin{equation}
+		\{(x_n+y_n)\},\quad \{(x_n \cdot y_n)\},   \quad  \{(\frac{x_n}{y_n})\}  \nonumber
+	\end{equation}
+	while the quotient is defined when $ \forall n \in \Natural (y_n \neq 0) $.
+\end{Definition}
+
+	Let $ \{x_n\} $ and $ \{y_n\} $ be two numerical sequences, if $ \lim\limits_{n \to \infty}x_n = A $ and $ \lim\limits_{n \to \infty}y_n = B $, then
+\begin{Theorem}
+	$ \lim\limits_{n \to \infty}\{x_n +y_n\}= A + B $. 
+\end{Theorem}
+\begin{proof}
+	Set $ |A - x_n|  = \Delta(x_n)$, $ |B-y_n|=\Delta(y_n) $. Now we have
+	\begin{equation}
+		|(A+B)-(x_n+y_n)| \leqslant \Delta(x_n) + \Delta(y_n) \nonumber
+	\end{equation}
+	Suppose $ \varepsilon > 0 $ is given. Since $ \lim\limits_{n \to \infty}x_n = A $ , there exists $ N^\prime $ such that $ \Delta(x_n)<\varepsilon/2 $ for all $ n > N^\prime $. Similarly, since $ \lim\limits_{n \to \infty}y_n = B $, there exists $ N^{\prime\prime} $ such that $ \Delta(y_n)<\varepsilon/2 $ for all $ n > N^{\prime}\prime $. Then for $ n>max\{N^\prime, N^{\prime\prime} $ we have
+	\begin{equation}
+			|(A+B)-(x_n+y_n)| \leqslant \varepsilon \nonumber
+	\end{equation}
+	and our proof completes.
+\end{proof}
+
+\begin{Theorem}
+	$ \lim\limits_{n \to \infty}\{x_n \cdot y_n\}= A \cdot B $.
+\end{Theorem}
+\begin{proof}
+	Similar to our first proof, we show that $ |x_n|\Delta(y_n) $, $ |y_n|\Delta(x_n) $ and $ \Delta(x_n)\cdot\Delta(y_n)$ are less than $ \frac{\varepsilon}{3} $, since their sum is greater or equal to $ |(A\cdot B)-(x_n\cdot y_n)| $.
+\end{proof}
+
+\begin{Theorem}
+	$ \lim\limits_{n \to \infty}\{\frac{x_n }{y_n}\}= \frac{A}{B} $ when $ \forall n \in \Natural (y_n \neq 0 )\land (B \neq 0) $.
+\end{Theorem}
+\begin{proof}
+	If we prove that $ |x_n|\cdot \frac{1}{y_n^2}\Delta(y_n) = \frac{\varepsilon}{4} $, $ |\frac{1}{y_n}| \Delta(x_n) = \frac{\varepsilon}{4} $, and $ 0<\frac{1}{1-\delta(y_n)}<2 $, we'll have $ |\frac{A}{B}-\frac{x_n}{y_n}|<\varepsilon $
+\end{proof}
+
+\subsubsection{Passage to the Limit and Inequalities}
+\begin{Theorem}
+	Let $ \{x_n\} $ and $ \{y_n\} $ be two convergent sequences with $ \lim\limits_{n \to \infty}x_n =A$ and $ \lim\limits_{n \to \infty}y_n=B $. If $ A<B $, then there exists an index $ N \in \Natural $ such that $ x_n<y_n $ for all $ n>N $.
+\end{Theorem}
+\begin{proof}
+	Choose a number $ C $ such that $ A<C<B$. By definition of limit, we can find numbers $ N^\prime $  and $ N^{\prime\prime} $ such that $ |x_n-A|<C-A $ for all $ n > N^\prime $ and $ |y_n-B| < B-C $ for all $ n > N^{\prime\prime} $. Then for $ n > N = max\{N^\prime,N^{\prime\prime}\} $ we shall have $ x_n < (A+C-A )= C = (B-(B-C))<y_n $.
+\end{proof}
+
+\begin{Theorem}
+	Suppose the sequences $ \{x_n\} $, $ \{y_n\} $, and $ \{z_n\} $ are such that $ x_n \leqslant y_n \leqslant z_n $ for all $ n >N\in \Natural $. If the sequences $ \{x_n\} $ and $ \{z_n\} $ both converge to the same limit, then the sequence $ \{y_n\} $ also converges to that limit.
+\end{Theorem}
+\begin{proof}
+Suppose $ \lim\limits_{n \to \infty}x_n = \lim\limits_{n \to \infty}z_n=A $. Given $ \varepsilon>0 $ choose $ N^\prime $ and $ N^{\prime\prime} $ such that $ \forall n>N^\prime (A-\varepsilon<x_n) $ and $ \forall n> N^{\prime\prime}(z_n < A+ \varepsilon) $. Then for $ n > N = max\{N^\prime,N^{\prime\prime}\} $ we shall have $ A-\varepsilon < x_n \leqslant y_n \leqslant z_n < A+ \varepsilon $, which says $ |y_n-A| < \varepsilon$, that is $ A = \lim\limits_{n \to \infty}y_n $.
+\end{proof}
+
+\begin{Corollary}
+	Suppose $ \lim\limits_{n \to \infty}x_n = A $ and $ \lim\limits_{n \to \infty}y_n=B $. If there exists $ N $ such that for all $ n > N $ we have \\
+	a) $ x_n>y_n $, then $ A \geqslant B $; \\
+	b) $ x_n\geqslant y_n $, then $ A \geqslant B $; \\
+	c) $ x_n>B $, then $ A \geqslant B $; \\
+	d) $ x_n\geqslant B $, then $ A \geqslant B $. 
+\end{Corollary}
+\begin{proof}
+	The first two statement can be proved by contradiction using the theorem we mentioned above, and the last two statement are the special cases when $ y_n \equiv B $.
+\end{proof}
+
+
+
+
+
+\subsection{Questions Involving the Existence of the Limit of a Sequence}
+\subsubsection{The Cauchy Criterion}
+\begin{Definition}
+	A sequence $ \{x_n\} $ is called a \textit{fundamental} or \textit{Cauchy} sequence if for any $ \varepsilon>0 $ there exists an index $ N\in \Natural $ such that $ |x_m-x_n| <\varepsilon$ whenever $ n > N $ and $ m > N $.
+\end{Definition}
+\begin{Theorem}[Cauchy's convergence criterion]
+	A numerical sequence converges if and only if it is a Cauchy sequence.
+\end{Theorem}
+\begin{proof}
+	First, we prove that a convergent sequence is a Cauchy sequence. If $ \lim\limits_{n \to \infty}x_n = A $, we set $ |x_n-A| < \frac{\varepsilon}{2} $, and we obtain that $ |x_m-x_n| \leqslant |x_m -A|+ |x_n - A| < \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon $ for $ m,n>N $ (imagine two points on a line, their distance to a fixed point is greater or equal to the distance between these two points ). \newpara
+	Next, let $ \{x_k\} $ be a Cauchy sequence. We find $ |x_m-x_k|<\frac{\varepsilon}{3} $ for $ m,k\geqslant N $. Fix $ m = N $, we can see that $ x_N - \frac{\varepsilon}{3}<x_k<x_N+\frac{\varepsilon}{3} $, and thus this sequence is bounded. Then we set $ a_n\coloneqq inf_{k\geqslant n}x_k $ and $ b_n\coloneqq sup_{k\geqslant n}x_k $. Apply the \textbf{Nested Interval Lemma} to the close intervals $ [a_n,b_n] $ and denote that point $ A $. The inequality can be derived from the following inequalities:
+	\begin{align}
+		a_n\leqslant x_k &\leqslant b_k \nonumber \\
+		|A-x_k|&\leqslant b_n - a_n \nonumber \\
+		x_N - \frac{\varepsilon}{3} \leqslant a_n &\leqslant b_n \leqslant x_N+\frac{\varepsilon}{3} \nonumber
+	\end{align}
+\end{proof}
+
+\subsubsection{A Criterion for the Existence of the Limit of a Monotonic Sequence}
+\begin{Definition}
+	A sequence $ \{x_n\} $ is \textit{increasing} if $ \forall n \in \Natural (x_n < x_{n+1}) $, \textit{nondecreasing} if $ \forall n \in \Natural (x_n \leqslant x_{n+1}) $, \textit{nonincreasing} if $ \forall n \in \Natural (x_n \geqslant x_{n+1}) $, and \textit{decreasing} if $ \forall n \in \Natural (x_n > x_{n+1}) $. Sequence of these four types are called \textit{monotonic} sequences.
+\end{Definition}
+
+\begin{Definition}
+	A sequence $ \{x_n\} $ is \textit{bounded above} if there exists a number $ M $ such that $ \forall n \in \Natural (x_n <M)  $ .
+\end{Definition}
+
+\begin{Theorem}[Weierstrass]
+	In order for a nondecreasing sequence to have a limit, it is necessary and sufficient that it be bounded above.
+\end{Theorem}
+\begin{proof}
+	We already know that a convergent sequence is bounded, hence we just need to prove its sufficiency. \newpara
+	Let $ s $ be the least upper bound of this sequence. Since it's a nondecreasing sequence, we have $ s-\varepsilon < x_N \leqslant x_n \leqslant s $ for all $ n>N $, and thus $ s-x_n<\varepsilon $.
+\end{proof}
+Analogouly one can prove that in order for a nonincreasing sequence to have a limit, it has to be bounded below.
+
+
+\begin{Corollary}
+	$ \lim\limits_{n \to \infty} \frac{n}{q^n} =0$  if $ q>1 $.
+\end{Corollary}
+\begin{proof}
+	We prove that this sequence is bounded below(all terms are positive) . Let $ x = \lim\limits_{n \to \infty}x_n $ for $ n > N $, where $ N $ is the index that satisfies $ x_{n+1}<x_n $(from $ N $ the sequence is monotonically decreasing). From the relation $ x_{n+1} = \frac{n+1}{nq}x_n $, one can have:
+	\begin{equation}
+		x = \frac{1}{q}x \nonumber
+	\end{equation}
+	and hence $ (1-\frac{1}{q})x = 0 \Rightarrow (x=0)$.
+\end{proof}
+
+\begin{Corollary}
+	$ \lim\limits_{n \to \infty} \sqrt[n]{n} = 1 $.
+\end{Corollary}
+\begin{proof}
+	There exists $ N \in \Natural $ such that $ 1 \leqslant n < (1+\varepsilon)^n $ for all $ n > N $. Thus $ 1 \leqslant \sqrt[n]{n} < 1+ \varepsilon $, which implies $ \lim\limits_{n \to \infty}\sqrt[n]{n} = 1 $.
+\end{proof}
+
+\begin{Corollary}
+	$ \lim\limits_{n \to \infty} \sqrt[n]{a} =1$ for any $ a >0 $.
+\end{Corollary}
+\begin{proof}
+	Assume $ a \geqslant 1 $ first, use the same technique from above, and then prove $ \lim\limits_{n \to \infty} \sqrt[n]{a} =1$ for $ 0<a<1 $.
+\end{proof}
+
+
+
+\begin{Statement}
+	$ \forall q \in \Real \forall n\in  \Natural (\lim\limits_{n \to \infty} \frac{q^n}{n!} = 0) $.
+\end{Statement}
+
+\begin{proof}
+	If $ q = 0 $, the assertion is obvious. Since $ |\frac{q^n}{n!}| =\frac{|q|^n}{n!}  $, let's assume $ q >0 $. Use the same technique as we used in proving $  \lim\limits_{n \to \infty} \frac{n}{q^n} =0 $. First prove that $ 0<\frac{1}{n+1} <1 $ and $ x_{n+1}<x_n $ for all $ n >N \in \Natural $, thus this sequence is monotonically decreasing from $ N $. Let the limit be $ x $, one will have:
+	\begin{equation}
+		x=\lim\limits_{n \to \infty}\frac{q}{n+1} \cdot \lim\limits_{n \to \infty}x_n = 0\cdot x = 0 \nonumber
+	\end{equation}
+\end{proof}
+
+\subsubsection{The Number $e $}
+\begin{Theorem}[Jacob Bernoulli's inequality]
+	\begin{equation}
+		(1+\alpha)^{n} \geqslant 1+ n\alpha
+	\end{equation}
+	holds for $ n \in \Natural $ and $ \alpha > -1 $.
+\end{Theorem}
+
+\begin{proof}
+	Prove by the principle of induction.
+\end{proof}
+Incidentaly, strict inequality holds if $ \alpha \neq 0 $ and $ n >1 $.
+
+
+
+
+
+\begin{Statement}
+	The limit $ \lim\limits_{n \to \infty}(1+\frac{1}{n})^n $ exists.
+\end{Statement}
+\begin{proof}
+	Let $ y_n = (1+\frac{1}{n})^{n+1} $ and $ n \geqslant 2 $. Use Bernoulli's inequality, we find that $ \frac{y_{n-1}}{y_n}>1 $, and since all terms are positive, this sequence is monotonically decreasing and hence, has a limit. Then 
+	\begin{equation}
+		\lim\limits_{n \to \infty}(1+\frac{1}{n})^n = \lim\limits_{n \to \infty}(1+\frac{1}{n})^{n+1} \cdot \lim\limits_{n \to \infty}(1+\frac{1}{n})^{-1} =  \lim\limits_{n \to \infty}(1+\frac{1}{n})^{n+1} \nonumber
+	\end{equation}
+\end{proof}
+
+\begin{Definition}
+	$ e \coloneqq \lim\limits_{n \to \infty} (1+\frac{1}{n})^n $.
+\end{Definition}
+
+\subsubsection{Subsequences and Partial Limits of a Sequence}
+\begin{Definition}
+	If $ x_1,x_2,...,x_n,... $ is a sequence and $ n_1 < n_2<n_3<...<n_k<... $ an increasing sequence of natural numbers, then the sequence $ x_{n_1},x_{n_2},...,x_{n_k},... $ is called a \textit{subsequence} of the sequence $ \{x_n\} $.
+\end{Definition}
+
+\begin{Lemma}[Bolzano-Weierstrass]
+	Every bounded sequence of real numbers contains a convergent subsequence.
+\end{Lemma}
+\begin{proof}
+	Let $ E $ be the set of values of the bounded sequence $ \{x_n\} $. If $ E $ is finite, there exists a point $ x \in E $ and a sequence $ n_1<n_2<... $ of indices such that $ x_{n_1} = x_{n_2}=...=x $. The subsequence is constant and hence converges. \newpara
+	If $ E $ is infinite, then by the \textbf{Bolzano-Weierstrass principle} from section 2.3.3 it has a limit point $ x $. Use the property of limit points, one can see that $ |x_{n_k}-x| < \frac{1}{k} $ and $ |x_{n_{k+1}}-x|<\frac{1}{k+1} $. Because $ \lim\limits_{k \to \infty} \frac{1}{k} = 0$, the sequence $ x_{n_1},x_{n_2},...,x_{n_k},... $ converges to $ x $.
+\end{proof}
+
+\begin{Definition}
+	We shall write $ x_n \to+\infty $ and say that the sequence $ \{x_n\} $ \textit{tends to positive infinity} if for each number $ c $ there exists $ N \in \Natural $ such that $ \forall n > N (x_n >c )$. We can gneralize this two both positive and negative infinity:
+	\begin{equation}
+		(x_n\to \infty) \coloneqq \forall c \in \Real \exists N \in \Natural \forall n> N (c<|x_n|). \nonumber
+	\end{equation}
+\end{Definition}
+
+\begin{Lemma}
+	From each sequence of real numbers one can extract either a convergent subsequence of a subsequence that tends to infinity.
+\end{Lemma}
+\begin{proof}
+	When the sequence $ \{x_n\} $ is not bounded, the new case occurs. Then for each $ k \in \Natural $ we can choose $ n_k \in \Natural $ such that $ |x_{n_k}>k| $ and $ n_k < n_{k+1} $. This sequence is monotonically increasing and not bounded above, hence it tends to infinity.
+\end{proof}
+
+Let $ \{x_k \} $ be an arbitrary sequence of real numbers that is bounded below. We can consider the sequence $ i_n = inf_{k \geqslant n} x_k $. The sequence $ \{i_n \} $ has a finite limit $ \lim\limits_{n \to \infty} i_n = l $, or $ i_n \to +\infty $, since $ \forall n \in \Natural (i_n \leqslant i_{n+1} )$.
+
+\begin{Definition}
+	The number $ l = \lim\limits_{n \to \infty}inf_{k \geqslant n}x_k $ is called the \textit{inferior} limit of the sequence $ \{x_k\} $ and denoted $  \varliminf_{k \to \infty}x_k $. If $ i_n\to + \infty $, it is said that the inferior limit of the sequence equals positive infinity, and we write $ \varliminf_{k \to \infty}x_k = + \infty $. If the original sequence $ \{x_k\} $ is not bounded below, then we shall have $ i_n = inf_{k \geqslant n}x_k = - \infty $ and write $ \varliminf_{k \to \infty} x_k = -\infty $.
+	\begin{equation}
+		\varliminf_{k \to \infty}x_k \coloneqq \lim\limits_{n \to \infty} inf_{k \geqslant n}x_k \nonumber
+	\end{equation}
+	Similarly, the superior limit of the sequence $ \{x_k\} $ can be defined as 
+	\begin{equation}
+			\varlimsup_{k \to \infty}x_k \coloneqq \lim\limits_{n \to \infty} sup_{k \geqslant n}x_k \nonumber
+	\end{equation}
+\end{Definition}
+
+\begin{Definition}
+	A number (or the symbol $ - \infty $ or $ +\infty $) is called a \textit{partial limit} of a sequence, if the sequence contains a subsequence converging to that number.
+\end{Definition}
+
+\begin{Proposition}
+	The inferior and superior limits of a bounded sequence are respectively the smallest and largest partial limits of the sequence.
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Corollary}
+	A sequence has a limit or tends to $ \pm \infty $ iff its inferior and superior limits are the same.
+\end{Corollary}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Corollary}
+	A sequence converges iff every subsequence of it converges.
+\end{Corollary}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Corollary}
+	The Bolzano-Weierstrass Lemma in its restricted and wider formulations follows from the Proposition we just proved.
+\end{Corollary}
+\begin{proof}
+	content...
+\end{proof}
+
+
+\subsection{Elementary Facts about Series}
+
+
+
+
+
+
+
+\section{The Limit of a Function}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Continuous Functions}
+\section{Basic Definitions and Examples}
+\section{Properties of Continuous Functions}
+
+\chapter{Differential Calculus}
+\section{Differentiable Functions}
+\section{The Basic Rules of Differentiation}
+\section{The Basic Theorems of Differential Calculus}
+\section{Differential Calculus Used to Study Functions}
+\section{Complex Numbers and Elementary Functions}
+\section{Examples of Differential Calculus in Natural Science}
+\section{Primitives}
+
+
+\chapter{Integration}
+\section{Definition of the Integral and Description of the Set of Integrable Functions}
+\section{Linearity, Additivity and Monotonicity on the Space $ \mathcal{R} $[a,b]}
+\section{The Integral and the Derivative}
+\section{Some Applications of Integration}
+\section{Improper Integrals}
+
+
+\chapter{Functions of Several Variables: Their Limits and Continuity}
+\section{The Space $ \Real^m $ and the Most Important Classes of Its Subsets}
+\section{Limits and Continuity of Functions of Several Variables}
+
+
+\chapter{The Differential Calculus of Functions of Several Variables}
+\section{The Linear Structure on $ \Real^m $}
+\section{The Differential of a Function of Several Variables}
+\section{The Basic Laws of Differentiation}
+\section{The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}
+\section{The Implicit Function Theorem}
+\section{Some Corollaries of the Implicit Function Theorem}
+\section{Surfaces in $ \Real^n $ and the Theory of Extrema with Constraint}
+
+
+
+
+
+\end{document}
