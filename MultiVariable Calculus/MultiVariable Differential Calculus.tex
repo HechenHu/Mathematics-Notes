@@ -72,7 +72,7 @@
 \section{Definition and Properties}
 Vector is a geometrical object that has both magnitude and direction. Examples include force and velocity.  \\ Properties in in $n$th dimension vector space for Euclidean vector where $e_i$ is the basis vector for the $i$th axis(for convenience we will us $\vec{i}$, $\vec{j}$, $\vec{k}$ denote the basis vector in a 3-d space):
 
-\section{Addition/Substraction}
+\section{Addition/Subtraction}
 
 \begin{equation}
 \vec{a} \pm \vec{b} = \sum_{i = 1}^{n}(a_i \pm b_i)e_i
@@ -80,7 +80,7 @@ Vector is a geometrical object that has both magnitude and direction. Examples i
 
 \section{Scalar Multiplication}
 \begin{equation}
-	k\vec{a} = \sum_{i = 1}^{n}ka_ie_i
+	k\vec{a} = \sum_{i = 1}^{n}ka_i.e._i
 \end{equation}
 
 \section{Dot Product}
@@ -98,7 +98,7 @@ Dot product has the following properties:
 \end{align}
 
 \section{Direction Angles\textbackslash Cosines}
-The directional angles $\alpha$, $\beta$ and $\gamma$ between the vector $\vec{v}$ and basis vectosr $\vec{i}$, $\vec{j}$, $\vec{k}$ in a 3-d space satisfy the following equations:
+The directional angles $\alpha$, $\beta$ and $\gamma$ between the vector $\vec{v}$ and basis vectors $\vec{i}$, $\vec{j}$, $\vec{k}$ in a 3-d space satisfy the following equations:
 \begin{align}
 &\cos \alpha =  \frac{\vec{v} \cdot \vec{i}} {\norm{\vec{v}} \norm{\vec{i}}} = \frac{v_1}{\norm{\vec{v}}} \\
 &\cos \beta =  \frac{\vec{v} \cdot \vec{j}} {\norm{\vec{v}} \norm{\vec{j}}} = \frac{v_2}{\norm{\vec{v}}} \\
@@ -111,7 +111,7 @@ According to their definitions we can also see that: \\
 \end{align}
 
 \section{Orthogonal Projections}
-The orthogonal projection of $\vec{v}$ on an arbitrary nonzero vector $\vec{b}$ can be written as:
+The orthogonal projection of $\vec{v}$ on an arbitrary non-zero vector $\vec{b}$ can be written as:
 \begin{equation}
 	proj_{\vec{b}}\vec{v} = \frac{\vec{v} \cdot \vec{b}}{\norm{\vec{b}}^2}\vec{b}
 \end{equation}
@@ -166,7 +166,7 @@ The absolute value of scalar triple product will give us the volume of the paral
 \chapter{Lines and Planes}
 
 \section{Equations of Lines}
-The line in 3-d space that passes through the point $P_0(x_0,y_0,z_0)$ and is parallel to the nonzero vector $\vec{v} = <a,b,c> = a\vec{i}+b\vec{j}+c\vec{k}$ has equations:
+The line in 3-d space that passes through the point $P_0(x_0,y_0,z_0)$ and is parallel to the non-zero vector $\vec{v} = <a,b,c> = a\vec{i}+b\vec{j}+c\vec{k}$ has equations:
 \begin{align}
 	&x = x_0 + at, \quad y = y_0 + bt, \quad z = z_0 + ct \quad(Parametric)\\
 	&l = <x_0, y_0, z_0>+t<a,b,c> \quad(Vector)
@@ -216,7 +216,7 @@ To help graphing a complex surface in a 3-d space, we obtain traces, or the curv
 \chapter{Calculus of Vector-Valued Functions}
 
 \section{Orientation/Direction of its graph}
-The direction a graph of a vector-calued function goes when its parameter, $t$, increases is called the \textit{orientation} or \textit{direction of increasing parameter}.
+The direction a graph of a vector-valued function goes when its parameter, $t$, increases is called the \textit{orientation} or \textit{direction of increasing parameter}.
 
 \section{Domain and Natural Domain}
 The domain of a vector-valued function is the set of all allowable values of $t$.
@@ -238,13 +238,13 @@ The tangent line of the graph at point $\vec{r}(t_0)$:
 \begin{equation}
 	\vec{r}=\vec{t_0}+t\vec{r}^\prime(t_0)
 \end{equation}
-For the dot product and cross product, which are unique to vector-valued functions, the direvative is defined as following:
+For the dot product and cross product, which are unique to vector-valued functions, the derivative is defined as following:
 \begin{align}
 	&\frac{d}{dt}[\vec{r_1}(t) \cdot \vec{r_2}(t)] = \vec{r_1}(t) \cdot \frac{d\vec{r_2}}{dt} +  \frac{d\vec{r_1}}{dt}  \cdot \vec{r_2}(t) \\
 	&\frac{d}{dt}[\vec{r_1}(t) \times \vec{r_2}(t)] = \vec{r_1}(t) \times \frac{d\vec{r_2}}{dt} +  \frac{d\vec{r_1}}{dt}  \times \vec{r_2}(t)
 \end{align}
 
-In 2-d space, the tangent line to a circle is prependicular to the radius at the point of tangency. Similarly, in for a vector-valued function, if $\norm{\vec{r}(t)}$ is constant for all $t$, then:
+In 2-d space, the tangent line to a circle is perpendicular to the radius at the point of tangency. Similarly, in for a vector-valued function, if $\norm{\vec{r}(t)}$ is constant for all $t$, then:
 \begin{equation}
 	\vec{r}(t)\cdot \vec{r}^\prime(t)=0
 \end{equation}
@@ -312,14 +312,14 @@ Now we can prove Theorem (4.6):
 	\end{equation}
 \end{proof}
 
-Analogously, the arc length $L$ of a smoothly parametrized function(\textbf{have a continously turning tangent vector}) in 3-d space is
+Analogously, the arc length $L$ of a smoothly parametrized function(\textbf{have a continuously turning tangent vector}) in 3-d space is
 \begin{align}
 		L &= \int_{a}^{b}\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2+(\frac{dz}{dt})^2}dt \nonumber \\
 		   &= \int_{a}^{b}\norm{\frac{d\vec{r}}{dt}}dt
 \end{align}
 
 \section{Arc Length as A Parameter}
-Sometime it would be more convinient to replace $t$ with $s$, which is the length of arc measured along the curve from some fixed reference point. There are three steps: \\
+Sometime it would be more convenient to replace $t$ with $s$, which is the length of arc measured along the curve from some fixed reference point. There are three steps: \\
 \textbf{Step 1.} Select an reference point.\\
 \textbf{Step 2.} Choose one direction from the reference point as the positive direction. \\
 \textbf{Step 3.} Change the length $s$ to a "signed" length, which means $s$ is positive if $s$ "moves along the curve" to its positive direction. \\

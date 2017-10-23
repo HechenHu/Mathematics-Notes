@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 OCT 2017 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 OCT 2017 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -942,9 +942,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 387.
  (./MultiVariable Differential Calculus.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 387.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 387.
-Package rerunfilecheck Info: File `"MultiVariable Differential Calculus".out' h
-as not changed.
-(rerunfilecheck)             Checksum: 367356078038EC064FEAA77780F69345;1652.
+
+
+Package rerunfilecheck Warning: File `"MultiVariable Differential Calculus".out
+' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"MultiVariable Differential Calculu
+s".out':
+(rerunfilecheck)             Before: 367356078038EC064FEAA77780F69345;1652
+(rerunfilecheck)             After:  3F3649CE46A544347BBD4C8CD20392CB;1651.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 387.
  ) 
 Here is how much of TeX's memory you used:
@@ -977,7 +985,7 @@ lic/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr
 o10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on "MultiVariable Differential Calculus.pdf" (18 pages, 792786 b
+Output written on "MultiVariable Differential Calculus.pdf" (18 pages, 793176 b
 ytes).
 PDF statistics:
  372 PDF objects out of 1000 (max. 8388607)
