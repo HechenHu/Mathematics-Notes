@@ -65,9 +65,6 @@
 
 \frontmatter
 \maketitle
-\chapter{Preface}
-	This note was took during my study of Mathematical Analysis using the book Zorich's \textit{Mathematical Analysis, Second Edition}. Some proof might just be summarized, and I'll make page references to the original proof in the book. The first 8 chapter come from the first book, the rest come from the second book.All page references goes to the corresponding book.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Auto-generated table of contents, list of figures and list of tables %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -582,7 +579,7 @@ The addition and multiplication of integers do not lead outside of $ \Zahlen $. 
 \begin{Theorem}[The fundamental theorem of arithmetic]
 	Each natural number admits a representation as a product 
 	\begin{equation}
-		n = p_1 \cdot \cdot \cdot p_k \nonumber
+		n = p_1 \cdots p_k \nonumber
 	\end{equation}
 	where $ p_1,..., p_k $ are prime numbers. This representation is unique except for the order of the factors.
 \end{Theorem}
@@ -623,7 +620,7 @@ The addition and multiplication of integers do not lead outside of $ \Zahlen $. 
 \begin{Definition}(Algebraic Numbers and Transcendental Numbers)
 	A real number is called \textit{algebraic} if it is the root of an algebraic equation
 	\begin{equation}
-		a_0x^n + \cdot \cdot \cdot + a_{n-1}x + a_n = 0 \nonumber
+		a_0x^n + \cdots + a_{n-1}x + a_n = 0 \nonumber
 	\end{equation}
 	with rational coefficients. Otherwise, it is called \textit{transcendental}.
 \end{Definition}
@@ -684,7 +681,7 @@ By the principle of induction, we can prove the following theorem.
 \begin{Theorem}
 	The inequality
 	\begin{equation}
-	|x_1+ \cdot \cdot \cdot x_n| \leqslant |x_1| + \cdot \cdot \cdot |x_n| \nonumber
+	|x_1+ \cdots x_n| \leqslant |x_1| + \cdots |x_n| \nonumber
 	\end{equation}
 	holds and equality holds if $ \forall n \in \Natural(x_n \leqslant 0 )\lor \forall n \in \Natural (0 \leqslant x_n) $.
 \end{Theorem}
@@ -800,7 +797,7 @@ The set $ \{0,1,...,q-1\} $ is all the digits under base $ q $ while the power o
 \end{Definition}
 
 \begin{Lemma}[Cauchy-Cantor]
-	For any nested sequence $ I_1 \supset I_2 \supset \cdot \cdot \cdot \supset I_n \supset \cdot \cdot \cdot $ of closed intervals, there exists a point $ c\in \Real $ belonging to all of these intervals. \newpara
+	For any nested sequence $ I_1 \supset I_2 \supset \cdots \supset I_n \supset \cdots $ of closed intervals, there exists a point $ c\in \Real $ belonging to all of these intervals. \newpara
 	If in addition it is known that for any $ \varepsilon >0 $ there is an interval $ I_k $ such that $ |I_k|<\varepsilon $, then $ c $ is the unique point common to all the intervals.
 \end{Lemma}
 \begin{proof}
@@ -819,7 +816,7 @@ A subset of $ S $ that is also a system of sets will be called a \textit{subsyst
 \end{Lemma}
 \begin{proof}
 	Let $ S = \{U\} $ be a system of open intervals $ U $ that cover the closed interval $ [a,b] = I_1 $. If the interval $ I_1 $ could not be covered by a finite set of intervals of the system $ S $, then, dividing $ I_1 $ into two halves, we could find that at least one of the two halves, which we denoted by $ I_2 $, does not admit a finite covering. We now repeat this procedure with the interval $ I_2 $, and so on. \newpara
-	In this way a nested sequence $ I_1 \supset I_2 \supset \cdot \cdot \cdot \supset I_n \supset \cdot \cdot \cdot $ of closed intervals arises,none of which admit a covering by a finite subsystem of $ S $. Since the length of the interval $ |I_n|=|I_1|\cdot 2^{-n} $, the sequence $ \{I_n\} $ contains intervals of arbitrarily small length(The second part of \textbf{Cauchy-Contor Principle}), and thus there exists a unique point $ c $ belonging to all the intervals $ I_n,n\in \Natural $. Since $ c \in I_1 = [a,b] $, there exists an open interval $ (\alpha, \beta) = U \in S $ containing $ c $. Let $ \varepsilon = min \{c-\alpha, \beta - c\} $. In the sequence just constructed, we find an interval $ I_n $ such that $ |I_n|<\varepsilon $. Since $ c \in I_n $ and $ |I_n|<\varepsilon $, we conclude that $ I_n \subset (\alpha, \beta) $. But this contradicts the fact that the interval $ I_n $ cannot be covered by a finite set of intervals from the system.
+	In this way a nested sequence $ I_1 \supset I_2 \supset \cdots \supset I_n \supset \cdots $ of closed intervals arises,none of which admit a covering by a finite subsystem of $ S $. Since the length of the interval $ |I_n|=|I_1|\cdot 2^{-n} $, the sequence $ \{I_n\} $ contains intervals of arbitrarily small length(The second part of \textbf{Cauchy-Contor Principle}), and thus there exists a unique point $ c $ belonging to all the intervals $ I_n,n\in \Natural $. Since $ c \in I_1 = [a,b] $, there exists an open interval $ (\alpha, \beta) = U \in S $ containing $ c $. Let $ \varepsilon = min \{c-\alpha, \beta - c\} $. In the sequence just constructed, we find an interval $ I_n $ such that $ |I_n|<\varepsilon $. Since $ c \in I_n $ and $ |I_n|<\varepsilon $, we conclude that $ I_n \subset (\alpha, \beta) $. But this contradicts the fact that the interval $ I_n $ cannot be covered by a finite set of intervals from the system.
 \end{proof}
 
 
@@ -886,7 +883,7 @@ If it is known that a set is either finite or countable, we say it is \textit{at
 \end{Corollary}
 \begin{proof}
 	It can be observed that $ card \Quoziente \times \Quoziente = card \Natural  $. By the principle of induction, $ \forall k \in \Natural (card \Quoziente^k = card \Natural) $. Let $ r \in \Quoziente^k $ be an ordered set $ (r_1,r_2,...,r_k) $ consists of $ k $ rational numbers. \newpara
-	An algebraic equation of degree $ k $ with rational coefficient can be writtne in the reduced form $ x^k + r_1x^{k-1}+ \cdot \cdot \cdot + r_k = 0 $. Thus there are as many different algebraic equations of degree $ k $ as there are different ordered sets $ (r_1,...,r_k) $ of rational numbers, that is, a countable set. \newpara
+	An algebraic equation of degree $ k $ with rational coefficient can be writtne in the reduced form $ x^k + r_1x^{k-1}+ \cdots + r_k = 0 $. Thus there are as many different algebraic equations of degree $ k $ as there are different ordered sets $ (r_1,...,r_k) $ of rational numbers, that is, a countable set. \newpara
 	The algebraic equation with rational coefficients (of arbitrary degree) is the union of sets consisting of algebraic equation (of a fixed degree) which is countable, and this union is countable. Each such equation has only a finite number of roots. Hence the set of algebraic numbers is at most countable. But it is infinite, and therefore countable.
 \end{proof}
 
@@ -1020,7 +1017,7 @@ The sequence $ 1,2,\frac{1}{3},4,\frac{1}{5},6,\frac{1}{7}... $ whose $ n $th te
 	Let $ \lim\limits_{n \to \infty}x_n = A $.Set $ \varepsilon = 1 $ in the common definition of limit, we find $ N $ such that $ |x_n-A| <1 $ for all $ n > N $. Then by the triangle inequality we have $ |x_n| < |A| +1 $. Considering  $ n<N $, we take $ M > max \{|x_1|,|x_2|,...,|x_n|,|A|+1\} $, and for all $ n \in \Natural $ we have $ M > |x_n| $.
 \end{proof}
 
-\subsubsection{Passage to the Limit and the Arithmetic Operations}[p82-p84]
+\subsubsection{Passage to the Limit and the Arithmetic Operations}
 \begin{Definition}
 	If $ \{x_n\} $ and $ \{y_n\} $ are two numerical sequences, their \textit{sum, product,} and \textit{quotient} are the sequences
 	\begin{equation}
@@ -1185,7 +1182,7 @@ Incidentaly, strict inequality holds if $ \alpha \neq 0 $ and $ n >1 $.
 	The limit $ \lim\limits_{n \to \infty}(1+\frac{1}{n})^n $ exists.
 \end{Statement}
 \begin{proof}
-	Let $ y_n = (1+\frac{1}{n})^{n+1} $ and $ n \geqslant 2 $. Use Bernoulli's inequality, we find that $ \frac{y_{n-1}}{y_n}>1 $, and since all terms are positive, this sequence is monotonically decreasing and hence, has a limit. Then 
+	Let $ y_n = (1+\frac{1}{n})^{n+1} $ and $ n \geqslant 2 $. Use Bernoulli's inequality, we find that $ \frac{y_{n-1}}{y_n}>1 $, and since all terms are positive, this sequence is bounded, monotonically decreasing and hence, has a limit. Then 
 	\begin{equation}
 		\lim\limits_{n \to \infty}(1+\frac{1}{n})^n = \lim\limits_{n \to \infty}(1+\frac{1}{n})^{n+1} \cdot \lim\limits_{n \to \infty}(1+\frac{1}{n})^{-1} =  \lim\limits_{n \to \infty}(1+\frac{1}{n})^{n+1} \nonumber
 	\end{equation}
@@ -1234,43 +1231,211 @@ Let $ \{x_k \} $ be an arbitrary sequence of real numbers that is bounded below.
 			\varlimsup_{k \to \infty}x_k \coloneqq \lim\limits_{n \to \infty} sup_{k \geqslant n}x_k \nonumber
 	\end{equation}
 \end{Definition}
-
+\includegraphics[width=\textwidth]{Lim_sup_example_5}
 \begin{Definition}
 	A number (or the symbol $ - \infty $ or $ +\infty $) is called a \textit{partial limit} of a sequence, if the sequence contains a subsequence converging to that number.
 \end{Definition}
 
 \begin{Proposition}
-	The inferior and superior limits of a bounded sequence are respectively the smallest and largest partial limits of the sequence.
+	The inferior and superior limits of any sequence are respectively the smallest and largest partial limits of the sequence.
 \end{Proposition}
 \begin{proof}
-	content...
+	Let's assume that this sequence is bounded. First consider the inferior limit $ i = \varliminf_{k \to \infty}x_k $. The sequence $ i_n = inf_{k\geqslant n}x_k $ is nondecreasing. Using the definition of the greatest lower bound, we choose by induction numbers $ k_n \in \Natural $ such that $ k_n < k_{n+1} $ and $ i_{k_n} \leqslant x_{k_n} < i_{k_n}+\frac{1}{n} $ (Taking $ i_1 $ we find $ k_1 $; taking $ i_{k_1+1} $ we find $ k_2 $, etc.). Since $ \lim\limits_{n \to \infty}i_n = \lim\limits_{n \to \infty}(i_n+\frac{1}{n}) = i $, we have $ \lim\limits_{n \to \infty}x_{k_n}=i $. It is the smallest partial limit since for every $ \varepsilon>0 $ there exists $ n \in \Natural $ such that $ i-\varepsilon<i_n $, that is $ i-\varepsilon <i_n = inf_{k\geqslant n}x_k \leqslant x_k $ for any $ k \geqslant n $. Now we have $ i-\varepsilon < x_k $ for $ k >n $ means that no partia limit of the sequence can be less than $ i - \varepsilon $. But $ \varepsilon >0 $ is arbitrary, and hence no partial limit can be less than $ i $. The proof for the superior limit is of course analogous. \newpara
+	Now if the sequence is not bounded below(resp. above), one can select a subsequence of it tending to $ -\infty $ (resp. $ +\infty $). But then we also have $ \varliminf_{k \to \infty}x_k = -\infty $ (resp. $ \varlimsup_{k \to \infty}x_k = +\infty $). Finally, if $ \varlimsup_{k \to \infty}x_k = -\infty $ (resp. $ \varliminf_{k \to \infty}x_k = +\infty $), the sequence itself tends to $ -\infty $ (resp. $ +\infty $).
 \end{proof}
 
 \begin{Corollary}
 	A sequence has a limit or tends to $ \pm \infty $ iff its inferior and superior limits are the same.
 \end{Corollary}
 \begin{proof}
-	content...
+	The cases when $ \varliminf_{k \to \infty}x_k = \varlimsup_{k \to \infty}x_k = \pm \infty $ have benn investigated above, and so we may assume that $ \varliminf_{k \to \infty}x_k = \varlimsup_{k \to \infty}x_k = A \in \Real $. Since $ (i_n = inf_{k \geqslant n}x_k) \leqslant x_k \leqslant (sup_{k \geqslant n}x_k = s_n) $, we have $ \lim\limits_{n \to \infty}x_n = A $.
 \end{proof}
 
 \begin{Corollary}
 	A sequence converges iff every subsequence of it converges.
 \end{Corollary}
 \begin{proof}
+	The inferior and superior limits of a subsequence lie between those of the sequence itself. If the sequence converges, then its subsequences must converge, and their limits are the same. The converse assertion is obvious, since the subsequence can be chosen as the sequence itself.
+\end{proof}
+
+\begin{Corollary}
+	The Bolzano-Weierstrass Lemma in its restricted and wider formulations(corresponding to Lemmas at page 32 and page 33) follows from the Proposition we just proved.
+\end{Corollary}
+\begin{proof}
+	If the sequence $ \{x_k\} $ is bounded, then $ i = \varliminf_{k \to \infty}x_k $ and $ s = \varlimsup_{k \to \infty}x_k $ are finite and partial limits of the sequence. When $ i=s $ some subsequences have a unique limit, and at least two when $ i<s $. If the sequence is unbounded on one side or the other, there exists a subsequence tending to the corresponding infinity.
+\end{proof}
+
+
+
+\subsection{Elementary Facts about Series}
+
+\subsubsection{The Sum of a Series and the Cauchy Criterion for Convergence of Series}
+
+\begin{Definition}
+	The expression $ a_1 + a_2 + \cdots +a_n + \cdots$ is denoted by the symbol $ \sum_{n=1}^{\infty}a_n $ and usually called a \textit{series} or an \textit{infinite series}.
+\end{Definition}
+
+\begin{Definition}
+	The elements of the sequence $ \{a_n\} $, when regarded as elements of the series, are called the \textit{terms} of the series. The element $ a_n $ is called the \textit{$ n $th term}.
+\end{Definition}
+
+\begin{Definition}
+	The sum $ s_n = \sum_{k=1}^{n}a_k $ is called the \textit{partial sum of the series} or the \textit{$ n $th partial sum of the series}.
+\end{Definition}
+
+\begin{Definition}
+	If the sequence $ \{s_n\} $ of partial sums of a series converges(resp. divergence), we say the series is \textit{convergent} (resp. \textit{divergent}).
+\end{Definition}
+
+\begin{Definition}
+	The limit $ \lim\limits_{n \to \infty}s_n = s $ of the sequence of partial sums of the series, if it exists, is called the \textit{sum of the series}.
+\end{Definition}
+One can see that $ \sum_{n=1}^{\infty}a_n=s $.
+
+\begin{Theorem}[The Cauchy convergence criterion for a series]
+	The series $ a_1 + \cdots + a_n + \cdots $ converges iff for every $ \varepsilon >0 $ there exists $ N \in \Natural $ such that the inequalities $ m \geqslant n > N $ imply $ |a_n + \cdots +a_m|<\varepsilon $.
+\end{Theorem}
+
+\begin{Corollary}
+	If only a finite number of terms of a series are changed, the resulting new series will converge if the original series did and diverge if it diverged.
+\end{Corollary}
+
+\begin{Corollary}
+	A necessary condition for convergence of the series $ a_1 + \cdots + a_n + \cdots $ is that the terms tend to zero as $ n \to \infty $, that is, it is necessary that $ \lim\limits_{n \to \infty}a_n=0 $.
+\end{Corollary}
+\begin{proof}
+	Set $ m=n $ in the Cauchy convergence criterion and use the definition of the limit of a sequence. \newpara
+	Alternatively, $ a_n = s_n - s_{n-1} $, and, given that $ \lim\limits_{n \to \infty}s_n=s $, we have $ \lim\limits_{n \to \infty} a_n =  \lim\limits_{n \to \infty} (s_n - s_{n-1}) = s -s = 0$ .
+\end{proof}
+
+\begin{Statement}
+	The series $ 1+q+q^2+ \cdots + q^n + \cdots  $ is often called the \textit{geometric series}. It converges iff $ |q|<1 $.
+\end{Statement}
+\begin{proof}
+	Suppose $ |q|\geqslant 1 $, then we have $ |q^n| \geqslant 1 $, and in this case this series does not converges.\newpara
+	Now let $ |q|<1 $, and we'll have $ s_n = 1+ q + \cdots + q^{n-1} = \frac{1-q^n}{1-q} $ and $ \lim\limits_{n \to \infty}s_n = \frac{1}{1-q} $, since $ \lim\limits_{n \to \infty}q^n = 0 $ if $ |q|<1 $.
+\end{proof}
+
+\begin{Statement}
+	The series $ 1+\frac{1}{2}+ \cdots +\frac{1}{n}+ \cdots$ is called the \textit{harmonic series} diverges because its partial sums $ s_n = 1+ \frac{1}{2}+\cdots \frac{1}{n} $ diverges.
+\end{Statement}
+\begin{proof}
+	It's sufficient to prove that its partial sum $ s_n = 1+ \frac{1}{2}+\cdots \frac{1}{n} $ diverges. For all $ n \in \Natural $ we have 
+	\begin{equation}
+		|x_{2n}-x_n| = \frac{1}{n+1}+ \cdots + \frac{1}{n+n} > n \cdot \frac{1}{2n} = \frac{1}{2}\nonumber
+	\end{equation}
+	and our proof completes.
+\end{proof}
+
+\textbf{\textit{Remark}} Usual laws for dealing with finite sums does not apply to series in general (e.g. insert parentheses to a divergent series). 
+
+\subsubsection{Absolute Convergence. The Comparison Theorem and Its Consequences}
+
+\begin{Definition}
+	The series $ \sum_{n=1}^{\infty} $ is \textit{absolutely} convergent if the series $ \sum_{n=1}^{\infty}|a_n| $ converges.
+\end{Definition}
+
+Since $ |a_n + \cdots + a_m| \leqslant |a_n|+\cdots |a_m|$, the Cauchy convergence criterion implies that an absolutely convergent series converges, but the converse is generally not ture.
+
+\begin{Statement}
+	The series $ 1-1+\frac{1}{2}-\frac{1}{2}+ \frac{1}{3}-\frac{1}{3}+ \cdots$, whose partial sums are either $ \frac{1}{n} $ or $ 0 $, converges to $ 0 $. However, this sequence does not absolutely converges, and its proof is similar to the proof for the divergence of harmonic series.
+\end{Statement}
+
+\begin{Theorem}[Criterion for convergence of series of nonnegative terms]
+	A series whose terms are nonnegative converges iff the sequence of partial sums is bounded above.
+\end{Theorem}
+
+\begin{Theorem}[Comparison Theorem]
+	Let $ \sum_{n=1}^{\infty}a_n $ and $ \sum_{n=1}^{\infty}b_n $ be two series with nonnegative terms. If there exists an index $ N\in \Natural $ such that $ a_n \leqslant b_n $ for all $ n >N $, then the convergence of the series $  \sum_{n=1}^{\infty}b_n $ implies the convergence of $ \sum_{n=1}^{\infty}a_n $, and the divergence of $ \sum_{n=1}^{\infty}a_n $ implies the divergence of $\sum_{n=1}^{\infty}b_n $.
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Corollary}[The Weierstrass M-test for absolute convergence]
+		Let $ \sum_{n=1}^{\infty}a_n $ and $ \sum_{n=1}^{\infty}b_n $ be series. Suppose there exists an index $ X $ such that $ |a_n| \leqslant b_n $ for all $ n > N $. Then a sufficient condition for absolute convergence of the series $ \sum_{n=1}^{\infty}a_n $ is that the series $ \sum_{n=1}^{\infty}b_n $ converge. \newpara
+		It's often summarized as following: I\textbf{f the terms of a series are majorized (in absolute value) by the terms of a convergent numerical series, then the original series converges absolutely}.
+\end{Corollary}
+\begin{proof}
+	By the comparison theorem the series $ \sum_{n=1}^{\infty}|a_n| $ will then converge, and that is what is meant by the absolute convergence of $ \sum_{n=1}^{\infty}a_n $.
+\end{proof}
+
+\begin{Corollary}[Cauchy's Test]
+	Let $ \sum_{n=1}^{\infty}a_n $ be a given series and $ \alpha = \varlimsup_{n \to \infty} \sqrt[n]{|a_n|}$. Then the following are true:\\
+	a) if $ \alpha <1 $, the series converges absolutely;\\
+	b) if $ \alpha >1 $, the series diverges; \\
+	c) there exist both absolutely convergent and divergent series for which $ \alpha = 1 $.
+\end{Corollary}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Corollary}[d'Alembert's Test]
+	Suppose the limit $ \lim\limits_{n \to \infty} |\frac{a_{n+1}}{a_n}|= \alpha $ exists for the series $ \sum_{n=1}^{\infty}a_n $. Then, \\
+	a) if $ \alpha <1 $, the series converges absolutely;\\
+	b) if $ \alpha >1 $, the series diverges; \\
+	c) there exist both absolutely convergent and divergent series for which $ \alpha = 1 $.
+\end{Corollary}
+
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Proposition}[Cauchy]
+	If $ a_1 \geqslant a_2 \geqslant \cdots \geqslant 0 $, the series $ \sum_{n=1}^{\infty}a_n $ converges iff the series $ \sum_{k=0}^{\infty}2^ka_{2^k} = a_1 + 2a_2 + 4a_4 + 8a_8 \cdots$ converges.
+\end{Proposition}
+\begin{proof}
 	content...
 \end{proof}
 
 \begin{Corollary}
-	The Bolzano-Weierstrass Lemma in its restricted and wider formulations follows from the Proposition we just proved.
+	The series $ \sum_{n=1}^{\infty}\frac{1}{n^p} $ converges for $ p>1 $ and diverges for $ p \leqslant1 $.
 \end{Corollary}
 \begin{proof}
 	content...
 \end{proof}
 
 
-\subsection{Elementary Facts about Series}
+\subsubsection{The Number $ e $ as the Sum of a Series}
+We know that $ e=\lim\limits_{n \to \infty}(1+\frac{1}{n})^n $. By Newton's binomial formula:
+\begin{align}
+	(1+\frac{1}{n})^n &= 1 + \frac{n}{1!}\frac{1}{n} + \frac{n(n-1)}{2!}\frac{1}{n^2} + \cdots + \frac{(n(n-1)\cdots(n-k+1))}{k!}\frac{1}{n^k}+ \cdots +\frac{1}{n^n} \\
+	&= 1+ 1+ \frac{1}{2!}(1-\frac{1}{n}) + \cdots + \frac{1}{k!}(1-\frac{1}{n})(1-\frac{2}{n}) \times \cdots \\
+	&\times (1-\frac{k-1}{n}) + \cdots + \frac{1}{n!}(1-\frac{1}{n})\cdots(1-\frac{n-1}{n})
+\end{align}
+Setting $ (1+\frac{1}{n})=e_n $ and $ 1+1+\cdots \frac{1}{2!} + \cdots + \frac{1}{n!}=s_n$, we thus have $\forall n \in \Natural(e_n < s_n)  $. \newpara
+On the other hand, for any fixed $ k $ and $ n \geqslant k $, as can be seen from the same expansion, we have
+\begin{equation}
+	1+1+1+ 1+ \frac{1}{2!}(1-\frac{1}{n}) + \cdots + \frac{1}{k!}(1-\frac{1}{n})(1-\frac{2}{n})\cdots (1-\frac{k-1}{n})<e_n \nonumber
+\end{equation}
+As $ n \to \infty $ the left-hand side of the inequality tends to $ s_k $ and the right-hand side to $ e $. We can now conclude that $ s_k \leqslant e $ for all $ k \in \Natural $. Then from the relation $ e_n < s_n \leqslant e $ we find that $ \lim\limits_{n \to \infty}s_n=e $.
+\begin{Definition}
+	$ e=1+\frac{1}{1!}+ \frac{1}{2!}+\cdots+\frac{1}{n!}+\cdots $
+\end{Definition}
+The difference between $ e $ and its estimation $ s_n $ can be expressed as following
+\begin{align}
+	0<e-s_n &= \frac{1}{(n+1)!}+ \frac{1}{(n+2)!}+ \cdots =\\
+	&= \frac{1}{(n+1)!}[1+\frac{1}{n+2}+\frac{1}{(n+2)(n+3)}+\cdots] < \\
+	&< \frac{1}{(n+1)!}[1+\frac{1}{n+2}+\frac{1}{(n+2)^2}+\cdots] \\
+	&=\frac{1}{(n+1)!}\frac{1}{1-\frac{1}{n+2}} = \frac{n+2}{n!(n+1)^2} < \frac{1}{n!n}
+\end{align}
+This estimate of the difference $ e-s_n $ can be written as the equality 
+\begin{equation}
+	e=s_n+\frac{\theta_n}{n!n} \nonumber
+\end{equation}
 
+where $ 0<\theta_n<1 $. \\
 
+Hence $ e $ is irrational.
+\begin{proof}[$ e $'s irrationality]
+	Suppose the contrary, that $ e = \frac{p}{q} $, where $ p,q \in \Natural $. Then the number $ q!e $ must be an integer, while
+	\begin{equation}
+		q!e = q!(s_q+\frac{\theta_n}{q!q}) = q!+\frac{q!}{1!}+ \frac{q!}{2!}+\cdots+\frac{q!}{n!}+\frac{\theta_q}{q} \nonumber
+	\end{equation}
+	and therefore $ \frac{\theta_q}{q} $ would have to be an integer, which is impossible.
+\end{proof}
+
+Moreover, $ e $ is transcendental.
 
 
 
@@ -1278,7 +1443,10 @@ Let $ \{x_k \} $ be an arbitrary sequence of real numbers that is bounded below.
 
 \section{The Limit of a Function}
 
-
+\subsection{Definitions and Examples}
+\subsection{Properties of the Limit of a Function}
+\subsection{The General Definition of the Limit of a Function(Limit over a Base)}
+\subsection{Existence of the Limit of a Function}
 
 
 

@@ -1,65 +1,68 @@
-\BOOKMARK [0][-]{chapter*.1}{Preface}{}% 1
-\BOOKMARK [0][-]{chapter.1}{General Mathematical Concepts and Notation}{}% 2
-\BOOKMARK [1][-]{section.1.1}{Mathematical Symbols and their meanings}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.2}{Sets and Operations on Them}{chapter.1}% 4
-\BOOKMARK [2][-]{subsection.1.2.1}{Naive Set Theory}{section.1.2}% 5
-\BOOKMARK [2][-]{subsection.1.2.2}{ZFC: Zermelo-Fraenkel Axioms and Axiom of Choice}{section.1.2}% 6
-\BOOKMARK [2][-]{subsection.1.2.3}{The Cardinality of a Set\(Cardinal Numbers\)}{section.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.2.4}{Operations on Sets}{section.1.2}% 8
-\BOOKMARK [1][-]{section.1.3}{Relations and Functions}{chapter.1}% 9
-\BOOKMARK [2][-]{subsection.1.3.1}{Definitions of Functions}{section.1.3}% 10
-\BOOKMARK [2][-]{subsection.1.3.2}{Elementry Classification of Mappings}{section.1.3}% 11
-\BOOKMARK [2][-]{subsection.1.3.3}{Composition of Functions and Mutually Inverse Mappings}{section.1.3}% 12
-\BOOKMARK [2][-]{subsection.1.3.4}{Functions as Relations. The Graph of a Function}{section.1.3}% 13
-\BOOKMARK [0][-]{chapter.2}{The Real Numbers}{}% 14
-\BOOKMARK [1][-]{section.2.1}{The Axiom System and Some General Properties of the Set of Real Numbers}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.1.1}{The Axiom System of the Real Numbers}{section.2.1}% 16
-\BOOKMARK [2][-]{subsection.2.1.2}{Some General Algebraic Properties of Real Numbers}{section.2.1}% 17
-\BOOKMARK [2][-]{subsection.2.1.3}{The Completeness Axiom and the Existence of a Least Upper\(or Greatest Lower\) Bound of a Set of Numbers}{section.2.1}% 18
-\BOOKMARK [1][-]{section.2.2}{The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.2.1}{The Natural Numbers and the Principle of Mathematical Induction}{section.2.2}% 20
-\BOOKMARK [2][-]{subsection.2.2.2}{Rational and Irrational Numbers}{section.2.2}% 21
-\BOOKMARK [2][-]{subsection.2.2.3}{The Principle of Archimedes}{section.2.2}% 22
-\BOOKMARK [2][-]{subsection.2.2.4}{Miscellaneous}{section.2.2}% 23
-\BOOKMARK [1][-]{section.2.3}{Basic Lemmas Connected with the Completeness of the Real Numbers}{chapter.2}% 24
-\BOOKMARK [2][-]{subsection.2.3.1}{The Nested Interval Lemma\(Cauchy-Cantor Principle\)}{section.2.3}% 25
-\BOOKMARK [2][-]{subsection.2.3.2}{The Finite Covering Lemma\(Borel-Lebesgue Principle, or Heine-Borel Theorem\)}{section.2.3}% 26
-\BOOKMARK [2][-]{subsection.2.3.3}{The Limit Point Lemma\(Bolzano-Weierstrass Principle\)}{section.2.3}% 27
-\BOOKMARK [1][-]{section.2.4}{Countable and Uncountable Sets}{chapter.2}% 28
-\BOOKMARK [2][-]{subsection.2.4.1}{The Cardinality of the Continuum}{section.2.4}% 29
-\BOOKMARK [2][-]{subsection.2.4.2}{Miscellaneous}{section.2.4}% 30
-\BOOKMARK [0][-]{chapter.3}{Limits}{}% 31
-\BOOKMARK [1][-]{section.3.1}{The Limit of a Sequence}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.1.1}{Definitions and Examples}{section.3.1}% 33
-\BOOKMARK [2][-]{subsection.3.1.2}{Properties of the Limit of a Sequence}{section.3.1}% 34
-\BOOKMARK [2][-]{subsection.3.1.3}{Questions Involving the Existence of the Limit of a Sequence}{section.3.1}% 35
-\BOOKMARK [2][-]{subsection.3.1.4}{Elementary Facts about Series}{section.3.1}% 36
-\BOOKMARK [1][-]{section.3.2}{The Limit of a Function}{chapter.3}% 37
-\BOOKMARK [0][-]{chapter.4}{Continuous Functions}{}% 38
-\BOOKMARK [1][-]{section.4.1}{Basic Definitions and Examples}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.2}{Properties of Continuous Functions}{chapter.4}% 40
-\BOOKMARK [0][-]{chapter.5}{Differential Calculus}{}% 41
-\BOOKMARK [1][-]{section.5.1}{Differentiable Functions}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.2}{The Basic Rules of Differentiation}{chapter.5}% 43
-\BOOKMARK [1][-]{section.5.3}{The Basic Theorems of Differential Calculus}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.4}{Differential Calculus Used to Study Functions}{chapter.5}% 45
-\BOOKMARK [1][-]{section.5.5}{Complex Numbers and Elementary Functions}{chapter.5}% 46
-\BOOKMARK [1][-]{section.5.6}{Examples of Differential Calculus in Natural Science}{chapter.5}% 47
-\BOOKMARK [1][-]{section.5.7}{Primitives}{chapter.5}% 48
-\BOOKMARK [0][-]{chapter.6}{Integration}{}% 49
-\BOOKMARK [1][-]{section.6.1}{Definition of the Integral and Description of the Set of Integrable Functions}{chapter.6}% 50
-\BOOKMARK [1][-]{section.6.2}{Linearity, Additivity and Monotonicity on the Space \040R [a,b]}{chapter.6}% 51
-\BOOKMARK [1][-]{section.6.3}{The Integral and the Derivative}{chapter.6}% 52
-\BOOKMARK [1][-]{section.6.4}{Some Applications of Integration}{chapter.6}% 53
-\BOOKMARK [1][-]{section.6.5}{Improper Integrals}{chapter.6}% 54
-\BOOKMARK [0][-]{chapter.7}{Functions of Several Variables: Their Limits and Continuity}{}% 55
-\BOOKMARK [1][-]{section.7.1}{The Space \040Rm \040and the Most Important Classes of Its Subsets}{chapter.7}% 56
-\BOOKMARK [1][-]{section.7.2}{Limits and Continuity of Functions of Several Variables}{chapter.7}% 57
-\BOOKMARK [0][-]{chapter.8}{The Differential Calculus of Functions of Several Variables}{}% 58
-\BOOKMARK [1][-]{section.8.1}{The Linear Structure on \040Rm }{chapter.8}% 59
-\BOOKMARK [1][-]{section.8.2}{The Differential of a Function of Several Variables}{chapter.8}% 60
-\BOOKMARK [1][-]{section.8.3}{The Basic Laws of Differentiation}{chapter.8}% 61
-\BOOKMARK [1][-]{section.8.4}{The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}{chapter.8}% 62
-\BOOKMARK [1][-]{section.8.5}{The Implicit Function Theorem}{chapter.8}% 63
-\BOOKMARK [1][-]{section.8.6}{Some Corollaries of the Implicit Function Theorem}{chapter.8}% 64
-\BOOKMARK [1][-]{section.8.7}{Surfaces in \040Rn \040and the Theory of Extrema with Constraint}{chapter.8}% 65
+\BOOKMARK [0][-]{chapter.1}{General Mathematical Concepts and Notation}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Mathematical Symbols and their meanings}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Sets and Operations on Them}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.2.1}{Naive Set Theory}{section.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.2.2}{ZFC: Zermelo-Fraenkel Axioms and Axiom of Choice}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.3}{The Cardinality of a Set\(Cardinal Numbers\)}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.4}{Operations on Sets}{section.1.2}% 7
+\BOOKMARK [1][-]{section.1.3}{Relations and Functions}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.3.1}{Definitions of Functions}{section.1.3}% 9
+\BOOKMARK [2][-]{subsection.1.3.2}{Elementry Classification of Mappings}{section.1.3}% 10
+\BOOKMARK [2][-]{subsection.1.3.3}{Composition of Functions and Mutually Inverse Mappings}{section.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.3.4}{Functions as Relations. The Graph of a Function}{section.1.3}% 12
+\BOOKMARK [0][-]{chapter.2}{The Real Numbers}{}% 13
+\BOOKMARK [1][-]{section.2.1}{The Axiom System and Some General Properties of the Set of Real Numbers}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.1.1}{The Axiom System of the Real Numbers}{section.2.1}% 15
+\BOOKMARK [2][-]{subsection.2.1.2}{Some General Algebraic Properties of Real Numbers}{section.2.1}% 16
+\BOOKMARK [2][-]{subsection.2.1.3}{The Completeness Axiom and the Existence of a Least Upper\(or Greatest Lower\) Bound of a Set of Numbers}{section.2.1}% 17
+\BOOKMARK [1][-]{section.2.2}{The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.1}{The Natural Numbers and the Principle of Mathematical Induction}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.2}{Rational and Irrational Numbers}{section.2.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.3}{The Principle of Archimedes}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.4}{Miscellaneous}{section.2.2}% 22
+\BOOKMARK [1][-]{section.2.3}{Basic Lemmas Connected with the Completeness of the Real Numbers}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.3.1}{The Nested Interval Lemma\(Cauchy-Cantor Principle\)}{section.2.3}% 24
+\BOOKMARK [2][-]{subsection.2.3.2}{The Finite Covering Lemma\(Borel-Lebesgue Principle, or Heine-Borel Theorem\)}{section.2.3}% 25
+\BOOKMARK [2][-]{subsection.2.3.3}{The Limit Point Lemma\(Bolzano-Weierstrass Principle\)}{section.2.3}% 26
+\BOOKMARK [1][-]{section.2.4}{Countable and Uncountable Sets}{chapter.2}% 27
+\BOOKMARK [2][-]{subsection.2.4.1}{The Cardinality of the Continuum}{section.2.4}% 28
+\BOOKMARK [2][-]{subsection.2.4.2}{Miscellaneous}{section.2.4}% 29
+\BOOKMARK [0][-]{chapter.3}{Limits}{}% 30
+\BOOKMARK [1][-]{section.3.1}{The Limit of a Sequence}{chapter.3}% 31
+\BOOKMARK [2][-]{subsection.3.1.1}{Definitions and Examples}{section.3.1}% 32
+\BOOKMARK [2][-]{subsection.3.1.2}{Properties of the Limit of a Sequence}{section.3.1}% 33
+\BOOKMARK [2][-]{subsection.3.1.3}{Questions Involving the Existence of the Limit of a Sequence}{section.3.1}% 34
+\BOOKMARK [2][-]{subsection.3.1.4}{Elementary Facts about Series}{section.3.1}% 35
+\BOOKMARK [1][-]{section.3.2}{The Limit of a Function}{chapter.3}% 36
+\BOOKMARK [2][-]{subsection.3.2.1}{Definitions and Examples}{section.3.2}% 37
+\BOOKMARK [2][-]{subsection.3.2.2}{Properties of the Limit of a Function}{section.3.2}% 38
+\BOOKMARK [2][-]{subsection.3.2.3}{The General Definition of the Limit of a Function\(Limit over a Base\)}{section.3.2}% 39
+\BOOKMARK [2][-]{subsection.3.2.4}{Existence of the Limit of a Function}{section.3.2}% 40
+\BOOKMARK [0][-]{chapter.4}{Continuous Functions}{}% 41
+\BOOKMARK [1][-]{section.4.1}{Basic Definitions and Examples}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.2}{Properties of Continuous Functions}{chapter.4}% 43
+\BOOKMARK [0][-]{chapter.5}{Differential Calculus}{}% 44
+\BOOKMARK [1][-]{section.5.1}{Differentiable Functions}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.2}{The Basic Rules of Differentiation}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.3}{The Basic Theorems of Differential Calculus}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.4}{Differential Calculus Used to Study Functions}{chapter.5}% 48
+\BOOKMARK [1][-]{section.5.5}{Complex Numbers and Elementary Functions}{chapter.5}% 49
+\BOOKMARK [1][-]{section.5.6}{Examples of Differential Calculus in Natural Science}{chapter.5}% 50
+\BOOKMARK [1][-]{section.5.7}{Primitives}{chapter.5}% 51
+\BOOKMARK [0][-]{chapter.6}{Integration}{}% 52
+\BOOKMARK [1][-]{section.6.1}{Definition of the Integral and Description of the Set of Integrable Functions}{chapter.6}% 53
+\BOOKMARK [1][-]{section.6.2}{Linearity, Additivity and Monotonicity on the Space \040R [a,b]}{chapter.6}% 54
+\BOOKMARK [1][-]{section.6.3}{The Integral and the Derivative}{chapter.6}% 55
+\BOOKMARK [1][-]{section.6.4}{Some Applications of Integration}{chapter.6}% 56
+\BOOKMARK [1][-]{section.6.5}{Improper Integrals}{chapter.6}% 57
+\BOOKMARK [0][-]{chapter.7}{Functions of Several Variables: Their Limits and Continuity}{}% 58
+\BOOKMARK [1][-]{section.7.1}{The Space \040Rm \040and the Most Important Classes of Its Subsets}{chapter.7}% 59
+\BOOKMARK [1][-]{section.7.2}{Limits and Continuity of Functions of Several Variables}{chapter.7}% 60
+\BOOKMARK [0][-]{chapter.8}{The Differential Calculus of Functions of Several Variables}{}% 61
+\BOOKMARK [1][-]{section.8.1}{The Linear Structure on \040Rm }{chapter.8}% 62
+\BOOKMARK [1][-]{section.8.2}{The Differential of a Function of Several Variables}{chapter.8}% 63
+\BOOKMARK [1][-]{section.8.3}{The Basic Laws of Differentiation}{chapter.8}% 64
+\BOOKMARK [1][-]{section.8.4}{The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}{chapter.8}% 65
+\BOOKMARK [1][-]{section.8.5}{The Implicit Function Theorem}{chapter.8}% 66
+\BOOKMARK [1][-]{section.8.6}{Some Corollaries of the Implicit Function Theorem}{chapter.8}% 67
+\BOOKMARK [1][-]{section.8.7}{Surfaces in \040Rn \040and the Theory of Extrema with Constraint}{chapter.8}% 68
