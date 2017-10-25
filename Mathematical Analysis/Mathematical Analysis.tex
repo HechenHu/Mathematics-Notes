@@ -1335,21 +1335,21 @@ One can see that $ \sum_{n=1}^{\infty}a_n=s $.
 	The series $ \sum_{n=1}^{\infty} $ is \textit{absolutely} convergent if the series $ \sum_{n=1}^{\infty}|a_n| $ converges.
 \end{Definition}
 
-Since $ |a_n + \cdots + a_m| \leqslant |a_n|+\cdots |a_m|$, the Cauchy convergence criterion implies that an absolutely convergent series converges, but the converse is generally not ture.
+Since $ |a_n + \cdots + a_m| \leqslant |a_n|+\cdots |a_m|$, the Cauchy convergence criterion implies that an absolutely convergent series converges, but the converse is generally not true.
 
 \begin{Statement}
 	The series $ 1-1+\frac{1}{2}-\frac{1}{2}+ \frac{1}{3}-\frac{1}{3}+ \cdots$, whose partial sums are either $ \frac{1}{n} $ or $ 0 $, converges to $ 0 $. However, this sequence does not absolutely converges, and its proof is similar to the proof for the divergence of harmonic series.
 \end{Statement}
 
-\begin{Theorem}[Criterion for convergence of series of nonnegative terms]
-	A series whose terms are nonnegative converges iff the sequence of partial sums is bounded above.
+\begin{Theorem}[Criterion for convergence of series of non-negative terms]
+	A series whose terms are non-negative converges iff the sequence of partial sums is bounded above.
 \end{Theorem}
 
 \begin{Theorem}[Comparison Theorem]
 	Let $ \sum_{n=1}^{\infty}a_n $ and $ \sum_{n=1}^{\infty}b_n $ be two series with non-negative terms. If there exists an index $ N\in \Natural $ such that $ a_n \leqslant b_n $ for all $ n >N $, then the convergence of the series $  \sum_{n=1}^{\infty}b_n $ implies the convergence of $ \sum_{n=1}^{\infty}a_n $, and the divergence of $ \sum_{n=1}^{\infty}a_n $ implies the divergence of $\sum_{n=1}^{\infty}b_n $.
 \end{Theorem}
 \begin{proof}
-	content...
+	Omit terms for these two series for all $ n < N $, since a finite number of terms has no effect on the convergence of a series. Denote the partial sum of the sequences as $ A_n = \sum_{k=1}^{n}a_k \leqslant \sum_{k=1}^{n}b_k=B_n $. If the series $ \{B_n\} $ converges, then $ \{A_n\} $ is bounded above. Because $ \{A_n\} $ is also non-decreasing (all terms are non-negative), it has a limit, and so do $  \sum_{n=1}^{\infty}a_n  $. The second assertion is similar and can be proved by contradiction.
 \end{proof}
 
 \begin{Corollary}[The Weierstrass M-test for absolute convergence]
@@ -1367,7 +1367,9 @@ Since $ |a_n + \cdots + a_m| \leqslant |a_n|+\cdots |a_m|$, the Cauchy convergen
 	c) there exist both absolutely convergent and divergent series for which $ \alpha = 1 $.
 \end{Corollary}
 \begin{proof}
-	content...
+	For $ \alpha>0 $, we find a $ q \in \Real $ such that $ \alpha <q<1 $, and show that the sequence $ \sum_{n=1}^{\infty}q^n $ converges and its terms are always greater than $ |a_n| $. Thus the original sequence absolutely converges. \newpara
+	For $ \alpha>1 $, we find that $ \alpha $ is the greatest partial limit of the sequence $ \{\sqrt[n]{|a_n|}\} $. Hence for some $ k>K (|a_{n_k}|>1)  $, and the necessary condition for convergence ($ a_n \to 0 $) does not meet for the original sequence. \newpara
+	If $ \alpha=1 $, for example, the series $ \sum_{n=1}^{\infty}\frac{1}{n} $ diverges and $ \sum_{n=1}^{\infty}\frac{1}{n^2} $ converges absolutely, but their superior limit under $ n $th root are both $ 1 $.
 \end{proof}
 
 \begin{Corollary}[d'Alembert's Test]
@@ -1378,21 +1380,34 @@ Since $ |a_n + \cdots + a_m| \leqslant |a_n|+\cdots |a_m|$, the Cauchy convergen
 \end{Corollary}
 
 \begin{proof}
-	content...
+	If $ \alpha<1 $, then we find a number $ q $ such that $ \alpha < q <1 $. Fixing $ q $ and use the properties of limits, we find an index $ N \in \Natural$ such that $ |\frac{a_{n+1}}{a_n}|<q $ for $ n > N $. Since
+	\begin{equation}
+		|\frac{a_{n+1}}{a_n}|\cdot |\frac{a_n}{a_{n-1}}|\cdots |\frac{a_2}{a_1}| = \frac{a_{n+1}}{a_1}\nonumber
+	\end{equation}
+	and therefore we have $ |a_{n+1}|<|a_1|\cdot q^n $. But the geometric series $ \sum_{n=1}^{\infty}|a_1|q^n $ converges for $ |q|<1 $, hence the original series converges. \newpara
+	For $ \alpha >1 $, we can find some terms that $ |\frac{a_{n+1}}{a_n}|>1 $, thus it diverges. For case involving $ \alpha=1 $, the examples from our proof for \textbf{Cauchy's Test} are sufficient.
 \end{proof}
 
 \begin{Proposition}[Cauchy]
 	If $ a_1 \geqslant a_2 \geqslant \cdots \geqslant 0 $, the series $ \sum_{n=1}^{\infty}a_n $ converges iff the series $ \sum_{k=0}^{\infty}2^ka_{2^k} = a_1 + 2a_2 + 4a_4 + 8a_8 \cdots$ converges.
 \end{Proposition}
 \begin{proof}
-	content...
+	By the inequality
+	\begin{equation}
+		2^na_{2^{n+1}} \leqslant a_{2^n+1} + \cdots + a_{2^{n+1}} \leqslant 2^na_{2^n}
+	\end{equation}
+	we have 
+	\begin{equation}
+		\frac{1}{2}(S_{n+1}-a_1)\leqslant A_{2^{n+1}}-a_1 \leqslant S_n
+	\end{equation}
+	where $ A_k = a_1 + \cdots +a_k $ and $ S_n = a_1+2a_2+\cdots +2^n a_{2^n} $. $ \{A_k\} $ and $ \{S_n\} $ are non-decreasing, and hence they are both bounded above or unbounded above. Since all their terms are non-negative, our proof completes.
 \end{proof}
 
 \begin{Corollary}
 	The series $ \sum_{n=1}^{\infty}\frac{1}{n^p} $ converges for $ p>1 $ and diverges for $ p \leqslant1 $.
 \end{Corollary}
 \begin{proof}
-	content...
+	If $ p \geqslant0 $, by our proposition it converges when $ 2^{1-p}<1 $, that is, $ p>1 $. The case when $ p \leqslant 0 $ is obvious since all terms are not smaller than 1.
 \end{proof}
 
 
@@ -1444,6 +1459,117 @@ Moreover, $ e $ is transcendental.
 \section{The Limit of a Function}
 
 \subsection{Definitions and Examples}
+
+	Let $ E \subset \Real $, $ a $ be an limit point of $ E $, and $ f : E \to \Real $ be a real-valued function defined on $ E $.
+\begin{Definition}
+The function $ f : E \to \Real  $ \textit{tends to} $ A $ as $ x $ \textit{tends to} $ a $, or that $ A $ is the \textit{limit} of $ f $ as $ x $ \textit{tends to} $ a $, if for every $ \varepsilon>0 $ there exists $ \delta>0 $ such that $ |f(x)-A|<\varepsilon $ for every $ x \in E $ such that $ 0<|x-a|<\delta $.
+\begin{equation}
+	\forall \varepsilon >0 \exists \delta >0 \forall x \in E(0<|x-a|<\delta \Rightarrow |f(x)-A|<\varepsilon)\nonumber
+\end{equation}
+which is denoted as $ \lim\limits_{E \ni x \to a}f(x) = A $.
+\end{Definition}
+
+\begin{Statement}
+	\begin{equation}
+		\lim\limits_{E \ni x \to 0}x\sin\frac{1}{x}=0\nonumber
+	\end{equation}
+	\begin{proof}
+		Let $ \varepsilon=\delta $.
+	\end{proof}
+\end{Statement}
+
+\begin{Definition}
+	A \textit{deleted neighborhood} of a point is a neighborhood of the point from which the point itself has been removed. \newpara
+	If $ U(a) $ denotes a neighborhood of $ a $, the deleted neighborhood is denoted as $ \mathring{U}(a) $. \newpara
+	The sets
+	\begin{align}
+		U_E(a) &\coloneqq E \cap U(a) \\
+		\mathring{U}_E(a)&\coloneqq E \cap \mathring{U}(a)
+	\end{align}
+	will be called respectively a \textit{neighborhood of $ a $} in $ E $ and a \textit{deleted neighborhood of $ a $} in $ E $. \newpara
+	if the temporarily-adopted cumbersome symbols $ \mathring{U}^\delta_E(a) $ and $ V^\varepsilon _\Real(A) $ denote the deleted $ \delta $-neighborhood of $ a $ in $ E $ and the $ \varepsilon $-neighborhood of $ A $ in $ \Real $, then the definition of the limit of a function can be rewritten as
+	\begin{equation}
+		(\lim\limits_{E \ni x \to a}f(x) = A ) \coloneqq \forall V^\varepsilon_\Real(A)\exists\mathring{U}^\delta_E(a)(f(\mathring{U}^\delta_E(a))\subset V^\varepsilon_\Real(A)) .\nonumber
+	\end{equation}
+	This expression says that $ A $ is the limit of the function $ f $ as $ x $ tends to $ a $ in the set $ E $ if for every $ \varepsilon $-neighborhood $ V^\varepsilon_\Real(A) $ of $ A $ there exists a deleted $ \delta $-neighborhood $ \mathring{U}^\delta_E(a) $ of $ a $ in $ E $ whose image $ f(\mathring{U}^\delta_E(a)) $ under the mapping $ f:E\to \Real $ is entirely contained in $  V^\varepsilon_\Real(A) $.
+\end{Definition}
+Since every neighborhood of a point on the real line contains a symmetric neighborhood (a $ \delta $-neighborhood) of the same point, the \textbf{final version of our definition for a limit} is:
+\begin{Definition}
+	\begin{equation}
+			(\lim\limits_{E \ni x \to a}f(x) = A ) \coloneqq \forall V_\Real(A)\exists\mathring{U}_E(a)(f(\mathring{U}_E(a))\subset V_\Real(A)) .\nonumber
+	\end{equation}
+\end{Definition}
+
+\begin{Statement}
+	The function \begin{equation}
+	sgn x =	\begin{cases} 1 & \text{for } x >0\\
+		 0 & \text{for } x=0\\
+		 -1 & \text{for } x<0
+		 \end{cases} \nonumber
+	\end{equation}
+	(read "signum x") has no limit as $ x \to 0 $.
+\end{Statement}
+\begin{proof}
+Apparently no number distinct from $ -1,0,1 $ can be the limit of the function.But no matter what $ \mathring{U}(0) $ we choose, some points of it does not belong to the $ \varepsilon $-neighborhood of $ A $ with $ \varepsilon=\frac{1}{2} $, since $  \mathring{U}(0)  $ contains both positive and negative points while $ V(A) $ can't contain both $ 1 $ and $ -1 $ at the same time.
+\end{proof}
+When the function $ f $ is defined on a whole deleted neighborhood of a point $ a\in \Real $, that is, when $ \mathring{U}_E(a)=\mathring{U}_\Real(a)=\mathring{U}(a) $, we adopt the expression $ x \to a $ instead of $ E \ni x \to a $.
+
+\begin{Statement}
+	\begin{equation}
+		\lim\limits_{x \to 0} |sgn(x)|=1\nonumber
+	\end{equation}
+\end{Statement}
+\begin{proof}
+	\begin{equation}
+		\forall V(1) (f(\mathring{U}(0))=1\in V(1)) \nonumber
+	\end{equation}
+\end{proof}
+
+\begin{Statement}
+	\begin{equation}
+		\lim\limits_{\Real_-\ni x \to 0} sgn(x)=-1, \quad 	\lim\limits_{\Real_+\ni x \to 0} sgn(x)=1 \nonumber
+	\end{equation}
+\end{Statement}
+
+\begin{Statement}
+	$ \lim\limits_{x \to 0}\sin \frac{1}{x} $ has no limit.
+\end{Statement}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Statement}
+	If 
+	\begin{align}
+		E_- &=\{x\in \Real | x = \frac{1}{-\pi/2+2\pi n}, n \in \Natural\} \\
+		E_+ &=\{x\in \Real | x = \frac{1}{\pi/2+2\pi n}, n \in \Natural\}
+	\end{align}
+	then
+	\begin{align}
+		&\lim\limits_{E_-\ni x \to 0}\sin \frac{1}{x} = -1 \\
+		&\lim\limits_{E_+\ni x \to 0}\sin \frac{1}{x} = 1
+	\end{align}
+\end{Statement}
+The next proposition, also called the statement of the equivalence of the Cauchy definition of a limit(in terms of neighborhoods) and the Heine definition(in terms of sequences), is:
+\begin{Proposition}
+	The relation $ \lim\limits_{E \ni x \to a}f(x) = A $ holds iff for every sequence $ \{x_n\} $ of points $ x_n \in E\setminus a $ converging to $ a $, the sequence $ \{f(x_n)\} $ converges to $ A $.
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Properties of the Limit of a Function}
 \subsection{The General Definition of the Limit of a Function(Limit over a Base)}
 \subsection{Existence of the Limit of a Function}

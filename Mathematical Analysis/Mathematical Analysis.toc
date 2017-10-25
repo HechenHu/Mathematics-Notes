@@ -63,37 +63,37 @@
 \contentsline {subsection}{\numberline {3.1.4}Elementary Facts about Series}{35}{subsection.3.1.4}
 \contentsline {subsubsection}{The Sum of a Series and the Cauchy Criterion for Convergence of Series}{35}{section*.29}
 \contentsline {subsubsection}{Absolute Convergence. The Comparison Theorem and Its Consequences}{36}{section*.30}
-\contentsline {subsubsection}{The Number $ e $ as the Sum of a Series}{37}{section*.31}
-\contentsline {section}{\numberline {3.2}The Limit of a Function}{38}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Definitions and Examples}{38}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Properties of the Limit of a Function}{38}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}The General Definition of the Limit of a Function(Limit over a Base)}{38}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Existence of the Limit of a Function}{38}{subsection.3.2.4}
-\contentsline {chapter}{\numberline {4}Continuous Functions}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Basic Definitions and Examples}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Properties of Continuous Functions}{39}{section.4.2}
-\contentsline {chapter}{\numberline {5}Differential Calculus}{41}{chapter.5}
-\contentsline {section}{\numberline {5.1}Differentiable Functions}{41}{section.5.1}
-\contentsline {section}{\numberline {5.2}The Basic Rules of Differentiation}{41}{section.5.2}
-\contentsline {section}{\numberline {5.3}The Basic Theorems of Differential Calculus}{41}{section.5.3}
-\contentsline {section}{\numberline {5.4}Differential Calculus Used to Study Functions}{41}{section.5.4}
-\contentsline {section}{\numberline {5.5}Complex Numbers and Elementary Functions}{41}{section.5.5}
-\contentsline {section}{\numberline {5.6}Examples of Differential Calculus in Natural Science}{41}{section.5.6}
-\contentsline {section}{\numberline {5.7}Primitives}{41}{section.5.7}
-\contentsline {chapter}{\numberline {6}Integration}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}Definition of the Integral and Description of the Set of Integrable Functions}{43}{section.6.1}
-\contentsline {section}{\numberline {6.2}Linearity, Additivity and Monotonicity on the Space $ \mathcal {R} $[a,b]}{43}{section.6.2}
-\contentsline {section}{\numberline {6.3}The Integral and the Derivative}{43}{section.6.3}
-\contentsline {section}{\numberline {6.4}Some Applications of Integration}{43}{section.6.4}
-\contentsline {section}{\numberline {6.5}Improper Integrals}{43}{section.6.5}
-\contentsline {chapter}{\numberline {7}Functions of Several Variables: Their Limits and Continuity}{45}{chapter.7}
-\contentsline {section}{\numberline {7.1}The Space $ \mathbb {R}^m $ and the Most Important Classes of Its Subsets}{45}{section.7.1}
-\contentsline {section}{\numberline {7.2}Limits and Continuity of Functions of Several Variables}{45}{section.7.2}
-\contentsline {chapter}{\numberline {8}The Differential Calculus of Functions of Several Variables}{47}{chapter.8}
-\contentsline {section}{\numberline {8.1}The Linear Structure on $ \mathbb {R}^m $}{47}{section.8.1}
-\contentsline {section}{\numberline {8.2}The Differential of a Function of Several Variables}{47}{section.8.2}
-\contentsline {section}{\numberline {8.3}The Basic Laws of Differentiation}{47}{section.8.3}
-\contentsline {section}{\numberline {8.4}The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}{47}{section.8.4}
-\contentsline {section}{\numberline {8.5}The Implicit Function Theorem}{47}{section.8.5}
-\contentsline {section}{\numberline {8.6}Some Corollaries of the Implicit Function Theorem}{47}{section.8.6}
-\contentsline {section}{\numberline {8.7}Surfaces in $ \mathbb {R}^n $ and the Theory of Extrema with Constraint}{47}{section.8.7}
+\contentsline {subsubsection}{The Number $ e $ as the Sum of a Series}{38}{section*.31}
+\contentsline {section}{\numberline {3.2}The Limit of a Function}{39}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Definitions and Examples}{39}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Properties of the Limit of a Function}{41}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}The General Definition of the Limit of a Function(Limit over a Base)}{41}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Existence of the Limit of a Function}{41}{subsection.3.2.4}
+\contentsline {chapter}{\numberline {4}Continuous Functions}{43}{chapter.4}
+\contentsline {section}{\numberline {4.1}Basic Definitions and Examples}{43}{section.4.1}
+\contentsline {section}{\numberline {4.2}Properties of Continuous Functions}{43}{section.4.2}
+\contentsline {chapter}{\numberline {5}Differential Calculus}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Differentiable Functions}{45}{section.5.1}
+\contentsline {section}{\numberline {5.2}The Basic Rules of Differentiation}{45}{section.5.2}
+\contentsline {section}{\numberline {5.3}The Basic Theorems of Differential Calculus}{45}{section.5.3}
+\contentsline {section}{\numberline {5.4}Differential Calculus Used to Study Functions}{45}{section.5.4}
+\contentsline {section}{\numberline {5.5}Complex Numbers and Elementary Functions}{45}{section.5.5}
+\contentsline {section}{\numberline {5.6}Examples of Differential Calculus in Natural Science}{45}{section.5.6}
+\contentsline {section}{\numberline {5.7}Primitives}{45}{section.5.7}
+\contentsline {chapter}{\numberline {6}Integration}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Definition of the Integral and Description of the Set of Integrable Functions}{47}{section.6.1}
+\contentsline {section}{\numberline {6.2}Linearity, Additivity and Monotonicity on the Space $ \mathcal {R} $[a,b]}{47}{section.6.2}
+\contentsline {section}{\numberline {6.3}The Integral and the Derivative}{47}{section.6.3}
+\contentsline {section}{\numberline {6.4}Some Applications of Integration}{47}{section.6.4}
+\contentsline {section}{\numberline {6.5}Improper Integrals}{47}{section.6.5}
+\contentsline {chapter}{\numberline {7}Functions of Several Variables: Their Limits and Continuity}{49}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Space $ \mathbb {R}^m $ and the Most Important Classes of Its Subsets}{49}{section.7.1}
+\contentsline {section}{\numberline {7.2}Limits and Continuity of Functions of Several Variables}{49}{section.7.2}
+\contentsline {chapter}{\numberline {8}The Differential Calculus of Functions of Several Variables}{51}{chapter.8}
+\contentsline {section}{\numberline {8.1}The Linear Structure on $ \mathbb {R}^m $}{51}{section.8.1}
+\contentsline {section}{\numberline {8.2}The Differential of a Function of Several Variables}{51}{section.8.2}
+\contentsline {section}{\numberline {8.3}The Basic Laws of Differentiation}{51}{section.8.3}
+\contentsline {section}{\numberline {8.4}The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}{51}{section.8.4}
+\contentsline {section}{\numberline {8.5}The Implicit Function Theorem}{51}{section.8.5}
+\contentsline {section}{\numberline {8.6}Some Corollaries of the Implicit Function Theorem}{51}{section.8.6}
+\contentsline {section}{\numberline {8.7}Surfaces in $ \mathbb {R}^n $ and the Theory of Extrema with Constraint}{51}{section.8.7}

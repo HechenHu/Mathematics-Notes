@@ -1,4 +1,3 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 OCT 2017 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1288,11 +1287,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1315--1317
  []
 
 [35]
+Overfull \hbox (0.45607pt too wide) in paragraph at lines 1345--1346
+[]\T1/lmr/bx/n/10.95 Theorem 3.1.14 \T1/lmr/m/n/10.95 (Cri-te-rion for con-ver-
+gence of se-ries of non-neg-a-tive terms)\T1/lmr/bx/n/10.95 .
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1356--1358
 
  []
 
-
+[36]
 Overfull \hbox (29.343pt too wide) in paragraph at lines 1364--1368
 \T1/lmr/bx/n/10.95 Corollary \T1/lmr/m/n/10.95 (Cauchy's Test)\T1/lmr/bx/n/10.9
 5 . \T1/lmr/m/it/10.95 Let $[][] \OML/lmm/m/it/10.95 a[]$ \T1/lmr/m/it/10.95 be
@@ -1300,125 +1305,155 @@ Overfull \hbox (29.343pt too wide) in paragraph at lines 1364--1368
 r/m/it/10.95 .
  []
 
-[36]
-Overfull \hbox (34.44344pt too wide) in paragraph at lines 1405--1405
-[] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1373
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1405--1408
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1386--1389
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1427--1428
-
+Overfull \hbox (34.44344pt too wide) in paragraph at lines 1420--1420
+[] 
  []
 
 
-Overfull \hbox (1.36887pt too wide) in paragraph at lines 1448--1448
-[]\T1/lmr/bx/n/12 The Gen-eral Def-i-ni-tion of the Limit of a Func-tion(Limit
+Underfull \hbox (badness 10000) in paragraph at lines 1420--1423
+
  []
 
 [38]
- 4.
-[39
+Underfull \hbox (badness 10000) in paragraph at lines 1442--1443
 
-] [40
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1485
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1485
+
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 1488--1491
+
+ []
+
+[40]
+Overfull \hbox (1.36887pt too wide) in paragraph at lines 1574--1574
+[]\T1/lmr/bx/n/12 The Gen-eral Def-i-ni-tion of the Limit of a Func-tion(Limit
+ []
+
+[41] [42
+
+]
+ 4.
+[43] [44
 
 ]
  5.
-[41] [42
+[45] [46
 
 ]
  6.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 1494.
+(Font)              <14.4> on input line 1620.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 1494.
+(Font)              <10> on input line 1620.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 1494.
+(Font)              <7> on input line 1620.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1494.
+(hyperref)                removing `math shift' on input line 1620.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1494.
+(hyperref)                removing `math shift' on input line 1620.
 
-[43] [44
+[47] [48
 
 ]
  7.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1501.
+(hyperref)                removing `math shift' on input line 1627.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1501.
+(hyperref)                removing `superscript' on input line 1627.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1501.
+(hyperref)                removing `math shift' on input line 1627.
 
-[45]
+[49]
 Overfull \hbox (58.72609pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 46  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
+\T1/lmr/m/n/10.95 50  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
 EIR LIMITS AND CONTINUITY
  []
 
-[46
+[50
 
 ]
  8.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1506.
+(hyperref)                removing `math shift' on input line 1632.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1506.
+(hyperref)                removing `superscript' on input line 1632.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1506.
+(hyperref)                removing `math shift' on input line 1632.
 
 
-Overfull \hbox (6.84607pt too wide) in paragraph at lines 1509--1509
+Overfull \hbox (6.84607pt too wide) in paragraph at lines 1635--1635
 []\T1/lmr/bx/n/14.4 The Ba-sic Facts of Dif-fer-en-tial Cal-cu-lus of Real-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1512.
+(hyperref)                removing `math shift' on input line 1638.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1512.
+(hyperref)                removing `superscript' on input line 1638.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1512.
+(hyperref)                removing `math shift' on input line 1638.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1518.
-[47]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1518.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1644.
+[51]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1644.
  (./Mathematical Analysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1518.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1518.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1644.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1644.
 
 Package rerunfilecheck Info: File `"Mathematical Analysis".out' has not changed
 .
 (rerunfilecheck)             Checksum: 79C145614D61A32700DD35CAD9D0D7FB;6081.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1518.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1644.
  ) 
 Here is how much of TeX's memory you used:
- 7923 strings out of 492995
- 112544 string characters out of 6132704
+ 7931 strings out of 492995
+ 112614 string characters out of 6132704
  212711 words of memory out of 5000000
- 11157 multiletter control sequences out of 15000+600000
- 115720 words of font info for 84 fonts, out of 8000000 for 9000
+ 11159 multiletter control sequences out of 15000+600000
+ 124252 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,14n,31p,1143b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
@@ -1444,7 +1479,7 @@ ic/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8
 .pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on "Mathematical Analysis.pdf" (53 pages, 475113 bytes).
+Output written on "Mathematical Analysis.pdf" (57 pages, 487107 bytes).
 PDF statistics:
  773 PDF objects out of 1000 (max. 8388607)
  689 compressed objects within 7 object streams

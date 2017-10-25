@@ -24,3 +24,5 @@
 \contentsline {section}{\numberline {4.5}Calculus of Vector-Valued Functions}{10}{section.4.5}
 \contentsline {section}{\numberline {4.6}Arc Length}{10}{section.4.6}
 \contentsline {section}{\numberline {4.7}Arc Length as A Parameter}{13}{section.4.7}
+\contentsline {section}{\numberline {4.8}Unit Tangent, Normal, and Binormal Vectors}{14}{section.4.8}
+\contentsline {section}{\numberline {4.9}Curvature}{15}{section.4.9}

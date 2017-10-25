@@ -22,9 +22,20 @@
 \renewcommand{\vec}[1]{\mathbf{#1}} % Bold Vector Notation
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Norm of a Vector
 \newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}} % Unit Vector
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Natural}{\mathbb{N}}
+\newcommand{\Zahlen}{\mathbb{Z}}
+\newcommand{\Quoziente}{\mathbb{Q}}
+\newcommand{\newpara}{\\ \newline}
 
-\newtheorem{Lemma}{Lemma}%Lemma
-\newtheorem{Theorem}{Theorem}%Theorem
+
+\newtheorem{Theorem}{Theorem}[section]%Theorem
+\newtheorem*{Corollary}{Corollary} %Corollary
+\newtheorem*{Lemma}{Lemma}%Lemma
+\newtheorem*{Statement}{Statement} % Statement
+\theoremstyle{definition}
+\newtheorem*{Definition}{Definition} %Definition
+\newtheorem*{Proposition}{Proposition}%Proposition
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter quote at the start of chapter        %
@@ -381,6 +392,67 @@ A change in parameter is smooth if $\vec{r}(g(\tau))$ is smooth and $\vec{r}(t)$
 		s = \int_{0}^{t}du = t - 0 = t \nonumber
 	\end{equation}
 \end{proof}
+
+\section{Unit Tangent, Normal, and Binormal Vectors}
+
+\begin{Definition}
+	The unit tangent of a smooth vector-valued function $ \vec{r}(t) $ in 2-d space or 3-d space that points in the direction of increasing parameter can be expressed as:
+	\begin{equation}
+		\vec{T}(t)=\frac{\vec{r}^\prime(t)}{\norm{\vec{r}^\prime(t)}}\nonumber
+	\end{equation}
+	and it's called the \textit{unit tangent vector} to $ C $ at $ t $.
+\end{Definition}
+Recall that if a vector-valued function $ \vec{r}(t) $ has constant norm, then $  \vec{r}(t)  $ and $ \vec{r}^\prime(t) $ are orthogonal. Because $ \vec{T}(t) $ has constant norm $ 1 $, so $ \vec{T}(t) $ and $  \vec{T}^\prime(t) $ are orthogonal. This implies that $ \vec{T}^\prime(t) $ is perpendicular to the tangent line to $ C $ at $ t $, so we say that $ \vec{T}^\prime(t) $ is \textit{normal} to $ C $ at $ t $. If $ \vec{T}^\prime(t) \neq 0 $, then
+\begin{equation}
+	\vec{N}(t)=\frac{\vec{T}^\prime(t)}{\norm{\vec{T}^\prime(t)}}\nonumber
+\end{equation}
+is the \textit{principle unit normal vector}, or simply \textit{unit normal vector} to $ C $ at $ t $ and points in the same direction as $ \vec{T}^\prime(t) $. \newpara
+The unit normal vector always points toward the concave side of $ C $ in 2-d space. \newpara
+According to \textbf{Theorem 4.7.4}, $ \norm{\vec{r}^\prime(t)}=1 $. Thus
+\begin{equation}
+	\vec{T}(s)=\vec{r}^\prime(s)\nonumber
+\end{equation}
+and consequently
+\begin{equation}
+	\vec{N}(s)=\frac{\vec{r}^{\prime\prime}(s)}{\norm{\vec{r}^{\prime\prime}(s)}} \nonumber
+\end{equation}
+
+\begin{Definition}
+	The binormal vector to $ C $ at $ t $ can be defined as
+	\begin{align}
+		\vec{B}(t)&=\vec{T}(t)\times\vec{N}(t) \nonumber \\
+		&=\frac{\vec{r}^\prime(t)\times\vec{r}^{\prime\prime}(t)}{\norm{\vec{r}^\prime(t)\times\vec{r}^{\prime\prime}(t)}} \nonumber
+	\end{align}
+	that is, the cross product of its unit tangent vector and unit normal vector and the direction of binormal vector is determined by the right-hand rule. $ \norm{\vec{B}(t)}=1 $ since $ \norm{\vec{T}(t)\times\vec{N}(t)} = \norm{\vec{T}(t)}\norm{\vec{N}(t)}\sin(\pi/2)=1 $. \newpara
+	In terms of arc length parameteriation, it can be expressed as 
+	\begin{equation}
+			\vec{B}(s)=\frac{\vec{r}^\prime(s)\times\vec{r}^{\prime\prime}(s)}{\norm{\vec{r}^{\prime\prime}(s)}} \nonumber
+	\end{equation}
+\end{Definition}
+Together with unit tangent vector and unit normal vector, the binormal vector define three mutually perpendicular planes that point through that point -- the $ \vec{T}\vec{B} $-plane (called the \textit{rectifying plane}), the $ \vec{T}\vec{N} $-plane (called the \textit{osculating plane}), and the $ \vec{N}\vec{B} $-plane (called the \textit{normal plane}). The coordinate system(right-hand) system determined by these three vectors is called the $ \vec{T} \vec{N}\vec{B}$-frame.
+
+\section{Curvature}
+
+\begin{Definition}
+	If $ C $ is a smooth curve in 2-d space or 3-d space that is parametrized by arc length, then the \textit{curvature} of $ C $, denoted by $ \kappa = \kappa(s) $, is defined by
+	\begin{equation}
+		\kappa(s) = \norm{\frac{d\vec{T}}{ds}} = \norm{\vec{r}^{\prime\prime}(s)} \nonumber
+	\end{equation}
+\end{Definition}
+
+\begin{Theorem}
+	If $ \vec{r}(t) $ is a smooth vector-valued function in 2-d space or 3-d space, then for each value of $ t $ at which $ \vec{T}(t) $ and $ \vec{r}^{\prime\prime}(t) $ exist, the curvature $ \kappa $ can be expressed as
+	\begin{align}
+		\kappa(t)&=\frac{\norm{\vec{T}^\prime(t)}}{\norm{\vec{r}^\prime(t)}} \nonumber\\
+		&= \frac{\norm{\vec{r}^\prime(t)\times\vec{r}^{\prime\prime}(t)}}{\norm{\vec{r}^\prime(t)}^3} \nonumber
+	\end{align}
+\end{Theorem}
+
+\begin{Definition}
+	
+\end{Definition}
+
+
 
 
 
