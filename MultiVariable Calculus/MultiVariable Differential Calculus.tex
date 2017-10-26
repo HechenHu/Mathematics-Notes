@@ -402,6 +402,7 @@ A change in parameter is smooth if $\vec{r}(g(\tau))$ is smooth and $\vec{r}(t)$
 	\end{equation}
 	and it's called the \textit{unit tangent vector} to $ C $ at $ t $.
 \end{Definition}
+Note that for all smooth parameterization which induce the same direction have the same unit tangent vector. \newpara
 Recall that if a vector-valued function $ \vec{r}(t) $ has constant norm, then $  \vec{r}(t)  $ and $ \vec{r}^\prime(t) $ are orthogonal. Because $ \vec{T}(t) $ has constant norm $ 1 $, so $ \vec{T}(t) $ and $  \vec{T}^\prime(t) $ are orthogonal. This implies that $ \vec{T}^\prime(t) $ is perpendicular to the tangent line to $ C $ at $ t $, so we say that $ \vec{T}^\prime(t) $ is \textit{normal} to $ C $ at $ t $. If $ \vec{T}^\prime(t) \neq 0 $, then
 \begin{equation}
 	\vec{N}(t)=\frac{\vec{T}^\prime(t)}{\norm{\vec{T}^\prime(t)}}\nonumber
@@ -449,10 +450,118 @@ Together with unit tangent vector and unit normal vector, the binormal vector de
 \end{Theorem}
 
 \begin{Definition}
-	
+	If at $ P $ $ \kappa \neq 0 $, then there exists a unique circle $ \Omega $ passing through $ P $ on the concave side of $ C $ such that the curvature of $ \Omega $ is $ \kappa $ and it shares a common tangent vector with $ C $. Then $ \Omega $ is called a \textit{osculating circle} or \textit{circle of curvature} at $ P $, $ 1/\kappa  $ is called the radius of curvature at $ P $, and the center of $ \Omega $ is called the center of curvature at $ P $.
 \end{Definition}
 
+\begin{Definition}
+	Let $ \phi(s) $ be the angle measured counterclockwise from the direction of the positive $ x $-axis to the unit tangent vector $ T $ \textbf{in terms of arc length}. Then
+	\begin{equation}
+		\kappa(s)=|\frac{d\phi}{ds}| \nonumber
+	\end{equation}
+\end{Definition}
 
+\section{Motion Along A Curve}
+\begin{Definition}
+	If a particle moves along a smooth vector-valued function $ \vec{r}(t) $, then the velocity of this particle is
+	\begin{equation}
+		\vec{v}(t)=\vec{r}^\prime(t)=\frac{ds}{dt}\vec{T}(t)\nonumber
+	\end{equation}
+	where $ \vec{v}(t) $ is the tangent vector at $ t $. The direction of $ \vec{v}(t) $ gives the instantaneous direction of motion at $ t $. The magnitude of $ \vec{v}(t) $ is the instantaneous rate of change of arc length as a function of time, or just simply speed.
+\end{Definition}
+
+\begin{Definition}
+	The acceleration of this particle with velocity of $ \vec{v}(t) $ is $ \vec{a}(t)=\vec{v}^\prime(t)=\vec{r}^{\prime\prime}(t) $. What's more
+	\begin{equation}
+		\vec{a}(t)=\frac{d^2s}{dt^2}\vec{T}(t)+\kappa(t)(\frac{ds}{dt})^2\vec{N}(t)\nonumber
+	\end{equation}
+	If the particle is travelling on a circle with radius $ r $, the speed $ v_0 $ is constant, and $ \norm{\vec{a}(t)}=\frac{v_0^2}{r} $.
+\end{Definition}
+
+\begin{Statement}
+	Over a time interval $ [t_1,t_2] $, the distance traveled by a particle is
+	\begin{equation}
+		s=\int_{t_1}^{t_2}\norm{\vec{v}(t)}dt\nonumber
+	\end{equation}
+\end{Statement}
+
+\begin{Definition}
+	If $ a_T= \frac{d^2s}{dt^2}$ and $ a_N= \kappa(t)(\frac{ds}{dt})^2$, then
+	\begin{equation}
+		\vec{a}=a_T\vec{T}+a_N\vec{N} \nonumber
+	\end{equation}
+	and $ a_T $ is called the \textit{tangential component of acceleration} and $ a_N $ is called \textit{normal component of acceleration} . $ a_T\vec{T} $ is the \textit{tangential vector component of acceleration} and $ a_N\vec{N} $ is called the \textit{normal vector component of acceleration}
+\end{Definition}
+
+\begin{Statement}
+	\begin{align}
+		a_T&=\frac{\vec{v}\cdot \vec{a}}{\norm{\vec{v}}} \nonumber\\
+		a_N&=\frac{\norm{\vec{v}\times \vec{a}}}{\norm{\vec{v}}} \nonumber\\
+		\kappa&=\frac{\norm{\vec{v}\times \vec{a}}}{\norm{\vec{v}}^3} \nonumber
+	\end{align}
+\end{Statement}
+In 2-d space, the cross product can be computed by viewing $ \vec{r}(t)=<x(t),y(t)> $ as $ \vec{r}(t)=<x(t),y(t),0> $ in 3-d space.
+\begin{Statement}
+	\begin{equation}
+		\norm{\vec{a}}^2=\vec{a}_T^2+\vec{a}_N^2 \nonumber
+	\end{equation}
+	for all smooth position functions.
+\end{Statement}
+
+\section{Projectile Motion}
+\begin{Theorem}
+	For a projectile motion
+	\begin{align}
+		\vec{r}(t)&=-\frac{gt^2}{2}\vec{j}+t\vec{v}_0+s_0\vec{j} \nonumber \\
+		&= (-\frac{gt^2}{2}+s_0 )\vec{j}+t\vec{v}_0 \nonumber
+	\end{align}
+	where $ g $ is the gravitational acceleration, $ v_0 $ is the initial velocity, and $ s_0 $ is the initial height.
+	
+\end{Theorem}
+
+
+
+\chapter{Multivariable Calculus}
+\section{Definition of Multivariable functions and their graph}
+\begin{Definition}
+	A \textit{real-valued function $ f $ of $ n $ real variables} is a mapping that assign an ordered pair of $ n $ real numbers to a real number in $ D\subset \Real^n $.
+\end{Definition}
+
+\begin{Definition}
+	If $ f $ is a function of two variables and $ k $ is a real number, then the \textit{level curve of $ f $ of height $ k $} is $ \{(x,y)|f(x,y)=k\} $. A collection of many level curves for a function $ f $ all drawn in the same $ xy $-plane is called a \textit{contour plot/map} of $ f $.
+\end{Definition}
+
+\section{Properties of Sets in 2-d and 3-d space}
+\begin{Definition}
+	For $ r>0 $ and a point $ P $, the \textit{open ball of radius $ r $ centered at $ P $} means the set of all points whose distance to $ P $ is less than $ r $ and denotes $ B_r(P) $.
+\end{Definition}
+Suppose $ D \subset \Real^2 $ or $ D \subset \Real^3 $.
+\begin{Definition}
+	A point $ P $ is said to be an \textit{interior point} of $ D $ if $ \exists r>0(B_r(P)\subset D) $.
+\end{Definition}
+\begin{Definition}
+	A point $ P $ is said to be an \textit{boundary point} of $ D $ if $ \forall r>0 ((B_r(P) \cap D \neq \emptyset)\land(B_r(P)\setminus D \neq \emptyset)) $
+\end{Definition}
+
+\begin{Definition}
+	For a set $ D $ in 2-d and 3-d space, the set of all its interior points is called the \textit{interior} of $ D $. The set of all its boundary points is called the \textit{boundary} of $ D $.
+\end{Definition}
+
+\begin{Definition}
+	A set is to be said \textit{open} if it contains none of its boundary points, and when it contains all of its boundary points, it's called a \textit{closed} set.
+\end{Definition}
+
+However, some sets are \textbf{neither} open or close.
+\begin{Statement}
+	A set $ D $ in $ n $-space is both open and closed iff $ D=\Real^n $ or $ D = \emptyset $.
+\end{Statement}
+
+\begin{Definition}
+	A subset $ D $ of $ \Real^n $ is said to be \textit{bounded} if $ \exists r>0\exists P(D\subset B_r(P)) $. That is, the set is contained in some set with finite radius. It's \textit{unbounded} if it's not bounded.
+\end{Definition}
+
+\begin{Definition}
+	A point $ P $ is said to be the \textit{accumulation point} of some $ D \subset \Real^n $ if $ \forall r>0(B_r(P)\setminus D \setminus\{P\}\neq \emptyset) $.
+\end{Definition}
 
 
 

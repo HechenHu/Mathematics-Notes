@@ -1535,7 +1535,7 @@ When the function $ f $ is defined on a whole deleted neighborhood of a point $ 
 	$ \lim\limits_{x \to 0}\sin \frac{1}{x} $ has no limit.
 \end{Statement}
 \begin{proof}
-	content...
+	In any deleted neighborhood of 0 $ \mathring{U}(0) $ there are always points of the form $ \frac{1}{-\pi/2+2\pi n} $ and $  \frac{1}{\pi/2+2\pi n} $ which assume the values $ -1 $ and $ 1 $ respectively, but for $ \varepsilon<1 $ these two numbers can't both lie in the $ \varepsilon $-neighborhood. 
 \end{proof}
 
 \begin{Statement}
@@ -1555,7 +1555,7 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 	The relation $ \lim\limits_{E \ni x \to a}f(x) = A $ holds iff for every sequence $ \{x_n\} $ of points $ x_n \in E\setminus a $ converging to $ a $, the sequence $ \{f(x_n)\} $ converges to $ A $.
 \end{Proposition}
 \begin{proof}
-	content...
+	First, $ (\lim\limits_{E \ni x \to a}f(x)=A) \Rightarrow(\lim\limits_{n \to \infty}f(x_n)=A) $ is obvious. Now for the converse, if $ A $ is not the limit of $ f(x) $ as $ E \ni x \to a $, then there exists a neighborhood $ V(A) $ such that for any $ n \in \Natural $, there is a point $ x_n $ in the deleted $ \frac{1}{n} $-neighborhood of $ a $ in $ E $ such that $ f(x_n)\notin V(A) $. But this means that the sequence $ \{f(x_n)\} $ does not converge to $ A $.
 \end{proof}
 
 
@@ -1571,6 +1571,69 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 
 
 \subsection{Properties of the Limit of a Function}
+
+\subsubsection{Properties of Deleted Neighborhood of a Limit Point of a Set }
+\begin{Statement}
+	$ \mathring{U}_E(a)\neq \varnothing $, that is, the deleted neighborhood of the point in $ E $ is nonempty.
+\end{Statement}
+\begin{Statement}
+	$ \forall \mathring{U}^\prime_E(a)\forall \mathring{U}^{\prime\prime}_E(a)\exists\mathring{U}_E(a)(\mathring{U}_E(a)\subset \mathring{U}^\prime_E(a) \cap \mathring{U}^{\prime\prime}_E(a)) $, that is, the intersection of any pair of deleted neighborhoods contains a deleted neighborhood.
+\end{Statement}
+
+\subsubsection{General Properties of the Limit of a Function}
+\begin{Definition}
+	A function $ f : E \to \Real $ assuming only one value is called \textit{constant}. A function $ f : E \to \Real  $ is called \textit{ultimately constant} as $ E \ni x \to a $ if it is constant in some deleted neighborhood $ \mathring{U}_E(a) $, where $ a $ is a limit point of $ E $.
+\end{Definition}
+\begin{Definition}
+	A function $ f : E \to \Real  $ is \textit{bounded, bounded above,} or \textit{bounded below} respectively if there is a number $ C \in \Real $ such that $ |f(x)|<C $, $ f(x)<C $, or $ C<f(x) $ for all $ x \in E $.
+\end{Definition}
+
+\begin{Theorem}
+	\textbf{a)} ($ f : E \to \Real  $ is ultimately the constant $ A $ as $ E \ni x \to a) \Rightarrow  (\lim\limits_{E \ni x \to a}f(x)=A)$ . \newpara
+	\textbf{b)} $ (\exists \lim\limits_{E \ni x \to a}f(x))\Rightarrow (f: E \to \Real\text{ is ultimately bounded as } E \ni x \to a )$. \newpara
+	\textbf{c)} $ (\lim\limits_{E \ni x \to a}f(x)=A_1 )\land(\lim\limits_{E \ni x \to a}f(x)=A_2 )\Rightarrow (A_1=A_2)$.
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+
+\subsubsection{Passage to the Limit and Arithmetic Operations}
+\begin{Definition}
+	If two numerical-valued functions $ f: E \to \Real $ and $ g : E \to \Real $ have a common domain of definition $ E $, the \textit{sum, product}, and \textit{quotient} are respectively the functions defined on the same set by the following formulas
+	\begin{align}
+		(f+g)(x)&\coloneqq f(x) + g(x) \\
+		(f \cdot g)(x)&\coloneqq f(x)\cdot g(x)\\
+		(\frac{f}{g})(x) &\coloneqq \frac{f(x)}{g(x)}\text{ if }\forall x \in E (g(x) \neq 0)  \\
+	\end{align}
+\end{Definition}
+
+\begin{Theorem}
+	Let $ f: E \to \Real $ and $ g : E \to \Real $ be two functions with a common domain of definition. If $ \lim\limits_{E \ni x \to a}f(x)=A $ and $  \lim\limits_{E \ni x \to a}g(x)=B  $, then
+	\begin{align}
+		&\lim\limits_{E \ni x \to a}(f+g)(x)= A+B \\
+		&\lim\limits_{E \ni x \to a}(f \cdot g)(x)= A \cdot B\\
+		&\lim\limits_{E \ni x \to a}(\frac{f}{g})(x) = \frac{A}{B}\text{ if }\forall x \in E (g(x) \neq 0\text{ and }B \neq 0)  \\
+	\end{align}
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Definition}
+	A function $ f : E \to \Real $ is said to be \textit{infinitesimal} as $ E \ni x \to a $ if $ \lim\limits_{E \ni x \to a}f(x)=0 $.
+\end{Definition}
+
+\begin{Proposition}
+	
+\end{Proposition}
+
+
+
+
+
+
+
+
 \subsection{The General Definition of the Limit of a Function(Limit over a Base)}
 \subsection{Existence of the Limit of a Function}
 
