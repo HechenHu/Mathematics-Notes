@@ -953,7 +953,7 @@ The cardinality of $ \Real $ is often denotes as $ \mathfrak{c} $.
 
 \chapter{Limits}
 \section{The Limit of a Sequence}
-\subsection{Definitions and Examples}
+ \subsection{Definitions and Examples}
 \begin{Definition}
 	A number $ A \in \Real$  is called the \textit{limit of the numerical sequence} $ \{x_n\} $ if for every neighborhood $ V(A) $ of $ A $ there exists an index $ N $ (depending on $ V(A) $) such that all terms of the sequence having index larger than $ N $ belong to $ V(A) $. $ ((\lim\limits_{n \to \infty} x_n = A) \coloneqq \forall V(A) \exists N \in \Natural \forall n > N(x_n \in V(A)) ) $
 	\newpara
@@ -1607,6 +1607,32 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 	\end{align}
 \end{Definition}
 
+
+\begin{Definition}
+	A function $ f : E \to \Real $ is said to be \textit{infinitesimal} as $ E \ni x \to a $ if $ \lim\limits_{E \ni x \to a}f(x)=0 $.
+\end{Definition}
+
+\begin{Proposition}
+	\textbf{a)} If $ \alpha : E \to \Real $ and $ \beta : E \to \Real $ are infinitesimal functions as $ E \ni x \to a $, then their sum $ \alpha + \beta: E \to \Real $ is also infinitesimal as $ E \ni x \to a $. \newpara
+	\textbf{b)} If $ \alpha : E \to \Real $ and $ \beta : E \to \Real $ are infinitesimal functions as $ E \ni x \to a $, then their product $ \alpha \cdot \beta: E \to \Real $ is also infinitesimal as $ E \ni x \to a $. \newpara
+	\textbf{c)}  If $ \alpha : E \to \Real $ is infinitesimal as $ E \ni x \to a $ and $ \beta : E \to \Real $ is ultimately bounded as $ E \ni x \to a $, then the product $ \alpha \cdot \beta: E \to \Real $ is infinitesimal as $ E \ni x \to a $.
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Statement}
+	\begin{equation}
+	(\lim\limits_{E \ni x \to a}f(x)=A) \Leftrightarrow (f(x)=A+\alpha(x)\land \lim\limits_{E \ni x \to a} \alpha(x)=0) \nonumber
+	\end{equation}
+\end{Statement}
+\begin{proof}
+	This follows immediately from the definition of limit, by virtue which
+	\begin{equation}
+	\lim\limits_{E \ni x \to a}f(x)=A \Leftrightarrow \lim\limits_{E \ni x \to a}(f(x)-A)=0 \nonumber
+	\end{equation}
+\end{proof}
+
 \begin{Theorem}
 	Let $ f: E \to \Real $ and $ g : E \to \Real $ be two functions with a common domain of definition. If $ \lim\limits_{E \ni x \to a}f(x)=A $ and $  \lim\limits_{E \ni x \to a}g(x)=B  $, then
 	\begin{align}
@@ -1616,18 +1642,95 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 	\end{align}
 \end{Theorem}
 \begin{proof}
+	These properties can be derived from the properties of the limit of sequences according to the proposition above. In order to complete the proof, one only need to convert "for some $ N \in \Natural $" to $ \mathring{U}_E(a) $.
+\end{proof}
+\begin{proof}[alternative proof with infinitesimal functions]
 	content...
 \end{proof}
 
+\subsubsection{Passage to the Limit and Inequalities}
+\begin{Theorem}
+	\textbf{a)} If the functions $ f : E \to \Real $ and $ g: E \to \Real $ are such that $ \lim\limits_{E \ni x \to a}f(x)=A $, and $ \lim\limits_{E \ni x \to a}g(x)=B $ and $ A <B $, then there exists a deleted neighborhood $ \mathring{U}_E(a) $ of $ a $ in $ E $ at each point of which $ f(x)<g(x) $. \newpara
+	\textbf{b)} If the relations $ f(x) \leqslant g(x) \leqslant h(x) $ hold for the functions $ f : E \to \Real $, $ g: E \to \Real $ and $ h:E \to \Real $, and if $  \lim\limits_{E \ni x \to a}f(x)= \lim\limits_{E \ni x \to a}h(x)=C $, then the limit of $ g(x) $ exists as $ E \ni x \to a $, and $ \lim\limits_{E \ni x \to a}g(x)=C $.
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Corollary}
+	Suppose $ \lim\limits_{E \ni x \to a}f(x)=A $ and $ \lim\limits_{E \ni x \to a}g(x)=B $ . Let $ \mathring{U}_E(a) $ be a deleted neighborhood of $ a $ in $ E $. \newpara
+	\textbf{a)} If $ f(x) > g(x) $ for all $ x \in  \mathring{U}_E(a)$, then $ A \geqslant B $; \newpara
+	\textbf{b)} $ f(x) \geqslant g(x) $ for all $ x \in  \mathring{U}_E(a)$, then $ A \geqslant B $; \newpara
+	\textbf{c)} $ f(x) > B $ for all $ x \in  \mathring{U}_E(a)$, then $ A \geqslant B $; \newpara
+	\textbf{d)} $ f(x) \geqslant B $ for all $ x \in  \mathring{U}_E(a)$, then $ A \geqslant B $.
+\end{Corollary}
+\begin{proof}
+	Assertion a) and b) can be proved by contradiction and the theorem mentioned above. Set $ g(x) \equiv B $ and we prove assertion c) and d).
+\end{proof}
+
+\subsubsection{Two Important Examples}
+\begin{Statement}
+	\begin{equation}
+		\lim\limits_{x \to 0}\frac{\sin x}{x}=1 \nonumber
+	\end{equation}
+\end{Statement}
+\begin{proof}
+	The geometric proof is sufficient with the following conditions:
+	\begin{align}
+		&|\sin x| \leqslant |x| \nonumber \\
+		& 0\leqslant |\sin x| \leqslant |x| \Rightarrow (\lim\limits_{x \to 0} |\sin x| = 0) \nonumber
+	\end{align}
+\end{proof}
+
+Now we define the exponential, logarithmic, and power functions using the theory of real numbers and limits.
+\textbf{A)} \textit{The exponential function} \newpara
+$ 1^0 $ \newpara
+$ 2^0 $ \newpara
+$ 3^0 $ \newpara
+$ 4^0 $ \newpara
+$ 5^0 $ \newpara
+$ 6^0 $ \newpara
+$ 7^0 $ \newpara
+$ 8^0 $ \newpara
+$ 9^0 $ \newpara
+$ 10^0 $ \newpara
+$ 11^0 $ \newpara
+$ 12^0 $ \newpara
+$ 13^0 $ \newpara
+$ 14^0 $ \newpara
+
 \begin{Definition}
-	A function $ f : E \to \Real $ is said to be \textit{infinitesimal} as $ E \ni x \to a $ if $ \lim\limits_{E \ni x \to a}f(x)=0 $.
+	The mapping $ x \mapsto a^x $ is called the \textit{exponential} function with base $ a $. In the case $ a = e $, it's denoted with $ exp (x) $, but in general it's denoted with $ exp_a (x)$.
+\end{Definition}
+\textbf{B)} \textit{The logarithmic function} \\
+The properties of the exponential function show that it's bijective. Hence it has an inverse.
+\begin{Definition}
+	The mapping inverse to $ exp_a:\Real \to \Real_+ $ is called the \textit{logarithm to base a ($ 0<a,a \neq 1 $)}, and is denoted 
+	\begin{equation}
+		log_a:\Real_+ \to \Real \nonumber
+	\end{equation}
+	for base $ a=e $, the logarithm is called the \textit{natural logarithm} and is denoted $ ln:\Real_+ \to \Real $.
 \end{Definition}
 
-\begin{Proposition}
-	
-\end{Proposition}
+By definition of the logarithm as the function inverse to the exponential function, we have 
+\begin{align}
+	\forall x \in \Real (log_a(a^x)&=x) \nonumber \\
+	\forall y \in \Real_+(a^{log_a(y)}&=y) \nonumber 
+\end{align}
+$ 1^\prime $ \newpara
+$ 2^\prime $ \newpara
+$ 3^\prime $ \newpara
+$ 4^\prime $ \newpara
+$ 5^\prime $ \newpara
+$ 6^\prime $ \newpara
 
-
+\textbf{C)} \textit{The power function} \\
+\begin{Definition}
+	The function $ x \mapsto x^\alpha $ defined on the set $ \Real_+ $ is called a power function, and the number $ \alpha $ is called its \textit{exponent}.
+	\begin{equation}
+		x^\alpha = a^{log_a(x^\alpha)}=a^{\alpha log_a(x)}\nonumber
+	\end{equation}
+\end{Definition}
 
 
 

@@ -1,3 +1,4 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 OCT 2017 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -774,7 +775,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 3.
  [3]
-Overfull \hbox (4.74045pt too wide) in paragraph at lines 70--70
+Overfull \hbox (4.74045pt too wide) in paragraph at lines 75--75
  [][] [][]\T1/lmr/m/n/10.95 The Gen-eral Def-i-ni-tion of the Limit of a Func-t
 ion(Limit 
  []
@@ -1350,107 +1351,272 @@ Underfull \hbox (badness 10000) in paragraph at lines 1488--1491
 
  []
 
-[40]
-Overfull \hbox (1.36887pt too wide) in paragraph at lines 1574--1574
+[40] [41]
+Underfull \hbox (badness 10000) in paragraph at lines 1592--1595
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1592--1595
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1619
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1653--1655
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1661--1666
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1661--1666
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1661--1666
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1661--1666
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1701
+
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1726
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1726
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 1727--1728
+
+ []
+
+
+Overfull \hbox (1.36887pt too wide) in paragraph at lines 1740--1740
 []\T1/lmr/bx/n/12 The Gen-eral Def-i-ni-tion of the Limit of a Func-tion(Limit
  []
 
-[41] [42
-
-]
+[46]
  4.
-[43] [44
+[47
+
+] [48
 
 ]
  5.
-[45] [46
+[49] [50
 
 ]
  6.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 1620.
+(Font)              <14.4> on input line 1786.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 1620.
+(Font)              <10> on input line 1786.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 1620.
+(Font)              <7> on input line 1786.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1620.
+(hyperref)                removing `math shift' on input line 1786.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1620.
+(hyperref)                removing `math shift' on input line 1786.
 
-[47] [48
+[51] [52
 
 ]
  7.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1627.
+(hyperref)                removing `math shift' on input line 1793.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1627.
+(hyperref)                removing `superscript' on input line 1793.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1627.
+(hyperref)                removing `math shift' on input line 1793.
 
-[49]
+[53]
 Overfull \hbox (58.72609pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 50  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
+\T1/lmr/m/n/10.95 54  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
 EIR LIMITS AND CONTINUITY
  []
 
-[50
+[54
 
 ]
  8.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1632.
+(hyperref)                removing `math shift' on input line 1798.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1632.
+(hyperref)                removing `superscript' on input line 1798.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1632.
+(hyperref)                removing `math shift' on input line 1798.
 
 
-Overfull \hbox (6.84607pt too wide) in paragraph at lines 1635--1635
+Overfull \hbox (6.84607pt too wide) in paragraph at lines 1801--1801
 []\T1/lmr/bx/n/14.4 The Ba-sic Facts of Dif-fer-en-tial Cal-cu-lus of Real-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1638.
+(hyperref)                removing `math shift' on input line 1804.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1638.
+(hyperref)                removing `superscript' on input line 1804.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1638.
+(hyperref)                removing `math shift' on input line 1804.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1644.
-[51]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1644.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1810.
+[55]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1810.
  (./Mathematical Analysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1644.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1644.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1810.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1810.
 
 Package rerunfilecheck Info: File `"Mathematical Analysis".out' has not changed
 .
 (rerunfilecheck)             Checksum: 79C145614D61A32700DD35CAD9D0D7FB;6081.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1644.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1810.
  ) 
 Here is how much of TeX's memory you used:
- 7931 strings out of 492995
- 112614 string characters out of 6132704
+ 7943 strings out of 492995
+ 112736 string characters out of 6132704
  212711 words of memory out of 5000000
  11159 multiletter control sequences out of 15000+600000
  124252 words of font info for 86 fonts, out of 8000000 for 9000
@@ -1479,10 +1645,10 @@ ic/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8
 .pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on "Mathematical Analysis.pdf" (57 pages, 487107 bytes).
+Output written on "Mathematical Analysis.pdf" (61 pages, 499671 bytes).
 PDF statistics:
- 773 PDF objects out of 1000 (max. 8388607)
- 689 compressed objects within 7 object streams
- 178 named destinations out of 1000 (max. 500000)
+ 820 PDF objects out of 1000 (max. 8388607)
+ 727 compressed objects within 8 object streams
+ 194 named destinations out of 1000 (max. 500000)
  550 words of extra memory for PDF output out of 10000 (max. 10000000)
 
