@@ -204,6 +204,56 @@ The distance $D$ between a point $P_0(x_0,y_0,z_0)$ and the plane $ax+by+cz+d = 
 	D = \frac{|ax_0+by_0+cz_0+d|}{\sqrt{a^2+b^2+c^2}}
 \end{equation}
 
+\textbf{Example: Distance between two skew lines:} \newpara
+\textbf{Solution} Find two parallel planes passing through the two skew lines by taking the cross product of their direction vectors, and find the distance between these two planes.\newpara
+\\
+\textbf{Example: Find the equation of the plane that passes through the line of intersection of the planes $P_1: x-z=1 $ and $ P_2:y+2z=3 $ and is perpendicular to the plane $ P_3:x+y-2z=1 $}.\newpara
+\textbf{Solutions:} Find the direction vector for the line of intersection of $ P_1 $ and $ P_2 $ by taking the cross product of their normal vectors. Then take the cross product of the direction vector of the line and the normal vector of $ P_3 $ to find the normal vector of the desired plane. Then find a point on the line of intersection and solve for the plane.
+
+\section{Cylindrical and Spherical Coordinates}
+\begin{Definition}
+	The three coordinates $ (r, \theta, z) $ of a point $ P $ are defined as:\\
+	$ r $ is the Euclidean distance from the $ z $-axis to the point $ P $.\\
+	$ \theta $ is the angle between $ x $-axis and the line from the origin to the projection of $ P $ on $ xy $-plane.\\
+	The height $ z $ is the signed distance from the $ xy $-plane to the point $ P $.
+\end{Definition}
+\textbf{Conversion between Rectangular and Cylindrical Coordinates:} \newpara
+Suppose the rectangular and cylindrical coordinate of the same point is respectively $ (x,y,z) $ and $ (r,\theta,z) $.
+\begin{align}
+	&\text{Rectangular to Cylindrical} \nonumber\\
+	r &= \sqrt{x^2+y^2}\nonumber \\
+	\tan \theta & =\frac{y}{x} \nonumber \\
+	z &= z \nonumber \\
+	&\text{Cylindrical to Rectangular} \nonumber \\
+	x &= r \cos \theta \nonumber \\
+	y &= r \sin \theta \nonumber \\
+	z &= z \nonumber 
+\end{align}
+Note that $ \theta $ is not always $ \tan^{-1}\frac{y}{x} $. To find the correct $ \theta $, we must know which quadrant of $ xy $-plane the point lies over.
+
+\begin{Definition}
+	The spherical coordinates of a point $ P $ are then defined as follows: \\
+	The radius $ \rho $ is the Euclidean distance from the origin $ O $ to $ P $.\\
+	The azimuth $ \theta $ is the signed angle measured from the azimuth reference direction to the orthogonal projection of the line segment $ OP $ on the $ xy $-plane.\\
+	The inclination $ \phi $ is the angle between the $ z $-axis and the line segment $ OP $.
+	
+\end{Definition}
+\textbf{Conversion Between Spherical and Other Two kinds of Coordinates:} \newpara
+Suppose the rectangular, cylindrical, and spherical coordinate of the same point is respectively $ (x,y,z) $, $ (r,\theta,z) $, and $ (\rho,\theta, \phi) $.
+$ \theta $ in cylindrical coordinate is the same as $ \theta $ in spherical coordinate.
+\begin{align}
+	&\text{Spherical to Rectangular or Cylindrical} \nonumber\\
+	r &= \rho \sin \phi \nonumber \\
+	x &= r \cos \theta = \rho \sin \phi \cos \theta \nonumber \\
+	y &= r \sin \theta = \rho \sin \phi \sin \theta \nonumber \\
+	z &= \rho \cos \phi\nonumber \\
+	&\text{Rectangular to Spherical} \nonumber \\
+	\rho &= \sqrt{r^2+z^2}=\sqrt{x^2+y^2+z^2}\nonumber \\
+	\tan \theta &= \frac{y}{x} \nonumber \\
+	\cos \phi & = \frac{z}{\rho} = \frac{z}{\sqrt{x^2+y^2+z^2}}\nonumber
+\end{align}
+
+
 \chapter{Quadric Surfaces}
 
 \section{Traces}

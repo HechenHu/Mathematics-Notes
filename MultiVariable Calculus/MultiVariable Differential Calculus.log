@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 OCT 2017 07:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 OCT 2017 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -813,218 +813,251 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--144
 
 ]
  2.
-[5] [6]
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 207--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--222
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 241--244
+
+ []
+
+[7] [8
+
+]
  3.
-<Ellipsoid.png, id=246, 301.125pt x 333.245pt>
+<Ellipsoid.png, id=259, 301.125pt x 333.245pt>
 File: Ellipsoid.png Graphic file (type png)
  <use Ellipsoid.png>
-Package pdftex.def Info: Ellipsoid.png used on input line 217.
+Package pdftex.def Info: Ellipsoid.png used on input line 267.
 (pdftex.def)             Requested size: 79.49744pt x 87.97897pt.
 
-<HyperboloidofOneSheet.png, id=248, 24.09pt x 26.1778pt>
+<HyperboloidofOneSheet.png, id=261, 24.09pt x 26.1778pt>
 File: HyperboloidofOneSheet.png Graphic file (type png)
 
 <use HyperboloidofOneSheet.png>
-Package pdftex.def Info: HyperboloidofOneSheet.png used on input line 218.
+Package pdftex.def Info: HyperboloidofOneSheet.png used on input line 268.
 (pdftex.def)             Requested size: 108.405pt x 117.8193pt.
 
-<Hyperboloid_Of_Two_Sheets_Quadric.png, id=249, 24.09pt x 26.1778pt>
+<Hyperboloid_Of_Two_Sheets_Quadric.png, id=262, 24.09pt x 26.1778pt>
 File: Hyperboloid_Of_Two_Sheets_Quadric.png Graphic file (type png)
 
 <use Hyperboloid_Of_Two_Sheets_Quadric.png>
 Package pdftex.def Info: Hyperboloid_Of_Two_Sheets_Quadric.png used on input li
-ne 219.
+ne 269.
 (pdftex.def)             Requested size: 108.405pt x 117.8193pt.
 
-<Elliptical_Cone_Quadric.png, id=250, 301.125pt x 333.245pt>
+<Elliptical_Cone_Quadric.png, id=263, 301.125pt x 333.245pt>
 File: Elliptical_Cone_Quadric.png Graphic file (type png)
 
 <use Elliptical_Cone_Quadric.png>
-Package pdftex.def Info: Elliptical_Cone_Quadric.png used on input line 220.
+Package pdftex.def Info: Elliptical_Cone_Quadric.png used on input line 270.
 (pdftex.def)             Requested size: 86.72377pt x 95.97244pt.
 
-<Paraboloid_Quadric.png, id=251, 301.125pt x 333.245pt>
+<Paraboloid_Quadric.png, id=264, 301.125pt x 333.245pt>
 File: Paraboloid_Quadric.png Graphic file (type png)
 
 <use Paraboloid_Quadric.png>
-Package pdftex.def Info: Paraboloid_Quadric.png used on input line 221.
+Package pdftex.def Info: Paraboloid_Quadric.png used on input line 271.
 (pdftex.def)             Requested size: 108.405pt x 119.9681pt.
 
-<Hyperbolic_Paraboloid_Quadric.png, id=252, 301.125pt x 333.245pt>
+<Hyperbolic_Paraboloid_Quadric.png, id=265, 301.125pt x 333.245pt>
 File: Hyperbolic_Paraboloid_Quadric.png Graphic file (type png)
 
 <use Hyperbolic_Paraboloid_Quadric.png>
 Package pdftex.def Info: Hyperbolic_Paraboloid_Quadric.png used on input line 2
-22.
+72.
 (pdftex.def)             Requested size: 108.405pt x 119.9681pt.
 
 
-LaTeX Warning: Float too large for page by 105.16612pt on input line 225.
+LaTeX Warning: Float too large for page by 105.16612pt on input line 275.
 
-[7
-
-] [8 <./Ellipsoid.png> <./HyperboloidofOneSheet.png> <./Hyperboloid_Of_Two_Shee
-ts_Quadric.png> <./Elliptical_Cone_Quadric.png> <./Paraboloid_Quadric.png> <./H
-yperbolic_Paraboloid_Quadric.png>]
+[9] [10 <./Ellipsoid.png> <./HyperboloidofOneSheet.png> <./Hyperboloid_Of_Two_S
+heets_Quadric.png> <./Elliptical_Cone_Quadric.png> <./Paraboloid_Quadric.png> <
+./Hyperbolic_Paraboloid_Quadric.png>]
  4.
-[9
+[11
 
-] <Curve_Length.png, id=276, 361.35pt x 250.9375pt>
+] <Curve_Length.png, id=289, 361.35pt x 250.9375pt>
 File: Curve_Length.png Graphic file (type png)
  <use Curve_Length.png>
-Package pdftex.def Info: Curve_Length.png used on input line 284.
+Package pdftex.def Info: Curve_Length.png used on input line 334.
 (pdftex.def)             Requested size: 360.0pt x 250.0026pt.
 
-[10]
+[12]
 Underfull \vbox (badness 2865) has occurred while \output is active []
 
- [11pdfTeX warning (ext4): destination with the same identifier (name{equation.
+ [13pdfTeX warning (ext4): destination with the same identifier (name{equation.
 4.6.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.309 	\end{align}
+l.359 	\end{align}
                   pdfTeX warning (ext4): destination with the same identifier (
 name{equation.4.6.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.309 	\end{align}
+l.359 	\end{align}
                    <./Curve_Length.png>]pdfTeX warning (ext4): destination with
  the same identifier (name{equation.4.6.8}) has been already used, duplicate ig
 nored
 <to be read again> 
                    \relax 
-l.321 	\begin{equation}
+l.371 	\begin{equation}
                        pdfTeX warning (ext4): destination with the same identif
 ier (name{equation.4.6.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.330 \end{align}
+l.380 \end{align}
                  
-Underfull \hbox (badness 10000) in paragraph at lines 333--339
+Underfull \hbox (badness 10000) in paragraph at lines 383--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--339
+Underfull \hbox (badness 10000) in paragraph at lines 383--389
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 345--347
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--347
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 405--407
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--413
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 455--457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--413
+Underfull \hbox (badness 10000) in paragraph at lines 459--463
 
  []
 
-[14pdfTeX warning (ext4): destination with the same identifier (name{equation.4
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--463
+
+ []
+
+[16pdfTeX warning (ext4): destination with the same identifier (name{equation.4
 .7.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.413 \begin{equation}
+l.463 \begin{equation}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.4.7.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.413 \begin{equation}
+l.463 \begin{equation}
                       ]pdfTeX warning (ext4): destination with the same identif
 ier (name{equation.4.8.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.417 \begin{equation}
+l.467 \begin{equation}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.4.8.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.429 	\begin{equation}
+l.479 	\begin{equation}
                        
-Underfull \hbox (badness 10000) in paragraph at lines 426--429
+Underfull \hbox (badness 10000) in paragraph at lines 476--479
 
  []
 
-[15pdfTeX warning (ext4): destination with the same identifier (name{equation.4
+[17pdfTeX warning (ext4): destination with the same identifier (name{equation.4
 .8.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.446 	\begin{align}
+l.496 	\begin{align}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{equation.4.8.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.446 	\begin{align}
+l.496 	\begin{align}
                     ]pdfTeX warning (ext4): destination with the same identifie
 r (name{equation.4.9.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.458 	\begin{equation}
-                        [16pdfTeX warning (ext4): destination with the same ide
+l.508 	\begin{equation}
+                        [18pdfTeX warning (ext4): destination with the same ide
 ntifier (name{equation.4.10.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.493 \end{Definition}
+l.543 \end{Definition}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.4.10.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.493 \end{Definition}
+l.543 \end{Definition}
                       ]pdfTeX warning (ext4): destination with the same identif
 ier (name{equation.4.10.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.504 	\begin{equation}
-                        [17pdfTeX warning (ext4): destination with the same ide
+l.554 	\begin{equation}
+                        [19pdfTeX warning (ext4): destination with the same ide
 ntifier (name{equation.4.10.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.523 \chapter
-              {Multivariable Calculus}] [18
+l.573 \chapter
+              {Multivariable Calculus}] [20
 
 ]
  5.
-[19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 568.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 568.
+[21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 618.
+ [22]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 618.
  (./MultiVariable Differential Calculus.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 568.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 568.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 618.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 618.
 Package rerunfilecheck Info: File `"MultiVariable Differential Calculus".out' h
 as not changed.
-(rerunfilecheck)             Checksum: 012851A05D697B34CDA386CBBAFAD0C7;2173.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 568.
+(rerunfilecheck)             Checksum: CE6E09660E56BB8FCE28E05943D40BD1;2257.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 618.
  ) 
 Here is how much of TeX's memory you used:
- 7614 strings out of 492995
- 109960 string characters out of 6132704
+ 7622 strings out of 492995
+ 110036 string characters out of 6132704
  206723 words of memory out of 5000000
- 10930 multiletter control sequences out of 15000+600000
- 88256 words of font info for 75 fonts, out of 8000000 for 9000
+ 10933 multiletter control sequences out of 15000+600000
+ 94236 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,14n,28p,544b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1049,11 +1082,11 @@ lic/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr
 o10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b>
-Output written on "MultiVariable Differential Calculus.pdf" (24 pages, 814242 b
+Output written on "MultiVariable Differential Calculus.pdf" (26 pages, 819454 b
 ytes).
 PDF statistics:
- 438 PDF objects out of 1000 (max. 8388607)
- 375 compressed objects within 4 object streams
- 102 named destinations out of 1000 (max. 500000)
- 292 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 453 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 300 words of extra memory for PDF output out of 10000 (max. 10000000)
 

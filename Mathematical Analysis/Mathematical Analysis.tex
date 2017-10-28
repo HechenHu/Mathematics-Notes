@@ -19,6 +19,7 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{amssymb}
+\usepackage{array}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter quote at the start of chapter        %
@@ -32,6 +33,7 @@
 \newcommand{\Zahlen}{\mathbb{Z}}
 \newcommand{\Quoziente}{\mathbb{Q}}
 \newcommand{\newpara}{\\ \newline}
+\newcommand{\Complex}{\mathbb{C}}
 
 \newenvironment{chapquote}[2][2em]
   {\setlength{\@tempdima}{#1}%
@@ -1317,7 +1319,7 @@ One can see that $ \sum_{n=1}^{\infty}a_n=s $.
 \end{proof}
 
 \begin{Statement}
-	The series $ 1+\frac{1}{2}+ \cdots +\frac{1}{n}+ \cdots$ is called the \textit{harmonic series} diverges because its partial sums $ s_n = 1+ \frac{1}{2}+\cdots \frac{1}{n} $ diverges.
+	The series $ 1+\frac{1}{2}+ \cdots +\frac{1}{n}+ \cdots$, called the \textit{harmonic series}, diverges because its partial sums $ s_n = 1+ \frac{1}{2}+\cdots \frac{1}{n} $ diverges.
 \end{Statement}
 \begin{proof}
 	It's sufficient to prove that its partial sum $ s_n = 1+ \frac{1}{2}+\cdots \frac{1}{n} $ diverges. For all $ n \in \Natural $ we have 
@@ -1594,7 +1596,7 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 	\textbf{c)} $ (\lim\limits_{E \ni x \to a}f(x)=A_1 )\land(\lim\limits_{E \ni x \to a}f(x)=A_2 )\Rightarrow (A_1=A_2)$.
 \end{Theorem}
 \begin{proof}
-	content...
+	The proof is similar to how we prove that a ultimately constant sequence converges and its limits is unique.
 \end{proof}
 
 \subsubsection{Passage to the Limit and Arithmetic Operations}
@@ -1618,7 +1620,9 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 	\textbf{c)}  If $ \alpha : E \to \Real $ is infinitesimal as $ E \ni x \to a $ and $ \beta : E \to \Real $ is ultimately bounded as $ E \ni x \to a $, then the product $ \alpha \cdot \beta: E \to \Real $ is infinitesimal as $ E \ni x \to a $.
 \end{Proposition}
 \begin{proof}
-	content...
+	For assertion \textbf{a)}, we set $ |\alpha(x)<\frac{\varepsilon}{2}| $. \\
+	Assertion \textbf{b)} is a special case of assertion \textbf{c)}, since every function that has a limit is ultimately bounded. \\
+	Let $ M $ bounds $ |\beta(x)| $, and set $ |\alpha(x)| < \frac{\varepsilon}{M} $ will help to prove assertion \textbf{c)}.
 \end{proof}
 
 \begin{Statement}
@@ -1645,7 +1649,7 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 	These properties can be derived from the properties of the limit of sequences according to the proposition above. In order to complete the proof, one only need to convert "for some $ N \in \Natural $" to $ \mathring{U}_E(a) $.
 \end{proof}
 \begin{proof}[alternative proof with infinitesimal functions]
-	content...
+	Let $ f(x)= \alpha(x)$ and $ g(x)=\beta(x) $, where $ \alpha(x) $ and $ \beta(x) $ are infinitesimal functions. The first two assertions are obvious. For the quotient one, find the value of $ \frac{f(x)}{g(x)}-\frac{A}{B} $ after proving that $ \frac{1}{g(x)} $ is ultimately bounded as $ E \ni x \to a $.
 \end{proof}
 
 \subsubsection{Passage to the Limit and Inequalities}
@@ -1684,20 +1688,43 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 
 Now we define the exponential, logarithmic, and power functions using the theory of real numbers and limits.
 \textbf{A)} \textit{The exponential function} \newpara
-$ 1^0 $ \newpara
-$ 2^0 $ \newpara
-$ 3^0 $ \newpara
-$ 4^0 $ \newpara
-$ 5^0 $ \newpara
-$ 6^0 $ \newpara
-$ 7^0 $ \newpara
-$ 8^0 $ \newpara
-$ 9^0 $ \newpara
-$ 10^0 $ \newpara
-$ 11^0 $ \newpara
-$ 12^0 $ \newpara
-$ 13^0 $ \newpara
-$ 14^0 $ \newpara
+Let $ a>1 $ \\
+$ 1^0 $ For $ n \in \Natural $ we define inductively $ a^1 \coloneqq a\text{ , } a^{n+1} \coloneqq a^n \cdot a $\newpara
+$ 2^0 $ $ a^0 = 1 \text{ , } a^{-n}=\frac{1}{a^n} $ \newpara
+$ 3^0 $ We define $ a = a^1 = (a^{1/n})^m $ and $ a^{m/n} \coloneqq (a^{1/n})^m $, Now we have defined $ a^r $ for $ r \in \Quoziente $. \newpara
+$ 4^0 $ By induction, for $ x>0 $ and $ y>0 $ we have $ (x<y) \Leftrightarrow (x^n<y^n) $, and in particular, $ (x=y)\Leftrightarrow (x^n = y^n) $.\newpara
+$ 5^0 $ $ a^{(mk)/(nk)} = a^{m/n} $ for $ k \in \Zahlen $ and $ a^{m_1/n_1}\cdot  a^{m_2/n_2}=a^{m_1/n_1+m_2/n_2} $\newpara
+$ 6^0 $ $ (r_1<r_2)\Rightarrow (a^{r_1}<a^{r_2}) $ for any $ r_1,r_2\in\Quoziente $.\newpara
+$ 7^0 $ For $ r^0 \in \Quoziente (\lim\limits_{\Quoziente \ni r \to r_0}a^r=a^{r_0})$.
+\begin{proof}
+	First we prove that $ a^p\to1 $ as $ \Quoziente \ni p \to 0 $ by use the inequality $ a^{-1/n}<a^p<a^{1/n} $. Then we choose $ \delta $ such that $ 1-\varepsilon a^{-r_0} <a^p < 1 + \varepsilon a^{-r_0}$ for $ |p|<\delta $. If now $ |r-r_0|<\delta $, we have $ a^{r_0}(1-\varepsilon a^{-r_0} )<a^{r_0}\cdot a^{r-r_0} < a^{r_0}(1 + \varepsilon a^{-r_0} )$, which says $ a^{r_0}- \varepsilon < a^r< a^{r_0}+ \varepsilon$.
+\end{proof}
+$ 8^0 $ Let $ x \in \Real $, $ s = sup_{\Quoziente \ni r <x}a^r $, and $ i = inf_{\Quoziente \ni r >x}a^r  $. We show that $ s=i $.
+\begin{proof}
+	\begin{equation}
+		a^{r_1}\leqslant s \leqslant i \leqslant a^{r_2}\nonumber
+	\end{equation}
+	and for $ 0<|r_2-r_1|<\delta $ we have $ 0 \leqslant i-s \leqslant\varepsilon $.
+\end{proof}
+We now define $ a^x \coloneqq s = i $. \newpara
+$ 9^0 $ $ a^x = \lim\limits_{\Quoziente \ni r \to x}a^r $.
+\begin{proof}
+	We find $ r^\prime <x $ such that $ s - \varepsilon < a^{r^\prime} \leqslant s = a^x $ and $ r^{\prime\prime}>x $ such that $ a^x = i \leqslant a^{r^{\prime\prime} }< i+ \varepsilon$. Then for all $ r \in \Quoziente $ in $ (r^{\prime},r^{\prime\prime}) $
+	\begin{equation}
+		a^x - \varepsilon < a^r < a^x + \varepsilon \nonumber
+	\end{equation}
+\end{proof}
+$ 10^0 $ For $ x_1,x_2 \in \Real $ and $ a >1 $, $ (x_1<x_2)\Rightarrow (a^{x_1}<a^{x_2}) $.\newpara
+$ 11^0 $ For any $ x_1,x_2 \in \Real $, $ a^{x_1}\cdot a^{x_2} = a^{x_1+x_2}$.\newpara
+$ 12^0 $ $ \lim\limits_{x \to x_0}a^x = a^{x_0} $.
+\begin{proof}
+	The proof is similar with the proof for $ 7^0 $.
+\end{proof}
+$ 13^0 $ The range of values of the function $ x \mapsto a^x $ is the set $ \Real_+ $.
+\begin{proof}
+	The proof is similar with our first step for proving the irrationality of $ \sqrt{2} $.
+\end{proof}
+$ 14^0 $ We repeat the construction mentioned above for $ 0<a<1 $. In $ 6^0 $ and $ 10^0 $ we find that $ (x_1<x_2)\Rightarrow(a^{x_1}>a^{x_2}) $ where $ 0<a<1 $. \newpara
 
 \begin{Definition}
 	The mapping $ x \mapsto a^x $ is called the \textit{exponential} function with base $ a $. In the case $ a = e $, it's denoted with $ exp (x) $, but in general it's denoted with $ exp_a (x)$.
@@ -1707,28 +1734,34 @@ The properties of the exponential function show that it's bijective. Hence it ha
 \begin{Definition}
 	The mapping inverse to $ exp_a:\Real \to \Real_+ $ is called the \textit{logarithm to base a ($ 0<a,a \neq 1 $)}, and is denoted 
 	\begin{equation}
-		log_a:\Real_+ \to \Real \nonumber
+		\log_a:\Real_+ \to \Real \nonumber
 	\end{equation}
-	for base $ a=e $, the logarithm is called the \textit{natural logarithm} and is denoted $ ln:\Real_+ \to \Real $.
+	for base $ a=e $, the logarithm is called the \textit{natural logarithm} and is denoted $ \ln:\Real_+ \to \Real $.
 \end{Definition}
 
 By definition of the logarithm as the function inverse to the exponential function, we have 
 \begin{align}
-	\forall x \in \Real (log_a(a^x)&=x) \nonumber \\
-	\forall y \in \Real_+(a^{log_a(y)}&=y) \nonumber 
+	\forall x \in \Real (\log_a(a^x)&=x) \nonumber \\
+	\forall y \in \Real_+(a^{\log_a(y)}&=y) \nonumber 
 \end{align}
-$ 1^\prime $ \newpara
-$ 2^\prime $ \newpara
-$ 3^\prime $ \newpara
-$ 4^\prime $ \newpara
-$ 5^\prime $ \newpara
-$ 6^\prime $ \newpara
+$ 1^\prime $ $ \log_a a =1 $. \newpara
+$ 2^\prime $ $ \log_a(y_1 \cdot y_2) = \log_a y_1+ \log_a y_2 $.\newpara
+$ 3^\prime $ $ \log_a y \to \log_a y_0 $ as $ \Real_+ \ni y \to y_0 \in \Real_+ $.
+\begin{proof}
+	We verify that $ y_0a^{-\varepsilon} < y < y_0a^\varepsilon $ when $ a>1 $ and take their logarithms.
+\end{proof}
+$ 4^\prime $ $ (\log_a y_1<\log_a y_2) \Leftrightarrow (y_1<y_2)$ if $ a>1 $ and $ (\log_a y_1>\log_a y_2) \Leftrightarrow (y_1<y_2)$ if $ 0<a<1 $. \newpara
+$ 5^\prime $ The range of values of the function $ \log_a : \Real_+ \to \Real $ is the set $ \Real $.\newpara
+$ 6^\prime $ $ \log_a(b^\alpha) =\alpha \log_a b$ holds for any $ b >0 $ and any $ \alpha \in \Real $.
+\begin{proof}
+	First we verify that the equality holds in the following conditions: $ \alpha \in \Natural $, $ \alpha = -1 $, $ \alpha \in \Zahlen $, $ \alpha = \frac{1}{n} $ for $ n \in \Zahlen $, $ \alpha \in \Quoziente $, $ \log_a b^\alpha = \lim\limits_{\Quoziente \ni r \to \alpha}\log_a b^r = \lim\limits_{\Quoziente \ni r \to \alpha} r \log_a b = \alpha \log_a b $ where $ r \in \Quoziente $ and $ \log_a b^r = r \log_a b $, finally, $ (a^\alpha)^\beta = a^{\alpha \beta} $.
+\end{proof}
 
 \textbf{C)} \textit{The power function} \\
 \begin{Definition}
 	The function $ x \mapsto x^\alpha $ defined on the set $ \Real_+ $ is called a power function, and the number $ \alpha $ is called its \textit{exponent}.
 	\begin{equation}
-		x^\alpha = a^{log_a(x^\alpha)}=a^{\alpha log_a(x)}\nonumber
+		x^\alpha = a^{\log_a(x^\alpha)}=a^{\alpha \log_a(x)}\nonumber
 	\end{equation}
 \end{Definition}
 
@@ -1738,8 +1771,47 @@ $ 6^\prime $ \newpara
 
 
 \subsection{The General Definition of the Limit of a Function(Limit over a Base)}
-\subsection{Existence of the Limit of a Function}
+\subsubsection{Bases; Definition and Elementary Properties}
+\begin{Definition}
+	A set $ \mathcal{B} $ of subsets $ B \subset X $ of a set $ X $ is called a \textit{base} in $ X $ if the following conditions hold:
+	$ B_1) $ $ \forall B \in \mathcal{B}(B \neq \varnothing) $. \\
+	$ B_2) $ $ \forall B_1 \in \mathcal{B} \forall B_2 \in \mathcal{B} \exists B \in \mathcal{B}(B \subset B_1 \cap B_2) $.
+	These two conditions are related to the two properties of deleted neighborhood we mentioned in the previous subsection. "Base" here is an abbreviation for what is called a "filter base".
+\end{Definition}
+\begin{tabular}{| m{6em} | m{4em} | m{8em} | m{12em} |}
+	\hline
+	Notation for the base  &Read  &Elements of the base &Definition of and notation for elements \\
+	\hline
+	$ x \to a $ & $ x $ tends to $ a $ &Deleted neighborhoods of $ a \in \Real $ &$ \mathring{U}(a)\coloneqq \{x \in \Real | a- \delta_1 < x <a+ \delta_2 \land x \neq a\} $, where $ \delta_1>0 $ and $ \delta_2>0 $. \\
+	\hline
+	$ x \to \infty $ &$ x $ tends to infinity &Neighborhoods of infinity & $ U(\infty)\coloneqq \{x \in \Real | \delta<|x|\} $, where $ \delta \in \Real $ \\
+	\hline
+	$ x \to a, x \in E $ or $ x \to_{\in E} a$ or $ E \ni x \to a $ &$ x $ tends to $ a $ in $ E $ & Deleted neighborhoods \footnotemark of $ a $ in $ E $ &$ \mathring{U}_E(a)\coloneqq E \cap \mathring{U}(a) $ \\
+	\hline
+	$ x \to \infty, x \in E $ or $ E \ni x \to \infty $ or $ x \to_{\in E} \infty $ &$ x $ tends to infinity in $ E $ &Neighborhoods\footnotemark of infinity in $ E $ &$ U_E(\infty)\coloneqq E \cap U(\infty) $ \\
+	\hline
+\end{tabular}
+\footnotetext[1]{It is assumed that $ a $ is a limit point of $ E $}
+\footnotetext[2]{It is assumed that $ E $ is not bounded}
+\newline
+If $ E = E^+_a=\{x \in \Real | x>a\} $(resp. $ E = E^-_a=\{x \in \Real | x<a\} $), we write $ x \to a + 0 $(resp. $ x \to a - 0 $), and we say that \textit{$ x $ tends to $ a $ from the right} (resp. \textit{$ x $ tends to $ a $ from the left}) or \textit{through larger values} (resp. \textit{through smaller values}). When $ a=0 $ we write $ x \to +0 $ (resp. $ x \to -0 $). \newpara
+The notation $ E \ni x \to a +0 $ (resp. $ E \ni x \to a -0 $ ) will be used. It means that $ x $ tends to $ a $ in $ E $ while remaining larger (resp. smaller) than $ a $. \newpara
+If
+\begin{equation}
+	E = E^+_\infty = \{x \in \Real | c<x\}\text{(resp.} E = E^-_\infty = \{x \in \Real | x<c\}\text{)} \nonumber
+\end{equation}
+we write $ x \to +\infty $ (resp. $ x \to - \infty $). When $ E = \Natural $, we shall write $ n \to \infty $ instead of $ x \to \infty, x \in \Natural $.\newpara
 
+\subsubsection{The Limit of a Function over a Base}
+
+
+
+
+\subsection{Existence of the Limit of a Function}
+\subsubsection{The Cauchy Criterion}
+\subsubsection{The Limit of a Composite Function}
+\subsubsection{The Limit of a Monotonic Function}
+\subsubsection{Comparison of the Asymptotic Behavior of Functions}
 
 
 
@@ -1769,39 +1841,161 @@ $ 6^\prime $ \newpara
 
 \chapter{Continuous Functions}
 \section{Basic Definitions and Examples}
+\subsection{Continuity of a Function at a Point}
+\subsection{Points of Discontinuity}
+
+
 \section{Properties of Continuous Functions}
+\subsection{Local Properties}
+\subsection{Global Properties of Continuous Functions}
+
+
+
 
 \chapter{Differential Calculus}
 \section{Differentiable Functions}
+\subsection{Functions Differentiable at a Point}
+\subsection{The Tangent Line; Geometric Meaning of the Derivative and Differential}
+\subsection{Examples}
+
+
+
+
 \section{The Basic Rules of Differentiation}
+\subsection{Differentiation and the Arithmetic Operations}
+\subsection{Differentiation of a Composite Function(Chain Rule)}
+\subsection{Differentiation of an Inverse Function}
+\subsection{Table of Derivatives of the Basic Elementary Functions}
+\subsection{Differentiation of a Very Simple Implicit Function}
+\subsection{Higher-Order Derivatives}
+
+
 \section{The Basic Theorems of Differential Calculus}
-\section{Differential Calculus Used to Study Functions}
+\subsection{Fermat's Lemma and Rolle's Theorem}
+\subsection{The Theorems of Lagrange and Cauchy on Finite Increments}
+\subsection{Taylor's Formula}
+
+
+
+\section{The Study of Functions Using the Methods of Differential Calculus}
+\subsection{Conditions for a Function to be Monotonic}
+\subsection{Conditions for an Interior Extremum of a Function}
+\subsection{Conditions for a Function to be Convex}
+\subsection{L'Hôpital's Rule}
+\subsection{Constructing the Graph of a Function}
+
 \section{Complex Numbers and Elementary Functions}
-\section{Examples of Differential Calculus in Natural Science}
+\subsection{Complex Numbers}
+\subsection{Convergence in $ \Complex $ and Series with Complex Terms}
+\subsection{Euler's Formula and the Connections Among the Elementary Functions}
+\subsection{Power Series Representation of a Function. Analyticity}
+\subsection{Algebraic Closedness of the Field $ \Complex $ of Complex Numbers}
+
+
+
 \section{Primitives}
+\subsection{The Primitive and the Indefinite Integral}
+\subsection{The Basic General Methods of Finding a Primitive}
+\subsection{Primitives of Rational Functions}
+\subsection{Primitives of the Form $ \int R(\cos x, \sin x)dx $}
+\subsection{Primitives of the Form $ \int R(x,y(x))dx $}
 
 
 \chapter{Integration}
 \section{Definition of the Integral and Description of the Set of Integrable Functions}
-\section{Linearity, Additivity and Monotonicity on the Space $ \mathcal{R} $[a,b]}
+\subsection{Definition of the Riemann Integral}
+\subsection{The Set of Integrable Functions}
+
+
+
+
+\section{Linearity, Additivity and Monotonicity of the Integral}
+\subsection{The Integral as a Linear Function on the Space $ \mathcal{R} $[a,b]}
+\subsection{The Integral as an Additive Function of the Interval of Integration}
+\subsection{Estimation of the Integral, Monotonicity of the Integral, and the Mean-Value Theorem}
+
 \section{The Integral and the Derivative}
+\subsection{The Integral and the Primitive}
+\subsection{The Newton-Leibniz Formula}
+\subsection{Integration by Parts in the Definite Integral and Taylor's Formula}
+\subsection{Change of Variable in an Integral}
+\subsection{Examples}
+
+
 \section{Some Applications of Integration}
+\subsection{Additive Interval Functions and the Integral}
+\subsection{Arc Length}
+\subsection{The Area of a Curvilinear Trapezoid}
+\subsection{Volume of a Solid Revolution }
+\subsection{Work and Energy}
+
+
 \section{Improper Integrals}
+\subsection{Definition, Examples, and Basic Properties of Improper Integrals}
+\subsection{Convergence of an Improper Integral}
+\subsection{Improper Integrals with More than One Singularity}
 
 
 \chapter{Functions of Several Variables: Their Limits and Continuity}
 \section{The Space $ \Real^m $ and the Most Important Classes of Its Subsets}
-\section{Limits and Continuity of Functions of Several Variables}
+\subsection{The Set $ \Real^m $ and the Distance in It}
+\subsection{Open and Closed Sets in $ \Real^m $}
+\subsection{Compact Sets in $ \Real^m $}
 
+
+\section{Limits and Continuity of Functions of Several Variables}
+\subsection{The Limit of a Function}
+\subsection{Continuity of a Function of Several Variables and Properties of Continuous Functions}
 
 \chapter{The Differential Calculus of Functions of Several Variables}
+
 \section{The Linear Structure on $ \Real^m $}
+\subsection{$ \Real^m $ as a Vector Space}
+\subsection{Linear Transformations $ L : \Real^m \to \Real^n $}
+\subsection{The Norm in $ \Real^m $}
+\subsection{The Euclidean Structure on $ \Real^m $}
+
+
+
 \section{The Differential of a Function of Several Variables}
+\subsection{Differentiability and the Differential of a Function at a Point}
+\subsection{The Differential and Partial Derivatives of a Real-Valued Function}
+\subsection{Coordinate Representation of the Differential of a Mapping. The Jacob Matrix}
+\subsection{Continuity, Partial Derivatives, and Differentiability of a Function at a Point}
+
+
+
 \section{The Basic Laws of Differentiation}
+\subsection{Linearity of the Operation of Differentiation}
+\subsection{Differentiation of a Composition of Mappings (Chain Rule)}
+\subsection{Differentiation of an Inverse Mapping}
+
+
+
 \section{The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}
+\subsection{The Mean-Value Theorem}
+\subsection{A Sufficient Condition for Differentiability of a Function of Several Variables}
+\subsection{Higher-Order Partial Derivatives}
+\subsection{Taylor's Formula}
+\subsection{Extrema of Functions of Several Variables}
+\subsection{Some Geometric Images Connected with Functions of Several Variables}
+
+
 \section{The Implicit Function Theorem}
+\subsection{An Elementary Version of the Implicit Function Theorem}
+\subsection{Transition to the Case of a Relation $ F(x^1,\cdots,x^m,y)=0 $}
+\subsection{The Implicit Function Theorem}
+
 \section{Some Corollaries of the Implicit Function Theorem}
+\subsection{The Inverse Function Theorem}
+\subsection{Local Reduction of a Smooth Mapping to Canonical Form}
+\subsection{Local Resolution of a Diffeomorphism into a Composition of Elementary Ones}
+\subsection{Morse's Lemma}
+
 \section{Surfaces in $ \Real^n $ and the Theory of Extrema with Constraint}
+\subsection{$ k $-Dimensional Surfaces in $ \Real^n $}
+\subsection{The Tangent Space}
+\subsection{Extrema with Constraint}
 
 
 
