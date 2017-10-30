@@ -77,114 +77,114 @@
 \contentsline {subsubsection}{The Limit of a Function over a Base}{48}{section*.38}
 \contentsline {subsection}{\numberline {3.2.4}Existence of the Limit of a Function}{48}{subsection.3.2.4}
 \contentsline {subsubsection}{The Cauchy Criterion}{48}{section*.39}
-\contentsline {subsubsection}{The Limit of a Composite Function}{48}{section*.40}
-\contentsline {subsubsection}{The Limit of a Monotonic Function}{48}{section*.41}
-\contentsline {subsubsection}{Comparison of the Asymptotic Behavior of Functions}{48}{section*.42}
-\contentsline {chapter}{\numberline {4}Continuous Functions}{49}{chapter.4}
-\contentsline {section}{\numberline {4.1}Basic Definitions and Examples}{49}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Continuity of a Function at a Point}{49}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Points of Discontinuity}{49}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Properties of Continuous Functions}{49}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Local Properties}{49}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Global Properties of Continuous Functions}{49}{subsection.4.2.2}
-\contentsline {chapter}{\numberline {5}Differential Calculus}{51}{chapter.5}
-\contentsline {section}{\numberline {5.1}Differentiable Functions}{52}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Functions Differentiable at a Point}{52}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}The Tangent Line; Geometric Meaning of the Derivative and Differential}{52}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Examples}{52}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}The Basic Rules of Differentiation}{52}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Differentiation and the Arithmetic Operations}{52}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Differentiation of a Composite Function(Chain Rule)}{52}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Differentiation of an Inverse Function}{52}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Table of Derivatives of the Basic Elementary Functions}{52}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Differentiation of a Very Simple Implicit Function}{52}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Higher-Order Derivatives}{52}{subsection.5.2.6}
-\contentsline {section}{\numberline {5.3}The Basic Theorems of Differential Calculus}{52}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Fermat's Lemma and Rolle's Theorem}{52}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}The Theorems of Lagrange and Cauchy on Finite Increments}{52}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Taylor's Formula}{52}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}The Study of Functions Using the Methods of Differential Calculus}{52}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Conditions for a Function to be Monotonic}{52}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Conditions for an Interior Extremum of a Function}{52}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Conditions for a Function to be Convex}{52}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}L'H\IeC {\^o}pital's Rule}{52}{subsection.5.4.4}
-\contentsline {subsection}{\numberline {5.4.5}Constructing the Graph of a Function}{52}{subsection.5.4.5}
-\contentsline {section}{\numberline {5.5}Complex Numbers and Elementary Functions}{52}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Complex Numbers}{52}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Convergence in $ \mathbb {C}$ and Series with Complex Terms}{52}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}Euler's Formula and the Connections Among the Elementary Functions}{52}{subsection.5.5.3}
-\contentsline {subsection}{\numberline {5.5.4}Power Series Representation of a Function. Analyticity}{52}{subsection.5.5.4}
-\contentsline {subsection}{\numberline {5.5.5}Algebraic Closedness of the Field $ \mathbb {C}$ of Complex Numbers}{52}{subsection.5.5.5}
-\contentsline {section}{\numberline {5.6}Primitives}{52}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}The Primitive and the Indefinite Integral}{52}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}The Basic General Methods of Finding a Primitive}{52}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Primitives of Rational Functions}{52}{subsection.5.6.3}
-\contentsline {subsection}{\numberline {5.6.4}Primitives of the Form $ \DOTSI \intop \ilimits@ R(\qopname \relax o{cos}x, \qopname \relax o{sin}x)dx $}{52}{subsection.5.6.4}
-\contentsline {subsection}{\numberline {5.6.5}Primitives of the Form $ \DOTSI \intop \ilimits@ R(x,y(x))dx $}{52}{subsection.5.6.5}
-\contentsline {chapter}{\numberline {6}Integration}{53}{chapter.6}
-\contentsline {section}{\numberline {6.1}Definition of the Integral and Description of the Set of Integrable Functions}{54}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Definition of the Riemann Integral}{54}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}The Set of Integrable Functions}{54}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Linearity, Additivity and Monotonicity of the Integral}{54}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}The Integral as a Linear Function on the Space $ \mathcal {R} $[a,b]}{54}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}The Integral as an Additive Function of the Interval of Integration}{54}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Estimation of the Integral, Monotonicity of the Integral, and the Mean-Value Theorem}{54}{subsection.6.2.3}
-\contentsline {section}{\numberline {6.3}The Integral and the Derivative}{54}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}The Integral and the Primitive}{54}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}The Newton-Leibniz Formula}{54}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Integration by Parts in the Definite Integral and Taylor's Formula}{54}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Change of Variable in an Integral}{54}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}Examples}{54}{subsection.6.3.5}
-\contentsline {section}{\numberline {6.4}Some Applications of Integration}{54}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Additive Interval Functions and the Integral}{54}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Arc Length}{54}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}The Area of a Curvilinear Trapezoid}{54}{subsection.6.4.3}
-\contentsline {subsection}{\numberline {6.4.4}Volume of a Solid Revolution }{54}{subsection.6.4.4}
-\contentsline {subsection}{\numberline {6.4.5}Work and Energy}{54}{subsection.6.4.5}
-\contentsline {section}{\numberline {6.5}Improper Integrals}{54}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Definition, Examples, and Basic Properties of Improper Integrals}{54}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Convergence of an Improper Integral}{54}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Improper Integrals with More than One Singularity}{54}{subsection.6.5.3}
-\contentsline {chapter}{\numberline {7}Functions of Several Variables: Their Limits and Continuity}{55}{chapter.7}
-\contentsline {section}{\numberline {7.1}The Space $ \mathbb {R}^m $ and the Most Important Classes of Its Subsets}{55}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}The Set $ \mathbb {R}^m $ and the Distance in It}{55}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Open and Closed Sets in $ \mathbb {R}^m $}{55}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}Compact Sets in $ \mathbb {R}^m $}{55}{subsection.7.1.3}
-\contentsline {section}{\numberline {7.2}Limits and Continuity of Functions of Several Variables}{55}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}The Limit of a Function}{55}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Continuity of a Function of Several Variables and Properties of Continuous Functions}{55}{subsection.7.2.2}
-\contentsline {chapter}{\numberline {8}The Differential Calculus of Functions of Several Variables}{57}{chapter.8}
-\contentsline {section}{\numberline {8.1}The Linear Structure on $ \mathbb {R}^m $}{58}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}$ \mathbb {R}^m $ as a Vector Space}{58}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Linear Transformations $ L : \mathbb {R}^m \to \mathbb {R}^n $}{58}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}The Norm in $ \mathbb {R}^m $}{58}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}The Euclidean Structure on $ \mathbb {R}^m $}{58}{subsection.8.1.4}
-\contentsline {section}{\numberline {8.2}The Differential of a Function of Several Variables}{58}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Differentiability and the Differential of a Function at a Point}{58}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}The Differential and Partial Derivatives of a Real-Valued Function}{58}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Coordinate Representation of the Differential of a Mapping. The Jacob Matrix}{58}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Continuity, Partial Derivatives, and Differentiability of a Function at a Point}{58}{subsection.8.2.4}
-\contentsline {section}{\numberline {8.3}The Basic Laws of Differentiation}{58}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Linearity of the Operation of Differentiation}{58}{subsection.8.3.1}
-\contentsline {subsection}{\numberline {8.3.2}Differentiation of a Composition of Mappings (Chain Rule)}{58}{subsection.8.3.2}
-\contentsline {subsection}{\numberline {8.3.3}Differentiation of an Inverse Mapping}{58}{subsection.8.3.3}
-\contentsline {section}{\numberline {8.4}The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}{58}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}The Mean-Value Theorem}{58}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}A Sufficient Condition for Differentiability of a Function of Several Variables}{58}{subsection.8.4.2}
-\contentsline {subsection}{\numberline {8.4.3}Higher-Order Partial Derivatives}{58}{subsection.8.4.3}
-\contentsline {subsection}{\numberline {8.4.4}Taylor's Formula}{58}{subsection.8.4.4}
-\contentsline {subsection}{\numberline {8.4.5}Extrema of Functions of Several Variables}{58}{subsection.8.4.5}
-\contentsline {subsection}{\numberline {8.4.6}Some Geometric Images Connected with Functions of Several Variables}{58}{subsection.8.4.6}
-\contentsline {section}{\numberline {8.5}The Implicit Function Theorem}{58}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}An Elementary Version of the Implicit Function Theorem}{58}{subsection.8.5.1}
-\contentsline {subsection}{\numberline {8.5.2}Transition to the Case of a Relation $ F(x^1,\cdots ,x^m,y)=0 $}{58}{subsection.8.5.2}
-\contentsline {subsection}{\numberline {8.5.3}The Implicit Function Theorem}{58}{subsection.8.5.3}
-\contentsline {section}{\numberline {8.6}Some Corollaries of the Implicit Function Theorem}{58}{section.8.6}
-\contentsline {subsection}{\numberline {8.6.1}The Inverse Function Theorem}{58}{subsection.8.6.1}
-\contentsline {subsection}{\numberline {8.6.2}Local Reduction of a Smooth Mapping to Canonical Form}{58}{subsection.8.6.2}
-\contentsline {subsection}{\numberline {8.6.3}Local Resolution of a Diffeomorphism into a Composition of Elementary Ones}{58}{subsection.8.6.3}
-\contentsline {subsection}{\numberline {8.6.4}Morse's Lemma}{58}{subsection.8.6.4}
-\contentsline {section}{\numberline {8.7}Surfaces in $ \mathbb {R}^n $ and the Theory of Extrema with Constraint}{58}{section.8.7}
-\contentsline {subsection}{\numberline {8.7.1}$ k $-Dimensional Surfaces in $ \mathbb {R}^n $}{58}{subsection.8.7.1}
-\contentsline {subsection}{\numberline {8.7.2}The Tangent Space}{58}{subsection.8.7.2}
-\contentsline {subsection}{\numberline {8.7.3}Extrema with Constraint}{58}{subsection.8.7.3}
+\contentsline {subsubsection}{The Limit of a Composite Function}{49}{section*.40}
+\contentsline {subsubsection}{The Limit of a Monotonic Function}{50}{section*.41}
+\contentsline {subsubsection}{Comparison of the Asymptotic Behavior of Functions}{50}{section*.42}
+\contentsline {chapter}{\numberline {4}Continuous Functions}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}Basic Definitions and Examples}{53}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Continuity of a Function at a Point}{53}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Points of Discontinuity}{54}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Properties of Continuous Functions}{54}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Local Properties}{54}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Global Properties of Continuous Functions}{54}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {5}Differential Calculus}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Differentiable Functions}{56}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Functions Differentiable at a Point}{56}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}The Tangent Line; Geometric Meaning of the Derivative and Differential}{56}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Examples}{56}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}The Basic Rules of Differentiation}{56}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Differentiation and the Arithmetic Operations}{56}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Differentiation of a Composite Function(Chain Rule)}{56}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Differentiation of an Inverse Function}{56}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Table of Derivatives of the Basic Elementary Functions}{56}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Differentiation of a Very Simple Implicit Function}{56}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Higher-Order Derivatives}{56}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}The Basic Theorems of Differential Calculus}{56}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Fermat's Lemma and Rolle's Theorem}{56}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}The Theorems of Lagrange and Cauchy on Finite Increments}{56}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Taylor's Formula}{56}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}The Study of Functions Using the Methods of Differential Calculus}{56}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Conditions for a Function to be Monotonic}{56}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Conditions for an Interior Extremum of a Function}{56}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Conditions for a Function to be Convex}{56}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}L'H\IeC {\^o}pital's Rule}{56}{subsection.5.4.4}
+\contentsline {subsection}{\numberline {5.4.5}Constructing the Graph of a Function}{56}{subsection.5.4.5}
+\contentsline {section}{\numberline {5.5}Complex Numbers and Elementary Functions}{56}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Complex Numbers}{56}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Convergence in $ \mathbb {C}$ and Series with Complex Terms}{56}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Euler's Formula and the Connections Among the Elementary Functions}{56}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}Power Series Representation of a Function. Analyticity}{56}{subsection.5.5.4}
+\contentsline {subsection}{\numberline {5.5.5}Algebraic Closedness of the Field $ \mathbb {C}$ of Complex Numbers}{56}{subsection.5.5.5}
+\contentsline {section}{\numberline {5.6}Primitives}{56}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}The Primitive and the Indefinite Integral}{56}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}The Basic General Methods of Finding a Primitive}{56}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Primitives of Rational Functions}{56}{subsection.5.6.3}
+\contentsline {subsection}{\numberline {5.6.4}Primitives of the Form $ \DOTSI \intop \ilimits@ R(\qopname \relax o{cos}x, \qopname \relax o{sin}x)dx $}{56}{subsection.5.6.4}
+\contentsline {subsection}{\numberline {5.6.5}Primitives of the Form $ \DOTSI \intop \ilimits@ R(x,y(x))dx $}{56}{subsection.5.6.5}
+\contentsline {chapter}{\numberline {6}Integration}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}Definition of the Integral and Description of the Set of Integrable Functions}{58}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Definition of the Riemann Integral}{58}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}The Set of Integrable Functions}{58}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Linearity, Additivity and Monotonicity of the Integral}{58}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}The Integral as a Linear Function on the Space $ \mathcal {R} $[a,b]}{58}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}The Integral as an Additive Function of the Interval of Integration}{58}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Estimation of the Integral, Monotonicity of the Integral, and the Mean-Value Theorem}{58}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}The Integral and the Derivative}{58}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}The Integral and the Primitive}{58}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}The Newton-Leibniz Formula}{58}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Integration by Parts in the Definite Integral and Taylor's Formula}{58}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Change of Variable in an Integral}{58}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Examples}{58}{subsection.6.3.5}
+\contentsline {section}{\numberline {6.4}Some Applications of Integration}{58}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Additive Interval Functions and the Integral}{58}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Arc Length}{58}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}The Area of a Curvilinear Trapezoid}{58}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}Volume of a Solid Revolution }{58}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {6.4.5}Work and Energy}{58}{subsection.6.4.5}
+\contentsline {section}{\numberline {6.5}Improper Integrals}{58}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Definition, Examples, and Basic Properties of Improper Integrals}{58}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Convergence of an Improper Integral}{58}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}Improper Integrals with More than One Singularity}{58}{subsection.6.5.3}
+\contentsline {chapter}{\numberline {7}Functions of Several Variables: Their Limits and Continuity}{59}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Space $ \mathbb {R}^m $ and the Most Important Classes of Its Subsets}{59}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}The Set $ \mathbb {R}^m $ and the Distance in It}{59}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Open and Closed Sets in $ \mathbb {R}^m $}{59}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Compact Sets in $ \mathbb {R}^m $}{59}{subsection.7.1.3}
+\contentsline {section}{\numberline {7.2}Limits and Continuity of Functions of Several Variables}{59}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}The Limit of a Function}{59}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Continuity of a Function of Several Variables and Properties of Continuous Functions}{59}{subsection.7.2.2}
+\contentsline {chapter}{\numberline {8}The Differential Calculus of Functions of Several Variables}{61}{chapter.8}
+\contentsline {section}{\numberline {8.1}The Linear Structure on $ \mathbb {R}^m $}{62}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}$ \mathbb {R}^m $ as a Vector Space}{62}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Linear Transformations $ L : \mathbb {R}^m \to \mathbb {R}^n $}{62}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}The Norm in $ \mathbb {R}^m $}{62}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}The Euclidean Structure on $ \mathbb {R}^m $}{62}{subsection.8.1.4}
+\contentsline {section}{\numberline {8.2}The Differential of a Function of Several Variables}{62}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Differentiability and the Differential of a Function at a Point}{62}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}The Differential and Partial Derivatives of a Real-Valued Function}{62}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Coordinate Representation of the Differential of a Mapping. The Jacob Matrix}{62}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Continuity, Partial Derivatives, and Differentiability of a Function at a Point}{62}{subsection.8.2.4}
+\contentsline {section}{\numberline {8.3}The Basic Laws of Differentiation}{62}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Linearity of the Operation of Differentiation}{62}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Differentiation of a Composition of Mappings (Chain Rule)}{62}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.3}Differentiation of an Inverse Mapping}{62}{subsection.8.3.3}
+\contentsline {section}{\numberline {8.4}The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}{62}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}The Mean-Value Theorem}{62}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}A Sufficient Condition for Differentiability of a Function of Several Variables}{62}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Higher-Order Partial Derivatives}{62}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.4}Taylor's Formula}{62}{subsection.8.4.4}
+\contentsline {subsection}{\numberline {8.4.5}Extrema of Functions of Several Variables}{62}{subsection.8.4.5}
+\contentsline {subsection}{\numberline {8.4.6}Some Geometric Images Connected with Functions of Several Variables}{62}{subsection.8.4.6}
+\contentsline {section}{\numberline {8.5}The Implicit Function Theorem}{62}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}An Elementary Version of the Implicit Function Theorem}{62}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.5.2}Transition to the Case of a Relation $ F(x^1,\cdots ,x^m,y)=0 $}{62}{subsection.8.5.2}
+\contentsline {subsection}{\numberline {8.5.3}The Implicit Function Theorem}{62}{subsection.8.5.3}
+\contentsline {section}{\numberline {8.6}Some Corollaries of the Implicit Function Theorem}{62}{section.8.6}
+\contentsline {subsection}{\numberline {8.6.1}The Inverse Function Theorem}{62}{subsection.8.6.1}
+\contentsline {subsection}{\numberline {8.6.2}Local Reduction of a Smooth Mapping to Canonical Form}{62}{subsection.8.6.2}
+\contentsline {subsection}{\numberline {8.6.3}Local Resolution of a Diffeomorphism into a Composition of Elementary Ones}{62}{subsection.8.6.3}
+\contentsline {subsection}{\numberline {8.6.4}Morse's Lemma}{62}{subsection.8.6.4}
+\contentsline {section}{\numberline {8.7}Surfaces in $ \mathbb {R}^n $ and the Theory of Extrema with Constraint}{62}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}$ k $-Dimensional Surfaces in $ \mathbb {R}^n $}{62}{subsection.8.7.1}
+\contentsline {subsection}{\numberline {8.7.2}The Tangent Space}{62}{subsection.8.7.2}
+\contentsline {subsection}{\numberline {8.7.3}Extrema with Constraint}{62}{subsection.8.7.3}

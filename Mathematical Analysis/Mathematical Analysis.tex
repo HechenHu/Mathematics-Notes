@@ -1803,45 +1803,252 @@ If
 we write $ x \to +\infty $ (resp. $ x \to - \infty $). When $ E = \Natural $, we shall write $ n \to \infty $ instead of $ x \to \infty, x \in \Natural $.\newpara
 
 \subsubsection{The Limit of a Function over a Base}
+\begin{Definition}
+	Let $ f:X\to \Real $ be a function defined on a set $ X $ and $ \mathcal{B} $ a base in $ X $. A number $ A $ is called the \textit{limit of the function $ f $ over the base $ \mathcal{B} $} if for every neighborhood $ V(A) $ of $ A $ there is an element $ B \in \mathcal{B} $ whose image $ f(B) $ is contained in $ V(A) $.
+	\begin{equation}
+		(\lim\limits_{\mathcal{B}}f(x)=A )\coloneqq \forall V(A)\exists B\in \mathcal{B}(f(B)\subset V(A)\nonumber
+	\end{equation}
+\end{Definition}
 
-
+\begin{Definition}
+	A function $ f:X \to \Real $ is \textit{ultimately constant over the base $ \mathcal{B} $} if there exists a number $ A \in \Real $ and an element $ B\in \mathcal{B} $ such that $ f(x)=A $ for all $ x \in B $.
+\end{Definition}
+\begin{Definition}
+	A function $ f:X \to \Real $ is \textit{ultimately bounded over the base $ \mathcal{B} $} if there exists a number $ c>0$ and an element $ B\in \mathcal{B} $ such that $ |f(x)| <c$ for all $ x \in B $.
+\end{Definition}
+\begin{Definition}
+	A function $ f:X \to \Real $ is \textit{infinitesimal over the base $ \mathcal{B} $} if $ \lim\limits_{\mathcal{B}}f(x)=0 $.
+\end{Definition}
 
 
 \subsection{Existence of the Limit of a Function}
 \subsubsection{The Cauchy Criterion}
+\begin{Definition}
+	The \textit{oscillation} of a function $ f:X \to \Real $ on a set $ E \subset X $ is
+	\begin{equation}
+		\omega(f,E) \coloneqq sup_{x_1,x_2 \in E}|f(x_1)-f(x_2)|\nonumber
+	\end{equation}
+	that is, the least upper bound of the absolute value of the difference of the values of the function at two arbitrary points $ x_1,x_2 \in E $.
+\end{Definition}
+
+\begin{Theorem}[The Cauchy Criterion for the existence of a limit of a function]
+	Let $ X $ be a set and $ \mathcal{B} $ a base in $ X $. \newpara
+	A function $ f:X \to \Real $ has a \textit{limit over the base $ \mathcal{B} $} iff for every $ \varepsilon>0 $ there exists $ B \in \mathcal{B} $ such that the oscillation of $ f $ on $ B $ is less than $ \varepsilon $.
+	\begin{equation}
+		\exists \lim\limits_{\mathcal{B}}f(x) \Leftrightarrow \forall \varepsilon >0 \exists B \in \mathcal{B}(\omega(f,B)<\varepsilon) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	Setting $ m_B = inf_{x \in \mathcal{B}}f(x) $ and $ M_B = sup_{x \in \mathcal{B}}f(x) $, and remarking that $ m_{B_1} \leqslant m_{B_1 \cap B_2} \leqslant M_{B_1 \cap B_2} \leqslant M_{B_2} $ for any elements $ B_1 $ and $ B_2 $ of the base $ \mathcal{B} $, we find by the axiom of completeness that there exists a number $ A \in \Real $ separating the numerical sets $ \{m_B\} $ and $ \{M_B\} $, where $ B \in \mathcal{B} $. Since $ \omega(f,B)=M_B-m_B $, we can now conclude that, since $ \omega(f,B) < \varepsilon $, we have $ |f(x)-A|<\varepsilon $ at every point $ x \in B $.
+\end{proof}
+\textbf{Remark:} When $ X = \Natural $ and $ \mathcal{B} $ is the base $ n \to \infty, n\in \Natural $, $ \omega(f, B) < \varepsilon $ where $ B \in \mathcal{B} $ is equivalent with the assertion that this sequence is a Cauchy sequence.
+
+
+
 \subsubsection{The Limit of a Composite Function}
+\begin{Theorem}[The Limit of a Composite Function]
+	Let $ Y $ be a set, $ \mathcal{B}_Y $ a base in $ Y $, and $ g:Y \to \Real $ a mapping having a limit over the base $ \mathcal{B}_Y $. Let $ X $ be a set, $ \mathcal{B}_X $ a base in $ X $, and $ f:X \to Y $ a mapping of $ X $ into $ Y $ such that for every element $ B_Y \in \mathcal{B}_Y $ there exists $ B_X \in \mathcal{B}_X $ whose image $ f(B_X) $ is contained in $ B_Y $. \newpara
+	Under these hypotheses, the composition $ g \circ f:X \to \Real $ of the mapping $ f $ and $ g $ is defined and has a limit over the base $ \mathcal{B}_X $ and $ \lim\limits_{\mathcal{B}_X}(g \circ f)(x) = \lim\limits_{\mathcal{B}_Y}g(y) $
+\end{Theorem}
+\begin{proof}
+	Suppose $ \lim\limits_{\mathcal{B}_Y}g(y) = A $. $ g(B_Y) \subset V(A) \land (\exists B_X \in \mathcal{B}_X(f(B_X)\subset B_Y))\Rightarrow (g \circ f)(B_X) = g(f(B_X)) \subset g(B_Y) \subset V(A)$.
+\end{proof}
+
+\begin{Statement}
+	\begin{equation}
+		\lim\limits_{x \to \infty} (1+ \frac{1}{x})^x = e \nonumber
+	\end{equation}
+\end{Statement}
+\begin{Statement}
+	\begin{equation}
+		\lim\limits_{x \to +\infty} \frac{x}{q^x} = 0 \text{ if $ q>1 $} \nonumber
+	\end{equation}
+\end{Statement}
+
+\begin{Statement}
+	\begin{equation}
+	\lim\limits_{x \to +\infty} \frac{\log_a x}{x}=0 \nonumber
+	\end{equation}
+\end{Statement}
+
+
 \subsubsection{The Limit of a Monotonic Function}
+\begin{Theorem}[Criterion for the Existence of a Limit of a Monotonic Function]
+	Assume $ i = inf E $ and $ s = sup E $ are limit points of the set $ E $ and  $ f : E \to \Real  $ a monotonic function on $ E $.A necessary and sufficient condition for this function that is non-decreasing on the set $ E $ to have a limit as $ x \to s, x \in E $, is that it be bounded above. For this function to have a limit as $ x \to i, x \in E $, it is necessary and sufficient that it be bounded below.
+\end{Theorem}
+\begin{proof}
+	For $ x \to s $, use the definition of least upper bound and the fact the set $ \{x \in E|x_0 <x <s\} $ is an element of the base $ x \to s, x \in E $, where for a given $ \varepsilon >0 $ we have $ A- \varepsilon < f(x_0)\leqslant A $ and $ A = sup_{x \in E\setminus \{s\}}f(x) $.
+\end{proof}
+
+
+
 \subsubsection{Comparison of the Asymptotic Behavior of Functions}
 
+\begin{Definition}
+	We shall say that a certain property of functions or a certain relation between functions holds \textit{ultimately over a given base $ \mathcal{B} $} is there exists $ B \in \mathcal{B} $ on which it holds.
+\end{Definition}
 
+\begin{Definition}
+	The function $ f $ is said to be \textit{infinitesimal} compared with the function $ g $ over the base $ \mathcal{B} $, and we write $ f =_\mathcal{B} o(g) $ or $ f = o(g) $ over $ \mathcal{B} $ if the relation $ f(x) = \alpha(x)g(x) $ holds ultimately over $ \mathcal{B} $, where $ \alpha(x) $ is a function that is infinitesimal over $ \mathcal{B} $.
+\end{Definition}
 
+\begin{Definition}
+	If $ f =_\mathcal{B} o(g) $ and $ g $ is itself infinitesimal over $ \mathcal{B} $, we say that $ f $ is an \textit{infinitesimal of higher order than $ g $ over $ \mathcal{B} $}.
+\end{Definition}
 
+\begin{Definition}
+	A function that tends to infinity over a given base is said to be an \textit{infinite function} or simply an \textit{infinity} over the given base.
+\end{Definition}
 
+\begin{Definition}
+	If $ f $ and $ g $ are infinite functions over $ \mathcal{B} $ and $ f =_\mathcal{B} o(g) $, we say that $ g $ is a \textit{higher order infinity} than $ f $ over $ \mathcal{B} $.
+\end{Definition}
 
+\begin{Statement}
+	\begin{equation}
+	\lim\limits_{x \to +\infty}\frac{x^\alpha}{a^x}=0 \nonumber
+	\end{equation}
+	that is, $ x^\alpha = o(a^x) $ as $ x \to +\infty $ for $ a>1 $ and any $ \alpha \in \Real $.
+\end{Statement}
 
+\begin{Statement}
+	\begin{equation}
+		\lim\limits_{x \to +\infty}\frac{\log_a x}{x^\alpha} = 0\nonumber
+	\end{equation}
+	that is, for $ \alpha >0 $ we have $ \log_a x = o(x^\alpha) $ as $ x\to +\infty $.
+\end{Statement}
 
+\begin{Definition}
+	The notation $ f =_\mathcal{B} O(g) $ or $ f = O(g) $ over the base $ \mathcal{B} $ means that the relation $ f(x) = \beta(x)g(x) $ holds ultimately over $ \mathcal{B} $ where $ \beta(x) $ is ultimately bounded over $ \mathcal{B} $.
+\end{Definition}
 
+\begin{Definition}
+	The functions $ f $ and $ g $ are \textit{of the same order over $ \mathcal{B} $}, and we write $ f\asymp g$ over $ \mathcal{B} $, if $ f =_\mathcal{B} O(g) $ and $ g =_\mathcal{B} O(f) $ simultaneously. This condition is equivalent to the condition that there exist $ c_1 > 0 $ and $ c_2>0 $ and an element $ B \in \mathcal{B} $ such that the relations
+	\begin{equation}
+		c_1|g(x)|\leqslant |f(x)|\leqslant c_2|g(x)|\nonumber
+	\end{equation}
+\end{Definition}
 
+\begin{Statement}
+	The functions $ (2+\sin x)x $ and $ x $ are of the same order as $ x \to \infty $, but $ (1+ \sin x) $ and $ x $ are not of the same order as $ x \to \infty $.
+\end{Statement}
 
+\begin{Definition}
+	If the relation $ f(x) = \gamma(x) g(x) $ holds ultimately over $ \mathcal{B} $ where $ \lim\limits_{\mathcal{B}}\gamma(x)=1 $, we say that the function $ f $ \textit{behaves asymptotically like $ g $ over $ \mathcal{B} $}, or that $ f $ is \textit{equivalent to $ g $ over $ \mathcal{B} $}, and we write $ f \sim_\mathcal{B} g $ or $ f \sim g $ over $ \mathcal{B} $. This relation is indeed an equivalent relation.
+\end{Definition}
 
+\begin{Statement}
+	\begin{equation}
+		\ln(1+x) \sim x\nonumber
+	\end{equation}
+	as $ x \to 0 $.
+\end{Statement}
 
+\begin{Statement}
+	\begin{equation}
+		e^x = 1 +x+o(x) \nonumber
+	\end{equation}
+	as $ x \to 0 $.
+\end{Statement}
 
+\begin{Statement}
+	\begin{equation}
+		(1+x)^\alpha = 1+ \alpha x + o(x) \nonumber
+	\end{equation}
+	as $ x \to 0 $.
+\end{Statement}
 
+\begin{Proposition}
+	If $ f \sim_\mathcal{B} \tilde{f} $, then $ \lim\limits_{\mathcal{B}}f(x)g(x)=  \lim\limits_{\mathcal{B}}\tilde{f}(x)g(x)$, provided one of these limits exists.
+\end{Proposition}
+This rule should not be extended to sums and differences of functions.
 
+\begin{Proposition}
+	For a given base \newpara
+	\textbf{a)} $ o(f)+o(f)=o(f) $; \\
+	\textbf{b)} $ o(f) $ is also $ O(f) $;\\
+	\textbf{c)} $ o(f)+O(f)=O(f) $;\\
+	\textbf{d)} $ O(f)+O(f)=O(f) $;\\
+	\textbf{e)} if $ g(x) \neq0 $, then $ \frac{o(f(x))}{g(x)}=o(\frac{f(x)}{g(x)}) $ and $ \frac{O(f(x))}{g(x)} = O(\frac{f(x)}{g(x)}) $;\\
+\end{Proposition}
+Here the equality sign is used in the sense of "is". The symbols $ o(\cdot) $ and $ O(\cdot) $ do not really denoted a function, but rather indicate its asymptotic behavior, a behavior that many functions may have simultaneously.
 
+\begin{align}
+	e^x&= 1+\frac{1}{1!}x+\frac{1}{2!}x^2+\cdots+\frac{1}{n!}x^n+\cdots \text{ for $ x \in \Real $}\nonumber \\
+	\cos x&= 1-\frac{1}{2!}x^2+\frac{1}{4!}x^4+\cdots+\frac{(-1)^k}{2k!}x^{2k}+\cdots \text{ for $ x \in \Real $}\nonumber \\
+	\sin x&= \frac{1}{1!}x-\frac{1}{3!}x^3+\cdots+\frac{(-1)^k}{(2k+1)!}x^{2k+1}+\cdots \text{ for $ x \in \Real $} \nonumber \\
+	\ln(1+x)&= x-\frac{1}{2}x^2+\frac{1}{3}x^3+\cdots+\frac{(-1)^{n-1}}{n}x^n + \cdots \text{ for $|x|<1 $}\nonumber \\
+	(1+x)^\alpha&= 1+\frac{\alpha}{1!}x+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots\\
+	&\text{\quad}  +\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+\cdots \text{ for $|x|<1 $}\nonumber \\
+\end{align}
+And as $ x \to 0 $
+\begin{align}
+		e^x&= 1+\frac{1}{1!}x+\frac{1}{2!}x^2+\cdots+\frac{1}{n!}x^n+O(x^{n+1}) \nonumber \\
+	\cos x&= 1-\frac{1}{2!}x^2+\frac{1}{4!}x^4+\cdots+\frac{(-1)^k}{2k!}x^{2k}+O(x^{2k+2}) \nonumber \\
+	\sin x&= \frac{1}{1!}x-\frac{1}{3!}x^3+\cdots+\frac{(-1)^k}{(2k+1)!}x^{2k+1}+O(x^{2k+3})  \nonumber \\
+	\ln(1+x)&= x-\frac{1}{2}x^2+\frac{1}{3}x^3+\cdots+\frac{(-1)^{n-1}}{n}x^n + O(x^{n+1})\nonumber \\
+	(1+x)^\alpha&= 1+\frac{\alpha}{1!}x+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots\\
+	&\text{\quad}  +\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+O(x^{n+1}) \nonumber \\
+\end{align}
 
-
-
-
-
-
-
-
-
+These formulas are usually te most efficient method of finding the limits of the elementary functions. When doing so, it is useful to keep in mind that $ O(x^{m+1}) = x^{m+1}\cdot O(1) = x^m \cdot x O(1)=x^m o(1) = o(x^m) $ as $ x \to 0 $.
 
 \chapter{Continuous Functions}
 \section{Basic Definitions and Examples}
 \subsection{Continuity of a Function at a Point}
+\begin{Definition}
+	A real-valued function $ f $ is \textit{continuous at the point $ a $} if for any neighborhood $ V(f(a)) $ there is a neighborhood $ U(a) $ of $ a $ whose image under the mapping $ f $ is contained in $ V(f(a)) $.
+	\begin{align}
+	\text{$ f $ is continuous at $ a $} \coloneqq & (\forall V(f(a)))\exists U(a)(f(U(a))\subset V(f(a)))\nonumber \\
+	&\forall \varepsilon >0 \exists U(a)\forall x \in U(a) (|f(x)-f(a)|<\varepsilon) \nonumber \\
+	&\forall \varepsilon >0 \exists \delta>0 \forall x \in \Real (|x-a|<\delta \Rightarrow |f(x)-f(a|<\varepsilon) \nonumber
+	\end{align}
+\end{Definition}
+This is equivalent to the condition that $ \lim\limits_{x \to a}f(x) $ exists and $ f(a) $ is defined.
+\begin{equation}
+	(f:E \to \Real \text{ is continuous at }a\in E)\Leftrightarrow(\exists \lim\limits_{\mathcal{B}_a}f(x))\nonumber
+\end{equation}
+where $ \mathcal{B}_a $ is the base consists of neighborhoods (not deleted neighborhoods) of $ a \in E $ .
+
+\begin{Definition}[General Case]
+	A function $ f:E \to \Real $ is \textit{continuous at the point $ a \in E $} if for every neighborhood $ V(f(a)) $ of the value $ f(a) $ that the function assumes at $ a $ there exists a neighborhood $ U_E(a) $ of $ a $ in $ E $ whose image $ f(U_E(a)) $ is contained in $ V(f(a)) $.
+	\begin{align}
+		&(f:E \to \Real \text{ is continuous at $ a\in E $ }) \coloneqq\\
+		&(\forall V(f(a)))\exists U_E(a)(f(U_E(a))\subset V(f(a)))\nonumber \\
+		&\forall \varepsilon >0 \exists U_E(a)\forall x \in U_E(a) (|f(x)-f(a)|<\varepsilon) \nonumber \\
+		&\forall \varepsilon >0 \exists \delta>0 \forall x \in \Real (|x-a|<\delta \Rightarrow |f(x)-f(a|<\varepsilon \nonumber
+	\end{align}
+\end{Definition}
+
+\begin{Definition}
+	The quantity $ \omega(f,a) = \lim\limits_{\delta \to +0} \omega(f,U^\delta_E(a)) $ is called the \textit{oscillation} of $ f: E \to \Real $ at $ a $.
+\end{Definition}
+The oscillation of a function on a subset of a set does not exceed its oscillation on the set itself, so that $ \omega(f,U^\delta_E(a)) $ is a non-decreasing function of $ \delta $. 
+
+\begin{equation}
+(f:E \to \Real \text{ is continuous at }a\in E)\Leftrightarrow(\omega(f,a)=0)\nonumber
+\end{equation}
+
+\begin{Definition}
+	A function $ f:E \to \Real $ is continuous on the set $ E $ if it is continuous at each point of $ E $.
+\end{Definition}
+The set of all continuous real-valued functions defined on a set $ E $ will be denoted $ C(E,\Real) $, or, more, $ C(E) $.
+\begin{Statement}
+	The function $ f(x)=\sin x $ is continuous on $ \Real $.
+\end{Statement}
+\begin{proof}
+	For any point $ x_0 \in \Real $ we have
+	\begin{align}
+		|\sin x - \sin x_0|&=|2 \cos \frac{x+x_0}{2} \sin \frac{x- x_0}{2}| \nonumber\\
+		&\leqslant 2|\sin\frac{x-x_0}{2}| \leqslant 2|\frac{x-x_0}{2}| = |x-x_0| < \varepsilon \nonumber
+	\end{align}
+	provided $ |x-x_0| < \delta = \varepsilon$. Here we used the inequality $ |\sin x| \leqslant |x| $.
+\end{proof}
+
+\begin{Statement}
+	Any sequence $ f: \Natural \to \Real $ is a function that is continuous on the set $ \Natural $ of natural numbers, since each point of $ \Natural $ is isolated.
+\end{Statement}
+
 \subsection{Points of Discontinuity}
 
 
