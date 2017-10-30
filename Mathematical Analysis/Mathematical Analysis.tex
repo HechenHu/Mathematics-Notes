@@ -2050,12 +2050,102 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 \end{Statement}
 
 \subsection{Points of Discontinuity}
+\begin{Definition}
+	If the function $ f: E \to \Real $ is not continuous at a point of $ E $, this point is called a point of \textit{discontinuity} or simply a \textit{discontinuity} of $ f $.
+\end{Definition}
+\begin{Definition}
+	If a point of discontinuity $ a \in E $ of the function $ f:E \to \Real $ is such that there exists a continuous function $ \tilde{f}:E \to \Real $ such that $ f|_{E \setminus a}=\tilde{f}|_{E \setminus a} $, then $ a $ is called a \textit{removable discontinuity} of the function $ f $.
+\end{Definition}
+\begin{Definition}
+	The point $ a \in E $ is called a discontinuity of \textit{first kind} for the function $ f:E \to \Real $ if the following limits exist:
+	\begin{equation}
+	\lim\limits_{E \ni x \to a-0}f(x) \coloneqq f(a-0),\quad 	\lim\limits_{E \ni x \to a+0}f(x) \coloneqq f(a+0)\nonumber
+	\end{equation}
+	but at least one of them is not equal to $ f(a) $. If at least one of the two limits does not exist, then $ a $ is called a discontinuity of \textit{second kind}.
+\end{Definition}
 
+\begin{Statement}
+	The \textit{Dirichlet function}
+	\begin{equation}
+		\mathcal{D}(x)=\begin{cases}
+		1&\text{ , if }x \in \Quoziente\\
+		0&\text{ , if }x\in \Real \setminus \Quoziente
+		\end{cases} \nonumber
+	\end{equation}
+	is discontinuous at every point, and obviously all of its discontinuities are of second kind, since in every interval there are both rational and irrational numbers.
+\end{Statement}
+\begin{Statement}
+	The \textit{Riemann function}
+	\begin{equation}
+		\mathcal{R}(x)=\begin{cases}
+		\frac{1}{n}&\text{ , if }x = \frac{m}{n} \in \Quoziente\text{ , where $ \frac{m}{n} $ is in lowest terms, }n \in \Natural\\
+		0&\text{ , if }x\in \Real \setminus \Quoziente
+		\end{cases} \nonumber
+	\end{equation}
+	is continuous at any irrational number. This function is discontinuous except for $ x=0 $, and all of these discontinuities are of first kind.
+\end{Statement}
+\begin{proof}
+	For any point $ a \in \Real $, any bounded neighborhood $ U(a) $ of it, and any number $ N \in \Natural $, $ U(a) $ contains only a finite number of rational numbers $ \frac{m}{n},m \in \Zahlen ,n\in\Natural$, with $ n<N $. \newpara
+	By shrinking the neighborhood, one can then assume that the denominators of all rational numbers in the neighborhood (except possibly for the point $ a $ itself if $ a \in \Quoziente $) are larger than $ N $. Thus at any point $ x \in \mathring{U} (a)$ we have $ |\mathcal{R}(x)|< \frac{1}{N} $. Now we have shown that for any point $ a \in\Real\setminus\Quoziente $
+	\begin{equation}
+		\lim\limits_{x \to a}\mathcal{R}(x)=0 \nonumber
+	\end{equation}
+\end{proof}
 
 \section{Properties of Continuous Functions}
 \subsection{Local Properties}
+\begin{Theorem}
+	Let $ f:E \to \Real $ be a function that is continuous at the point $ a \in E $. Then the following statements hold: \newpara
+	$ 1^0 $ The function $ f :E \to \Real $ is bounded in some neighborhood $ U_E(a) $. \\
+	$ 2^0 $ If $ f(a)\neq 0 $, then in some neighborhood $ U_E(a) $ all the values of the function have the same sign as $ f(a) $.\\
+	$ 3^0 $ If the function $ g:U_E(1)\to \Real $ is defined in some neighborhood of $ a $ and, like $ f $, is continuous at $ a $, then the following functions are defined in some neighborhood of $ a $ and continuous at $ a $:
+	\begin{align}
+		&\text{a) } (f+g)(x)\coloneqq f(x)+g(x) \\
+		&\text{b) } (f \cdot g)(x)\coloneqq f(x )\cdot g(x)\\
+		&\text{c) } \frac{f}{g}(x)\coloneqq \frac{f(x)}{g(x)}\text{ (provided $ g(a)\neq 0 $)}\\
+	\end{align}
+	$ 4^0 $ If the function $ g :Y \to \Real $ is continuous at a point $ b \in Y $ and $ f $ is such that $ f:E\to Y $, $ f(a)=b $, and $ f $ is continuous at $ a $, then the composite function $ (g \circ f)(x) $ is defined on $ E $ and continuous at $ a $.
+\end{Theorem}
+\begin{Statement}
+	All algebraic polynomials, rational functions, and the composition of a finite number of continuous functions are continuous at each point of its domain of definition.
+\end{Statement}
+
+
+
 \subsection{Global Properties of Continuous Functions}
 
+\begin{Theorem}[The Bolzano-Cauchy intermediate-value theorem]
+	If a function that is continuous on a closed interval assumes values with different signs at the endpoints of the interval, then there is a point in the interval where it assumes the value $ 0$.
+	\begin{equation}
+		(f \in C[a,b]\land f(a) \cdot f(b)<0)\Rightarrow\exists c \in [a,b](f(c)=0) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	Divide the interval $ [a,b] $ in half where the point of division is the point that the function does not assume the value $ 0 $ and apply the nested interval lemma, then find the limit of the sequence of these two endpoints for the nested intervals.
+\end{proof}
+
+\begin{Corollary}
+	If the function $ \varphi $ is continuous on an open interval and assumes values $ \varphi(a)=A $ and $ \varphi(b)=B $, then for any number $ C $ between $ A $ and $ B $, there is a point $ c $ between $ a $ and $ b $ at which $ \varphi(c)=C $.
+\end{Corollary}
+
+\begin{proof}
+	The function $ f(x)=\varphi(x)-C $ is defined and continuous on the closed interval. The intermediate-value theorem implies that $ f(x) = \varphi(c)-C =0 $, since $ f(a)\cdot f(b)=(A-C)(B-C)<0 $.
+\end{proof}
+
+\begin{Theorem}[The Weierstrass maximum-value theorem]
+	A function that is continuous on a closed interval is bounded on that interval. Moreover there is a point in the interval where the function assumes its maximum value and a point where it assumes its minimal value.
+\end{Theorem}
+\begin{proof}
+	Let $ f:E \to \Real $ be a continuous function on the closed interval $ E =[a,b] $. By the local properties of a continuous function, for any point $ x \in E $ there exists a neighborhood $ U(x) $ such that the function is bounded on $ U_E(x) $. The set of such neighborhoods forms a covering of $ [a,b] $. By the finite covering lemma, one can extract a finite system of open intervals that cover $ [a,b] $. Since the function is bounded, one can find $ m_k \leqslant f(x)\leqslant M_k $ where $ x \in U_E(x_k) $.
+	\begin{equation}
+		min\{m_1,\cdots m_n\}\leqslant f(x) \leqslant max\{M_1,\cdots, M_N\}
+	\end{equation}
+	Now let $ M = sup_{x \in E}f(x) $. Set $ f(x) <M $ and contradiction arises by considering the auxiliary function $ \frac{1}{M-f(x)} $. Similarly, one can prove that there exists a point such that $ f(x_m)=m $.
+\end{proof}
+
+\begin{Definition}
+	If from every covering of a set by open intervals one can extract a finite subcovering, the set is called \textit{compact}.
+\end{Definition}
 
 
 
