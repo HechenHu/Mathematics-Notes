@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2017 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 NOV 2017 06:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1632,366 +1632,366 @@ Underfull \hbox (badness 10000) in paragraph at lines 2098--2102
 
  []
 
-[55] [56]
+[55] [56] [57] [58] [59] [60
+
+]
  5.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2186.
+(hyperref)                removing `math shift' on input line 2273.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2186.
+(hyperref)                removing `math shift' on input line 2273.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2189.
+(hyperref)                removing `math shift' on input line 2276.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2189.
+(hyperref)                removing `math shift' on input line 2276.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2197.
+(hyperref)                removing `math shift' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\intop' on input line 2197.
+(hyperref)                removing `\intop' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ilimits@' on input line 2197.
+(hyperref)                removing `\ilimits@' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathop' on input line 2197.
+(hyperref)                removing `\mathop' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathgroup' on input line 2197.
+(hyperref)                removing `\mathgroup' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\symoperators' on input line 2197.
+(hyperref)                removing `\symoperators' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 2197.
+(hyperref)                removing `\@ifnextchar' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathop' on input line 2197.
+(hyperref)                removing `\mathop' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathgroup' on input line 2197.
+(hyperref)                removing `\mathgroup' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\symoperators' on input line 2197.
+(hyperref)                removing `\symoperators' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 2197.
+(hyperref)                removing `\@ifnextchar' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2197.
+(hyperref)                removing `math shift' on input line 2284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2198.
+(hyperref)                removing `math shift' on input line 2285.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\intop' on input line 2198.
+(hyperref)                removing `\intop' on input line 2285.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ilimits@' on input line 2198.
+(hyperref)                removing `\ilimits@' on input line 2285.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2198.
+(hyperref)                removing `math shift' on input line 2285.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57
-
-]
+ [61]
 Overfull \vbox (410.19753pt too high) has occurred while \output is active []
 
 
-[58]
+[62]
  6.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2210.
+(hyperref)                removing `math shift' on input line 2297.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2210.
+(hyperref)                removing `math shift' on input line 2297.
 
 
-Overfull \hbox (3.17332pt too wide) in paragraph at lines 2231--2231
+Overfull \hbox (3.17332pt too wide) in paragraph at lines 2318--2318
 []\T1/lmr/bx/n/12 Definition, Ex-am-ples, and Ba-sic Prop-er-ties of Im-proper
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59
+ [63
 
 ]
 Overfull \vbox (195.7083pt too high) has occurred while \output is active []
 
 
-[60]
+[64]
  7.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 2237.
+(Font)              <14.4> on input line 2324.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 2237.
+(Font)              <10> on input line 2324.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 2237.
+(Font)              <7> on input line 2324.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2237.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2237.
+(hyperref)                removing `math shift' on input line 2324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2237.
+(hyperref)                removing `superscript' on input line 2324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2238.
+(hyperref)                removing `math shift' on input line 2324.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2238.
+(hyperref)                removing `math shift' on input line 2325.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2238.
+(hyperref)                removing `superscript' on input line 2325.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2239.
+(hyperref)                removing `math shift' on input line 2325.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2239.
+(hyperref)                removing `math shift' on input line 2326.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2239.
+(hyperref)                removing `superscript' on input line 2326.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2240.
+(hyperref)                removing `math shift' on input line 2326.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2240.
+(hyperref)                removing `math shift' on input line 2327.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2240.
+(hyperref)                removing `superscript' on input line 2327.
 
-[61
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2327.
+
+[65
 
 ]
 Overfull \hbox (58.72609pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 62  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
+\T1/lmr/m/n/10.95 66  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
 EIR LIMITS AND CONTINUITY
  []
 
-[62
+[66
 
 ]
  8.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2249.
+(hyperref)                removing `math shift' on input line 2336.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2249.
+(hyperref)                removing `superscript' on input line 2336.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2249.
+(hyperref)                removing `math shift' on input line 2336.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2250.
+(hyperref)                removing `math shift' on input line 2337.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2250.
+(hyperref)                removing `superscript' on input line 2337.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2250.
+(hyperref)                removing `math shift' on input line 2337.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2251.
+(hyperref)                removing `math shift' on input line 2338.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2251.
+(hyperref)                removing `superscript' on input line 2338.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\to' on input line 2251.
+(hyperref)                removing `\to' on input line 2338.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2251.
+(hyperref)                removing `superscript' on input line 2338.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2251.
+(hyperref)                removing `math shift' on input line 2338.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2252.
+(hyperref)                removing `math shift' on input line 2339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2252.
+(hyperref)                removing `superscript' on input line 2339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2252.
+(hyperref)                removing `math shift' on input line 2339.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2253.
+(hyperref)                removing `math shift' on input line 2340.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2253.
+(hyperref)                removing `superscript' on input line 2340.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2253.
+(hyperref)                removing `math shift' on input line 2340.
 
 
-Overfull \hbox (8.30588pt too wide) in paragraph at lines 2259--2259
+Overfull \hbox (8.30588pt too wide) in paragraph at lines 2346--2346
 []\T1/lmr/bx/n/12 The Dif-fer-en-tial and Par-tial Deriva-tives of a Real-Value
 d
  []
 
 
-Overfull \hbox (2.02237pt too wide) in paragraph at lines 2260--2260
+Overfull \hbox (2.02237pt too wide) in paragraph at lines 2347--2347
 []\T1/lmr/bx/n/12 Coordinate Rep-re-sen-ta-tion of the Dif-fer-en-tial of a Map
 -
  []
 
 
-Overfull \hbox (6.84607pt too wide) in paragraph at lines 2272--2272
+Overfull \hbox (6.84607pt too wide) in paragraph at lines 2359--2359
 []\T1/lmr/bx/n/14.4 The Ba-sic Facts of Dif-fer-en-tial Cal-cu-lus of Real-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2283.
+(hyperref)                removing `math shift' on input line 2370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2283.
+(hyperref)                removing `superscript' on input line 2370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 2283.
+(hyperref)                removing `\<def>-command' on input line 2370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\next@' on input line 2283.
+(hyperref)                removing `\next@' on input line 2370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 2283.
+(hyperref)                removing `\<let>-command' on input line 2370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\next@' on input line 2283.
+(hyperref)                removing `\next@' on input line 2370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2283.
+(hyperref)                removing `superscript' on input line 2370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2283.
+(hyperref)                removing `math shift' on input line 2370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2292.
+(hyperref)                removing `math shift' on input line 2379.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2292.
+(hyperref)                removing `superscript' on input line 2379.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2292.
+(hyperref)                removing `math shift' on input line 2379.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2293.
+(hyperref)                removing `math shift' on input line 2380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2293.
+(hyperref)                removing `math shift' on input line 2380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2293.
+(hyperref)                removing `math shift' on input line 2380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2293.
+(hyperref)                removing `superscript' on input line 2380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2293.
+(hyperref)                removing `math shift' on input line 2380.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2301.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2388.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
+ [67]
 Overfull \vbox (623.0409pt too high) has occurred while \output is active []
 
 
 Overfull \hbox (67.69867pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 64  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNCT
+\T1/lmr/m/n/10.95 68  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNCT
 IONS OF SEVERAL VARIABLES
  []
 
-[64]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2301.
+[68]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2388.
  (./Mathematical Analysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2301.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2301.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2388.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2388.
 
 Package rerunfilecheck Info: File `"Mathematical Analysis".out' has not changed
 .
 (rerunfilecheck)             Checksum: AC5B75358CDD2042852D8B8B972B6852;13761.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2301.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2388.
  ) 
 Here is how much of TeX's memory you used:
- 8203 strings out of 492995
- 116550 string characters out of 6132704
- 215503 words of memory out of 5000000
+ 8209 strings out of 492995
+ 116604 string characters out of 6132704
+ 214503 words of memory out of 5000000
  11300 multiletter control sequences out of 15000+600000
  144793 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2027,10 +2027,10 @@ cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Mathematical Analysis.pdf" (72 pages, 594163 bytes).
+Output written on "Mathematical Analysis.pdf" (76 pages, 604071 bytes).
 PDF statistics:
- 1346 PDF objects out of 1440 (max. 8388607)
- 1234 compressed objects within 13 object streams
- 299 named destinations out of 1000 (max. 500000)
+ 1367 PDF objects out of 1440 (max. 8388607)
+ 1251 compressed objects within 13 object streams
+ 305 named destinations out of 1000 (max. 500000)
  1190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

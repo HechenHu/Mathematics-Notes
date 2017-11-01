@@ -2138,15 +2138,102 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 \begin{proof}
 	Let $ f:E \to \Real $ be a continuous function on the closed interval $ E =[a,b] $. By the local properties of a continuous function, for any point $ x \in E $ there exists a neighborhood $ U(x) $ such that the function is bounded on $ U_E(x) $. The set of such neighborhoods forms a covering of $ [a,b] $. By the finite covering lemma, one can extract a finite system of open intervals that cover $ [a,b] $. Since the function is bounded, one can find $ m_k \leqslant f(x)\leqslant M_k $ where $ x \in U_E(x_k) $.
 	\begin{equation}
-		min\{m_1,\cdots m_n\}\leqslant f(x) \leqslant max\{M_1,\cdots, M_N\}
+		min\{m_1,\cdots m_n\}\leqslant f(x) \leqslant max\{M_1,\cdots, M_N\} \nonumber
 	\end{equation}
-	Now let $ M = sup_{x \in E}f(x) $. Set $ f(x) <M $ and contradiction arises by considering the auxiliary function $ \frac{1}{M-f(x)} $. Similarly, one can prove that there exists a point such that $ f(x_m)=m $.
+	Now let $ M = sup_{x \in E}f(x) $. Set $ f(x) <M $ and contradiction arises by considering the auxiliary function $ \frac{1}{M-f(x)} $, which must be continuous by the local properties of the continuous functions. Similarly, one can prove that there exists a point such that $ f(x_m)=m $.
 \end{proof}
 
 \begin{Definition}
-	If from every covering of a set by open intervals one can extract a finite subcovering, the set is called \textit{compact}.
+	If from every covering of a set by open intervals one can extract a finite subcovering, the set is called \textit{compact}. According to the  Heine–Borel theorem, in an Euclidean space, compact means that the set is closed (contains all of its limit points) and bounded (all of its points lie in some fixed distance).
 \end{Definition}
 
+\begin{Definition}
+	A function $ f:E \to \Real $ is \textit{uniformly continuous} on a set $ E \subset \Real $ if for every $ \varepsilon>0 $ there exists $ \delta>0 $ such that $ |f(x_1)-f(x_2)|<\varepsilon $ for all points $ x_1,x_2 \in E $ such that $ |x_1-x_2|<\delta $. The following expression states the negation of the property of uniform continuity for a function:
+	\begin{align}
+		&(f:E \to \Real \text{ is not uniformly continuous } )\coloneqq \\
+		&(\exists \varepsilon>0 \forall \delta>0 \exists x_1 \in E \exists x_2 \in E(|x_1-x_2|<\delta \land |f(x_1)-f(x_2)| \geqslant \varepsilon)) \nonumber
+	\end{align}
+\end{Definition}
+
+\begin{Statement}
+	The function $ f(x) = x^2 $, which is continuous on $ \Real $, is not uniformly continuous on $ \Real $.
+\end{Statement}
+\begin{proof}
+	For all the points $ x_n^\prime = \sqrt{n+1} $ and $ x_n^{\prime\prime} =\sqrt{n}  $, where $ n \in \Natural $, $ f(x_n^\prime)-f(x_n^{\prime\prime}) = 1 $, but
+	\begin{equation}
+		\lim\limits_{n \to \infty}(\sqrt{n+1}-\sqrt{n}) = \lim\limits_{n \to \infty}\frac{1}{\sqrt{n+1}+\sqrt{n}} = 0 \nonumber
+	\end{equation}
+	so that for any $ \delta >0 $ there are points $ x_n^\prime  $ and $ x_n^{\prime\prime}  $ such that $ |x_n^\prime - x_n^{\prime\prime}|<\delta $, yet $ f(x_n^\prime)-f(x_n^{\prime\prime}) = 1 $.
+\end{proof}
+
+\begin{Statement}
+	The function $ f(x)=\sin(x^2) $, which is continuous and bounded on $ \Real $, is not uniformly continuous on $ \Real $.
+\end{Statement}
+
+\begin{Theorem}[The Cantor-Heine Theorem on Uniform Continuity]
+	A function that is continuous on a closed interval is uniformly continuous on that interval.
+\end{Theorem}
+\begin{proof}
+	Let $ f:E \to \Real $ be a given function, $ E =[a,b] $, and $ f \in C(E) $. Since $ f $ is continuous at every point, we construct a system consists of $ \delta $-neighborhoods for all points $ x \in E $ such that the oscillation of that neighborhood is less than $ \varepsilon $. Let $ U(x)=U^{\delta(x)}(x) $ and $ V(x)=U^{\delta(x)/2}(x) $. Then the open intervals $ V(x),x \in E $ cover the closed interval $ [a,b] $. By the finite covering lemma we select a finite covering $ V(x_1),\cdots ,V(x_n)$. Let $ \delta=\{\frac{1}{2}\delta(x_1),\cdots,\frac{1}{2}\delta (x_n)\} $. Since this system of open intervals covers $ E $, there exists an interval $ V(x_i) $ that contains $ x^\prime $, and $ |x^\prime - x_i|<\frac{1}{2}\delta(x_i) $. But for another point $ x^{\prime\prime}\in E $ we have
+	\begin{equation}
+		|x^{\prime\prime}-x_i| \leqslant |x^\prime -x^{\prime\prime}|+|x^\prime-x_i| < \delta + \frac{1}{2}\delta(x_i) \leqslant \delta(x_i)\nonumber
+	\end{equation}
+	Consequently $ x^\prime,x^{\prime\prime} \in E $, and we have $ |f(x^\prime)-f(x^{\prime\prime})|\leqslant \omega(f,U^{\delta(x_i)}_E(x_i))<\varepsilon $.
+\end{proof}
+
+\begin{Proposition}
+	A continuous mapping $ f:E \to \Real $ of a closed interval $ E=[a,b] $ into $ \Real $ is injective iff the function $ f $ is strictly monotonic on $ [a,b] $.
+\end{Proposition}
+\begin{proof}
+	The fact that a strictly monotonic mapping is injective is obvious. For the converse, suppose the contrary, we find three points $ x_1<x_2<x_3 $ in the interval such that $ f(x_2) $ does not lie between $ f(x_1) $ and $ f(x_3) $. Let $ f(x_2)<f(x_1)<f(x_3) $. Since $ f $ is continuous, by Bolzano-Cauchy intermediate-value theorem, there exists a point $ x_1^\prime $ in $ [x_2,x_3] $ such that $ f(x_1^\prime)=f(x_1) $. We then have $ x_1<x_1^\prime $, but this contradicts to the injectiveness of this function.
+\end{proof}
+
+\begin{Proposition}
+	Each strictly monotonic function $ f:X \to \Real $ defined on a numerical set $ X \subset \Real $ has an inverse $ f^{-1}:Y \to \Real $ defined on the set $ Y = f(X) $ of values of $ f $, and has the same kind of monotonicity on $ Y $ that $ f $ has on $ X $.
+\end{Proposition}
+\begin{proof}
+	The mapping $ f:X \to Y $ is apparently both injective and surjective. Then $ \forall y_1 \in Y \forall y_2 \in Y (f^{-1}(y_1)<f^{-1}(y_2) \Leftrightarrow y_1 < y_2) $ if $ f $ is increasing on $ X $. The case when $ f $ is decreasing can be handled similarly.
+\end{proof}
+
+\begin{Proposition}
+	The discontinuities of a function $ f:E \to \Real $ that is monotonic on the set $ E \subset \Real $ can be only discontinuities of first kind.
+\end{Proposition}
+\begin{proof}
+	Let $ a $ be the point of discontinuity. It follows that $ a $ cannot be an isolated point of $ E $(some of its neighborhoods contain no points of $ E $ but $ a $ itself), since $ U_E(a)=a $ and $ f(U_E(a))=f(a)\subset V(f(a)) $ for any neighborhood of $ f(a) $. Then $ a $ must be a limit point of one of two following sets: $ E_a^- $ and $ E_a^+ $. Suppose $ f $ is non-decreasing, then the restriction $ f|_{ E_a^-} $ is a non-decreasing function that is bounded from above. Then the limit $ \lim\limits_{E_-\ni x \to a} f|_{ E_a^-}(x)=\lim\limits_{E \ni x \to a-0}f(x)=f(a-0)$ exists. The rest of this proof is analogous.
+\end{proof}
+
+\begin{Corollary}
+	If $ a $ is a point of discontinuity of a monotonic function $ f:E \to \Real $, then at least one of the limits
+	\begin{equation}
+		\lim\limits_{E \ni x \to a-0}f(x)=f(a-0)\quad 	\lim\limits_{E \ni x \to a+0}f(x)=f(a+0) \nonumber
+	\end{equation}
+	exists, and strict inequality holds in at least one of the inequalities $ f(a-0) \leqslant f(a) \leqslant f(a+0) $ when $ f $ is non-decreasing and $ f(a-0) \geqslant f(a) \geqslant f(a+0)  $ when $ f $ is non-increasing. The function assumes no values in the open interval defined by the strict inequality. Open intervals of this kind determined by different points of discontinuity have no point in common.
+\end{Corollary}
+\begin{proof}
+	content...
+\end{proof}
+
+
+\begin{Corollary}
+	The set of points of discontinuity of a monotonic function is at most countable.
+\end{Corollary}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Proposition}[A Criterion for Continuity of a Monotonic Function]
+	A monotonic function $ f:E \to \Real $ defined on a closed interval $ E = [a,b] $ is continuous iff its set of values $ f(E) $ is the closed interval with endpoints $ f(a) $ and $ f(b) $.
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
+
+\begin{Theorem}[The Inverse Function Theorem]
+	A function $ f:X\to \Real $ that is strictly monotonic on a set $ X \subset \Real $ has an inverse $ f^{-1}:Y \to \Real $ defined on the set $ Y =f(X) $ of values of $ f $. The function $ f^{-1}:Y \to \Real $ is monotonic and has the same type of monotonicity on $ Y $ that $ f $ has on $ X $.
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
 
 
 \chapter{Differential Calculus}
