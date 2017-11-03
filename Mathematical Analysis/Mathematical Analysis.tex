@@ -2210,7 +2210,11 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	exists, and strict inequality holds in at least one of the inequalities $ f(a-0) \leqslant f(a) \leqslant f(a+0) $ when $ f $ is non-decreasing and $ f(a-0) \geqslant f(a) \geqslant f(a+0)  $ when $ f $ is non-increasing. The function assumes no values in the open interval defined by the strict inequality. Open intervals of this kind determined by different points of discontinuity have no point in common.
 \end{Corollary}
 \begin{proof}
-	content...
+	The first assertion is obvious. For the second assertion, since $ f(x) \leqslant \lim\limits_{E \ni x \to a-0}f(x)=f(a-0) $ for $ x<a \in E $, the open interval $ (f(a-0),f(a) $ defined by the strict inequality $ f(a-0)<f(a) $ contains no value of this function. It's similar for $ f(a)<f(a+0) $. Let $ a_1 $ and $ a_2 $ be two different points of discontinuity of $ f $ and assume $ a_1<a_2 $. Since the function is non-decreasing
+	\begin{equation}
+		f(a_1-0)\leqslant f(a_1)\leqslant f(a_1+0)\leqslant f(a_2-0) \leqslant f(a_2) \leqslant f(a_2+0)\nonumber
+	\end{equation}
+	It follows from this that the intervals containing no values of $ f $ and corresponding to different points of discontinuity are disjoint.
 \end{proof}
 
 
@@ -2218,21 +2222,21 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	The set of points of discontinuity of a monotonic function is at most countable.
 \end{Corollary}
 \begin{proof}
-	content...
+	The intervals are pairwise disjoint. Since they are defined by strict inequality, one can choose a rational number in each of these intervals,  so that the collection of intervals is equipollent with a subset of $ \Quoziente $.
 \end{proof}
 
 \begin{Proposition}[A Criterion for Continuity of a Monotonic Function]
 	A monotonic function $ f:E \to \Real $ defined on a closed interval $ E = [a,b] $ is continuous iff its set of values $ f(E) $ is the closed interval with endpoints $ f(a) $ and $ f(b) $.
 \end{Proposition}
 \begin{proof}
-	content...
+	If $ f $ is a continuous monotonic function, its monotonicity implies that all the values $ f $ assumes on $ [a,b] $ lie between $ f(a) $ and $ f(b) $. Now we consider the converse. Suppose there is a point of discontinuity $ c $. Then one of the open intervals $ (f(c-0),f(c) $ and $ (f(c),f(c+0) $ contains no value of $ f $, but this interval is contained between $ f(a) $ and $ f(b) $ because of its monotonicity.
 \end{proof}
 
 \begin{Theorem}[The Inverse Function Theorem]
 	A function $ f:X\to \Real $ that is strictly monotonic on a set $ X \subset \Real $ has an inverse $ f^{-1}:Y \to \Real $ defined on the set $ Y =f(X) $ of values of $ f $. The function $ f^{-1}:Y \to \Real $ is monotonic and has the same type of monotonicity on $ Y $ that $ f $ has on $ X $.
 \end{Theorem}
 \begin{proof}
-	content...
+	This can be easily proved with our last proposition.
 \end{proof}
 
 
