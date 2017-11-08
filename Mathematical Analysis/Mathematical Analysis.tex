@@ -20,6 +20,7 @@
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{array}
+\usepackage{tikz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter quote at the start of chapter        %
@@ -1658,7 +1659,11 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 	\textbf{b)} If the relations $ f(x) \leqslant g(x) \leqslant h(x) $ hold for the functions $ f : E \to \Real $, $ g: E \to \Real $ and $ h:E \to \Real $, and if $  \lim\limits_{E \ni x \to a}f(x)= \lim\limits_{E \ni x \to a}h(x)=C $, then the limit of $ g(x) $ exists as $ E \ni x \to a $, and $ \lim\limits_{E \ni x \to a}g(x)=C $.
 \end{Theorem}
 \begin{proof}
-	content...
+	\textbf{a)} Choose a number $ C $ such that $ A<C<B $. By definition of limit, we find deleted neighborhoods $ \mathring{U}^\prime_E(a) $ and $ \mathring{U}^{\prime\prime}_E(a)  $ such that $ |f(x)-A|<C-A $ for $ x \in \mathring{U}^\prime_E(a)  $ and $ |g(x)-B|<B-C$ for $ x \in  \mathring{U}^{\prime\prime}_E(a)$. Then at any point of a deleted neighborhood $ \mathring{U}_E(a) $ contained in $ \mathring{U}^\prime_E(a) \cup  \mathring{U}^{\prime\prime}_E(a)  $, we have 
+	\begin{equation}
+		f(x)<A+(C-A) =C = B-(B-C)<g(x) \nonumber
+	\end{equation}
+	\textbf{b)} This proof is similar.
 \end{proof}
 
 \begin{Corollary}
@@ -2243,9 +2248,138 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 \chapter{Differential Calculus}
 \section{Differentiable Functions}
 \subsection{Functions Differentiable at a Point}
-\subsection{The Tangent Line; Geometric Meaning of the Derivative and Differential}
-\subsection{Examples}
+\begin{Definition}
+	A function $ f:E \to \Real $ defined on a set $ E \subset \Real $ is \textit{differentiable} at a point $ a \in E $ that is a limit point of $ E $ if there exists a linear function $ A \cdot (x-a) $ of the increment $ x-a $ of the argument such that $ f(x)-f(a) $ can be represented as
+	\begin{equation}
+		f(x)-f(a) = A \cdot (x-a)+o(x-a) \text{ as }x\to a, x \in E \nonumber
+	\end{equation}
+	In other words, a function is differentiable at a point $ a $ if the change in its values in a neighborhood of the point in question is linear up to a correction that is infinitesimal compared with the magnitude of the displacement $ x-a $ from the point $ a $.
+\end{Definition}
 
+\begin{Definition}
+	The linear function $ A \cdot (x-a) $ is called the \textit{differential} of the function $ f $ at $ a $. The differential of a function at a point is uniquely determined; for it follows from our former definition that 
+	\begin{equation}
+		\lim\limits_{E \ni x \to a}\frac{f(x)-f(a)}{x-a}=\lim\limits_{E \ni x \to a}(A+\frac{o(x-a)}{x-a}) =A\nonumber
+	\end{equation}
+	The uniqueness of $ A $ follows from the uniqueness of the limit.
+\end{Definition}
+\begin{Definition}
+	The number
+	\begin{equation}
+			f^\prime(a)=\lim\limits_{E \ni x \to a}\frac{f(x)-f(a)}{x-a}\nonumber
+	\end{equation}
+	is called the \textit{derivative} of the function $ f $ at $ a $.
+\end{Definition}
+Differentiability of a function at a point is equivalent to the existence of its derivative at the same point.
+
+\begin{Definition}
+	A function $ f:E\to \Real $ defined on a set $ E \subset \Real $ is differentiable at a point $ x\in E $ that is a limit point of $ E $ if
+	\begin{equation}
+		f(x+h)-f(x)=A(x)h+\alpha(x,h) \nonumber
+	\end{equation}
+	where $ h \mapsto A(x)h $ is a linear function in $ f $ and $ \alpha(x,h) =o(h)$ as $ h \to 0, x+h \in E $. \newpara
+	The quantities
+	\begin{equation}
+		\Delta x(h) \coloneqq (x+h)-x = h \nonumber
+	\end{equation}
+	and 
+	\begin{equation}
+		\Delta f (x,h) \coloneqq f(x+h) -f(x)\nonumber
+	\end{equation}
+	are called respectively the \textit{increment of the argument} and the \textit{increment of the function}.
+\end{Definition}
+
+\begin{Definition}
+	The function $ h \mapsto A(x)h $, which is a linear in $ h $, is called the differential of the function $ f : E \to \Real $ at the point $ x \in E $ and is denoted $ d f(x)  $ or $ D f(x) $. Thus, $ d f(x)(h) = A(x)h $. From the definitions above we have
+	\begin{equation}
+		\Delta f(x,h) - d f(x)(h) = \alpha(x,h)\nonumber
+	\end{equation}
+	and $ \alpha(x,h) = o(h) $ as $ h \to 0,x+h \in E $. For this reason, we say that the differential is the \textit{(principal) linear part of the increment of the function}.
+	\begin{equation}
+		A(x) = f^\prime (x)=\lim\limits_{h \to 0, x+h,x \in E}\frac{f(x+h)-f(x)}{h} \nonumber
+	\end{equation}
+	The derivative is frequently denoted by the symbol $ \frac{d f(x)}{d x} $.
+\end{Definition}
+
+
+
+
+\subsection{The Tangent Line; Geometric Meaning of the Derivative and Differential}
+
+\begin{Proposition}
+	A function $ f:E \to \Real $ that is continuous a t a point $ x_0 \in E $ that is a limit point of $ E \subset \Real $ admits a linear approximation iff it is differentiable at the point.
+\end{Proposition}
+\begin{Definition}
+	If a function $ f:E \to \Real $ is defined on a set $ E \subset \Real $ and differentiable at a point $ x_0 \in E $, the line defined by $ y-f(x_0)=f^\prime(x_0)(x-x_0) $ that passing through $ (x_0,f(x_0)) $ and having slope $ f^\prime(x_0) $ is called the \textit{tangent} to the graph of this function at the point $ (x_0,f(x_0)) $.
+\end{Definition}
+\begin{Definition}
+	If the mappings $ f : E \to \Real $ and $ g:E \to \Real $ are continuous at a point $ x_0 \in E $ that is a limit point of $ E $ and $ f(x)-g(x)=o((x-x_0)^n) $ as $ x \to x_0,x \in E $, we say that $ f $ and $ g $ have \textit{$ n $th order contact} at $ x_0 $ (more precisely, contact \textit{of order at least $ n $}). For $ n=1 $ we say that the mappings $ f $ and $ g $ are tangent to each other at $ x_0 $.
+\end{Definition}
+
+\subsection{Examples}
+\begin{Statement}
+	If $ f(t)= r \cos \omega t $, then $ f^\prime(t) =- r \omega \sin \omega t$.
+\end{Statement}
+\begin{proof}
+	\begin{align}
+		\lim\limits_{h \to 0} \frac{r \cos \omega (t+h)- r \cos \omega t}{h} &=r \lim\limits_{h \to 0}\frac{-2 \sin (\frac{\omega h}{2})\sin \omega (t+ \frac{h}{2})}{h} \\
+		&= - r \omega \lim\limits_{h \to 0} \sin \omega (t+\frac{h}{2}) \cdot \lim\limits_{h \to 0}\frac{\sin (\frac{\omega h}{2})}{(\frac{\omega h}{2})} \\
+		&= -r \omega \sin \omega t
+	\end{align}
+\end{proof}
+\begin{Statement}
+	If $ f(t)=r \sin \omega t $, then $ f^\prime(t)=r \omega \cos \omega t $.
+\end{Statement}
+\begin{proof}
+	The proof is analogous.
+\end{proof}
+By the definition of differentiability of a function $ f:E \to \Real $ at a point $ x_0 \in E $, we have
+\begin{equation}
+	f(x)-f(x_0) = A(x_0)(x-x_0) + o(x-x_0) \text{ as } x\to x_0, x \in E \nonumber
+\end{equation}
+Since the right-hand side of this equality tends to zero as $ x \to x_0,x\in E $, it follows that $ \lim\limits_{E \ni x \to x_0} f(x)=f(x_0)$, so that a function that is differentiable at a point is necessarily continuous at that point. However, the converse is not always true. It's easy to see that although $ f(x)= |x| $ is continuous at $ 0 $, it's not differentiable at $ 0 $.
+\begin{Statement}
+	$ e^{x+h}-e^x = e^x h + o(h) $ as $ h \to 0 $. Thus $ \frac{d e^x}{d x}=e^x $.
+\end{Statement}
+\begin{proof}
+	\begin{equation}
+		e^{x+h}-e^x = e^x(e^h-1)=e^x(h+o(h)) = e^x h + o(h) \nonumber
+	\end{equation}
+	Here we have used the formula $ e^h -1 = h+ o(h)$ obtained in Section 3.2.4.
+\end{proof}
+\begin{Statement}
+	If $ a>0 $, then $ a^{x+h}-a^x=a^h(\ln a)h + o(h) $ as $ h \to 0 $. Thus $ d a^x = a^x (\ln a)d x $.
+\end{Statement}
+\begin{proof}
+	\begin{align}
+		a^{x+h}-a^x&=a^x(a^h-1)=a^x(e^{h \ln a}-1)\\
+		&=a^x(h \ln a+ o(h \ln a)) = a^x(\ln a) h + o(h) \text{ as } h \to 0
+	\end{align}
+\end{proof}
+
+\begin{Statement}
+	If $ x \neq 0 $, then $ \ln|x+h|-\ln |x| = \frac{1}{x}h+o(h) $ as $ h \to 0 $. Thus $ d \ln |x| = \frac{1}{x}d x $.
+\end{Statement}
+\begin{proof}
+	\begin{equation}
+	\ln|x+h|-\ln |x| = \ln|1+\frac{h}{x}|	\nonumber
+	\end{equation}
+	For $ |h|<|x| $ we have $ |1+\frac{h}{x}| = 1+ \frac{h}{x} $, and so for sufficiently small value of $ h $ we can write
+	\begin{equation}
+		\ln|x+h| - \ln |x| = \ln (a+\frac{h}{x}) = \frac{h}{x} + o(\frac{h}{x}) = \frac{1}{x}h + o(h) \nonumber
+	\end{equation}
+	as $ h \to 0 $. Here we have used the relation $ \ln(1+t) = t+o(t) $ as $ t \to 0 $, shown in Section 3.2.4.
+\end{proof}
+
+\begin{Statement}
+	If $ x \neq 0 $ and $ 0<a \neq 1 $, then $ \log_a|x+h| - \log_a|x| = \frac{1}{x \ln a}h + o(h) $ as $ h \to 0 $. Thus, $ d \log_a|x| = \frac{1}{x \ln a}d x $.
+\end{Statement}
+\begin{proof}
+	\begin{align}
+		\log_a|x+h| - \log_a|x| &= \log_a |1 + \frac{h}{x}| = \log_a(1+ \frac{h}{x}) \\
+		&= \frac{1}{\ln a} \ln(1+\frac{h}{x}) = \frac{1}{\ln a}(\frac{h}{x}+o(\frac{h}{x})) = \frac{1}{x \ln a}h + o(h)
+	\end{align}
+\end{proof}
 
 
 
