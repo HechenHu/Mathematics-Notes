@@ -2461,7 +2461,106 @@ Since the right-hand side of this equality tends to zero as $ x \to x_0,x\in E $
 \chapter{Functions of Several Variables: Their Limits and Continuity}
 \section{The Space $ \Real^m $ and the Most Important Classes of Its Subsets}
 \subsection{The Set $ \Real^m $ and the Distance in It}
+\begin{Definition}
+	The function $ d: \Real^m \times \Real^m \to \Real $
+	\begin{equation}
+		d(x_1,x_2)= \sqrt{\sum_{i=1}^{m}(x^i_1-x^i_2)^2} \nonumber
+	\end{equation}
+	is called the \textit{metric} or \textit{distance} of the set $ \Real^m $. It has the following properties: \\
+	\textbf{a)} $ d(x_1,x_2)\geqslant 0 $;\\
+	\textbf{b)} $ (d(x_1,x_2)=0)\Leftrightarrow (x_1=x_2) $;\\
+	\textbf{c)} $ d(x_1,x_2)=d(x_2,x_1) $;\\
+	\textbf{d)} $ d(x_1,x_3)\leqslant d(x_1,x_2)+d(x_2,x_3) $.\\
+	The last inequality (called, because of geometric analogies, the \textit{triangle inequality} ) is a special case of Minkowski's inequality(see Section 5.4.2).
+\end{Definition}
+Any set with a fixed metric on it is called a \textit{metric space}. \newpara
+For $ i \in \{1,\cdots, m\} $ in $ \Real^m $
+\begin{equation}
+	|x^i_1-x^i_2|\leqslant d(x_1,x_2)\leqslant \sqrt{m} \max_{1 \leqslant i \leqslant m} |x^i_1-x^i_2| \nonumber
+\end{equation}
+that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff the corresponding coordinates of these points are close together.
 \subsection{Open and Closed Sets in $ \Real^m $}
+\begin{Definition}
+	For $ \delta > 0 $ the set
+	\begin{equation}
+		B(a,\delta) = \{x \in \Real^m | d(a,x)<\delta \} \nonumber 
+	\end{equation}
+	is called the \textit{ball with center $ a \in \Real^m $ of radius $ \delta $} or the \textit{$ \delta $-neighborhood} of the point $ a \in \Real^m $.
+\end{Definition}
+\begin{Definition}
+	A set $ G \subset \Real^m $ is open in $ \Real^m $ if for every point $ x \in G $ there is a ball $ B(x,\delta) $ such that $ B(x,\delta) \subset G$.
+\end{Definition}
+\begin{Statement}
+	$ \Real^m $ and $ \varnothing $ are open sets in $ \Real^m $.
+\end{Statement}
+\begin{Statement}
+	A ball $ B(a,r) $ is \textit{open} in $ \Real^m $. 
+\end{Statement}
+\begin{proof}
+	If $ x \in B(a,r) $, that is, $ d(a,x)<r $, then for $ 0<\delta<r-d(a,x) $, we have $ B(x,\delta) \subset B(a,r) $, since 
+	\begin{align}
+		(\xi \in B(x,\delta)) &\Rightarrow (d(x,\xi)<\delta) \\
+		&\Rightarrow (d(a,\xi) \leqslant d(a,x)+d(x,\xi)<d(a,x)+r-d(a,x)=r)
+	\end{align}
+\end{proof}
+\begin{Statement}
+	A set $ G = \{x\in \Real^m | d(a,x)>r\} $ is open.
+\end{Statement}
+\begin{Definition}
+	The set $ F \subset \Real^m $ is \textit{closed} in $ \Real^m $ if its complement $ G = \Real^m \setminus F $ is open in $ \Real^m $. For example, the set $ \bar{B}(a,r)=\{x\in\Real^m | d(a,x)\leqslant r\} , r\geqslant0$ is closed, and is called the \textit{closed ball with center $ a $ of radius $ r $}.
+\end{Definition}
+\begin{Proposition}
+	\textbf{a)} The union $ \bigcup_{\alpha \in A}G_\alpha $ of the sets of any system $ \{G_\alpha, \alpha \in A\} $ of open sets in $ \Real^m $ is open.\\
+	\textbf{b)} The intersection $ \bigcap^n_{i=1} G_i  $ of a finite number of open sets in $ \Real^m $ is an open set. \\
+	\textbf{a$ ^\prime $)} The intersection $ \bigcap_{\alpha \in A}F_\alpha $ of the sets of any system $ \{F_\alpha,\alpha \in A\} $ of closed sets $ F_\alpha $ in $ \Real^m $ is closed. \\
+	\textbf{b$ ^\prime $)} The union $ \bigcap^n_{i=1}F_i $ of a finite number of closed sets in $ \Real^m $ is a closed set. \\
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{Statement}
+	The set $ S(a,r)=\{x \in \Real^m | d(a,x)=r \} $, $ r \geqslant 0 $, is called the \textit{sphere of radius $ r $ with center $ a \in \Real^m $}. By the proposition just proved, the sphere $ S(a,r) $ is closed.
+\end{Statement}
+
+\begin{Definition}
+	An open set in $ \Real^m $ containing a given point is called a \textit{neighborhood} of that point in $ \Real^m $.
+\end{Definition}
+\begin{Definition}
+	In relation to a set $ E \subset \Real^m $ a point $ x \in \Real^m $ is \\
+	\textit{an interior point} if some neighborhood of it is contained in $ E $ ;\\
+	\textit{an exterior point} if it is an interior point of the complement of $ E $ in $ \Real^m $;\\
+	\textit{a boundary point} if it is neither an interior point nor an exterior point.
+\end{Definition}
+\begin{Statement}
+	The sphere $ S(a,r) $, $ r > 0 $ is the set of boundary points of both the open ball $ B(a,r) $ and the closed ball $ \bar{B}(a,r) $.
+\end{Statement}
+\begin{Statement}
+	A point $ a \in \Real^m $ is a boundary point of the set $ \Real^m \setminus a $, which has no exterior points.
+\end{Statement}
+\begin{Statement}
+	All points of the sphere $ S(a,r) $ are boundary points of itl regarded as a subset of $ \Real^m $, the sphere has no interior points.
+\end{Statement}
+\begin{Definition}
+	A point $ a \in \Real^m $ is a limit point of the set $ E \subset \Real^m $ if for any neighborhood $ O(a) $ of a the intersection $ E \cap O(a) $ is an infinite set.
+\end{Definition}
+\begin{Definition}
+	The union of a set $ E $ and all its limit points in $ \Real^m $ is the closure of $ E $ in $ \Real^m $ and usually denoted $ \bar{E} $.
+\end{Definition}
+\begin{Statement}
+	The set $ \bar{B}(a,r) = B(a,r)\cap S(a,r) $ is the set of limit points of the open ball $ B(a,r) $; that is why $ \bar{B}(a,r) $ is called a closed ball.
+\end{Statement}
+\begin{Statement}
+	$ \bar{S}(a,r)=S(a,r) $
+\end{Statement}
+\begin{Proposition}
+	$ (F \text{ is closed in }\Real^m) \Leftrightarrow (F = \bar{F} \text{ in }\Real^m) $. That is, $ F $ is closed in $ \Real^m $ iff it contains all its limit points.
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
+
+
+
 \subsection{Compact Sets in $ \Real^m $}
 
 
