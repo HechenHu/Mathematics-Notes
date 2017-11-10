@@ -47,7 +47,7 @@
 \newtheorem{Theorem}{Theorem}[section]%Theorem
 \newtheorem*{Corollary}{Corollary} %Corollary
 \newtheorem*{Lemma}{Lemma}%Lemma
-\newtheorem*{Statement}{Statement} % Statement
+\newtheorem{Example}{\textit{Example}}[chapter] % Statement
 \theoremstyle{definition}
 \newtheorem*{Definition}{Definition} %Definition
 \newtheorem*{Proposition}{Proposition}%Proposition
@@ -508,13 +508,13 @@ has the unique solution
 	However, not every set, not even every bounded set, has a maximal or minimal element(e.g. $ X = \{x\in R|0\leqslant x<1\} $).
 \end{Definition}
 \begin{Definition}
-	The smallest number that bounds a set $ X\subset \Real $ from above is called the \textit{least upper bound}(or the \textit{eact upper bound}) of $ X $ and denoted $ sup X $("the supremum of $ X $").
+	The smallest number that bounds a set $ X\subset \Real $ from above is called the \textit{least upper bound}(or the \textit{eact upper bound}) of $ X $ and denoted $ \sup X $("the supremum of $ X $").
 	\begin{equation}
-	(s=sup X)\coloneqq \forall x\in X((x\leqslant s)\land(\forall s^\prime<s\exists x^\prime \in X (s^\prime < x^\prime)))\nonumber
+	(s=\sup X)\coloneqq \forall x\in X((x\leqslant s)\land(\forall s^\prime<s\exists x^\prime \in X (s^\prime < x^\prime)))\nonumber
 	\end{equation}
-	Similarly, the greatest lower bound of $ X $, $ inf X $("the infimum of $ X $) can be defined as:
+	Similarly, the greatest lower bound of $ X $, $ \inf X $("the infimum of $ X $) can be defined as:
 	\begin{equation}
-	(i=inf X)\coloneqq \forall x\in X((i\leqslant x)\land(\forall i^\prime>i\exists x^\prime \in X (x^\prime < i^\prime)))\nonumber
+	(i=\inf X)\coloneqq \forall x\in X((i\leqslant x)\land(\forall i^\prime>i\exists x^\prime \in X (x^\prime < i^\prime)))\nonumber
 	\end{equation}
 \end{Definition}\textbf{}
 \begin{Lemma}
@@ -522,11 +522,11 @@ has the unique solution
 \end{Lemma}
 \begin{proof}
 	Since we already know that the minimal element of a set of numbers is unique(the relation $ \leqslant $ is Anti-Symmetric), we need only verify that the least upper bound exists.\\
-	Let $ X\subset \Real $ be a given set and $ Y = \{y\in \Real|\forall x\in X (x \leqslant y)\} $. We know that $ X \neq \varnothing $ and $ Y \neq \varnothing $. Then, by the completeness axiom there exists $ c \in R $ such that $ \forall x \in X \forall y \in Y (x\leqslant c \leqslant y) $. Because $ c $ is  greater than all the elements in $ X $ and smaller than all the elements in $ Y $, we can see that $ c \in Y$ and $ c = min Y $. $ \forall c^\prime < c $ we have $ c^\prime \in X $, and according to the completeness axiom of real numbers, there exists some $ x^\prime \in X$ such that $ c^\prime \leqslant x^\prime \leqslant c $. Thus $ c $ is $ sup X $.
+	Let $ X\subset \Real $ be a given set and $ Y = \{y\in \Real|\forall x\in X (x \leqslant y)\} $. We know that $ X \neq \varnothing $ and $ Y \neq \varnothing $. Then, by the completeness axiom there exists $ c \in R $ such that $ \forall x \in X \forall y \in Y (x\leqslant c \leqslant y) $. Because $ c $ is  greater than all the elements in $ X $ and smaller than all the elements in $ Y $, we can see that $ c \in Y$ and $ c = min Y $. $ \forall c^\prime < c $ we have $ c^\prime \in X $, and according to the completeness axiom of real numbers, there exists some $ x^\prime \in X$ such that $ c^\prime \leqslant x^\prime \leqslant c $. Thus $ c $ is $ \sup X $.
 \end{proof}
 The existence of greatest lower bound is analogous with the existence of least upper bound, so
 \begin{Lemma}
-	($ X $ is nonempty and bounded below)$ \Rightarrow(\exists! inf X) $.
+	($ X $ is nonempty and bounded below)$ \Rightarrow(\exists! \inf X) $.
 \end{Lemma}
 
 
@@ -599,9 +599,9 @@ The addition and multiplication of integers do not lead outside of $ \Zahlen $. 
 \begin{Definition}
 	The real numbers that are not rational are called \textit{irrational}. The set of irrational numbers is $ \Real \setminus \Quoziente $.
 \end{Definition}
-\begin{Statement}
+\begin{Example}
 	$ \sqrt{2} $ is irrational.
-\end{Statement}
+\end{Example}
 
 \begin{proof}
 	Let $ X $ and $ Y $ be the sets of positive real numbers such that $ \forall x \in X (x^2<2) $ and $ \forall y \in Y (2<y^2) $. $ X \neq \varnothing $ and $ Y \neq \varnothing $, since $ 1 \in X $ and $ 2 \in Y $. \newpara
@@ -819,7 +819,7 @@ A subset of $ S $ that is also a system of sets will be called a \textit{subsyst
 \end{Lemma}
 \begin{proof}
 	Let $ S = \{U\} $ be a system of open intervals $ U $ that cover the closed interval $ [a,b] = I_1 $. If the interval $ I_1 $ could not be covered by a finite set of intervals of the system $ S $, then, dividing $ I_1 $ into two halves, we could find that at least one of the two halves, which we denoted by $ I_2 $, does not admit a finite covering. We now repeat this procedure with the interval $ I_2 $, and so on. \newpara
-	In this way a nested sequence $ I_1 \supset I_2 \supset \cdots \supset I_n \supset \cdots $ of closed intervals arises,none of which admit a covering by a finite subsystem of $ S $. Since the length of the interval $ |I_n|=|I_1|\cdot 2^{-n} $, the sequence $ \{I_n\} $ contains intervals of arbitrarily small length(The second part of \textbf{Cauchy-Contor Principle}), and thus there exists a unique point $ c $ belonging to all the intervals $ I_n,n\in \Natural $. Since $ c \in I_1 = [a,b] $, there exists an open interval $ (\alpha, \beta) = U \in S $ containing $ c $. Let $ \varepsilon = min \{c-\alpha, \beta - c\} $. In the sequence just constructed, we find an interval $ I_n $ such that $ |I_n|<\varepsilon $. Since $ c \in I_n $ and $ |I_n|<\varepsilon $, we conclude that $ I_n \subset (\alpha, \beta) $. But this contradicts the fact that the interval $ I_n $ cannot be covered by a finite set of intervals from the system.
+	In this way a nested sequence $ I_1 \\supset I_2 \\supset \cdots \\supset I_n \\supset \cdots $ of closed intervals arises,none of which admit a covering by a finite subsystem of $ S $. Since the length of the interval $ |I_n|=|I_1|\cdot 2^{-n} $, the sequence $ \{I_n\} $ contains intervals of arbitrarily small length(The second part of \textbf{Cauchy-Contor Principle}), and thus there exists a unique point $ c $ belonging to all the intervals $ I_n,n\in \Natural $. Since $ c \in I_1 = [a,b] $, there exists an open interval $ (\alpha, \beta) = U \in S $ containing $ c $. Let $ \varepsilon = min \{c-\alpha, \beta - c\} $. In the sequence just constructed, we find an interval $ I_n $ such that $ |I_n|<\varepsilon $. Since $ c \in I_n $ and $ |I_n|<\varepsilon $, we conclude that $ I_n \subset (\alpha, \beta) $. But this contradicts the fact that the interval $ I_n $ cannot be covered by a finite set of intervals from the system.
 \end{proof}
 
 
@@ -940,9 +940,9 @@ The cardinality of $ \Real $ is often denotes as $ \mathfrak{c} $.
 \end{Corollary}
 
 \subsection{Miscellaneous}
-\begin{Statement}
+\begin{Example}
 	The cardinality of $ P(X) $, which is the power set of $ X $, satisfy that if $ card X = n $, $ card P(X) = 2^{n} $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	We can use the principle of induction to complete the proof. If $ n= 1 $, $ X = \{x\} $, then $ P(X) =\{\varnothing, X\} $, then $ card P(X) = 2^{1} $. \newpara
 	Now if $ n \in \Natural \Rightarrow card P(X) = 2^{n}  $, let $ X $ be a set that has $ x $ as one of its elements and has the cardinality of $ n+1 $. Therefore $ Y = X \setminus \{x\} $ has $ n $ elements. We can divide $ P(X) $ into two parts: the ones containing $ x $ and the ones don't. If $ x\in A \subset P(X) $, then $ A \setminus \{x\} \subset P(Y) $ and vice versa. Thus we can set up a bijection between $ P(Y) $ and the elements in $ P(X) $ that contains $ x $. Similarly, we can clearly see that a bijection between the subsets of $ P(X) $ that does not contains $ x $ and $ P(Y) $. Thus $ card P(X) = 2^n + 2^n = 2^{n+1} $, and we complete the proof.
@@ -1099,7 +1099,7 @@ Suppose $ \lim\limits_{n \to \infty}x_n = \lim\limits_{n \to \infty}z_n=A $. Giv
 \end{Theorem}
 \begin{proof}
 	First, we prove that a convergent sequence is a Cauchy sequence. If $ \lim\limits_{n \to \infty}x_n = A $, we set $ |x_n-A| < \frac{\varepsilon}{2} $, and we obtain that $ |x_m-x_n| \leqslant |x_m -A|+ |x_n - A| < \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon $ for $ m,n>N $ (imagine two points on a line, their distance to a fixed point is greater or equal to the distance between these two points ). \newpara
-	Next, let $ \{x_k\} $ be a Cauchy sequence. We find $ |x_m-x_k|<\frac{\varepsilon}{3} $ for $ m,k\geqslant N $. Fix $ m = N $, we can see that $ x_N - \frac{\varepsilon}{3}<x_k<x_N+\frac{\varepsilon}{3} $, and thus this sequence is bounded. Then we set $ a_n\coloneqq inf_{k\geqslant n}x_k $ and $ b_n\coloneqq sup_{k\geqslant n}x_k $. Apply the \textbf{Nested Interval Lemma} to the close intervals $ [a_n,b_n] $ and denote that point $ A $. The inequality can be derived from the following inequalities:
+	Next, let $ \{x_k\} $ be a Cauchy sequence. We find $ |x_m-x_k|<\frac{\varepsilon}{3} $ for $ m,k\geqslant N $. Fix $ m = N $, we can see that $ x_N - \frac{\varepsilon}{3}<x_k<x_N+\frac{\varepsilon}{3} $, and thus this sequence is bounded. Then we set $ a_n\coloneqq inf_{k\geqslant n}x_k $ and $ b_n\coloneqq \sup_{k\geqslant n}x_k $. Apply the \textbf{Nested Interval Lemma} to the close intervals $ [a_n,b_n] $ and denote that point $ A $. The inequality can be derived from the following inequalities:
 	\begin{align}
 		a_n\leqslant x_k &\leqslant b_k \nonumber \\
 		|A-x_k|&\leqslant b_n - a_n \nonumber \\
@@ -1153,9 +1153,9 @@ Analogouly one can prove that in order for a nonincreasing sequence to have a li
 
 
 
-\begin{Statement}
+\begin{Example}
 	$ \forall q \in \Real \forall n\in  \Natural (\lim\limits_{n \to \infty} \frac{q^n}{n!} = 0) $.
-\end{Statement}
+\end{Example}
 
 \begin{proof}
 	If $ q = 0 $, the assertion is obvious. Since $ |\frac{q^n}{n!}| =\frac{|q|^n}{n!}  $, let's assume $ q >0 $. Use the same technique as we used in proving $  \lim\limits_{n \to \infty} \frac{n}{q^n} =0 $. First prove that $ 0<\frac{1}{n+1} <1 $ and $ x_{n+1}<x_n $ for all $ n >N \in \Natural $, thus this sequence is monotonically decreasing from $ N $. Let the limit be $ x $, one will have:
@@ -1181,9 +1181,9 @@ Incidentaly, strict inequality holds if $ \alpha \neq 0 $ and $ n >1 $.
 
 
 
-\begin{Statement}
+\begin{Example}
 	The limit $ \lim\limits_{n \to \infty}(1+\frac{1}{n})^n $ exists.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	Let $ y_n = (1+\frac{1}{n})^{n+1} $ and $ n \geqslant 2 $. Use Bernoulli's inequality, we find that $ \frac{y_{n-1}}{y_n}>1 $, and since all terms are positive, this sequence is bounded, monotonically decreasing and hence, has a limit. Then 
 	\begin{equation}
@@ -1225,13 +1225,13 @@ Incidentaly, strict inequality holds if $ \alpha \neq 0 $ and $ n >1 $.
 Let $ \{x_k \} $ be an arbitrary sequence of real numbers that is bounded below. We can consider the sequence $ i_n = inf_{k \geqslant n} x_k $. The sequence $ \{i_n \} $ has a finite limit $ \lim\limits_{n \to \infty} i_n = l $, or $ i_n \to +\infty $, since $ \forall n \in \Natural (i_n \leqslant i_{n+1} )$.
 
 \begin{Definition}
-	The number $ l = \lim\limits_{n \to \infty}inf_{k \geqslant n}x_k $ is called the \textit{inferior} limit of the sequence $ \{x_k\} $ and denoted $  \varliminf_{k \to \infty}x_k $. If $ i_n\to + \infty $, it is said that the inferior limit of the sequence equals positive infinity, and we write $ \varliminf_{k \to \infty}x_k = + \infty $. If the original sequence $ \{x_k\} $ is not bounded below, then we shall have $ i_n = inf_{k \geqslant n}x_k = - \infty $ and write $ \varliminf_{k \to \infty} x_k = -\infty $.
+	The number $ l = \lim\limits_{n \to \infty}\inf_{k \geqslant n}x_k $ is called the \textit{inferior} limit of the sequence $ \{x_k\} $ and denoted $  \varliminf_{k \to \infty}x_k $. If $ i_n\to + \infty $, it is said that the inferior limit of the sequence equals positive infinity, and we write $ \varliminf_{k \to \infty}x_k = + \infty $. If the original sequence $ \{x_k\} $ is not bounded below, then we shall have $ i_n = inf_{k \geqslant n}x_k = - \infty $ and write $ \varliminf_{k \to \infty} x_k = -\infty $.
 	\begin{equation}
-		\varliminf_{k \to \infty}x_k \coloneqq \lim\limits_{n \to \infty} inf_{k \geqslant n}x_k \nonumber
+		\varliminf_{k \to \infty}x_k \coloneqq \lim\limits_{n \to \infty} \inf_{k \geqslant n}x_k \nonumber
 	\end{equation}
 	Similarly, the superior limit of the sequence $ \{x_k\} $ can be defined as 
 	\begin{equation}
-			\varlimsup_{k \to \infty}x_k \coloneqq \lim\limits_{n \to \infty} sup_{k \geqslant n}x_k \nonumber
+			\varlimsup_{k \to \infty}x_k \coloneqq \lim\limits_{n \to \infty} \sup_{k \geqslant n}x_k \nonumber
 	\end{equation}
 \end{Definition}
 \includegraphics[width=\textwidth]{Lim_sup_example_5}
@@ -1243,7 +1243,7 @@ Let $ \{x_k \} $ be an arbitrary sequence of real numbers that is bounded below.
 	The inferior and superior limits of any sequence are respectively the smallest and largest partial limits of the sequence.
 \end{Proposition}
 \begin{proof}
-	Let's assume that this sequence is bounded. First consider the inferior limit $ i = \varliminf_{k \to \infty}x_k $. The sequence $ i_n = inf_{k\geqslant n}x_k $ is nondecreasing. Using the definition of the greatest lower bound, we choose by induction numbers $ k_n \in \Natural $ such that $ k_n < k_{n+1} $ and $ i_{k_n} \leqslant x_{k_n} < i_{k_n}+\frac{1}{n} $ (Taking $ i_1 $ we find $ k_1 $; taking $ i_{k_1+1} $ we find $ k_2 $, etc.). Since $ \lim\limits_{n \to \infty}i_n = \lim\limits_{n \to \infty}(i_n+\frac{1}{n}) = i $, we have $ \lim\limits_{n \to \infty}x_{k_n}=i $. It is the smallest partial limit since for every $ \varepsilon>0 $ there exists $ n \in \Natural $ such that $ i-\varepsilon<i_n $, that is $ i-\varepsilon <i_n = inf_{k\geqslant n}x_k \leqslant x_k $ for any $ k \geqslant n $. Now we have $ i-\varepsilon < x_k $ for $ k >n $ means that no partia limit of the sequence can be less than $ i - \varepsilon $. But $ \varepsilon >0 $ is arbitrary, and hence no partial limit can be less than $ i $. The proof for the superior limit is of course analogous. \newpara
+	Let's assume that this sequence is bounded. First consider the inferior limit $ i = \varliminf_{k \to \infty}x_k $. The sequence $ i_n = \inf_{k\geqslant n}x_k $ is nondecreasing. Using the definition of the greatest lower bound, we choose by induction numbers $ k_n \in \Natural $ such that $ k_n < k_{n+1} $ and $ i_{k_n} \leqslant x_{k_n} < i_{k_n}+\frac{1}{n} $ (Taking $ i_1 $ we find $ k_1 $; taking $ i_{k_1+1} $ we find $ k_2 $, etc.). Since $ \lim\limits_{n \to \infty}i_n = \lim\limits_{n \to \infty}(i_n+\frac{1}{n}) = i $, we have $ \lim\limits_{n \to \infty}x_{k_n}=i $. It is the smallest partial limit since for every $ \varepsilon>0 $ there exists $ n \in \Natural $ such that $ i-\varepsilon<i_n $, that is $ i-\varepsilon <i_n = \inf_{k\geqslant n}x_k \leqslant x_k $ for any $ k \geqslant n $. Now we have $ i-\varepsilon < x_k $ for $ k >n $ means that no partial limit of the sequence can be less than $ i - \varepsilon $. But $ \varepsilon >0 $ is arbitrary, and hence no partial limit can be less than $ i $. The proof for the superior limit is of course analogous. \newpara
 	Now if the sequence is not bounded below(resp. above), one can select a subsequence of it tending to $ -\infty $ (resp. $ +\infty $). But then we also have $ \varliminf_{k \to \infty}x_k = -\infty $ (resp. $ \varlimsup_{k \to \infty}x_k = +\infty $). Finally, if $ \varlimsup_{k \to \infty}x_k = -\infty $ (resp. $ \varliminf_{k \to \infty}x_k = +\infty $), the sequence itself tends to $ -\infty $ (resp. $ +\infty $).
 \end{proof}
 
@@ -1251,7 +1251,7 @@ Let $ \{x_k \} $ be an arbitrary sequence of real numbers that is bounded below.
 	A sequence has a limit or tends to $ \pm \infty $ iff its inferior and superior limits are the same.
 \end{Corollary}
 \begin{proof}
-	The cases when $ \varliminf_{k \to \infty}x_k = \varlimsup_{k \to \infty}x_k = \pm \infty $ have benn investigated above, and so we may assume that $ \varliminf_{k \to \infty}x_k = \varlimsup_{k \to \infty}x_k = A \in \Real $. Since $ (i_n = inf_{k \geqslant n}x_k) \leqslant x_k \leqslant (sup_{k \geqslant n}x_k = s_n) $, we have $ \lim\limits_{n \to \infty}x_n = A $.
+	The cases when $ \varliminf_{k \to \infty}x_k = \varlimsup_{k \to \infty}x_k = \pm \infty $ have benn investigated above, and so we may assume that $ \varliminf_{k \to \infty}x_k = \varlimsup_{k \to \infty}x_k = A \in \Real $. Since $ (i_n = \inf_{k \geqslant n}x_k) \leqslant x_k \leqslant (\sup_{k \geqslant n}x_k = s_n) $, we have $ \lim\limits_{n \to \infty}x_n = A $.
 \end{proof}
 
 \begin{Corollary}
@@ -1311,17 +1311,17 @@ One can see that $ \sum_{n=1}^{\infty}a_n=s $.
 	Alternatively, $ a_n = s_n - s_{n-1} $, and, given that $ \lim\limits_{n \to \infty}s_n=s $, we have $ \lim\limits_{n \to \infty} a_n =  \lim\limits_{n \to \infty} (s_n - s_{n-1}) = s -s = 0$ .
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	The series $ 1+q+q^2+ \cdots + q^n + \cdots  $ is often called the \textit{geometric series}. It converges iff $ |q|<1 $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	Suppose $ |q|\geqslant 1 $, then we have $ |q^n| \geqslant 1 $, and in this case this series does not converges.\newpara
 	Now let $ |q|<1 $, and we'll have $ s_n = 1+ q + \cdots + q^{n-1} = \frac{1-q^n}{1-q} $ and $ \lim\limits_{n \to \infty}s_n = \frac{1}{1-q} $, since $ \lim\limits_{n \to \infty}q^n = 0 $ if $ |q|<1 $.
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	The series $ 1+\frac{1}{2}+ \cdots +\frac{1}{n}+ \cdots$, called the \textit{harmonic series}, diverges because its partial sums $ s_n = 1+ \frac{1}{2}+\cdots \frac{1}{n} $ diverges.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	It's sufficient to prove that its partial sum $ s_n = 1+ \frac{1}{2}+\cdots \frac{1}{n} $ diverges. For all $ n \in \Natural $ we have 
 	\begin{equation}
@@ -1340,9 +1340,9 @@ One can see that $ \sum_{n=1}^{\infty}a_n=s $.
 
 Since $ |a_n + \cdots + a_m| \leqslant |a_n|+\cdots |a_m|$, the Cauchy convergence criterion implies that an absolutely convergent series converges, but the converse is generally not true.
 
-\begin{Statement}
+\begin{Example}
 	The series $ 1-1+\frac{1}{2}-\frac{1}{2}+ \frac{1}{3}-\frac{1}{3}+ \cdots$, whose partial sums are either $ \frac{1}{n} $ or $ 0 $, converges to $ 0 $. However, this sequence does not absolutely converges, and its proof is similar to the proof for the divergence of harmonic series.
-\end{Statement}
+\end{Example}
 
 \begin{Theorem}[Criterion for convergence of series of non-negative terms]
 	A series whose terms are non-negative converges iff the sequence of partial sums is bounded above.
@@ -1472,14 +1472,14 @@ The function $ f : E \to \Real  $ \textit{tends to} $ A $ as $ x $ \textit{tends
 which is denoted as $ \lim\limits_{E \ni x \to a}f(x) = A $.
 \end{Definition}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		\lim\limits_{E \ni x \to 0}x\sin\frac{1}{x}=0\nonumber
 	\end{equation}
 	\begin{proof}
 		Let $ \varepsilon=\delta $.
 	\end{proof}
-\end{Statement}
+\end{Example}
 
 \begin{Definition}
 	A \textit{deleted neighborhood} of a point is a neighborhood of the point from which the point itself has been removed. \newpara
@@ -1503,7 +1503,7 @@ Since every neighborhood of a point on the real line contains a symmetric neighb
 	\end{equation}
 \end{Definition}
 
-\begin{Statement}
+\begin{Example}
 	The function \begin{equation}
 	sgn x =	\begin{cases} 1 & \text{for } x >0\\
 		 0 & \text{for } x=0\\
@@ -1511,37 +1511,37 @@ Since every neighborhood of a point on the real line contains a symmetric neighb
 		 \end{cases} \nonumber
 	\end{equation}
 	(read "signum x") has no limit as $ x \to 0 $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 Apparently no number distinct from $ -1,0,1 $ can be the limit of the function.But no matter what $ \mathring{U}(0) $ we choose, some points of it does not belong to the $ \varepsilon $-neighborhood of $ A $ with $ \varepsilon=\frac{1}{2} $, since $  \mathring{U}(0)  $ contains both positive and negative points while $ V(A) $ can't contain both $ 1 $ and $ -1 $ at the same time.
 \end{proof}
 When the function $ f $ is defined on a whole deleted neighborhood of a point $ a\in \Real $, that is, when $ \mathring{U}_E(a)=\mathring{U}_\Real(a)=\mathring{U}(a) $, we adopt the expression $ x \to a $ instead of $ E \ni x \to a $.
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		\lim\limits_{x \to 0} |sgn(x)|=1\nonumber
 	\end{equation}
-\end{Statement}
+\end{Example}
 \begin{proof}
 	\begin{equation}
 		\forall V(1) (f(\mathring{U}(0))=1\in V(1)) \nonumber
 	\end{equation}
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		\lim\limits_{\Real_-\ni x \to 0} sgn(x)=-1, \quad 	\lim\limits_{\Real_+\ni x \to 0} sgn(x)=1 \nonumber
 	\end{equation}
-\end{Statement}
+\end{Example}
 
-\begin{Statement}
+\begin{Example}
 	$ \lim\limits_{x \to 0}\sin \frac{1}{x} $ has no limit.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	In any deleted neighborhood of 0 $ \mathring{U}(0) $ there are always points of the form $ \frac{1}{-\pi/2+2\pi n} $ and $  \frac{1}{\pi/2+2\pi n} $ which assume the values $ -1 $ and $ 1 $ respectively, but for $ \varepsilon<1 $ these two numbers can't both lie in the $ \varepsilon $-neighborhood. 
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	If 
 	\begin{align}
 		E_- &=\{x\in \Real | x = \frac{1}{-\pi/2+2\pi n}, n \in \Natural\} \\
@@ -1552,7 +1552,7 @@ When the function $ f $ is defined on a whole deleted neighborhood of a point $ 
 		&\lim\limits_{E_-\ni x \to 0}\sin \frac{1}{x} = -1 \\
 		&\lim\limits_{E_+\ni x \to 0}\sin \frac{1}{x} = 1
 	\end{align}
-\end{Statement}
+\end{Example}
 The next proposition, also called the statement of the equivalence of the Cauchy definition of a limit(in terms of neighborhoods) and the Heine definition(in terms of sequences), is:
 \begin{Proposition}
 	The relation $ \lim\limits_{E \ni x \to a}f(x) = A $ holds iff for every sequence $ \{x_n\} $ of points $ x_n \in E\setminus a $ converging to $ a $, the sequence $ \{f(x_n)\} $ converges to $ A $.
@@ -1576,12 +1576,12 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 \subsection{Properties of the Limit of a Function}
 
 \subsubsection{Properties of Deleted Neighborhood of a Limit Point of a Set }
-\begin{Statement}
+\begin{Example}
 	$ \mathring{U}_E(a)\neq \varnothing $, that is, the deleted neighborhood of the point in $ E $ is nonempty.
-\end{Statement}
-\begin{Statement}
+\end{Example}
+\begin{Example}
 	$ \forall \mathring{U}^\prime_E(a)\forall \mathring{U}^{\prime\prime}_E(a)\exists\mathring{U}_E(a)(\mathring{U}_E(a)\subset \mathring{U}^\prime_E(a) \cap \mathring{U}^{\prime\prime}_E(a)) $, that is, the intersection of any pair of deleted neighborhoods contains a deleted neighborhood.
-\end{Statement}
+\end{Example}
 
 \subsubsection{General Properties of the Limit of a Function}
 \begin{Definition}
@@ -1626,11 +1626,11 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 	Let $ M $ bounds $ |\beta(x)| $, and set $ |\alpha(x)| < \frac{\varepsilon}{M} $ will help to prove assertion \textbf{c)}.
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 	(\lim\limits_{E \ni x \to a}f(x)=A) \Leftrightarrow (f(x)=A+\alpha(x)\land \lim\limits_{E \ni x \to a} \alpha(x)=0) \nonumber
 	\end{equation}
-\end{Statement}
+\end{Example}
 \begin{proof}
 	This follows immediately from the definition of limit, by virtue which
 	\begin{equation}
@@ -1678,11 +1678,11 @@ The next proposition, also called the statement of the equivalence of the Cauchy
 \end{proof}
 
 \subsubsection{Two Important Examples}
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		\lim\limits_{x \to 0}\frac{\sin x}{x}=1 \nonumber
 	\end{equation}
-\end{Statement}
+\end{Example}
 \begin{proof}
 	The geometric proof is sufficient with the following conditions:
 	\begin{align}
@@ -1704,7 +1704,7 @@ $ 7^0 $ For $ r^0 \in \Quoziente (\lim\limits_{\Quoziente \ni r \to r_0}a^r=a^{r
 \begin{proof}
 	First we prove that $ a^p\to1 $ as $ \Quoziente \ni p \to 0 $ by use the inequality $ a^{-1/n}<a^p<a^{1/n} $. Then we choose $ \delta $ such that $ 1-\varepsilon a^{-r_0} <a^p < 1 + \varepsilon a^{-r_0}$ for $ |p|<\delta $. If now $ |r-r_0|<\delta $, we have $ a^{r_0}(1-\varepsilon a^{-r_0} )<a^{r_0}\cdot a^{r-r_0} < a^{r_0}(1 + \varepsilon a^{-r_0} )$, which says $ a^{r_0}- \varepsilon < a^r< a^{r_0}+ \varepsilon$.
 \end{proof}
-$ 8^0 $ Let $ x \in \Real $, $ s = sup_{\Quoziente \ni r <x}a^r $, and $ i = inf_{\Quoziente \ni r >x}a^r  $. We show that $ s=i $.
+$ 8^0 $ Let $ x \in \Real $, $ s = \sup_{\Quoziente \ni r <x}a^r $, and $ i = inf_{\Quoziente \ni r >x}a^r  $. We show that $ s=i $.
 \begin{proof}
 	\begin{equation}
 		a^{r_1}\leqslant s \leqslant i \leqslant a^{r_2}\nonumber
@@ -1831,7 +1831,7 @@ we write $ x \to +\infty $ (resp. $ x \to - \infty $). When $ E = \Natural $, we
 \begin{Definition}
 	The \textit{oscillation} of a function $ f:X \to \Real $ on a set $ E \subset X $ is
 	\begin{equation}
-		\omega(f,E) \coloneqq sup_{x_1,x_2 \in E}|f(x_1)-f(x_2)|\nonumber
+		\omega(f,E) \coloneqq \sup_{x_1,x_2 \in E}|f(x_1)-f(x_2)|\nonumber
 	\end{equation}
 	that is, the least upper bound of the absolute value of the difference of the values of the function at two arbitrary points $ x_1,x_2 \in E $.
 \end{Definition}
@@ -1844,7 +1844,7 @@ we write $ x \to +\infty $ (resp. $ x \to - \infty $). When $ E = \Natural $, we
 	\end{equation}
 \end{Theorem}
 \begin{proof}
-	Setting $ m_B = inf_{x \in \mathcal{B}}f(x) $ and $ M_B = sup_{x \in \mathcal{B}}f(x) $, and remarking that $ m_{B_1} \leqslant m_{B_1 \cap B_2} \leqslant M_{B_1 \cap B_2} \leqslant M_{B_2} $ for any elements $ B_1 $ and $ B_2 $ of the base $ \mathcal{B} $, we find by the axiom of completeness that there exists a number $ A \in \Real $ separating the numerical sets $ \{m_B\} $ and $ \{M_B\} $, where $ B \in \mathcal{B} $. Since $ \omega(f,B)=M_B-m_B $, we can now conclude that, since $ \omega(f,B) < \varepsilon $, we have $ |f(x)-A|<\varepsilon $ at every point $ x \in B $.
+	Setting $ m_B = inf_{x \in \mathcal{B}}f(x) $ and $ M_B = \sup_{x \in \mathcal{B}}f(x) $, and remarking that $ m_{B_1} \leqslant m_{B_1 \cap B_2} \leqslant M_{B_1 \cap B_2} \leqslant M_{B_2} $ for any elements $ B_1 $ and $ B_2 $ of the base $ \mathcal{B} $, we find by the axiom of completeness that there exists a number $ A \in \Real $ separating the numerical sets $ \{m_B\} $ and $ \{M_B\} $, where $ B \in \mathcal{B} $. Since $ \omega(f,B)=M_B-m_B $, we can now conclude that, since $ \omega(f,B) < \varepsilon $, we have $ |f(x)-A|<\varepsilon $ at every point $ x \in B $.
 \end{proof}
 \textbf{Remark:} When $ X = \Natural $ and $ \mathcal{B} $ is the base $ n \to \infty, n\in \Natural $, $ \omega(f, B) < \varepsilon $ where $ B \in \mathcal{B} $ is equivalent with the assertion that this sequence is a Cauchy sequence.
 
@@ -1859,30 +1859,30 @@ we write $ x \to +\infty $ (resp. $ x \to - \infty $). When $ E = \Natural $, we
 	Suppose $ \lim\limits_{\mathcal{B}_Y}g(y) = A $. $ g(B_Y) \subset V(A) \land (\exists B_X \in \mathcal{B}_X(f(B_X)\subset B_Y))\Rightarrow (g \circ f)(B_X) = g(f(B_X)) \subset g(B_Y) \subset V(A)$.
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		\lim\limits_{x \to \infty} (1+ \frac{1}{x})^x = e \nonumber
 	\end{equation}
-\end{Statement}
-\begin{Statement}
+\end{Example}
+\begin{Example}
 	\begin{equation}
 		\lim\limits_{x \to +\infty} \frac{x}{q^x} = 0 \text{ if $ q>1 $} \nonumber
 	\end{equation}
-\end{Statement}
+\end{Example}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 	\lim\limits_{x \to +\infty} \frac{\log_a x}{x}=0 \nonumber
 	\end{equation}
-\end{Statement}
+\end{Example}
 
 
 \subsubsection{The Limit of a Monotonic Function}
 \begin{Theorem}[Criterion for the Existence of a Limit of a Monotonic Function]
-	Assume $ i = inf E $ and $ s = sup E $ are limit points of the set $ E $ and  $ f : E \to \Real  $ a monotonic function on $ E $.A necessary and sufficient condition for this function that is non-decreasing on the set $ E $ to have a limit as $ x \to s, x \in E $, is that it be bounded above. For this function to have a limit as $ x \to i, x \in E $, it is necessary and sufficient that it be bounded below.
+	Assume $ i = \inf E $ and $ s = \sup E $ are limit points of the set $ E $ and  $ f : E \to \Real  $ a monotonic function on $ E $.A necessary and sufficient condition for this function that is non-decreasing on the set $ E $ to have a limit as $ x \to s, x \in E $, is that it be bounded above. For this function to have a limit as $ x \to i, x \in E $, it is necessary and sufficient that it be bounded below.
 \end{Theorem}
 \begin{proof}
-	For $ x \to s $, use the definition of least upper bound and the fact the set $ \{x \in E|x_0 <x <s\} $ is an element of the base $ x \to s, x \in E $, where for a given $ \varepsilon >0 $ we have $ A- \varepsilon < f(x_0)\leqslant A $ and $ A = sup_{x \in E\setminus \{s\}}f(x) $.
+	For $ x \to s $, use the definition of least upper bound and the fact the set $ \{x \in E|x_0 <x <s\} $ is an element of the base $ x \to s, x \in E $, where for a given $ \varepsilon >0 $ we have $ A- \varepsilon < f(x_0)\leqslant A $ and $ A = \sup_{x \in E\setminus \{s\}}f(x) $.
 \end{proof}
 
 
@@ -1909,19 +1909,19 @@ we write $ x \to +\infty $ (resp. $ x \to - \infty $). When $ E = \Natural $, we
 	If $ f $ and $ g $ are infinite functions over $ \mathcal{B} $ and $ f =_\mathcal{B} o(g) $, we say that $ g $ is a \textit{higher order infinity} than $ f $ over $ \mathcal{B} $.
 \end{Definition}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 	\lim\limits_{x \to +\infty}\frac{x^\alpha}{a^x}=0 \nonumber
 	\end{equation}
 	that is, $ x^\alpha = o(a^x) $ as $ x \to +\infty $ for $ a>1 $ and any $ \alpha \in \Real $.
-\end{Statement}
+\end{Example}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		\lim\limits_{x \to +\infty}\frac{\log_a x}{x^\alpha} = 0\nonumber
 	\end{equation}
 	that is, for $ \alpha >0 $ we have $ \log_a x = o(x^\alpha) $ as $ x\to +\infty $.
-\end{Statement}
+\end{Example}
 
 \begin{Definition}
 	The notation $ f =_\mathcal{B} O(g) $ or $ f = O(g) $ over the base $ \mathcal{B} $ means that the relation $ f(x) = \beta(x)g(x) $ holds ultimately over $ \mathcal{B} $ where $ \beta(x) $ is ultimately bounded over $ \mathcal{B} $.
@@ -1934,34 +1934,34 @@ we write $ x \to +\infty $ (resp. $ x \to - \infty $). When $ E = \Natural $, we
 	\end{equation}
 \end{Definition}
 
-\begin{Statement}
+\begin{Example}
 	The functions $ (2+\sin x)x $ and $ x $ are of the same order as $ x \to \infty $, but $ (1+ \sin x) $ and $ x $ are not of the same order as $ x \to \infty $.
-\end{Statement}
+\end{Example}
 
 \begin{Definition}
 	If the relation $ f(x) = \gamma(x) g(x) $ holds ultimately over $ \mathcal{B} $ where $ \lim\limits_{\mathcal{B}}\gamma(x)=1 $, we say that the function $ f $ \textit{behaves asymptotically like $ g $ over $ \mathcal{B} $}, or that $ f $ is \textit{equivalent to $ g $ over $ \mathcal{B} $}, and we write $ f \sim_\mathcal{B} g $ or $ f \sim g $ over $ \mathcal{B} $. This relation is indeed an equivalent relation.
 \end{Definition}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		\ln(1+x) \sim x\nonumber
 	\end{equation}
 	as $ x \to 0 $.
-\end{Statement}
+\end{Example}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		e^x = 1 +x+o(x) \nonumber
 	\end{equation}
 	as $ x \to 0 $.
-\end{Statement}
+\end{Example}
 
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		(1+x)^\alpha = 1+ \alpha x + o(x) \nonumber
 	\end{equation}
 	as $ x \to 0 $.
-\end{Statement}
+\end{Example}
 
 \begin{Proposition}
 	If $ f \sim_\mathcal{B} \tilde{f} $, then $ \lim\limits_{\mathcal{B}}f(x)g(x)=  \lim\limits_{\mathcal{B}}\tilde{f}(x)g(x)$, provided one of these limits exists.
@@ -2038,9 +2038,9 @@ The oscillation of a function on a subset of a set does not exceed its oscillati
 	A function $ f:E \to \Real $ is continuous on the set $ E $ if it is continuous at each point of $ E $.
 \end{Definition}
 The set of all continuous real-valued functions defined on a set $ E $ will be denoted $ C(E,\Real) $, or, more, $ C(E) $.
-\begin{Statement}
+\begin{Example}
 	The function $ f(x)=\sin x $ is continuous on $ \Real $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	For any point $ x_0 \in \Real $ we have
 	\begin{align}
@@ -2050,9 +2050,9 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	provided $ |x-x_0| < \delta = \varepsilon$. Here we used the inequality $ |\sin x| \leqslant |x| $.
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	Any sequence $ f: \Natural \to \Real $ is a function that is continuous on the set $ \Natural $ of natural numbers, since each point of $ \Natural $ is isolated.
-\end{Statement}
+\end{Example}
 
 \subsection{Points of Discontinuity}
 \begin{Definition}
@@ -2069,7 +2069,7 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	but at least one of them is not equal to $ f(a) $. If at least one of the two limits does not exist, then $ a $ is called a discontinuity of \textit{second kind}.
 \end{Definition}
 
-\begin{Statement}
+\begin{Example}
 	The \textit{Dirichlet function}
 	\begin{equation}
 		\mathcal{D}(x)=\begin{cases}
@@ -2078,8 +2078,8 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 		\end{cases} \nonumber
 	\end{equation}
 	is discontinuous at every point, and obviously all of its discontinuities are of second kind, since in every interval there are both rational and irrational numbers.
-\end{Statement}
-\begin{Statement}
+\end{Example}
+\begin{Example}
 	The \textit{Riemann function}
 	\begin{equation}
 		\mathcal{R}(x)=\begin{cases}
@@ -2088,7 +2088,7 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 		\end{cases} \nonumber
 	\end{equation}
 	is continuous at any irrational number. This function is discontinuous except for $ x=0 $, and all of these discontinuities are of first kind.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	For any point $ a \in \Real $, any bounded neighborhood $ U(a) $ of it, and any number $ N \in \Natural $, $ U(a) $ contains only a finite number of rational numbers $ \frac{m}{n},m \in \Zahlen ,n\in\Natural$, with $ n<N $. \newpara
 	By shrinking the neighborhood, one can then assume that the denominators of all rational numbers in the neighborhood (except possibly for the point $ a $ itself if $ a \in \Quoziente $) are larger than $ N $. Thus at any point $ x \in \mathring{U} (a)$ we have $ |\mathcal{R}(x)|< \frac{1}{N} $. Now we have shown that for any point $ a \in\Real\setminus\Quoziente $
@@ -2111,9 +2111,9 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	\end{align}
 	$ 4^0 $ If the function $ g :Y \to \Real $ is continuous at a point $ b \in Y $ and $ f $ is such that $ f:E\to Y $, $ f(a)=b $, and $ f $ is continuous at $ a $, then the composite function $ (g \circ f)(x) $ is defined on $ E $ and continuous at $ a $.
 \end{Theorem}
-\begin{Statement}
+\begin{Example}
 	All algebraic polynomials, rational functions, and the composition of a finite number of continuous functions are continuous at each point of its domain of definition.
-\end{Statement}
+\end{Example}
 
 
 
@@ -2145,7 +2145,7 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	\begin{equation}
 		min\{m_1,\cdots m_n\}\leqslant f(x) \leqslant max\{M_1,\cdots, M_N\} \nonumber
 	\end{equation}
-	Now let $ M = sup_{x \in E}f(x) $. Set $ f(x) <M $ and contradiction arises by considering the auxiliary function $ \frac{1}{M-f(x)} $, which must be continuous by the local properties of the continuous functions. Similarly, one can prove that there exists a point such that $ f(x_m)=m $.
+	Now let $ M = \sup_{x \in E}f(x) $. Set $ f(x) <M $ and contradiction arises by considering the auxiliary function $ \frac{1}{M-f(x)} $, which must be continuous by the local properties of the continuous functions. Similarly, one can prove that there exists a point such that $ f(x_m)=m $.
 \end{proof}
 
 \begin{Definition}
@@ -2160,9 +2160,9 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	\end{align}
 \end{Definition}
 
-\begin{Statement}
+\begin{Example}
 	The function $ f(x) = x^2 $, which is continuous on $ \Real $, is not uniformly continuous on $ \Real $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	For all the points $ x_n^\prime = \sqrt{n+1} $ and $ x_n^{\prime\prime} =\sqrt{n}  $, where $ n \in \Natural $, $ f(x_n^\prime)-f(x_n^{\prime\prime}) = 1 $, but
 	\begin{equation}
@@ -2171,9 +2171,9 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	so that for any $ \delta >0 $ there are points $ x_n^\prime  $ and $ x_n^{\prime\prime}  $ such that $ |x_n^\prime - x_n^{\prime\prime}|<\delta $, yet $ f(x_n^\prime)-f(x_n^{\prime\prime}) = 1 $.
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	The function $ f(x)=\sin(x^2) $, which is continuous and bounded on $ \Real $, is not uniformly continuous on $ \Real $.
-\end{Statement}
+\end{Example}
 
 \begin{Theorem}[The Cantor-Heine Theorem on Uniform Continuity]
 	A function that is continuous on a closed interval is uniformly continuous on that interval.
@@ -2317,9 +2317,9 @@ Differentiability of a function at a point is equivalent to the existence of its
 \end{Definition}
 
 \subsection{Examples}
-\begin{Statement}
+\begin{Example}
 	If $ f(t)= r \cos \omega t $, then $ f^\prime(t) =- r \omega \sin \omega t$.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	\begin{align}
 		\lim\limits_{h \to 0} \frac{r \cos \omega (t+h)- r \cos \omega t}{h} &=r \lim\limits_{h \to 0}\frac{-2 \sin (\frac{\omega h}{2})\sin \omega (t+ \frac{h}{2})}{h} \\
@@ -2327,9 +2327,9 @@ Differentiability of a function at a point is equivalent to the existence of its
 		&= -r \omega \sin \omega t
 	\end{align}
 \end{proof}
-\begin{Statement}
+\begin{Example}
 	If $ f(t)=r \sin \omega t $, then $ f^\prime(t)=r \omega \cos \omega t $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	The proof is analogous.
 \end{proof}
@@ -2338,18 +2338,18 @@ By the definition of differentiability of a function $ f:E \to \Real $ at a poin
 	f(x)-f(x_0) = A(x_0)(x-x_0) + o(x-x_0) \text{ as } x\to x_0, x \in E \nonumber
 \end{equation}
 Since the right-hand side of this equality tends to zero as $ x \to x_0,x\in E $, it follows that $ \lim\limits_{E \ni x \to x_0} f(x)=f(x_0)$, so that a function that is differentiable at a point is necessarily continuous at that point. However, the converse is not always true. It's easy to see that although $ f(x)= |x| $ is continuous at $ 0 $, it's not differentiable at $ 0 $.
-\begin{Statement}
+\begin{Example}
 	$ e^{x+h}-e^x = e^x h + o(h) $ as $ h \to 0 $. Thus $ \frac{d e^x}{d x}=e^x $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	\begin{equation}
 		e^{x+h}-e^x = e^x(e^h-1)=e^x(h+o(h)) = e^x h + o(h) \nonumber
 	\end{equation}
 	Here we have used the formula $ e^h -1 = h+ o(h)$ obtained in Section 3.2.4.
 \end{proof}
-\begin{Statement}
+\begin{Example}
 	If $ a>0 $, then $ a^{x+h}-a^x=a^h(\ln a)h + o(h) $ as $ h \to 0 $. Thus $ d a^x = a^x (\ln a)d x $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	\begin{align}
 		a^{x+h}-a^x&=a^x(a^h-1)=a^x(e^{h \ln a}-1)\\
@@ -2357,9 +2357,9 @@ Since the right-hand side of this equality tends to zero as $ x \to x_0,x\in E $
 	\end{align}
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	If $ x \neq 0 $, then $ \ln|x+h|-\ln |x| = \frac{1}{x}h+o(h) $ as $ h \to 0 $. Thus $ d \ln |x| = \frac{1}{x}d x $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	\begin{equation}
 	\ln|x+h|-\ln |x| = \ln|1+\frac{h}{x}|	\nonumber
@@ -2371,9 +2371,9 @@ Since the right-hand side of this equality tends to zero as $ x \to x_0,x\in E $
 	as $ h \to 0 $. Here we have used the relation $ \ln(1+t) = t+o(t) $ as $ t \to 0 $, shown in Section 3.2.4.
 \end{proof}
 
-\begin{Statement}
+\begin{Example}
 	If $ x \neq 0 $ and $ 0<a \neq 1 $, then $ \log_a|x+h| - \log_a|x| = \frac{1}{x \ln a}h + o(h) $ as $ h \to 0 $. Thus, $ d \log_a|x| = \frac{1}{x \ln a}d x $.
-\end{Statement}
+\end{Example}
 \begin{proof}
 	\begin{align}
 		\log_a|x+h| - \log_a|x| &= \log_a |1 + \frac{h}{x}| = \log_a(1+ \frac{h}{x}) \\
@@ -2490,12 +2490,12 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 \begin{Definition}
 	A set $ G \subset \Real^m $ is open in $ \Real^m $ if for every point $ x \in G $ there is a ball $ B(x,\delta) $ such that $ B(x,\delta) \subset G$.
 \end{Definition}
-\begin{Statement}
+\begin{Example}
 	$ \Real^m $ and $ \varnothing $ are open sets in $ \Real^m $.
-\end{Statement}
-\begin{Statement}
+\end{Example}
+\begin{Example}
 	A ball $ B(a,r) $ is \textit{open} in $ \Real^m $. 
-\end{Statement}
+\end{Example}
 \begin{proof}
 	If $ x \in B(a,r) $, that is, $ d(a,x)<r $, then for $ 0<\delta<r-d(a,x) $, we have $ B(x,\delta) \subset B(a,r) $, since 
 	\begin{align}
@@ -2503,9 +2503,9 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 		&\Rightarrow (d(a,\xi) \leqslant d(a,x)+d(x,\xi)<d(a,x)+r-d(a,x)=r)
 	\end{align}
 \end{proof}
-\begin{Statement}
+\begin{Example}
 	A set $ G = \{x\in \Real^m | d(a,x)>r\} $ is open.
-\end{Statement}
+\end{Example}
 \begin{Definition}
 	The set $ F \subset \Real^m $ is \textit{closed} in $ \Real^m $ if its complement $ G = \Real^m \setminus F $ is open in $ \Real^m $. For example, the set $ \bar{B}(a,r)=\{x\in\Real^m | d(a,x)\leqslant r\} , r\geqslant0$ is closed, and is called the \textit{closed ball with center $ a $ of radius $ r $}.
 \end{Definition}
@@ -2518,9 +2518,9 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 \begin{proof}
 	content...
 \end{proof}
-\begin{Statement}
+\begin{Example}
 	The set $ S(a,r)=\{x \in \Real^m | d(a,x)=r \} $, $ r \geqslant 0 $, is called the \textit{sphere of radius $ r $ with center $ a \in \Real^m $}. By the proposition just proved, the sphere $ S(a,r) $ is closed.
-\end{Statement}
+\end{Example}
 
 \begin{Definition}
 	An open set in $ \Real^m $ containing a given point is called a \textit{neighborhood} of that point in $ \Real^m $.
@@ -2531,27 +2531,27 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 	\textit{an exterior point} if it is an interior point of the complement of $ E $ in $ \Real^m $;\\
 	\textit{a boundary point} if it is neither an interior point nor an exterior point.
 \end{Definition}
-\begin{Statement}
+\begin{Example}
 	The sphere $ S(a,r) $, $ r > 0 $ is the set of boundary points of both the open ball $ B(a,r) $ and the closed ball $ \bar{B}(a,r) $.
-\end{Statement}
-\begin{Statement}
+\end{Example}
+\begin{Example}
 	A point $ a \in \Real^m $ is a boundary point of the set $ \Real^m \setminus a $, which has no exterior points.
-\end{Statement}
-\begin{Statement}
+\end{Example}
+\begin{Example}
 	All points of the sphere $ S(a,r) $ are boundary points of itl regarded as a subset of $ \Real^m $, the sphere has no interior points.
-\end{Statement}
+\end{Example}
 \begin{Definition}
 	A point $ a \in \Real^m $ is a limit point of the set $ E \subset \Real^m $ if for any neighborhood $ O(a) $ of a the intersection $ E \cap O(a) $ is an infinite set.
 \end{Definition}
 \begin{Definition}
-	The union of a set $ E $ and all its limit points in $ \Real^m $ is the closure of $ E $ in $ \Real^m $ and usually denoted $ \bar{E} $.
+	The union of a set $ E $ and all its limit points in $ \Real^m $ is the \textit{closure} of $ E $ in $ \Real^m $ and usually denoted $ \bar{E} $.
 \end{Definition}
-\begin{Statement}
+\begin{Example}
 	The set $ \bar{B}(a,r) = B(a,r)\cap S(a,r) $ is the set of limit points of the open ball $ B(a,r) $; that is why $ \bar{B}(a,r) $ is called a closed ball.
-\end{Statement}
-\begin{Statement}
+\end{Example}
+\begin{Example}
 	$ \bar{S}(a,r)=S(a,r) $
-\end{Statement}
+\end{Example}
 \begin{Proposition}
 	$ (F \text{ is closed in }\Real^m) \Leftrightarrow (F = \bar{F} \text{ in }\Real^m) $. That is, $ F $ is closed in $ \Real^m $ iff it contains all its limit points.
 \end{Proposition}
@@ -2562,11 +2562,213 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 
 
 \subsection{Compact Sets in $ \Real^m $}
+\begin{Definition}
+	A set $ K \subset \Real^m $ is \textit{compact} if from every covering of $ K $ by sets that are open in $ \Real^m $ one can extract a finite covering.
+\end{Definition}
+\begin{Example}
+	A closed interval $ [a,b] \subset \Real^1$ is compact by the finite covering lemma (Heine-Borel Theorem).
+\end{Example}
+\begin{Example}
+	A generalization to $ \Real^m $ of the concept of a closed interval is the set
+	\begin{equation}
+		I = \{x\in \Real^m|a^i \leqslant x^i \leqslant b^i,i= 1,\cdots, m\} \nonumber
+	\end{equation}
+	which is called an \textit{$ m $-dimensional interval}, or an \textit{$ m $-dimensional block} or an \textit{$ m $-dimensional parallelepiped}. $ I $ is compact in $ \Real^m $.
+\end{Example}
+\begin{proof}
+	content...
+\end{proof}
+\begin{Proposition}
+	If $ K $ is a compact space in $ \Real^m $, then\\
+	\textbf{a)} $ K $ is closed in $ \Real^m $;\\
+	\textbf{b)} any closed subset of $ \Real^m $ contained in $ K $ is itself compact.
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{Definition}
+	The \textit{diameter} of a set $ E \subset \Real^m $ is the quantity
+	\begin{equation}
+		d(E) \coloneqq \sup_{x_1,x_2 \in E} d(x_1,x_2) \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Definition}
+	A set $ E \subset \Real^m $ is \textit{bounded} if its diameter is finite.
+\end{Definition}
+\begin{Proposition}
+	If $ K $ is compact set in $ \Real^m $, then $ K $ is a bounded subset of $ \Real^m $.
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
 
+\begin{Proposition}
+	The set $ K \subset \Real^m $ is compact iff $ K $ is closed and bounded in $ \Real^m $.
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
 
 \section{Limits and Continuity of Functions of Several Variables}
 \subsection{The Limit of a Function}
+\begin{Definition}
+	A point $ A \in \Real^m $ is the \textit{limit} of the mapping $ f :X \to \Real^n $ over a base $ \mathcal{B} $ in $ X $ if for every neighborhood $ V(A) $ of the point there exists an element $ B \in \mathcal{B} $ of the base whose image $ f(B) $ is contained in $ V(A) $.
+	\begin{equation}
+		(\lim\limits_{\mathcal{B}}f(x)=A) \coloneqq (\forall V(A)\exists B \in \mathcal{B}(f(B)\subset V(A))) \nonumber
+	\end{equation}
+	Or, with explicit use if the metric in $ \Real^n $
+	\begin{align}
+		(\lim\limits_{\mathcal{B}}f(x)=A \in \Real^n) &\coloneqq (\forall \varepsilon > 0 \exists B \in \mathcal{B} \forall x \in B (d(f(x),A)< \varepsilon ) ) \\
+		(\lim\limits_{\mathcal{B}}f(x)=A \in \Real^n)  & \coloneqq (\lim\limits_{\mathcal{B}}(d(f(x),A))=0)
+	\end{align}
+\end{Definition}
+If the limit $ A = (A^1,\cdots, A^n) $ and $ y = (y^1,\cdots,y^n) $ where $ f^i(x)=y^i $, we have
+\begin{equation}
+	|y^i-A^i|\leqslant d(y,A) \leqslant \sqrt{n}\max_{1 \leqslant i \leqslant n}|y^i-A^i|\nonumber
+\end{equation}
+from which one can see that
+\begin{equation}
+	\lim\limits_{\mathcal{B}}f(x)=A \Leftrightarrow \lim\limits_{\mathcal{B}}f^i(x)=A^i \nonumber
+\end{equation}
+that is, convergence in $ \Real^n $ is coordinatewise.
+\begin{Definition}
+	A mapping $ f:X \to \Real^n $ is \textit{bounded} if the set $ f(X)\subset \Real^n $ is bounded in $ \Real^m $.
+\end{Definition}
+\begin{Definition}
+	Let $ \mathcal{B} $ be a base in $ X $. A mapping $ f:X \to \Real^n $ is \textit{ultimately bounded} over the base $ \mathcal{B} $ if there exists an element $ B \in \mathcal{B} $ on which $ f $ is bounded.
+\end{Definition}
+As one can easily verified, a function can have at most one limit over a given base. If its limit exists over a base, the function is ultimately bounded over that base.
+\begin{Definition}
+	A sequence $ \{y_k\} $, $ k \in \Natural $, of points $ y_k \in \Real^n $ is \textit{fundamental} (a \textit{Cauchy sequence}) if for every $ \varepsilon>0 $ there exists a number $ N \in \Natural $ such that $ d(y_{k_1},y_{k_2}) < \varepsilon$ for all $ y_{k_1},y_{k_2}>N $. One can see that $ \{y_k\} $ is a Cauchy sequence iff $ \{y^i_k\} $, $ i = 1, \cdots ,n $ is a Cauchy sequence.
+\end{Definition}
+In other words, the Cauchy criterion is also valid in $ \Real^n $.
+
+\begin{Definition}
+	The \textit{oscillation} of a function $ f:X \to \Real^n $ on a set $ E \subset X $ is the quantity
+	\begin{equation}
+		\omega(f,E) \coloneqq d(f(E)) \nonumber
+	\end{equation}
+	where $ d(f(E)) $ is the diameter of $ f(E) $.
+\end{Definition}
+\begin{Theorem}
+	Let $ X $ be a set and $ \mathcal{B} $ a base in $ X $. A function $ f:X \to \Real^n $ \textit{has a limit over the base $ \mathcal{B} $} iff for every $ \varepsilon>0 $ there exists an element $ B \in \mathcal{B} $ of the base on which the oscillation of the function is less than $ \varepsilon $.
+	\begin{equation}
+		\exists \lim\limits_{\mathcal{B}}f(x) \Leftrightarrow \forall \varepsilon>0 \exists B \in \mathcal{B}(\omega(f,B)<\varepsilon) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Theorem}
+	Let $ Y $ be a set, $ \mathcal{B}_Y $ a base in $ Y $, and $ g:Y \to \Real^n $ a mapping having a limit over the base $ \mathcal{B}_Y $. \newpara
+	Let $ X $ be a set, $ \mathcal{B}_X $ a base in $ X $, and $ f:X \to Y $ a mapping of $ X $ into $ Y $ such that for each $ B_Y \in \mathcal{B}_Y $ there exists $ B_X \in \mathcal{B}_X $ such that the image $ f(B_X) $ is contained in $ B_Y $. \newpara
+	Under these conditions the composition $ g \circ f:X \to \Real^n $ of the mapping $ f $ and $ g $ is defined and has a limit over the base $ \mathcal{B}_X $, and
+	\begin{equation}
+		\lim\limits_{\mathcal{B}_X}(g \circ f)(x)=\lim\limits_{\mathcal{B}_Y}g(y)\nonumber
+	\end{equation}
+\end{Theorem}
+All notations about base and neighborhoods remain the same.
+\begin{Example}
+	Let $ x \mapsto \pi^i(x) $ be the mapping $ \pi^i : \Real^m \to \Real $ and $ \pi^i(x)=x^i $. This function does not tend to any finite value nor to infinity as $ x \to \infty $ if $ m>1 $. \\
+	On the other hand
+	\begin{equation}
+		f(x)=\sum_{i=1}^{m}(\pi^i(x))^2 \to \infty \text{ as } x \to \infty \nonumber
+	\end{equation}
+\end{Example}
+\begin{Example}
+	Let the function $ f : \Real^2 \to \Real $ be defined at the point $ (x,y) \in \Real^2 $ as follows:
+	\begin{equation}
+		f(x,y)= \begin{cases}
+		\frac{xy}{x^2+y^2}, &\text{ if } x^2+y^2 \neq 0 ,\\
+		0, &\text{ if } x^2+y^2=0.
+		\end{cases} \nonumber
+	\end{equation}
+	Then $ f(0,y)=f(x,0)=0 $, while $ f(x,x)=\frac{1}{2} $ for $ x \neq 0 $. Hence this function has no limit as $ (x,y)\to (0,0) $. We can see that the limit of a function of several variables cannot be found by computing successively the limits with respect to each of its coordinates. 
+\end{Example}
+Often change the order of coordinates in finding the corresponding limit will yield different results, such as $ f(x,y) = \begin{cases}
+\frac{x^2-y^2}{x^2+y^2}, &\text{ if } x^2+y^2 \neq 0 ,\\
+0, &\text{ if } x^2+y^2=0.
+\end{cases} $ when $ x,y \to 0 $( iteratively).
+
+
 \subsection{Continuity of a Function of Several Variables and Properties of Continuous Functions}
+Let $ E $ be a subset of $ \Real^m $ and $ f:E \to \Real^n $ a function defined on $ E $ with values in $ \Real^n $.
+\begin{Definition}
+	The function $ f:E \to \Real^n $ is \textit{continuous} at $ a \in E $ if for every neighborhood $ V(f(a)) $ there exists a neighborhood $ U_E(a) $ and $ f(U_E(a)) \subset V(f(a)) $.
+\end{Definition}
+The mapping $ f:E \to \Real^n $ defined by the relation 
+\begin{align}
+	(x^1,\cdots,x^m) = x \overset{f}{\longmapsto} y& = (y^1,\cdots,y^n) = \\
+	&= (f^1(x^1,\cdots,x^m),\cdots,f^n(x^1,\cdots,x^m))
+\end{align}
+is continuous at a point iff each of the functions $ y^i = f^i (x^1,\cdots,x^m) $ is continuous at that point. \newpara
+We defined a \textit{path} in $ \Real^n $ to be a mapping $ f :I \to \Real^n $ of an interval $ I \subset \Real $ defined by continuous functions $ f^1(x),\cdots,f^n(x) $ in the form
+\begin{equation}
+	x \mapsto y = (y^1,\cdots,y^n) =(f^1(x),\cdots,f^n(x)) \nonumber
+\end{equation} 
+Thus we can now say that a \textit{path} in $ \Real^n $ is a continuous mapping of an interval $ I \subset \Real $ of the real line into $ \Real^n $.\newpara
+Let $ E $ be a subset of $ \Real^m $,$ a \in E $, and $ B_E(a,r)=E \cap B(a,r) $.
+\begin{Definition}
+	The \textit{oscillation} of the function $ f:E \to \Real^r $ at the point $ a \in E $ is the quantity
+	\begin{equation}
+		\omega(f,a) \coloneqq \lim\limits_{r \to +0}\omega(f,B_E(a,r)) \nonumber
+	\end{equation}
+\end{Definition}
+\subsubsection{Local Properties of Continuous Functions}
+\textbf{a)} A mapping $ f:E \to \Real^n $ of a set $ E \subset \Real^m $ is continuous at a point $ a \in E $ iff $ \omega(f,a)=0 $. \\
+\textbf{b)} A mapping $ f :E \to \Real^n $ that is continuous at $ a \in E $ is bounded in some neighborhood $ U_E(a) $. \\
+\textbf{c)} If the mapping $ g :Y \to \Real^k $ of the set $ Y \subset \Real^n $ is continuous at a point $ y_0 \in Y $ and the mapping $ f:X \to Y $ of the set $ X \subset \Real^m $ is continuous at a point $ x_0 \in X $ and $ f(x_0)=y_0 $, then the mapping $ (g \circ f)(x) :X \to \Real^k $ is defined, and it is continuous at $ x_0 \in X $.\\
+Real-valued functions possess, in addition, the following properties.\\
+\textbf{d)} If the function $ f:E \to \Real $ is continuous at the point $ a \in E $ and $ f(a)>0 $ (or $ f(a) $<0), there exists a neighborhood $ U_E(a) $ such that $ f(x) >0$ (resp. $ f(x)<0 $) for all $ x \in U_E(a) $. \\
+\textbf{e)} If the functions $ f:E \to \Real $ and $ g:E \to \Real $ are continuous at $ a \in E $, then any linear combination of them $ (\alpha f + \beta g) :E \to \Real$ where $ \alpha, \beta \in \Real $, their product, and, if $ g(x)\neq 0 $ on $ E $, their quotient, are defined on $ E $ and continuous at $ a $.\newpara
+The function is \textit{continuous} on the set $ E $ if it is continuous at each point of the set. The set of functions $ f:E \to \Real^n $ that are continuous on $ E $ will be denoted $ C(E,\Real^n) $, or simply $ C(E) $, if the range of values of the functions is unambiguously determined from the context.
+\begin{Example}
+	The functions, $ \pi^i : \Real^m \to \Real $, defined before are obviously continuous at each point $ a \in \Real^m $.
+\end{Example}
+\begin{Example}
+	The function $ f(x,y) $ of Example 7.13 is continuous at any point of the space $ \Real^2 $  except $ (0,0) $, but the function is continuous in either of its two variables for each fixed value of the other variable.
+\end{Example}
+\begin{Definition}
+	A mapping $ f:E \to \Real^n $ of a set $ E \subset \Real^m $ into $ \Real^n $ is \textit{uniformly continuous} on $ E $ if for every $ \varepsilon>0 $ there is a number $ \delta>0 $ such that $ d(f(x_1),f(x_2))<\varepsilon $ for any points $ x_1,x_2 \in E $ such that $ d(x_1,x_2)<\delta $.
+\end{Definition}
+\begin{Definition}
+	A set $ E \subset \Real^m $ is \textit{pathwise connected} if for any pair of its points $ x_0,x_1 $, there exists a path $ \Gamma:I  \to E $ with support in $ E $ and endpoints at these points.
+\end{Definition}
+In other words, it is possible to go from any point $ x_0 \in E $ to any other point $ x_1 \in E $ without leaving $ E $.
+\begin{Definition}
+	A \textit{domain} in $ \Real^m $ is an open connected set.
+\end{Definition}
+\begin{Example}
+	An open ball $ B(a,r),r>0 $, in $ \Real^m $ is a domain.
+\end{Example}
+\begin{proof}
+	See Pg.424.
+\end{proof}
+\begin{Example}
+	A circle is a connected set, but it is not a domain in $ \Real^2 $, since it is not open in $ \Real^2 $.
+\end{Example}
+\subsubsection{Global Properties of Continuous Functions}
+\textbf{a)} If a mapping $ f:K \to \Real^n $ is continuous on a compact set $ K \subset \Real^m $, then it is uniformly continuous on $ K $. \\
+\textbf{b)} If a mapping $ f:K\to\Real^n $ is continuous on a compact set $ K \subset \Real^m $, then it is bounded on $ K $. \\
+\textbf{c)} If a function $ f:K \to \Real $ is continuous on a compact set $ K \subset \Real^m $, then it assumes its maximal and minimal values at some points of $ K $. \\
+\textbf{d)} If a function $ f:E \to \Real $ is continuous on a connected set $ E $ and assumes the value $ f(a)=A $ and $ f(b)=B $ at points $ a,b\in E $, then for any $ C $ between $ A $ and $ B $, there is a point $ c\in E  $ at which $ f(c)=C $. \newpara
+All the properties, except \textbf{d)}, can be proved similarly as we did for single variable functions. We now prove property \textbf{d)}.
+\begin{proof}
+	content...
+\end{proof}
+\begin{Example}
+	The sphere $ S(0,r) $ defined in $ \Real^m $ by the equation
+	\begin{equation}
+		(x^1)^2+ \cdots + (x^m)^2 = r^2\nonumber
+	\end{equation}
+	is a compact set.
+\end{Example}
+\begin{proof}
+	content...
+\end{proof}
+\begin{Example}
+	The open set $ \Real^m \setminus S(0,r) $ for $ r>0 $ is not a domain, since it is not connected.
+\end{Example}
+\begin{proof}
+	content...
+\end{proof}
 
 \chapter{The Differential Calculus of Functions of Several Variables}
 
