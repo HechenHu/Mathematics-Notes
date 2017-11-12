@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 NOV 2017 20:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  11 NOV 2017 23:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,27 +954,27 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
  (./Mathematical Analysis.aux)
 \openout1 = `"Mathematical Analysis.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 80.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring OFF on input line 67.
+Package hyperref Info: Link coloring OFF on input line 80.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -984,9 +984,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count137
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
 
 (./Mathematical Analysis.out) (./Mathematical Analysis.out)
 \@outlinefile=\write4
@@ -1024,40 +1024,40 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 74.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 87.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 74.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 87.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 74.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 87.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 74.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 87.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 74.
+(Font)              <12> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 74.
+(Font)              <8> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 74.
-LaTeX Font Info:    Try loading font information for U+msa on input line 74.
+(Font)              <6> on input line 87.
+LaTeX Font Info:    Try loading font information for U+msa on input line 87.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 74.
+LaTeX Font Info:    Try loading font information for U+msb on input line 87.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1078,13 +1078,13 @@ ion(Limit
  []
 
 [4] [5]
-Overfull \hbox (4.8161pt too wide) in paragraph at lines 145--145
+Overfull \hbox (4.8161pt too wide) in paragraph at lines 144--144
  [][] [][]\T1/lmr/m/n/10.95 Definition, Ex-am-ples, and Ba-sic Prop-er-ties of 
 Im-proper 
  []
 
 
-Overfull \hbox (2.96172pt too wide) in paragraph at lines 155--155
+Overfull \hbox (2.96172pt too wide) in paragraph at lines 154--154
  [][] [][]\T1/lmr/m/n/10.95 Continuity of a Func-tion of Sev-eral Vari-ables an
 d Prop- 
  []
@@ -1111,17 +1111,17 @@ it/10.95 F\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]; []  ; x[]; y\OT1/lmr/m/n
 ]
  1.
 
-Overfull \hbox (25.1274pt too wide) in paragraph at lines 84--95
+Overfull \hbox (25.1274pt too wide) in paragraph at lines 97--108
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--105
+Underfull \hbox (badness 10000) in paragraph at lines 112--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--105
+Underfull \hbox (badness 10000) in paragraph at lines 112--118
 
  []
 
@@ -1131,32 +1131,32 @@ Underfull \vbox (badness 4024) has occurred while \output is active []
  [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 113--117
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--117
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--127
+Underfull \hbox (badness 10000) in paragraph at lines 136--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--127
+Underfull \hbox (badness 10000) in paragraph at lines 136--140
 
  []
 
 
-Overfull \hbox (5.85423pt too wide) in paragraph at lines 130--131
+Overfull \hbox (5.85423pt too wide) in paragraph at lines 143--144
 []\T1/lmr/m/n/10.95 8$[]$  \T1/lmr/bx/n/10.95 (Ax-iom of Choice/Zermelo's Ax-io
 m) \T1/lmr/m/n/10.95 For any set $\OML/lmm/m/it/10.95 X$ \T1/lmr/m/n/10.95 of n
 onempty
@@ -1166,34 +1166,34 @@ onempty
 .2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \begin{equation}
+l.153 \begin{equation}
                       
-Underfull \hbox (badness 10000) in paragraph at lines 142--152
+Underfull \hbox (badness 10000) in paragraph at lines 155--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--152
+Underfull \hbox (badness 10000) in paragraph at lines 155--165
 
  []
 
 
-Overfull \hbox (44.93733pt too wide) in paragraph at lines 164--180
+Overfull \hbox (44.93733pt too wide) in paragraph at lines 177--193
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--180
+Underfull \hbox (badness 10000) in paragraph at lines 177--193
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 214--217
+Underfull \hbox (badness 10000) in paragraph at lines 227--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--217
+Underfull \hbox (badness 10000) in paragraph at lines 227--230
 
  []
 
@@ -1202,44 +1202,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--217
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.233 \subsection
+l.246 \subsection
                  {Composition of Functions and Mutually Inverse Mappings}pdfTeX
  warning (ext4): destination with the same identifier (name{equation.1.3.1}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.233 \subsection
+l.246 \subsection
                  {Composition of Functions and Mutually Inverse Mappings}pdfTeX
  warning (ext4): destination with the same identifier (name{equation.1.3.1}) ha
 s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.233 \subsection
+l.246 \subsection
                  {Composition of Functions and Mutually Inverse Mappings}]pdfTe
 X warning (ext4): destination with the same identifier (name{equation.1.3.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 \begin{equation}
+l.249 \begin{equation}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.245 \begin{equation}
+l.258 \begin{equation}
                       
-Underfull \hbox (badness 10000) in paragraph at lines 242--245
+Underfull \hbox (badness 10000) in paragraph at lines 255--258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
+Underfull \hbox (badness 10000) in paragraph at lines 260--263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
+Underfull \hbox (badness 10000) in paragraph at lines 260--263
 
  []
 
@@ -1247,24 +1247,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.259 	\begin{equation}
+l.272 	\begin{equation}
                        
-Underfull \hbox (badness 10000) in paragraph at lines 282--286
+Underfull \hbox (badness 10000) in paragraph at lines 295--299
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 289--296
+Underfull \hbox (badness 10000) in paragraph at lines 302--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--296
+Underfull \hbox (badness 10000) in paragraph at lines 302--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--304
+Underfull \hbox (badness 10000) in paragraph at lines 312--317
 
  []
 
@@ -1272,14 +1272,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.308 \begin{equation}
+l.321 \begin{equation}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.1.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.316 	\begin{equation}
+l.329 	\begin{equation}
                        
-Underfull \hbox (badness 10000) in paragraph at lines 318--321
+Underfull \hbox (badness 10000) in paragraph at lines 331--334
 
  []
 
@@ -1287,13 +1287,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 318--321
 .3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.325 \begin{equation}
+l.338 \begin{equation}
                        [7] [8
 
 ]
  2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--356
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
 
  []
 
@@ -1302,27 +1302,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 354--356
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.358 \end{Definition}
+l.371 \end{Definition}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.2.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.358 \end{Definition}
+l.371 \end{Definition}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.2.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.358 \end{Definition}
+l.371 \end{Definition}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.2.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.358 \end{Definition}
+l.371 \end{Definition}
                       ]
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
@@ -1330,39 +1330,39 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.361 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.2.1.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.366 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.2.1.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.370 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.2.1.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
 l.374 \begin{equation}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.2.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.378 \begin{equation}
+l.379 \begin{equation}
                       pdfTeX warning (ext4): destination with the same identifi
 er (name{equation.2.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.384 \begin{equation}
+l.383 \begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.2.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.387 \begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.2.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.391 \begin{equation}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.2.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.397 \begin{equation}
                       
-Underfull \hbox (badness 10000) in paragraph at lines 380--384
+Underfull \hbox (badness 10000) in paragraph at lines 393--397
 
  []
 
 [10]
-Overfull \hbox (74.78395pt too wide) detected at line 409
+Overfull \hbox (74.78395pt too wide) detected at line 422
 \OT1/lmr/m/n/10.95 (\OMS/lmsy/m/n/10.95 8\OML/lmm/m/it/10.95 X\OMS/lmsy/m/n/10.
 95 8\OML/lmm/m/it/10.95 Y \OMS/lmsy/m/n/10.95 ^^Z \U/msb/m/n/10.95 R\OT1/lmr/m/
 n/10.95 ) \OMS/lmsy/m/n/10.95 ^ \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X; Y \O
@@ -1380,12 +1380,12 @@ OML/lmm/m/it/10.95 y \OMS/lmsy/m/n/10.95 2 \OML/lmm/m/it/10.95 Y\OT1/lmr/m/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--413
+Underfull \hbox (badness 10000) in paragraph at lines 422--426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--413
+Underfull \hbox (badness 10000) in paragraph at lines 422--426
 
  []
 
@@ -1402,17 +1402,17 @@ T OF REAL NUMBERS \T1/lmr/m/n/10.95 13
  []
 
 [13]
-Overfull \hbox (4.21985pt too wide) in paragraph at lines 540--540
+Overfull \hbox (4.21985pt too wide) in paragraph at lines 553--553
 \T1/lmr/bx/n/14.4 and Com-pu-ta-tional As-pects of Op-er-a-tions with
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 564--570
+Underfull \hbox (badness 10000) in paragraph at lines 577--583
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 581--582
+Underfull \hbox (badness 10000) in paragraph at lines 594--595
 
  []
 
@@ -1423,38 +1423,38 @@ TIONAL ASPECTS OF OPERATIONS WITH REAL NUMBERS \T1/lmr/m/n/10.95 15
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 607--610
+Underfull \hbox (badness 10000) in paragraph at lines 620--623
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--610
+Underfull \hbox (badness 10000) in paragraph at lines 620--623
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 612--616
+Underfull \hbox (badness 10000) in paragraph at lines 625--629
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 612--616
+Underfull \hbox (badness 10000) in paragraph at lines 625--629
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 632--633
+Underfull \hbox (badness 10000) in paragraph at lines 645--646
 
  []
 
 [16]
-Overfull \hbox (5.54941pt too wide) in paragraph at lines 636--638
+Overfull \hbox (5.54941pt too wide) in paragraph at lines 649--651
 []\T1/lmr/m/n/10.95 2$[]$ Any nonempty sub-set of the in-te-gers that is bounde
 d from above(resp.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--638
+Underfull \hbox (badness 10000) in paragraph at lines 649--651
 
  []
 
@@ -1465,22 +1465,22 @@ TIONAL ASPECTS OF OPERATIONS WITH REAL NUMBERS \T1/lmr/m/n/10.95 17
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 770--775
+Underfull \hbox (badness 10000) in paragraph at lines 783--788
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 770--775
+Underfull \hbox (badness 10000) in paragraph at lines 783--788
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 770--775
+Underfull \hbox (badness 10000) in paragraph at lines 783--788
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 770--775
+Underfull \hbox (badness 10000) in paragraph at lines 783--788
 
  []
 
@@ -1491,17 +1491,17 @@ TIONAL ASPECTS OF OPERATIONS WITH REAL NUMBERS \T1/lmr/m/n/10.95 19
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 803--805
+Underfull \hbox (badness 10000) in paragraph at lines 816--818
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 807--809
+Underfull \hbox (badness 10000) in paragraph at lines 820--822
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 821--823
+Underfull \hbox (badness 10000) in paragraph at lines 834--836
 
  []
 
@@ -1512,40 +1512,40 @@ AL NUMBERS \T1/lmr/m/n/10.95 21
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 840--842
+Underfull \hbox (badness 10000) in paragraph at lines 853--855
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--858
+Underfull \hbox (badness 10000) in paragraph at lines 869--871
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 888--891
+Underfull \hbox (badness 10000) in paragraph at lines 901--904
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--891
+Underfull \hbox (badness 10000) in paragraph at lines 901--904
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 902--904
+Underfull \hbox (badness 10000) in paragraph at lines 915--917
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 929--932
+Underfull \hbox (badness 10000) in paragraph at lines 942--945
 
  []
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 933.
+LaTeX Font Info:    Try loading font information for U+euf on input line 946.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 947--949
+Underfull \hbox (badness 10000) in paragraph at lines 960--962
 
  []
 
@@ -1554,12 +1554,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 947--949
 ]
  3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--964
+Underfull \hbox (badness 10000) in paragraph at lines 974--977
 
  []
 
 [27] [28]
-Overfull \hbox (16.49542pt too wide) in paragraph at lines 1064--1065
+Overfull \hbox (16.49542pt too wide) in paragraph at lines 1077--1078
 [][]\T1/lmr/bx/n/10.95 Theorem 3.1.8. []\T1/lmr/m/it/10.95 Let $\OMS/lmsy/m/n/1
 0.95 f\OML/lmm/m/it/10.95 x[]\OMS/lmsy/m/n/10.95 g$ \T1/lmr/m/it/10.95 and $\OM
 S/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 y[]\OMS/lmsy/m/n/10.95 g$ \T1/lmr/m/it/10
@@ -1568,59 +1568,59 @@ n/10.95 =
  []
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1103
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1116
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1123--1125
+Underfull \hbox (badness 10000) in paragraph at lines 1136--1138
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1207--1209
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1222
 
  []
 
-[32] <Lim_sup_example_5.png, id=1027, 578.16pt x 433.62pt>
+[32] <Lim_sup_example_5.png, id=1017, 578.16pt x 433.62pt>
 File: Lim_sup_example_5.png Graphic file (type png)
 
 <use Lim_sup_example_5.png>
-Package pdftex.def Info: Lim_sup_example_5.png used on input line 1237.
+Package pdftex.def Info: Lim_sup_example_5.png used on input line 1250.
 (pdftex.def)             Requested size: 360.0pt x 269.99951pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1237--1238
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1250--1251
 [][] 
  []
 
 [33 <./Lim_sup_example_5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1248
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1261
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1310--1312
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1318--1320
+Underfull \hbox (badness 10000) in paragraph at lines 1331--1333
 
  []
 
 [35]
-Overfull \hbox (0.45607pt too wide) in paragraph at lines 1348--1349
+Overfull \hbox (0.45607pt too wide) in paragraph at lines 1361--1362
 [][]\T1/lmr/bx/n/10.95 Theorem 3.1.14 \T1/lmr/m/n/10.95 (Cri-te-rion for con-ve
 r-gence of se-ries of non-neg-a-tive terms)\T1/lmr/bx/n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1359--1361
+Underfull \hbox (badness 10000) in paragraph at lines 1372--1374
 
  []
 
 [36]
-Overfull \hbox (29.343pt too wide) in paragraph at lines 1367--1371
+Overfull \hbox (29.343pt too wide) in paragraph at lines 1380--1384
 []\T1/lmr/bx/n/10.95 Corollary \T1/lmr/m/n/10.95 (Cauchy's Test)\T1/lmr/bx/n/10
 .95 . []\T1/lmr/m/it/10.95 Let $[][] \OML/lmm/m/it/10.95 a[]$ \T1/lmr/m/it/10.9
 5 be a given se-ries and $\OML/lmm/m/it/10.95  \OT1/lmr/m/n/10.95 = [][] []$\T
@@ -1628,251 +1628,251 @@ Overfull \hbox (29.343pt too wide) in paragraph at lines 1367--1371
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1373--1376
+Underfull \hbox (badness 10000) in paragraph at lines 1386--1389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1373--1376
+Underfull \hbox (badness 10000) in paragraph at lines 1386--1389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1392
+Underfull \hbox (badness 10000) in paragraph at lines 1402--1405
 
  []
 
 [37]
-Overfull \hbox (34.44344pt too wide) in paragraph at lines 1423--1423
+Overfull \hbox (34.44344pt too wide) in paragraph at lines 1436--1436
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1423--1426
+Underfull \hbox (badness 10000) in paragraph at lines 1436--1439
 
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1445--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1458--1459
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1488
+Underfull \hbox (badness 10000) in paragraph at lines 1498--1501
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1485--1488
+Underfull \hbox (badness 10000) in paragraph at lines 1498--1501
 
  []
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1491--1494
+Underfull \hbox (badness 10000) in paragraph at lines 1504--1507
 
  []
 
 [40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1595--1598
+Underfull \hbox (badness 10000) in paragraph at lines 1608--1611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1595--1598
+Underfull \hbox (badness 10000) in paragraph at lines 1608--1611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1619--1622
+Underfull \hbox (badness 10000) in paragraph at lines 1632--1635
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1619--1622
+Underfull \hbox (badness 10000) in paragraph at lines 1632--1635
 
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1658--1660
+Underfull \hbox (badness 10000) in paragraph at lines 1671--1673
 
  []
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1670--1675
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1670--1675
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1670--1675
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1670--1675
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1705
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1718
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1705
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1718
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1705
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1718
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1705
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1718
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1705
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1718
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1705
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1718
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1705
+Underfull \hbox (badness 10000) in paragraph at lines 1707--1718
 
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1714--1717
+Underfull \hbox (badness 10000) in paragraph at lines 1727--1730
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1722--1726
+Underfull \hbox (badness 10000) in paragraph at lines 1735--1739
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1722--1726
+Underfull \hbox (badness 10000) in paragraph at lines 1735--1739
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1732--1733
+Underfull \hbox (badness 10000) in paragraph at lines 1745--1746
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1732--1733
+Underfull \hbox (badness 10000) in paragraph at lines 1745--1746
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1751--1756
+Underfull \hbox (badness 10000) in paragraph at lines 1764--1769
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1751--1756
+Underfull \hbox (badness 10000) in paragraph at lines 1764--1769
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1758--1762
+Underfull \hbox (badness 10000) in paragraph at lines 1771--1775
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1758--1762
+Underfull \hbox (badness 10000) in paragraph at lines 1771--1775
 
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1765--1766
+Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
 
  []
 
 
-Overfull \hbox (1.36887pt too wide) in paragraph at lines 1778--1778
+Overfull \hbox (1.36887pt too wide) in paragraph at lines 1791--1791
 []\T1/lmr/bx/n/12 The Gen-eral Def-i-ni-tion of the Limit of a Func-tion(Limit
  []
 
 
-Underfull \hbox (badness 4859) in paragraph at lines 1788--1788
+Underfull \hbox (badness 4859) in paragraph at lines 1801--1801
 []|\T1/lmr/m/n/10.95 Notation for
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 1788--1788
+Underfull \hbox (badness 4072) in paragraph at lines 1801--1801
 []|\T1/lmr/m/n/10.95 Elements of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1790--1790
+Underfull \hbox (badness 10000) in paragraph at lines 1803--1803
 []|$\OML/lmm/m/it/10.95 x$ \T1/lmr/m/n/10.95 tends
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1792--1792
+Underfull \hbox (badness 10000) in paragraph at lines 1805--1805
 []|$\OML/lmm/m/it/10.95 x$ \T1/lmr/m/n/10.95 tends
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 1792--1792
+Underfull \hbox (badness 2698) in paragraph at lines 1805--1805
 \T1/lmr/m/n/10.95 to in-fin-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1794--1794
+Underfull \hbox (badness 10000) in paragraph at lines 1807--1807
 []|$\OML/lmm/m/it/10.95 x$ \T1/lmr/m/n/10.95 tends
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1796--1796
+Underfull \hbox (badness 10000) in paragraph at lines 1809--1809
 []|$\OML/lmm/m/it/10.95 x$ \T1/lmr/m/n/10.95 tends
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1796--1796
+Underfull \hbox (badness 10000) in paragraph at lines 1809--1809
 \T1/lmr/m/n/10.95 to in-
  []
 
 
-Underfull \hbox (badness 3690) in paragraph at lines 1796--1796
+Underfull \hbox (badness 3690) in paragraph at lines 1809--1809
 \T1/lmr/m/n/10.95 fin-ity in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1796--1796
+Underfull \hbox (badness 10000) in paragraph at lines 1809--1809
 []|\T1/lmr/m/n/10.95 Neighborhoods[][][]of
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 1799.
+(Font)              <9> on input line 1812.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1799.
+(Font)              <5> on input line 1812.
 
-Overfull \hbox (35.49988pt too wide) in paragraph at lines 1786--1805
+Overfull \hbox (35.49988pt too wide) in paragraph at lines 1799--1818
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1786--1805
+Underfull \hbox (badness 10000) in paragraph at lines 1799--1818
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1786--1805
+Underfull \hbox (badness 10000) in paragraph at lines 1799--1818
 
  []
 
@@ -1880,32 +1880,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 1786--1805
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47]
-Underfull \hbox (badness 10000) in paragraph at lines 1807--1809
+Underfull \hbox (badness 10000) in paragraph at lines 1820--1822
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1807--1809
+Underfull \hbox (badness 10000) in paragraph at lines 1820--1822
 
  []
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 1840--1842
+Underfull \hbox (badness 10000) in paragraph at lines 1853--1855
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1855--1857
+Underfull \hbox (badness 10000) in paragraph at lines 1868--1870
 
  []
 
 [49] [50]
-Underfull \hbox (badness 10000) in paragraph at lines 1972--1978
+Underfull \hbox (badness 10000) in paragraph at lines 1985--1991
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1972--1978
+Underfull \hbox (badness 10000) in paragraph at lines 1985--1991
 
  []
 
@@ -1914,17 +1914,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1972--1978
 ]
  4.
 [55] [56]
-Underfull \hbox (badness 10000) in paragraph at lines 2093--2095
+Underfull \hbox (badness 10000) in paragraph at lines 2105--2107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2103--2107
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2119
 
  []
 
 [57] [58]
-Overfull \hbox (4.33621pt too wide) in paragraph at lines 2175--2176
+Overfull \hbox (4.33621pt too wide) in paragraph at lines 2187--2188
 [][]\T1/lmr/bx/it/10.95 Example \T1/lmr/bx/n/10.95 4.7. []\T1/lmr/m/it/10.95 Th
 e func-tion $\OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x\OT1
 /lmr/m/n/10.95 ) = [](\OML/lmm/m/it/10.95 x[]\OT1/lmr/m/n/10.95 )$\T1/lmr/m/it/
@@ -1936,279 +1936,165 @@ e func-tion $\OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x\OT1
 ]
  5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2279--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2291--2294
 
  []
 
-[63] [64] [65]
+[63] [64] [65] [66] [67] [68] [69] [70]
+Underfull \hbox (badness 10000) in paragraph at lines 2619--2621
+
+ []
+
+[71] [72]
+Underfull \vbox (badness 1048) has occurred while \output is active []
+
+
+Overfull \hbox (116.4394pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 5.4.  THE STUDY OF FUNCTIONS USING THE METHODS OF DIFFERENTI
+AL CALCULUS \T1/lmr/m/n/10.95 73
+ []
+
+[73]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2411.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2411.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2414.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2414.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2422.
+(hyperref)                removing `math shift' on input line 2705.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\intop' on input line 2422.
+(hyperref)                removing `math shift' on input line 2705.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ilimits@' on input line 2422.
+(hyperref)                removing `math shift' on input line 2708.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathop' on input line 2422.
+(hyperref)                removing `math shift' on input line 2708.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathgroup' on input line 2422.
+(hyperref)                removing `math shift' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\symoperators' on input line 2422.
+(hyperref)                removing `\intop' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 2422.
+(hyperref)                removing `\ilimits@' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathop' on input line 2422.
+(hyperref)                removing `\mathop' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathgroup' on input line 2422.
+(hyperref)                removing `\mathgroup' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\symoperators' on input line 2422.
+(hyperref)                removing `\symoperators' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 2422.
+(hyperref)                removing `\@ifnextchar' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2422.
+(hyperref)                removing `\mathop' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2423.
+(hyperref)                removing `\mathgroup' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\intop' on input line 2423.
+(hyperref)                removing `\symoperators' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ilimits@' on input line 2423.
+(hyperref)                removing `\@ifnextchar' on input line 2716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2423.
+(hyperref)                removing `math shift' on input line 2716.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [66]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [67]
-Overfull \vbox (121.13887pt too high) has occurred while \output is active []
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2717.
 
 
-[68]
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\intop' on input line 2717.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\ilimits@' on input line 2717.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2717.
+
+[74]
  6.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2435.
+(hyperref)                removing `math shift' on input line 2729.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2435.
+(hyperref)                removing `math shift' on input line 2729.
 
 
-Overfull \hbox (3.17332pt too wide) in paragraph at lines 2456--2456
+Overfull \hbox (3.17332pt too wide) in paragraph at lines 2750--2750
 []\T1/lmr/bx/n/12 Definition, Ex-am-ples, and Ba-sic Prop-er-ties of Im-proper
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69
+ [75
 
 ]
 Overfull \vbox (195.7083pt too high) has occurred while \output is active []
 
 
-[70]
+[76]
  7.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 2462.
+(Font)              <14.4> on input line 2756.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 2462.
+(Font)              <10> on input line 2756.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 2462.
+(Font)              <7> on input line 2756.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2462.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2462.
+(hyperref)                removing `math shift' on input line 2756.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2462.
+(hyperref)                removing `superscript' on input line 2756.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2463.
+(hyperref)                removing `math shift' on input line 2756.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2463.
+(hyperref)                removing `math shift' on input line 2757.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2463.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2476--2478
-
- []
+(hyperref)                removing `superscript' on input line 2757.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2482.
+(hyperref)                removing `math shift' on input line 2757.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2482.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2482.
-
-[71
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 2513--2517
+Underfull \hbox (badness 10000) in paragraph at lines 2770--2772
 
  []
-
-
-Overfull \hbox (58.72609pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 72  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
-EIR LIMITS AND CONTINUITY
- []
-
-[72]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2564.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2564.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2564.
-
-
-Overfull \hbox (57.28789pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 7.1.  THE SPACE $\U/msb/m/n/10.95 R[]$ \T1/lmr/m/sl/10.95 AN
-D THE MOST IMPORTANT CLASSES OF ITS SUBSETS \T1/lmr/m/n/10.95 73
- []
-
-[73]
-Overfull \hbox (58.72609pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 74  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
-EIR LIMITS AND CONTINUITY
- []
-
-[74]
-Underfull \hbox (badness 10000) in paragraph at lines 2660--2663
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2660--2663
-
- []
-
-
-Overfull \hbox (41.8447pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 7.2.  LIMITS AND CONTINUITY OF FUNCTIONS OF SEVERAL VARIABLE
-S \T1/lmr/m/n/10.95 75
- []
-
-[75]
-Underfull \hbox (badness 10000) in paragraph at lines 2700--2703
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2705--2708
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2715--2722
-
- []
-
-
-Overfull \hbox (58.72609pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 76  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
-EIR LIMITS AND CONTINUITY
- []
-
-[76]
-Underfull \hbox (badness 10000) in paragraph at lines 2748--2754
-
- []
-
-
-Overfull \hbox (41.8447pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 7.2.  LIMITS AND CONTINUITY OF FUNCTIONS OF SEVERAL VARIABLE
-S \T1/lmr/m/n/10.95 77
- []
-
-[77]
-Overfull \hbox (58.72609pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 78  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
-EIR LIMITS AND CONTINUITY
- []
-
-[78]
- 8.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2775.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2775.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2775.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -2222,165 +2108,283 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2776.
 
+[77
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 2807--2811
+
+ []
+
+
+Overfull \hbox (58.72609pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10.95 78  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
+EIR LIMITS AND CONTINUITY
+ []
+
+[78]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2777.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2777.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\to' on input line 2777.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2777.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2777.
+(hyperref)                removing `math shift' on input line 2858.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2778.
+(hyperref)                removing `superscript' on input line 2858.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2778.
+(hyperref)                removing `math shift' on input line 2858.
+
+
+Overfull \hbox (57.28789pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 7.1.  THE SPACE $\U/msb/m/n/10.95 R[]$ \T1/lmr/m/sl/10.95 AN
+D THE MOST IMPORTANT CLASSES OF ITS SUBSETS \T1/lmr/m/n/10.95 79
+ []
+
+[79]
+Overfull \hbox (58.72609pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10.95 80  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
+EIR LIMITS AND CONTINUITY
+ []
+
+[80]
+Underfull \hbox (badness 10000) in paragraph at lines 2954--2957
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2954--2957
+
+ []
+
+
+Overfull \hbox (41.8447pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 7.2.  LIMITS AND CONTINUITY OF FUNCTIONS OF SEVERAL VARIABLE
+S \T1/lmr/m/n/10.95 81
+ []
+
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 2994--2997
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2999--3002
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3009--3016
+
+ []
+
+
+Overfull \hbox (58.72609pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10.95 82  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
+EIR LIMITS AND CONTINUITY
+ []
+
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 3042--3048
+
+ []
+
+
+Overfull \hbox (41.8447pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 7.2.  LIMITS AND CONTINUITY OF FUNCTIONS OF SEVERAL VARIABLE
+S \T1/lmr/m/n/10.95 83
+ []
+
+[83]
+Overfull \hbox (58.72609pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10.95 84  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
+EIR LIMITS AND CONTINUITY
+ []
+
+[84]
+ 8.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3069.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2778.
+(hyperref)                removing `superscript' on input line 3069.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2779.
+(hyperref)                removing `math shift' on input line 3069.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2779.
+(hyperref)                removing `math shift' on input line 3070.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2779.
+(hyperref)                removing `superscript' on input line 3070.
 
 
-Overfull \hbox (8.30588pt too wide) in paragraph at lines 2785--2785
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3070.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3071.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3071.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\to' on input line 3071.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3071.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3071.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3072.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3072.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3072.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3073.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3073.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3073.
+
+
+Overfull \hbox (8.30588pt too wide) in paragraph at lines 3079--3079
 []\T1/lmr/bx/n/12 The Dif-fer-en-tial and Par-tial Deriva-tives of a Real-Value
 d
  []
 
 
-Overfull \hbox (2.02237pt too wide) in paragraph at lines 2786--2786
+Overfull \hbox (2.02237pt too wide) in paragraph at lines 3080--3080
 []\T1/lmr/bx/n/12 Coordinate Rep-re-sen-ta-tion of the Dif-fer-en-tial of a Map
 -
  []
 
 
-Overfull \hbox (6.84607pt too wide) in paragraph at lines 2798--2798
+Overfull \hbox (6.84607pt too wide) in paragraph at lines 3092--3092
 []\T1/lmr/bx/n/14.4 The Ba-sic Facts of Dif-fer-en-tial Cal-cu-lus of Real-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2809.
+(hyperref)                removing `math shift' on input line 3103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2809.
+(hyperref)                removing `superscript' on input line 3103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 2809.
+(hyperref)                removing `\<def>-command' on input line 3103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\next@' on input line 2809.
+(hyperref)                removing `\next@' on input line 3103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 2809.
+(hyperref)                removing `\<let>-command' on input line 3103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\next@' on input line 2809.
+(hyperref)                removing `\next@' on input line 3103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2809.
+(hyperref)                removing `superscript' on input line 3103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2809.
+(hyperref)                removing `math shift' on input line 3103.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2818.
+(hyperref)                removing `math shift' on input line 3112.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2818.
+(hyperref)                removing `superscript' on input line 3112.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2818.
+(hyperref)                removing `math shift' on input line 3112.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2819.
+(hyperref)                removing `math shift' on input line 3113.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2819.
+(hyperref)                removing `math shift' on input line 3113.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2819.
+(hyperref)                removing `math shift' on input line 3113.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 2819.
+(hyperref)                removing `superscript' on input line 3113.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2819.
+(hyperref)                removing `math shift' on input line 3113.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79
+ [85
 
 ]
 Overfull \vbox (623.0409pt too high) has occurred while \output is active []
 
 
 Overfull \hbox (67.69867pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 80  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNCT
+\T1/lmr/m/n/10.95 86  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNCT
 IONS OF SEVERAL VARIABLES
  []
 
-[80]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2827.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2827.
+[86]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3121.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3121.
  (./Mathematical Analysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2827.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2827.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3121.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3121.
 
 Package rerunfilecheck Info: File `"Mathematical Analysis".out' has not changed
 .
-(rerunfilecheck)             Checksum: AC5B75358CDD2042852D8B8B972B6852;13761.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2827.
+(rerunfilecheck)             Checksum: 2D134FF64146945E9F87C0A1DD794C19;13547.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3121.
  ) 
 Here is how much of TeX's memory you used:
- 18087 strings out of 492995
- 327854 string characters out of 6132704
- 400066 words of memory out of 5000000
- 20896 multiletter control sequences out of 15000+600000
+ 18124 strings out of 492995
+ 328115 string characters out of 6132704
+ 402246 words of memory out of 5000000
+ 20916 multiletter control sequences out of 15000+600000
  144793 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,15n,54p,1146b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,15n,54p,1146b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2412,10 +2416,10 @@ cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Mathematical Analysis.pdf" (88 pages, 648697 bytes).
+Output written on "Mathematical Analysis.pdf" (94 pages, 673652 bytes).
 PDF statistics:
- 1498 PDF objects out of 1728 (max. 8388607)
- 1369 compressed objects within 14 object streams
- 379 named destinations out of 1000 (max. 500000)
- 1202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1528 PDF objects out of 1728 (max. 8388607)
+ 1393 compressed objects within 14 object streams
+ 396 named destinations out of 1000 (max. 500000)
+ 1186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

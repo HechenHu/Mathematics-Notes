@@ -36,6 +36,19 @@
 \newcommand{\newpara}{\\ \newline}
 \newcommand{\Complex}{\mathbb{C}}
 
+% inverse hyperbolic functions
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arsec}{arsec}
+\DeclareMathOperator{\arcot}{arcot}
+\DeclareMathOperator{\arcsc}{arcsc}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arsech}{arsech}
+\DeclareMathOperator{\arcsch}{arcsch}
+\DeclareMathOperator{\arcoth}{arcoth} 
+
 \newenvironment{chapquote}[2][2em]
   {\setlength{\@tempdima}{#1}%
    \def\chapquote@author{#2}%
@@ -1989,14 +2002,13 @@ Here the equality sign is used in the sense of "is". The symbols $ o(\cdot) $ an
 And as $ x \to 0 $
 \begin{align}
 		e^x&= 1+\frac{1}{1!}x+\frac{1}{2!}x^2+\cdots+\frac{1}{n!}x^n+O(x^{n+1}) \nonumber \\
-	\cos x&= 1-\frac{1}{2!}x^2+\frac{1}{4!}x^4+\cdots+\frac{(-1)^k}{2k!}x^{2k}+O(x^{2k+2}) \nonumber \\
+	\cos x&= 1-\frac{1}{2!}x^2+\frac{1}{4!}x^4-\cdots+\frac{(-1)^k}{2k!}x^{2k}+O(x^{2k+2}) \nonumber \\
 	\sin x&= \frac{1}{1!}x-\frac{1}{3!}x^3+\cdots+\frac{(-1)^k}{(2k+1)!}x^{2k+1}+O(x^{2k+3})  \nonumber \\
-	\ln(1+x)&= x-\frac{1}{2}x^2+\frac{1}{3}x^3+\cdots+\frac{(-1)^{n-1}}{n}x^n + O(x^{n+1})\nonumber \\
+	\ln(1+x)&= x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots+\frac{(-1)^{n-1}}{n}x^n + O(x^{n+1})\nonumber \\
 	(1+x)^\alpha&= 1+\frac{\alpha}{1!}x+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots\\
 	&\text{\quad}  +\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+O(x^{n+1}) \nonumber \\
 \end{align}
-
-These formulas are usually te most efficient method of finding the limits of the elementary functions. When doing so, it is useful to keep in mind that $ O(x^{m+1}) = x^{m+1}\cdot O(1) = x^m \cdot x O(1)=x^m o(1) = o(x^m) $ as $ x \to 0 $.
+These formulas can be derived from Taylor's formula, and they are usually the most efficient method of finding the limits of the elementary functions. When doing so, it is useful to keep in mind that $ O(x^{m+1}) = x^{m+1}\cdot O(1) = x^m \cdot x O(1)=x^m o(1) = o(x^m) $ as $ x \to 0 $.
 
 \chapter{Continuous Functions}
 \section{Basic Definitions and Examples}
@@ -2385,22 +2397,304 @@ Since the right-hand side of this equality tends to zero as $ x \to x_0,x\in E $
 
 \section{The Basic Rules of Differentiation}
 \subsection{Differentiation and the Arithmetic Operations}
+\begin{Theorem}
+	If two functions $ f $ and $ g $ are differentiable at $ x $, then their sum, product, and quotient if the denominator is not zero, are differentiable.
+	\begin{align}
+		(f+g)^\prime(x)&=(f^\prime+g^\prime)(x) \\
+		(f\cdot g)^\prime(x)&=f^\prime(x)\cdot g(x) + f(x)\cdot g^\prime(x)\\
+		(\frac{f}{g})^\prime (x) &=\frac{f^\prime(x)\cdot g(x) - f(x)\cdot g^\prime(x)}{g^2(x)}
+	\end{align}
+\end{Theorem}
+\begin{proof}
+	The theorem is easy to prove with the definition of a differentiable function and the properties of the symbol $ o(\cdot) $.
+\end{proof}
+\begin{Corollary}
+	The derivative of a linear combination of differentiable functions equals the same linear combination of the derivatives of these functions.
+\end{Corollary}
+\begin{Corollary}
+	If the function $ f_1 ,\cdots, f_n $ are differentiable at $ x $, then
+	\begin{align}
+		(f_1 \cdots f_n)^\prime(x)=&f^\prime_1(x)f_2(x)\cdots f_n(x)\\
+		&f_1(x)f^\prime_2(x)f_3(x)\cdots f_n(x)+ \cdots f_1(x)\cdots f_{n-1}(x)f^\prime_n(x)
+	\end{align}
+\end{Corollary}
+\begin{proof}
+	Easy to prove by induction.
+\end{proof}
+\begin{Corollary}
+	Following from the relation between the derivative and the differential, the theorem can also be written in terms of differentials.
+\end{Corollary}
+
+
 \subsection{Differentiation of a Composite Function(Chain Rule)}
+\begin{Theorem}
+	If the function $ f:X \to Y \subset \Real $ is differentiable at a point $ x \in X $ and the function $ g:Y \to \Real $ is differentiable at the point $ y=f(x)\in Y $, then the composite function $ g \circ f:X \to \Real $ is differentiable at $ x $, and the differential $ d(g \circ f)(x): T \Real(x) \to T \Real(g(f(x))) $ of their composition equals the composition $ d f(y)\circ d f(x) $ of their differentials
+	\begin{equation}
+		d f(x) :T \Real(x) \to T \Real(y=f(x)) \text{ and } d g(y=f(x)) : T \Real(y) \to T \Real(g(y)) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Corollary}
+	The derivative $ (g \circ f)^\prime(x) $ of the composition of differentiable real-valued functions equals the product $ g^\prime(f(x))\cdot f^\prime(x) $ of the derivatives of these functions compared at the corresponding points.
+\end{Corollary}
+\begin{Corollary}
+	If the composition $ (f_n \circ \cdots \circ f_1)(x) $ of differentiable functions $ y_1 = f_1(x),\cdots,y_n=f_n(y_n-1) $ exists, then
+	\begin{equation}
+		(f_n \circ \cdots \circ f_1)^\prime(x) = f^\prime_n(y_n-1)f^\prime_{n-1}(y_n-2) \cdots f^\prime_1(x) \nonumber
+	\end{equation}
+\end{Corollary}
+\begin{Example}
+	The derivative of the logarithm of the absolute value of a differentiable function is often called its \textit{logarithmic derivative}. \\
+	Since $ F(x)=\ln |f(x)| = (\ln \circ || \circ f)(x) $, we have $ F^\prime(x) = (\ln |f|)^\prime (x)=\frac{f^\prime(x)}{f(x)} $
+\end{Example}
+\begin{Example}
+	For a function $ u(x)^{v(x)} $, where $ u(x) $ and $ v(x) $ are differentiable functions and $ u(x)>0 $. We write $ u(x)^{v(x)} = e^{v(x)\ln u(x)} $, then
+	\begin{equation}
+		\frac{d e^{v(x)\ln u(x)}}{dx} = u(x)^{v(x)}\cdot v^\prime(x) \ln u(x) + v(x)u(x)^{v(x)-1}\cdot u^\prime(x) \nonumber
+	\end{equation}
+\end{Example}
+
+
 \subsection{Differentiation of an Inverse Function}
-\subsection{Table of Derivatives of the Basic Elementary Functions}
-\subsection{Differentiation of a Very Simple Implicit Function}
+\begin{Theorem}[The derivative of an inverse function]
+	Let the functions $ f : X \to Y $ and $ f^{-1}:Y \to X $ be mutually inverse and continuous at points $ x_0 \in X $ and $ f(x_0)=y_0 \in Y $ respectively. If $ f $ is differentiable at $ x_0 $ and $ f^\prime(x_0)\neq 0 $, then $ f^{-1} $ is also differentiable at the point $ y_0 $, and
+	\begin{equation}
+		(f^{-1})^\prime(y_0)=(f^\prime(x_0))^{-1}\nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Example}
+	The \textit{hyperbolic} and \textit{inverse hyperbolic functions} and their derivatives are:
+	\begin{align}
+		\sinh x &= \frac{1}{2}(e^x-e^{-x}) \\
+		\sinh^\prime x &= \cosh x \\
+		\arsinh y &= \ln(y+\sqrt{1+y^2})\\
+		\arsinh^\prime y &= \frac{1}{\sqrt{1+y^2}}\\
+		\cosh x &= \frac{1}{2}(e^x+e^{-x}) \\
+		\cosh^\prime x &= \sinh x \\
+		\arcosh_{-} y &= \ln (y-\sqrt{y^2-1})\\
+		\arcosh_{+} y &= \ln (y+\sqrt{y^2-1})\\
+		\arcosh^\prime_{-} y &=- \frac{1}{\sqrt{y^2-1}}, \quad y>1 \\
+		\arcosh^\prime_{+} y &= \frac{1}{\sqrt{y^2-1}}, \quad y>1 \\		
+		\tanh x &= \frac{\sinh x}{\cosh x} \\
+		\tanh^\prime x &= \frac{1}{\cosh^2 x}\\
+		\artanh y &= \frac{1}{2} \ln \frac{1+y}{1-y},\quad |y|<1 \\
+		\artanh^\prime y &= \frac{1}{1-y^2}, \quad |y|<1\\
+		\coth x &= \frac{\cosh x}{\sinh x} \\
+		\coth^\prime x &= -\frac{1}{\sinh^2 x}\\
+		\arcoth y &= \frac{1}{2} \ln \frac{y+1}{y-1},\quad |y|>1 \\
+		\arcoth^\prime y &= -\frac{1}{y^2-1}, \quad |y|>1
+	\end{align}
+\end{Example}
+
+
 \subsection{Higher-Order Derivatives}
+\begin{Definition}
+	The \textit{derivative of order $ n $} is defined by the formula 
+	\begin{equation}
+		f^{(x)}(x) \coloneqq (f^(n-1))^\prime(x)\nonumber
+	\end{equation}
+	The set of functions $ f:E \to \Real $ having continuous derivatives up to order $ n $ inclusive will be denoted $ C^{(n)}(E,\Real) $ or $ C^{(n)}(E)  $. $ C^{(0)}(E)=C(E) $ by $ f^{(0)}(x)=f(x) $.
+\end{Definition}
+\begin{Example}[Leibniz's formula]
+	Let $ u(x) $ and $ v(x) $ be functions having derivatives up to order $ n $ inclusive on a common set $ E $. Then following formula of Leibniz holds for the $ n $th derivative of their product:
+	\begin{equation}
+		(uv)^{(n)} = \sum_{m=0}^{n}\binom{n}{m}u^{(n-m)}v^{(m)} \nonumber
+	\end{equation}
+\end{Example}
 
 
 \section{The Basic Theorems of Differential Calculus}
 \subsection{Fermat's Lemma and Rolle's Theorem}
+\begin{Definition}
+	A point $ x_0 \in E \subset \Real $ is called a \textit{local maximum} (resp. \textit{local minimum}) and the value of a function $ f:E \to \Real $ at the point a \textit{local maximum value} (resp. \textit{local minimum value}) if their exists a neighborhood $ U_E(x_0) $ of $ x_0 $ in $ E $ such that at any point $ x \in U_E(x_0) $ we have $ f(x)\leqslant f(x_0) $ (resp. $ f(x)\geqslant f(x_0) $).
+\end{Definition}
+\begin{Definition}
+	If the strict inequality $ f(x)<f(x_0) $ (resp. $ f(x)>f(x_0) $) hods at every point $ x \in \mathring{U}_E(x_0) $, the point $ x_0 $ is called \textit{strict local maximum} (resp. \textit{strict local minimum}) and the value of the function $ f:E \to \Real $ a \textit{strict local maximum value} (resp. \textit{strict local minimum value}).
+\end{Definition}
+\begin{Definition}
+	The local maxima and minima are called \textit{local extrema} and the values of the function at these points \textit{local extreme values of the function}.
+\end{Definition}
+\begin{Definition}
+	An extremum $ x_0 \in E $ of the function $ f:E \to \Real $ is called an \textit{interior} extremum if $ x_0 $ is a limit point of both sets $ E_- = \{x\in E | x< x_0 \} $ and $ E_+ = \{x\in E | x> x_0 \}  $.
+\end{Definition}
+\begin{Lemma}[Fermat]
+	If a function $ f:E \to \Real $ is differentiable at an interior extremum, $ x_0 \in E $, then its derivative at $ x_0 $ is $ 0 : f^\prime(x_0)=0 $.
+\end{Lemma}
+\begin{Proposition}[Rolle's Theorem]
+	If a function $ f:[a,b] \to \Real $ is continuous on the closed interval $ [a,b] $ and differentiable on $ (a,b) $ and $ f(a)=f(b) $, then there exists a point $ \xi \in (a,b) $ such that $ f^\prime(\xi)=0 $.
+\end{Proposition}
+
+
 \subsection{The Theorems of Lagrange and Cauchy on Finite Increments}
+\begin{Theorem}[Lagrange's Finite-increment Theorem]
+	If a function $ f:[a,b]\to \Real $ is continuous on a closed interval $ [a,b] $ and differentiable on the open interval $ (a,b) $, there exists a point $ \xi \in [a,b] $ such that
+	\begin{equation}
+		f(b)-f(a)=f^\prime(\xi)(b-a) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	Consider the auxiliary function
+	\begin{equation}
+		F(x)=f(x)-\frac{f(b)-f(a)}{b-a}(x-a) \nonumber
+	\end{equation}
+	and apply Rolle's theorem to it.
+\end{proof}
+
+\subsubsection{Corollaries of Lagrange's Theorem}
+\begin{Corollary}[Criterion for monotonicity of a function]
+	If the derivative of a function is nonnegative (resp. positive) at every point of an open interval, then the function is nondecreasing (resp. increasing) on that interval.
+\end{Corollary}
+An analogous assertion can be made about the nonincreasing (resp. decreasing) nature of a function with a nonpositive (resp. negative) derivative.
+\begin{Corollary}[Criterion for a function to be constant]
+	A function that is continuous on a closed interval is constant on it iff its derivative equals zero at every point of the interval $ [a,b] $ (or only on $ (a,b) $).
+\end{Corollary}
+If the derivative of two functions are equal on some interval, then the difference between them is constant.
+\begin{Proposition}[Cauchy's Finite-increment Theorem]
+	Let $ x=x(t) $ and $ y=y(t) $ be functions that are continuous on a closed interval $ [\alpha, \beta] $ and differentiable on the open interval $ (\alpha,\beta) $. \\
+	Then there exists a point $ \tau \in [\alpha,\beta] $ such that
+	\begin{equation}
+		x^\prime(\tau)(y(\beta)-y(\alpha)) = y^\prime(\tau)(x(\beta)-x(\alpha))\nonumber
+	\end{equation}
+	If in addition $ x^\prime(t)\neq 0 $ for each $ t $ in $ (\alpha,\beta) $, then $ x(\alpha)\neq x(\beta) $ and we have the equality
+	\begin{equation}
+		\frac{y(\beta)-y(\alpha)}{x(\beta)-x(\alpha)} = \frac{y^\prime(\tau)}{x^\prime(\tau)} \nonumber
+	\end{equation}
+\end{Proposition}
+
+
+
 \subsection{Taylor's Formula}
-
-
+\begin{Definition}
+	The algebraic polynomial given by
+	\begin{equation}
+		P_n(x_0,x)=P_n(x)=f(x_0)+\frac{f^\prime(x_0)}{1!}(x-x_0)+\cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n\nonumber
+	\end{equation}
+	is the \textit{Taylor polynomial of order $ n $ of $ f(x) $ at $ x_0 $}. \\
+	The \textit{$ n $th remainder term in Taylor's formula}, or the \textit{remainder}, is the value
+	\begin{equation}
+		f(x)-P_n(x_0,x)=r_n(x_0,x) \nonumber
+	\end{equation}
+	Then
+	\begin{align}
+		\Aboxed{f(x)&=f(x_0)+\frac{f^\prime(x_0)}{1!}(x-x_0)+\cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+r_n(x_0,x) \nonumber}
+	\end{align}
+	When $ x_0=0 $, this is often called \textit{MacLaurin's formula}.
+\end{Definition}
+\begin{Theorem}
+	If the function $ f $ is continuous on the closed interval with end-points $ x_0 $ and $ x $ along with its first $ n $ derivatives, and it has a derivative of order $ n+1 $ at the interior points of this interval, then for any function $ \varphi $ that is continuous on this closed interval and has a nonzero derivative at its interior points, there exists a point $ \xi $ between $ x_0 $ and $ x $ such that
+	\begin{align}
+		\Aboxed{r_n(x_0,x)&=\frac{\varphi(x)-\varphi(x_0)}{\varphi^\prime(\xi)n!}f^{(n+1)}(\xi)(x-\xi)^n  \nonumber}
+	\end{align}
+\end{Theorem}
+\begin{proof}
+	Consider the auxiliary function
+	\begin{equation}
+		F(t)=f(x)-P_n(t,x) \nonumber
+	\end{equation}
+	Find $ F^\prime(t) $. Apply Cauchy's theorem to the pair of functions $ F(t),\varphi(t) $ and find a point $ \xi $. Substitute the expression for $ F^\prime(\xi) $ here and the theorem is proved with the fact that $ F(x)-F(x_0)=0-F(x_0)=-r_n(x_0,x) $.
+\end{proof}
+\begin{Corollary}[Cauchy's Formula for the remainder term]
+	Setting $ \varphi(t)=x-t $, we obtain
+	\begin{align}
+		\Aboxed{r_n(x_0,x) &=\frac{1}{n!}f^{(n+1)}(\xi)(x-\xi)^n(x-x_0) \nonumber}
+	\end{align}
+\end{Corollary}
+\begin{Corollary}[The Lagrange form of the remainder]
+	Setting $ \varphi(t)=(x-t)^{n+1} $, we have
+	\begin{align}
+		\Aboxed{r_n(x_0,x)&=\frac{1}{(n+1)!}f^{(n+1)}(\xi)(x-x_0)^{n+1} \nonumber}
+	\end{align}
+\end{Corollary}
+\begin{Theorem}
+	\begin{align}
+		\Aboxed{(1+x)^n &=1+\binom{n}{1}x+ \binom{n}{2}x^2+\cdots+\binom{n}{n}x^n   }
+	\end{align}
+\end{Theorem}
+\begin{Definition}
+	If the function has derivatives of all orders $ n \in \Natural $ at a point $ x_0 $, the series
+	\begin{equation}
+		f(x_0)+\frac{f^\prime(x_0)}{1!}(x-x_0)+\cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+\cdots \nonumber
+	\end{equation}
+	is called the \textit{Taylor's series} of $ f $ at the point $ x_0 $.
+\end{Definition}
+it should not be thought that the Taylor series of an infinitely differentiable function converges in some neighborhood of $ x_0 $. \newpara
+It should also not be thought that if the Taylor series converges, it necessarily converges to the function that generated it -- it converges to the function that generated it only when the generating function belongs to the class of \textit{analytic functions}. Cauchy gave an example of a nonanalytic function:
+\begin{equation}
+	f(x)=\begin{cases}
+	&e^{-1/x^2}, \text{ if }x\neq 0 \\
+	&0, \text{ if }x=0
+	\end{cases} \nonumber
+\end{equation}
+The Taylor series in this case has all its terms equal to $ 0 $ and hence its sum is $ 0 $, while $ f(x)\neq0 $ if $ x \neq 0 $.
+\begin{Proposition}
+	if there exists a polynomial $ P_n(x_0,x)=c_0+c_1(x-x_0)+\cdots+c_n(x-x_0)^n $ satisfying the following condition:
+	\begin{equation}
+		f(x)=c_0+c_1(x-x_0)+\cdots+c_n(x-x_0)^n+o((x-x_0)^n) \text{ as }x\to x_0, x \in E \nonumber
+	\end{equation}
+	then the polynomial is unique.
+\end{Proposition}
+\begin{Proposition}[The Local Taylor Formula]
+	Let $ E $ be a closed interval having $ x_0 \in \Real $ as an endpoint. If the function $ f:E \to \Real $ has derivatives $ f^\prime(x_0),\cdots,f^{(n)}(x_0) $ up to order $ n $ inclusive at the point $ x_0 $, then the following representation holds:
+	\begin{align}
+		f(x)=&f(x_0)+\frac{f^\prime(x_0)}{1!}(x-x_0)+\cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+ \\
+		&o((x-x_0)^n) \quad\text{ as }x \to x_0,x\in E
+	\end{align}
+\end{Proposition}
+\begin{Lemma}
+	If a function $ \varphi:E \to \Real $, defined on a closed interval $ E $ with endpoint $ x_0 $, is such that it has derivatives up to order $ n $ inclusive at $ x_0 $ and $ \varphi(x_0)=\varphi^\prime(x_0)=\cdots=\varphi^{(n)}(x_0)=0 $, then $ \varphi(x)=o((x-x_0)^n) $ as $ x \to x_0,x\in E $.
+\end{Lemma}
+\begin{proof}
+	content...
+\end{proof}
+The relation is called the \textit{local Taylor formula} since the form of the remainder term given in it (the so-called \textit{Peano form})
+\begin{equation}
+	r_n(x_0,x)=o((x-x_0)^n)\nonumber
+\end{equation}
+makes it possible to draw inferences only about the asymptotic nature of the connection between the Taylor polynomial and the function as $ x \to x_0,x\in E $.
+\begin{Example}[Taylor's formula with the Lagrange form of the remainder]
+	If $ f $ has a derivative of order $ n+1 $ on the open interval with endpoints $ x_0 $ and $ x $, then
+	\begin{align}
+		f(x) = &f(x_0)+\frac{f^\prime(x_0)}{1!}(x-x_0)+\cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+ \\
+		&\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}
+	\end{align}
+	where $ \xi $ is a point between $ x_0 $ and $ x $. This is a generalization of Lagrange's mean-value theorem(finite-increment theorem), to which it reduces when $ n=0 $.
+\end{Example}
+\begin{Example}[Taylor's formula with the Peano form of the remainder]
+	If $ f $ has derivative of orders up to $ n \geqslant 1 $ inclusive at the point $ x_0 $, then
+	\begin{equation}
+		f(x)=f(x_0)+\frac{f^\prime(x_0)}{1!}(x-x_0)+\cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+o((x-x_0)^n) \nonumber
+	\end{equation}
+	This is a generalization of the definition of differentiability of a function at a point, to which it reduces when $ n=1 $.
+\end{Example}
+Now we write the following table of asymptotic formulas as $ x \to 0 $:
+\begin{align}
+e^x&= 1+\frac{1}{1!}x+\frac{1}{2!}x^2+\cdots+\frac{1}{n!}x^n+O(x^{n+1}) \nonumber \\
+\cos x&= 1-\frac{1}{2!}x^2+\frac{1}{4!}x^4-\cdots+\frac{(-1)^n}{2n!}x^{2n}+O(x^{2n+2}) \nonumber \\
+\sin x&= \frac{1}{1!}x-\frac{1}{3!}x^3+\cdots+\frac{(-1)^n}{(2n+1)!}x^{2n+1}+O(x^{2n+3})  \nonumber \\
+\cosh x &=1+\frac{1}{2!}x^2+\frac{1}{4!}x^4+\cdots+\frac{1}{2n!}x^{2n}+O(x^{2n+2}) \nonumber \\
+\sinh x &= \frac{1}{1!}x+\frac{1}{3!}x^3+\cdots+\frac{1}{(2n+1)!}x^{2n+1}+O(x^{2n+3})  \nonumber \\
+\ln(1+x)&= x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots+\frac{(-1)^{n-1}}{n}x^n + O(x^{n+1})\nonumber \\
+(1+x)^\alpha&= 1+\frac{\alpha}{1!}x+\frac{\alpha(\alpha-1)}{2!}x^2+\cdots\\
+&\text{\quad}  +\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n+O(x^{n+1}) \nonumber \\
+\end{align}
 
 \section{The Study of Functions Using the Methods of Differential Calculus}
 \subsection{Conditions for a Function to be Monotonic}
+\begin{Proposition}
+	The following relations hold between the monotonicity properties of a function $ f:E \to \Real $ that is differentiable on an open interval $ (a,b)=E $ and the sign(positivity) of its derivative $ f^\prime $ on that interval:
+	\begin{center}
+			\begin{align}
+		f^\prime(x)>0 &\Rightarrow f \text{ is increasing } &\Rightarrow f^\prime(x)\geqslant 0\\
+		f^\prime(x)\geqslant0 &\Rightarrow f \text{ is nondecreasing } &\Rightarrow f^\prime(x)\geqslant 0\\
+		f^\prime(x)\equiv 0 &\Rightarrow f \equiv \text{ const.} &\Rightarrow f^\prime(x)\equiv 0\\
+		f^\prime(x)\leqslant0 &\Rightarrow f \text{ is nonincreasing} &\Rightarrow f^\prime(x)\leqslant 0\\
+		f^\prime(x)<0 &\Rightarrow f \text{ is decreasing } &\Rightarrow f^\prime(x)\leqslant 0\\
+		\end{align}
+	\end{center}
+\end{Proposition}
+\begin{proof}
+	The left-hand column of implications is already known from Lagrange's theorem. The right-hand column of implications can be obtained immediately from the definition of the derivative.
+\end{proof}
+
 \subsection{Conditions for an Interior Extremum of a Function}
 \subsection{Conditions for a Function to be Convex}
 \subsection{L'Hôpital's Rule}
