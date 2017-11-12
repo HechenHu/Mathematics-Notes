@@ -35,6 +35,7 @@
 \newcommand{\Quoziente}{\mathbb{Q}}
 \newcommand{\newpara}{\\ \newline}
 \newcommand{\Complex}{\mathbb{C}}
+\newcommand{\iu}{{i\mkern1mu}}
 
 % inverse hyperbolic functions
 \DeclareMathOperator{\sech}{sech}
@@ -2696,13 +2697,217 @@ e^x&= 1+\frac{1}{1!}x+\frac{1}{2!}x^2+\cdots+\frac{1}{n!}x^n+O(x^{n+1}) \nonumbe
 \end{proof}
 
 \subsection{Conditions for an Interior Extremum of a Function}
-\subsection{Conditions for a Function to be Convex}
-\subsection{L'Hôpital's Rule}
-\subsection{Constructing the Graph of a Function}
+\begin{Proposition}[Necessary Conditions for an Interior Extremum]
+	In order for a point $ x_0 $ to be an extremum of a function $ f:U(x_0)\to \Real $ defined on a neighborhood $ U(x_0) $ of that point, a necessary condition is that one of the following two condition hold: either the function is not differentiable at $ x_0 $ or $ f^\prime(x_0)=0 $.
+\end{Proposition}
+\begin{Proposition}[Sufficient Conditions for an Extremum in terms of the First Derivative]
+	Let $ f:U(x_0)\to \Real $ be a function defined on a neighborhood $ U(x_0) $ of the point $ x_0 $, which is continuous at the point itself and differentiable in a deleted neighborhood $ \mathring{U}(x_0) $. Let $ \mathring{U}^-(x_0)=\{x \in U(x_0)| x< x_0 \} $ and $ \mathring{U}^+(x_0)=\{x \in U(x_0)| x> x_0 \} $. \\
+	Then the following conclusions are valid:
+	\begin{align}
+		&\text{a) } (\forall x \in \mathring{U}^-(x_0) (f^\prime(x)<0) )\land (\forall x \in  \mathring{U}^+(x_0)(f^\prime(x)<0)) \Rightarrow(f \text{ has no extremum at }x_0)\\
+		&\text{b) } (\forall x \in \mathring{U}^-(x_0) (f^\prime(x)<0) )\land (\forall x \in  \mathring{U}^+(x_0)(f^\prime(x)>0)) \Rightarrow(x_0 \text{ is a strict local minimum of }f)\\
+		&\text{c) } (\forall x \in \mathring{U}^-(x_0) (f^\prime(x)>0) )\land (\forall x \in  \mathring{U}^+(x_0)(f^\prime(x)<0)) \Rightarrow(x_0 \text{ is a strict local maximum of }f)\\
+		&\text{d) } (\forall x \in \mathring{U}^-(x_0) (f^\prime(x)>0) )\land (\forall x \in  \mathring{U}^+(x_0)(f^\prime(x)>0)) \Rightarrow(f \text{ has no extremum at }x_0)\\
+	\end{align}
+\end{Proposition}
+\begin{Proposition}[Sufficient Conditions for an Extremum in terms of Higher-order Derivatives]
+	Suppose a function $ f:U(x_0) \to \Real $ defined on a neighborhood $ U(x_0) $ of $ x_0 $ has derivatives of order up to $ n $ inclusive at $ x_0 $ (n>1). \\
+	If $ f^\prime(x_0)=\cdots =f^{(n-1)}(x_0)=0 $ and $ f^{(n)}(x_0)\neq 0 $, then there is no extremum at $ x_0 $ if $ n $ is odd. If $ n $ is even, the point $ x_0 $ is a local extremum, in fact a strict local minimum if $ f^{(n)}(x_0)>0 $ and a strict local minimum if $ f^{(n)}(x_0)<0 $.
+\end{Proposition}
+\begin{proof}
+	Using the local Taylor formula and observe the change of sign of the term $ (x-x_0)^n $.
+\end{proof}
+\subsubsection{a.Young's Inequalities}
+If $ a>0 $ and $ b>0 $, and the numbers $ p $ and $ q $ such that $ p \neq 0,1 $, $ q \neq 0,1 $ and $ \frac{1}{p}+\frac{1}{q}=1 $, then 
+\begin{align}
+	a^{1/p}b^{1/q}&\leqslant \frac{1}{p}a+\frac{1}{q}b,\quad \text{ if } p>1\\
+	a^{1/p}b^{1/q}&\geqslant \frac{1}{p}a+\frac{1}{q}b,\quad \text{ if } p<1
+\end{align}
+and equality holds only when $ a=b $.
+\begin{proof}
+	Set $ x=\frac{a}{b} $ and $ \alpha=\frac{1}{p} $, then introduce the notation $ \frac{1}{q}=1-\frac{1}{p} $.
+\end{proof}
+\subsubsection{b.H\"{o}lder's Inequalities}
+Let $ x_i\geqslant 0 $, $ y_i\geqslant 0 $, $ i=1,\cdots,n $, and $ \frac{1}{p}+\frac{1}{q}=1  $. Then
+\begin{equation}
+	\sum_{i=1}^{n}x_i y_i \leqslant (\sum_{i=1}^{n}x^p_i)^{1/p} (\sum_{i=1}^{n}y^q_i)^{1/q} \quad \text{ for }p>1 \nonumber
+\end{equation}
+and
+\begin{equation}
+	\sum_{i=1}^{n}x_i y_i \geqslant (\sum_{i=1}^{n}x^p_i)^{1/p} (\sum_{i=1}^{n}y^q_i)^{1/q} \quad \text{ for }p<1,p\neq 0 \nonumber 
+\end{equation}
+In the case $ p<0 $ it is assumed that $ x_i>0 (i=1,\cdots,n)$. Equality is possible only when the vectors $ (x^p_1,\cdots,x^p_n) $ and $ (y^p_1,\cdots,y^q_n) $ are proportional.
+\begin{proof}
+	Let $ X =\sum_{i=1}^{n}x^p_i>0 $ and $ Y =\sum_{i=1}^{n}y^q_i>0 $. Set $ a=\frac{x_i^p}{X} $ and $ b=\frac{y_i^p}{Y} $ in Young's Inequalities when $ p>1 $. The case when $ p<1,p\neq 0 $ is similar.
+\end{proof}
+\subsubsection{c.Minkowski's Inequalities}
+Let $ x_i\geqslant 0 $, $ y_i\geqslant 0 $, $ i=1,\cdots,n $. Then
+\begin{equation}
+		(\sum_{i=1}^{n}(x_i+ y_i)^p )^{1/p}\leqslant (\sum_{i=1}^{n}x^p_i)^{1/p} +(\sum_{i=1}^{n}y^p_i)^{1/p} \quad \text{ when }p>1 \nonumber
+\end{equation}
+and
+\begin{equation}
+(\sum_{i=1}^{n}(x_i+ y_i)^p )^{1/p}\geqslant (\sum_{i=1}^{n}x^p_i)^{1/p} +(\sum_{i=1}^{n}y^p_i)^{1/p} \quad \text{ when }p<1,p\neq 0 \nonumber
+\end{equation}
+Knowing the conditions for equality in H\"{o}lder's inequality, equality is possible in Minkowski's inequalities only when the vectors $ (x_1,\cdots,x_n) $ and $ (y_1,\cdots,y_n) $ are collinear.
+\begin{proof}
+	Apply H\"{o}lder's inequality to the \textbf{terms} on the right-hand side of the indentity. The left side is then bounded form above (for $ p>1 $) or below (for $ p<1 $). Finally, divide these inequalities by $ (\sum_{i=1}^{n}(x_i+y_i)^p)^{1/q} $. (See Pg.240 for details).
+\end{proof}
+\textbf{For $ n=3 $ and $ p=2 $, Minkowski's inequality is the triangle inequality in three-dimensional Euclidean space.}
 
+\subsection{Conditions for a Function to be Convex}
+\begin{Definition}
+	A function $ f:(a,b)\to \Real $ defined on an open interval $ (a,b)\subset \Real $ is \textit{convex} if the inequalities
+	\begin{equation}
+		f(\alpha_1 x_1+\alpha_2 x_2) \leqslant \alpha_1 f(x_1) + \alpha_2 f(x_2) \nonumber
+	\end{equation}
+	hold for any points $ x_1,x_2 \in (a,b) $ and any numbers $ \alpha_1 \geqslant 0 $, $ \alpha_2 \geqslant 0 $ such that $ \alpha_1 + \alpha_2 = 1 $. If this inequality is strict whenever $ x_1\neq x_2 $ and $ \alpha_1 \alpha_2 \neq0 $, then function is \textit{strictly convex} on $ (a,b) $. The definition of convexity can be written as
+	\begin{equation}
+		\frac{f(x)-f(x_1)}{x-x_1} \leqslant \frac{f(x_2)-f(x)}{x_2-x} \nonumber
+	\end{equation}
+	for $ x_1<x<x_2 $ and any $ x_1,x_2 \in (a,b) $.
+\end{Definition}
+\includegraphics[width=\textwidth]{ConvexFunction}
+\textbf{For the first definition}, geometrically, convexity of a function means that the points of any arc of the graph of the function lie below the chord subtended by the arc. \textbf{For the second definition}, geometrically, it means that the slope of the chord I joining $ (x_1,f(x_1)) $ to $ (x,f(x)) $ is not larger than (and in the case of strict convexity is less than) the slope of the chord II joining $ (x,f(x)) $ to $ (x_2,f(x_2)) $.
+\begin{Definition}
+	If the opposite inequality holds for a function $ f:(a,b )\to \Real$, that function is said to be \textit{concave} on the interval $ (a,b $, or, more often, \textit{convex upward} in the interval, as opposed to a convex function, which is then said to be \textit{convex downward} on $ (a,b) $.
+\end{Definition}
+\begin{Proposition}
+	A necessary and sufficient condition for a function $ f:(a,b)\to \Real $ that is differentiable on the open interval $ (a,b) $ to be convex(downward) on that interval is that its derivative $ f^\prime $ be nondecreasing on $ (a,b) $. A strictly increasing $ f^\prime $ corresponds to a strict convex function.
+\end{Proposition}
+\begin{Corollary}
+	A necessary and sufficient condition for a function $ f:(a,b)\to \Real $ having a second derivative on the open interval $ (a,b) $ to be convex(downward) on $ (a,b) $ is that $ f^{\prime\prime}(x)\geqslant 0 $ on that interval. The condition $ f^{\prime\prime}(x)> 0 $ on $ (a,b) $ is sufficient to guarantee that $ f $ is strictly convex.
+\end{Corollary}
+\begin{Proposition}
+	A function $ f:(a,b)\to\Real $ that is differentiable on the open interval $ (a,b) $ is convex(downward) on $ (a,b) $ iff its graph contains no points below any tangent drawn to it. In that case, a necessary and sufficient condition for strict convexity is that all points of the graph except the point of tangency lie strictly above the tangent line.
+\end{Proposition}
+\begin{Definition}
+	Let $ f:U(x_0) \to \Real $ be a function defined and differentiable on a neighborhood $ U(x_0) $ of $ x_0 \in \Real $. If the function is convex downward (resp. upward) on the set $ \mathring{U}^-(x_0)=\{x \in U(x_0) | x< x_0  \} $ and convex upward (resp. downward) on $ \mathring{U}^+(x_0)=\{x \in U(x_0) | x> x_0  \} $, then $ (x_0,f(x_0)) $ is called a \textit{point of inflection of the graph}. \textbf{The point of inflection is where the function changes its convexity.}
+\end{Definition}
+\begin{Proposition}[Jensen's Inequality]
+	If $ f:(a,b)\to\Real $ is a convex function, $ x_1,\cdots,x_n $ are points of $ (a,b) $, and $ \alpha_1,\cdots,\alpha_n $ are nonnegative numbers such that $ \alpha_1 + \cdots + \alpha_n=1 $, then
+	\begin{equation}
+			f(\alpha_1 x_1+\cdots+\alpha_n x_n) \leqslant \alpha_1 f(x_1) + \cdots+\alpha_n f(x_n) \nonumber
+	\end{equation}
+	For a function that is convex upward, we have
+		\begin{equation}
+	f(\alpha_1 x_1+\cdots+\alpha_n x_n) \geqslant \alpha_1 f(x_1) + \cdots+\alpha_n f(x_n) \nonumber
+	\end{equation}
+\end{Proposition}
+\begin{proof}
+	Can be proved by induction.
+\end{proof}
+\begin{Example}
+	Since $ f(x) =\ln x $ is strictly convex upward on the set of positive numbers, then
+	\begin{equation}
+			\ln(\alpha_1 x_1+\cdots+\alpha_n x_n) \geqslant \alpha_1 \ln(x_1) + \cdots+\alpha_n \ln(x_n) \nonumber
+	\end{equation}
+	If $ \alpha_1=\cdots=\alpha_n=\frac{1}{n} $, we have
+	\begin{equation}
+		\sqrt[n]{x_1\cdots x_n} \leqslant \frac{x_1+\cdots + x_n}{n} \nonumber
+	\end{equation}
+	between the geometric and arithmetic means of $ n $ nonnegative numbers. Equality holds only when $ x_1 = x_2 =\cdots=x_n$. By setting $ n=2 $, $ \alpha_1=\frac{1}{p} $, $ \alpha_2 = \frac{1}{q} $, $ x_1=a $, $ x_2=b $, we obtain Young's inequality for $ p>1 $.
+\end{Example}
+
+\subsection{L'Hôpital's Rule}
+\begin{Proposition}[L'Hôpital's Rule]
+	Suppose the function $ f:(a,b)\to\Real $ and $ g:(a,b)\to\Real $ are differentiable on the open interval $ (a,b) $ ($ -\infty \leqslant a < b \leqslant + \infty $) with $ g^\prime(x)\neq 0 $ on $ (a,b) $ and
+	\begin{equation}
+		\frac{f^\prime(x)}{g^\prime(x)}\to A \quad \text{ as } x \to a+0 \quad (-\infty \leqslant A \leqslant +\infty)\nonumber
+	\end{equation}
+	Then
+	\begin{equation}
+		\frac{f(x)}{g(x)} \to A \quad \text{ as } x\to a+0 \nonumber
+	\end{equation}
+	in each of the following two cases:\\
+	1$ ^0 \quad(f(x)\to 0)\land (g(x)\to 0)$ as $ x\to a+0 $. \\
+	or \\
+	2$ ^0 \quad g(x)\to \infty $ as $ x\to a+0 $. \\
+	A similar assertion holds as $ x \to b-0 $.
+\end{Proposition}
+
+\subsection{Constructing the Graph of a Function}
+\begin{Definition}
+	The line $ c_0+c_1 x $ is called an \textit{asymptote} of the graph of the function $ y=f(x) $ as $ x \to \pm \infty $ if $ f(x)-(c_0 + c_1 x) = o(1) $ as $ x \to \pm \infty $. If $ |f(x)|\to \infty $ as $ x \to a \pm 0 $, the line $ x=a $ is called a \textit{vertical asymptote} of the graph.
+\end{Definition}
+In general, if $ f(x)-(c_0+c_1 x+\cdots+c_n x^n)=o(1) $ as $ x \to -\infty $, then
+\begin{align}
+	c_n &= \lim\limits_{x \to -\infty} \frac{f(x)}{x^n} \\
+	c_{n-1}&=\lim\limits_{x \to -\infty} \frac{f(x)-c_n x^n}{x^{n-1}} \\
+	&\vdots \\
+	c_0 &= \lim\limits_{x \to -\infty} (f(x)-(c_1 x+\cdots+c_n x^n))
+\end{align}
+It uses the graph of the corresponding algebraic polynomial $ c_0+c_1 x+\cdots+c_n x^n $ to describe the asymptotic behavior of $ f(x) $.
 \section{Complex Numbers and Elementary Functions}
 \subsection{Complex Numbers}
+\begin{Example}
+	The set of complex numbers, $ \Complex $, is a field containing $ \Real $ as a subfield.
+\end{Example}
+\begin{proof}
+	The only nonobvious point in the verification that $ \Complex $ is a field is that every non-zero complex number $ z = x+\iu y $ has an inverse $ z^{-1} $. We denote the \textit{conjugate} of $ z $ as $ \tilde{z} =x- \iu y$. Then $ z^{-1} $ should be taken as $ \frac{1}{x^2+y^2}\cdot \tilde{z} =\frac{x}{x^2+y^2}- \iu \frac{y}{x^2+y^2}$.
+\end{proof}
+Geometrically speaking, a complex number can be viewed as the Cartesian coordinates in $ \Real^2 $. Therefore, the \textit{absolute value} or \textit{modulus} $ |z| $ of a complex number is
+\begin{equation}
+	|z|=\sqrt{x^2+y^2},\text{ if }z=x+ \iu y\nonumber
+\end{equation}
+The set of complex numbers is called the \textit{complex plane}.
+\begin{Definition}
+	If $ z= x+ \iu y $ (\textit{algebraic form}), then the \textit{trigonometric (polar) forms} of a complex number is
+	\begin{equation}
+		z= r(\cos \varphi + \iu \sin \varphi) \nonumber
+	\end{equation}
+	since $ x= r \cos \varphi $ and $ y= r \sin \varphi $ for $ (x,y) $ and a polar coordinate $ (r,\varphi) $. Note that $ r $ is the modulus or absolute value of $ z $. $ \varphi $ is called the \textit{argument} of $ z $ and denoted $ \varphi \in Arg z $. By the characteristics of polar coordinates, there are infinitely many representation of a complex number. To make a representation unique, we must constrain the range of the argument. If such a choice has been made(usually $ 0 \leqslant \varphi < 2 \pi $), we say that a \textit{branch} (or the \textit{principle branch}) of the argument has been chosen, thus $ \varphi = arg z $.
+\end{Definition}
+We can see that
+\begin{equation}
+	z_1 \cdot z_2 = r_1 r_2 (\cos(\varphi_1+\varphi_2)+ \iu \sin(\varphi_1+\varphi_2))\nonumber
+\end{equation}
+\begin{Example}[de Moivre's Formula]
+	\begin{equation}
+		z^n =r^n(\cos n\varphi+\iu \sin n \varphi)\nonumber
+	\end{equation}
+\end{Example}
+The product $ az $ where $ a=|a|(\cos \varphi + \iu \sin \varphi) \neq 0 $ can be viewed as the composition of a dilation by a factor of $ |a| $ and a rotation through the angle $ \varphi \in Arg(a) $.
+
 \subsection{Convergence in $ \Complex $ and Series with Complex Terms}
+The set $ \{z \in \Complex | |z-z_0|<\varepsilon \} $, the $ \varepsilon $-neighborhood of a number $ z_0\in \Complex $ is a disk (without the boundary circle) of radius $ \varepsilon $ centered at $ z_0 $.
+\begin{Definition}
+	A sequence of complex terms \textit{converges} to $ z_0 \in \Complex $ if $ \lim\limits_{n \to \infty} |z_n-z_0|=0 $.
+\end{Definition}
+It is clear that a sequence of complex numbers converges iff the sequence of its real and imaginary parts of the terms of the sequence both converge.
+The definition for a \textit{fundamental} or \textit{Cauchy} sequence in $ \Complex $ is analogous with its definition for a sequence of real numbers.
+\begin{Proposition}[The Cauchy Criterion]
+	A sequence of complex numbers converges iff it is a Cauchy sequence.
+\end{Proposition}
+The Cauchy Criterion for series and the definition of absolute convergence is the same as them for a series of real numbers.
+\begin{Proposition}[The Cauchy-Hadmard Formula]
+	The power series
+	\begin{equation}
+		c_0+c_1(z-z_0)+\cdots+c_n(z-z_0)^n+\cdots \nonumber
+	\end{equation}
+	converges inside the disk $ |z-z_0|< R $ with center at $ z_0 $ and radius given by the Cauchy-Hadamard formula
+	\begin{equation}
+		R =\frac{1}{\varlimsup_{n \to \infty} \sqrt[n]{|c_n|}} \nonumber
+	\end{equation}
+	At any point exterior to this disk the power series diverges. \\
+	At any point interior to the disk, the power series converges absolutely.
+\end{Proposition}
+\begin{Proposition}[Abel's First Theorem on Power Series]
+	If the power series converges at some value $ z^* $, then it absolutely converges for any value of $ z $ satisfying the inequality $ |z-z_0|<|z^*-z_0| $.
+\end{Proposition}
+\begin{Proposition}
+	If a series of complex numbers converges absolutely, then a series obtained by rearranging its terms also converges absolutely and has the same sum.
+\end{Proposition}
+\begin{Proposition}
+	The product of absolute convergent series is an absolutely convergent series whose sum equals the product of the sums of the factor series.
+\end{Proposition}
+\begin{Example}
+	For two series $ \sum_{n=0}^{\infty}\frac{1}{n!}a^n $ and $ \sum_{m=0}^{\infty}\frac{1}{m!}b^m $ that converge absolutely, if $ k=m+n $, we have
+	\begin{equation}
+		\sum_{n=0}^{\infty}\frac{1}{n!}a^n \cdot \sum_{m=0}^{\infty}\frac{1}{m!}b^m = \sum_{k=0}^{\infty}\frac{1}{k!}(a+b)^k\nonumber
+	\end{equation}
+\end{Example}
+
 \subsection{Euler's Formula and the Connections Among the Elementary Functions}
 \subsection{Power Series Representation of a Function. Analyticity}
 \subsection{Algebraic Closedness of the Field $ \Complex $ of Complex Numbers}
