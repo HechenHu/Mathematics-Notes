@@ -36,6 +36,9 @@
 \newcommand{\newpara}{\\ \newline}
 \newcommand{\Complex}{\mathbb{C}}
 \newcommand{\iu}{{i\mkern1mu}}
+\newcommand{\Si}{\text{Si }}%Sine Integral
+\newcommand{\Ci}{\text{Ci }}%Cosine Integral
+\newcommand{\li}{\text{li }}%Logarithmic Integral
 
 % inverse hyperbolic functions
 \DeclareMathOperator{\sech}{sech}
@@ -2909,17 +2912,303 @@ The Cauchy Criterion for series and the definition of absolute convergence is th
 \end{Example}
 
 \subsection{Euler's Formula and the Connections Among the Elementary Functions}
-\subsection{Power Series Representation of a Function. Analyticity}
-\subsection{Algebraic Closedness of the Field $ \Complex $ of Complex Numbers}
+\begin{Theorem}[Euler Formula]
+	\begin{equation}
+		e^{\iu y}=\cos y+ \iu \sin y \nonumber
+	\end{equation}
+	Here $ y $ is either a real number or an arbitrary number. If $ y=0 $
+	\begin{equation}
+		e^{\iu \pi} +1= 0\nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	Find the Taylor series for $ e^z,\cos z, \sin z $, where $ z \in \Complex$ , then substitute $ z $ with $ \iu y $.
+\end{proof}
+\begin{Definition}[The Trigonometric Notation for a Complex Number]
+	\begin{equation}
+		z = r e^{\iu \varphi} \nonumber
+	\end{equation}
+	where $ r $ is the modulus of $ z $ and $ \varphi $ its argument.
+\end{Definition}
+\begin{Theorem}[Formula of de Moivre]
+	\begin{equation}
+		z^n=r^n e^{\iu n \varphi} \nonumber
+	\end{equation}
+\end{Theorem}
 
+
+
+\subsection{Power Series Representation of a Function. Analyticity}
+A function that has complex domain and complex range, thus its graph is a subset of $ \Complex \times \Complex = \Real^4 $ and can not be visualized in the traditional way. To compensate for this loss to some extent, one usually keeps two copies of the complex plane $ \Complex $, indicating points of the domain in one and points of the range of values in the other.\newpara
+The definitions of continuity, derivative, and differentiability for complex-valued functions are identical to those for real-valued functions. Since the arithmetic properties of the fields $ \Complex $ and $ \Real $ are the same, all the general rules for differentiation, such as rules for addition, product, and quotient, are the same.
+\begin{Theorem}
+	The sum $ f(z)= \sum_{n=0}^{\infty} c_n (z-z_0)^n $ of a power series is an infinitely differentiable function inside the entire disk in which convergence occurs. Moreover,
+	\begin{equation}
+		f^{(k)}(z)= \sum_{n=0}^{\infty}\frac{d^k}{d z^k}(c_n (z-z_0)^n), \quad k=0,1,\cdots \nonumber
+	\end{equation}
+	and 
+	\begin{equation}
+		c_n=\frac{1}{n!}f^{(n)}(z_0),\quad n=0,1,\cdots \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+\begin{Definition}
+	A function is \textit{analytic} at a point $ z_0 \in \Complex $ if it can be represented in a neighborhood of the point in the following ("analytic") form:
+	\begin{equation}
+		f(z)=\sum_{n=0}^{\infty}c_n (z-z_0)^n \nonumber
+	\end{equation}
+	that is, as the sum of a power series in $ z-z_0 $.
+\end{Definition}
+\begin{Corollary}
+	\textbf{a)} If a function is analytic at a point, then it is infinitely differentiable at that point, and its Taylor series converges to it in a neighborhood of the point. \newpara
+	\textbf{b)} The Taylor series of a function defined in a neighborhood of a point and infinitely differentiable at that point converges to the function in some neighborhood of the point iff the function is analytic.
+\end{Corollary}
+This means that if a function has one derivative in a neighborhood of a point, it also has derivatives of all orders in that neighborhood.
+
+\subsection{Algebraic Closedness of the Field $ \Complex $ of Complex Numbers}
+\begin{Theorem}[Fundamental Theorem of Algebra]
+	Every polynomial
+	\begin{equation}
+		P(z)=c_0 + c_1 z + \cdots + c_n z^n \nonumber
+	\end{equation}
+	of degree $ n \geqslant 1 $ with complex coefficients has a root in $ \Complex $.
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+\textit{Remark} If $ P(z_0)=0 $, then its conjugate $ \tilde{z_0} $ satisfies $ P(\tilde{z_0})=0 $.
+\begin{Corollary}
+	Every polynomial $ P(z)=c_0 + \cdots + c_n z^n $ of degree $ n \geqslant 1 $ with complex coefficients admits a representation in the form
+	\begin{equation}
+		P(z)=c_n(z-z_1)\cdots(z-z_n) \nonumber
+	\end{equation}
+	where $ z_1, \cdots, z_n \in \Complex $(they are not necessarily all distinct). This representation is unique up to the order of the factors.
+\end{Corollary}
+\begin{proof}
+	Use the long division algorithm on $ P(z) $, we find that $ P(z)=q(z)Q(z)+r(z) $, where $ q(z) $ and $ r(z) $ are polynomials, the degree of $ r(z) $ being less than the degree $ m $ of $ Q(z) $. Set $ m=1 $m and find that $ r=0 $, then use the principle of induction.
+\end{proof}
+By multiplying out all identical factors, one can rewrite that product:
+\begin{equation}
+	P(z)=c_n(z-z_1)^{k_1}\cdots(z-z_n)^{k_p} \nonumber
+\end{equation}
+The number $ k_j $ is called the \textit{multiplicity} of the root $ z_j $.
+\begin{Corollary}
+	Every polynomial $ P(z)=a_0+\cdots+a_n z^n $ with real coefficients can be expanded as a product of linear and quadratic polynomials with real coefficients.
+\end{Corollary}
+\begin{Corollary}
+	Every root $ z_j $ of multiplicity $ k_j>1 $ of a polynomial $ P(z) $ is a root of multiplicity $ k_j -1 $ of the derivative $ P^\prime(z) $.
+\end{Corollary}
+\begin{Corollary}
+	\textbf{a)} If $ Q(z)=(z-z_1)^{k_1} \cdots (z-z_p)^{k_p} $ and $ \frac{P(z)}{Q(z)} $ is a proper fraction (the degree of $ P(z) $ is less than that of $ Q(z) $), there exists a unique representation of the fraction $ \frac{P(z)}{Q(z)} $ in the form
+	\begin{equation}
+		\frac{P(z)}{Q(z)}=\sum_{j=1}^{p}(\sum_{k=1}^{k_j}\frac{a_{jk}}{(z-z_j)^k}) \nonumber
+	\end{equation}
+	\textbf{b)} If $ P(x) $ and $ Q(x) $ are polynomials with real coefficients and
+	\begin{equation}
+		Q(x)=(x-x_1)^{k_1} \cdots (x-x_l)^{k_l}(x^2+p_1 x + q_1)^{m_1} \cdots (x^2 + p_n x + q_n)^{m_n} \nonumber
+	\end{equation}
+	there exists a unique representation of the proper fraction $ \frac{P(x)}{Q(x)} $ in the form
+	\begin{equation}
+		\frac{P(x)}{Q(x)} = \sum_{j=1}^{l}(\sum_{k=1}^{k_j}\frac{a_{jk}}{(x-x_j)^k}) + \sum_{j=1}^{j=1}(\sum_{k=1}^{m_j}\frac{b_{jk}x+c_{jk}}{(x^2+p_j x + q_j)^k}) \nonumber
+	\end{equation}
+	where $ a_{jk},b_{jk} $, and $ c_{jk} $ are real numbers.
+\end{Corollary}
 
 
 \section{Primitives}
 \subsection{The Primitive and the Indefinite Integral}
+\begin{Definition}
+	A function $ F(x) $ is a \textit{primitive} of a function $ f(x) $ on an interval if $ F $ is differentiable on the interval and satisfies the equation $ F^\prime(x)=f(x) $, or $ d F(x)=f(x)dx $.
+\end{Definition}
+\begin{Proposition}
+	From Lagrange's theorem, if $ F_1(x) $ and $ F_2(x) $ are two primitives of $ f(x) $ on the same interval, then the difference $ F_1(x)-F_2(x) $ is constant on that interval.
+\end{Proposition}
+\begin{Definition}
+	The \textit{indefinite integral} of $ f(x) $ is denoted as
+	\begin{equation}
+		\int f(x)dx \nonumber
+	\end{equation}
+	where $ \int $ is called the \textit{indefinite integral sign}, $ f $ is called the \textbf{integrand}, and $ f(x)dx $ is called a \textit{differential form}.
+\end{Definition}
+
 \subsection{The Basic General Methods of Finding a Primitive}
+\begin{Theorem}
+	Taken account of the relationship between a function and its primitive as well as the laws of differentiation, we can assert that the following relations hold
+	\begin{align}
+		&\text{a. }\quad \int(\alpha u(x)+\beta v(x))dx = \alpha \int u(x)dx+\beta \int v(x)dx +c \\
+		&\text{b. }\quad \int(uv)^\prime dx = \int u^\prime(x)v(x)dx + \int u(x)v^\prime(x)dx +c
+	\end{align}
+	Moreover, if
+	\begin{equation}
+		\int f(x)dx = F(x)+c \nonumber
+	\end{equation}
+	on an interval $ I_x $ and $ \varphi:I_t  \to I_x$ is a smooth (continuously differentiable) mapping of the interval $ I_t $ into $ I_x $, then
+	\begin{equation}
+		\int (f \circ \varphi)(t)\varphi^\prime(t)dt = (F \circ \varphi)(t)+c \nonumber
+	\end{equation}
+	Here we make the change of variable $ \varphi(t)=x $. This can be used to find primitive.
+\end{Theorem}
+\begin{Example}[Integration by Parts]
+	\begin{equation}
+		\int(uv)^\prime dx = \int u^\prime(x)v(x)dx + \int u(x)v^\prime(x)dx+c \nonumber
+	\end{equation}
+	can be rewritten as
+	\begin{equation}
+		\int u(x)dv(x) = u(x)v(x)-\int v(x)du(x)+c \nonumber
+	\end{equation}
+\end{Example}
+Some primitives of the composition of elementary functions \textbf{cannot be expressed as the composition of elementary functions}. We make the following definition for special cases of indefinite integrals:
+\begin{Definition}[Sine Integral]
+	The \textit{sine integral}, denoted $ \Si x $, is defined as
+	\begin{equation}
+		\Si x = \int \frac{\sin x}{x}dx \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Definition}[Cosine Integral]
+	The \textit{cosine integral}, denoted $ \Ci x $, is defined as
+	\begin{equation}
+	\Ci x = \int \frac{\cos x}{x}dx \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Definition}[Logarithmic Integral]
+	The \textit{logarithmic integral}, denoted $ \li x $, is defined as
+	\begin{equation}
+	\li x = \int \frac{ dx}{\ln x} \nonumber
+	\end{equation}
+\end{Definition}
+
 \subsection{Primitives of Rational Functions}
+\begin{Example}
+	\begin{equation}
+		\int \frac{1}{(x-a)^k}dx = \begin{cases}
+		& \frac{1}{-k+1}(x-a)^{-k+a}+c\quad \text{for }k \neq 1\\
+		&\ln |x-a|+c \quad \text{for }k=1\\
+		\end{cases} \nonumber
+	\end{equation}
+\end{Example}
+\begin{Example}
+	For the following integral
+	\begin{equation}
+		\int \frac{bx+c}{(x^2+px+q)^k}dx \nonumber
+	\end{equation}
+	We represent $ x^2+px+q $ as $ (x+\frac{1}{2}p)^2 +(p-\frac{1}{4}p^2)$, where $ q- \frac{1}{4}p^2>0 $, since the original polynomial has no real roots. Setting $ x+ \frac{1}{2}p=u $ and $ q-\frac{1}{4}p^2 =a^2 $, we obtain
+	\begin{equation}
+		\int \frac{bx+c}{(x^2+px+q)^k}dx = \int \frac{\alpha u + \beta}{(u^2+a^2)^k}du \nonumber
+	\end{equation}
+	where $ \alpha = b $ and $ \beta = c- \frac{1}{2}bp $. Next
+	\begin{equation}
+		\int \frac{\alpha u + \beta}{(u^2+a^2)^k}du = \begin{cases}
+		& \frac{1}{2(1-k)}(u^2+a^2)^{-k+1}\quad \text{for }k\neq 1\\
+		& \frac{1}{2}\ln(u^2+a^2)\quad \text{for }k=1\\
+		\end{cases} \nonumber
+	\end{equation}
+\end{Example}
+\begin{Example}
+	For the following integral
+	\begin{equation}
+		I_k = \int \frac{du}{(u^2+a^2)^k} \nonumber
+	\end{equation}
+	Integrating by parts and making elementary transformations, we have
+	\begin{equation}
+		I_k = \frac{u}{(u^2+a^2)^k} + 2k I_k - 2k a^2 I_{k+1} \nonumber
+	\end{equation}
+	which makes it possible to lower the exponent $ k $ in the integral. But $ I_1 $ is easy to compute
+	\begin{equation}
+		I_1 = \frac{1}{a}\arctan \frac{u}{a} +c \nonumber
+	\end{equation}
+	and then we can compute the primitive our original problem.
+\end{Example}
+\begin{Proposition}
+	The primitive of any rational function $ R(x)=\frac{P(x)}{Q(x)} $ can be expressed in terms of rational functions and the transcendental functions $ \ln $ and $ \arctan $. The rational part of the primitive, when placed over a common denominator, will have a denominator containing all the factors of the polynomial $ Q(x) $ with multiplicities one less than they have in $ Q(x) $.
+\end{Proposition}
+\begin{Example}
+	For the indefinite integral
+	\begin{equation}
+		\int\frac{2x^2+5x+5}{(x^2-1)(x+2)}dx \nonumber
+	\end{equation}
+	We find all the factors of the denominator, then
+	\begin{equation}
+		\frac{2x^2+5x+5}{(x^2-1)(x+2)} = \frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{x+2} \nonumber
+	\end{equation}
+	Putting the right-hand side of this equation over a common denominator
+	\begin{equation}
+		\frac{2x^2+5x+5}{(x^2-1)(x+2)} = \frac{(A+B+C)x^2+(3A+B)x+(2A-2B-C)}{(x-1)(x+1)(x+1)} \nonumber
+	\end{equation}
+	 and solve the system
+	 \begin{equation}
+	 	\begin{cases}
+	 	&A+B+C=1\\
+	 	&3A+B=5\\
+	 	&2A-2B-C=5\\
+	 	\end{cases} \nonumber
+	 \end{equation}
+\end{Example}
+
+
+
+
 \subsection{Primitives of the Form $ \int R(\cos x, \sin x)dx $}
+Let $ R(u,v) $ be a rational function in $ u $ and $ v $, that is a quotient of polynomials $ \frac{P(u,v)}{Q(u,v)} $, which are linear combinations of monomials $ u^m v^n $, where $ m=0,1,2,\cdots $ and $ n=0,1,\cdots $. \newpara
+\textbf{a.} We make the change of variable $ t=\tan \frac{x}{2} $, and
+\begin{equation}
+	\int R(\cos, \sin x)dx = \int R(\frac{1-t^2}{1+t^2},\frac{2t}{1+t^2})\frac{2}{1+t^2}dt \nonumber
+\end{equation}
+\textbf{b.} In the case of $ \int R(\cos^2 x, \sin^2 x)dx $ or $ \int r(\tan x)dx $, where $ r(u) $ is a rational function, we substitute $ t $ with $ \tan x $, and
+\begin{align}
+	\int R(\cos^2 x, \sin^2 x)dx &= \int R(\frac{1}{1+t^2},\frac{t^2}{1+t^2})\frac{dt}{1+t^2} \nonumber\\
+	\int r(\tan x)dx  &= \int r(t)\frac{dt}{1+t^2}\nonumber
+\end{align}
+\textbf{c.} In the case of integrals of the form
+\begin{equation}
+	\int R(\cos x, \sin^2 x)\sin x dx \quad \text{ or }\quad \int R(\cos^2 x, \sin x)\cos x dx \nonumber
+\end{equation}
+One can move the functions $ \sin x $ and $ \cos x $ into the differential and make the substitution $ t=\cos x $ or $ t = \sin x $ respectively. Then
+\begin{equation}
+	- \int R(t,1-t^2)dt \quad \text{or } \quad \int R(1-t^2,t)dt \nonumber
+\end{equation}
+
+
 \subsection{Primitives of the Form $ \int R(x,y(x))dx $}
+Let $ R(x,y) $, as in previous subsection, a rational function where $ y $ is a function of $ x $. \newpara
+\textbf{a.} If $ y =\sqrt[n]{\frac{ax+b}{cx+d}}$, where $ n \i \Natural $, then, setting $ t^n = \frac{ax+b}{cx+d} $, we obtain
+\begin{equation}
+	x=\frac{d \cdot t^n-b}{a-c\cdot t^n},\quad y=t \nonumber
+\end{equation}
+\textbf{b.} When $ y=\sqrt{ax^2+bx+c} $, we reduce the general case to one of the following three simple cases by completing the square in the trinomial $ ax^2+bx+c $ and making a suitable linear substitution
+\begin{equation}
+	\int R(t,\sqrt{t^2+1})dt,\quad \int R(t,\sqrt{t^2-1})dt,\quad \int R(t,\sqrt{1-t^2})dt \nonumber
+\end{equation}
+Now we make the following substitutions
+\begin{align}
+	&\sqrt{t^2+1}=tu+1,\quad \text{or } \quad \sqrt{t^2+1}=tu-1,\quad \text{or }\quad \sqrt{t^2+1}=t-u\\
+	&\sqrt{t^2-1}=u(t-1),\quad \text{or } \quad \sqrt{t^2-1}=u(t+1),\quad \text{or }\quad \sqrt{t^2-1}=t-u\\
+	&\sqrt{1-t^2}=u(1-t),\quad \text{or } \quad \sqrt{1-t^2}=u(1+t),\quad \text{or }\quad \sqrt{1-t^2}=tu \pm 1\\
+\end{align}
+that will reduce these integrals to the integral of a rational function. Alternatively, one can make the substitution $ t= \sinh \varphi ,t=\cosh \varphi$, and $ t= \sin \varphi $ (or $ t= \cos \varphi $) respectively.
+\textbf{c.Elliptic Integrals} 
+\begin{Definition}[Elliptic Integrals]
+	\begin{equation}
+		\int R(x,\sqrt{P(x)})dx \nonumber
+	\end{equation}
+	Here $ P(x) $ is a polynomial of degree $ n>2 $. In general, such an integral cannot be expressed in terms of elementary functions. For $ n=3 $ and $ n=4 $, this integral is called an \textit{elliptic integral}, and for $ n>4 $ it is called \textit{hyperelliptic}.
+\end{Definition}
+By elementary substitutions the general elliptic integral can be reduced to the following three standard forms up to terms expressible in elementary functions:
+\begin{align}
+	&\int \frac{dx}{\sqrt{(1-x^2)(1-k^2x^2)}}, \\
+	&\int \frac{x^2 dx}{\sqrt{(1-x^2)(1-k^2x^2)}}, \\
+	&\int \frac{dx}{(1+hx^2)\sqrt{(1-x^2)(1-k^2x^2)}}
+\end{align}
+where $ h $ and $ k $ are parameters and $ k \in (0,1)$. By the substitution $ x = \sin \varphi $, we reduce all these three integrals to:
+\begin{align}
+	&\int \frac{d \varphi}{\sqrt{1-k^2 \sin^2 \varphi}}, \\
+	&\int \sqrt{1-k^2 \sin^2 \varphi}d\varphi, \\
+	&\int \frac{d \varphi}{(1+h \sin^2 \varphi)\sqrt{1-k^2 \sin^2 \varphi}}
+\end{align}
+The integrals are called respectively the \textit{elliptic integral of \textbf{first kind}, \textbf{second kind},} and \textit{\textbf{third kind}} (in the Legendre form).\newpara
+The symbols $ F(k,\varphi) $ and $ E(k,\varphi) $ respectively denote the particular elliptic integrals of first and second kind that satisfy $ F(k,0)=0 $ and $ E(k,0)=0 $.
+
 
 
 \chapter{Integration}
