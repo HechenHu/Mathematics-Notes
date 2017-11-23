@@ -28,6 +28,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 
+%Vector Stuff
+\renewcommand{\vec}[1]{\mathbf{#1}} % Bold Vector Notation
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Norm of a Vector
+\newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}} % Unit Vector
+\newcommand{\innPro}[2]{\langle #1, #2 \rangle}%Inner Product
+\newcommand{\grad}[1]{\text{grad}#1} % Gradient
+
 \renewcommand{\@chapapp}{}% Not necessary...
 \newcommand{\Real}{\mathbb{R}}
 \newcommand{\Natural}{\mathbb{N}}
@@ -2397,6 +2404,30 @@ Since the right-hand side of this equality tends to zero as $ x \to x_0,x\in E $
 	\end{align}
 \end{proof}
 
+\begin{Example}[Waerden's Function]
+	Set
+	\begin{equation}
+		\Psi_0(x)=\begin{cases}
+		&x,\quad \text{ if }0 \leqslant x \leqslant \frac{1}{2}\\
+		&1-x, \quad \text{ if }\frac{1}{2}\leqslant x \leqslant 1
+		\end{cases} \nonumber
+	\end{equation}
+	and extend this function to the entire real line so as to have period $ 1 $. We denote the extended function by $ \varphi_0 $. Further, let
+	\begin{equation}
+		\varphi_n(x)=\frac{1}{4^n}\varphi_0(4^n x)\nonumber
+	\end{equation}
+	The function $ \varphi_n $ has period $ 4^{-n} $ and a derivative equal to $ +1 $ or $ -1 $ everywhere except at the points $ x= \frac{k}{2^{2n+1}},k \in \Zahlen $. Let
+	\begin{equation}
+		f(x)=\sum_{n=1}^{\infty}\varphi_n(x) \nonumber
+	\end{equation}
+	This function is defined and continuous on $ \Real $, but does not have a derivative at any point.
+\end{Example}
+\begin{proof}
+	The function series $ \{\varphi_n(x)\} $ is convergent by Weierstrass's M-test, thus the function is continuous everywhere. Now we prove that this function is not differentiable everywhere. \newpara
+	For any positive $ n $ and any arbitrary point $ a $, choose $ h_n $ to be $ \frac{1}{4^{n+1}} $ or $ -\frac{1}{4^{n+1}} $, so that $ |\varphi_n(a+h_n)-\varphi_n(a)|=|h_n| $. This is possible because $ h_n $ is a quarter of the period of $ \varphi_n(x) $ and $ \varphi_n(x) $ is a linear function that has a slope of $ \pm 1 $ in the interval $ 2h_n $ containing $ a $. \newpara
+	We can also see that for $ m \leqslant n $ we have $ |\varphi_m(a+h_n)-\varphi_m(a)|=h_n $ and for $ m>n$ we have $ |\varphi_m(a+h_n)-\varphi_m(a)|=0 $, since $ h_n $ can be expressed as $ \frac{4(m-n)}{4^{m}}$, a multiple of the period of $ \varphi_m(x) $. Hence $ \frac{f(a+h_n)-f(a)}{h_n} $ is an integer whose parity (the fact of being odd or even) is the same as $ n $. Therefore the limit $ \lim\limits_{n \to \infty}\frac{f(a+h_n)-f(a)}{h_n} $ cannot exist, which implies that this function is not differentiable at any arbitrary point.
+\end{proof}
+
 
 
 \section{The Basic Rules of Differentiation}
@@ -3022,6 +3053,7 @@ The number $ k_j $ is called the \textit{multiplicity} of the root $ z_j $.
 \begin{Definition}
 	A function $ F(x) $ is a \textit{primitive} of a function $ f(x) $ on an interval if $ F $ is differentiable on the interval and satisfies the equation $ F^\prime(x)=f(x) $, or $ d F(x)=f(x)dx $.
 \end{Definition}
+
 \begin{Proposition}
 	From Lagrange's theorem, if $ F_1(x) $ and $ F_2(x) $ are two primitives of $ f(x) $ on the same interval, then the difference $ F_1(x)-F_2(x) $ is constant on that interval.
 \end{Proposition}
@@ -3562,26 +3594,328 @@ All the properties, except \textbf{d)}, can be proved similarly as we did for si
 
 \section{The Linear Structure on $ \Real^m $}
 \subsection{$ \Real^m $ as a Vector Space}
+\begin{Definition}
+	A \textit{vector space} over a field $ F $ is a set $ V $ with two operations, \textit{vector addition} or simply \textit{addition} and \textit{scalar multiplication}, that satisfy the following axioms:\\
+	\textbf{$ 1^0 $}: Associativity of addition;\\
+	\textbf{$ 2^0 $}: Commutativity of addition;\\
+	\textbf{$ 3^0 $}: Identity element of addition;\\
+	\textbf{$ 4^0 $}: Inverse elements of addition;\\
+	\textbf{$ 5^0 $}: Compatibility of scalar multiplication with field multiplication;
+	\begin{equation}
+		a(b \vec{v})=(ab)\vec{v} \nonumber
+	\end{equation}
+	\textbf{$ 6^0 $}: Identity element of scalar multiplication;\\
+	\textbf{$ 7^0 $}: Distributivity of scalar multiplication with respect to vector addition;\\
+	\textbf{$ 8^0 $}: Distributivity of scalar multiplication with respect to field addition.\newpara
+	Here the field $ F $ is \textbf{the field of real numbers and the set of the vectors consists of the planar arrows with fixed starting point and of pairs of real numbers}, respectively.
+\end{Definition}
+Any vector $ x \in \Real^m$  can be expanded with respect to the basis, that is, represented in the form
+\begin{equation}
+	x=x^1 e_1 + \cdots + x^m e_m \nonumber
+\end{equation}
+If the same letter simultaneously present in the subscript and superscript, we make the convention of summation with respect to that letter over its range of variation
+\begin{equation}
+	x=x^i e_i \nonumber
+\end{equation}
 \subsection{Linear Transformations $ L : \Real^m \to \Real^n $}
+\begin{Definition}
+	A mapping $ L:X \to Y $ from a vector space $ X $ into a vector space $ Y $ is called \textit{linear} if
+	\begin{equation}
+		L(\lambda_1 x_1 + \lambda_2 x_2)= \lambda_1 L(x_1)+\lambda_2 L(x_2)\nonumber
+	\end{equation}
+\end{Definition}
+\textbf{When vectors are indexed, we shall write the index as a subscript, while denoting its coordinates by superscripts.}
 \subsection{The Norm in $ \Real^m $}
+\begin{Definition}
+	The quantity
+	\begin{equation}
+		\norm{x}=\sqrt{(x^1)^2+\cdots + (x^m)^2} \nonumber
+	\end{equation}
+	is called the \textit{norm} of the vector $ x=(x^1,\cdots,x^m)\in \Real^m $.
+\end{Definition}
+Taking account of Minkowski's inequality, we have \\
+\textbf{$ 1^0 $} $ \norm{x}\geqslant 0 $,\\
+\textbf{$ 2^0 $} $ (\norm{x}=0)\Leftrightarrow (x=0) $,\\
+\textbf{$ 3^0 $} $ \norm{\lambda x} = |\lambda|\cdot\norm{x}$, where $ \lambda \in \Real $,\\
+\textbf{$ 4^0 $} $ \norm{x_1+x_2}\leqslant \norm{x_1}+\norm{x_2} $ (\textit{triangle inequality}).\newpara
+In general, any function $ \norm{} :X \to \Real$ on a vector space $ X $ satisfying these four conditions is called a \textit{norm} on the vector space. \newpara
+If $ d(x_1,x_2) $ is the distance in $ \Real^m $ between the vectors $ x_1 $ and $ x_2 $, regarded as points of $ \Real^m $, we have
+\begin{equation}
+	\norm{x_2-x_1}=d(x_1,x_2)\nonumber
+\end{equation}
+in particular
+\begin{equation}
+	\norm{x} = d(0,x)\nonumber
+\end{equation}
+By extending the triangle inequality using induction, we have
+\begin{equation}
+	\norm{x_1+\cdots + x_k} \leqslant \norm{x_1} + \cdots + \norm{x_k}\nonumber
+\end{equation}
+For $ f:X \to \Real^m $ and $ g: X \to \Real^n $, we agree to write $ f(x)=o(g(x)) $ or $ f=o(g) $ over a base $ \mathcal{B} $ in $ X $ if $ \norm{f(x)}_{\Real^m}=o(\norm{g(x)}_{\Real^n}) $ over the base $ \mathcal{B} $. \\
+
+If $ f(x)=(f^1(x),\cdots,f^m(x) $ is the coordinate representation of the mapping $ f:X \to \Real^m $, then in view of the inequalities
+\begin{equation}
+	|f^i(x)|\leqslant \norm{f(x)} \leqslant \sum_{i=1}^{m}|f^i(x)| \nonumber
+\end{equation}
+one can make the following observation
+\begin{equation}
+	(f=o(g)\text{ over }\mathcal{B})\Leftrightarrow(f^i=o(g)\text{ over }\mathcal{B};i=1,\cdots,m)\nonumber
+\end{equation}
+We also make the convention that $ f=O(g) $ over $ \mathcal{B} $ in $ X $ will mean that $ \norm{f(x)}_{\Real^m}=O(\norm{g(x)}_{\Real^n}) $. Then from the inequality above
+\begin{equation}
+	(f=O(g)\text{ over }\mathcal{B})\Leftrightarrow(f^i=O(g)\text{ over }\mathcal{B};i=1,\cdots,m)\nonumber
+\end{equation}
+A linear transformation is continuous, and uniformly continuous, at every point of its domain.
 \subsection{The Euclidean Structure on $ \Real^m $}
-
-
+\begin{Definition}
+	An inner product space is a vector space $ V $ over a field $ F $ with a map
+	\begin{equation}
+	\innPro{\cdot}{\cdot} :V\times V\to F \nonumber
+	\end{equation}
+	that satisfying the following axioms for all vectors $ x,y,z \in V $ and all scalars in $ F $
+	\textbf{Conjugate symmetry:}
+	\begin{equation}
+		\innPro{x}{y} ={\overline {\innPro{y}{x}}} \nonumber
+	\end{equation}
+	\textbf{Linearity in the first argument:}
+	\begin{align}
+		\innPro{ax}{y} &=a\innPro{x}{y} \\
+		\innPro{x+y}{z} &=\innPro{x}{z} +\innPro{y}{z}
+	\end{align}
+	\textbf{Positive-definiteness:}
+\begin{align}
+		\innPro{x}{x} &\geq 0\\
+		\innPro{x}{x} &=0\Leftrightarrow x=\vec{0}
+	\end{align}
+\end{Definition}
+Two vectors $ (x^1,\cdots,x^m) $ and $ (y^1,\cdots,y^m) $ and a basis $ \{e_1,\cdots,e_m  \} $ is fixed in the space, then
+\begin{equation}
+	\innPro{x}{y} = g_{ij}x^i y^j \nonumber
+\end{equation}
+in which $ g_{ij}=\innPro{e_i}{e_j} $. Vectors are said to be \textit{orthogonal} if their inner product equals $ 0 $.
+\begin{Definition}
+	The function $ \delta_{ij} $, the \textit{Kronecker delta}, is defined as
+		\begin{equation}
+	\delta_{ij} = \begin{cases}
+	&0,\quad \text{ if }i \neq j \\
+	&1,\quad \text{ if }i = j \\
+	\end{cases}\nonumber
+	\end{equation}
+\end{Definition}
+\begin{Definition}
+	A basis $ \{e_1,\cdots,e_m  \} $ is \textit{orthonormal} if $ g_{ij}=\delta_{ij} $,	that is, if these vectors are orthogonal and unit vectors. 
+\end{Definition}
+In an orthonormal basis the inner product has the very simple form
+\begin{equation}
+	\innPro{x}{y}=\delta_{ij} x^i y^j \nonumber
+\end{equation}
+or
+\begin{equation}
+	\innPro{x}{y}=x^1 \cdot y^1 + \cdots + x^m \cdot y^m \nonumber
+\end{equation}
+\begin{Definition}
+	Coordinates in which the inner product has the form above are called \textit{Cartesian coordinates}.
+\end{Definition}
+\begin{Definition}
+	The space $ \Real^m $ with an inner product defined in it is called \textit{Euclidean space}.
+\end{Definition}
+Now it is obvious that
+\begin{equation}
+	\innPro{x}{x} = \norm{x}^2 \nonumber
+\end{equation}
+and 
+\begin{equation}
+	\innPro{x}{y}^2 \leqslant \innPro{x}{x}\innPro{y}{y} \nonumber
+\end{equation}
+hold.\\ 
+It shows in particular that for any pair of vectors there is an angle $ \varphi \in [0,\pi] $ such that
+\begin{equation}
+	\innPro{x}{y} = \norm{x}\norm{y}\cos \varphi \nonumber
+\end{equation}
+This angle $ \varphi $ is called the \textit{angle between the vectors $ x $ and $ y $}.
+\begin{Theorem}
+	Any linear function $ L : \Real^m \to \Real $ in Euclidean space has the form
+	\begin{equation}
+		L(x)=\innPro{\xi}{x} \nonumber
+	\end{equation}
+	where $ \xi \in \Real^m $ is a fixed vector determined uniquely by the function $ L $.
+\end{Theorem}
 
 \section{The Differential of a Function of Several Variables}
 \subsection{Differentiability and the Differential of a Function at a Point}
-\subsection{The Differential and Partial Derivatives of a Real-Valued Function}
-\subsection{Coordinate Representation of the Differential of a Mapping. The Jacob Matrix}
-\subsection{Continuity, Partial Derivatives, and Differentiability of a Function at a Point}
+\begin{Definition}
+	A function $ f :E \to \Real^n $ defined on a set $ E \subset \Real^m $ is \textit{differentiable} at the point $ x \in E $, which is a limit point of $ E $, if
+	\begin{align}
+		\Aboxed{f(x+h)-f(x)=L(x)h+\alpha(x,h)} \nonumber
+	\end{align}
+	where $ L(x):\Real^m \to \Real^n $ is a function that is linear in $ h $ and $ \alpha(x,h)=o(h) $ as $ h \to 0,x+h \in E $. \\
+	The vectors
+	\begin{align}
+	\Delta x(h) &\coloneqq (x+h)-x = h\\
+	\Delta f(x,h)&\coloneqq f(x+h)-f(x)
+	\end{align}
+	are called respectively the \textit{increment of the argument} and the \textit{increment of the function}. These vectors are traditionally denoted by the symbols of the functions of $ h $ themselves $ \Delta x $ and $ \Delta f(x) $. The Linear function $ L(x):\Real^m \to \Real^n $ is called the \textit{differential, tangent mapping,} or \textit{derivative mapping} of the function at the point.
+\end{Definition}
 
+\begin{Definition}
+	If we attach a copy of the vector space $ \Real^m $ to the point $ x \in \Real^m $ and denote it $ \vec{T}_x \Real^m $, $ \vec{T}\Real^m(x) $, or $ \vec{T}\Real^m_x $. The space $ \vec{T}\Real^m_x  $ can be interpreted as a set of vectors attached at the point $ x \in \Real^m $. The vector space $ \vec{T}\Real^m_x  $ is called the \textit{tangent space} to $ \Real^m $ at $ x \in \Real^m $.
+\end{Definition}
+The value of the differential on a vector $ h \in \vec{T}\Real^m_x $ is the vector $ f^\prime(x)h \in \vec{T}\Real^n_{f(x)}  $ attached to the point $ f(x) $ and approximating the increment $ f(x+h)-f(x) $ of the function caused by the increment $ h $ of the argument $ x $. \\
+Thus $ d f(x) $ or $ f^\prime(x) $ is a linear transformation $ f^\prime(x): \vec{T}\Real^m_x \to \vec{T}\Real^n_{f(x)} $.
+
+\subsection{The Differential and Partial Derivatives of a Real-Valued Function}
+\begin{Proposition}
+	A mapping $ f:E \to \Real^n $ of a set $ E \subset \Real^m $ is differentiable at a point $ x \in E $ that is a limit point of $ E $ iff the functions $ f^i:E \to \Real (i=1,\cdots,n) $ that define the coordinate representation of the mapping are differentiable at that point.
+\end{Proposition}
+If we fixed all the variables in the function $ f(x^1,\cdots,x^m) $ except the $ i $th one, the resulting function of the $ i $th variable is differentiable at the point $ x^i $. The condition following the proposition 
+\begin{equation}
+	f(x+h)-f(x)=L(x)h+o(h)\nonumber
+\end{equation}
+can be written as
+\begin{equation}
+	f(x^1+h^1,\cdots,x^m+h^m)-f(x^1,\cdots,x^m) = a_1(x)h^1 + \cdots + a_m(x)h^m + o(h) \quad \text{ as }h\to 0 \nonumber
+\end{equation}
+In that way, we find that
+\begin{equation}
+	a_i(x)=\lim\limits_{h^i \to 0}\frac{f(x^1,\cdots,x^{i-1},x^i+h^i,x^{i+1},\cdots,x^m)-f(x^1,\cdots,x^i,\cdots,x^m) }{h^i}\nonumber
+\end{equation}
+This is the definition of \textit{partial derivative}.
+\begin{Definition}
+	The limit above is called the \textit{partial derivative} of the function $ f(x) $ at the point $ x=(x^1,\cdots,x^m) $ with respect to the variable $ x^i $. We denote it by one of the following symbols:
+	\begin{equation}
+		\frac{\partial f}{\partial x^i}(x),\quad \partial_i f(x),\quad D_i f(x),\quad f^\prime_{x^i}(x)\nonumber
+	\end{equation}
+\end{Definition}
+\begin{Proposition}
+	If a function $ f:E \to \Real $ defined on a set $ E \subset \Real^m $ is differentiable at an interior point $ x \in E $ of that set, then the function has a partial derivative at that point with respect to each variable, and the differential of the function is uniquely determined by these partial derivatives in the form
+	\begin{equation}
+		d f(x)h = \frac{\partial f}{\partial x^1}(x)h^1+\cdots+ \frac{\partial f}{\partial x^m}(x)h^m \nonumber
+	\end{equation}
+	or using the summation convention
+	\begin{equation}
+		d f(x)h = \partial_i f(x)h^i \nonumber
+	\end{equation}
+\end{Proposition}
+
+\subsection{Coordinate Representation of the Differential of a Mapping. The Jacob Matrix}
+\begin{Definition}
+	For ant mapping $ f:E \to \Real^n $ of a set $ E \subset \Real^m $ that is differentiable at an interior point $ x \in E $, the matrix $ (\partial_i f^j (x))(i=1,\cdots,m,j=1,\cdots,n) $ 
+	\begin{align}
+		d f(x)h &= \begin{pmatrix}
+		d f^1 (x)h \\
+		\vdots\\
+		d f^n (x)h
+		\end{pmatrix} = \begin{pmatrix}
+		\partial_i f^i (x)h^i \\
+		\vdots\\
+		\partial_i f^n (x)h^i
+		\end{pmatrix} =\\
+		&= \begin{pmatrix}
+		\frac{\partial f^1}{\partial x^1}(x) &\cdots & \frac{\partial f^1}{\partial x^m}(x)\\
+		\vdots & \ddots & \vdots \\
+		\frac{\partial f^n}{\partial x^1}(x) &\cdots & \frac{\partial f^n}{\partial x^m}(x)
+		\end{pmatrix}\begin{pmatrix}
+		h^1 \\
+		\vdots \\
+		h^m
+		\end{pmatrix} \nonumber
+	\end{align}
+	of partial derivatives of the coordinate functions of a given mapping at the point $ x \in E $ is called the \textit{Jacobi matrix} or the \textit{Jacobian} of the mapping at the point.
+\end{Definition}
+\begin{Proposition}
+	If a mapping $ f:E \to \Real^n $ of a set $ E \subset \Real^m $ is differentiable at an interior point $ x \in E $, then it has a unique differential $ d f(x) $ at that point, and the coordinate representation of the mapping $ d f(x): \vec{T}\Real^m_x \to \vec{T}\Real^n_{f(x)} $ is given by the Jacobi Matrix.
+\end{Proposition}
+\subsection{Continuity, Partial Derivatives, and Differentiability of a Function at a Point}
+For functions of several variables, we have that differentiability of a function at an interior point of its domain of definition guarantees the existence of a partial derivative with respect to each variable at that point. However, the converse is not true.
 
 
 \section{The Basic Laws of Differentiation}
 \subsection{Linearity of the Operation of Differentiation}
+\begin{Theorem}
+	If the mapping $ f_1 :E \to \Real^n $ and $ f_2 :E \to \Real^n $, defined on a set $ E \subset \Real^m $, are differentiable at a point $ x \in E $, then a linear combination of them $ (\lambda_1 f_1+\lambda_2 f_2):E \to \Real^n $ is also differentiable at that point, and the following inequality holds:
+	\begin{equation}
+		(\lambda_1 f_1+\lambda_2 f_2)^\prime (x)=(\lambda_1 f_1^\prime+\lambda_2 f^\prime_2)(x)\nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Theorem}
+	For two differentiable functions defined on a set $ E \subset \Real^m $ and have their range of value as $ \Real $, the law of multiplication and division hold \textbf{just as for single variable functions}, providing the denominator is not $ 0 $ at that point. The partial derivatives of their combination also satisfy the laws mentioned above. For example
+	\begin{equation}
+		(\partial_i(f \cdot g))(x)=g(x)\partial_i f(x)+ f(x)\partial_i g(x)\quad (i=1,\cdots,m)\nonumber
+	\end{equation}
+	By induction, the law of differentiation regard to the multiplication of functions also hold for arbitrary numbers of differentiable functions,\textbf{ the same as one-dimensional cases}.
+\end{Theorem}
+
 \subsection{Differentiation of a Composition of Mappings (Chain Rule)}
+\subsubsection{The Main Theorem}
+\begin{Theorem}
+	If the mapping $ f:X \to Y $ of a set $ X \subset \Real^m $ into a set $ Y \subset \Real^n $ is differentiable at a point $ x \in X $, and the mapping $ f:Y \to \Real^k $ is differentiable at the point $ y=f(x)\in Y $, then their composition $ g \circ f:X \to \Real^k $ is differentiable at $ x $ and the differential $ d(g\circ f) :\vec{T}\Real^m_x\to\vec{T}\Real^k_{g(f(x))}$ of the composition equals the composition $ d g(y) \circ d f(x) $ of the differentials 
+	\begin{equation}
+		d f(x):\vec{T}\Real^m_x\to\vec{T}\Real^n_{f(x)=y}, \quad d g(y): \vec{T}\Real^n_y\to\vec{T}\Real^k_{g(y)}\nonumber
+	\end{equation}
+\end{Theorem}
+The equality also hold
+\begin{equation}
+	(\partial_i (g^l \circ f))(x)=(\partial_j g^l(f(x)) \cdot \partial_i f^j(x)) \nonumber
+\end{equation}
+where summation is understood on the right-hand side with respect to the index $ j $ over its interval of variation, that is, from $ 1 $ to $ n $.
+
+\subsubsection{The Differential and Partial Derivatives of a Composite Real-Valued Function}
+Let $ z =g(y^1,\cdots,y^n) $ be a real-valued function of real functions $ y^j = f^j(x^1,\cdots,x^m)(j=1,\cdots,n) $ of the variables $ x^1,\cdots,x^m $. Assuming the functions $ g $ and $ f^j $ are differentiable, then
+\begin{equation}
+	\partial_i(g \circ f)(x) = \partial_j g(f(x))\cdot \partial_i f^j(x)\nonumber
+\end{equation}
+or, in notation that shows more detail,
+\begin{equation}
+	\frac{\partial z}{\partial x^i}(x)=\partial_1 g(f(x))\cdot \partial_i f^1(x)+ \cdots +\partial_n g(f(x))\cdot \partial_i f^n(x) \nonumber
+\end{equation}
+\subsubsection{The Derivative with Respect to a Vector and the Gradient of a Function at a Point}
+\begin{Definition}[Directional Derivatives]
+	If the function $ f(x) $ is defined in a neighborhood of the point $ x_0 \in \Real^m $ and the vector $ \vec{v} \in \vec{T}\Real^m_{x_0} $ is attached at the point $ x_0 $, then the quantity
+	\begin{align}
+		\Aboxed{D_\vec{v}f(x_0)\coloneqq \lim\limits_{t \to 0}\frac{f(x_0+ \vec{v}t)-f(x_0)}{t}} \nonumber
+	\end{align}
+	(if the indicated limit exists) is called the \textit{derivative of $ f $ at the point $ x_0 $ with respect to the vector $ \vec{v} $} or \textit{the derivative along the vector $ \vec{v} $ at the point $ x_0 $}.
+\end{Definition}
+If $ x $ is a function $ x=x(t) $ of $ t $ and $ x(t)=x_0+ \vec{v}t+ \alpha(t) $, then for a differentiable function $ f $ at $ x_0 $ we have
+\begin{equation}
+	D_{\vec{v}}f(x_0)=\frac{d(f \circ x)}{d t}(0) = d f(x_0)\vec{v}\nonumber
+\end{equation}
+or
+\begin{equation}
+	D_{\vec{v}}f(x_0) = \frac{\partial f}{\partial x^1}(x_0)v^1 + \cdots +  \frac{\partial f}{\partial x^m}(x_0)v^m \nonumber 
+\end{equation}
+By virtue of the linearity of the differential $ d f(x_0) $, we have that if $ f $ is differentiable at $ x_0 $, then for any vectors $ \vec{v}_1, \vec{v}_2 \in \vec{T} \Real^m_{x_0} $ and any $ \lambda_1,\lambda_2 \in \Real $ the function has a derivative at the point $ x_0 $ with respect to the vector $ (\lambda_1 \vec{v}_1+\lambda_2 \vec{v}_2)\in \vec{T} \Real^m_{x_0}$, and that
+\begin{equation}
+	D_{\lambda_1 \vec{v}_1+\lambda_2 \vec{v}_2}f(x_0)=\lambda_1 D_{\vec{v}_1}f(x_0) + \lambda_2 D_{\vec{v}_2}f(x_0) \nonumber
+\end{equation}
+\begin{Definition}
+	The vector $ \vec{\xi}\in \vec{T} \Real^m_{x_0} $ corresponding to the differential $ d f(x_0) $ of the function $ f $ at the point $ x_0 $ in the sense of
+	\begin{equation}
+		d f(x_0)\vec{v} = \innPro{\vec{\xi}}{\vec{v}}\nonumber
+	\end{equation}
+	is called the \textit{gradient} of the function at that point and is denoted $ \grad{f(x_0)} $ or $ \nabla f(x_0) $. Thus
+	\begin{align}
+	\Aboxed{d f(x_0)\vec{v} = \innPro{\nabla f(x_0)}{\vec{v}}}
+	\nonumber
+	\end{align}
+	and the gradient has the following representation in a Cartesian coordinate system:
+	\begin{equation}
+		\nabla f(x_0)=(\frac{\partial f}{\partial x^1},\cdots,\frac{\partial f}{\partial x^m})(x_0)\nonumber
+	\end{equation}
+\end{Definition}
+Geometrically, the rate of increase of the function $ f $ is \textbf{maximal} and equal to $ \norm{\nabla f(x_0)} $ for motion from the point $ x_0 $ precisely when the displacement is in the direction of the vector $ \nabla f(x_0) $. The value of the function \textbf{decreases most sharply} under displacement in the opposite direction, and the \textbf{rate of variation of the function is zero} in a direction perpendicular to the vector $ \nabla f(x_0) $.
+
+
 \subsection{Differentiation of an Inverse Mapping}
-
-
+\begin{Theorem}
+	Let $ f:U(x)\to V(y) $ be a mapping of a neighborhood $ U(x)\subset \Real^m $ of the point $ x $ onto a neighborhood $ V(y)\subset \Real^m $ of the point $ y = f(x) $. Assume that $ f $ is continuous at the point $ x $ and has an inverse mapping $ f^{-1}:V(y)\to U(x) $ that is continuous at the point $ y $. \\
+	Given these assumptions, if the mapping $ f $ is differentiable at $ x $ and the tangent mapping $ f^\prime: \vec{T}\Real^m_x \to  \vec{T}\Real^m_y $ to $ f $ at the point $ x $ has an inverse $ [f^\prime(x)]^{-1} :\vec{T}\Real^m_y \to  \vec{T}\Real^m_x$, then the mapping $ f^{-1}:V(y)\to U(x) $ is differentiable at the point $ y= f(x) $, and the following equality holds:
+	\begin{equation}
+		(f^{-1})^\prime(y)=[f^\prime(x)]^{-1}\nonumber
+	\end{equation}
+	Thus, mutually inverse differentiable mappings have mutually inverse tangent mappings at corresponding points.
+\end{Theorem}
+Moreover, the Jacobi of the function $ f^{-1}(y) $ at $ y $ is the matrix inverse of the Jacobi matrix of $ f(x) $ at $ x $. When $ m=1 $, that is, when $ \Real^m=\Real $ and $ f^\prime(x)\neq 0 $, the matrix of $ [f^\prime(x)]^{-1} $ consists of a single number equal to $ [f^\prime(x)]^{-1} $, that is, the reciprocal of $ f^\prime(x) $.
 
 \section{The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}
 \subsection{The Mean-Value Theorem}
