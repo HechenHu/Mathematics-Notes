@@ -21,6 +21,7 @@
 \usepackage{amssymb}
 \usepackage{array}
 \usepackage{tikz}
+\usepackage{empheq}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter quote at the start of chapter        %
@@ -34,6 +35,8 @@
 \newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}} % Unit Vector
 \newcommand{\innPro}[2]{\langle #1, #2 \rangle}%Inner Product
 \newcommand{\grad}[1]{\text{grad}#1} % Gradient
+
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
 
 \renewcommand{\@chapapp}{}% Not necessary...
 \newcommand{\Real}{\mathbb{R}}
@@ -3246,8 +3249,96 @@ The symbols $ F(k,\varphi) $ and $ E(k,\varphi) $ respectively denote the partic
 \chapter{Integration}
 \section{Definition of the Integral and Description of the Set of Integrable Functions}
 \subsection{Definition of the Riemann Integral}
-\subsection{The Set of Integrable Functions}
+\subsubsection{Partitions}
+\begin{Definition}
+	A \textit{partition} $ P $ of a closed interval $ [a,b] $, is a finite system of points $ x_0,\cdots,x_n $ of the interval such that $ a=x_0<x_1<\cdots<x_n=b $. \\
+	The intervals $ [x_{i-1},x_i],(i=1,\cdots,n) $ are called the \textit{intervals} of the partition $ P $.\\
+	The largest of the lengths of the intervals of the partition $ P $, denoted $ \lambda(P) $, is called the \textit{mesh} of the partition.
+\end{Definition}
+\begin{Definition}
+	We speak of a \textit{partition with distinguished points} $ (P,\xi) $ on $ [a,b] $ if we have a partition $ P $ of $ [a,b] $ and a point $ \xi_i \in [x_{i-1},x_i] $ has been chosen in each of the intervals. The set of points $ (\xi_1,\cdots,\xi_n) $ is denoted by the single letter $ \xi $.
+\end{Definition}
+\subsubsection{A Base in the Set of Partitions}
+The base $ \mathcal{B}=\{B_d\} $ where $ d>0 $ consists of all partitions with distinguished points $ (P,\xi) $ on $ [a,b] $ for which $ \lambda(P)<d $.
+\subsubsection{Riemann Sums}
+\begin{Definition}
+	If a function $ f $ is defined on $ [a,b] $ and $ (P,\xi) $ is a partition with distinguished points on this closed interval, the sum
+	\begin{equation}
+		\sigma (f,P,\xi)\coloneqq \sum_{i=1}^{n}f(\xi_i)\Delta x_i \nonumber
+	\end{equation}
+	where $ \Delta x_i = x_i - x_{i-1} $, is the \textit{Riemann sum} of the function $ f $ corresponding to the partition $ (P,\xi) $ on $ [a,b] $.
+\end{Definition}
+When the function $ f $ is fixed, the Riemann sum is a function $ \Phi(p)=\sigma (f,p) $ on the set $ \mathcal{P} $ of all partitions $ p=(P,\xi) $ on $ [a,b] $.
+\subsubsection{The Riemann Integral}
+\begin{Definition}
+	The number $ I $ is the Riemann integral of the function $ f $ on the closed interval $ [a,b] $ if for every $ \varepsilon>0 $ there exists $ \delta>0 $ such that
+	\begin{equation}
+		|I-\sum_{i=1}^{n}f(\xi_i)\Delta x_i|<\varepsilon \nonumber
+	\end{equation}
+	for any partition $ (P,\xi) $ on $ [a,b] $ whose mesh $ \lambda(P) $ is less than $ \delta $. The definition is equivalent to the statement
+	\begin{equation}
+		I = \lim\limits_{\mathcal{B}}\Phi(p)\nonumber
+	\end{equation}
+	The integral of $ f(x) $ over $ [a,b] $ is denoted
+	\begin{equation}
+		\int_{a}^{b}f(x)dx \nonumber
+	\end{equation}
+	in which the numbers $ a $ and $ b $ are called respectively the \textit{lower} and \textit{upper limits of integration}. The function $ f $ is called the \textit{integrand}, $ f(x)dx $ is called the \textit{differential form}, and $ x $ is the \textit{variable of integration}. Thus
+	\begin{align}
+		\Aboxed{\int_{a}^{b}f(x)dx \coloneqq \lim\limits_{\lambda(p)\to 0}\sum_{i=1}^{n}f(\xi_i)\Delta x_i   }
+	\end{align}
+\end{Definition}
+\begin{Definition}
+	A function $ f $ is \textit{Riemann integrable} on $ [a,b] $ if the Riemann integral of $ f $ is defined on $ [a,b] $. The set of Riemann-integrable functions on a closed interval $ [a,b] $ will be denoted $ \mathcal{R}[a,b] $.
+\end{Definition}
 
+\subsection{The Set of Integrable Functions}
+\subsubsection{A Necessary Condition for Integrability}
+\begin{Proposition}
+	A necessary condition for a function $ f $ defined on a closed interval to be Riemann integrable on it is that $ f $ be bounded on this closed interval.
+\end{Proposition}
+\subsubsection{A Sufficient Condition for Integrability and the Most Important Classes of Integrable Functions}
+\begin{Theorem}[Reverse Triangle Inequality]
+	In a normed vector space
+	\begin{equation}
+		|\norm{x}-\norm{y}| \leqslant \norm{x-y} \nonumber
+	\end{equation}
+	Or for metric spaces
+	\begin{equation}
+		|d(y,x)-d(x,z)|\leqslant d(y,z) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	Use the regular triangle inequality.
+\end{proof}
+\begin{Definition}
+	If a partition $ \tilde{P} $ of $ [a,b] $ is obtained from the partition $ P $ by adjunction of new points to $ P $, $ \tilde{P} $ is called a \textit{refinement} of $ P $.
+\end{Definition}
+\begin{Proposition}
+	A sufficient condition for a bounded function $ f $ to be integrable on a closed interval $ [a,b] $ is that for every $ \varepsilon>0 $ there exists a number $ \delta>0 $ such that
+	\begin{equation}
+		\sum_{i=1}^{n}\omega(f,\Delta_i)\Delta x_i <\varepsilon \nonumber
+	\end{equation}
+	for any partition $ P $ of $ [a,b] $ with mesh $ \lambda(P)<\delta $.
+\end{Proposition}
+\begin{proof}
+	Under the sufficient condition given in the statement, for any $ \varepsilon>0 $ we can find $ \delta >0 $ such that
+	\begin{equation}
+		|\sigma(f,\tilde{P},\tilde{\xi})-\sigma(f,P,\xi)|<\frac{\varepsilon}{2} \nonumber
+	\end{equation}
+	for any partition $ P $ of $ [a,b] $ with $ \lambda(P)<\delta $. Now if $ (P^\prime,\xi^\prime) $ and $ (P^{\prime\prime},\xi^{\prime\prime}) $ are arbitrary partitions with distinguished points on $ [a,b] $ whose mashed satisfy $ \lambda(P^\prime)<\delta $ and $ \lambda(P^{\prime\prime})<\delta $, then the partition $ \tilde{P}= P^\prime \cup P^{\prime\prime}$ must satisfy the inequality above. Add these two inequality with the proper substitution while taking account of the triangle inequality and reverse triangle inequality, we have
+	\begin{equation}
+		|\sigma(f,P^\prime,\xi^\prime)-\sigma(f,P^{\prime\prime},\xi^{\prime\prime})|<\varepsilon \nonumber
+	\end{equation}
+	then by the Cauchy criterion, the limit of the Riemann sums exists.
+\end{proof}
+
+\begin{Corollary}
+	$ (f\in C[a,b])\Rightarrow (f\in \mathcal{R}[a,b]) $, that is, every continuous function on a closed interval is integrable on that closed interval.
+\end{Corollary}
+\begin{proof}
+	content...
+\end{proof}
 
 
 
@@ -3919,14 +4010,181 @@ Moreover, the Jacobi of the function $ f^{-1}(y) $ at $ y $ is the matrix invers
 
 \section{The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}
 \subsection{The Mean-Value Theorem}
+\begin{Theorem}
+	Let $ f:G \to \Real $ be a real-valued function defined in a region $ G \subset \Real^m $ and let the closed line segment $ [x,x+h] $ be contained in $ G $. If the function $ f $ is continuous at the points of the closed line segment and differentiable at points of the open interval $ (x,x+h) $, then there exists a point $ \xi \in (x,x+h) $ such that the following equality holds:
+	\begin{align}
+		\Aboxed{f(x+h)-f(x)=f^\prime (\xi)h}
+	\end{align}
+\end{Theorem}
+\begin{proof}
+	Consider the auxiliary function $ F(t)=f(x+th) $ where $ t \in [0,1] $ that satisfies all the hypotheses of Lagrange's theorem.
+\end{proof}
+\begin{Corollary}
+	If the function $ f:G \to \Real $ is differentiable in the domain $ G \subset \Real^m $ and its differential equals zero at every point $ x \in G $, then $ f $ is constant in the domain $ G $.
+\end{Corollary}
+\begin{proof}
+	content...
+\end{proof}
+
+
+
+
 \subsection{A Sufficient Condition for Differentiability of a Function of Several Variables}
+\begin{Theorem}
+	Let $ f:U(x)\to \Real $ be a function defined in a neighborhood $ U(x)\subset \Real^m $ of the point $ x= (x^1,\cdots,x^m) $. \\
+	If the function $ f $ has all partial derivatives $ \frac{\partial f}{\partial x^1},\cdots,\frac{\partial f}{\partial x^m} $ at each point of the neighborhood $ U(x) $ and they are continuous at $ x $, then $ f $ is differentiable at $ x $.
+\end{Theorem}
+We now use the symbol $ C^{(1)}(G,\Real) $, or simply $ C^{(1)}(G) $ to denote the set of functions having continuous partial derivatives in the domain $ G $.
 \subsection{Higher-Order Partial Derivatives}
+\begin{Theorem}
+	If the function $ f:G \to \Real $ has partial derivatives
+	\begin{equation}
+		\frac{\partial^2 f}{\partial x^i \partial x^j}(x),\quad \frac{\partial^2 f}{\partial x^j \partial x^i}(x) \nonumber
+	\end{equation}
+	in a domain $ G $, then at every point $ x \in G $ at which both partial derivatives are continuous, their values are the same.
+	\begin{proof}
+		Since there are only two variables we need to taken into account, we can assume that $ f $ is a function of two variables $ f(x^1,x^2) $. Consider the auxiliary function
+		\begin{equation}
+			F(h^1,h^2)=f(x^1+h^1,x^2+h^2)-f(x^1+h^1,x^2)-f(x^1,x^2+h^2) +f(x^1,x^2) =\varphi(1)-\varphi(0)\nonumber
+		\end{equation}
+		where $ \varphi(t)= f(x^1+th^1,x^2+h^2)-f(x^1+th^1,x^2)$. We find by Lagrange's theorem that
+		\begin{equation}
+			F(h^1,h^2)=\varphi(\theta_1)=(\partial_1 f(x^1+\varphi_1 h^1,x^2+h^2)-\partial f(x^1 + \theta_1 h^1,x^2))h^1 \nonumber
+		\end{equation}
+		Again applying Lagrange's theorem to this last difference
+		\begin{equation}
+			F(h^1,h^2)=\partial_{21}f(x^1+\theta_1 h^1,x^2+ \theta_2 h^2)h^2 h^1 \nonumber
+		\end{equation}
+		Now use the same method for $ F(h^1,h^2)=\tilde{\varphi}(1)-\tilde{\varphi}(0) $, where
+		\begin{equation}
+			\tilde{\varphi}(t)= f(x^1+h^1,x^2+th^2)-f(x^1,x^2+t h^2)\nonumber
+		\end{equation}
+		Currently we have
+		\begin{equation}
+			\partial_{21}f(x^1+\theta_1 h^1,x^2+ \theta_2 h^2)=\partial_{12}f(x^1+\tilde{\theta}_1 h^1,x^2+ \tilde{\theta}_2 h^2) \nonumber
+		\end{equation} 
+		where $ \theta_1,\theta_2,\tilde{\theta}_1,\tilde{\theta}_2\in (0,1) $. Using the continuity of the partial derivatives at $ (x^1,x^2) $, as $ h \to 0 $, we have
+		\begin{equation}
+			\partial_{21} f(x^1,x^2)=\partial_{12} f(x^1,x^2)\nonumber
+		\end{equation}
+	\end{proof}
+\end{Theorem}
+
+\begin{Proposition}
+	If $ f \in C^{(k)}(G,\Real) $, the value $ \partial_{i_1 \cdots i_k}f(x) $ of the partial derivative is independent of the order $ i_1,\cdots,i_k $ of differentiation, that is, remains the same for any permutation of the indices $ i_1,\cdots,i_k  $.
+\end{Proposition}
+\begin{proof}
+	Use induction.
+\end{proof}
+
+
 \subsection{Taylor's Formula}
+\begin{Theorem}
+	If the function $ f:U(x)\to \Real $ is defined and $ f \in C^{(n)}(U(x), \Real) $ in a neighborhood $ U(x)\in \Real^m $ of $ x \in \Real^m $, and the closed interval is completely contained in $ U(x) $, then the following equality holds:
+	
+\begin{empheq}[box=\widefbox]{align}
+f&(x^1+h^1,\cdots,x^m+h^m)-f(x^1,\cdots,x^m)= \nonumber\\
+&= \sum_{k=1}^{n-1}\frac{1}{k!}(h^1 \partial_1 + \cdots + h^m \partial_m)^k f(x)+ r_{n-1}(x,h) \nonumber \\
+\text{ where }& \nonumber\\
+&r_{n-1}(x,h)=\int_{0}^{1} \frac{(1-t)^{n-1}}{(n-1)!}(h^1 \partial_1 + \cdots + h^m \partial_m)^n f(x+th)dt \nonumber
+\end{empheq}
+and they are called \textit{Taylor's formula with integral form of the remainder}. \newpara
+The remainder term can also be written as the \textit{Lagrange form}:
+\begin{equation}
+	r_{n-1}(x,h)= \frac{1}{n!}(h^1 \partial_1 + \cdots + h^m \partial_m)^m f(x+\theta h) \nonumber
+\end{equation}
+where $ \theta \in (0,1) $, or since $ f \in C^{(n)}(U(x),\Real) $, in \textit{Peano form}
+\begin{equation}
+	r_{n-1}(x,h)=\frac{1}{n!}(h^1 \partial_1 + \cdots + h^m \partial_m)^n f(x)+ o(\norm{h}^n)\quad \text{ as } h\to 0 \nonumber
+\end{equation}
+Now we have the equality, called the \textit{Taylor's formula with the remainder term in Peano form}
+\begin{align}
+	f&(x^1+h^1,\cdots,x^m+h^m)-f(x^1,\cdots,x^m)=\\
+	&= \sum_{k=1}^{n}\frac{1}{k!}(h^1 \partial_1 + \cdots + h^m \partial_m)^k f(x) + o(\norm{h}^n) \quad \text{ as }h\to 0
+\end{align}
+
+\end{Theorem}
+\begin{proof}
+	Consider the auxiliary function $ \varphi(t)=f(x+th) $ for $ t\in [0,1] $, by the mean-value theorem and the Taylor formula for functions of one variable, we have derived the Taylor formula for multi-variable functions.
+\end{proof}
 \subsection{Extrema of Functions of Several Variables}
+\begin{Definition}
+	A function $ f:E \to \Real $ defined on a set $ E \subset \Real^m $ has a \textit{local maximum}(resp. \textit{local minimum}) at an interior point $ x_0 \in E $ if there exists a neighborhood $ U(x_0)\subset E $ such that $ f(x)\leqslant f(x_0) $(resp. $ f(x)\geqslant f(x_0) $) for all $ x\in U(x_0) $. If strict inequality holds in the two circumstances above, the function has a \textit{strict local maximum}(resp. \textit{strict local minimum}).
+\end{Definition}
+\begin{Definition}
+	The local minima and maxima of a function are called its \textit{local extrema}.
+\end{Definition}
+
+\begin{Theorem}
+	Suppose a function $ f:U(x_0)\to\Real $ defined in a neighborhood $ U(x_0)\subset \Real^m $ of the point $ x_0=(x^1_0,\cdots,x^m_0) $ has partial derivatives with respect to each of the variables $ x^1_0,\cdots,x^m_0 $ at the point $ x_0 $. \\
+	Then a \textbf{necessary but not sufficient condition} for the function to have a local extremum at $ x_0 $ is that the following equalities hold at that point
+	\begin{equation}
+		\frac{\partial f}{\partial x^1}(x_0)=0,\quad\cdots,\quad \frac{\partial f}{\partial x^m}(x_0)=0 \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	Use the necessary condition for a single variable function to have a local extremum on each variable respectively.
+\end{proof}
+\begin{Definition}
+	The point $ x_0 $ is a \textit{critical point} of the mapping $ f:U(x_0)\to \Real^n $ if the rank of the Jacobi matrix of the mapping at that point is less than $ \min \{m,n\} $, that is, smaller than the maximum possible value it can have. For real-valued functions, the point is also called the \textit{stationary points}.
+\end{Definition}
+\begin{Theorem}
+	Let $ f:U(x_0)\to \Real $ be a function of class $ C^{(2)}(U(x_0),\Real) $ defined in a neighborhood $ U(x_0) \subset \Real^m$ of the point $ x_0 = (x^1_0,\cdots,x^m_0)\in \Real^m $, and let $ x_0 $ be a critical point of the function $ f $. \\
+	If, in the Taylor expansion of the function at the point $ x_0 $
+	\begin{align}
+	f&(x^1+h^1,\cdots,x^m+h^m)= \\
+	&=f(x^1,\cdots,x^m) + \frac{1}{2!}\sum_{i,j=1}^{m}\frac{\partial^2 f}{\partial x^i \partial x^j}(x_0)h^i h^j
++o(\norm{h}^2)
+	\end{align}
+	the quadratic form
+	\begin{equation}
+		\sum_{i,j=1}^{m}\frac{\partial^2 f}{\partial x^i \partial x^j}(x_0)h^i h^j \equiv \partial_{ij}f(x_0)h^i h^j\nonumber
+	\end{equation}
+	\textbf{a)} is positive-definite or negative-definite, then the point $ x_0 $ has a local extremum at $ x_0 $, which is a strict local minimum if the quadratic form is positive-definite and a strict local maximum is it is negative-definite. \\
+	\textbf{b)} assumes both positive and negative values, then the function does not have an extremum at $ x_0 $.
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+
 \subsection{Some Geometric Images Connected with Functions of Several Variables}
+\subsubsection{The Graph of a Function and Curvilinear Coordinates}
+\begin{Definition}
+	 \textit{Curvilinear coordinates} are a coordinate system for Euclidean space in which the coordinate lines may be curved. 
+\end{Definition}
+Here we say that the graph of a continuous function $ z=f(x,y) $, defined in a domain $ G \subset \Real^2 $ is a two-dimensional surface $ S $ in $ \Real^3 $ whose points can be defined by curvilinear coordinates $ (x,y)\in G $.
+\subsubsection{The Tangent Plane to the Graph of a Function}
+\begin{Definition}
+	The plane
+	\begin{equation}
+		z=f(x_0,y_0)+\frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)+\frac{\partial f}{\partial y}(x_0,y_0)(y-y_0) \nonumber
+	\end{equation}
+	is called the \textit{tangent plane to the graph of the function} $ z=f(x,y) $ at the point $ (x_0,y_0,f(x_0,y_0)) $.
+\end{Definition}
+\subsubsection{The Normal Vector}
+\begin{Definition}
+	The vector
+	\begin{equation}
+		(\frac{\partial f}{\partial x}(x_0,y_0),\frac{\partial f}{\partial y}(x_0,y_0),-1) \nonumber
+	\end{equation}
+	is the \textit{normal vector to the tangent plane}. Its direction is considered to be the direction normal or orthogonal to the surface $ S $ (the graph of the function) at that point.
+\end{Definition}
+\begin{Definition}
+	A \textit{saddle point} of a function is a stationary point(derivative is zero) but not the extremum of the function.
+\end{Definition}
+
+\subsubsection{Tangent Planes and Tangent Vectors}
+
+\begin{Definition}
+	The \textit{hyperplane} is a subspace whose dimension is one less than that of its ambient space(e.g a 2-d plane in $ \Real^3 $).
+\end{Definition}
+The tangent plane, a hyperplane in $ \Real^{m+1} $, to the m-dimensional surface $ S $ at the point $ (x_0^1,\cdots,x^m_0,f(x_0^1,\cdots,x^m_0)) $ is formed by the vectors that are tangents at the point to curves on the surface $ S $ passing through the point.
+
+
 
 
 \section{The Implicit Function Theorem}
+
 \subsection{An Elementary Version of the Implicit Function Theorem}
 \subsection{Transition to the Case of a Relation $ F(x^1,\cdots,x^m,y)=0 $}
 \subsection{The Implicit Function Theorem}
