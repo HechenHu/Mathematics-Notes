@@ -3337,15 +3337,293 @@ When the function $ f $ is fixed, the Riemann sum is a function $ \Phi(p)=\sigma
 	$ (f\in C[a,b])\Rightarrow (f\in \mathcal{R}[a,b]) $, that is, every continuous function on a closed interval is integrable on that closed interval.
 \end{Corollary}
 \begin{proof}
-	content...
+	If a function is continuous on a closed interval, it is bounded on that interval. A continuous function on a closed interval is also uniformly continuous on the interval. Therefore, for every $ \varepsilon>0 $ there exists $ \delta>0 $ such that $ \omega(f,\Delta)<\frac{\varepsilon}{b-a} $ on any closed interval $ \Delta \subset [a,b] $ of length less than $ \delta $. Then for any partition $ P $ with $ \lambda(P)<\delta $ we have
+	\begin{equation}
+		\sum_{i=1}^{n}\omega(f,\Delta_i)\Delta_{x_i}<\frac{\varepsilon}{b-a}\sum_{i=1}^{n}\Delta_{x_i}=\frac{\varepsilon}{b-a}(b-a)=\varepsilon \nonumber
+	\end{equation}
 \end{proof}
-
-
+\begin{Corollary}
+	If a bounded function $ f $ on a closed interval $ [a,b] $ is continuous everywhere except at a finite set of points, then $ f \in \mathcal{R}[a,b] $.
+\end{Corollary}
+\begin{proof}
+	Let $ \omega(f,[a,b])\leqslant C < \infty $, and suppose $ f $ has $ k $ points of discontinuity on $ [a,b] $. For a given $ \varepsilon>0 $ we choose the number $ \delta_1 = \frac{\varepsilon}{8 C \cdot k} $ and construct the $ \delta_1 $-neighborhood of each of the $ k $ points of discontinuity. The complement of the union of these neighborhoods in $ [a,b] $ consists of a finite number of closed intervals, on each of which $ f $ is uniformly continuous. Since the number of these intervals is finite, given $ \varepsilon>0 $ there exists $ \delta_2 >0 $ such that on each interval $ \Delta $ whose length is less than $ \delta_2 $ and which is entirely contained in one of the closed intervals just mentioned, on which $ f $ is continuous, we have $ \omega(f,\Delta)<\frac{\varepsilon}{2(b-a)} $. We now choose $ \delta = \min \{\delta_1,\delta_2\} $. \newpara
+	Let $ P $ be an arbitrary partition of $ [a,b] $ for which $ \lambda(P)<\delta $. The sum $ \sum_{i=1}^{n}\omega(f,\Delta_i)\Delta_{x_i} $ corresponding to $ P $ can be broken into two parts:
+	\begin{equation}
+		\sum_{i=1}^{n}\omega(f,\Delta_i)\Delta_{x_i} = \sum^{\prime}\omega(f,\Delta_i)\Delta_{x_i}+\sum^{\prime\prime}\omega(f,\Delta_i)\Delta_{x_i}\nonumber
+	\end{equation}
+	The sum $ \Sigma^{\prime} $ contains the terms corresponding to intervals $ \Delta_i $ of $ P $ having no points in common with any of the $ \delta_1 $-neighborhoods of the points of discontinuity. For these intervals we have $ \omega(f,\Delta)<\frac{\varepsilon}{2(b-a)} $, and so
+	\begin{equation}
+		\sum^{\prime}\omega(f,\Delta_i)\Delta_{x_i} < \frac{\varepsilon}{2(b-a)} \Delta_{x_i}< \frac{\varepsilon}{2(b-a)}  (b-a) = \frac{\varepsilon}{2} \nonumber
+	\end{equation}
+	The sum of the remaining intervals of $ P $ is at most $ (\delta+ 2 \delta_1+\delta)k \leqslant4 \frac{\varepsilon}{8 C \cdot k}=\frac{\varepsilon}{2C} $(the worst case is that every $ \delta_1 $-neighborhood of points of discontinuity has its end and start points being attach by a interval on which the function $ f $ is uniformly continuous whose length is less than $ \delta $ and the $ \delta_1 $-neighborhood just has one point in common(its start point or end point) with these two neighborhoods). Therefore
+	\begin{equation}
+		\sum^{\prime\prime}\omega(f,\Delta_i)\Delta_{x_i} < C \sum^{\prime\prime}\Delta_{x_i} < C \cdot \frac{\varepsilon}{2C} = \frac{\varepsilon}{2}\nonumber
+	\end{equation} 
+	and our proof completes, since
+	\begin{equation}
+		\sum_{i=1}^{n}\omega(f,\Delta_i)\Delta_{x_i}< \varepsilon \nonumber
+	\end{equation}
+	now holds for $ \lambda(P)<\delta $.
+\end{proof}
+\begin{Corollary}
+	A monotonic function on a closed interval is integrable on that interval.
+\end{Corollary}
+\begin{proof}
+	It follows the monotonicity of $ f $ that $ \omega(f,[a,b])=|f(b)-f(a)| $. Suppose $ \varepsilon>0 $ is given, we set $ \delta = \frac{\varepsilon}{|f(b)-f(a)|} $ (assuming that the function is not constant). Then for an arbitrary partition of $ [a,b] $ with $ \lambda(P)<\delta $, and
+	\begin{equation}
+		\sum_{i=1}^{n}\omega(f,\Delta_i)\Delta_{x_i} < \delta \sum_{i=1}^{n}\omega(f,\Delta_i) = \delta |f(b)-f(a)| = \varepsilon \nonumber
+	\end{equation}
+\end{proof}
+Here we assume that all the functions discussed here are real-valued functions.
+\begin{Definition}
+	Let $ f:[a,b]\to \Real $ be a real-valued function that is defined and bounded on $ [a,b] $, let $ P $ be a partition of $ [a,b] $, and let $ \Delta_i(i=1,\cdots,n) $ be the intervals of $ P $. Let $ m_i=\inf_{x \in \Delta_i}f(x) $ and $ M_i =  \sup_{x \in \Delta_i}f(x) $. \newpara
+	The sums
+	\begin{equation}
+		s(f,P)\coloneqq \sum_{i=1}^{n}m_i \Delta_{x_i} \nonumber
+	\end{equation}
+	and 
+	\begin{equation}
+		S(f,P)\coloneqq \sum_{i=1}^{n}M_i \Delta_{x_i} \nonumber
+	\end{equation}
+	are called respectively the \textit{lower} and \textit{upper Riemann sums} of $ f $ on $ [a,b] $ corresponding to $ P $. The sums $ s(f,P) $ and $ S(f,p) $ are also called the the lower and upper \textit{Darboux} sums corresponding to $ P $ on $ [a,b] $. \\
+	If $ (P,\xi) $ is an arbitrary partition with distinguished points on $ [a,b] $, then obviously
+	\begin{equation}
+		s(f,P)\leqslant \sigma(f,P,\xi)\leqslant S(f,P) \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Lemma}
+	\begin{align}
+		s(f,P) &= \underset{\xi}{\inf }\sigma(f,P,\xi) \\
+		S(f,P) &= \underset{\xi}{\sup } \sigma(f,P,\xi)
+	\end{align}
+\end{Lemma}
+\begin{proof}
+	By definition of $ M_i $, for each interval there is a point $ \bar{\xi_i}\in \Delta_i $ at which $ M_i<f(\bar{\xi_i})+\frac{\varepsilon}{b-a} $. Let $ \bar{\xi} $ be the collection of these points in $ [a,b] $. Then
+	\begin{equation}
+		\sum_{i=1}^{n}M_i \Delta_{x_i} < \sum_{i=1}^{n}(f(\bar{\xi_i})+\frac{\varepsilon}{b-a})\Delta_{x_i} = \sum_{i=1}^{n} f(\bar{\xi_i})\Delta_{x_i} + \varepsilon \nonumber
+	\end{equation}
+	The first assertion can be proved similarly.
+\end{proof}
+\begin{Proposition}
+	A bounded real-valued function $ f:[a,b]\to \Real $ is Riemann-integrable on $ [a,b] $ iff the following limits exist and are equal to each other:
+	\begin{equation}
+		\underline{I}=\lim\limits_{\lambda(P)\to 0}s(f,P),\quad \bar{I} = \lim\limits_{\lambda(P)\to 0}S(f,P) \nonumber
+	\end{equation}
+	and when this happens, the common value $ I = \underline{I} =\bar{I}$ is
+	\begin{equation}
+		\int_{a}^{b}f(x) dx \nonumber
+	\end{equation}
+\end{Proposition}
+\begin{proof}
+	If the limits exist and are equal, then by the properties of limit the Riemann sums have a limit and equal to these two limits. On the other hand, if $ f \in \mathcal{R}[a,b] $, by the following inequalities
+	\begin{equation}
+		S(f,p)< \sigma(f,P,\xi) + \varepsilon \nonumber
+	\end{equation}
+	for any $ \varepsilon>0 $ and
+	\begin{equation}
+			s(f,P)\leqslant \sigma(f,P,\xi)\leqslant S(f,P)  \nonumber
+	\end{equation}
+	the limit $ \bar{I} $ exists and equals to $ I $. The proof for the existence and equality of $ \underline{I} $ is similar.
+\end{proof}
+\begin{Proposition}
+	A necessary and sufficient condition for a function $ f:[a,b]\to \Real $ to be Riemann integrable on $ [a,b] $ is the following relation:
+	\begin{equation}
+		\lim\limits_{\lambda(P)\to 0}\sum_{i=1}^{n}\omega(f,\Delta_i)\Delta x_i = 0\nonumber
+	\end{equation}
+\end{Proposition}
+\begin{proof}
+	Notice that $ \omega(f,\Delta_i) =M_i-m_i$.
+\end{proof}
+\subsubsection{The Vector Space $ \mathcal{R} [a,b]$}
+\begin{Proposition}
+	If $ f,g \in \mathcal{R}[a,b] $, then
+	\begin{align}
+		&\text{\textbf{a) }} (f+g)\in \mathcal{R}[a,b] ;\\
+		&\text{\textbf{b) }} (\alpha f)\in\mathcal{R}[a,b] ,\text{ where $ \alpha $ is a numerical coefficient};\\
+		&\text{\textbf{c) }}|f| \in \mathcal{R}[a,b] ;\\
+		&\text{\textbf{d) }}f|_{[c,d]} \in \mathcal{R}[a,b] \text{ if }[c,d]\subset[a,b] ;\\
+		&\text{\textbf{e) }}(f \cdot g)\in \mathcal{R}[a,b] .\\
+	\end{align}
+	Properties \textbf{a),b),c),d)} also holds for complex-valued and vector-valued functions. The product $ f \cdot g $ is not defined in general for vector-valued functions, and property \textbf{e)} holds for complex-valued functions while not being considered for vector-valued functions.
+\end{Proposition}
+All the axioms of a vector space over the field of real numbers hold while regarding functions as vectors, and the set of real-valued functions is a vector space with respect to the operations of pointwise addition and multiplication by real numbers. $ \mathcal{R}[a,b] $ is a subspace of the vector space of real-valued functions defined on $ [a,b] $.
+\subsubsection{Lebesgue's Criterion for Riemann Integrability of a Function}
+\begin{Definition}
+	A set $ E \subset \Real $ has \textit{measure zero} or \textit{is of measure zero} if for every number $ \varepsilon>0 $ there exists a covering of the set $ E $ by an at most countable system $ \{I_k\} $ of intervals, the sum of whose length $ \sum_{k=1}^{\infty}|I_k| $ is at most $ \varepsilon $. The definition is unambiguous since the series converges absolutely and the order of summation does not affect the sum.
+\end{Definition}
+\begin{Lemma}
+	\textbf{a)} A single point and a finite number of points are sets of measure zero. \\
+	\textbf{b)} The union of a finite or countable number of sets of measure zero is a set of measure zero.\\
+	\textbf{c)} A subset of a set of measure zero is itself of measure zero.\\
+	\textbf{d)} A closed interval $ [a,b] $ with $ a<b $ is not a set of measure zero.\\
+\end{Lemma}
+\begin{proof}
+	\textbf{b):} Let $ E = \bigcup_{n}E^n $ be an at most countable union of sets $ E^n $ of measure zero. Given $ \varepsilon>0 $, for each $ E^n $ we construct a covering $ \{I^n_k\} $ of $ E^n $ such that $ \sum_{k}|I^n_k|<\frac{\varepsilon}{2^n} $. Since $ E $ is most countable, the intervals $ I^n_k,k,n \in \Natural $ form an at most countable covering of $ E $, and
+	\begin{equation}
+		\sum_{n,k}|I^n_k| < \varepsilon \nonumber
+	\end{equation}
+	This series converges and the order of summation does not matter, and thus $ E $ has measure zero.\newpara
+	\textbf{d):} Use induction on the number of intervals in the covering and prove that the sum of length of this finite covering on $ [a,b] $ is no less than $ b-a $.
+	
+\end{proof}
+\begin{Definition}
+	If a property holds at all points of a set $ X $ except possibly the points of a set of measure zero, we say that this property holds \textit{almost everywhere} on $ X $ or \textit{at almost every point} of $ X $.
+\end{Definition}
+\begin{Theorem}
+	A function defined on a closed interval is Riemann integrable on that interval iff it is bounded and continuous at almost every point.
+\end{Theorem}
+\begin{Example}
+	The Dirichlet function is not integrable on $ [0,1] $, since it is discontinuous at every point of $ [0,1] $, which doesn't have measure zero.
+\end{Example}
+\begin{Example}
+	The Riemann function is Riemann integrable, since it only discontinuous at all rational points except 0, a countable set, hence has measure zero.
+\end{Example}
+\begin{Example}
+	The composition of two arbitrary integrable functions is not always integrable. Consider the function $ g(x)=|\text{sgn}|(x) $. Take the Riemann function $ f $ on the closed interval $ [1,2] $, then the composition$ (g \circ f)(x) $ on $ [1,2] $ is precisely the Dirichlet function $ \mathcal{D}(x) $.
+\end{Example}
 
 \section{Linearity, Additivity and Monotonicity of the Integral}
-\subsection{The Integral as a Linear Function on the Space $ \mathcal{R} $[a,b]}
+\subsection{The Integral as a Linear Function on the Space $ \mathcal{R}[a,b] $}
+\begin{Theorem}
+	If $ f $ and $ g $ are integrable functions on $ [a,b] $, a linear combination of them $ \alpha f+ \beta g $ is also integrable on $ [a,b] $ and 
+	\begin{equation}
+		\int_{a}^{b}(\alpha f+ \beta g)(x)dx=\alpha \int_{a}^{b}f(x)dx+\beta \int_{a}^{b}g(x)dx  \nonumber
+	\end{equation}
+	Here we asserts that the integral is a linear function on the vector space $ \mathcal{R}[a,b] $.
+\end{Theorem}
+\begin{Definition}
+	Functions defined on functions are called \textit{functionals}.
+\end{Definition}
 \subsection{The Integral as an Additive Function of the Interval of Integration}
+\begin{Lemma}
+	If $ a<b<c $ and $ f \in \mathcal{R}[a,c] $, then $ f|_{[a,b]} \in \mathcal{R}[a,b] $, $ f|_{[b,c]} \in \mathcal{R}[b,c] $, and the following equality holds:
+	\begin{equation}
+		\int_{a}^{c}f(x)dx = 	\int_{a}^{b}f(x)|_{[a,b]}dx + 	\int_{b}^{c}f(x)|_{[b,c]}dx \nonumber
+	\end{equation}
+\end{Lemma}
+\begin{proof}
+	Reconsider the definition of Riemann integral and write the partition $ (P,\xi) $ that contains $ b $ as the union of two partitions $ (P^\prime,\xi^\prime) $ and $ (P^{\prime\prime},\xi^{\prime\prime}) $ of $ [a,b] $ and $ [b,c] $ respectively, and note that $ \lambda(P^\prime)\leqslant\lambda(P) $ and $ \lambda(P^{\prime\prime})\leqslant\lambda(P)  $.
+\end{proof}
+\begin{Theorem}
+	Let $ a,b,c\in \Real $ and $ f $ be a function integrable over the largest closed interval having two of these points as endpoints. Then the restriction of $ f $ to each of the other closed intervals is also integrable over those intervals and the following equality holds:
+	\begin{equation}
+		\int_{a}^{b}f(x)dx+\int_{b}^{c}f(x)dx+\int_{c}^{a}f(x)dx = 0 \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Definition}
+	Suppose that to each ordered pair $ (\alpha,\beta) $ of points $ \alpha,\beta \in [a,b] $ a number $ I(\alpha,\beta) $ is assigned so that
+	\begin{equation}
+		I(\alpha,\gamma) = I(\alpha,\beta)+I(\beta,\gamma)\nonumber
+	\end{equation}
+	for any triple of points $ \alpha,\beta,\gamma \in [a,b] $.Then the function $ I(\alpha,\beta) $ is called an \textit{additive(oriented) interval function} defined on intervals contained in $ [a,b] $. Then the integral is an additive interval function on the interval of integration.
+\end{Definition}
 \subsection{Estimation of the Integral, Monotonicity of the Integral, and the Mean-Value Theorem}
+\subsubsection{A General Estimate of the Integral}
+\begin{Theorem}
+	If $ a\leqslant b $ and $ f \in \mathcal{R}[a,b] $, then $ |f|\in \mathcal{R}[a,b]$ and the following inequality holds
+	\begin{equation}
+		|\int_{a}^{b}f(x)dx| \leqslant \int_{a}^{b}|f|(x)dx \nonumber
+	\end{equation}
+	If $ |f|(x)\leqslant C $ on $ [a,b] $ then
+	\begin{equation}
+		\int_{a}^{b}|f|(x)dx \leqslant C(b-a) \nonumber
+	\end{equation}
+\end{Theorem}
+\subsubsection{Monotonicity of the Integral and the First Mean-Value Theorem}
+\begin{Theorem}
+	If $ a\leqslant b $, $ f_1,f_2 \in \mathcal{R}[a,b] $, and $ f_1(x)\leqslant f_2(x) $ at each point $ x \in [a,b] $, then
+	\begin{equation}
+		\int_{a}^{b}f_1(x)dx \leqslant \int_{a}^{b}f_2(x)dx \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Corollary}
+	If $ a\leqslant b $, $ f \in \mathcal{R}[a,b] $; and $ m \leqslant f(x )\leqslant M $ at each $ x \in [a,b] $, then
+	\begin{equation}
+		m\cdot (b-a) \leqslant \int_{a}^{b}f(x)dx \leqslant M\cdot (b-a)  \nonumber
+	\end{equation}
+	and, in particular, if $ 0 \leqslant f(x) $ on $ [a,b] $, then
+	\begin{equation}
+		0\leqslant \int_{a}^{b}f(x)dx\nonumber
+	\end{equation}
+\end{Corollary}
+\begin{Corollary}
+	If $ f \in \mathcal{R}[a,b] $, $ m = \inf_{x \in [a,b]}f(x) $ and $ M = \sup_{x \in [a,b]}f(x) $, then there exists a number $ \mu \in [m,M] $ such that
+	\begin{equation}
+		 \int_{a}^{b}f(x)dx = \mu \cdot (b-a) \nonumber
+	\end{equation}
+\end{Corollary}
+\begin{Corollary}
+	If $ f \in C[a,b] $, there is a point $ \xi \in [a,b] $ such that
+	\begin{equation}
+		\int_{a}^{b}f(x)dx = f(\xi) \cdot (b-a) \nonumber
+	\end{equation}
+\end{Corollary}
+\begin{Theorem}[First Mean-value Theorem for the Integral]
+	Let $  f,g \in \mathcal{R}[a,b]$, $ m = \inf_{x \in [a,b]}f(x) $ and $ M = \sup_{x \in [a,b]}f(x) $. If $ g $ is nonnegative (or nonpositive) on $ [a,b] $, then
+	\begin{equation}
+		 \int_{a}^{b}(f \cdot g)(x)dx = \mu \int_{a}^{b}g(x)dx \nonumber
+	\end{equation}
+	where $ \mu \in [m,M] $. \newpara
+	If, in addition, it is known that $ f \in C[a,b] $, then there exists a point $ \xi \in [a,b] $ such that
+	\begin{equation}
+		\int_{a}^{b}(f \cdot g)(x)dx = f(\xi) \int_{a}^{b}g(x)dx \nonumber
+	\end{equation}
+\end{Theorem}
+\subsubsection{The Second Mean-Value Theorem for the Integral}
+\begin{Definition}
+	The following transformation is called the \textit{Abel's transformation}. Let $ A_k = \sum_{i=1}^{k}a_i $ and $ A_0 = 0 $. Then
+	\begin{equation}
+		\sum_{i=1}^{n}a_i b_i = A_n b_n + \sum_{i=1}^{n-1}A_i(b_i - b_{i+1}) \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Lemma}
+	If the numbers $ A_k= \sum_{i=1}^{k}a_i $ satisfy the inequalities $ m \leqslant A_k \leqslant M $ and the numbers $ b_i $ are nonnegative and $ b_i \geqslant b_{i+1} $ for $ i = 1,\cdots,n-1 $, then
+	\begin{equation}
+		m b_1 \leqslant \sum_{i=1}^{n}a_i b_i  \leqslant M b_1 \nonumber
+	\end{equation}
+\end{Lemma}
+\begin{proof}
+	Using Abel's transformation we have
+	\begin{equation}
+		\sum_{i=1}^{n}a_i b_i \leqslant M b_n + \sum_{i=1}^{n-1}M(b_i - b_{i+1}) = M b_n + M(b_1 - b_n) = M b_1 \nonumber
+	\end{equation}
+	The left-hand inequality is verified similarly.
+\end{proof}
+\begin{Lemma}
+	If $ f \in \mathcal{R}[a,b] $, then for any $ x \in [a,b] $ the function
+	\begin{equation}
+		F(x)=\int_{a}^{x}f(t)dt\nonumber
+	\end{equation}
+	is defined and $ F(x)\in C[a,b] $.
+\end{Lemma}
+\begin{Lemma}
+	If $ f,g \in \mathcal{R}[a,b] $ and $ g $ is a nonnegative nonincreasing function on $[a,b]  $, then there exists a point $ \xi \in [a,b] $ such that
+	\begin{equation}
+	 \int_{a}^{b}(f \cdot g)(x)dx =g(a) \int_{a}^{\xi}f(x)dx \nonumber
+	\end{equation}
+\end{Lemma}
+\begin{proof}
+	Let $ P $ be a partition of $ [a,b] $. First
+	\begin{equation}
+		\int_{a}^{b}(f \cdot g)(x)dx  = \sum_{i=1}^{n}g(x_{i-1})\int_{x_{i-1}}^{x_i}f(x)dx + \sum_{i=1}^{n}\int_{x_{i-1}}^{x_i}[g(x)-g(x_{i-1})]f(x)dx \nonumber
+	\end{equation}
+	The last sum tends to zero as $ \lambda(P)\to 0 $ since $ f $ is bounded on $ [a,b] $ and $ g \in \mathcal{R}[a,b] $. Set $ F(x)=\int_{a}^{x}f(t)dt $ and $ m = \underset{x \in [a,b]}{\min}F(x) $ and $ M = \underset{x \in [a,b]}{\max}F(x) $. Let $ a_i = F(x_i)-F(x_{i-1}) $ and $ b_i = g(x_{i-1}) $, then
+	\begin{equation}
+		m g(a)\leqslant \int_{a}^{b}(f \cdot g)(x)dx \leqslant M g(a) \nonumber
+	\end{equation}
+	If $ g(a)>0 $, we set
+	\begin{equation}
+		\mu = \frac{1}{g(a)} \int_{a}^{b}(f \cdot g)(x)dx \nonumber
+	\end{equation}
+	Now we have $ m \leqslant\mu \leqslant M $ and from the continuity of $ F(x) $ there exists a point $ \xi \in [a,b] $ at which $ F(\xi)=\mu $.
+\end{proof}
+\begin{Theorem}[Second Mean-value Theorem for the Integral]
+	If $ f,g \in \mathcal{R}[a,b] $ and $ g $ is a monotonic function on $ [a,b] $, then there exists a point $ \xi \in [a,b]  $ such that
+	\begin{equation}
+		\int_{a}^{b}(f \cdot g)(x)dx = g(a) \int_{a}^{\xi}f(x)dx + g(b)\int_{\xi}^{b}f(x)dx \nonumber
+			\end{equation}
+	This equality is also called \textit{Bonnet's formula}.
+\end{Theorem}
 
 \section{The Integral and the Derivative}
 \subsection{The Integral and the Primitive}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 NOV 2017 23:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 NOV 2017 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1099,25 +1099,25 @@ ion(Limit
  []
 
 [4] [5]
-Overfull \hbox (4.8161pt too wide) in paragraph at lines 153--153
+Overfull \hbox (4.8161pt too wide) in paragraph at lines 158--158
  [][] [][]\T1/lmr/m/n/10.95 Definition, Ex-am-ples, and Ba-sic Prop-er-ties of 
 Im-proper 
  []
 
 
-Overfull \hbox (2.96172pt too wide) in paragraph at lines 163--163
+Overfull \hbox (2.96172pt too wide) in paragraph at lines 168--168
  [][] [][]\T1/lmr/m/n/10.95 Continuity of a Func-tion of Sev-eral Vari-ables an
 d Prop- 
  []
 
 
-Overfull \hbox (3.57011pt too wide) in paragraph at lines 175--175
+Overfull \hbox (3.57011pt too wide) in paragraph at lines 180--180
  [][] [][]\T1/lmr/m/n/10.95 Coordinate Rep-re-sen-ta-tion of the Dif-fer-en-tia
 l of a Map- 
  []
 
 [6]
-Overfull \hbox (3.4852pt too wide) in paragraph at lines 197--197
+Overfull \hbox (3.4852pt too wide) in paragraph at lines 202--202
  [][] [][]\T1/lmr/m/n/10.95 Transition to the Case of a Re-la-tion $\OML/lmm/m/
 it/10.95 F\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]; []  ; x[]; y\OT1/lmr/m/n
 /10.95 ) = 
@@ -2149,280 +2149,332 @@ Underfull \hbox (badness 10000) in paragraph at lines 3243--3246
 ]
  6.
 [91] [92]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3346.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3346.
-
-
-Overfull \hbox (3.17332pt too wide) in paragraph at lines 3367--3367
-[]\T1/lmr/bx/n/12 Definition, Ex-am-ples, and Ba-sic Prop-er-ties of Im-proper
- []
-
-
 Overfull \hbox (187.38214pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10.95 6.1.  DEFINITION OF THE INTEGRAL AND DESCRIPTION OF THE SET 
 OF INTEGRABLE FUNCTIONS \T1/lmr/m/n/10.95 93
  []
 
-[93] [94]
- 7.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 3373.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 3373.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 3373.
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 3349--3351
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3373.
+ []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3373.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3373.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3374.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3374.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3374.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3387--3389
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 3379--3381
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3393.
+Overfull \hbox (187.38214pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 6.1.  DEFINITION OF THE INTEGRAL AND DESCRIPTION OF THE SET 
+OF INTEGRABLE FUNCTIONS \T1/lmr/m/n/10.95 95
+ []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3393.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3393.
-
-[95
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 3424--3428
+[95] [96]
+Underfull \hbox (badness 10000) in paragraph at lines 3455--3459
 
  []
 
 
-Overfull \hbox (58.72609pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 96  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
-EIR LIMITS AND CONTINUITY
+Underfull \hbox (badness 10000) in paragraph at lines 3464--3467
+
  []
 
-[96]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3475.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3475.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3475.
-
-
-Overfull \hbox (57.28789pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 7.1.  THE SPACE $\U/msb/m/n/10.95 R[]$ \T1/lmr/m/sl/10.95 AN
-D THE MOST IMPORTANT CLASSES OF ITS SUBSETS \T1/lmr/m/n/10.95 97
+Overfull \hbox (187.38214pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 6.1.  DEFINITION OF THE INTEGRAL AND DESCRIPTION OF THE SET 
+OF INTEGRABLE FUNCTIONS \T1/lmr/m/n/10.95 97
  []
 
 [97]
-Overfull \hbox (58.72609pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 98  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: TH
-EIR LIMITS AND CONTINUITY
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3486.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3486.
 
 [98]
-Underfull \hbox (badness 10000) in paragraph at lines 3571--3574
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3571--3574
-
- []
-
-
-Overfull \hbox (41.8447pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 7.2.  LIMITS AND CONTINUITY OF FUNCTIONS OF SEVERAL VARIABLE
-S \T1/lmr/m/n/10.95 99
+Overfull \hbox (39.48924pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 6.2.  LINEARITY, ADDITIVITY AND MONOTONICITY OF THE INTEGRAL
+ \T1/lmr/m/n/10.95 99
  []
 
 [99]
-Underfull \hbox (badness 10000) in paragraph at lines 3611--3614
+Underfull \hbox (badness 10000) in paragraph at lines 3565--3568
+
+ []
+
+[100]
+Overfull \hbox (3.17332pt too wide) in paragraph at lines 3645--3645
+[]\T1/lmr/bx/n/12 Definition, Ex-am-ples, and Ba-sic Prop-er-ties of Im-proper
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (44.96423pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 6.2.  LINEARITY, ADDITIVITY AND MONOTONICITY OF THE INTEGRAL
+ \T1/lmr/m/n/10.95 101
+ []
+
+[101] [102]
+ 7.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 3651.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 3651.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 3651.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3651.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3651.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3651.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3652.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3652.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3652.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3665--3667
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3616--3619
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3671.
 
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3671.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3626--3633
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3671.
+
+[103
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 3702--3706
 
  []
 
 
 Overfull \hbox (64.20108pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 100  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: T
+\T1/lmr/m/n/10.95 104  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: T
 HEIR LIMITS AND CONTINUITY
  []
 
-[100]
-Underfull \hbox (badness 10000) in paragraph at lines 3659--3665
+[104]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3753.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3753.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3753.
+
+
+Overfull \hbox (62.76288pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 7.1.  THE SPACE $\U/msb/m/n/10.95 R[]$ \T1/lmr/m/sl/10.95 AN
+D THE MOST IMPORTANT CLASSES OF ITS SUBSETS \T1/lmr/m/n/10.95 105
+ []
+
+[105]
+Overfull \hbox (64.20108pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10.95 106  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: T
+HEIR LIMITS AND CONTINUITY
+ []
+
+[106]
+Underfull \hbox (badness 10000) in paragraph at lines 3849--3852
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3849--3852
 
  []
 
 
 Overfull \hbox (47.31969pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10.95 7.2.  LIMITS AND CONTINUITY OF FUNCTIONS OF SEVERAL VARIABLE
-S \T1/lmr/m/n/10.95 101
+S \T1/lmr/m/n/10.95 107
  []
 
-[101]
+[107]
+Underfull \hbox (badness 10000) in paragraph at lines 3889--3892
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3894--3897
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3904--3911
+
+ []
+
+
 Overfull \hbox (64.20108pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 102  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: T
+\T1/lmr/m/n/10.95 108  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: T
 HEIR LIMITS AND CONTINUITY
  []
 
-[102]
- 8.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3686.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3686.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3686.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3687.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3687.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3687.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3697--3702
+[108]
+Underfull \hbox (badness 10000) in paragraph at lines 3937--3943
 
  []
 
-[103
+
+Overfull \hbox (47.31969pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 7.2.  LIMITS AND CONTINUITY OF FUNCTIONS OF SEVERAL VARIABLE
+S \T1/lmr/m/n/10.95 109
+ []
+
+[109]
+Overfull \hbox (64.20108pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10.95 110  \T1/lmr/m/sl/10.95 7.  FUNCTIONS OF SEVERAL VARIABLES: T
+HEIR LIMITS AND CONTINUITY
+ []
+
+[110]
+ 8.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3964.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3964.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3964.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3965.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 3965.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 3965.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3975--3980
+
+ []
+
+[111
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3711.
+(hyperref)                removing `math shift' on input line 3989.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3711.
+(hyperref)                removing `superscript' on input line 3989.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\to' on input line 3711.
+(hyperref)                removing `\to' on input line 3989.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3711.
+(hyperref)                removing `superscript' on input line 3989.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3711.
+(hyperref)                removing `math shift' on input line 3989.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3719.
+(hyperref)                removing `math shift' on input line 3997.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3719.
+(hyperref)                removing `superscript' on input line 3997.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3719.
+(hyperref)                removing `math shift' on input line 3997.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3727--3734
+Underfull \hbox (badness 10000) in paragraph at lines 4005--4012
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3727--3734
+Underfull \hbox (badness 10000) in paragraph at lines 4005--4012
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3744--3746
+Underfull \hbox (badness 10000) in paragraph at lines 4022--4024
 
  []
 
 
 Overfull \hbox (73.17366pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 104  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
+\T1/lmr/m/n/10.95 112  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
 TIONS OF SEVERAL VARIABLES
  []
 
-[104]
+[112]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3760.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 3760.
+(hyperref)                removing `math shift' on input line 4038.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3760.
+(hyperref)                removing `superscript' on input line 4038.
 
-[105]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 4038.
+
+[113]
 Overfull \hbox (73.17366pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 106  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
+\T1/lmr/m/n/10.95 114  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
 TIONS OF SEVERAL VARIABLES
  []
 
-[106]
-Overfull \hbox (8.30588pt too wide) in paragraph at lines 3857--3857
+[114]
+Overfull \hbox (8.30588pt too wide) in paragraph at lines 4135--4135
 []\T1/lmr/bx/n/12 The Dif-fer-en-tial and Par-tial Deriva-tives of a Real-Value
 d
  []
 
 
-Overfull \hbox (33.13853pt too wide) detected at line 3868
+Overfull \hbox (33.13853pt too wide) detected at line 4146
 \OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[] \OT1/lmr/m/n/1
 0.95 + \OML/lmm/m/it/10.95 h[]; []  ; x[] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/10
 .95 h[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 f\OT1/l
@@ -2438,40 +2490,40 @@ n/10.95 0
 
 Overfull \hbox (21.16183pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10.95 8.2.  THE DIFFERENTIAL OF A FUNCTION OF SEVERAL VARIABLES \T
-1/lmr/m/n/10.95 107
+1/lmr/m/n/10.95 115
  []
 
-[107]
-Overfull \hbox (2.02237pt too wide) in paragraph at lines 3891--3891
+[115]
+Overfull \hbox (2.02237pt too wide) in paragraph at lines 4169--4169
 []\T1/lmr/bx/n/12 Coordinate Rep-re-sen-ta-tion of the Dif-fer-en-tial of a Map
 -
  []
 
 
 Overfull \hbox (73.17366pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 108  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
+\T1/lmr/m/n/10.95 116  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
 TIONS OF SEVERAL VARIABLES
  []
 
-[108] [109]
+[116] [117]
 Overfull \hbox (73.17366pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 110  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
+\T1/lmr/m/n/10.95 118  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
 TIONS OF SEVERAL VARIABLES
  []
 
-[110]
-Overfull \hbox (6.84607pt too wide) in paragraph at lines 4011--4011
+[118]
+Overfull \hbox (6.84607pt too wide) in paragraph at lines 4289--4289
 []\T1/lmr/bx/n/14.4 The Ba-sic Facts of Dif-fer-en-tial Cal-cu-lus of Real-
  []
 
 
 Overfull \hbox (254.6032pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10.95 8.4.  THE BASIC FACTS OF DIFFERENTIAL CALCULUS OF REAL-VALUE
-D FUNCTIONS OF SEVERAL VARIABLES \T1/lmr/m/n/10.95 111
+D FUNCTIONS OF SEVERAL VARIABLES \T1/lmr/m/n/10.95 119
  []
 
-[111]
-Overfull \hbox (35.70264pt too wide) detected at line 4049
+[119]
+Overfull \hbox (35.70264pt too wide) detected at line 4327
 \OML/lmm/m/it/10.95 F\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 h[]; h[]\OT1/lmr/m
 /n/10.95 ) = \OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[] \
 OT1/lmr/m/n/10.95 + \OML/lmm/m/it/10.95 h[]; x[] \OT1/lmr/m/n/10.95 + \OML/lmm/
@@ -2487,12 +2539,12 @@ mr/m/n/10.95 (1) \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 '\OT1/lmr/m/n/10.9
 
 
 Overfull \hbox (73.17366pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 112  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
+\T1/lmr/m/n/10.95 120  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
 TIONS OF SEVERAL VARIABLES
  []
 
-[112]
-Overfull \hbox (13.91391pt too wide) in paragraph at lines 4083--4084
+[120]
+Overfull \hbox (13.91391pt too wide) in paragraph at lines 4361--4362
 [][]\T1/lmr/bx/n/10.95 Theorem 8.4.4. []\T1/lmr/m/it/10.95 If the func-tion $\O
 ML/lmm/m/it/10.95 f \OT1/lmr/m/n/10.95 : \OML/lmm/m/it/10.95 U\OT1/lmr/m/n/10.9
 5 (\OML/lmm/m/it/10.95 x\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ! \U/msb/m/n/1
@@ -2503,119 +2555,119 @@ mr/m/n/10.95 (\OML/lmm/m/it/10.95 x\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 ; \U
  []
 
 
-Overfull \hbox (13.35757pt too wide) detected at line 4090
+Overfull \hbox (13.35757pt too wide) detected at line 4368
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4090--4093
+Underfull \hbox (badness 10000) in paragraph at lines 4368--4371
 
  []
 
 
 Overfull \hbox (254.6032pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10.95 8.4.  THE BASIC FACTS OF DIFFERENTIAL CALCULUS OF REAL-VALUE
-D FUNCTIONS OF SEVERAL VARIABLES \T1/lmr/m/n/10.95 113
+D FUNCTIONS OF SEVERAL VARIABLES \T1/lmr/m/n/10.95 121
  []
 
-[113]
+[121]
 Overfull \hbox (73.17366pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 114  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
+\T1/lmr/m/n/10.95 122  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
 TIONS OF SEVERAL VARIABLES
  []
 
-[114]
+[122]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4189.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 4189.
+(hyperref)                removing `math shift' on input line 4467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 4189.
+(hyperref)                removing `superscript' on input line 4467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\next@' on input line 4189.
+(hyperref)                removing `\<def>-command' on input line 4467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 4189.
+(hyperref)                removing `\next@' on input line 4467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\next@' on input line 4189.
+(hyperref)                removing `\<let>-command' on input line 4467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 4189.
+(hyperref)                removing `\next@' on input line 4467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4189.
+(hyperref)                removing `superscript' on input line 4467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4198.
+(hyperref)                removing `math shift' on input line 4467.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 4198.
+(hyperref)                removing `math shift' on input line 4476.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4198.
+(hyperref)                removing `superscript' on input line 4476.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4199.
+(hyperref)                removing `math shift' on input line 4476.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4199.
+(hyperref)                removing `math shift' on input line 4477.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4199.
+(hyperref)                removing `math shift' on input line 4477.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 4199.
+(hyperref)                removing `math shift' on input line 4477.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 4199.
+(hyperref)                removing `superscript' on input line 4477.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 4477.
 
 
 Overfull \hbox (254.6032pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10.95 8.4.  THE BASIC FACTS OF DIFFERENTIAL CALCULUS OF REAL-VALUE
-D FUNCTIONS OF SEVERAL VARIABLES \T1/lmr/m/n/10.95 115
+D FUNCTIONS OF SEVERAL VARIABLES \T1/lmr/m/n/10.95 123
  []
 
-[115]
+[123]
 Overfull \hbox (73.17366pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 116  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
+\T1/lmr/m/n/10.95 124  \T1/lmr/m/sl/10.95 8.  THE DIFFERENTIAL CALCULUS OF FUNC
 TIONS OF SEVERAL VARIABLES
  []
 
-[116]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4207.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4207.
+[124]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4485.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4485.
  (./Mathematical Analysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4207.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4207.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4485.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4485.
 
 Package rerunfilecheck Info: File `"Mathematical Analysis".out' has not changed
 .
-(rerunfilecheck)             Checksum: 2D134FF64146945E9F87C0A1DD794C19;13547.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4207.
+(rerunfilecheck)             Checksum: 2C91708FCCBCD43792A2D04A5FE5791E;13547.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4485.
  ) 
 Here is how much of TeX's memory you used:
- 18460 strings out of 492995
- 333711 string characters out of 6132704
+ 18483 strings out of 492995
+ 333954 string characters out of 6132704
  408381 words of memory out of 5000000
  21175 multiletter control sequences out of 15000+600000
  144793 words of font info for 103 fonts, out of 8000000 for 9000
@@ -2653,10 +2705,10 @@ al/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive
 -dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Mathematical Analysis.pdf" (124 pages, 799316 bytes).
+Output written on "Mathematical Analysis.pdf" (132 pages, 824960 bytes).
 PDF statistics:
- 1722 PDF objects out of 1728 (max. 8388607)
- 1552 compressed objects within 16 object streams
- 469 named destinations out of 1000 (max. 500000)
+ 1773 PDF objects out of 2073 (max. 8388607)
+ 1595 compressed objects within 16 object streams
+ 492 named destinations out of 1000 (max. 500000)
  1191 words of extra memory for PDF output out of 10000 (max. 10000000)
 
