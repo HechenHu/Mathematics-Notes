@@ -1,0 +1,66 @@
+\BOOKMARK [0][-]{chapter.1}{Groups}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Semigroups, Monoids and Groups}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Homomorphisms and Subgroups}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Cyclic Groups}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Cosets and Counting}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Normality, Quotient Groups, and Homomorphisms}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.6}{Symmetric, Alternating, and Dihedral Groups}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.7}{Categories: Products, Coproducts, and Free Objects}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.8}{Direct Products and Direct Sums}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.9}{Free Groups, Free Products, Generators and Relations}{chapter.1}% 10
+\BOOKMARK [0][-]{chapter.2}{The Structure of Groups}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Free Abelian Groups}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Finitely Generated Abelian Groups}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.3}{The Krull-Schmidt Theorem}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.4}{The Action of a Group on a Set}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.5}{The Sylow Theorem}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.6}{Classification of Finite Groups}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.7}{Nilpotent and Solvable Groups}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.8}{Normal and Subnormal Series}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Rings}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Rings and Homomorphisms}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{Ideals}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.3}{Factorization in Commutative Rings}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.4}{Rings of Quotients and Localization}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.5}{Rings of Polynomials and Formal Power Series}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.6}{Factorization in Polynomial Rings}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Modules}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Modules, Homomorphisms and Exact Sequences}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Free Modules and Vector Spaces}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{Projective and Injective Modules}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.4}{Hom and Duality}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.5}{Tensor Products}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.6}{Modules over a Principal Ideal Domain}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.7}{Algebras}{chapter.4}% 34
+\BOOKMARK [0][-]{chapter.5}{Fields and Galois Theory}{}% 35
+\BOOKMARK [1][-]{section.5.1}{Field Extensions}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.2}{The Fundamental Theorem}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.3}{Splitting Fields, Algebraic Closure and Normality}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.4}{The Galois Group of a Polynomial}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.5}{Finite Fields}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.6}{Separability}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.7}{Cyclic Extensions}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.8}{Cyclotomic Extensions}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.9}{Radical Extensions}{chapter.5}% 44
+\BOOKMARK [0][-]{chapter.6}{The Structure of Fields}{}% 45
+\BOOKMARK [1][-]{section.6.1}{Transcendence Bases}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.2}{Linear Disjointness and Separability}{chapter.6}% 47
+\BOOKMARK [0][-]{chapter.7}{Commutative Rings and Modules}{}% 48
+\BOOKMARK [1][-]{section.7.1}{Chain Conditions}{chapter.7}% 49
+\BOOKMARK [1][-]{section.7.2}{Prime and Primary Ideals}{chapter.7}% 50
+\BOOKMARK [1][-]{section.7.3}{Primary Decomposition}{chapter.7}% 51
+\BOOKMARK [1][-]{section.7.4}{Noetherian Rings and Modules}{chapter.7}% 52
+\BOOKMARK [1][-]{section.7.5}{Ring Extensions}{chapter.7}% 53
+\BOOKMARK [1][-]{section.7.6}{Dedekind Domains}{chapter.7}% 54
+\BOOKMARK [1][-]{section.7.7}{The Hilbert Nullstellensatz}{chapter.7}% 55
+\BOOKMARK [0][-]{chapter.8}{The Structure of Rings}{}% 56
+\BOOKMARK [1][-]{section.8.1}{Simple and Primitive Rings}{chapter.8}% 57
+\BOOKMARK [1][-]{section.8.2}{The Jacobson Radical}{chapter.8}% 58
+\BOOKMARK [1][-]{section.8.3}{Semisimple Rings}{chapter.8}% 59
+\BOOKMARK [1][-]{section.8.4}{The Prime Radical; Prime and Semiprime Rings}{chapter.8}% 60
+\BOOKMARK [1][-]{section.8.5}{Algebras}{chapter.8}% 61
+\BOOKMARK [1][-]{section.8.6}{Division Algebras}{chapter.8}% 62
+\BOOKMARK [0][-]{chapter.9}{Categories}{}% 63
+\BOOKMARK [1][-]{section.9.1}{Functors and Natural Transformations}{chapter.9}% 64
+\BOOKMARK [1][-]{section.9.2}{Adjoint Functors}{chapter.9}% 65
+\BOOKMARK [1][-]{section.9.3}{Morphisms}{chapter.9}% 66

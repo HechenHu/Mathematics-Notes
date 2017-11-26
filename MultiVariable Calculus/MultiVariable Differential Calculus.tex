@@ -11,32 +11,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage[english]{babel}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{tikz}
-
-\renewcommand{\vec}[1]{\mathbf{#1}} % Bold Vector Notation
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Norm of a Vector
-\newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}} % Unit Vector
-\newcommand{\Real}{\mathbb{R}}
-\newcommand{\Natural}{\mathbb{N}}
-\newcommand{\Zahlen}{\mathbb{Z}}
-\newcommand{\Quoziente}{\mathbb{Q}}
-\newcommand{\newpara}{\\ \newline}
-
-
-\newtheorem{Theorem}{Theorem}[section]%Theorem
-\newtheorem*{Corollary}{Corollary} %Corollary
-\newtheorem*{Lemma}{Lemma}%Lemma
-\newtheorem*{Statement}{Statement} % Statement
-\theoremstyle{definition}
-\newtheorem*{Definition}{Definition} %Definition
-\newtheorem*{Proposition}{Proposition}%Proposition
+\usepackage{Customized}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter quote at the start of chapter        %
@@ -79,7 +54,7 @@
 %%%%%%%%%%%%%%%%
 % NEW CHAPTER! %
 %%%%%%%%%%%%%%%%
-\chapter{Vectors in $\mathbb{R} ^n$ Space}
+\chapter{Vectors in $\Real^n$ Space}
 
 \section{Definition and Properties}
 Vector is a geometrical object that has both magnitude and direction. Examples include force and velocity.  \\ Properties in in $n$th dimension vector space for Euclidean vector where $e_i$ is the basis vector for the $i$th axis(for convenience we will us $\vec{i}$, $\vec{j}$, $\vec{k}$ denote the basis vector in a 3-d space):
@@ -528,12 +503,12 @@ Together with unit tangent vector and unit normal vector, the binormal vector de
 	If the particle is travelling on a circle with radius $ r $, the speed $ v_0 $ is constant, and $ \norm{\vec{a}(t)}=\frac{v_0^2}{r} $.
 \end{Definition}
 
-\begin{Statement}
+\begin{Example}
 	Over a time interval $ [t_1,t_2] $, the distance traveled by a particle is
 	\begin{equation}
 		s=\int_{t_1}^{t_2}\norm{\vec{v}(t)}dt\nonumber
 	\end{equation}
-\end{Statement}
+\end{Example}
 
 \begin{Definition}
 	If $ a_T= \frac{d^2s}{dt^2}$ and $ a_N= \kappa(t)(\frac{ds}{dt})^2$, then
@@ -543,20 +518,20 @@ Together with unit tangent vector and unit normal vector, the binormal vector de
 	and $ a_T $ is called the \textit{tangential component of acceleration} and $ a_N $ is called \textit{normal component of acceleration} . $ a_T\vec{T} $ is the \textit{tangential vector component of acceleration} and $ a_N\vec{N} $ is called the \textit{normal vector component of acceleration}
 \end{Definition}
 
-\begin{Statement}
+\begin{Example}
 	\begin{align}
 		a_T&=\frac{\vec{v}\cdot \vec{a}}{\norm{\vec{v}}} \nonumber\\
 		a_N&=\frac{\norm{\vec{v}\times \vec{a}}}{\norm{\vec{v}}} \nonumber\\
 		\kappa&=\frac{\norm{\vec{v}\times \vec{a}}}{\norm{\vec{v}}^3} \nonumber
 	\end{align}
-\end{Statement}
+\end{Example}
 In 2-d space, the cross product can be computed by viewing $ \vec{r}(t)=<x(t),y(t)> $ as $ \vec{r}(t)=<x(t),y(t),0> $ in 3-d space.
-\begin{Statement}
+\begin{Example}
 	\begin{equation}
 		\norm{\vec{a}}^2=\vec{a}_T^2+\vec{a}_N^2 \nonumber
 	\end{equation}
 	for all smooth position functions.
-\end{Statement}
+\end{Example}
 
 \section{Projectile Motion}
 \begin{Theorem}
@@ -602,9 +577,9 @@ Suppose $ D \subset \Real^2 $ or $ D \subset \Real^3 $.
 \end{Definition}
 
 However, some sets are \textbf{neither} open or close.
-\begin{Statement}
+\begin{Example}
 	A set $ D $ in $ n $-space is both open and closed iff $ D=\Real^n $ or $ D = \emptyset $.
-\end{Statement}
+\end{Example}
 
 \begin{Definition}
 	A subset $ D $ of $ \Real^n $ is said to be \textit{bounded} if $ \exists r>0\exists P(D\subset B_r(P)) $. That is, the set is contained in some set with finite radius. It's \textit{unbounded} if it's not bounded.

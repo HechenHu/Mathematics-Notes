@@ -1,0 +1,58 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Customized}
+
+%Packages
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{empheq}
+%Vector Stuff
+\renewcommand{\vec}[1]{\mathbf{#1}} % Bold Vector Notation
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Norm of a Vector
+\newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}} % Unit Vector
+\newcommand{\innPro}[2]{\langle #1, #2 \rangle}%Inner Product
+\newcommand{\grad}[1]{\text{grad}#1} % Gradient
+
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Natural}{\mathbb{N}}
+\newcommand{\Zahlen}{\mathbb{Z}}
+\newcommand{\Quoziente}{\mathbb{Q}}
+\newcommand{\newpara}{\\ \newline}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\iu}{{i\mkern1mu}}
+\newcommand{\Si}{\text{Si }}%Sine Integral
+\newcommand{\Ci}{\text{Ci }}%Cosine Integral
+\newcommand{\li}{\text{li }}%Logarithmic Integral
+
+
+\newcommand{\exercise}{Left for Exercise}
+
+% inverse hyperbolic functions
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arsec}{arsec}
+\DeclareMathOperator{\arcot}{arcot}
+\DeclareMathOperator{\arcsc}{arcsc}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arsech}{arsech}
+\DeclareMathOperator{\arcsch}{arcsch}
+\DeclareMathOperator{\arcoth}{arcoth} 
+
+\newtheorem{Theorem}{Theorem}[section]%Theorem
+\newtheorem*{Corollary}{Corollary} %Corollary
+\newtheorem*{Lemma}{Lemma}%Lemma
+\newtheorem{Example}{\textit{Example}}[chapter] % Statement
+\theoremstyle{definition}
+\newtheorem*{Definition}{Definition} %Definition
+\newtheorem*{Proposition}{Proposition}%Proposition

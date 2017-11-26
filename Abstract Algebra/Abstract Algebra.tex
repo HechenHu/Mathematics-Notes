@@ -1,0 +1,237 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{/Users/HechenHu/Development/NoteTaking/Mathematics-Notes/Customized}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+
+\renewcommand{\@chapapp}{}% Not necessary...
+
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{Abstract Algebra}}
+% Author
+\author{\textsc{Hechen Hu}}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Auto-generated table of contents, list of figures and list of tables %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\tableofcontents
+	
+	\mainmatter
+	
+	
+	
+	
+	
+\chapter{Groups}
+\section{Semigroups, Monoids and Groups}
+\begin{Definition}
+	A \textit{semigroup} is a nonempty set $ G $ together with a binary operation on $ G $ which is associative.
+\end{Definition}
+\begin{Definition}
+	A \textit{monoid} is a semigroup $ G $ which contains a (two-sided) identity element $ e \in G $ such that $ ae=ea=a $ for all $ a \in G $.
+\end{Definition}
+\begin{Definition}
+	A \textit{group} is a monoid $ G $ such that there exists a (two-sided) inverse element and the operation between the inverse element and the original element yields the identity element regardless of order of operation.
+\end{Definition}
+\begin{Definition}
+	A semigroup $ G $ is said to be \textit{abelian} or \textit{commutative} if its binary operation is commutative.
+\end{Definition}
+\begin{Definition}
+	The \textit{order} of a group $ G $ is the cardinal number $ |G| $. $ G $ is said to be finite(resp. infinite) if $ |G| $ is finite(resp. infinite).
+\end{Definition}
+\begin{Theorem}
+	If $ G $ is a monoid, then the identity element $ e $ is unique. If $ G $ is a group, then
+	\begin{itemize}
+		\item $ c \in G $ and $ (cc=c)\Rightarrow (c=e) $;
+		\item for all $ a,b,c\in G $ we have $ (ab=ac)\Rightarrow(b=c) $ and $ (ba=ca)\Rightarrow(b=c) $ (left and right cancellation);
+		\item for each element in $ G $ its inverse element is unique;
+		\item for each element in $ G $ the inverse of its inverse is itself;
+		\item for $ a,b\in G $ we have $ (ab)^{-1}=b^{-1}a^{-1} $;
+		\item for $ a,b\in G $ the equation $ ax=b $ and $ ya=b $ have unique solutions in $ G:x=a^{-1}b $ and $ y=b a^{-1} $.
+	\end{itemize}
+\end{Theorem}
+\begin{Proposition}
+	Let $ G $ be a semigroup. $ G $ is a group iff the following conditions hold:
+	\begin{itemize}
+		\item there exists an element $ e \in G $ such that $ ea=a $ for all $ a \in G $ (left identity element);
+		\item for each $ a \in G $, there exists an element $ a^{-1} \in G$ such that $ a^{-1}a=e $ (left inverse).
+	\end{itemize}
+and an analogous result holds for "right inverses" and a "right identity".
+\end{Proposition}
+
+\begin{Proposition}
+	Let $ G $ be a semigroup. $ G $ is a group iff for all $ a,b\in G $ the equations $ ax=b $ and $ ya=b $ have solutions in $ G $.
+\end{Proposition}
+\begin{proof}
+	\exercise
+\end{proof}
+
+\begin{Example}
+	Let $ S $ be a nonempty set and $ A(S) $ the set of all bijections $ S \to S $. Under the operation of composition of functions, $ \circ $, $ A(S) $ is a group. The elements of $ A(S) $ are called \textit{permutations} and $ A(S) $ is called the group of permutations on the set $ S $. If $ S=\{1,2,3,\cdots,n\} $, then $ A(S) $ is called the symmetric group on $ n $ letters and denoted $ S_n $. $ |S_n|=n! $.
+\end{Example}
+\begin{Definition}
+	The \textit{direct product} of two groups $ G $ and $ H $ with identities $ e_G $ and $ e_H $ is the group whose underlying set is $ G \times H $ and whose binary operation is given by:
+	\begin{equation}
+		(a,b)(a^\prime,b^\prime)=(a a^\prime,b b^\prime),\quad \text{ where }a,a^\prime \in G;b, b^\prime \in H\nonumber
+	\end{equation}
+	$ G \times H $ is abelian if both $ G $ and $ H $ are; $ (e_G,e_H) $ is the identity and $ (a^{-1},b^{-1}) $ is the inverse of $ (a,b) $. Clearly $ |G \times H|=|G||H| $.
+\end{Definition}
+
+\begin{Theorem}
+	Let $ R(\sim) $ be an equivalence relation on a monoid $ G $ such that $ a_1~a_2 $ and $ b_1~b_2 $ imply $ a_1 b_1 ~ a_2 b_2 $ for all $ a_i, b_i \in G $. Then the set $ G/R $ of all equivalence classes of $ G $ under $ R $ is a monoid under the binary operation defined by $ (\bar{a})(\bar{b})=\bar{ab} $, where $ \bar{x} $ denoted the equivalence class of $ x \in G $. If $ G $ is an [abelian] group, then so is $ G/R $.\newpara
+	An equivalence relation on a monoid $ G $ that satisfies these hypothesis is called a \textbf{congruence relation} on $ G $.
+	
+\end{Theorem}
+\begin{Example}
+	The following relation on the additive froup $ \Quoziente $ is a congruence relation:
+	\begin{equation}
+		a \sim b \Leftrightarrow a-b \in \Zahlen \nonumber
+	\end{equation}
+	The set of equivalence classes (denoted $ \Quoziente / \Zahlen $) is an infinite abelian group, with addition given by $ \bar{a}+\bar{b}=\bar{a+b} $, and called the \textit{group of rationals modulo one}.
+\end{Example}
+\begin{Definition}
+	The \textit{meaningful product} on any sequence of elements of a semigroup $ G $, $ \{a_1,a_2,\cdots\} $, $ a_1,\cdots,a_n $(in this order), is defined inductively as below: If $ n=1 $, the only meaningful product is $ a_1 $. If $ n>1 $, then a meaningful product is defined to be any product of the form $ (a_1\cdots a_m)(a_{m+1}\cdots a_n) $ where $ m<n $ and $ (a_1\cdots a_m) $ and $ (a_{m+1}\cdots a_n) $ are meaningful products of $ m $ and $ n-m $ elements respectively.
+\end{Definition}
+\begin{Definition}
+	The \textit{standard $ n $ product} $ \prod_{i=1}^{n}a_i $ is defined as follows:
+	\begin{equation}
+		\prod_{i=1}^{1}a_i=a_i;\quad\text{ for }n>1,\prod_{i=1}^{n}a_i = (\prod_{i=1}^{n-1}a_i)a_n \nonumber
+	\end{equation}
+\end{Definition}
+
+\begin{Theorem}[Generalized Associative Law]
+	If $ G $ is a semigroup and $ a_1,\cdots,a_n \in G $, then any two meaningful products of $ a_1,\cdots,a_n  $ in this order are equal.
+\end{Theorem}
+\begin{Theorem}[Generalized Commutative Law]
+	If $ G $ is a commutative semigroup and $ a_1,\cdots,a_n \in G $, then for any permutation $ i_1,\cdots,i_n $ of $ 1,2,\cdots,n $, $ a_1 a_2 \cdots a_n = a_{i_1}a_{i_2}\cdots a_{i_n} $.
+\end{Theorem}
+\begin{Definition}
+	Let $ G $ be a semigroup, $ a \in G$ and $ n \in \Natural $. The element $ a^n \in G $ is defined to be the standard $ n $ product $ \prod_{i=1}^{n}a_i $ with $ a_i=a  $ for $ 1 \leqslant i \leqslant n $. If $ G $ is a monoid, $ a^0 $ is defined to be the identity element $ e $. If $ G $ is a group, then for each $ n \in \Natural $, $ a^{-n} $ is defined to be $ (a^{-1})^n \in G $.
+\end{Definition}
+\begin{Theorem}
+	If $ G $ is a group(resp. semigroup, monoid) and $ a \in G $, then for all $ m,n \in \Zahlen $ (resp. $ \Natural $ and $ \Natural \cup \{0\} $) :
+	\begin{itemize}
+		\item $ a^m a^n = a^{m+n} $ 
+		\item $ (a^m)^n=a^{mn} $
+	\end{itemize}
+\end{Theorem}
+
+
+
+
+\section{Homomorphisms and Subgroups}
+\section{Cyclic Groups}
+\section{Cosets and Counting}
+\section{Normality, Quotient Groups, and Homomorphisms}
+\section{Symmetric, Alternating, and Dihedral Groups}
+\section{Categories: Products, Coproducts, and Free Objects}
+\section{Direct Products and Direct Sums}
+\section{Free Groups, Free Products, Generators and Relations}
+
+
+\chapter{The Structure of Groups}
+\section{Free Abelian Groups}
+\section{Finitely Generated Abelian Groups}
+\section{The Krull-Schmidt Theorem}
+\section{The Action of a Group on a Set}
+\section{The Sylow Theorem}
+\section{Classification of Finite Groups}
+\section{Nilpotent and Solvable Groups}
+\section{Normal and Subnormal Series}
+
+
+\chapter{Rings}
+\section{Rings and Homomorphisms}
+\section{Ideals}
+\section{Factorization in Commutative Rings}
+\section{Rings of Quotients and Localization}
+\section{Rings of Polynomials and Formal Power Series}
+\section{Factorization in Polynomial Rings}
+
+\chapter{Modules}
+\section{Modules, Homomorphisms and Exact Sequences}
+\section{Free Modules and Vector Spaces}
+\section{Projective and Injective Modules}
+\section{Hom and Duality}
+\section{Tensor Products}
+\section{Modules over a Principal Ideal Domain}
+\section{Algebras}
+
+
+\chapter{Fields and Galois Theory}
+\section{Field Extensions}
+\section{The Fundamental Theorem}
+\section{Splitting Fields, Algebraic Closure and Normality}
+\section{The Galois Group of a Polynomial}
+\section{Finite Fields}
+\section{Separability}
+\section{Cyclic Extensions}
+\section{Cyclotomic Extensions}
+\section{Radical Extensions}
+
+
+\chapter{The Structure of Fields}
+\section{Transcendence Bases}
+\section{Linear Disjointness and Separability}
+
+\chapter{Commutative Rings and Modules}
+\section{Chain Conditions}
+\section{Prime and Primary Ideals}
+\section{Primary Decomposition}
+\section{Noetherian Rings and Modules}
+\section{Ring Extensions}
+\section{Dedekind Domains}
+\section{The Hilbert Nullstellensatz}
+
+
+\chapter{The Structure of Rings}
+\section{Simple and Primitive Rings}
+\section{The Jacobson Radical}
+\section{Semisimple Rings}
+\section{The Prime Radical; Prime and Semiprime Rings}
+\section{Algebras}
+\section{Division Algebras}
+
+
+\chapter{Categories}
+\section{Functors and Natural Transformations}
+\section{Adjoint Functors}
+\section{Morphisms}
+	
+	
+	
+	
+\end{document}

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 NOV 2017 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 NOV 2017 00:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"MultiVariable Differential Calculus.tex"
-(./MultiVariable Differential Calculus.tex
+**"Abstract Algebra.tex"
+(./Abstract Algebra.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
@@ -384,9 +384,13 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(/usr/local/texlive/texmf-local/tex/latex/local/Customized.sty
-Package: Customized 
+(/Users/HechenHu/Development/NoteTaking/Mathematics-Notes/Customized.sty
 
+LaTeX Warning: You have requested package `/Users/HechenHu/Development/NoteTaki
+ng/Mathematics-Notes/Customized',
+               but the package provides `Customized'.
+
+Package: Customized 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
 
@@ -973,30 +977,30 @@ Package: empheq 2014/07/16 v2.14 Emphasizing equations
 \c@Theorem=\count139
 \c@Example=\count140
 )
-(./MultiVariable Differential Calculus.aux)
-\openout1 = `"MultiVariable Differential Calculus.aux"'.
+(./Abstract Algebra.aux)
+\openout1 = `"Abstract Algebra.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 43.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring OFF on input line 42.
+Package hyperref Info: Link coloring OFF on input line 43.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1006,14 +1010,13 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count141
 )
-LaTeX Info: Redefining \ref on input line 42.
-LaTeX Info: Redefining \pageref on input line 42.
-LaTeX Info: Redefining \nameref on input line 42.
+LaTeX Info: Redefining \ref on input line 43.
+LaTeX Info: Redefining \pageref on input line 43.
+LaTeX Info: Redefining \nameref on input line 43.
 
-(./MultiVariable Differential Calculus.out)
-(./MultiVariable Differential Calculus.out)
+(./Abstract Algebra.out) (./Abstract Algebra.out)
 \@outlinefile=\write4
-\openout4 = `"MultiVariable Differential Calculus.out"'.
+\openout4 = `"Abstract Algebra.out"'.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1047,40 +1050,40 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 46.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 49.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 46.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 49.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 46.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 49.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 46.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 49.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 46.
+(Font)              <12> on input line 49.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 46.
+(Font)              <8> on input line 49.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 46.
-LaTeX Font Info:    Try loading font information for U+msa on input line 46.
+(Font)              <6> on input line 49.
+LaTeX Font Info:    Try loading font information for U+msa on input line 49.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 46.
+LaTeX Font Info:    Try loading font information for U+msb on input line 49.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1091,335 +1094,131 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-(./MultiVariable Differential Calculus.toc
+(./Abstract Algebra.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 2.
+(Font)              <10.95> on input line 3.
  [3])
 \tf@toc=\write5
-\openout5 = `"MultiVariable Differential Calculus.toc"'.
+\openout5 = `"Abstract Algebra.toc"'.
 
  [4]
  1.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 57.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 57.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 57.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 57.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 57.
-[1
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 78.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 78.
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 89.
+ [1
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
+[2pdfTeX warning (ext4): destination with the same identifier (name{equation.1.
+1.1}) has been already used, duplicate ignored
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
-
- []
-
-[2] [3] [4
-
-]
- 2.
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
-
- []
-
-
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.127 \end{Definition}
+                      ]pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.1.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.130 	\begin{equation}
+                       
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-Underfull \hbox (badness 10000) in paragraph at lines 217--220
+ [3]
+[4]
+ 2.
+[5
 
- []
-
-[7] [8
+] [6
 
 ]
  3.
-<Ellipsoid.png, id=262, 301.125pt x 333.245pt>
-File: Ellipsoid.png Graphic file (type png)
- <use Ellipsoid.png>
-Package pdftex.def Info: Ellipsoid.png used on input line 243.
-(pdftex.def)             Requested size: 79.49744pt x 87.97897pt.
+[7] [8
 
-<HyperboloidofOneSheet.png, id=264, 24.09pt x 26.1778pt>
-File: HyperboloidofOneSheet.png Graphic file (type png)
-
-<use HyperboloidofOneSheet.png>
-Package pdftex.def Info: HyperboloidofOneSheet.png used on input line 244.
-(pdftex.def)             Requested size: 108.405pt x 117.8193pt.
-
-<Hyperboloid_Of_Two_Sheets_Quadric.png, id=265, 24.09pt x 26.1778pt>
-File: Hyperboloid_Of_Two_Sheets_Quadric.png Graphic file (type png)
-
-<use Hyperboloid_Of_Two_Sheets_Quadric.png>
-Package pdftex.def Info: Hyperboloid_Of_Two_Sheets_Quadric.png used on input li
-ne 245.
-(pdftex.def)             Requested size: 108.405pt x 117.8193pt.
-
-<Elliptical_Cone_Quadric.png, id=266, 301.125pt x 333.245pt>
-File: Elliptical_Cone_Quadric.png Graphic file (type png)
-
-<use Elliptical_Cone_Quadric.png>
-Package pdftex.def Info: Elliptical_Cone_Quadric.png used on input line 246.
-(pdftex.def)             Requested size: 86.72377pt x 95.97244pt.
-
-<Paraboloid_Quadric.png, id=267, 301.125pt x 333.245pt>
-File: Paraboloid_Quadric.png Graphic file (type png)
-
-<use Paraboloid_Quadric.png>
-Package pdftex.def Info: Paraboloid_Quadric.png used on input line 247.
-(pdftex.def)             Requested size: 108.405pt x 119.9681pt.
-
-<Hyperbolic_Paraboloid_Quadric.png, id=268, 301.125pt x 333.245pt>
-File: Hyperbolic_Paraboloid_Quadric.png Graphic file (type png)
-
-<use Hyperbolic_Paraboloid_Quadric.png>
-Package pdftex.def Info: Hyperbolic_Paraboloid_Quadric.png used on input line 2
-48.
-(pdftex.def)             Requested size: 108.405pt x 119.9681pt.
-
-Overfull \hbox (0.67955pt too wide) in paragraph at lines 240--251
-[][] 
- []
-
-
-LaTeX Warning: Float too large for page by 105.16612pt on input line 251.
-
-[9] [10 <./Ellipsoid.png> <./HyperboloidofOneSheet.png> <./Hyperboloid_Of_Two_S
-heets_Quadric.png> <./Elliptical_Cone_Quadric.png> <./Paraboloid_Quadric.png> <
-./Hyperbolic_Paraboloid_Quadric.png>]
+]
  4.
-[11
 
-] <Curve_Length.png, id=292, 361.35pt x 250.9375pt>
-File: Curve_Length.png Graphic file (type png)
- <use Curve_Length.png>
-Package pdftex.def Info: Curve_Length.png used on input line 310.
-(pdftex.def)             Requested size: 360.0pt x 250.0026pt.
-
-[12]
-Underfull \vbox (badness 2865) has occurred while \output is active []
-
- [13pdfTeX warning (ext4): destination with the same identifier (name{equation.
-4.6.8}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.335 	\end{align}
-                  pdfTeX warning (ext4): destination with the same identifier (
-name{equation.4.6.8}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.335 	\end{align}
-                   <./Curve_Length.png>]pdfTeX warning (ext4): destination with
- the same identifier (name{equation.4.6.8}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.347 	\begin{equation}
-                       pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.4.6.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.356 \end{align}
-                 
-Underfull \hbox (badness 10000) in paragraph at lines 359--365
-
+Overfull \hbox (13.47063pt too wide) in paragraph at lines 185--185
+[]\T1/lmr/bx/n/14.4 Modules, Ho-mo-mor-phisms and Ex-act Se-quences 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--365
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 371--373
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 371--373
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 435--439
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 435--439
-
- []
-
-[16pdfTeX warning (ext4): destination with the same identifier (name{equation.4
-.7.14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.439 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.4.7.14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.439 \begin{equation}
-                      ]pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.4.8.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.443 \begin{equation}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.4.8.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.455 	\begin{equation}
-                       
-Underfull \hbox (badness 10000) in paragraph at lines 452--455
-
- []
-
-[17pdfTeX warning (ext4): destination with the same identifier (name{equation.4
-.8.14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.472 	\begin{align}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{equation.4.8.14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.472 	\begin{align}
-                    ]pdfTeX warning (ext4): destination with the same identifie
-r (name{equation.4.9.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.484 	\begin{equation}
-                        [18pdfTeX warning (ext4): destination with the same ide
-ntifier (name{equation.4.10.14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.519 \end{Definition}
-                      pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.4.10.14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.519 \end{Definition}
-                      ]pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.4.10.14}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.530 	\begin{equation}
-                        [19pdfTeX warning (ext4): destination with the same ide
-ntifier (name{equation.4.10.14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.549 \chapter
-              {Multivariable Calculus}] [20
+[9] [10
 
 ]
  5.
-[21] [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 594.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 594.
- (./MultiVariable Differential Calculus.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 594.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 594.
+[11] [12
 
+]
+ 6.
+[13] [14
 
-Package rerunfilecheck Warning: File `"MultiVariable Differential Calculus".out
-' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+]
+ 7.
+[15] [16
 
-Package rerunfilecheck Info: Checksums for `"MultiVariable Differential Calculu
-s".out':
-(rerunfilecheck)             Before: CE6E09660E56BB8FCE28E05943D40BD1;2257
-(rerunfilecheck)             After:  05A603845BA85F0014EC6E9DC6AF044F;2256.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 594.
+]
+ 8.
+
+Overfull \hbox (11.7925pt too wide) in paragraph at lines 224--224
+[]\T1/lmr/bx/n/14.4 The Prime Rad-i-cal; Prime and Semiprime Rings 
+ []
+
+[17] [18
+
+]
+ 9.
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
+ (./Abstract Algebra.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 237.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 237.
+Package rerunfilecheck Info: File `"Abstract Algebra".out' has not changed.
+(rerunfilecheck)             Checksum: 5FCED5B4153C335521D08D8DC8896B2B;4613.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 237.
  ) 
 Here is how much of TeX's memory you used:
- 17965 strings out of 492995
- 328155 string characters out of 6132704
- 400459 words of memory out of 5000000
- 21052 multiletter control sequences out of 15000+600000
- 94236 words of font info for 77 fonts, out of 8000000 for 9000
+ 17940 strings out of 492995
+ 327125 string characters out of 6132704
+ 398557 words of memory out of 5000000
+ 21050 multiletter control sequences out of 15000+600000
+ 71338 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,56p,544b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/t
-exmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/
-fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
-dvips/lm/lm-mathex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
-m/lmbsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
-m/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi12.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
-lic/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr
-o10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b>
-Output written on "MultiVariable Differential Calculus.pdf" (26 pages, 819903 b
-ytes).
+ 62i,6n,56p,521b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
+17/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-d
+ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
+dvips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
+m/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
+/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb>
+Output written on "Abstract Algebra.pdf" (23 pages, 299643 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 397 compressed objects within 4 object streams
- 109 named destinations out of 1000 (max. 500000)
- 312 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 552 PDF objects out of 1000 (max. 8388607)
+ 503 compressed objects within 6 object streams
+ 99 named destinations out of 1000 (max. 500000)
+ 541 words of extra memory for PDF output out of 10000 (max. 10000000)
 
