@@ -3221,7 +3221,7 @@ Now we make the following substitutions
 	&\sqrt{t^2-1}=u(t-1),\quad \text{or } \quad \sqrt{t^2-1}=u(t+1),\quad \text{or }\quad \sqrt{t^2-1}=t-u\\
 	&\sqrt{1-t^2}=u(1-t),\quad \text{or } \quad \sqrt{1-t^2}=u(1+t),\quad \text{or }\quad \sqrt{1-t^2}=tu \pm 1\\
 \end{align}
-that will reduce these integrals to the integral of a rational function. Alternatively, one can make the substitution $ t= \sinh \varphi ,t=\cosh \varphi$, and $ t= \sin \varphi $ (or $ t= \cos \varphi $) respectively.
+that will reduce these integrals to the integral of a rational function. Alternatively, one can make the substitution $ t= \sinh \varphi ,t=\cosh \varphi$, and $ t= \sin \varphi $ (or $ t= \cos \varphi $) respectively.\newpara
 \textbf{c.Elliptic Integrals} 
 \begin{Definition}[Elliptic Integrals]
 	\begin{equation}
@@ -3627,24 +3627,286 @@ All the axioms of a vector space over the field of real numbers hold while regar
 
 \section{The Integral and the Derivative}
 \subsection{The Integral and the Primitive}
-\subsection{The Newton-Leibniz Formula}
-\subsection{Integration by Parts in the Definite Integral and Taylor's Formula}
-\subsection{Change of Variable in an Integral}
-\subsection{Examples}
+\begin{Lemma}
+	If $ f \in \mathcal{R}[a,b] $ and the function is continuous at a point $ x \in [a,b] $, then the function $ F $ defined on $ [a,b] $ by
+	\begin{equation}
+		F(x)=\int_{a}^{x}f(t)dt\nonumber
+	\end{equation}
+	is differentiable at the point $ x $, and the following equality holds:
+	\begin{equation}
+		F^\prime(x)=f(x)\nonumber
+	\end{equation}
+\end{Lemma}
+\begin{proof}
+	Estimate the difference $ F(x+h)-F(x) $ where $ x,x+h \in [a,b] $.
+\end{proof}
+\begin{Theorem}
+	Every continuous function $ f:[a,b]\to \Real $ has a primitive, and every primitive of $ f $ on $ [a,b] $ has the form
+	\begin{equation}
+		\mathcal{F}(x)=\int_{a}^{x}f(t)dt+c \nonumber
+	\end{equation}
+	where $ c $ is a constant.
+\end{Theorem}
+\begin{Definition}
+	A continuous function $ x \mapsto \mathcal{F}(x) $ on an interval of the real line is called a \textit{primitive}(or \textit{generalized primitive}) of the function $ x \mapsto f(x) $ defined on the same interval if the relation $ \mathcal{F}^\prime(x) = f(x) $ holds at all points of the interval, with only a finite number of exceptions.
+\end{Definition}
+\begin{Theorem}
+	A function $ f:[a,b]\to \Real $  that is defined and bounded on $ [a,b] $ and has only a finite number of points of discontinuity has a primitive on that interval, and has the form
+	\begin{equation}
+		\mathcal{F}(x)=\int_{a}^{x}f(t)dt+c \nonumber
+	\end{equation}
+\end{Theorem}
 
+
+\subsection{The Newton-Leibniz Formula}
+\begin{Theorem}[Newton-Leibniz Formula or the Fundamental Theorem of Calculus]
+	If $ f:[a,b]\to \Real $ is a bounded function with a finite number of points of discontinuity, then $ f \in \mathcal{R}[a,b] $ and
+	\begin{align}
+		\Aboxed{\int_{a}^{b}f(x)dx = \mathcal{F}(b)-\mathcal{F}(a)=\mathcal{F}(x)|^b_a} \nonumber
+	\end{align}
+	where $ \mathcal{F}:[a,b]\to \Real $ is any primitive of $ f $ on $ [a,b] $.
+\end{Theorem}
+
+\subsection{Integration by Parts in the Definite Integral and Taylor's Formula}
+\begin{Proposition}
+	If the function $ u(x) $ and $ v(x) $ are continuously differentiable on $ [a,b] $, then
+	\begin{equation}
+		\int_{a}^{b}(u\cdot v^\prime)(x)dx = (u \cdot v)|_a^b - \int_{a}^{b}(v\cdot u^\prime)(x)dx \nonumber
+	\end{equation}
+	or
+	\begin{equation}
+		\int_{a}^{b}u dv = (u \cdot v)|_a^b - \int_{a}^{b} v du\nonumber
+	\end{equation}
+	and call it the formula for \textit{integration by parts} in the definite integral.
+\end{Proposition}
+\begin{Proposition}
+	If the function $ t \mapsto f(t) $ has continuous derivatives up to order $ n $ inclusive on $ [a,x] $, then Taylor's formula holds:
+	\begin{equation}
+		f(x)=f(a)+\frac{1}{1!}f^\prime (x-a)+\cdots+\frac{1}{(n-1)!}f^{(n-1)}(a)(x-a)^{n-1}+r_{n-1}(a,x)\nonumber
+	\end{equation}
+	where 
+	\begin{equation}
+		r_{n-1}(a,x)=\frac{1}{(n-1)!}\int_{a}^{x}f^{(n)}(t)(x-t)^{n-1}dt \nonumber
+	\end{equation}
+\end{Proposition}
+
+
+
+\subsection{Change of Variable in an Integral}
+\begin{Proposition}
+	If $ \varphi:[a,b]\to [a,b] $ is a continuously differentiable mapping of the closed interval $ \alpha \leqslant t \leqslant \beta$ into the closed interval $ a \leqslant x \leqslant b $ such that $ \varphi(\alpha)=a $ and $ \varphi(\beta)=b $, then for any continuous function $ f(x) $ on $ [a,b] $ the function $ f(\varphi(t))\varphi^\prime(t) $ is continuous on $ [\alpha,\beta] $ and 
+	\begin{equation}
+		\int_{a}^{b}f(x)dx = \int_{\alpha}^{\beta}f(\varphi(t))\varphi^\prime(t) dt \nonumber
+	\end{equation}
+\end{Proposition}
+\begin{Theorem}
+	Let $ \varphi:[a,b]\to [a,b] $ be a continuously differentiable strictly monotonic mapping of the closed interval $ \alpha \leqslant t \leqslant \beta$ into the closed interval $ a \leqslant x \leqslant b $ with the correspondence $ \varphi(\alpha)=a $, $ \varphi(\beta)=b $ or $ \varphi(\alpha)=b $, $ \varphi(\beta)=a $ at the endpoints. Then for any function $ f\in\mathcal{R}[a,b] $ the function $f(\varphi(t))\varphi^\prime(t) $  is integrable on $ [\alpha,\beta] $ and
+	\begin{align}
+		\Aboxed{	\int_{\varphi(\beta)}^{\varphi(\alpha)}f(x)dx = \int_{\alpha}^{\beta}f(\varphi(t))\varphi^\prime(t) dt }
+	\end{align}
+\end{Theorem}
+
+
+\subsection{Examples}
+\begin{Example}
+	Let $ f \in \mathcal{R}[-a,a] $, then
+	\begin{equation}
+		\int_{-a}^{a}f(x)dx = \begin{cases}
+		&2 \int_{0}^{a}f(x)dx,\quad \text{if $ f $ is an even function}\\
+		&0,\quad \text{if $ f $ is an odd function}
+		\end{cases}\nonumber
+	\end{equation}
+\end{Example}
+\begin{Definition}
+	The quantity $ \mu = \frac{1}{b-a}\int_{a}^{b}f(x)dx $ is called the \textit{integral average value of the function on $ [a,b] $}. Let $ f $ be a function that is defined on $ \Real $ and integrable on any closed interval. The new function
+	\begin{equation}
+		F_\delta(x)=\frac{1}{2 \delta}\int_{x-\delta}^{x+\delta}f(t)dt \nonumber
+	\end{equation}
+	is called the \textit{average} of $ f $. If $ f $ is integrable on any interval $ [a,b] $, then $ F_\delta(x) $ is continuous on $ \Real $, and if $ f \in C(\Real) $, then $ F_\delta(x) \in C^{(1)}(\Real) $.
+\end{Definition}
 
 \section{Some Applications of Integration}
 \subsection{Additive Interval Functions and the Integral}
+\begin{Proposition}
+	Suppose the additive function $ I(\alpha,\beta) $ defined for points $ \alpha,\beta $ of $ [a,b] $ is such that there exists a function $ f\in \mathcal{R}[a,b] $ connected with $ I $ as follows: the relation
+	\begin{equation}
+		\inf_{x \in [\alpha,\beta]} f(x)(\beta-\alpha)\leqslant  I(\alpha,\beta) \leqslant \sup_{x \in [\alpha,\beta]} f(x)(\beta-\alpha) \nonumber
+	\end{equation}
+	holds for any closed interval $ [\alpha,\beta] $ that is contained in $ [a,b] $. Then
+	\begin{equation}
+		I(a,b)=\int_{a}^{b}f(x)dx \nonumber
+	\end{equation}
+\end{Proposition}
+
 \subsection{Arc Length}
+\begin{Definition}
+	A path in $ \Real^3 $ is a mapping $ t \mapsto (x(t),y(t),z(t)) $ of an interval of the real line into $ \Real^3 $ defined by functions $ x(t),y(t),z(t) $ that are continuous on the interval.
+\end{Definition}
+\begin{Definition}
+	If $ t \mapsto (x(t),y(t),z(t)) $  is a path for which the domain of the parameter $ t $ is $ [a,b] $, then the points
+	\begin{equation}
+		A=(x(a),y(a),z(a))\text{  and  }B = (x(b),y(b),z(b)) \nonumber
+	\end{equation}
+	in $ \Real^3 $ are called the \textit{initial point} and \textit{terminal point} of the path.
+\end{Definition}
+\begin{Definition}
+	A path is \textit{closed} if it has both an initial and terminal point, and these points coincide.
+\end{Definition}
+\begin{Definition}
+	If $ \Gamma:I \to \Real^3 $ is a path, the image $ \Gamma(I) $ of $ I $ in $ \Real^3 $ is called the \textit{support} of the path.
+\end{Definition}
+\begin{Definition}
+	A path $ \Gamma:I \to \Real^3  $ for which the mapping $ I \to \Gamma(I) $ is injective is called a \textit{simple path} or \textit{parametrized curve}, and its support is called a \textit{curve} in $ \Real^3 $.
+\end{Definition}
+\begin{Definition}
+	A closed path $ \Gamma:[a,b]\to\Real^3 $ is called a \textit{simple closed path} or \textit{simple closed curve} if the path $ \Gamma [a,b) \to \Real^3 $ is simple.
+\end{Definition}
+\begin{Definition}
+	The path $ \Gamma:I \to \Real^3 $ is called a path of a \textit{given smoothness} if the functions $ x(t) $, $ y(t) $, and $ z(t) $ have that smoothness(e.g. the smoothness $ C[a,b] $, $ C^{(1)}[a,b] $, or $ C^{(k)} [a,b]$).
+\end{Definition}
+\begin{Definition}
+	If the functions $ x(t) $, $ y(t) $, and $ z(t) $ are continuously differentiable on $ [a,b] $, then the \textit{length} of a smooth path $ \Gamma:[a,b]\to\Real^3 $ is
+	\begin{equation}
+		l[a,b]=\int_{a}^{b}\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2+(\frac{dz}{dt})^2}dt \nonumber		
+	\end{equation}
+\end{Definition}
+\begin{Definition}
+	The path $ \tilde{\Gamma}:[\alpha,\beta]\to \Real^3 $ is obtained from $ \Gamma:[a,b]\Real^3 $ by an \textit{admissible change of parameter} if there exists a smooth mapping $ T:[\alpha,\beta]\to [a,b] $ such that $ T(\alpha)=a $, $ T(\beta)=b $, $ T^\prime(\tau)>0 $ on $ [\alpha,\beta] $ and $ \tilde{\Gamma}=\Gamma \circ T $.
+\end{Definition}
+\begin{Proposition}
+	If a smooth path $ \tilde{\Gamma}:[\alpha,\beta]\to \Real^3$ is obtained from a smooth path $ \Gamma:[a,b]\Real^3 $ by an admissible change of parameter, then the lengths of the two paths are equal.
+\end{Proposition}
+
 \subsection{The Area of a Curvilinear Trapezoid}
+
+\begin{Example}
+	The area under the graph of a integrable function $ f $ on a closed interval $ [a,b] $, called a \textit{curvilinear trapezoid}, can be computed by
+	\begin{equation}
+		S(a,b)=\int_{a}^{b}f(x)dx \nonumber
+	\end{equation}
+\end{Example}
 \subsection{Volume of a Solid Revolution }
-\subsection{Work and Energy}
+\begin{Example}
+	When the curvilinear trapezoid is revolved about the closed interval $ [a,b] $, the volume of the solid can be computed by
+	\begin{equation}
+	V(a,b)=\pi \int_{a}^{b}f^2 (x)dx \nonumber
+	\end{equation}
+\end{Example}
+
 
 
 \section{Improper Integrals}
 \subsection{Definition, Examples, and Basic Properties of Improper Integrals}
+\begin{Definition}
+	If the function $ x \mapsto f(x) $ is defined on the interval $ [a,+\infty) $ and integrable on every closed interval $ [a,b] $ contained in that interval, then the quantity
+	\begin{equation}
+		\int_{a}^{+\infty} \coloneqq \lim\limits_{b \to + \infty}\int_{a}^{b}f(x)dx \nonumber
+	\end{equation}
+	If this limit exists, is called the \textit{improper Riemann integral} or the \textit{improper integral of the function $ f $ over the interval $ [a,+\infty) $} and this integral converges, otherwise this integral diverges.
+\end{Definition}
+Other improper integrals which its lower or upper limit is itself $ \pm \infty $ or the function $ f $ is undefined on the lower and upper limits can be defined similarly.
+\begin{Proposition}
+	Suppose $ x \mapsto f(x) $ is a function defined on an interval $ [a,\omega) $ and integrable on every closed interval $ [a,b] \subset [a,\omega) $. Suppose the improper integral
+	\begin{equation}
+		\int_{a}^{\omega}f(x)dx \nonumber
+	\end{equation}
+	is defined. Then\\
+	\textbf{a)} if $ \omega \in \Real $ and $ f \in \mathcal{R}[a,\omega] $, the values of this integral is unique, whether it is interpreted as a proper or an improper integral. \\
+	\textbf{b)} the improper integral is still a linear function on the vector space $ \mathcal{R}[a,b] $. \\
+	\textbf{c)} the improper integral is still additive. \\
+	\textbf{d)} the change of variable in the definite integral still works.\\
+	\textbf{e)} the integral by parts still works.
+\end{Proposition}
+
 \subsection{Convergence of an Improper Integral}
+\subsubsection{The Cauchy Criterion}
+\begin{Proposition}[Cauchy Criterion for Convergence of an Improper Integral]
+	If the function $ x \mapsto f(x) $ is defined on $ [a,\omega) $ and integrable on every closed interval $ [a,b]\in  [a,\omega) $, then the integral $ \int_{a}^{\omega}f(x)dx $ \textit{converges} iff for every $ \varepsilon>0 $ there exists $ B \in [a,\omega)  $ such that the relation
+	\begin{equation}
+		|\int_{b_1}^{b_2}f(x)dx|<\varepsilon \nonumber
+	\end{equation}
+	holds for any $ b_1,b_2 \in [a,\omega)  $ satisfying $ B < b_1 $ and $ B <b_2 $.
+\end{Proposition}
+\subsubsection{Absolute Convergence of an Improper Integral}
+\begin{Definition}
+	The improper integral $ \int_{a}^{\omega}f(x)dx $ converges \textit{absolutely} if the integral $ \int_{a}^{\omega}|f(x)|dx $ converges.
+\end{Definition}
+\begin{Proposition}
+	 If the integrand is nonnegative and defined on any closed intervals contained in its upper and lower limits, then the improper integral exists iff the integrand is bounded on the interval of its upper and lower limits.
+\end{Proposition}
+\begin{Corollary}[Integral Test for Convergence of a Series]
+	If the function $ x \mapsto f(x) $ is defined on the interval $ [1,+\infty) $, nonnegative, nonincreasing, and integrable on each closed interval contained in it, then the series
+	\begin{equation}
+		\sum_{n=1}^{\infty}f(1)+f(2)+\cdots \nonumber
+	\end{equation}
+	and the integral
+	\begin{equation}
+		\int_{1}^{+\infty}f(x)dx\nonumber
+	\end{equation}
+	either both converge or both diverge.
+\end{Corollary}
+\begin{Theorem}[Comparison Theorem]
+	If on $ [a,\omega) $ we have $ 0\leqslant f(x) \leqslant g(x)$ and these two functions are defined and integrable on any closed interval contained in $ [a,\omega) $. Then for the same upper and lower limits, the convergence of the improper integral of $ g(x) $ implies the convergence of the one of $ f(x) $, and the divergence of the one of $ f(x) $ implies the divergence of the one of $ g(x) $.
+\end{Theorem}
+\subsubsection{Conditional Convergence of an Improper Integral}
+\begin{Definition}
+	If an improper integral converges but not absolutely, it's called converges \textit{conditionally}.
+\end{Definition}
+\begin{Proposition}[Abel-Dirichlet Test for Convergence of an Integral]
+	Let $ x \mapsto f(x) $ and $ x \mapsto g(x) $ be functions defined on $ [a,\omega) $ and integrable on every closed interval $ [a,b]\subset [a,\omega) $. Suppose that $ g $ is monotonic.\newpara
+	Then a sufficient condition for convergence of the improper integral
+	\begin{equation}
+		\int_{a}^{\omega}(f \cdot g)(x)dx \nonumber
+	\end{equation}
+	is that the one of the following pairs of conditions hold:\\
+	\textbf{$ \alpha_1) $} the integral $ \int_{a}^{\omega}f(x)dx $ converges; \\
+	\textbf{$ \beta_1) $} the function $ g $ is bounded on $ [a,\omega) $. \newpara
+	or\\
+	\textbf{$ \alpha_2) $} the function $ \mathcal{F}(b)= \int_{a}^{b}f(x)dx$ is bounded on $ [a,\omega) $;\\
+	\textbf{$ \beta_2) $} the function $ g(x) $ tends to zero as $ x \to \omega $, $ x \in  [a,\omega)  $.
+\end{Proposition}
+\begin{proof}
+	Use the second mean-value theorem and the Cauchy convergence criterion.
+\end{proof}
+
+
 \subsection{Improper Integrals with More than One Singularity}
+\begin{Definition}
+	If an improper integral's upper and lower limits, $ \omega_1$ and $ \omega_2 $, are both unbounded or themselves infinity, the value of this improper integral is:
+	\begin{equation}
+		\int_{\omega_1}^{\omega_2}f(x)dx\coloneqq \int_{\omega_1}^{c}f(x)dx+\int_{c}^{\omega_2}f(x)dx \nonumber
+	\end{equation} 
+	where $ c $ is an arbitrary point on the open interval $ (\omega_1,\omega_2) $. 
+\end{Definition}
+The case when the point of unboundedness is an interior point of the closed interval of integration can be defined similarly.
+\begin{Example}
+	The \textit{Euler-Poisson integral}, or sometimes the \textit{Gaussian integral}
+	\begin{equation}
+		\int_{-\infty}^{+\infty}e^{-x^2}dx \nonumber
+	\end{equation}
+	converges and its value is $ \sqrt{\pi} $.
+\end{Example}
+\begin{Example}
+	We set
+	\begin{equation}
+		PV \int_{a}^{b}f(x)dx \coloneqq \lim\limits_{\delta \to +0}(\int_{a}^{\omega -\delta}f(x)dx+\int_{\omega+\delta}^{b}f(x)dx  ) \nonumber
+	\end{equation}
+	where $ \omega\in [a,b] $ and at $ \omega $ $ f $ is unbounded. If the integral on the right-hand side exists, this limit is called the \textbf{principle value} of the integral. The following convention is adopted:
+	\begin{equation}
+		PV \int_{-\infty}^{+\infty}f(x)dx \coloneqq \lim\limits_{R \to + \infty}\int_{-R}^{R}f(x)dx \nonumber
+	\end{equation}
+	
+\end{Example}
+\begin{Example}
+	The precise definition of the \textbf{logarithmic integral} can be written as
+	\begin{equation}
+		\li x =\begin{cases}
+		&\int_{0}^{x} \frac{dt}{\ln t},\quad \text{ if }0<x<1 \\
+		&PV \int_{0}^{x} \frac{dt}{\ln t},\quad \text{ if }1<x 
+		\end{cases}\nonumber
+	\end{equation}
+	and this integral is not convergent.
+\end{Example}
 
 
 \chapter{Functions of Several Variables: Their Limits and Continuity}
@@ -4480,6 +4742,104 @@ The tangent plane, a hyperplane in $ \Real^{m+1} $, to the m-dimensional surface
 
 
 
+%VOLUME TWO
+\chapter{Continuous Mappings}
+\section{Metric Spaces}
+\section{Topological Spaces}
+\section{Compact Sets}
+\section{Connected Topological Spaces}
+\section{Complete Metric Spaces}
+\section{Continuous Mappings of Topological Spaces}
+\section{The Contraction Mapping Principle}
+
+\chapter{Differential Calculus  from a More General Point of View}
+\section{Normed Vector Spaces}
+\section{Linear and Multilinear Transformations}
+\section{The Differential of a Mapping}
+\section{The Finite-Increment Theorem and Some Examples of Its Usage}
+\section{Higher-Order Derivatives}
+\section{Taylor's Formula and the Study of Extrema}
+\section{The General Implicit Function Theorem}
+
+\chapter{Multiple Integrals}
+\section{The Riemann Integral over an $ n $-Dimensional Interval}
+\section{The Integral over a Set}
+\section{General Properties of the Integral}
+\section{Reduction of a Multiple Integral to an Iterated Integral}
+\section{Change of Variable in a Multiple Integral}
+\section{Improper Multiple Integrals}
+
+\chapter{Surfaces and Differential Forms in $ \Real^n $}
+\section{Surfaces in $ \Real^n $}
+\section{Orientation of a Surface}
+\section{The Boundary of a Surface and Its Orientation}
+\section{The Area of a Surface in Euclidean Space}
+\section{Elementary Facts About Differential Forms}
+
+\chapter{Line and Surface Integrals}
+\section{The Integral of a Differential Form}
+\section{The Volume Element. Integrals of First and Second Kind}
+\section{The Fundamental Integral Formulas of Analysis}
+
+\chapter{Elements of Vector Analysis and Field Theory}
+\section{The Differential Operations of Vector Analysis}
+\section{The Integral Formulas of Field Theory}
+\section{Potential Fields}
+\section{Examples of Applications}
+
+\chapter{Integration of Differential Forms on Manifolds}
+\section{Manifolds}
+\section{Differential Forms and Integration on Manifolds}
+\section{Closed and Exact Forms on Manifolds}
+
+\chapter{Uniform Convergence and the Basic Operations of Analysis on Series and Families of Functions}
+\section{Pointwise and Uniform Convergence}
+\section{Uniform Convergence of Series of Functions}
+\section{Functional Properties of a Limit Function}
+\section{Compact and Dense Subsets of the Space of Continuous Functions}
+
+\chapter{Integrals Depending on a Parameter}
+\section{Proper Integrals Depending on a Parameter}
+\section{Improper Integrals Depending on a Parameter}
+\section{The Eulerian Integrals}
+\section{Convolution of Functions and Elementary Facts}
+\section{Multiple Integrals Depending on a Parameter}
+
+\chapter{Fourier Series and the Fourier Transform}
+\section{Basic General Concepts Connected with Fourier Series}
+\section{Trigonometric Fourier Series}
+\section{The Fourier Transform}
+
+\chapter{Asymptotic Expansions}
+\section{Asymptotic Formulas and Asymptotic Series}
+\section{The Asymptotics of Integrals(Laplace's Method)}
 
 
-\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
