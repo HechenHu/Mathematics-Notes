@@ -1,0 +1,5176 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mathematical Analysis
+
+Hechen Hu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+General Mathematical Concepts and Notation
+
+Mathematical Symbols and their meanings
+ l  l 
+	
+	Notation &Meaning
+ 
+	 &L implies P 
+ 
+	 &L is equivalent to P 
+ 
+	 &If P follows from L and P is false, then L is false 
+ 
+	 &G is not equivalent either to L or to P 
+ 
+	 &The Definition of A is B (equality by definition)
+ 
+	 &End of proof 
+
+	
+
+
+Sets and Operations on Them
+
+Naive Set Theory
+1.A set may consist of any distinguishable objects() 
+
+2.A set is unambiguously determined by the collection of objects that comprise it. 
+
+3.Any property defines the set of objects having that property(). 
+ 
+
+However, this will lead to Russell's Paradox: 
+
+Let's have 
+
+Consider the class . If so  is not a set, since whether  is true or false, contradiction arises.
+
+
+ZFC: Zermelo-Fraenkel Axioms and Axiom of Choice
+1.(Axiom of Extensionality) Sets  and  are equal iff they have the same elements. 
+
+2. (Axiom of Seperation) To any set  and any property P there corresponds a set  whose elements are those elements of , and only those, having property P(if  is a set, then  is also a set). 
+
+3. (Union Axiom) For any set  whose elements are sets there exists a set , called the union of  and consisting of those elements and only those that belong to some element of   
+
+Similarly, the intersection of the set  is defined as:
+
+
+
+4 (Pairing Axiom) For any sets  and  there exists a set  such that  and  are its only elements. 
+
+5 (Power Set Axiom) For any set  there exists a set  having each subset of  as an element, and having no other elements. 
+
+
+
+The successor  of the set  is .
+
+ 
+
+An inductive set is a set that  is one of its elements and the successor of each of its elements aso belongs to it.
+
+6 (Axiom of Infinity) There exist inductive sets (Example: ).
+ 
+7 (Axiom of Replacement) Let  be a statement(a formula) such that for every  there exists a unique object  such that  is true. Then the objects  for which there exists an element  such that  is true form a set.
+
+And finally, an axiom that is independent of ZF. 
+
+
+
+A choice function is a function , defined on a collection  of nonempty sets, such that for every set  in ,  is an element of .
+
+8 (Axiom of Choice/Zermelo's Axiom)  For any set  of nonempty sets, there exists a choice function  defined on .
+
+The Cardinality of a Set(Cardinal Numbers)
+
+The set  is said to be equipollent to the set  if there exists a bijective mapping of  onto (then ).
+
+
+Cardinality is a measure of the number of elements of the set. If , we write .
+
+If  is equipollent to some subset of , we say , thus
+
+
+
+A set is called finite if it is not equipollent to any proper subset of itself; otherwise it is called infinite. 
+
+It has the  properties below:
+
+
+1.
+
+2(The Schröder–Bernstein theorem).
+
+3(Cantor's theorem).
+
+
+We say  if .
+
+let  be the empty set and  the set of all subsets(thus, the power set) of the set . Then:
+
+	
+
+
+The assertion is obvious for the empty set, and we shall assume that .
+
+Since  contains all the one-element subsets of , .
+
+Suppose, contrary to the assertion, that there exists a bijective mapping . Let set  consisting of the elements  that do not belong to the set  assigned to them by the bijection. Because , there exists  such that . For the element  the relation  or  is impossible by the definition of (Similar to Russell's Paradox).
+
+
+
+
+Operations on Sets
+ l  l  l 
+	
+	Notation &Meaning &Definition 
+ 
+	 & is a subset of  & 
+ 
+	 & equals to  & 
+ 
+	 &Empty Set &  
+ 
+	 &The union of  and  & 
+
+	 &The intersection of  and  & 
+ 
+	 &The difference between  and  & 
+ 
+	 &The complement of  in M & 
+ 
+	 &The Cartesian Product of  and  & 
+ 
+	 & & 
+
+		
+
+ 
+
+In the ordered pair where,  is called the first projection of the pair  and denoted  pr while  is called the second projection of the pair  and denoted  pr.
+
+
+
+
+
+
+Relations and Functions
+Definitions of Functions
+ 
+We say that there is a function defined on  with values in  if, by virtue of some fule , to each element  there corresponds an element .
+
+
+
+X is called the domain of definition and Y is called set of values or range of the function.
+
+
+If  and  is a function. We denote by  the function  that agrees with  on . More precisely,  if . The function  is called the restriction of  to , and the function  is called an extension or a continuation of  to .
+
+
+We use the term domain of departure of the function to denote any set  containing the domain of a function, and domain of arrival to denote any subset of  containing its range.
+
+Elementry Classification of Mappings
+
+When a function  is called a mapping, the value  that it assumes at the element  is usually called the image of . 
+
+The image of a set  under the mapping  is defined as the set
+
+
+
+consisting of the elements of  that are images of elements of .
+ 
+
+The set
+
+
+
+consisting of the elements of  whose images belong to  is called the pre-image (or complete pre-image) of the set . 
+
+
+
+A mapping  is said to be 
+
+surjective if 
+
+injective if ,  holds.
+
+bijective if it's both surjective and injective.	
+
+
+
+The inverse mapping of a bijective  is denoted as
+
+
+
+and defined as follows: if , then . 
+
+Note that the pre-image of a set is defined for any mapping , even if it is not bijective and hence has no inverse.
+
+Composition of Functions and Mutually Inverse Mappings
+
+For two mappings  and ,
+
+
+
+is called the composition of the mapping  and the mapping .	
+
+
+If all the terms of a composition  are equal to the same function , we abbreviate it to .
+
+
+Function composition is associative, that is,
+
+
+
+But in general, . 
+
+
+
+The mapping  that assigns each element in  to itself is called the identity mapping on  and denoted .
+ 
+
+	( is surjective)  ( is injective).
+
+
+
+	If ,, and , then
+	
+
+
+	and hence  is surjective. 
+
+	Further, if and , then
+	
+		(x_1x_2) &(e_X(x_1)e_X(x_2))((gf)(x-1)(gf)(x_2))
+
+							 &(g(f(x_1))g(f(x_2))) (f(x_1)f(x_2)) 
+	
+	and therefore  is injective.
+
+
+
+The mappings  and  are bijective and mutually inverse to each other if and only if  and .
+
+
+
+Functions as Relations. The Graph of a Function
+Relations
+
+A Relation  is any set of ordered pairs . 
+
+The set  is called the domain of definition of , and the set  is the range of values. 
+
+Any set containing the domain of definition of a relation is called a domain of departure for that relation, and domain of arrival is a set that contains the range of values of the relation. 
+
+
+Instead writing , we write  and say that  is connected with  by the relation .
+
+If , then we say that the relation  is defined on .
+
+Classification of Relations
+
+An equivalence relation is a relation that satisfy the following properties: 
+
+
+ (Reflexivity);
+
+ (Symmetry); 
+
+ (Transitivity).
+
+
+An equivalence relation is denoted by the special symbol .  means  is equivalent to .	
+
+
+	Let  be an equivalence relation on . If , the equivalence class of  (denoted ) is the class of all those elements of  that are equivalent to . The class of all equivalence classes in  is denoted  and called the quotient class of  by .
+
+
+
+A partial ordering on a set  is a relation  that have the following properties: 
+
+
+ (Reflexivity);
+
+ (Transitivity).
+
+ (Anti-symmetry);	
+
+
+We often write  and say that  follows .
+If the condition
+
+
+
+holds in addition to transitivity and anti-symmetry defining a partial ordering relation(this means any two elements of  is comparable), the relation  is called an ordering, and the set  is said to be linearly ordered.
+
+Functions and Their Graphs
+
+	A relation  is said to be functional if
+	
+
+
+	and it is called a function.
+
+	 is a mapping from  into , or a function from  into .
+
+
+
+
+The graph of a function , is the subset  of .
+
+
+
+ 
+
+
+The Real Numbers
+The Axiom System and Some General Properties of the Set of Real Numbers
+The Axiom System of the Real Numbers
+Axioms for Addition: An operation 
+
+
+
+is defined, assgining to each ordered pair  of elements  of  a certain element . 
+
+1There exists a neutral, or identity element  (called zero) such that 
+
+
+ for every . 
+
+2For every element  there exists an element  called the negative of .
+
+
+
+3The operation  is associative.
+
+
+
+4The operation  is commutative.
+
+
+
+
+
+A group structure is defined on the set  -- or  is a group -- if Axioms 1, 2, and 3 holds for an operation defined on this set. The group is called additive group if the operation is called addition. When the operation is also commutative, that is, Axiom 4 holds, the group is also called a commutative group or an Abelian group. 
+
+According to Axioms 1 -- 4,  is an additive Abelian group.
+
+Axioms for Multiplication: An operation 
+
+
+
+is defined, assigning to each ordered pair  of elements  a certain element , called the product of  and . 
+
+1There exists a neutral, or identity element  such that
+
+
+
+2For every element  there exists an element , called the inverse or reciprocal of .
+
+
+
+3The operation  is associative.
+
+
+
+4The operation  is commutative.
+
+
+
+The set  is a multiplicative group. 
+
+
+Multiplication is distributive with respect to addition.
+
+
+
+
+If two operations satisfying the Axioms of Addition and Multiplication are defined on a set , then  is called a field.
+
+Order Axioms
+Between elements of  there is a relation  defined, and :
+
+0 (Reflexivity) 
+
+1(Anti-Symmetry)
+
+2 (Transitivity)
+
+3
+
+Thus, the relation  is an ordering, and  is linearly ordered.
+The Connection between Addition and Order on 
+
+
+
+The Connection between Multiplication and Order on 
+
+
+
+The Axiom of Completeness(Continuity)
+If  and  are nonempty subsets of  having the property that  for every  and every , then there exists  such that  for all  and .
+
+
+
+
+Any set on which these axioms hold can be considered a model of the real numbers. 
+
+
+
+An axiom system is said to be categorical if it determines an unique mathematical object.
+
+
+
+If there are two models of independent number systems  and  that satisfying all the axioms, then a bijective correspondence can be established between these two systems, say , preserving the arithmetic operations and the order, that is, 
+
+f(x+y) &= f(x) + f(y)
+
+f(xy) &= f(x) f(y) 
+
+xy &f(x) f(y) 
+
+and we can say that  and  are isomorphic and the mapping  is called an isomorphism.
+ 
+
+
+	The Axiom System of The Real Numbers is categorical.
+
+
+Some General Algebraic Properties of Real Numbers
+Consequences of the Addition Axioms
+1There is only one zero in the set of real numbers.
+
+2Each element of the set of real numbers has a unique negative.
+
+3In  the equation
+
+
+
+has the unique solution 
+
+
+
+
+Consequences of the Multiplication Axioms
+1There is only one multiplicative unit in the real numbers.
+
+2For each  there is only one reciprocal .
+
+3For , the equation  has the unique solution .
+
+Consequences of the Axiom Connecting Addition and Multiplication
+1For any  
+
+
+
+2. 
+
+3For any 
+
+
+
+4For any 
+
+
+
+5For any 
+
+
+
+
+Consequences of the Order Axioms
+1For any  and  in  precisely one of the following relations holds:
+
+
+
+2For any 
+
+	(x<y)(yz) &(x<z) 
+	
+	(xy)(y< z) &(x<z) 
+
+
+Consequences of the Axiom Connecting Order with Addition and Multiplication
+1For any 
+
+	(x<y)&(x+z)<(y+z)
+
+	(0<x)&(-x<0) 
+
+	(xy)(zw)&(x+z)(y+w)
+
+	(x< y)(z<w)&(x+z)<(y+w)
+
+
+2If ,then
+
+	(0<x)(0<y)&(0<xy) 
+
+	(x<0)(y<0)&(0<xy) 
+
+	(x<0)(0<y)&(xy<0) 
+
+	(x<y)(0<z)&(xz<yz)
+
+	(x<y)(z<0)&(yz<xz)
+
+3. 
+
+4 and .
+
+The Completeness Axiom and the Existence of a Least Upper(or Greatest Lower) Bound of a Set of Numbers
+
+	A set  is said to be bounded above (resp. bounded below) if there exists a number  such that (resp.) for all .
+
+[Maximal and Minimal Elements]
+	
+	(a= maxX)&(aXxX(xa))
+
+	(a= minX)&(aXxX(ax))
+
+	
+	It follows from the order Axiom 1 that if there is a maximal (resp. minimal ) element in a set of numbers, it is the only one. 
+
+	However, not every set, not even every bounded set, has a maximal or minimal element(e.g. ).
+
+
+	The smallest number that bounds a set  from above is called the least upper bound(or the eact upper bound) of  and denoted ("the supremum of ").
+	
+
+
+	Similarly, the greatest lower bound of , ("the infimum of ) can be defined as:
+	
+
+
+
+
+	(The least upper bound principle) Every nonempty set of real numbers that is bounded from above has a unique least upper bound.
+
+
+	Since we already know that the minimal element of a set of numbers is unique(the relation  is Anti-Symmetric), we need only verify that the least upper bound exists.
+
+	Let  be a given set and . We know that  and . Then, by the completeness axiom there exists  such that . Because  is  greater than all the elements in  and smaller than all the elements in , we can see that  and .  we have , and according to the completeness axiom of real numbers, there exists some  such that . Thus  is .
+
+The existence of greatest lower bound is analogous with the existence of least upper bound, so
+
+	( is nonempty and bounded below).
+
+
+
+
+
+
+
+
+
+
+The Most Important Classes of Real Numbers and Computational Aspects of Operations with Real Numbers
+The Natural Numbers and the Principle of Mathematical Induction
+Definition of the Set of Natural Numbers
+
+	A set  is inductive if for each number , it also contains .
+
+
+
+	The set of natural numbers is the smallest inductive set(has the cardinality of ) containing , that is, the intersection of all inductive sets that contain .
+
+
+The Principle of Mathematical Induction
+
+	If a subset  of the set of natural numbers  is such that  and together with each number , the number  also belongs to , then .
+	
+
+
+
+Some properties of the natural numbers:
+
+1The sum and product of natural numbers are natural numbers.
+
+2. 
+
+3For any  the set  contains a minimal element, namely
+
+
+
+4.
+
+5The number  is the immediate successor of the number ; that is, if , there are no natural numbers  satisfying . 
+
+6If  and , then  and  is the immediate predecessor of ; that is , if , there are no natural numbers  satisfying .
+ 
+7In any nonempty subset of  there is a minimal element.
+
+
+	Let . 
+
+	Case 1: For , We'll have  = 1, since . 
+
+	Case 2: For , we find a set  such that . If  is , then . However,  because , and thus  (If such  do not exist, then   which contains  is not bounded from above, and we can see that . By the principle of induction, . But this is impossible, since ). 
+
+	Therefore,  .
+
+
+Rational and Irrational Numbers
+The Integers
+
+	The union of the set of natural numbers, the set of negatives of natural numbers, and zero is called the set of integers and is denoted .
+
+The addition and multiplication of integers do not lead outside of . Thus,  is an Abelian group with respect to addition, but  nor  is a group with respect to multiplication. 
+
+[The fundamental theorem of arithmetic]
+	Each natural number admits a representation as a product 
+	
+
+
+	where  are prime numbers. This representation is unique except for the order of the factors.
+
+
+	 is not a prime number, since the product representation can contain infinite numbers of , which makes the representation not unique.
+
+
+The Rational Numbers
+
+	Numbers of the form , where , are called rational numbers. The set of rational numbers is denoted as .
+
+
+The Irrational Numbers
+
+	The real numbers that are not rational are called irrational. The set of irrational numbers is .
+
+
+	 is irrational.
+
+
+
+	Let  and  be the sets of positive real numbers such that  and .  and , since  and . 
+	Further, , and by the completeness axiom there exists  such that . The next step is to show that . 
+	Case 1:. Then we can see, for example, the number , which is larger than , would have a square less than . Indeed, we know that , , and . It follows that 
+	
+
+
+	Therefore , and this contradicts to the fact that . 
+	Similarly, we can prove that  by consider the number  and , and we have . 
+	Finally, now we'll show that . Let;s suppose the contrary that  and  as well as  is a prime number. Because  and  are both prime, we can see that the only common factor between them is . But
+	
+		mn &= 2 
+
+		(mn)^2&= 2 
+
+		m^2 &= n^2 2 
+
+	
+	Hence  is even. Now let , and . Also,  has to be divisible by . This contradicts with the fact that the only common factors between  and  is 1.
+
+(Algebraic Numbers and Transcendental Numbers)
+	A real number is called algebraic if it is the root of an algebraic equation
+	
+
+
+	with rational coefficients. Otherwise, it is called transcendental.
+
+
+The Principle of Archimedes
+1Any nonempty subset of natural numbers that is bounded from above contains a maximal element. 
+
+ 
+ 	The set of natural numbers is not bounded above.
+ 
+2Any nonempty subset of the integers that is bounded from above(resp. from below) contains a maximal element(resp. minimal element). 
+
+3The set of integers is unbounded above and unbounded below. 
+
+[The principle of Archimedes]
+	For any fixed positive number  and any real number  there exists a unieuq integer  such that 
+
+
+	The set  is not empty, since we can always find an integer that is greater than  for any value of  and . This set is also bounded below and contains a minimal element . We can see that . These inequalities are equivalent to the principle of Archimedes because . The uniqueness of  can be derived from the uniqueness of the minimal element of a set of numbers.
+
+
+
+	For any positive number  there exists a natural number  such that .
+
+
+	By the principle of Archimedes there exists  such tha . Since  and , we have . Thus  and .
+
+
+
+	If the number  is such that  and  , then .
+
+
+
+	For any numbers  such that  there is a rational number  such that .
+
+
+	According to what we had proved, we can choose  such that . Then by the principle of Archimedes, there exists an integer  and . Hence the relationship  is impossible, since then we'll have . Now we substract each side by , and . Because , it is obvious that , which contradicts with the fact that . We can choose  and .
+
+
+	For any number  there exists a unique integer  such that .
+
+
+	Replace  with  in the principle of Archimedes.
+
+The number  just mentioned is denoted  and is called the integer part of x. The quantity  is called the fractional part of x. Thus , and .
+
+
+Miscellaneous
+[Triangle Inequality]
+	 holds for all .
+
+
+	We know that  and . Thus
+	
+	a+b &a + b a + b 
+
+	-a-b &a - b a + b 
+
+	a-b & a - b a + b 
+	
+
+By the principle of induction, we can prove the following theorem.
+
+	The inequality
+	
+
+
+	holds and equality holds if .
+
+
+
+
+
+
+	An open interval containing the point  will be called a neighborhood of this point. The interval  is the -neighborhood about .
+
+
+
+Estimation for errors in arithmetic operations
+
+	If  is the exact value of a quantity and  is a known approximation to the quantity, the numbers
+	
+
+
+	and 
+	
+
+
+	are called respectively the absolute and relative error of approximation by . The relative error is not defined when .
+
+
+
+	If
+	
+
+
+	then
+	
+		(x+y) &(x+y)-(x+y) (x) + (y), 
+
+		(xy) &(xy)-(xy) x(y) + y(x)+ (x) (y), 
+	
+	if, inaddition
+	
+
+
+	then
+	
+
+
+
+
+
+	Let  and . Thus,  and Then
+	
+		(x+y) &= (x+y)-(x+y) = +   +  = (x) + (y) 
+
+		(x y) & = (xy)-(xy) = (x + )(y + )- x y	 = 
+
+		&= x+ y +  x + y +  = 
+
+		&= x(y) +  y(x) + (x) (y) 
+
+		(xy) &= xy - xy = xy-yxyy = 
+
+		&=(x + )y - (y + )xy^2 11+/y x+yy^2 11-(y) = 
+
+		&= x(y) + y(x)y^2 11-(y)
+	
+
+
+These statements imply that 
+
+	(x+y)& (x+(y))x+y 
+
+	(xy) &(x)+ (y) + (y) (y) 
+
+	(xy)& (x)+(y)1-(y) 
+
+
+
+
+
+
+
+
+
+
+The Positional Computation System
+
+	If a number  is fixed, then for every positive number 
+ there exists a unique integer  such that
+	 
+
+
+
+
+	We first verify that the set of numbers of the form ,  is not bounded above. Suppose the contrary, we'll have a least upper bound such that there exists some  such that . Also, we can see that (If this is not the case, then we can have , which makes the biggest element in this set be , and this is impossible, since  must be the biggest element if the least upper bound is ). Here we'll have , so  could not be the east upper bound of the set. 
+	Because , . We already show that this set is not bounded from above, so (or  will be the upper bound of this set). 
+	Now let's set  and , it follows that . 
+	The set  that  is bounded below(because when , for  we will have ). Therefore if the minimal element is denoted as , for this integer  it is obvious that . 
+	Next we have to prove the uniqueness of such integer . For , and . Thus, if  and  are both the minimal element of the set , it can be derived that  and , which imply , are incompatible if .
+
+
+
+	The number  satisfying the Lemma() is called the order of  in the base  or(when  is fixed) simply the order of .
+
+By the principle of Archimedes, . 
+
+We can use , a sequence of numbers, can be used to approximate some real number . Take  from the set  then 
+
+
+
+and such that
+
+
+
+
+The set  is all the digits under base  while the power of  is the order of this corresponding digit.
+
+Basic Lemmas Connected with the Completeness of the Real Numbers
+The Nested Interval Lemma(Cauchy-Cantor Principle)
+
+
+	A function  of a natural-number argument is called a sequence or a sequence of elements of .  corresponding to the number  is often denoted  and called the th term of the sequence.
+
+
+	Let  be a sequence of sets. If  for all , we say the sequence is nested.
+
+
+[Cauchy-Cantor]
+	For any nested sequence  of closed intervals, there exists a point  belonging to all of these intervals. 
+	If in addition it is known that for any  there is an interval  such that , then  is the unique point common to all the intervals.
+
+
+	Lets find two sets in this sequence, denoted as  and  where . Suppose , and we obtain . Thus the two numerical sets  and  satisfy the axiom of completeness. So . This also means that . Therefore this point  belongs to all the intervals. 
+	Now let  and  be two points having this property. Without loss of generality, let , then , and the length of any interval in this sequence cannot be less than . Hence if there are intervals of arbitrarily small length in the sequene, their common point is unique.
+
+
+The Finite Covering Lemma(Borel-Lebesgue Principle, or Heine-Borel Theorem)
+
+	A system  of sets  is said to cover a set  if .
+
+A subset of  that is also a system of sets will be called a subsystem of .
+
+[Borel-Lebesgue]
+	Every system of open intervals covering a closed interval contains a finite subsystem that covers the closed interval.
+
+
+	Let  be a system of open intervals  that cover the closed interval . If the interval  could not be covered by a finite set of intervals of the system , then, dividing  into two halves, we could find that at least one of the two halves, which we denoted by , does not admit a finite covering. We now repeat this procedure with the interval , and so on. 
+	In this way a nested sequence  of closed intervals arises,none of which admit a covering by a finite subsystem of . Since the length of the interval , the sequence  contains intervals of arbitrarily small length(The second part of Cauchy-Contor Principle), and thus there exists a unique point  belonging to all the intervals . Since , there exists an open interval  containing . Let . In the sequence just constructed, we find an interval  such that . Since  and , we conclude that . But this contradicts the fact that the interval  cannot be covered by a finite set of intervals from the system.
+
+
+
+The Limit Point Lemma(Bolzano-Weierstrass Principle)
+
+
+	A point  is a limit point of the set  if every neighborhood of the point contains an infinite subset of .
+
+Examples:
+
+If , the only limit point of  is the point . 
+
+For an open interval  every point of the closed interval  is a limit point, and there are no others. 
+
+For the set  every point of  is a limit point; for, as we know, every open interval of the real numbers contains rational numbers.
+[Bolzano-Weierstrass]
+	Every bounded infinite set of real numbers has at least one limit point.
+
+
+
+	Let  be the given subset of . It follows from the definition of boundedness that  is contained in some closed interval . The next step is to show that at least one point of  is a limit point of . 
+	If, suppose the contrary, each point  would have a neighborhood  containing either no points of  or at most a finite number. The totality of such neighborhoods  constructed for the points  forms a covering of  by open intervals . By the finite covering Lemma(Borel-Lebesgue) we can extract a system  of open intervals that cover . But, since , this same system also covers . However, there are only finitely many points of  in (the definition of ), and hence only finitely many in their union. That is,  is a finite set. This contradiction completes the proof.
+
+
+
+
+Countable and Uncountable Sets
+
+
+	A set  is countable if it is equipollent with the set  of natural numbers, that is, .
+
+
+
+ An infinite subset of a countable set is countable.
+
+
+	Let's consider a countable set . There is a minimal element of , which we assign to  and denote .  is infinite, so  is not empty. Following the principle of induction, we can construct a injective mapping from  to . 
+	Now we have to prove that this mapping is also surjective. Suppose the contrary, that an element  does not have a natural number assigned to it. The set  is finite, since it's a subset of  bounded both from below and above. According to our previous construction, we assign  to , denoted as , and we can acquire a sequence . But  is , and because , . Therefore , or otherwise it will contradict the uniqueness of maximal element.
+
+
+
+	The Union of the sets of a finite or countable system of countable sets is also a countable set.
+
+
+	Let  is a countable system of sets and each set  is itself countable. Since ,  is an infinite set. The ordered pair  identifies the element . We can construct a mapping, like , such that it is bijective. Thus  is countable. Then because  and the fact that  is infinite, we conclude that .
+
+
+If it is known that a set is either finite or countable, we say it is at most countable().
+
+
+	
+
+
+
+	(The direct product of countable sets is countable).
+
+
+
+	, that is, the set of rational numbers is countable.
+
+
+	Let  denote a rational number . It is known that the pair  and  define the same number iff they are proportional. Thus  is equipollent to some infinite subset of the set . Since , we can conclude that .
+
+
+
+	The set of algebraic numbers is countable.
+
+
+	It can be observed that . By the principle of induction, . Let  be an ordered set  consists of  rational numbers. 
+	An algebraic equation of degree  with rational coefficient can be writtne in the reduced form . Thus there are as many different algebraic equations of degree  as there are different ordered sets  of rational numbers, that is, a countable set. 
+	The algebraic equation with rational coefficients (of arbitrary degree) is the union of sets consisting of algebraic equation (of a fixed degree) which is countable, and this union is countable. Each such equation has only a finite number of roots. Hence the set of algebraic numbers is at most countable. But it is infinite, and therefore countable.
+
+
+The Cardinality of the Continuum
+
+	The set  of real numbers is also called the number continuum(from Latin continuum, meaning continuous, or solid), and its cardinality the cardinality of the continuum.
+
+
+[Cantor]
+	
+
+[Proof by Nested Interval Lemma]
+	It is sufficient to show that even  in an uncountable set. 
+	Assume it is countable, that is, can be written as a sequence . Take  on , and find  such that . Then construct the nested interval  such that  and . It follows the nested interval lemma that there exist a point  belonging to all . But by our construction,  and  cannot be any point of the sequence .
+
+
+[Proof by Cantor's Diagonal Argument]
+	Let's first consider an the set  and write out the infinite sequence of distinct binary numbers in it which has the form: 
+	
+		&s1 =	(0,	0,	0,	0,	0,	0,	0,	...) 
+
+		&s2 =	(1,	1,	1,	1,	1,	1,	1,	...) 
+
+		&s3 =	(0,	1,	0,	1,	0,	1,	0,	...)
+
+		&s4 =	(1,	0,	1,	0,	1,	0,	1,	...)
+
+		&s5 =	(1,	1,	0,	1,	0,	1,	1,	...)
+
+		&s6 =	(0,	0,	1,	1,	0,	1,	1,	...)
+
+		&s7 =	(1,	0,	0,	0,	1,	0,	0,	...)
+
+		&... 
+		
+	
+	We then constrcut a number  such that its first digit is the complementary (swapping 0s for 1s and vice versa) of the first digit of  and etc.
+	
+		&s1 =	(0,	0,	0,	0,	0,	0,	0,	...) 
+
+		&s2 =	(1,	1,	1,	1,	1,	1,	1,	...) 
+
+		&s3 =	(0,	1,	0,	1,	0,	1,	0,	...)
+
+		&s4 =	(1,	0,	1,	0,	1,	0,	1,	...)
+
+		&s5 =	(1,	1,	0,	1,	0,	1,	1,	...)
+
+		&s6 =	(0,	0,	1,	1,	0,	1,	1,	...)
+
+		&s7 =	(1,	0,	0,	0,	1,	0,	0,	...)
+
+		&... 
+		
+		&s = (1,0,1,1,1,0,1,..)
+	
+	By construction  differs from  at the th digit, so  is not in this sequence, and thus  is uncountable. 
+	We can now define a mapping . means that  and  have the same digit while  is under base 10 and  is under base 2. For ,  is injective, and with the fact that all  corresponds to a  together give us . Since  is a subset of , we can see that  is also uncountable.
+
+The cardinality of  is often denotes as .
+
+	, and so irrational numbers exist.
+
+
+
+	There exist transcendental numbers, since the set of algebraic numbers is countable.
+
+
+Miscellaneous
+
+	The cardinality of , which is the power set of , satisfy that if , .
+
+
+	We can use the principle of induction to complete the proof. If , , then , then . 
+	Now if , let  be a set that has  as one of its elements and has the cardinality of . Therefore  has  elements. We can divide  into two parts: the ones containing  and the ones don't. If , then  and vice versa. Thus we can set up a bijection between  and the elements in  that contains . Similarly, we can clearly see that a bijection between the subsets of  that does not contains  and . Thus , and we complete the proof.
+
+
+
+
+
+
+
+
+Limits
+The Limit of a Sequence
+ Definitions and Examples
+
+	A number   is called the limit of the numerical sequence  if for every neighborhood  of  there exists an index  (depending on ) such that all terms of the sequence having index larger than  belong to . 
+	
+	An equivalent way (or more common) way to say this is that a number  is called the limit of the sequence  if  there exists an index such that . 
+
+
+
+	If , we say that the sequence  converges to  or tends to  and write  as . Otherwise, it's called divergent.
+
+
+Examples: 
+
+, since  when  (the integer part of  ). 
+
+, since  if . 
+
+, since  if . 
+
+ if .
+
+	As shown in the proof in 2.2.4(Miscellaneous), for every  there exists  such that . Since , we have  for . 
+
+The sequence  whose th term is , , is divergent.
+
+	If  is the limit of this sequence, then any neighborhood of  would contain all but a finite number of terms of the sequence. 
+
+	A number  cannot be the limit, since when , any point of the form  for which  lie outside the -neighborhood of . At the same time  cannot be the limit of this sequence because there are infinitely many terms lie outside of even -neighborhood of .
+
+
+
+
+
+
+
+
+Properties of the Limit of a Sequence
+
+	If there exists a number  and an index  such that  for all , the sequence  will be called ultimately constant.
+
+
+	A sequence  is bounded if there exists  such that  for all .
+
+
+
+	An ultimately constant sequence converges.
+
+
+	if , then .
+
+
+
+	Any neighborhood of the limit of a sequence contains all but a finite number of terms of the sequence.
+
+
+
+	A convergent sequence cannot have two different limits.
+
+
+	Suppose the contrary, that is,  and  are both the limit of the sequence . Then we find two nonintersecting neighborhoods  and  of  and . By the definition of limits we find two indices  and  such that  and . But then for , we'll have , and this is impossible since .
+
+
+
+	A convergent sequence is bounded.
+
+
+	Let .Set  in the common definition of limit, we find  such that  for all . Then by the triangle inequality we have . Considering  , we take , and for all  we have .
+
+
+Passage to the Limit and the Arithmetic Operations
+
+	If  and  are two numerical sequences, their sum, product, and quotient are the sequences
+	
+
+
+	while the quotient is defined when .
+
+
+	Let  and  be two numerical sequences, if  and , then
+
+	. 
+
+
+	Set , . Now we have
+	
+
+
+	Suppose  is given. Since  , there exists  such that  for all . Similarly, since , there exists  such that  for all . Then for  we have
+	
+
+
+	and our proof completes.
+
+
+
+	.
+
+
+	Similar to our first proof, we show that ,  and  are less than , since their sum is greater or equal to .
+
+
+
+	 when .
+
+
+	If we prove that , , and , we'll have 
+
+
+Passage to the Limit and Inequalities
+
+	Let  and  be two convergent sequences with  and . If , then there exists an index  such that  for all .
+
+
+	Choose a number  such that . By definition of limit, we can find numbers   and  such that  for all  and  for all . Then for  we shall have .
+
+
+
+	Suppose the sequences , , and  are such that  for all . If the sequences  and  both converge to the same limit, then the sequence  also converges to that limit.
+
+
+Suppose . Given  choose  and  such that  and . Then for  we shall have , which says , that is .
+
+
+
+	Suppose  and . If there exists  such that for all  we have 
+
+	a) , then ; 
+
+	b) , then ; 
+
+	c) , then ; 
+
+	d) , then . 
+
+
+	The first two statement can be proved by contradiction using the theorem we mentioned above, and the last two statement are the special cases when .
+
+
+
+
+
+
+Questions Involving the Existence of the Limit of a Sequence
+The Cauchy Criterion
+
+	A sequence  is called a fundamental or Cauchy sequence if for any  there exists an index  such that  whenever  and .
+
+[Cauchy's convergence criterion]
+	A numerical sequence converges if and only if it is a Cauchy sequence.
+
+
+	First, we prove that a convergent sequence is a Cauchy sequence. If , we set , and we obtain that  for  (imagine two points on a line, their distance to a fixed point is greater or equal to the distance between these two points ). 
+	Next, let  be a Cauchy sequence. We find  for . Fix , we can see that , and thus this sequence is bounded. Then we set  and . Apply the Nested Interval Lemma to the close intervals  and denote that point . The inequality can be derived from the following inequalities:
+	
+		a_nx_k &b_k 
+
+		A-x_k&b_n - a_n 
+
+		x_N - 3 a_n &b_n x_N+3 
+	
+
+
+A Criterion for the Existence of the Limit of a Monotonic Sequence
+
+	A sequence  is increasing if , nondecreasing if , nonincreasing if , and decreasing if . Sequence of these four types are called monotonic sequences.
+
+
+
+	A sequence  is bounded above if there exists a number  such that  .
+
+
+[Weierstrass]
+	In order for a nondecreasing sequence to have a limit, it is necessary and sufficient that it be bounded above.
+
+
+	We already know that a convergent sequence is bounded, hence we just need to prove its sufficiency. 
+	Let  be the least upper bound of this sequence. Since it's a nondecreasing sequence, we have  for all , and thus .
+
+Analogouly one can prove that in order for a nonincreasing sequence to have a limit, it has to be bounded below.
+
+
+
+	  if .
+
+
+	We prove that this sequence is bounded below(all terms are positive) . Let  for , where  is the index that satisfies (from  the sequence is monotonically decreasing). From the relation , one can have:
+	
+
+
+	and hence .
+
+
+
+	.
+
+
+	There exists  such that  for all . Thus , which implies .
+
+
+
+	 for any .
+
+
+	Assume  first, use the same technique from above, and then prove  for .
+
+
+
+
+
+	.
+
+
+
+	If , the assertion is obvious. Since , let's assume . Use the same technique as we used in proving . First prove that  and  for all , thus this sequence is monotonically decreasing from . Let the limit be , one will have:
+	
+
+
+
+
+The Number 
+[Jacob Bernoulli's inequality]
+	
+
+
+	holds for  and .
+
+
+
+	Prove by the principle of induction.
+
+Incidentaly, strict inequality holds if  and .
+
+
+
+
+
+
+	The limit  exists.
+
+
+	Let  and . Use Bernoulli's inequality, we find that , and since all terms are positive, this sequence is bounded, monotonically decreasing and hence, has a limit. Then 
+	
+
+
+
+
+
+	.
+
+
+Subsequences and Partial Limits of a Sequence
+
+	If  is a sequence and  an increasing sequence of natural numbers, then the sequence  is called a subsequence of the sequence .
+
+
+[Bolzano-Weierstrass]
+	Every bounded sequence of real numbers contains a convergent subsequence.
+
+
+	Let  be the set of values of the bounded sequence . If  is finite, there exists a point  and a sequence  of indices such that . The subsequence is constant and hence converges. 
+	If  is infinite, then by the Bolzano-Weierstrass principle from section 2.3.3 it has a limit point . Use the property of limit points, one can see that  and . Because , the sequence  converges to .
+
+
+
+	We shall write  and say that the sequence  tends to positive infinity if for each number  there exists  such that . We can gneralize this two both positive and negative infinity:
+	
+
+
+
+
+
+	From each sequence of real numbers one can extract either a convergent subsequence of a subsequence that tends to infinity.
+
+
+	When the sequence  is not bounded, the new case occurs. Then for each  we can choose  such that  and . This sequence is monotonically increasing and not bounded above, hence it tends to infinity.
+
+
+Let  be an arbitrary sequence of real numbers that is bounded below. We can consider the sequence . The sequence  has a finite limit , or , since .
+
+
+	The number  is called the inferior limit of the sequence  and denoted . If , it is said that the inferior limit of the sequence equals positive infinity, and we write . If the original sequence  is not bounded below, then we shall have  and write .
+	
+
+
+	Similarly, the superior limit of the sequence  can be defined as 
+	
+
+
+
+<Picture Lim_sup_example_5>
+
+	A number (or the symbol  or ) is called a partial limit of a sequence, if the sequence contains a subsequence converging to that number.
+
+
+
+	The inferior and superior limits of any sequence are respectively the smallest and largest partial limits of the sequence.
+
+
+	Let's assume that this sequence is bounded. First consider the inferior limit . The sequence  is nondecreasing. Using the definition of the greatest lower bound, we choose by induction numbers  such that  and  (Taking  we find ; taking  we find , etc.). Since , we have . It is the smallest partial limit since for every  there exists  such that , that is  for any . Now we have  for  means that no partial limit of the sequence can be less than . But  is arbitrary, and hence no partial limit can be less than . The proof for the superior limit is of course analogous. 
+	Now if the sequence is not bounded below(resp. above), one can select a subsequence of it tending to  (resp. ). But then we also have  (resp. ). Finally, if  (resp. ), the sequence itself tends to  (resp. ).
+
+
+
+	A sequence has a limit or tends to  iff its inferior and superior limits are the same.
+
+
+	The cases when  have benn investigated above, and so we may assume that . Since , we have .
+
+
+
+	A sequence converges iff every subsequence of it converges.
+
+
+	The inferior and superior limits of a subsequence lie between those of the sequence itself. If the sequence converges, then its subsequences must converge, and their limits are the same. The converse assertion is obvious, since the subsequence can be chosen as the sequence itself.
+
+
+
+	The Bolzano-Weierstrass Lemma in its restricted and wider formulations(corresponding to Lemmas at page 32 and page 33) follows from the Proposition we just proved.
+
+
+	If the sequence  is bounded, then  and  are finite and partial limits of the sequence. When  some subsequences have a unique limit, and at least two when . If the sequence is unbounded on one side or the other, there exists a subsequence tending to the corresponding infinity.
+
+
+
+
+Elementary Facts about Series
+
+The Sum of a Series and the Cauchy Criterion for Convergence of Series
+
+
+	The expression  is denoted by the symbol  and usually called a series or an infinite series.
+
+
+
+	The elements of the sequence , when regarded as elements of the series, are called the terms of the series. The element  is called the th term.
+
+
+
+	The sum  is called the partial sum of the series or the th partial sum of the series.
+
+
+
+	If the sequence  of partial sums of a series converges(resp. divergence), we say the series is convergent (resp. divergent).
+
+
+
+	The limit  of the sequence of partial sums of the series, if it exists, is called the sum of the series.
+
+One can see that .
+
+[The Cauchy convergence criterion for a series]
+	The series  converges iff for every  there exists  such that the inequalities  imply .
+
+
+
+	If only a finite number of terms of a series are changed, the resulting new series will converge if the original series did and diverge if it diverged.
+
+
+
+	A necessary condition for convergence of the series  is that the terms tend to zero as , that is, it is necessary that .
+
+
+	Set  in the Cauchy convergence criterion and use the definition of the limit of a sequence. 
+	Alternatively, , and, given that , we have  .
+
+
+
+	The series  is often called the geometric series. It converges iff .
+
+
+	Suppose , then we have , and in this case this series does not converges.
+	Now let , and we'll have  and , since  if .
+
+
+
+	The series , called the harmonic series, diverges because its partial sums  diverges.
+
+
+	It's sufficient to prove that its partial sum  diverges. For all  we have 
+	
+
+
+	and our proof completes.
+
+
+Remark Usual laws for dealing with finite sums does not apply to series in general (e.g. insert parentheses to a divergent series). 
+
+Absolute Convergence. The Comparison Theorem and Its Consequences
+
+
+	The series  is absolutely convergent if the series  converges.
+
+
+Since , the Cauchy convergence criterion implies that an absolutely convergent series converges, but the converse is generally not true.
+
+
+	The series , whose partial sums are either  or , converges to . However, this sequence does not absolutely converges, and its proof is similar to the proof for the divergence of harmonic series.
+
+
+[Criterion for convergence of series of non-negative terms]
+	A series whose terms are non-negative converges iff the sequence of partial sums is bounded above.
+
+
+[Comparison Theorem]
+	Let  and  be two series with non-negative terms. If there exists an index  such that  for all , then the convergence of the series  implies the convergence of , and the divergence of  implies the divergence of .
+
+
+	Omit terms for these two series for all , since a finite number of terms has no effect on the convergence of a series. Denote the partial sum of the sequences as . If the series  converges, then  is bounded above. Because  is also non-decreasing (all terms are non-negative), it has a limit, and so do . The second assertion is similar and can be proved by contradiction.
+
+
+[The Weierstrass M-test for absolute convergence]
+		Let  and  be series. Suppose there exists an index  such that  for all . Then a sufficient condition for absolute convergence of the series  is that the series  converge. 
+		It's often summarized as following: If the terms of a series are majorized (in absolute value) by the terms of a convergent numerical series, then the original series converges absolutely.
+
+
+	By the comparison theorem the series  will then converge, and that is what is meant by the absolute convergence of .
+
+
+[Cauchy's Test]
+	Let  be a given series and . Then the following are true:
+
+	a) if , the series converges absolutely;
+
+	b) if , the series diverges; 
+
+	c) there exist both absolutely convergent and divergent series for which .
+
+
+	For , we find a  such that , and show that the sequence  converges and its terms are always greater than . Thus the original sequence absolutely converges. 
+	For , we find that  is the greatest partial limit of the sequence . Hence for some , and the necessary condition for convergence () does not meet for the original sequence. 
+	If , for example, the series  diverges and  converges absolutely, but their superior limit under th root are both .
+
+
+[d'Alembert's Test]
+	Suppose the limit  exists for the series . Then, 
+
+	a) if , the series converges absolutely;
+
+	b) if , the series diverges; 
+
+	c) there exist both absolutely convergent and divergent series for which .
+
+
+
+	If , then we find a number  such that . Fixing  and use the properties of limits, we find an index  such that  for . Since
+	
+
+
+	and therefore we have . But the geometric series  converges for , hence the original series converges. 
+	For , we can find some terms that , thus it diverges. For case involving , the examples from our proof for Cauchy's Test are sufficient.
+
+
+[Cauchy]
+	If , the series  converges iff the series  converges.
+
+
+	By the inequality
+	
+
+
+	we have 
+	
+
+
+	where  and .  and  are non-decreasing, and hence they are both bounded above or unbounded above. Since all their terms are non-negative, our proof completes.
+
+
+
+	The series  converges for  and diverges for .
+
+
+	If , by our proposition it converges when , that is, . The case when  is obvious since all terms are not smaller than 1.
+
+
+
+The Number  as the Sum of a Series
+We know that . By Newton's binomial formula:
+
+	(1+1n)^n &= 1 + n1!1n + n(n-1)2!1n^2 + + (n(n-1)(n-k+1))k!1n^k+ +1n^n 
+
+	&= 1+ 1+ 12!(1-1n) + + 1k!(1-1n)(1-2n) 
+
+	&(1-k-1n) + + 1n!(1-1n)(1-n-1n)
+
+Setting  and , we thus have . 
+On the other hand, for any fixed  and , as can be seen from the same expansion, we have
+
+
+
+As  the left-hand side of the inequality tends to  and the right-hand side to . We can now conclude that  for all . Then from the relation  we find that .
+
+	
+
+The difference between  and its estimation  can be expressed as following
+
+	0<e-s_n &= 1(n+1)!+ 1(n+2)!+ =
+
+	&= 1(n+1)![1+1n+2+1(n+2)(n+3)+] < 
+
+	&< 1(n+1)![1+1n+2+1(n+2)^2+] 
+
+	&=1(n+1)!11-1n+2 = n+2n!(n+1)^2 < 1n!n
+
+This estimate of the difference  can be written as the equality 
+
+
+
+
+where . 
+
+
+Hence  is irrational.
+['s irrationality]
+	Suppose the contrary, that , where . Then the number  must be an integer, while
+	
+
+
+	and therefore  would have to be an integer, which is impossible.
+
+
+Moreover,  is transcendental.
+
+
+
+
+
+The Limit of a Function
+
+Definitions and Examples
+
+	Let ,  be an limit point of , and  be a real-valued function defined on .
+
+The function  tends to  as  tends to , or that  is the limit of  as  tends to , if for every  there exists  such that  for every  such that .
+
+
+
+which is denoted as .
+
+
+
+	
+
+
+	
+		Let .
+	
+
+
+
+	A deleted neighborhood of a point is a neighborhood of the point from which the point itself has been removed. 
+	If  denotes a neighborhood of , the deleted neighborhood is denoted as . 
+	The sets
+	
+		U_E(a) &E U(a) 
+
+		U_E(a)&E U(a)
+	
+	will be called respectively a neighborhood of  in  and a deleted neighborhood of  in . 
+	if the temporarily-adopted cumbersome symbols  and  denote the deleted -neighborhood of  in  and the -neighborhood of  in , then the definition of the limit of a function can be rewritten as
+	
+
+
+	This expression says that  is the limit of the function  as  tends to  in the set  if for every -neighborhood  of  there exists a deleted -neighborhood  of  in  whose image  under the mapping  is entirely contained in .
+
+Since every neighborhood of a point on the real line contains a symmetric neighborhood (a -neighborhood) of the same point, the final version of our definition for a limit is:
+
+	
+
+
+
+
+
+	The function 
+
+
+
+
+
+	(read "signum x") has no limit as .
+
+
+Apparently no number distinct from  can be the limit of the function.But no matter what  we choose, some points of it does not belong to the -neighborhood of  with , since  contains both positive and negative points while  can't contain both  and  at the same time.
+
+When the function  is defined on a whole deleted neighborhood of a point , that is, when , we adopt the expression  instead of .
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+	
+
+
+
+
+
+	 has no limit.
+
+
+	In any deleted neighborhood of 0  there are always points of the form  and  which assume the values  and  respectively, but for  these two numbers can't both lie in the -neighborhood. 
+
+
+
+	If 
+	
+		E_- &=x x = 1-/2+2n, n  
+
+		E_+ &=x x = 1/2+2n, n 
+	
+	then
+	
+		&_E_-x 01x = -1 
+
+		&_E_+x 01x = 1
+	
+
+The next proposition, also called the statement of the equivalence of the Cauchy definition of a limit(in terms of neighborhoods) and the Heine definition(in terms of sequences), is:
+
+	The relation  holds iff for every sequence  of points  converging to , the sequence  converges to .
+
+
+	First,  is obvious. Now for the converse, if  is not the limit of  as , then there exists a neighborhood  such that for any , there is a point  in the deleted -neighborhood of  in  such that . But this means that the sequence  does not converge to .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Properties of the Limit of a Function
+
+Properties of Deleted Neighborhood of a Limit Point of a Set 
+
+	, that is, the deleted neighborhood of the point in  is nonempty.
+
+
+	, that is, the intersection of any pair of deleted neighborhoods contains a deleted neighborhood.
+
+
+General Properties of the Limit of a Function
+
+	A function  assuming only one value is called constant. A function  is called ultimately constant as  if it is constant in some deleted neighborhood , where  is a limit point of .
+
+
+	A function  is bounded, bounded above, or bounded below respectively if there is a number  such that , , or  for all .
+
+
+
+	a) ( is ultimately the constant  as  . 
+	b) . 
+	c) .
+
+
+	The proof is similar to how we prove that a ultimately constant sequence converges and its limits is unique.
+
+
+Passage to the Limit and Arithmetic Operations
+
+	If two numerical-valued functions  and  have a common domain of definition , the sum, product, and quotient are respectively the functions defined on the same set by the following formulas
+	
+		(f+g)(x)&f(x) + g(x) 
+
+		(f g)(x)&f(x)g(x)
+
+		(fg)(x) &f(x)g(x) if x E (g(x) 0)  
+
+	
+
+
+
+
+	A function  is said to be infinitesimal as  if .
+
+
+
+	a) If  and  are infinitesimal functions as , then their sum  is also infinitesimal as . 
+	b) If  and  are infinitesimal functions as , then their product  is also infinitesimal as . 
+	c)  If  is infinitesimal as  and  is ultimately bounded as , then the product  is infinitesimal as .
+
+
+	For assertion a), we set . 
+
+	Assertion b) is a special case of assertion c), since every function that has a limit is ultimately bounded. 
+
+	Let  bounds , and set  will help to prove assertion c).
+
+
+
+	
+
+
+
+
+	This follows immediately from the definition of limit, by virtue which
+	
+
+
+
+
+
+	Let  and  be two functions with a common domain of definition. If  and , then
+	
+		&_E x a(f+g)(x)= A+B 
+
+		&_E x a(f g)(x)= A B
+
+		&_E x a(fg)(x) = AB if x E (g(x) 0 and B 0)  
+
+	
+
+
+	These properties can be derived from the properties of the limit of sequences according to the proposition above. In order to complete the proof, one only need to convert "for some " to .
+
+[alternative proof with infinitesimal functions]
+	Let  and , where  and  are infinitesimal functions. The first two assertions are obvious. For the quotient one, find the value of  after proving that  is ultimately bounded as .
+
+
+Passage to the Limit and Inequalities
+
+	a) If the functions  and  are such that , and  and , then there exists a deleted neighborhood  of  in  at each point of which . 
+	b) If the relations  hold for the functions ,  and , and if , then the limit of  exists as , and .
+
+
+	a) Choose a number  such that . By definition of limit, we find deleted neighborhoods  and  such that  for  and  for . Then at any point of a deleted neighborhood  contained in , we have 
+	
+
+
+	b) This proof is similar.
+
+
+
+	Suppose  and  . Let  be a deleted neighborhood of  in . 
+	a) If  for all , then ; 
+	b)  for all , then ; 
+	c)  for all , then ; 
+	d)  for all , then .
+
+
+	Assertion a) and b) can be proved by contradiction and the theorem mentioned above. Set  and we prove assertion c) and d).
+
+
+Two Important Examples
+
+	
+
+
+
+
+	The geometric proof is sufficient with the following conditions:
+	
+		&x x 
+
+		& 0x x (_x 0 x = 0) 
+	
+
+
+Now we define the exponential, logarithmic, and power functions using the theory of real numbers and limits.
+A) The exponential function 
+Let  
+
+ For  we define inductively 
+  
+ We define  and , Now we have defined  for . 
+ By induction, for  and  we have , and in particular, .
+  for  and 
+  for any .
+ For .
+
+	First we prove that  as  by use the inequality . Then we choose  such that  for . If now , we have , which says .
+
+ Let , , and . We show that .
+
+	
+
+
+	and for  we have .
+
+We now define . 
+ .
+
+	We find  such that  and  such that . Then for all  in 
+	
+
+
+
+ For  and , .
+ For any , .
+ .
+
+	The proof is similar with the proof for .
+
+ The range of values of the function  is the set .
+
+	The proof is similar with our first step for proving the irrationality of .
+
+ We repeat the construction mentioned above for . In  and  we find that  where . 
+
+
+	The mapping  is called the exponential function with base . In the case , it's denoted with , but in general it's denoted with .
+
+B) The logarithmic function 
+
+The properties of the exponential function show that it's bijective. Hence it has an inverse.
+
+	The mapping inverse to  is called the logarithm to base a (), and is denoted 
+	
+
+
+	for base , the logarithm is called the natural logarithm and is denoted .
+
+
+By definition of the logarithm as the function inverse to the exponential function, we have 
+
+	x (_a(a^x)&=x) 
+
+	y _+(a^_a(y)&=y) 
+
+ . 
+ .
+  as .
+
+	We verify that  when  and take their logarithms.
+
+  if  and  if . 
+ The range of values of the function  is the set .
+  holds for any  and any .
+
+	First we verify that the equality holds in the following conditions: , , ,  for , ,  where  and , finally, .
+
+
+C) The power function 
+
+
+	The function  defined on the set  is called a power function, and the number  is called its exponent.
+	
+
+
+
+
+
+
+
+
+
+The General Definition of the Limit of a Function(Limit over a Base)
+Bases; Definition and Elementary Properties
+
+	A set  of subsets  of a set  is called a base in  if the following conditions hold:
+	 . 
+
+	 .
+	These two conditions are related to the two properties of deleted neighborhood we mentioned in the previous subsection. "Base" here is an abbreviation for what is called a "filter base".
+
+ m6em  m4em  m8em  m12em 
+	
+	Notation for the base  &Read  &Elements of the base &Definition of and notation for elements 
+
+	
+	 &  tends to  &Deleted neighborhoods of  &, where  and . 
+
+	
+	 & tends to infinity &Neighborhoods of infinity & , where  
+
+	
+	 or  or  & tends to  in  & Deleted neighborhoods of  in  & 
+
+	
+	 or  or  & tends to infinity in  &Neighborhoodsof infinity in  & 
+
+	
+
+[1]It is assumed that  is a limit point of 
+[2]It is assumed that  is not bounded
+
+If (resp. ), we write (resp. ), and we say that  tends to  from the right (resp.  tends to  from the left) or through larger values (resp. through smaller values). When  we write  (resp. ). 
+The notation  (resp.  ) will be used. It means that  tends to  in  while remaining larger (resp. smaller) than . 
+If
+
+
+
+we write  (resp. ). When , we shall write  instead of .
+
+The Limit of a Function over a Base
+
+	Let  be a function defined on a set  and  a base in . A number  is called the limit of the function  over the base  if for every neighborhood  of  there is an element  whose image  is contained in .
+	
+
+
+
+
+
+	A function  is ultimately constant over the base  if there exists a number  and an element  such that  for all .
+
+
+	A function  is ultimately bounded over the base  if there exists a number  and an element  such that  for all .
+
+
+	A function  is infinitesimal over the base  if .
+
+
+
+Existence of the Limit of a Function
+The Cauchy Criterion
+
+	The oscillation of a function  on a set  is
+	
+
+
+	that is, the least upper bound of the absolute value of the difference of the values of the function at two arbitrary points .
+
+
+[The Cauchy Criterion for the existence of a limit of a function]
+	Let  be a set and  a base in . 
+	A function  has a limit over the base  iff for every  there exists  such that the oscillation of  on  is less than .
+	
+
+
+
+
+	Setting  and , and remarking that  for any elements  and  of the base , we find by the axiom of completeness that there exists a number  separating the numerical sets  and , where . Since , we can now conclude that, since , we have  at every point .
+
+Remark: When  and  is the base ,  where  is equivalent with the assertion that this sequence is a Cauchy sequence.
+
+
+
+The Limit of a Composite Function
+[The Limit of a Composite Function]
+	Let  be a set,  a base in , and  a mapping having a limit over the base . Let  be a set,  a base in , and  a mapping of  into  such that for every element  there exists  whose image  is contained in . 
+	Under these hypotheses, the composition  of the mapping  and  is defined and has a limit over the base  and 
+
+
+	Suppose . .
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+	
+
+
+
+
+
+The Limit of a Monotonic Function
+[Criterion for the Existence of a Limit of a Monotonic Function]
+	Assume  and  are limit points of the set  and   a monotonic function on .A necessary and sufficient condition for this function that is non-decreasing on the set  to have a limit as , is that it be bounded above. For this function to have a limit as , it is necessary and sufficient that it be bounded below.
+
+
+	For , use the definition of least upper bound and the fact the set  is an element of the base , where for a given  we have  and .
+
+
+
+
+Comparison of the Asymptotic Behavior of Functions
+
+
+	We shall say that a certain property of functions or a certain relation between functions holds ultimately over a given base  is there exists  on which it holds.
+
+
+
+	The function  is said to be infinitesimal compared with the function  over the base , and we write  or  over  if the relation  holds ultimately over , where  is a function that is infinitesimal over .
+
+
+
+	If  and  is itself infinitesimal over , we say that  is an infinitesimal of higher order than  over .
+
+
+
+	A function that tends to infinity over a given base is said to be an infinite function or simply an infinity over the given base.
+
+
+
+	If  and  are infinite functions over  and , we say that  is a higher order infinity than  over .
+
+
+
+	
+
+
+	that is,  as  for  and any .
+
+
+
+	
+
+
+	that is, for  we have  as .
+
+
+
+	The notation  or  over the base  means that the relation  holds ultimately over  where  is ultimately bounded over .
+
+
+
+	The functions  and  are of the same order over , and we write  over , if  and  simultaneously. This condition is equivalent to the condition that there exist  and  and an element  such that the relations
+	
+
+
+
+
+
+	The functions  and  are of the same order as , but  and  are not of the same order as .
+
+
+
+	If the relation  holds ultimately over  where , we say that the function  behaves asymptotically like  over , or that  is equivalent to  over , and we write  or  over . This relation is indeed an equivalent relation.
+
+
+
+	
+
+
+	as .
+
+
+
+	
+
+
+	as .
+
+
+
+	
+
+
+	as .
+
+
+
+	If , then , provided one of these limits exists.
+
+This rule should not be extended to sums and differences of functions.
+
+
+	For a given base 
+	a) ; 
+
+	b)  is also ;
+
+	c) ;
+
+	d) ;
+
+	e) if , then  and ;
+
+
+Here the equality sign is used in the sense of "is". The symbols  and  do not really denoted a function, but rather indicate its asymptotic behavior, a behavior that many functions may have simultaneously.
+
+
+	e^x&= 1+11!x+12!x^2++1n!x^n+ for 
+
+	x&= 1-12!x^2+14!x^4++(-1)^k2k!x^2k+ for 
+
+	x&= 11!x-13!x^3++(-1)^k(2k+1)!x^2k+1+ for  
+
+	(1+x)&= x-12x^2+13x^3++(-1)^n-1nx^n +  for 
+
+	(1+x)^&= 1+1!x+(2!x^2+
+
+	&  +(n!x^n+ for 
+
+
+And as 
+
+		e^x&= 1+11!x+12!x^2++1n!x^n+O(x^n+1) 
+
+	x&= 1-12!x^2+14!x^4-+(-1)^k2k!x^2k+O(x^2k+2) 
+
+	x&= 11!x-13!x^3++(-1)^k(2k+1)!x^2k+1+O(x^2k+3)  
+
+	(1+x)&= x-12x^2+13x^3-+(-1)^n-1nx^n + O(x^n+1)
+
+	(1+x)^&= 1+1!x+(2!x^2+
+
+	&  +(n!x^n+O(x^n+1) 
+
+
+These formulas can be derived from Taylor's formula, and they are usually the most efficient method of finding the limits of the elementary functions. When doing so, it is useful to keep in mind that  as .
+
+Continuous Functions
+Basic Definitions and Examples
+Continuity of a Function at a Point
+
+	A real-valued function  is continuous at the point  if for any neighborhood  there is a neighborhood  of  whose image under the mapping  is contained in .
+	
+	 is continuous at  & (V(f(a)))U(a)(f(U(a))V(f(a)))
+
+	&>0 U(a)x U(a) (f(x)-f(a)<) 
+
+	&>0 >0 x (x-a<f(x)-f(a<) 
+	
+
+This is equivalent to the condition that  exists and  is defined.
+
+
+
+where  is the base consists of neighborhoods (not deleted neighborhoods) of  .
+
+[General Case]
+	A function  is continuous at the point  if for every neighborhood  of the value  that the function assumes at  there exists a neighborhood  of  in  whose image  is contained in .
+	
+		&(f:E  is continuous at  ) 
+
+		&(V(f(a)))U_E(a)(f(U_E(a))V(f(a)))
+
+		&>0 U_E(a)x U_E(a) (f(x)-f(a)<) 
+
+		&>0 >0 x (x-a<f(x)-f(a<
+	
+
+
+
+	The quantity  is called the oscillation of  at .
+
+The oscillation of a function on a subset of a set does not exceed its oscillation on the set itself, so that  is a non-decreasing function of . 
+
+
+
+
+
+
+	A function  is continuous on the set  if it is continuous at each point of .
+
+The set of all continuous real-valued functions defined on a set  will be denoted , or, more, .
+
+	The function  is continuous on .
+
+
+	For any point  we have
+	
+		x - x_0&=2 x+x_02 x- x_02 
+
+		&2x-x_02 2x-x_02 = x-x_0 < 
+	
+	provided . Here we used the inequality .
+
+
+
+	Any sequence  is a function that is continuous on the set  of natural numbers, since each point of  is isolated.
+
+
+Points of Discontinuity
+
+	If the function  is not continuous at a point of , this point is called a point of discontinuity or simply a discontinuity of .
+
+
+	If a point of discontinuity  of the function  is such that there exists a continuous function  such that , then  is called a removable discontinuity of the function .
+
+
+	The point  is called a discontinuity of first kind for the function  if the following limits exist:
+	
+
+
+	but at least one of them is not equal to . If at least one of the two limits does not exist, then  is called a discontinuity of second kind.
+
+
+
+	The Dirichlet function
+	
+
+
+
+
+
+	is discontinuous at every point, and obviously all of its discontinuities are of second kind, since in every interval there are both rational and irrational numbers.
+
+
+	The Riemann function
+	
+
+
+
+
+
+	is continuous at any irrational number. This function is discontinuous except for , and all of these discontinuities are of first kind.
+
+
+	For any point , any bounded neighborhood  of it, and any number ,  contains only a finite number of rational numbers , with . 
+	By shrinking the neighborhood, one can then assume that the denominators of all rational numbers in the neighborhood (except possibly for the point  itself if ) are larger than . Thus at any point  we have . Now we have shown that for any point 
+	
+
+
+
+
+Properties of Continuous Functions
+Local Properties
+
+	Let  be a function that is continuous at the point . Then the following statements hold: 
+	 The function  is bounded in some neighborhood . 
+
+	 If , then in some neighborhood  all the values of the function have the same sign as .
+
+	 If the function  is defined in some neighborhood of  and, like , is continuous at , then the following functions are defined in some neighborhood of  and continuous at :
+	
+		&a)  (f+g)(x)f(x)+g(x) 
+
+		&b)  (f g)(x)f(x )g(x)
+
+		&c)  fg(x)f(x)g(x) (provided )
+
+	
+	 If the function  is continuous at a point  and  is such that , , and  is continuous at , then the composite function  is defined on  and continuous at .
+
+
+	All algebraic polynomials, rational functions, and the composition of a finite number of continuous functions are continuous at each point of its domain of definition.
+
+
+
+
+Global Properties of Continuous Functions
+
+[The Bolzano-Cauchy intermediate-value theorem]
+	If a function that is continuous on a closed interval assumes values with different signs at the endpoints of the interval, then there is a point in the interval where it assumes the value .
+	
+
+
+
+
+	Divide the interval  in half where the point of division is the point that the function does not assume the value  and apply the nested interval lemma, then find the limit of the sequence of these two endpoints for the nested intervals.
+
+
+
+	If the function  is continuous on an open interval and assumes values  and , then for any number  between  and , there is a point  between  and  at which .
+
+
+
+	The function  is defined and continuous on the closed interval. The intermediate-value theorem implies that , since .
+
+
+[The Weierstrass maximum-value theorem]
+	A function that is continuous on a closed interval is bounded on that interval. Moreover there is a point in the interval where the function assumes its maximum value and a point where it assumes its minimal value.
+
+
+	Let  be a continuous function on the closed interval . By the local properties of a continuous function, for any point  there exists a neighborhood  such that the function is bounded on . The set of such neighborhoods forms a covering of . By the finite covering lemma, one can extract a finite system of open intervals that cover . Since the function is bounded, one can find  where .
+	
+
+
+	Now let . Set  and contradiction arises by considering the auxiliary function , which must be continuous by the local properties of the continuous functions. Similarly, one can prove that there exists a point such that .
+
+
+
+	If from every covering of a set by open intervals one can extract a finite subcovering, the set is called compact. According to the  Heine–Borel theorem, in an Euclidean space, compact means that the set is closed (contains all of its limit points) and bounded (all of its points lie in some fixed distance).
+
+
+
+	A function  is uniformly continuous on a set  if for every  there exists  such that  for all points  such that . The following expression states the negation of the property of uniform continuity for a function:
+	
+		&(f:E  is not uniformly continuous  )
+
+		&(>0 >0 x_1 E x_2 E(x_1-x_2<f(x_1)-f(x_2) )) 
+	
+
+
+
+	The function , which is continuous on , is not uniformly continuous on .
+
+
+	For all the points  and , where , , but
+	
+
+
+	so that for any  there are points  and  such that , yet .
+
+
+
+	The function , which is continuous and bounded on , is not uniformly continuous on .
+
+
+[The Cantor-Heine Theorem on Uniform Continuity]
+	A function that is continuous on a closed interval is uniformly continuous on that interval.
+
+
+	Let  be a given function, , and . Since  is continuous at every point, we construct a system consists of -neighborhoods for all points  such that the oscillation of that neighborhood is less than . Let  and . Then the open intervals  cover the closed interval . By the finite covering lemma we select a finite covering . Let . Since this system of open intervals covers , there exists an interval  that contains , and . But for another point  we have
+	
+
+
+	Consequently , and we have .
+
+
+
+	A continuous mapping  of a closed interval  into  is injective iff the function  is strictly monotonic on .
+
+
+	The fact that a strictly monotonic mapping is injective is obvious. For the converse, suppose the contrary, we find three points  in the interval such that  does not lie between  and . Let . Since  is continuous, by Bolzano-Cauchy intermediate-value theorem, there exists a point  in  such that . We then have , but this contradicts to the injectiveness of this function.
+
+
+
+	Each strictly monotonic function  defined on a numerical set  has an inverse  defined on the set  of values of , and has the same kind of monotonicity on  that  has on .
+
+
+	The mapping  is apparently both injective and surjective. Then  if  is increasing on . The case when  is decreasing can be handled similarly.
+
+
+
+	The discontinuities of a function  that is monotonic on the set  can be only discontinuities of first kind.
+
+
+	Let  be the point of discontinuity. It follows that  cannot be an isolated point of (some of its neighborhoods contain no points of  but  itself), since  and  for any neighborhood of . Then  must be a limit point of one of two following sets:  and . Suppose  is non-decreasing, then the restriction  is a non-decreasing function that is bounded from above. Then the limit  exists. The rest of this proof is analogous.
+
+
+
+	If  is a point of discontinuity of a monotonic function , then at least one of the limits
+	
+
+
+	exists, and strict inequality holds in at least one of the inequalities  when  is non-decreasing and  when  is non-increasing. The function assumes no values in the open interval defined by the strict inequality. Open intervals of this kind determined by different points of discontinuity have no point in common.
+
+
+	The first assertion is obvious. For the second assertion, since  for , the open interval  defined by the strict inequality  contains no value of this function. It's similar for . Let  and  be two different points of discontinuity of  and assume . Since the function is non-decreasing
+	
+
+
+	It follows from this that the intervals containing no values of  and corresponding to different points of discontinuity are disjoint.
+
+
+
+
+	The set of points of discontinuity of a monotonic function is at most countable.
+
+
+	The intervals are pairwise disjoint. Since they are defined by strict inequality, one can choose a rational number in each of these intervals,  so that the collection of intervals is equipollent with a subset of .
+
+
+[A Criterion for Continuity of a Monotonic Function]
+	A monotonic function  defined on a closed interval  is continuous iff its set of values  is the closed interval with endpoints  and .
+
+
+	If  is a continuous monotonic function, its monotonicity implies that all the values  assumes on  lie between  and . Now we consider the converse. Suppose there is a point of discontinuity . Then one of the open intervals  and  contains no value of , but this interval is contained between  and  because of its monotonicity.
+
+
+[The Inverse Function Theorem]
+	A function  that is strictly monotonic on a set  has an inverse  defined on the set  of values of . The function  is monotonic and has the same type of monotonicity on  that  has on .
+
+
+	This can be easily proved with our last proposition.
+
+
+
+Differential Calculus
+Differentiable Functions
+Functions Differentiable at a Point
+
+	A function  defined on a set  is differentiable at a point  that is a limit point of  if there exists a linear function  of the increment  of the argument such that  can be represented as
+	
+
+
+	In other words, a function is differentiable at a point  if the change in its values in a neighborhood of the point in question is linear up to a correction that is infinitesimal compared with the magnitude of the displacement  from the point .
+
+
+
+	The linear function  is called the differential of the function  at . The differential of a function at a point is uniquely determined; for it follows from our former definition that 
+	
+
+
+	The uniqueness of  follows from the uniqueness of the limit.
+
+
+	The number
+	
+
+
+	is called the derivative of the function  at .
+
+Differentiability of a function at a point is equivalent to the existence of its derivative at the same point.
+
+
+	A function  defined on a set  is differentiable at a point  that is a limit point of  if
+	
+
+
+	where  is a linear function in  and  as . 
+	The quantities
+	
+
+
+	and 
+	
+
+
+	are called respectively the increment of the argument and the increment of the function.
+
+
+
+	The function , which is a linear in , is called the differential of the function  at the point  and is denoted  or . Thus, . From the definitions above we have
+	
+
+
+	and  as . For this reason, we say that the differential is the (principal) linear part of the increment of the function.
+	
+
+
+	The derivative is frequently denoted by the symbol .
+
+
+
+
+
+The Tangent Line; Geometric Meaning of the Derivative and Differential
+
+
+	A function  that is continuous a t a point  that is a limit point of  admits a linear approximation iff it is differentiable at the point.
+
+
+	If a function  is defined on a set  and differentiable at a point , the line defined by  that passing through  and having slope  is called the tangent to the graph of this function at the point .
+
+
+	If the mappings  and  are continuous at a point  that is a limit point of  and  as , we say that  and  have th order contact at  (more precisely, contact of order at least ). For  we say that the mappings  and  are tangent to each other at .
+
+
+Examples
+
+	If , then .
+
+
+	
+		_h 0 r (t+h)- r th &=r _h 0-2 (h2)(t+ h2)h 
+
+		&= - r _h 0 (t+h2) _h 0(h2)(h2) 
+
+		&= -r t
+	
+
+
+	If , then .
+
+
+	The proof is analogous.
+
+By the definition of differentiability of a function  at a point , we have
+
+
+
+Since the right-hand side of this equality tends to zero as , it follows that , so that a function that is differentiable at a point is necessarily continuous at that point. However, the converse is not always true. It's easy to see that although  is continuous at , it's not differentiable at .
+
+	 as . Thus .
+
+
+	
+
+
+	Here we have used the formula  obtained in Section 3.2.4.
+
+
+	If , then  as . Thus .
+
+
+	
+		a^x+h-a^x&=a^x(a^h-1)=a^x(e^h a-1)
+
+		&=a^x(h a+ o(h a)) = a^x(a) h + o(h)  as  h 0
+	
+
+
+
+	If , then  as . Thus .
+
+
+	
+
+
+	For  we have , and so for sufficiently small value of  we can write
+	
+
+
+	as . Here we have used the relation  as , shown in Section 3.2.4.
+
+
+
+	If  and , then  as . Thus, .
+
+
+	
+		_ax+h - _ax &= _a 1 + hx = _a(1+ hx) 
+
+		&= 1a (1+hx) = 1a(hx+o(hx)) = 1x ah + o(h)
+	
+
+
+[Waerden's Function]
+	Set
+	
+
+
+
+
+
+	and extend this function to the entire real line so as to have period . We denote the extended function by . Further, let
+	
+
+
+	The function  has period  and a derivative equal to  or  everywhere except at the points . Let
+	
+
+
+	This function is defined and continuous on , but does not have a derivative at any point.
+
+
+	The function series  is convergent by Weierstrass's M-test, thus the function is continuous everywhere. Now we prove that this function is not differentiable everywhere. 
+	For any positive  and any arbitrary point , choose  to be  or , so that . This is possible because  is a quarter of the period of  and  is a linear function that has a slope of  in the interval  containing . 
+	We can also see that for  we have  and for  we have , since  can be expressed as , a multiple of the period of . Hence  is an integer whose parity (the fact of being odd or even) is the same as . Therefore the limit  cannot exist, which implies that this function is not differentiable at any arbitrary point.
+
+
+
+
+The Basic Rules of Differentiation
+Differentiation and the Arithmetic Operations
+
+	If two functions  and  are differentiable at , then their sum, product, and quotient if the denominator is not zero, are differentiable.
+	
+		(f+g)^(x)&=(f^+g^)(x) 
+
+		(fg)^(x)&=f^(x)g(x) + f(x)g^(x)
+
+		(fg)^(x) &=f^(x)g(x) - f(x)g^(x)g^2(x)
+	
+
+
+	The theorem is easy to prove with the definition of a differentiable function and the properties of the symbol .
+
+
+	The derivative of a linear combination of differentiable functions equals the same linear combination of the derivatives of these functions.
+
+
+	If the function  are differentiable at , then
+	
+		(f_1 f_n)^(x)=&f^_1(x)f_2(x)f_n(x)
+
+		&f_1(x)f^_2(x)f_3(x)f_n(x)+ f_1(x)f_n-1(x)f^_n(x)
+	
+
+
+	Easy to prove by induction.
+
+
+	Following from the relation between the derivative and the differential, the theorem can also be written in terms of differentials.
+
+
+
+Differentiation of a Composite Function(Chain Rule)
+
+	If the function  is differentiable at a point  and the function  is differentiable at the point , then the composite function  is differentiable at , and the differential  of their composition equals the composition  of their differentials
+	
+
+
+
+
+	The derivative  of the composition of differentiable real-valued functions equals the product  of the derivatives of these functions compared at the corresponding points.
+
+
+	If the composition  of differentiable functions  exists, then
+	
+
+
+
+
+	The derivative of the logarithm of the absolute value of a differentiable function is often called its logarithmic derivative. 
+
+	Since , we have 
+
+
+	For a function , where  and  are differentiable functions and . We write , then
+	
+
+
+
+
+
+Differentiation of an Inverse Function
+[The derivative of an inverse function]
+	Let the functions  and  be mutually inverse and continuous at points  and  respectively. If  is differentiable at  and , then  is also differentiable at the point , and
+	
+
+
+
+
+	The hyperbolic and inverse hyperbolic functions and their derivatives are:
+	
+		x &= 12(e^x-e^-x) 
+
+		^x &= x 
+
+		y &= (y+1+y^2)
+
+		^y &= 11+y^2
+
+		x &= 12(e^x+e^-x) 
+
+		^x &= x 
+
+		_- y &= (y-y^2-1)
+
+		_+ y &= (y+y^2-1)
+
+		^_- y &=- 1y^2-1, y>1 
+
+		^_+ y &= 1y^2-1, y>1 
+		
+		x &= xx 
+
+		^x &= 1^2 x
+
+		y &= 12 1+y1-y,y<1 
+
+		^y &= 11-y^2, y<1
+
+		x &= xx 
+
+		^x &= -1^2 x
+
+		y &= 12 y+1y-1,y>1 
+
+		^y &= -1y^2-1, y>1
+	
+
+
+
+Higher-Order Derivatives
+
+	The derivative of order  is defined by the formula 
+	
+
+
+	The set of functions  having continuous derivatives up to order  inclusive will be denoted  or .  by .
+
+[Leibniz's formula]
+	Let  and  be functions having derivatives up to order  inclusive on a common set . Then following formula of Leibniz holds for the th derivative of their product:
+	
+
+
+
+
+
+The Basic Theorems of Differential Calculus
+Fermat's Lemma and Rolle's Theorem
+
+	A point  is called a local maximum (resp. local minimum) and the value of a function  at the point a local maximum value (resp. local minimum value) if their exists a neighborhood  of  in  such that at any point  we have  (resp. ).
+
+
+	If the strict inequality  (resp. ) hods at every point , the point  is called strict local maximum (resp. strict local minimum) and the value of the function  a strict local maximum value (resp. strict local minimum value).
+
+
+	The local maxima and minima are called local extrema and the values of the function at these points local extreme values of the function.
+
+
+	An extremum  of the function  is called an interior extremum if  is a limit point of both sets  and .
+
+[Fermat]
+	If a function  is differentiable at an interior extremum, , then its derivative at  is .
+
+[Rolle's Theorem]
+	If a function  is continuous on the closed interval  and differentiable on  and , then there exists a point  such that .
+
+
+
+The Theorems of Lagrange and Cauchy on Finite Increments
+[Lagrange's Finite-increment Theorem]
+	If a function  is continuous on a closed interval  and differentiable on the open interval , there exists a point  such that
+	
+
+
+
+
+	Consider the auxiliary function
+	
+
+
+	and apply Rolle's theorem to it.
+
+
+Corollaries of Lagrange's Theorem
+[Criterion for monotonicity of a function]
+	If the derivative of a function is nonnegative (resp. positive) at every point of an open interval, then the function is nondecreasing (resp. increasing) on that interval.
+
+An analogous assertion can be made about the nonincreasing (resp. decreasing) nature of a function with a nonpositive (resp. negative) derivative.
+[Criterion for a function to be constant]
+	A function that is continuous on a closed interval is constant on it iff its derivative equals zero at every point of the interval  (or only on ).
+
+If the derivative of two functions are equal on some interval, then the difference between them is constant.
+[Cauchy's Finite-increment Theorem]
+	Let  and  be functions that are continuous on a closed interval  and differentiable on the open interval . 
+
+	Then there exists a point  such that
+	
+
+
+	If in addition  for each  in , then  and we have the equality
+	
+
+
+
+
+
+
+Taylor's Formula
+
+	The algebraic polynomial given by
+	
+
+
+	is the Taylor polynomial of order  of  at . 
+
+	The th remainder term in Taylor's formula, or the remainder, is the value
+	
+
+
+	Then
+	
+		f(x)&=f(x_0)+f^(x_0)1!(x-x_0)++ f^(n)(x_0)n!(x-x_0)^n+r_n(x_0,x) 
+	
+	When , this is often called MacLaurin's formula.
+
+
+	If the function  is continuous on the closed interval with end-points  and  along with its first  derivatives, and it has a derivative of order  at the interior points of this interval, then for any function  that is continuous on this closed interval and has a nonzero derivative at its interior points, there exists a point  between  and  such that
+	
+		r_n(x_0,x)&=(x)-(x_0)^()n!f^(n+1)()(x-)^n  
+	
+
+
+	Consider the auxiliary function
+	
+
+
+	Find . Apply Cauchy's theorem to the pair of functions  and find a point . Substitute the expression for  here and the theorem is proved with the fact that .
+
+[Cauchy's Formula for the remainder term]
+	Setting , we obtain
+	
+		r_n(x_0,x) &=1n!f^(n+1)()(x-)^n(x-x_0) 
+	
+
+[The Lagrange form of the remainder]
+	Setting , we have
+	
+		r_n(x_0,x)&=1(n+1)!f^(n+1)()(x-x_0)^n+1 
+	
+
+
+	
+		(1+x)^n &=1+n1x+ n2x^2++nnx^n   
+	
+
+
+	If the function has derivatives of all orders  at a point , the series
+	
+
+
+	is called the Taylor's series of  at the point .
+
+it should not be thought that the Taylor series of an infinitely differentiable function converges in some neighborhood of . 
+It should also not be thought that if the Taylor series converges, it necessarily converges to the function that generated it -- it converges to the function that generated it only when the generating function belongs to the class of analytic functions. Cauchy gave an example of a nonanalytic function:
+
+
+
+
+
+
+The Taylor series in this case has all its terms equal to  and hence its sum is , while  if .
+
+	if there exists a polynomial  satisfying the following condition:
+	
+
+
+	then the polynomial is unique.
+
+[The Local Taylor Formula]
+	Let  be a closed interval having  as an endpoint. If the function  has derivatives  up to order  inclusive at the point , then the following representation holds:
+	
+		f(x)=&f(x_0)+f^(x_0)1!(x-x_0)++ f^(n)(x_0)n!(x-x_0)^n+ 
+
+		&o((x-x_0)^n)  as x x_0,xE
+	
+
+
+	If a function , defined on a closed interval  with endpoint , is such that it has derivatives up to order  inclusive at  and , then  as .
+
+
+	content...
+
+The relation is called the local Taylor formula since the form of the remainder term given in it (the so-called Peano form)
+
+
+
+makes it possible to draw inferences only about the asymptotic nature of the connection between the Taylor polynomial and the function as .
+[Taylor's formula with the Lagrange form of the remainder]
+	If  has a derivative of order  on the open interval with endpoints  and , then
+	
+		f(x) = &f(x_0)+f^(x_0)1!(x-x_0)++ f^(n)(x_0)n!(x-x_0)^n+ 
+
+		&f^(n+1)()(n+1)!(x-x_0)^n+1
+	
+	where  is a point between  and . This is a generalization of Lagrange's mean-value theorem(finite-increment theorem), to which it reduces when .
+
+[Taylor's formula with the Peano form of the remainder]
+	If  has derivative of orders up to  inclusive at the point , then
+	
+
+
+	This is a generalization of the definition of differentiability of a function at a point, to which it reduces when .
+
+Now we write the following table of asymptotic formulas as :
+
+e^x&= 1+11!x+12!x^2++1n!x^n+O(x^n+1) 
+
+x&= 1-12!x^2+14!x^4-+(-1)^n2n!x^2n+O(x^2n+2) 
+
+x&= 11!x-13!x^3++(-1)^n(2n+1)!x^2n+1+O(x^2n+3)  
+
+x &=1+12!x^2+14!x^4++12n!x^2n+O(x^2n+2) 
+
+x &= 11!x+13!x^3++1(2n+1)!x^2n+1+O(x^2n+3)  
+
+(1+x)&= x-12x^2+13x^3-+(-1)^n-1nx^n + O(x^n+1)
+
+(1+x)^&= 1+1!x+(2!x^2+
+
+&  +(n!x^n+O(x^n+1) 
+
+
+
+The Study of Functions Using the Methods of Differential Calculus
+Conditions for a Function to be Monotonic
+
+	The following relations hold between the monotonicity properties of a function  that is differentiable on an open interval  and the sign(positivity) of its derivative  on that interval:
+	
+			
+		f^(x)>0 &f  is increasing  &f^(x)0
+
+		f^(x)0 &f  is nondecreasing  &f^(x)0
+
+		f^(x)0 &f  const. &f^(x)0
+
+		f^(x)0 &f  is nonincreasing &f^(x)0
+
+		f^(x)<0 &f  is decreasing  &f^(x)0
+
+		
+	
+
+
+	The left-hand column of implications is already known from Lagrange's theorem. The right-hand column of implications can be obtained immediately from the definition of the derivative.
+
+
+Conditions for an Interior Extremum of a Function
+[Necessary Conditions for an Interior Extremum]
+	In order for a point  to be an extremum of a function  defined on a neighborhood  of that point, a necessary condition is that one of the following two condition hold: either the function is not differentiable at  or .
+
+[Sufficient Conditions for an Extremum in terms of the First Derivative]
+	Let  be a function defined on a neighborhood  of the point , which is continuous at the point itself and differentiable in a deleted neighborhood . Let  and . 
+
+	Then the following conclusions are valid:
+	
+		&a)  (x U^-(x_0) (f^(x)<0) )(x U^+(x_0)(f^(x)<0)) (f  has no extremum at x_0)
+
+		&b)  (x U^-(x_0) (f^(x)<0) )(x U^+(x_0)(f^(x)>0)) (x_0  is a strict local minimum of f)
+
+		&c)  (x U^-(x_0) (f^(x)>0) )(x U^+(x_0)(f^(x)<0)) (x_0  is a strict local maximum of f)
+
+		&d)  (x U^-(x_0) (f^(x)>0) )(x U^+(x_0)(f^(x)>0)) (f  has no extremum at x_0)
+
+	
+
+[Sufficient Conditions for an Extremum in terms of Higher-order Derivatives]
+	Suppose a function  defined on a neighborhood  of  has derivatives of order up to  inclusive at  (n>1). 
+
+	If  and , then there is no extremum at  if  is odd. If  is even, the point  is a local extremum, in fact a strict local minimum if  and a strict local minimum if .
+
+
+	Using the local Taylor formula and observe the change of sign of the term .
+
+a.Young's Inequalities
+If  and , and the numbers  and  such that ,  and , then 
+
+	a^1/pb^1/q&1pa+1qb, if  p>1
+
+	a^1/pb^1/q&1pa+1qb, if  p<1
+
+and equality holds only when .
+
+	Set  and , then introduce the notation .
+
+b.Holder's Inequalities
+Let , , , and . Then
+
+
+
+and
+
+
+
+In the case  it is assumed that . Equality is possible only when the vectors  and  are proportional.
+
+	Let  and . Set  and  in Young's Inequalities when . The case when  is similar.
+
+c.Minkowski's Inequalities
+Let , , . Then
+
+
+
+and
+
+
+
+Knowing the conditions for equality in Holder's inequality, equality is possible in Minkowski's inequalities only when the vectors  and  are collinear.
+
+	Apply Holder's inequality to the terms on the right-hand side of the indentity. The left side is then bounded form above (for ) or below (for ). Finally, divide these inequalities by . (See Pg.240 for details).
+
+For  and , Minkowski's inequality is the triangle inequality in three-dimensional Euclidean space.
+
+Conditions for a Function to be Convex
+
+	A function  defined on an open interval  is convex if the inequalities
+	
+
+
+	hold for any points  and any numbers ,  such that . If this inequality is strict whenever  and , then function is strictly convex on . The definition of convexity can be written as
+	
+
+
+	for  and any .
+
+<Picture ConvexFunction>
+For the first definition, geometrically, convexity of a function means that the points of any arc of the graph of the function lie below the chord subtended by the arc. For the second definition, geometrically, it means that the slope of the chord I joining  to  is not larger than (and in the case of strict convexity is less than) the slope of the chord II joining  to .
+
+	If the opposite inequality holds for a function , that function is said to be concave on the interval , or, more often, convex upward in the interval, as opposed to a convex function, which is then said to be convex downward on .
+
+
+	A necessary and sufficient condition for a function  that is differentiable on the open interval  to be convex(downward) on that interval is that its derivative  be nondecreasing on . A strictly increasing  corresponds to a strict convex function.
+
+
+	A necessary and sufficient condition for a function  having a second derivative on the open interval  to be convex(downward) on  is that  on that interval. The condition  on  is sufficient to guarantee that  is strictly convex.
+
+
+	A function  that is differentiable on the open interval  is convex(downward) on  iff its graph contains no points below any tangent drawn to it. In that case, a necessary and sufficient condition for strict convexity is that all points of the graph except the point of tangency lie strictly above the tangent line.
+
+
+	Let  be a function defined and differentiable on a neighborhood  of . If the function is convex downward (resp. upward) on the set  and convex upward (resp. downward) on , then  is called a point of inflection of the graph. The point of inflection is where the function changes its convexity.
+
+[Jensen's Inequality]
+	If  is a convex function,  are points of , and  are nonnegative numbers such that , then
+	
+
+
+	For a function that is convex upward, we have
+		
+
+
+
+
+	Can be proved by induction.
+
+
+	Since  is strictly convex upward on the set of positive numbers, then
+	
+
+
+	If , we have
+	
+
+
+	between the geometric and arithmetic means of  nonnegative numbers. Equality holds only when . By setting , , , , , we obtain Young's inequality for .
+
+
+L'Hôpital's Rule
+[L'Hôpital's Rule]
+	Suppose the function  and  are differentiable on the open interval  () with  on  and
+	
+
+
+	Then
+	
+
+
+	in each of the following two cases:
+
+	1 as . 
+
+	or 
+
+	2 as . 
+
+	A similar assertion holds as .
+
+
+Constructing the Graph of a Function
+
+	The line  is called an asymptote of the graph of the function  as  if  as . If  as , the line  is called a vertical asymptote of the graph.
+
+In general, if  as , then
+
+	c_n &= _x - f(x)x^n 
+
+	c_n-1&=_x - f(x)-c_n x^nx^n-1 
+
+	&
+
+	c_0 &= _x - (f(x)-(c_1 x++c_n x^n))
+
+It uses the graph of the corresponding algebraic polynomial  to describe the asymptotic behavior of .
+Complex Numbers and Elementary Functions
+Complex Numbers
+
+	The set of complex numbers, , is a field containing  as a subfield.
+
+
+	The only nonobvious point in the verification that  is a field is that every non-zero complex number  has an inverse . We denote the conjugate of  as . Then  should be taken as .
+
+Geometrically speaking, a complex number can be viewed as the Cartesian coordinates in . Therefore, the absolute value or modulus  of a complex number is
+
+
+
+The set of complex numbers is called the complex plane.
+
+	If  (algebraic form), then the trigonometric (polar) forms of a complex number is
+	
+
+
+	since  and  for  and a polar coordinate . Note that  is the modulus or absolute value of .  is called the argument of  and denoted . By the characteristics of polar coordinates, there are infinitely many representation of a complex number. To make a representation unique, we must constrain the range of the argument. If such a choice has been made(usually ), we say that a branch (or the principle branch) of the argument has been chosen, thus .
+
+We can see that
+
+
+
+[de Moivre's Formula]
+	
+
+
+
+The product  where  can be viewed as the composition of a dilation by a factor of  and a rotation through the angle .
+
+Convergence in  and Series with Complex Terms
+The set , the -neighborhood of a number  is a disk (without the boundary circle) of radius  centered at .
+
+	A sequence of complex terms converges to  if .
+
+It is clear that a sequence of complex numbers converges iff the sequence of its real and imaginary parts of the terms of the sequence both converge.
+The definition for a fundamental or Cauchy sequence in  is analogous with its definition for a sequence of real numbers.
+[The Cauchy Criterion]
+	A sequence of complex numbers converges iff it is a Cauchy sequence.
+
+The Cauchy Criterion for series and the definition of absolute convergence is the same as them for a series of real numbers.
+[The Cauchy-Hadmard Formula]
+	The power series
+	
+
+
+	converges inside the disk  with center at  and radius given by the Cauchy-Hadamard formula
+	
+
+
+	At any point exterior to this disk the power series diverges. 
+
+	At any point interior to the disk, the power series converges absolutely.
+
+[Abel's First Theorem on Power Series]
+	If the power series converges at some value , then it absolutely converges for any value of  satisfying the inequality .
+
+
+	If a series of complex numbers converges absolutely, then a series obtained by rearranging its terms also converges absolutely and has the same sum.
+
+
+	The product of absolute convergent series is an absolutely convergent series whose sum equals the product of the sums of the factor series.
+
+
+	For two series  and  that converge absolutely, if , we have
+	
+
+
+
+
+Euler's Formula and the Connections Among the Elementary Functions
+[Euler Formula]
+	
+
+
+	Here  is either a real number or an arbitrary number. If 
+	
+
+
+
+
+	Find the Taylor series for , where  , then substitute  with .
+
+[The Trigonometric Notation for a Complex Number]
+	
+
+
+	where  is the modulus of  and  its argument.
+
+[Formula of de Moivre]
+	
+
+
+
+
+
+
+Power Series Representation of a Function. Analyticity
+A function that has complex domain and complex range, thus its graph is a subset of  and can not be visualized in the traditional way. To compensate for this loss to some extent, one usually keeps two copies of the complex plane , indicating points of the domain in one and points of the range of values in the other.
+The definitions of continuity, derivative, and differentiability for complex-valued functions are identical to those for real-valued functions. Since the arithmetic properties of the fields  and  are the same, all the general rules for differentiation, such as rules for addition, product, and quotient, are the same.
+
+	The sum  of a power series is an infinitely differentiable function inside the entire disk in which convergence occurs. Moreover,
+	
+
+
+	and 
+	
+
+
+
+
+	content...
+
+
+	A function is analytic at a point  if it can be represented in a neighborhood of the point in the following ("analytic") form:
+	
+
+
+	that is, as the sum of a power series in .
+
+
+	a) If a function is analytic at a point, then it is infinitely differentiable at that point, and its Taylor series converges to it in a neighborhood of the point. 
+	b) The Taylor series of a function defined in a neighborhood of a point and infinitely differentiable at that point converges to the function in some neighborhood of the point iff the function is analytic.
+
+This means that if a function has one derivative in a neighborhood of a point, it also has derivatives of all orders in that neighborhood.
+
+Algebraic Closedness of the Field  of Complex Numbers
+[Fundamental Theorem of Algebra]
+	Every polynomial
+	
+
+
+	of degree  with complex coefficients has a root in .
+
+
+	content...
+
+Remark If , then its conjugate  satisfies .
+
+	Every polynomial  of degree  with complex coefficients admits a representation in the form
+	
+
+
+	where (they are not necessarily all distinct). This representation is unique up to the order of the factors.
+
+
+	Use the long division algorithm on , we find that , where  and  are polynomials, the degree of  being less than the degree  of . Set m and find that , then use the principle of induction.
+
+By multiplying out all identical factors, one can rewrite that product:
+
+
+
+The number  is called the multiplicity of the root .
+
+	Every polynomial  with real coefficients can be expanded as a product of linear and quadratic polynomials with real coefficients.
+
+
+	Every root  of multiplicity  of a polynomial  is a root of multiplicity  of the derivative .
+
+
+	a) If  and  is a proper fraction (the degree of  is less than that of ), there exists a unique representation of the fraction  in the form
+	
+
+
+	b) If  and  are polynomials with real coefficients and
+	
+
+
+	there exists a unique representation of the proper fraction  in the form
+	
+
+
+	where , and  are real numbers.
+
+
+
+Primitives
+The Primitive and the Indefinite Integral
+
+	A function  is a primitive of a function  on an interval if  is differentiable on the interval and satisfies the equation , or .
+
+
+
+	From Lagrange's theorem, if  and  are two primitives of  on the same interval, then the difference  is constant on that interval.
+
+
+	The indefinite integral of  is denoted as
+	
+
+
+	where  is called the indefinite integral sign,  is called the integrand, and  is called a differential form.
+
+
+The Basic General Methods of Finding a Primitive
+
+	Taken account of the relationship between a function and its primitive as well as the laws of differentiation, we can assert that the following relations hold
+	
+		&a. (u(x)+v(x))dx = u(x)dx+v(x)dx +c 
+
+		&b. (uv)^dx = u^(x)v(x)dx + u(x)v^(x)dx +c
+	
+	Moreover, if
+	
+
+
+	on an interval  and  is a smooth (continuously differentiable) mapping of the interval  into , then
+	
+
+
+	Here we make the change of variable . This can be used to find primitive.
+
+[Integration by Parts]
+	
+
+
+	can be rewritten as
+	
+
+
+
+Some primitives of the composition of elementary functions cannot be expressed as the composition of elementary functions. We make the following definition for special cases of indefinite integrals:
+[Sine Integral]
+	The sine integral, denoted , is defined as
+	
+
+
+
+[Cosine Integral]
+	The cosine integral, denoted , is defined as
+	
+
+
+
+[Logarithmic Integral]
+	The logarithmic integral, denoted , is defined as
+	
+
+
+
+
+Primitives of Rational Functions
+
+	
+
+
+
+
+
+
+
+	For the following integral
+	
+
+
+	We represent  as , where , since the original polynomial has no real roots. Setting  and , we obtain
+	
+
+
+	where  and . Next
+	
+
+
+
+
+
+
+
+	For the following integral
+	
+
+
+	Integrating by parts and making elementary transformations, we have
+	
+
+
+	which makes it possible to lower the exponent  in the integral. But  is easy to compute
+	
+
+
+	and then we can compute the primitive our original problem.
+
+
+	The primitive of any rational function  can be expressed in terms of rational functions and the transcendental functions  and . The rational part of the primitive, when placed over a common denominator, will have a denominator containing all the factors of the polynomial  with multiplicities one less than they have in .
+
+
+	For the indefinite integral
+	
+
+
+	We find all the factors of the denominator, then
+	
+
+
+	Putting the right-hand side of this equation over a common denominator
+	
+
+
+	 and solve the system
+	 
+
+
+
+
+
+
+
+
+
+
+
+Primitives of the Form 
+Let  be a rational function in  and , that is a quotient of polynomials , which are linear combinations of monomials , where  and . 
+a. We make the change of variable , and
+
+
+
+b. In the case of  or , where  is a rational function, we substitute  with , and
+
+	R(^2 x, ^2 x)dx &= R(11+t^2,t^21+t^2)dt1+t^2 
+
+	r(x)dx  &= r(t)dt1+t^2
+
+c. In the case of integrals of the form
+
+
+
+One can move the functions  and  into the differential and make the substitution  or  respectively. Then
+
+
+
+
+
+Primitives of the Form 
+Let , as in previous subsection, a rational function where  is a function of . 
+a. If , where , then, setting , we obtain
+
+
+
+b. When , we reduce the general case to one of the following three simple cases by completing the square in the trinomial  and making a suitable linear substitution
+
+
+
+Now we make the following substitutions
+
+	&t^2+1=tu+1,or  t^2+1=tu-1,or t^2+1=t-u
+
+	&t^2-1=u(t-1),or  t^2-1=u(t+1),or t^2-1=t-u
+
+	&1-t^2=u(1-t),or  1-t^2=u(1+t),or 1-t^2=tu 1
+
+
+that will reduce these integrals to the integral of a rational function. Alternatively, one can make the substitution , and  (or ) respectively.
+c.Elliptic Integrals 
+[Elliptic Integrals]
+	
+
+
+	Here  is a polynomial of degree . In general, such an integral cannot be expressed in terms of elementary functions. For  and , this integral is called an elliptic integral, and for  it is called hyperelliptic.
+
+By elementary substitutions the general elliptic integral can be reduced to the following three standard forms up to terms expressible in elementary functions:
+
+	&dx(1-x^2)(1-k^2x^2), 
+
+	&x^2 dx(1-x^2)(1-k^2x^2), 
+
+	&dx(1+hx^2)(1-x^2)(1-k^2x^2)
+
+where  and  are parameters and . By the substitution , we reduce all these three integrals to:
+
+	&d 1-k^2 ^2 , 
+
+	&1-k^2 ^2 d, 
+
+	&d (1+h ^2 )1-k^2 ^2 
+
+The integrals are called respectively the elliptic integral of first kind, second kind, and third kind (in the Legendre form).
+The symbols  and  respectively denote the particular elliptic integrals of first and second kind that satisfy  and .
+
+
+
+Integration
+Definition of the Integral and Description of the Set of Integrable Functions
+Definition of the Riemann Integral
+Partitions
+
+	A partition  of a closed interval , is a finite system of points  of the interval such that . 
+
+	The intervals  are called the intervals of the partition .
+
+	The largest of the lengths of the intervals of the partition , denoted , is called the mesh of the partition.
+	An alternative definition for a partition: Let A be a nonempty class and  a family of subsets of  such that
+	
+		&i I (A_i )
+
+		&_i IA_i = A;
+
+		&ij I(A_i A_j = )
+	
+	then  is said to be a partition of .
+
+
+	We speak of a partition with distinguished points  on  if we have a partition  of  and a point  has been chosen in each of the intervals. The set of points  is denoted by the single letter .
+
+A Base in the Set of Partitions
+The base  where  consists of all partitions with distinguished points  on  for which .
+Riemann Sums
+
+	If a function  is defined on  and  is a partition with distinguished points on this closed interval, the sum
+	
+
+
+	where , is the Riemann sum of the function  corresponding to the partition  on .
+
+When the function  is fixed, the Riemann sum is a function  on the set  of all partitions  on .
+The Riemann Integral
+
+	The number  is the Riemann integral of the function  on the closed interval  if for every  there exists  such that
+	
+
+
+	for any partition  on  whose mesh  is less than . The definition is equivalent to the statement
+	
+
+
+	The integral of  over  is denoted
+	
+
+
+	in which the numbers  and  are called respectively the lower and upper limits of integration. The function  is called the integrand,  is called the differential form, and  is the variable of integration. Thus
+	
+		_a^bf(x)dx _(p)0_i=1^nf(_i)x_i   
+	
+
+
+	A function  is Riemann integrable on  if the Riemann integral of  is defined on . The set of Riemann-integrable functions on a closed interval  will be denoted .
+
+
+The Set of Integrable Functions
+A Necessary Condition for Integrability
+
+	A necessary condition for a function  defined on a closed interval to be Riemann integrable on it is that  be bounded on this closed interval.
+
+A Sufficient Condition for Integrability and the Most Important Classes of Integrable Functions
+[Reverse Triangle Inequality]
+	In a normed vector space
+	
+
+
+	Or for metric spaces
+	
+
+
+
+
+	Use the regular triangle inequality.
+
+
+	If a partition  of  is obtained from the partition  by adjunction of new points to ,  is called a refinement of .
+
+
+	A sufficient condition for a bounded function  to be integrable on a closed interval  is that for every  there exists a number  such that
+	
+
+
+	for any partition  of  with mesh .
+
+
+	Under the sufficient condition given in the statement, for any  we can find  such that
+	
+
+
+	for any partition  of  with . Now if  and  are arbitrary partitions with distinguished points on  whose mashed satisfy  and , then the partition  must satisfy the inequality above. Add these two inequality with the proper substitution while taking account of the triangle inequality and reverse triangle inequality, we have
+	
+
+
+	then by the Cauchy criterion, the limit of the Riemann sums exists.
+
+
+
+	, that is, every continuous function on a closed interval is integrable on that closed interval.
+
+
+	If a function is continuous on a closed interval, it is bounded on that interval. A continuous function on a closed interval is also uniformly continuous on the interval. Therefore, for every  there exists  such that  on any closed interval  of length less than . Then for any partition  with  we have
+	
+
+
+
+
+	If a bounded function  on a closed interval  is continuous everywhere except at a finite set of points, then .
+
+
+	Let , and suppose  has  points of discontinuity on . For a given  we choose the number  and construct the -neighborhood of each of the  points of discontinuity. The complement of the union of these neighborhoods in  consists of a finite number of closed intervals, on each of which  is uniformly continuous. Since the number of these intervals is finite, given  there exists  such that on each interval  whose length is less than  and which is entirely contained in one of the closed intervals just mentioned, on which  is continuous, we have . We now choose . 
+	Let  be an arbitrary partition of  for which . The sum  corresponding to  can be broken into two parts:
+	
+
+
+	The sum  contains the terms corresponding to intervals  of  having no points in common with any of the -neighborhoods of the points of discontinuity. For these intervals we have , and so
+	
+
+
+	The sum of the remaining intervals of  is at most (the worst case is that every -neighborhood of points of discontinuity has its end and start points being attach by a interval on which the function  is uniformly continuous whose length is less than  and the -neighborhood just has one point in common(its start point or end point) with these two neighborhoods). Therefore
+	
+
+ 
+	and our proof completes, since
+	
+
+
+	now holds for .
+
+
+	A monotonic function on a closed interval is integrable on that interval.
+
+
+	It follows the monotonicity of  that . Suppose  is given, we set  (assuming that the function is not constant). Then for an arbitrary partition of  with , and
+	
+
+
+
+Here we assume that all the functions discussed here are real-valued functions.
+
+	Let  be a real-valued function that is defined and bounded on , let  be a partition of , and let  be the intervals of . Let  and . 
+	The sums
+	
+
+
+	and 
+	
+
+
+	are called respectively the lower and upper Riemann sums of  on  corresponding to . The sums  and  are also called the the lower and upper Darboux sums corresponding to  on . 
+
+	If  is an arbitrary partition with distinguished points on , then obviously
+	
+
+
+
+
+	
+		s(f,P) &= (f,P,) 
+
+		S(f,P) &=  (f,P,)
+	
+
+
+	By definition of , for each interval there is a point  at which . Let  be the collection of these points in . Then
+	
+
+
+	The first assertion can be proved similarly.
+
+
+	A bounded real-valued function  is Riemann-integrable on  iff the following limits exist and are equal to each other:
+	
+
+
+	and when this happens, the common value  is
+	
+
+
+
+
+	If the limits exist and are equal, then by the properties of limit the Riemann sums have a limit and equal to these two limits. On the other hand, if , by the following inequalities
+	
+
+
+	for any  and
+	
+
+
+	the limit  exists and equals to . The proof for the existence and equality of  is similar.
+
+
+	A necessary and sufficient condition for a function  to be Riemann integrable on  is the following relation:
+	
+
+
+
+
+	Notice that .
+
+The Vector Space 
+
+	If , then
+	
+		&a)  (f+g)R[a,b] ;
+
+		&b)  (f)R[a,b] , where  is a numerical coefficient;
+
+		&c) f R[a,b] ;
+
+		&d) f_[c,d] R[a,b]  if [c,d][a,b] ;
+
+		&e) (f g)R[a,b] .
+
+	
+	Properties a),b),c),d) also holds for complex-valued and vector-valued functions. The product  is not defined in general for vector-valued functions, and property e) holds for complex-valued functions while not being considered for vector-valued functions.
+
+All the axioms of a vector space over the field of real numbers hold while regarding functions as vectors, and the set of real-valued functions is a vector space with respect to the operations of pointwise addition and multiplication by real numbers.  is a subspace of the vector space of real-valued functions defined on .
+Lebesgue's Criterion for Riemann Integrability of a Function
+
+	A set  has measure zero or is of measure zero if for every number  there exists a covering of the set  by an at most countable system  of intervals, the sum of whose length  is at most . The definition is unambiguous since the series converges absolutely and the order of summation does not affect the sum.
+
+
+	a) A single point and a finite number of points are sets of measure zero. 
+
+	b) The union of a finite or countable number of sets of measure zero is a set of measure zero.
+
+	c) A subset of a set of measure zero is itself of measure zero.
+
+	d) A closed interval  with  is not a set of measure zero.
+
+
+
+	b): Let  be an at most countable union of sets  of measure zero. Given , for each  we construct a covering  of  such that . Since  is most countable, the intervals  form an at most countable covering of , and
+	
+
+
+	This series converges and the order of summation does not matter, and thus  has measure zero.
+	d): Use induction on the number of intervals in the covering and prove that the sum of length of this finite covering on  is no less than .
+	
+
+
+	If a property holds at all points of a set  except possibly the points of a set of measure zero, we say that this property holds almost everywhere on  or at almost every point of .
+
+
+	A function defined on a closed interval is Riemann integrable on that interval iff it is bounded and continuous at almost every point.
+
+
+	The Dirichlet function is not integrable on , since it is discontinuous at every point of , which doesn't have measure zero.
+
+
+	The Riemann function is Riemann integrable, since it only discontinuous at all rational points except 0, a countable set, hence has measure zero.
+
+
+	The composition of two arbitrary integrable functions is not always integrable. Consider the function . Take the Riemann function  on the closed interval , then the composition on  is precisely the Dirichlet function .
+
+
+Linearity, Additivity and Monotonicity of the Integral
+The Integral as a Linear Function on the Space 
+
+	If  and  are integrable functions on , a linear combination of them  is also integrable on  and 
+	
+
+
+	Here we asserts that the integral is a linear function on the vector space .
+
+
+	Functions defined on functions are called functionals.
+
+The Integral as an Additive Function of the Interval of Integration
+
+	If  and , then , , and the following equality holds:
+	
+
+
+
+
+	Reconsider the definition of Riemann integral and write the partition  that contains  as the union of two partitions  and  of  and  respectively, and note that  and .
+
+
+	Let  and  be a function integrable over the largest closed interval having two of these points as endpoints. Then the restriction of  to each of the other closed intervals is also integrable over those intervals and the following equality holds:
+	
+
+
+
+
+	Suppose that to each ordered pair  of points  a number  is assigned so that
+	
+
+
+	for any triple of points .Then the function  is called an additive(oriented) interval function defined on intervals contained in . Then the integral is an additive interval function on the interval of integration.
+
+Estimation of the Integral, Monotonicity of the Integral, and the Mean-Value Theorem
+A General Estimate of the Integral
+
+	If  and , then  and the following inequality holds
+	
+
+
+	If  on  then
+	
+
+
+
+Monotonicity of the Integral and the First Mean-Value Theorem
+
+	If , , and  at each point , then
+	
+
+
+
+
+	If , ; and  at each , then
+	
+
+
+	and, in particular, if  on , then
+	
+
+
+
+
+	If ,  and , then there exists a number  such that
+	
+
+
+
+
+	If , there is a point  such that
+	
+
+
+
+[First Mean-value Theorem for the Integral]
+	Let ,  and . If  is nonnegative (or nonpositive) on , then
+	
+
+
+	where . 
+	If, in addition, it is known that , then there exists a point  such that
+	
+
+
+
+The Second Mean-Value Theorem for the Integral
+
+	The following transformation is called the Abel's transformation. Let  and . Then
+	
+
+
+
+
+	If the numbers  satisfy the inequalities  and the numbers  are nonnegative and  for , then
+	
+
+
+
+
+	Using Abel's transformation we have
+	
+
+
+	The left-hand inequality is verified similarly.
+
+
+	If , then for any  the function
+	
+
+
+	is defined and .
+
+
+	If  and  is a nonnegative nonincreasing function on , then there exists a point  such that
+	
+
+
+
+
+	Let  be a partition of . First
+	
+
+
+	The last sum tends to zero as  since  is bounded on  and . Set  and  and . Let  and , then
+	
+
+
+	If , we set
+	
+
+
+	Now we have  and from the continuity of  there exists a point  at which .
+
+[Second Mean-value Theorem for the Integral]
+	If  and  is a monotonic function on , then there exists a point  such that
+	
+
+
+	This equality is also called Bonnet's formula.
+
+
+The Integral and the Derivative
+The Integral and the Primitive
+
+	If  and the function is continuous at a point , then the function  defined on  by
+	
+
+
+	is differentiable at the point , and the following equality holds:
+	
+
+
+
+
+	Estimate the difference  where .
+
+
+	Every continuous function  has a primitive, and every primitive of  on  has the form
+	
+
+
+	where  is a constant.
+
+
+	A continuous function  on an interval of the real line is called a primitive(or generalized primitive) of the function  defined on the same interval if the relation  holds at all points of the interval, with only a finite number of exceptions.
+
+
+	A function   that is defined and bounded on  and has only a finite number of points of discontinuity has a primitive on that interval, and has the form
+	
+
+
+
+
+
+The Newton-Leibniz Formula
+[Newton-Leibniz Formula or the Fundamental Theorem of Calculus]
+	If  is a bounded function with a finite number of points of discontinuity, then  and
+	
+		_a^bf(x)dx = F(b)-F(a)=F(x)^b_a 
+	
+	where  is any primitive of  on .
+
+
+Integration by Parts in the Definite Integral and Taylor's Formula
+
+	If the function  and  are continuously differentiable on , then
+	
+
+
+	or
+	
+
+
+	and call it the formula for integration by parts in the definite integral.
+
+
+	If the function  has continuous derivatives up to order  inclusive on , then Taylor's formula holds:
+	
+
+
+	where 
+	
+
+
+
+
+
+
+Change of Variable in an Integral
+
+	If  is a continuously differentiable mapping of the closed interval  into the closed interval  such that  and , then for any continuous function  on  the function  is continuous on  and 
+	
+
+
+
+
+	Let  be a continuously differentiable strictly monotonic mapping of the closed interval  into the closed interval  with the correspondence ,  or ,  at the endpoints. Then for any function  the function   is integrable on  and
+	
+			_()^()f(x)dx = _^f((t))^(t) dt 
+	
+
+
+
+Examples
+
+	Let , then
+	
+
+
+
+
+
+
+
+	The quantity  is called the integral average value of the function on . Let  be a function that is defined on  and integrable on any closed interval. The new function
+	
+
+
+	is called the average of . If  is integrable on any interval , then  is continuous on , and if , then .
+
+
+Some Applications of Integration
+Additive Interval Functions and the Integral
+
+	Suppose the additive function  defined for points  of  is such that there exists a function  connected with  as follows: the relation
+	
+
+
+	holds for any closed interval  that is contained in . Then
+	
+
+
+
+
+Arc Length
+
+	A path in  is a mapping  of an interval of the real line into  defined by functions  that are continuous on the interval.
+
+
+	If   is a path for which the domain of the parameter  is , then the points
+	
+
+
+	in  are called the initial point and terminal point of the path.
+
+
+	A path is closed if it has both an initial and terminal point, and these points coincide.
+
+
+	If  is a path, the image  of  in  is called the support of the path.
+
+
+	A path  for which the mapping  is injective is called a simple path or parametrized curve, and its support is called a curve in .
+
+
+	A closed path  is called a simple closed path or simple closed curve if the path  is simple.
+
+
+	The path  is called a path of a given smoothness if the functions , , and  have that smoothness(e.g. the smoothness , , or ).
+
+
+	If the functions , , and  are continuously differentiable on , then the length of a smooth path  is
+	
+
+
+
+
+	The path  is obtained from  by an admissible change of parameter if there exists a smooth mapping  such that , ,  on  and .
+
+
+	If a smooth path  is obtained from a smooth path  by an admissible change of parameter, then the lengths of the two paths are equal.
+
+
+The Area of a Curvilinear Trapezoid
+
+
+	The area under the graph of a integrable function  on a closed interval , called a curvilinear trapezoid, can be computed by
+	
+
+
+
+Volume of a Solid Revolution 
+
+	When the curvilinear trapezoid is revolved about the closed interval , the volume of the solid can be computed by
+	
+
+
+
+
+
+
+Improper Integrals
+Definition, Examples, and Basic Properties of Improper Integrals
+
+	If the function  is defined on the interval  and integrable on every closed interval  contained in that interval, then the quantity
+	
+
+
+	If this limit exists, is called the improper Riemann integral or the improper integral of the function  over the interval  and this integral converges, otherwise this integral diverges.
+
+Other improper integrals which its lower or upper limit is itself  or the function  is undefined on the lower and upper limits can be defined similarly.
+
+	Suppose  is a function defined on an interval  and integrable on every closed interval . Suppose the improper integral
+	
+
+
+	is defined. Then
+
+	a) if  and , the values of this integral is unique, whether it is interpreted as a proper or an improper integral. 
+
+	b) the improper integral is still a linear function on the vector space . 
+
+	c) the improper integral is still additive. 
+
+	d) the change of variable in the definite integral still works.
+
+	e) the integral by parts still works.
+
+
+Convergence of an Improper Integral
+The Cauchy Criterion
+[Cauchy Criterion for Convergence of an Improper Integral]
+	If the function  is defined on  and integrable on every closed interval , then the integral  converges iff for every  there exists  such that the relation
+	
+
+
+	holds for any  satisfying  and .
+
+Absolute Convergence of an Improper Integral
+
+	The improper integral  converges absolutely if the integral  converges.
+
+
+	 If the integrand is nonnegative and defined on any closed intervals contained in its upper and lower limits, then the improper integral exists iff the integrand is bounded on the interval of its upper and lower limits.
+
+[Integral Test for Convergence of a Series]
+	If the function  is defined on the interval , nonnegative, nonincreasing, and integrable on each closed interval contained in it, then the series
+	
+
+
+	and the integral
+	
+
+
+	either both converge or both diverge.
+
+[Comparison Theorem]
+	If on  we have  and these two functions are defined and integrable on any closed interval contained in . Then for the same upper and lower limits, the convergence of the improper integral of  implies the convergence of the one of , and the divergence of the one of  implies the divergence of the one of .
+
+Conditional Convergence of an Improper Integral
+
+	If an improper integral converges but not absolutely, it's called converges conditionally.
+
+[Abel-Dirichlet Test for Convergence of an Integral]
+	Let  and  be functions defined on  and integrable on every closed interval . Suppose that  is monotonic.
+	Then a sufficient condition for convergence of the improper integral
+	
+
+
+	is that the one of the following pairs of conditions hold:
+
+	 the integral  converges; 
+
+	 the function  is bounded on . 
+	or
+
+	 the function  is bounded on ;
+
+	 the function  tends to zero as , .
+
+
+	Use the second mean-value theorem and the Cauchy convergence criterion.
+
+
+
+Improper Integrals with More than One Singularity
+
+	If an improper integral's upper and lower limits,  and , are both unbounded or themselves infinity, the value of this improper integral is:
+	
+
+ 
+	where  is an arbitrary point on the open interval . 
+
+The case when the point of unboundedness is an interior point of the closed interval of integration can be defined similarly.
+
+	The Euler-Poisson integral, or sometimes the Gaussian integral
+	
+
+
+	converges and its value is .
+
+
+	We set
+	
+
+
+	where  and at   is unbounded. If the integral on the right-hand side exists, this limit is called the principle value of the integral. The following convention is adopted:
+	
+
+
+	
+
+
+	The precise definition of the logarithmic integral can be written as
+	
+
+
+
+
+
+	and this integral is not convergent.
+
+
+
+Functions of Several Variables: Their Limits and Continuity
+The Space  and the Most Important Classes of Its Subsets
+The Set  and the Distance in It
+
+	The function 
+	
+
+
+	is called the metric or distance of the set . It has the following properties: 
+
+	a) ;
+
+	b) ;
+
+	c) ;
+
+	d) .
+
+	The last inequality (called, because of geometric analogies, the triangle inequality ) is a special case of Minkowski's inequality(see Section 5.4.2).
+
+Any set with a fixed metric on it is called a metric space. 
+For  in 
+
+
+
+that is, the distance between the points  is small iff the corresponding coordinates of these points are close together.
+Open and Closed Sets in 
+
+	For  the set
+	
+
+
+	is called the ball with center  of radius  or the -neighborhood of the point .
+
+
+	A set  is open in  if for every point  there is a ball  such that .
+
+
+	 and  are open sets in .
+
+
+	A ball  is open in . 
+
+
+	If , that is, , then for , we have , since 
+	
+		(B(x,)) &(d(x,)<) 
+
+		&(d(a,) d(a,x)+d(x,)<d(a,x)+r-d(a,x)=r)
+	
+
+
+	A set  is open.
+
+
+	The set  is closed in  if its complement  is open in . For example, the set  is closed, and is called the closed ball with center  of radius .
+
+
+	a) The union  of the sets of any system  of open sets in  is open.
+
+	b) The intersection  of a finite number of open sets in  is an open set. 
+
+	a) The intersection  of the sets of any system  of closed sets  in  is closed. 
+
+	b) The union  of a finite number of closed sets in  is a closed set. 
+
+
+
+	content...
+
+
+	The set , , is called the sphere of radius  with center . By the proposition just proved, the sphere  is closed.
+
+
+
+	An open set in  containing a given point is called a neighborhood of that point in .
+
+
+	In relation to a set  a point  is 
+
+	an interior point if some neighborhood of it is contained in  ;
+
+	an exterior point if it is an interior point of the complement of  in ;
+
+	a boundary point if it is neither an interior point nor an exterior point.
+
+
+	The sphere ,  is the set of boundary points of both the open ball  and the closed ball .
+
+
+	A point  is a boundary point of the set , which has no exterior points.
+
+
+	All points of the sphere  are boundary points of itl regarded as a subset of , the sphere has no interior points.
+
+
+	A point  is a limit point of the set  if for any neighborhood  of a the intersection  is an infinite set.
+
+
+	The union of a set  and all its limit points in  is the closure of  in  and usually denoted .
+
+
+	The set  is the set of limit points of the open ball ; that is why  is called a closed ball.
+
+
+	
+
+
+	. That is,  is closed in  iff it contains all its limit points.
+
+
+	content...
+
+
+
+
+Compact Sets in 
+
+	A set  is compact if from every covering of  by sets that are open in  one can extract a finite covering.
+
+
+	A closed interval  is compact by the finite covering lemma (Heine-Borel Theorem).
+
+
+	A generalization to  of the concept of a closed interval is the set
+	
+
+
+	which is called an -dimensional interval, or an -dimensional block or an -dimensional parallelepiped.  is compact in .
+
+
+	content...
+
+
+	If  is a compact space in , then
+
+	a)  is closed in ;
+
+	b) any closed subset of  contained in  is itself compact.
+
+
+	content...
+
+
+	The diameter of a set  is the quantity
+	
+
+
+
+
+	A set  is bounded if its diameter is finite.
+
+
+	If  is compact set in , then  is a bounded subset of .
+
+
+	content...
+
+
+
+	The set  is compact iff  is closed and bounded in .
+
+
+	content...
+
+
+Limits and Continuity of Functions of Several Variables
+The Limit of a Function
+
+	A point  is the limit of the mapping  over a base  in  if for every neighborhood  of the point there exists an element  of the base whose image  is contained in .
+	
+
+
+	Or, with explicit use if the metric in 
+	
+		(_Bf(x)=A ^n) &(> 0 B B x B (d(f(x),A)< ) ) 
+
+		(_Bf(x)=A ^n)  & (_B(d(f(x),A))=0)
+	
+
+If the limit  and  where , we have
+
+
+
+from which one can see that
+
+
+
+that is, convergence in  is coordinatewise.
+
+	A mapping  is bounded if the set  is bounded in .
+
+
+	Let  be a base in . A mapping  is ultimately bounded over the base  if there exists an element  on which  is bounded.
+
+As one can easily verified, a function can have at most one limit over a given base. If its limit exists over a base, the function is ultimately bounded over that base.
+
+	A sequence , , of points  is fundamental (a Cauchy sequence) if for every  there exists a number  such that  for all . One can see that  is a Cauchy sequence iff ,  is a Cauchy sequence.
+
+In other words, the Cauchy criterion is also valid in .
+
+
+	The oscillation of a function  on a set  is the quantity
+	
+
+
+	where  is the diameter of .
+
+
+	Let  be a set and  a base in . A function  has a limit over the base  iff for every  there exists an element  of the base on which the oscillation of the function is less than .
+	
+
+
+
+
+	Let  be a set,  a base in , and  a mapping having a limit over the base . 
+	Let  be a set,  a base in , and  a mapping of  into  such that for each  there exists  such that the image  is contained in . 
+	Under these conditions the composition  of the mapping  and  is defined and has a limit over the base , and
+	
+
+
+
+All notations about base and neighborhoods remain the same.
+
+	Let  be the mapping  and . This function does not tend to any finite value nor to infinity as  if . 
+
+	On the other hand
+	
+
+
+
+
+	Let the function  be defined at the point  as follows:
+	
+
+
+
+
+
+	Then , while  for . Hence this function has no limit as . We can see that the limit of a function of several variables cannot be found by computing successively the limits with respect to each of its coordinates. 
+
+Often change the order of coordinates in finding the corresponding limit will yield different results, such as 
+
+
+ when ( iteratively).
+
+
+Continuity of a Function of Several Variables and Properties of Continuous Functions
+Let  be a subset of  and  a function defined on  with values in .
+
+	The function  is continuous at  if for every neighborhood  there exists a neighborhood  and .
+
+The mapping  defined by the relation 
+
+	(x^1,,x^m) = x f y& = (y^1,,y^n) = 
+
+	&= (f^1(x^1,,x^m),,f^n(x^1,,x^m))
+
+is continuous at a point iff each of the functions  is continuous at that point. 
+We defined a path in  to be a mapping  of an interval  defined by continuous functions  in the form
+
+
+ 
+Thus we can now say that a path in  is a continuous mapping of an interval  of the real line into .
+Let  be a subset of ,, and .
+
+	The oscillation of the function  at the point  is the quantity
+	
+
+
+
+Local Properties of Continuous Functions
+a) A mapping  of a set  is continuous at a point  iff . 
+
+b) A mapping  that is continuous at  is bounded in some neighborhood . 
+
+c) If the mapping  of the set  is continuous at a point  and the mapping  of the set  is continuous at a point  and , then the mapping  is defined, and it is continuous at .
+
+Real-valued functions possess, in addition, the following properties.
+
+d) If the function  is continuous at the point  and  (or <0), there exists a neighborhood  such that  (resp. ) for all . 
+
+e) If the functions  and  are continuous at , then any linear combination of them  where , their product, and, if  on , their quotient, are defined on  and continuous at .
+The function is continuous on the set  if it is continuous at each point of the set. The set of functions  that are continuous on  will be denoted , or simply , if the range of values of the functions is unambiguously determined from the context.
+
+	The functions, , defined before are obviously continuous at each point .
+
+
+	The function  of Example 7.13 is continuous at any point of the space   except , but the function is continuous in either of its two variables for each fixed value of the other variable.
+
+
+	A mapping  of a set  into  is uniformly continuous on  if for every  there is a number  such that  for any points  such that .
+
+
+	A set  is pathwise connected if for any pair of its points , there exists a path  with support in  and endpoints at these points.
+
+In other words, it is possible to go from any point  to any other point  without leaving .
+
+	A domain in  is an open connected set.
+
+
+	An open ball , in  is a domain.
+
+
+	See Pg.424.
+
+
+	A circle is a connected set, but it is not a domain in , since it is not open in .
+
+Global Properties of Continuous Functions
+a) If a mapping  is continuous on a compact set , then it is uniformly continuous on . 
+
+b) If a mapping  is continuous on a compact set , then it is bounded on . 
+
+c) If a function  is continuous on a compact set , then it assumes its maximal and minimal values at some points of . 
+
+d) If a function  is continuous on a connected set  and assumes the value  and  at points , then for any  between  and , there is a point  at which . 
+All the properties, except d), can be proved similarly as we did for single variable functions. We now prove property d).
+
+	content...
+
+
+	The sphere  defined in  by the equation
+	
+
+
+	is a compact set.
+
+
+	content...
+
+
+	The open set  for  is not a domain, since it is not connected.
+
+
+	content...
+
+
+The Differential Calculus of Functions of Several Variables
+
+The Linear Structure on 
+ as a Vector Space
+
+	A vector space over a field  is a set  with two operations, vector addition or simply addition and scalar multiplication, that satisfy the following axioms:
+
+	: Associativity of addition;
+
+	: Commutativity of addition;
+
+	: Identity element of addition;
+
+	: Inverse elements of addition;
+
+	: Compatibility of scalar multiplication with field multiplication;
+	
+
+
+	: Identity element of scalar multiplication;
+
+	: Distributivity of scalar multiplication with respect to vector addition;
+
+	: Distributivity of scalar multiplication with respect to field addition.
+	Here the field  is the field of real numbers and the set of the vectors consists of the planar arrows with fixed starting point and of pairs of real numbers, respectively.
+
+Any vector   can be expanded with respect to the basis, that is, represented in the form
+
+
+
+If the same letter simultaneously present in the subscript and superscript, we make the convention of summation with respect to that letter over its range of variation
+
+
+
+Linear Transformations 
+
+	A mapping  from a vector space  into a vector space  is called linear if
+	
+
+
+
+When vectors are indexed, we shall write the index as a subscript, while denoting its coordinates by superscripts.
+The Norm in 
+
+	The quantity
+	
+
+
+	is called the norm of the vector .
+
+Taking account of Minkowski's inequality, we have 
+
+ ,
+
+ ,
+
+ , where ,
+
+  (triangle inequality).
+In general, any function  on a vector space  satisfying these four conditions is called a norm on the vector space. 
+If  is the distance in  between the vectors  and , regarded as points of , we have
+
+
+
+in particular
+
+
+
+By extending the triangle inequality using induction, we have
+
+
+
+For  and , we agree to write  or  over a base  in  if  over the base . 
+
+
+If  is the coordinate representation of the mapping , then in view of the inequalities
+
+
+
+one can make the following observation
+
+
+
+We also make the convention that  over  in  will mean that . Then from the inequality above
+
+
+
+A linear transformation is continuous, and uniformly continuous, at every point of its domain.
+The Euclidean Structure on 
+
+	An inner product space is a vector space  over a field  with a map
+	
+
+
+	that satisfying the following axioms for all vectors  and all scalars in 
+	Conjugate symmetry:
+	
+
+
+	Linearity in the first argument:
+	
+		axy &=axy 
+
+		x+yz &=xz +yz
+	
+	Positive-definiteness:
+
+		xx &0
+
+		xx &=0x=0
+	
+
+Two vectors  and  and a basis  is fixed in the space, then
+
+
+
+in which . Vectors are said to be orthogonal if their inner product equals .
+
+	The function , the Kronecker delta, is defined as
+		
+
+
+
+
+
+
+
+	A basis  is orthonormal if ,	that is, if these vectors are orthogonal and unit vectors. 
+
+In an orthonormal basis the inner product has the very simple form
+
+
+
+or
+
+
+
+
+	Coordinates in which the inner product has the form above are called Cartesian coordinates.
+
+
+	The space  with an inner product defined in it is called Euclidean space.
+
+Now it is obvious that
+
+
+
+and 
+
+
+
+hold.
+ 
+It shows in particular that for any pair of vectors there is an angle  such that
+
+
+
+This angle  is called the angle between the vectors  and .
+
+	Any linear function  in Euclidean space has the form
+	
+
+
+	where  is a fixed vector determined uniquely by the function .
+
+
+The Differential of a Function of Several Variables
+Differentiability and the Differential of a Function at a Point
+
+	A function  defined on a set  is differentiable at the point , which is a limit point of , if
+	
+		f(x+h)-f(x)=L(x)h+(x,h) 
+	
+	where  is a function that is linear in  and  as . 
+
+	The vectors
+	
+	x(h) &(x+h)-x = h
+
+	f(x,h)&f(x+h)-f(x)
+	
+	are called respectively the increment of the argument and the increment of the function. These vectors are traditionally denoted by the symbols of the functions of  themselves  and . The Linear function  is called the differential, tangent mapping, or derivative mapping of the function at the point.
+
+
+
+	If we attach a copy of the vector space  to the point  and denote it , , or . The space  can be interpreted as a set of vectors attached at the point . The vector space  is called the tangent space to  at .
+
+The value of the differential on a vector  is the vector  attached to the point  and approximating the increment  of the function caused by the increment  of the argument . 
+
+Thus  or  is a linear transformation .
+
+The Differential and Partial Derivatives of a Real-Valued Function
+
+	A mapping  of a set  is differentiable at a point  that is a limit point of  iff the functions  that define the coordinate representation of the mapping are differentiable at that point.
+
+If we fixed all the variables in the function  except the th one, the resulting function of the th variable is differentiable at the point . The condition following the proposition 
+
+
+
+can be written as
+
+
+
+In that way, we find that
+
+
+
+This is the definition of partial derivative.
+
+	The limit above is called the partial derivative of the function  at the point  with respect to the variable . We denote it by one of the following symbols:
+	
+
+
+
+
+	If a function  defined on a set  is differentiable at an interior point  of that set, then the function has a partial derivative at that point with respect to each variable, and the differential of the function is uniquely determined by these partial derivatives in the form
+	
+
+
+	or using the summation convention
+	
+
+
+
+
+Coordinate Representation of the Differential of a Mapping. The Jacob Matrix
+
+	For ant mapping  of a set  that is differentiable at an interior point , the matrix  
+	
+		d f(x)h &= 
+		d f^1 (x)h 
+
+		
+
+		d f^n (x)h
+		 = 
+		_i f^i (x)h^i 
+
+		
+
+		_i f^n (x)h^i
+		 =
+
+		&= 
+		f^1x^1(x) && f^1x^m(x)
+
+		& & 
+
+		f^nx^1(x) && f^nx^m(x)
+		
+		h^1 
+
+		
+
+		h^m
+		 
+	
+	of partial derivatives of the coordinate functions of a given mapping at the point  is called the Jacobi matrix or the Jacobian of the mapping at the point.
+
+
+	If a mapping  of a set  is differentiable at an interior point , then it has a unique differential  at that point, and the coordinate representation of the mapping  is given by the Jacobi Matrix.
+
+Continuity, Partial Derivatives, and Differentiability of a Function at a Point
+For functions of several variables, we have that differentiability of a function at an interior point of its domain of definition guarantees the existence of a partial derivative with respect to each variable at that point. However, the converse is not true.
+
+
+The Basic Laws of Differentiation
+Linearity of the Operation of Differentiation
+
+	If the mapping  and , defined on a set , are differentiable at a point , then a linear combination of them  is also differentiable at that point, and the following inequality holds:
+	
+
+
+
+
+	For two differentiable functions defined on a set  and have their range of value as , the law of multiplication and division hold just as for single variable functions, providing the denominator is not  at that point. The partial derivatives of their combination also satisfy the laws mentioned above. For example
+	
+
+
+	By induction, the law of differentiation regard to the multiplication of functions also hold for arbitrary numbers of differentiable functions, the same as one-dimensional cases.
+
+
+Differentiation of a Composition of Mappings (Chain Rule)
+The Main Theorem
+
+	If the mapping  of a set  into a set  is differentiable at a point , and the mapping  is differentiable at the point , then their composition  is differentiable at  and the differential  of the composition equals the composition  of the differentials 
+	
+
+
+
+The equality also hold
+
+
+
+where summation is understood on the right-hand side with respect to the index  over its interval of variation, that is, from  to .
+
+The Differential and Partial Derivatives of a Composite Real-Valued Function
+Let  be a real-valued function of real functions  of the variables . Assuming the functions  and  are differentiable, then
+
+
+
+or, in notation that shows more detail,
+
+
+
+The Derivative with Respect to a Vector and the Gradient of a Function at a Point
+[Directional Derivatives]
+	If the function  is defined in a neighborhood of the point  and the vector  is attached at the point , then the quantity
+	
+		D_vf(x_0)_t 0f(x_0+ vt)-f(x_0)t 
+	
+	(if the indicated limit exists) is called the derivative of  at the point  with respect to the vector  or the derivative along the vector  at the point .
+
+If  is a function  of  and , then for a differentiable function  at  we have
+
+
+
+or
+
+
+
+By virtue of the linearity of the differential , we have that if  is differentiable at , then for any vectors  and any  the function has a derivative at the point  with respect to the vector , and that
+
+
+
+
+	The vector  corresponding to the differential  of the function  at the point  in the sense of
+	
+
+
+	is called the gradient of the function at that point and is denoted  or . Thus
+	
+	d f(x_0)v = f(x_0)v
+	
+	
+	and the gradient has the following representation in a Cartesian coordinate system:
+	
+
+
+
+Geometrically, the rate of increase of the function  is maximal and equal to  for motion from the point  precisely when the displacement is in the direction of the vector . The value of the function decreases most sharply under displacement in the opposite direction, and the rate of variation of the function is zero in a direction perpendicular to the vector .
+
+
+Differentiation of an Inverse Mapping
+
+	Let  be a mapping of a neighborhood  of the point  onto a neighborhood  of the point . Assume that  is continuous at the point  and has an inverse mapping  that is continuous at the point . 
+
+	Given these assumptions, if the mapping  is differentiable at  and the tangent mapping  to  at the point  has an inverse , then the mapping  is differentiable at the point , and the following equality holds:
+	
+
+
+	Thus, mutually inverse differentiable mappings have mutually inverse tangent mappings at corresponding points.
+
+Moreover, the Jacobi of the function  at  is the matrix inverse of the Jacobi matrix of  at . When , that is, when  and , the matrix of  consists of a single number equal to , that is, the reciprocal of .
+
+The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables
+The Mean-Value Theorem
+
+	Let  be a real-valued function defined in a region  and let the closed line segment  be contained in . If the function  is continuous at the points of the closed line segment and differentiable at points of the open interval , then there exists a point  such that the following equality holds:
+	
+		f(x+h)-f(x)=f^()h
+	
+
+
+	Consider the auxiliary function  where  that satisfies all the hypotheses of Lagrange's theorem.
+
+
+	If the function  is differentiable in the domain  and its differential equals zero at every point , then  is constant in the domain .
+
+
+	content...
+
+
+
+
+
+A Sufficient Condition for Differentiability of a Function of Several Variables
+
+	Let  be a function defined in a neighborhood  of the point . 
+
+	If the function  has all partial derivatives  at each point of the neighborhood  and they are continuous at , then  is differentiable at .
+
+We now use the symbol , or simply  to denote the set of functions having continuous partial derivatives in the domain .
+Higher-Order Partial Derivatives
+
+	If the function  has partial derivatives
+	
+
+
+	in a domain , then at every point  at which both partial derivatives are continuous, their values are the same.
+	
+		Since there are only two variables we need to taken into account, we can assume that  is a function of two variables . Consider the auxiliary function
+		
+
+
+		where . We find by Lagrange's theorem that
+		
+
+
+		Again applying Lagrange's theorem to this last difference
+		
+
+
+		Now use the same method for , where
+		
+
+
+		Currently we have
+		
+
+ 
+		where . Using the continuity of the partial derivatives at , as , we have
+		
+
+
+	
+
+
+
+	If , the value  of the partial derivative is independent of the order  of differentiation, that is, remains the same for any permutation of the indices .
+
+
+	Use induction.
+
+
+
+Taylor's Formula
+
+	If the function  is defined and  in a neighborhood  of , and the closed interval is completely contained in , then the following equality holds:
+	
+[box=]align
+f&(x^1+h^1,,x^m+h^m)-f(x^1,,x^m)= 
+
+&= _k=1^n-11k!(h^1 _1 + + h^m _m)^k f(x)+ r_n-1(x,h) 
+
+ where & 
+
+&r_n-1(x,h)=_0^1 (1-t)^n-1(n-1)!(h^1 _1 + + h^m _m)^n f(x+th)dt 
+
+and they are called Taylor's formula with integral form of the remainder. 
+The remainder term can also be written as the Lagrange form:
+
+
+
+where , or since , in Peano form
+
+
+
+Now we have the equality, called the Taylor's formula with the remainder term in Peano form
+
+	f&(x^1+h^1,,x^m+h^m)-f(x^1,,x^m)=
+
+	&= _k=1^n1k!(h^1 _1 + + h^m _m)^k f(x) + o(h^n)  as h0
+
+
+
+
+	Consider the auxiliary function  for , by the mean-value theorem and the Taylor formula for functions of one variable, we have derived the Taylor formula for multi-variable functions.
+
+Extrema of Functions of Several Variables
+
+	A function  defined on a set  has a local maximum(resp. local minimum) at an interior point  if there exists a neighborhood  such that (resp. ) for all . If strict inequality holds in the two circumstances above, the function has a strict local maximum(resp. strict local minimum).
+
+
+	The local minima and maxima of a function are called its local extrema.
+
+
+
+	Suppose a function  defined in a neighborhood  of the point  has partial derivatives with respect to each of the variables  at the point . 
+
+	Then a necessary but not sufficient condition for the function to have a local extremum at  is that the following equalities hold at that point
+	
+
+
+
+
+	Use the necessary condition for a single variable function to have a local extremum on each variable respectively.
+
+
+	The point  is a critical point of the mapping  if the rank of the Jacobi matrix of the mapping at that point is less than , that is, smaller than the maximum possible value it can have. For real-valued functions, the point is also called the stationary points.
+
+
+	Let  be a function of class  defined in a neighborhood  of the point , and let  be a critical point of the function . 
+
+	If, in the Taylor expansion of the function at the point 
+	
+	f&(x^1+h^1,,x^m+h^m)= 
+
+	&=f(x^1,,x^m) + 12!_i,j=1^m^2 fx^i x^j(x_0)h^i h^j
++o(h^2)
+	
+	the quadratic form
+	
+
+
+	a) is positive-definite or negative-definite, then the point  has a local extremum at , which is a strict local minimum if the quadratic form is positive-definite and a strict local maximum is it is negative-definite. 
+
+	b) assumes both positive and negative values, then the function does not have an extremum at .
+
+
+	content...
+
+
+Some Geometric Images Connected with Functions of Several Variables
+The Graph of a Function and Curvilinear Coordinates
+
+	 Curvilinear coordinates are a coordinate system for Euclidean space in which the coordinate lines may be curved. 
+
+Here we say that the graph of a continuous function , defined in a domain  is a two-dimensional surface  in  whose points can be defined by curvilinear coordinates .
+The Tangent Plane to the Graph of a Function
+
+	The plane
+	
+
+
+	is called the tangent plane to the graph of the function  at the point .
+
+The Normal Vector
+
+	The vector
+	
+
+
+	is the normal vector to the tangent plane. Its direction is considered to be the direction normal or orthogonal to the surface  (the graph of the function) at that point.
+
+
+	A saddle point of a function is a stationary point(derivative is zero) but not the extremum of the function.
+
+
+Tangent Planes and Tangent Vectors
+
+
+	The hyperplane is a subspace whose dimension is one less than that of its ambient space(e.g a 2-d plane in ).
+
+The tangent plane, a hyperplane in , to the m-dimensional surface  at the point  is formed by the vectors that are tangents at the point to curves on the surface  passing through the point.
+
+
+
+
+The Implicit Function Theorem
+
+An Elementary Version of the Implicit Function Theorem
+Transition to the Case of a Relation 
+The Implicit Function Theorem
+
+Some Corollaries of the Implicit Function Theorem
+The Inverse Function Theorem
+Local Reduction of a Smooth Mapping to Canonical Form
+Local Resolution of a Diffeomorphism into a Composition of Elementary Ones
+Morse's Lemma
+
+Surfaces in  and the Theory of Extrema with Constraint
+-Dimensional Surfaces in 
+The Tangent Space
+Extrema with Constraint
+
+
+
+
+Continuous Mappings
+Metric Spaces
+Topological Spaces
+Compact Sets
+Connected Topological Spaces
+Complete Metric Spaces
+Continuous Mappings of Topological Spaces
+The Contraction Mapping Principle
+
+Differential Calculus  from a More General Point of View
+Normed Vector Spaces
+Linear and Multilinear Transformations
+The Differential of a Mapping
+The Finite-Increment Theorem and Some Examples of Its Usage
+Higher-Order Derivatives
+Taylor's Formula and the Study of Extrema
+The General Implicit Function Theorem
+
+Multiple Integrals
+The Riemann Integral over an -Dimensional Interval
+The Integral over a Set
+General Properties of the Integral
+Reduction of a Multiple Integral to an Iterated Integral
+Change of Variable in a Multiple Integral
+Improper Multiple Integrals
+
+Surfaces and Differential Forms in 
+Surfaces in 
+Orientation of a Surface
+The Boundary of a Surface and Its Orientation
+The Area of a Surface in Euclidean Space
+Elementary Facts About Differential Forms
+
+Line and Surface Integrals
+The Integral of a Differential Form
+The Volume Element. Integrals of First and Second Kind
+The Fundamental Integral Formulas of Analysis
+
+Elements of Vector Analysis and Field Theory
+The Differential Operations of Vector Analysis
+The Integral Formulas of Field Theory
+Potential Fields
+Examples of Applications
+
+Integration of Differential Forms on Manifolds
+Manifolds
+Differential Forms and Integration on Manifolds
+Closed and Exact Forms on Manifolds
+
+Uniform Convergence and the Basic Operations of Analysis on Series and Families of Functions
+Pointwise and Uniform Convergence
+Uniform Convergence of Series of Functions
+Functional Properties of a Limit Function
+Compact and Dense Subsets of the Space of Continuous Functions
+
+Integrals Depending on a Parameter
+Proper Integrals Depending on a Parameter
+Improper Integrals Depending on a Parameter
+The Eulerian Integrals
+Convolution of Functions and Elementary Facts
+Multiple Integrals Depending on a Parameter
+
+Fourier Series and the Fourier Transform
+Basic General Concepts Connected with Fourier Series
+Trigonometric Fourier Series
+The Fourier Transform
+
+Asymptotic Expansions
+Asymptotic Formulas and Asymptotic Series
+The Asymptotics of Integrals(Laplace's Method)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

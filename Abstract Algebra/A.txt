@@ -1,0 +1,289 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abstract Algebra
+
+Hechen Hu
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Groups
+Semigroups, Monoids and Groups
+
+	A semigroup is a nonempty set  together with a binary operation on  which is associative.
+
+
+	A monoid is a semigroup  which contains a (two-sided) identity element  such that  for all .
+
+
+	A group is a monoid  such that there exists a (two-sided) inverse element and the operation between the inverse element and the original element yields the identity element regardless of order of operation.
+
+
+	A semigroup  is said to be abelian or commutative if its binary operation is commutative.
+
+
+	The order of a group  is the cardinal number .  is said to be finite(resp. infinite) if  is finite(resp. infinite).
+
+
+	If  is a monoid, then the identity element  is unique. If  is a group, then
+	
+		 and ;
+		for all  we have  and  (left and right cancellation);
+		for each element in  its inverse element is unique;
+		for each element in  the inverse of its inverse is itself;
+		for  we have ;
+		for  the equation  and  have unique solutions in  and .
+	
+
+
+	Let  be a semigroup.  is a group iff the following conditions hold:
+	
+		there exists an element  such that  for all  (left identity element);
+		for each , there exists an element  such that  (left inverse).
+	
+and an analogous result holds for "right inverses" and a "right identity".
+
+
+
+	Let  be a semigroup.  is a group iff for all  the equations  and  have solutions in .
+
+
+	
+
+
+
+	Let  be a nonempty set and  the set of all bijections . Under the operation of composition of functions, ,  is a group. The elements of  are called permutations and  is called the group of permutations on the set . If , then  is called the symmetric group on  letters and denoted . .
+
+
+	The direct product of two groups  and  with identities  and  is the group whose underlying set is  and whose binary operation is given by:
+	
+
+
+	 is abelian if both  and  are;  is the identity and  is the inverse of . Clearly .
+
+
+
+	Let  be an equivalence relation on a monoid  such that  and  imply  for all . Then the set  of all equivalence classes of  under  is a monoid under the binary operation defined by , where  denoted the equivalence class of . If  is an [abelian] group, then so is .
+	An equivalence relation on a monoid  that satisfies these hypothesis is called a congruence relation on .
+	
+
+
+	The following relation on the additive froup  is a congruence relation:
+	
+
+
+	The set of equivalence classes (denoted ) is an infinite abelian group, with addition given by , and called the group of rationals modulo one.
+
+
+	The meaningful product on any sequence of elements of a semigroup , , (in this order), is defined inductively as below: If , the only meaningful product is . If , then a meaningful product is defined to be any product of the form  where  and  and  are meaningful products of  and  elements respectively.
+
+
+	The standard  product  is defined as follows:
+	
+
+
+
+
+[Generalized Associative Law]
+	If  is a semigroup and , then any two meaningful products of  in this order are equal.
+
+[Generalized Commutative Law]
+	If  is a commutative semigroup and , then for any permutation  of , .
+
+
+	Let  be a semigroup,  and . The element  is defined to be the standard  product  with  for . If  is a monoid,  is defined to be the identity element . If  is a group, then for each ,  is defined to be .
+
+
+	If  is a group(resp. semigroup, monoid) and , then for all  (resp.  and ) :
+	
+		 
+		
+	
+
+
+
+
+
+
+Homomorphisms and Subgroups
+
+	Let  and  be semigroups. A function  is a homomorphism provided
+	
+
+
+	If  is injective as a map of sets,  is said to be a monomorphism. If  is surjective,  is called an epimorphism. If  is bijective,  is called an isomorphism. In this case  and  are said to be isomorphic (written ). A homomorphism  is called an endomorphism of  and an isomorphism  is called an automorphism of .
+
+
+	Let  be a homomorphism of groups. The kernel of (denoted ) is . If  is a subset of , then   is the image of .  is called the image of  and denoted . If  is a subset of ,  is the inverse image of .
+
+
+	Let  be a homomorphism of groups. Then
+	
+		 is a monomorphism iff .
+		 is an isomorphism iff there is a homomorphism  such that  and .
+	
+
+
+	Let  be a semigroup and  a nonempty subset of it. If for every  we have , we say that  is closed under the product in . This is the same as saying that the binary operation on , when restricted to , is a binary operation on .
+
+
+	Let  be a group and  a nonempty subset that is closed under the product in . If  is itself a group under the product in , then  is said to be a subgroup of , denoted .
+
+
+	If a subgroup  is not  itself or the trivial subgroup, which consists only of the identity element, is called a proper subgroup.
+
+
+	Let  be a nonempty subset of a group . Then  is a subgroup of  iff  for all .
+
+
+	If  is a group and  is a nonempty family of subgroups, then  is a subgroup of .
+
+
+	
+
+
+
+	Let  be a group and  a subset of . Let  be the family of all subgroups of  which contain . Then  is called the subgroup of  generated by the set  and denoted . The elements of  are the generators of . If ,  is said to be finitely generated. If , the subgroup  is called the cyclic (sub)group generated by .
+
+
+
+	If  is a group and  a nonempty subset of , then the subgroup  generated by  consists of all finite products . In particular for every , .
+
+
+	
+
+
+	The subgroup  generated by the set  is called the subgroup generated by the groups . If  and  are subgroups, the subgroup  generated by  and  is called the join of  and  and is denoted .
+
+
+
+
+Cyclic Groups
+Cosets and Counting
+Normality, Quotient Groups, and Homomorphisms
+Symmetric, Alternating, and Dihedral Groups
+Categories: Products, Coproducts, and Free Objects
+Direct Products and Direct Sums
+Free Groups, Free Products, Generators and Relations
+
+
+The Structure of Groups
+Free Abelian Groups
+Finitely Generated Abelian Groups
+The Krull-Schmidt Theorem
+The Action of a Group on a Set
+The Sylow Theorem
+Classification of Finite Groups
+Nilpotent and Solvable Groups
+Normal and Subnormal Series
+
+
+Rings
+Rings and Homomorphisms
+Ideals
+Factorization in Commutative Rings
+Rings of Quotients and Localization
+Rings of Polynomials and Formal Power Series
+Factorization in Polynomial Rings
+
+Modules
+Modules, Homomorphisms and Exact Sequences
+Free Modules and Vector Spaces
+Projective and Injective Modules
+Hom and Duality
+Tensor Products
+Modules over a Principal Ideal Domain
+Algebras
+
+
+Fields and Galois Theory
+Field Extensions
+The Fundamental Theorem
+Splitting Fields, Algebraic Closure and Normality
+The Galois Group of a Polynomial
+Finite Fields
+Separability
+Cyclic Extensions
+Cyclotomic Extensions
+Radical Extensions
+
+
+The Structure of Fields
+Transcendence Bases
+Linear Disjointness and Separability
+
+Commutative Rings and Modules
+Chain Conditions
+Prime and Primary Ideals
+Primary Decomposition
+Noetherian Rings and Modules
+Ring Extensions
+Dedekind Domains
+The Hilbert Nullstellensatz
+
+
+The Structure of Rings
+Simple and Primitive Rings
+The Jacobson Radical
+Semisimple Rings
+The Prime Radical; Prime and Semiprime Rings
+Algebras
+Division Algebras
+
+
+Categories
+Functors and Natural Transformations
+Adjoint Functors
+Morphisms
+	
+	
+	
+	
