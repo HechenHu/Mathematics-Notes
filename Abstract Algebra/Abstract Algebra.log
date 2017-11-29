@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 NOV 2017 14:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 NOV 2017 23:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1130,62 +1130,62 @@ ier (name{equation.1.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.130 	\begin{equation}
-                        [3] [4] [5] [6
+                        [3] [4] [5] [6] [7] [8
 
 ]
  2.
-[7] [8
+[9] [10
 
 ]
  3.
-[9] [10
+[11] [12
 
 ]
  4.
 
-Overfull \hbox (13.47063pt too wide) in paragraph at lines 238--238
+Overfull \hbox (13.47063pt too wide) in paragraph at lines 328--328
 []\T1/lmr/bx/n/14.4 Modules, Ho-mo-mor-phisms and Ex-act Se-quences 
  []
 
-[11] [12
-
-]
- 5.
 [13] [14
 
 ]
- 6.
+ 5.
 [15] [16
 
 ]
- 7.
+ 6.
 [17] [18
+
+]
+ 7.
+[19] [20
 
 ]
  8.
 
-Overfull \hbox (11.7925pt too wide) in paragraph at lines 277--277
+Overfull \hbox (11.7925pt too wide) in paragraph at lines 367--367
 []\T1/lmr/bx/n/14.4 The Prime Rad-i-cal; Prime and Semiprime Rings 
  []
 
-[19] [20
+[21] [22
 
 ]
  9.
-[21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
+[23]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
  (./Abstract Algebra.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
 Package rerunfilecheck Info: File `"Abstract Algebra".out' has not changed.
 (rerunfilecheck)             Checksum: 5FCED5B4153C335521D08D8DC8896B2B;4613.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 380.
  ) 
 Here is how much of TeX's memory you used:
- 17952 strings out of 492995
- 327247 string characters out of 6132704
- 400589 words of memory out of 5000000
+ 17962 strings out of 492995
+ 327365 string characters out of 6132704
+ 399589 words of memory out of 5000000
  21054 multiletter control sequences out of 15000+600000
  79870 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1211,10 +1211,10 @@ pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 /lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on "Abstract Algebra.pdf" (25 pages, 308569 bytes).
+Output written on "Abstract Algebra.pdf" (27 pages, 319804 bytes).
 PDF statistics:
- 566 PDF objects out of 1000 (max. 8388607)
- 515 compressed objects within 6 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 532 compressed objects within 6 object streams
+ 115 named destinations out of 1000 (max. 500000)
  541 words of extra memory for PDF output out of 10000 (max. 10000000)
 

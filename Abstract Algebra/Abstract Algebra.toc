@@ -3,65 +3,65 @@
 \contentsline {section}{\numberline {1.1}Semigroups, Monoids and Groups}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Homomorphisms and Subgroups}{3}{section.1.2}
 \contentsline {section}{\numberline {1.3}Cyclic Groups}{5}{section.1.3}
-\contentsline {section}{\numberline {1.4}Cosets and Counting}{5}{section.1.4}
-\contentsline {section}{\numberline {1.5}Normality, Quotient Groups, and Homomorphisms}{5}{section.1.5}
-\contentsline {section}{\numberline {1.6}Symmetric, Alternating, and Dihedral Groups}{5}{section.1.6}
-\contentsline {section}{\numberline {1.7}Categories: Products, Coproducts, and Free Objects}{5}{section.1.7}
-\contentsline {section}{\numberline {1.8}Direct Products and Direct Sums}{5}{section.1.8}
-\contentsline {section}{\numberline {1.9}Free Groups, Free Products, Generators and Relations}{5}{section.1.9}
-\contentsline {chapter}{\numberline {2}The Structure of Groups}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Free Abelian Groups}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}Finitely Generated Abelian Groups}{7}{section.2.2}
-\contentsline {section}{\numberline {2.3}The Krull-Schmidt Theorem}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}The Action of a Group on a Set}{7}{section.2.4}
-\contentsline {section}{\numberline {2.5}The Sylow Theorem}{7}{section.2.5}
-\contentsline {section}{\numberline {2.6}Classification of Finite Groups}{7}{section.2.6}
-\contentsline {section}{\numberline {2.7}Nilpotent and Solvable Groups}{7}{section.2.7}
-\contentsline {section}{\numberline {2.8}Normal and Subnormal Series}{7}{section.2.8}
-\contentsline {chapter}{\numberline {3}Rings}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Rings and Homomorphisms}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Ideals}{9}{section.3.2}
-\contentsline {section}{\numberline {3.3}Factorization in Commutative Rings}{9}{section.3.3}
-\contentsline {section}{\numberline {3.4}Rings of Quotients and Localization}{9}{section.3.4}
-\contentsline {section}{\numberline {3.5}Rings of Polynomials and Formal Power Series}{9}{section.3.5}
-\contentsline {section}{\numberline {3.6}Factorization in Polynomial Rings}{9}{section.3.6}
-\contentsline {chapter}{\numberline {4}Modules}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Modules, Homomorphisms and Exact Sequences}{11}{section.4.1}
-\contentsline {section}{\numberline {4.2}Free Modules and Vector Spaces}{11}{section.4.2}
-\contentsline {section}{\numberline {4.3}Projective and Injective Modules}{11}{section.4.3}
-\contentsline {section}{\numberline {4.4}Hom and Duality}{11}{section.4.4}
-\contentsline {section}{\numberline {4.5}Tensor Products}{11}{section.4.5}
-\contentsline {section}{\numberline {4.6}Modules over a Principal Ideal Domain}{11}{section.4.6}
-\contentsline {section}{\numberline {4.7}Algebras}{11}{section.4.7}
-\contentsline {chapter}{\numberline {5}Fields and Galois Theory}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}Field Extensions}{13}{section.5.1}
-\contentsline {section}{\numberline {5.2}The Fundamental Theorem}{13}{section.5.2}
-\contentsline {section}{\numberline {5.3}Splitting Fields, Algebraic Closure and Normality}{13}{section.5.3}
-\contentsline {section}{\numberline {5.4}The Galois Group of a Polynomial}{13}{section.5.4}
-\contentsline {section}{\numberline {5.5}Finite Fields}{13}{section.5.5}
-\contentsline {section}{\numberline {5.6}Separability}{13}{section.5.6}
-\contentsline {section}{\numberline {5.7}Cyclic Extensions}{13}{section.5.7}
-\contentsline {section}{\numberline {5.8}Cyclotomic Extensions}{13}{section.5.8}
-\contentsline {section}{\numberline {5.9}Radical Extensions}{13}{section.5.9}
-\contentsline {chapter}{\numberline {6}The Structure of Fields}{15}{chapter.6}
-\contentsline {section}{\numberline {6.1}Transcendence Bases}{15}{section.6.1}
-\contentsline {section}{\numberline {6.2}Linear Disjointness and Separability}{15}{section.6.2}
-\contentsline {chapter}{\numberline {7}Commutative Rings and Modules}{17}{chapter.7}
-\contentsline {section}{\numberline {7.1}Chain Conditions}{17}{section.7.1}
-\contentsline {section}{\numberline {7.2}Prime and Primary Ideals}{17}{section.7.2}
-\contentsline {section}{\numberline {7.3}Primary Decomposition}{17}{section.7.3}
-\contentsline {section}{\numberline {7.4}Noetherian Rings and Modules}{17}{section.7.4}
-\contentsline {section}{\numberline {7.5}Ring Extensions}{17}{section.7.5}
-\contentsline {section}{\numberline {7.6}Dedekind Domains}{17}{section.7.6}
-\contentsline {section}{\numberline {7.7}The Hilbert Nullstellensatz}{17}{section.7.7}
-\contentsline {chapter}{\numberline {8}The Structure of Rings}{19}{chapter.8}
-\contentsline {section}{\numberline {8.1}Simple and Primitive Rings}{19}{section.8.1}
-\contentsline {section}{\numberline {8.2}The Jacobson Radical}{19}{section.8.2}
-\contentsline {section}{\numberline {8.3}Semisimple Rings}{19}{section.8.3}
-\contentsline {section}{\numberline {8.4}The Prime Radical; Prime and Semiprime Rings}{19}{section.8.4}
-\contentsline {section}{\numberline {8.5}Algebras}{19}{section.8.5}
-\contentsline {section}{\numberline {8.6}Division Algebras}{19}{section.8.6}
-\contentsline {chapter}{\numberline {9}Categories}{21}{chapter.9}
-\contentsline {section}{\numberline {9.1}Functors and Natural Transformations}{21}{section.9.1}
-\contentsline {section}{\numberline {9.2}Adjoint Functors}{21}{section.9.2}
-\contentsline {section}{\numberline {9.3}Morphisms}{21}{section.9.3}
+\contentsline {section}{\numberline {1.4}Cosets and Counting}{6}{section.1.4}
+\contentsline {section}{\numberline {1.5}Normality, Quotient Groups, and Homomorphisms}{7}{section.1.5}
+\contentsline {section}{\numberline {1.6}Symmetric, Alternating, and Dihedral Groups}{7}{section.1.6}
+\contentsline {section}{\numberline {1.7}Categories: Products, Coproducts, and Free Objects}{7}{section.1.7}
+\contentsline {section}{\numberline {1.8}Direct Products and Direct Sums}{7}{section.1.8}
+\contentsline {section}{\numberline {1.9}Free Groups, Free Products, Generators and Relations}{7}{section.1.9}
+\contentsline {chapter}{\numberline {2}The Structure of Groups}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Free Abelian Groups}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Finitely Generated Abelian Groups}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}The Krull-Schmidt Theorem}{9}{section.2.3}
+\contentsline {section}{\numberline {2.4}The Action of a Group on a Set}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}The Sylow Theorem}{9}{section.2.5}
+\contentsline {section}{\numberline {2.6}Classification of Finite Groups}{9}{section.2.6}
+\contentsline {section}{\numberline {2.7}Nilpotent and Solvable Groups}{9}{section.2.7}
+\contentsline {section}{\numberline {2.8}Normal and Subnormal Series}{9}{section.2.8}
+\contentsline {chapter}{\numberline {3}Rings}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Rings and Homomorphisms}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Ideals}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Factorization in Commutative Rings}{11}{section.3.3}
+\contentsline {section}{\numberline {3.4}Rings of Quotients and Localization}{11}{section.3.4}
+\contentsline {section}{\numberline {3.5}Rings of Polynomials and Formal Power Series}{11}{section.3.5}
+\contentsline {section}{\numberline {3.6}Factorization in Polynomial Rings}{11}{section.3.6}
+\contentsline {chapter}{\numberline {4}Modules}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Modules, Homomorphisms and Exact Sequences}{13}{section.4.1}
+\contentsline {section}{\numberline {4.2}Free Modules and Vector Spaces}{13}{section.4.2}
+\contentsline {section}{\numberline {4.3}Projective and Injective Modules}{13}{section.4.3}
+\contentsline {section}{\numberline {4.4}Hom and Duality}{13}{section.4.4}
+\contentsline {section}{\numberline {4.5}Tensor Products}{13}{section.4.5}
+\contentsline {section}{\numberline {4.6}Modules over a Principal Ideal Domain}{13}{section.4.6}
+\contentsline {section}{\numberline {4.7}Algebras}{13}{section.4.7}
+\contentsline {chapter}{\numberline {5}Fields and Galois Theory}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Field Extensions}{15}{section.5.1}
+\contentsline {section}{\numberline {5.2}The Fundamental Theorem}{15}{section.5.2}
+\contentsline {section}{\numberline {5.3}Splitting Fields, Algebraic Closure and Normality}{15}{section.5.3}
+\contentsline {section}{\numberline {5.4}The Galois Group of a Polynomial}{15}{section.5.4}
+\contentsline {section}{\numberline {5.5}Finite Fields}{15}{section.5.5}
+\contentsline {section}{\numberline {5.6}Separability}{15}{section.5.6}
+\contentsline {section}{\numberline {5.7}Cyclic Extensions}{15}{section.5.7}
+\contentsline {section}{\numberline {5.8}Cyclotomic Extensions}{15}{section.5.8}
+\contentsline {section}{\numberline {5.9}Radical Extensions}{15}{section.5.9}
+\contentsline {chapter}{\numberline {6}The Structure of Fields}{17}{chapter.6}
+\contentsline {section}{\numberline {6.1}Transcendence Bases}{17}{section.6.1}
+\contentsline {section}{\numberline {6.2}Linear Disjointness and Separability}{17}{section.6.2}
+\contentsline {chapter}{\numberline {7}Commutative Rings and Modules}{19}{chapter.7}
+\contentsline {section}{\numberline {7.1}Chain Conditions}{19}{section.7.1}
+\contentsline {section}{\numberline {7.2}Prime and Primary Ideals}{19}{section.7.2}
+\contentsline {section}{\numberline {7.3}Primary Decomposition}{19}{section.7.3}
+\contentsline {section}{\numberline {7.4}Noetherian Rings and Modules}{19}{section.7.4}
+\contentsline {section}{\numberline {7.5}Ring Extensions}{19}{section.7.5}
+\contentsline {section}{\numberline {7.6}Dedekind Domains}{19}{section.7.6}
+\contentsline {section}{\numberline {7.7}The Hilbert Nullstellensatz}{19}{section.7.7}
+\contentsline {chapter}{\numberline {8}The Structure of Rings}{21}{chapter.8}
+\contentsline {section}{\numberline {8.1}Simple and Primitive Rings}{21}{section.8.1}
+\contentsline {section}{\numberline {8.2}The Jacobson Radical}{21}{section.8.2}
+\contentsline {section}{\numberline {8.3}Semisimple Rings}{21}{section.8.3}
+\contentsline {section}{\numberline {8.4}The Prime Radical; Prime and Semiprime Rings}{21}{section.8.4}
+\contentsline {section}{\numberline {8.5}Algebras}{21}{section.8.5}
+\contentsline {section}{\numberline {8.6}Division Algebras}{21}{section.8.6}
+\contentsline {chapter}{\numberline {9}Categories}{23}{chapter.9}
+\contentsline {section}{\numberline {9.1}Functors and Natural Transformations}{23}{section.9.1}
+\contentsline {section}{\numberline {9.2}Adjoint Functors}{23}{section.9.2}
+\contentsline {section}{\numberline {9.3}Morphisms}{23}{section.9.3}
