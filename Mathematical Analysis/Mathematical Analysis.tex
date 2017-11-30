@@ -4686,13 +4686,115 @@ The tangent plane, a hyperplane in $ \Real^{m+1} $, to the m-dimensional surface
 
 \section{The Implicit Function Theorem}
 
-\subsection{An Elementary Version of the Implicit Function Theorem}
-\subsection{Transition to the Case of a Relation $ F(x^1,\cdots,x^m,y)=0 $}
 \subsection{The Implicit Function Theorem}
+\begin{Theorem}[Implicit Function Theorem]
+	If the mapping $ F:U \to \Real^n $ defined in a neighborhood $ U $ of the point $ (x_0,y_0)\in \Real^{m+n} $ is such that
+	\begin{itemize}
+		\item[$ 1^0 $] $ F \in C^{(p)}(U,\Real^n) $, $ p \geqslant 1 $,
+		\item[$ 2^0 $] $ F(x_0,y_0)=0 $,
+		\item[$ 3^0 $] $ F^\prime_y(x_0,y_0) $ is an invertible matrix.
+	\end{itemize}
+then there exists an $ (m+n) $-dimensional interval $ I = I^m_x \times I^n_y \subset U $, where
+\begin{equation}
+	I^m_x = \{x \in \Real^m | |x-x_0| < \alpha  \},\quad I^n_y = \{y \in \Real^m | |y-y_0| < \beta  \} \nonumber
+\end{equation}
+and a mapping $ f \in C^{(p)}(I^m_x,I^n_y) $ such that
+\begin{equation}
+	F(x,y)=0 \Leftrightarrow y =f(x)\nonumber
+\end{equation}
+for any point $ (x,y)\in I^m_x \times I^n_y $ and
+\begin{equation}
+	f^\prime(x)=-[F^\prime_y(x,f(x))]^{-1}[F^\prime_x(x,f(x))] \nonumber
+\end{equation}
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
 
 \section{Some Corollaries of the Implicit Function Theorem}
 \subsection{The Inverse Function Theorem}
+\begin{Definition}
+	A mapping $ F:U \to V $, where $ U $ and $ V $ are open subsets of $ \Real^m $, is a \textit{$ C^{(p)} $-diffeomorphism} or a \textit{diffeomorphism of smoothness $ p(p=0,1,\cdots) $}, if
+	\begin{enumerate}
+		\item $ f \in C^{(p)}(U,V) $;
+		\item $ f $ is a bijection;
+		\item $ f^{-1}\in  C^{(p)}(V,U)$.
+	\end{enumerate}
+A $ C^{(0)} $-diffeomorphism is called a \textit{homeomorphism}.
+\end{Definition}
+\begin{Theorem}[Inverse Function Theorem]
+	If a mapping $ f:G \to \Real^m $ of a domain $ G \subset \Real^m $ is such that
+	\begin{enumerate}[$ 1^0 $]
+		\item $ f \in C^{(p)}(G,\Real^m) $, $ p \geqslant 1 $,
+		\item $ y_0=f(x_0) $ at $ x_0 \in G $,
+		\item $ f^\prime(x_0) $ is invertible,
+	\end{enumerate}
+then there exists a neighborhood $ U(x_0) \subset G$ of $ x_0 $ and a neighborhood $ V(y_0) $ such that $ f:U(x_0) \to V(y_0) $ is a $ C^{(p)} $-diffeomorphism. Moreover, if $ x \in U(x_0) $ and $ y=f(x)\in V(y_0) $, then
+\begin{equation}
+	(f^{-1})^\prime(y)=(f^\prime(x))^{-1}\nonumber
+\end{equation}
+\end{Theorem}
+\begin{Definition}
+	The spherical coordinates of a point $ P $ are then defined as follows: \\
+	The radius $ \rho $ is the Euclidean distance from the origin $ O $ to $ P $.\\
+	The azimuth $ \theta $ is the signed angle measured from the azimuth reference direction to the orthogonal projection of the line segment $ OP $ on the $ xy $-plane.\\
+	The inclination $ \phi $ is the angle between the $ z $-axis and the line segment $ OP $. \\
+	The conversion between rectangular and spherical coordinate is shown below
+	\begin{align}
+		x & = \rho \sin \phi \cos \theta \nonumber \\
+		y & = \rho \sin \phi \sin \theta \nonumber \\
+		z &= \rho \cos \phi\nonumber \\
+	\end{align}
+\end{Definition}
+
 \subsection{Local Reduction of a Smooth Mapping to Canonical Form}
+\begin{Definition}
+	The \textit{rank} of a mapping $ f:U \to \Real^n $ of a domain $ U \subset \Real^m $ at a point $ x \in U $ is the rank of the linear transformation tangent to it at the point, that is, the rank of the matrix $ f^\prime(x) $. The rank of a mapping is usually denoted $ \rank{f(x)} $.
+\end{Definition}
+\begin{Theorem}[The Rank Theorem]
+	Let $ f:U \to \Real^n $ be a mapping defined in a neighborhood $ U \subset \Real^m $ of a point $ x_0\in \Real^m $. If $ f \in C^{(p)}(U,\Real^n) $, $ p \geqslant 1 $, and the mapping $ f $ has the same rank $ k $ at every point $ x \in U $, then there exist neighborhoods $ O(x_0) $ and $ O(y_0) $ of $ y_0 = f(x_0) $ and diffeomorphism $ u=\varphi(x) $, $ v = \Psi(y) $ of those neighborhoods, of class $ C^{(p)} $, such that the mapping $ v=\Psi \circ f \circ \varphi^{-1}(u)$ has the coordinate representation
+	\begin{equation}
+		(u^1,\cdots,u^k,\cdots,u^m) = u \mapsto v=(v^1,\cdots,v^n) = (u^1,\cdots,u^k,0,\cdots,0) \nonumber
+	\end{equation}
+	in the neighborhood $ O(u_0) = \varphi(O(x_0)) $ of $ u_0 = \varphi(x_0) $.
+\end{Theorem}
+In other words, the theorem asserts that one can choose coordinates $(u^1,\cdots,u^m)  $ in place of $ (x^1,\cdots,x^m) $ and $ (v^1,\cdots,v^n) $ in place of $ (y^1,\cdots,y^n) $ in such a way that locally the mapping has the form above in the new coordinates, that is, the canonical form for a linear transformation of rank $ k $.
+\begin{proof}
+	content...
+\end{proof}
+
+\subsection{Functional Dependence}
+\begin{Definition}
+	A system of continuous functions $ f^i(x)=f^i(x^1,\cdots,x^m)(i=1,\cdots,n) $ is \textit{functionally independent} in a neighborhood of a point $ x_0 = (x_0^1,\cdots,x_0^m) $ if for any continuous function $ F(y)=F(y^1,\cdots,y^n) $ defined in a neighborhood of $ y_0=(y_0^1,\cdots,y_0^n)=(f^1(x_0),\cdots,f^n(x_0))=f(x_0) $, the relation
+	\begin{equation}
+		F(f^1(x^1,\cdots,x^m),\cdots,f^n(x^1,\cdots,x^m)) \equiv 0 \nonumber
+	\end{equation}
+	is possible at all points of a neighborhood of $ x_0 $ only when $ F(y^1,\cdots,y^n) \equiv 0$ in a neighborhood of $ y_0 $. If a function is not functionally independent, it is said to be functionally dependent.
+\end{Definition}
+\begin{Proposition}
+	If a system $ f^i(x^1,\cdots,x^m)(i=1,\cdots,n)  $ of smooth functions defined on a neighborhood $ U(x_0) $ of $ x_0 \in \Real^m $ is such that the rank of the matrix
+	\begin{equation}
+		\begin{pmatrix}
+		\frac{\partial f^1}{\partial x^1}&\cdots &\frac{\partial f^1}{\partial x^m} \\
+		\vdots &\ddots &\vdots \\
+		\frac{\partial f^n}{\partial x^1}&\cdots &\frac{\partial f^n}{\partial x^m} \\
+		\end{pmatrix}
+	\end{equation}
+is equal to the same order $ k $ at every point $ x \in U $, then
+\begin{enumerate}[a)]
+	\item when $ k=n $, the system is functionally independent in a neighborhood of $ x_0 $;
+	\item when $ k<n $, there exist a neighborhood of $ x_0 $ and $ k $ functions of the system, say $ f^1,\cdots,f^k $ such that the other $ n-k $ functions can be represented as
+	\begin{equation}
+		f^i(x^1,\cdots,x^m)=g^i(f^1(x^1,\cdots,x^m),\cdots,f^k(x^1,\cdots,x^m)) \nonumber
+	\end{equation}
+	in this neighborhood, where $ g^i(y^1,\cdots,y^k) $, $ (i=k+1,\cdots,n) $ are smooth functions defined in a neighborhood of $ y_0 = (f^1(x_0),\cdots,f^n(x_0)) $ and depending only on $ k $ coordinates of the variable point $ y= (y^1,\cdots,y^n) $.
+\end{enumerate}
+\end{Proposition}
+\begin{proof}
+	content...
+\end{proof}
+
+
 \subsection{Local Resolution of a Diffeomorphism into a Composition of Elementary Ones}
 \subsection{Morse's Lemma}
 

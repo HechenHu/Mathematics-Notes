@@ -1,0 +1,184 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{/Users/HechenHu/Development/NoteTaking/Mathematics-Notes/Customized}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+
+\renewcommand{\@chapapp}{}% Not necessary...
+
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{Theory of Numbers}}
+% Author
+\author{\textsc{Hechen Hu}}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Auto-generated table of contents, list of figures and list of tables %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\tableofcontents
+	
+	\mainmatter
+	
+	\chapter{Divisibility, the Fundamental Theorem of Number Theory}
+	\section{Divisibility}
+	\begin{Definition}
+	The divisors of a number that are less than the number itself is called its \textit{parts}. If a number is the sum of its parts, it's called a \textit{perfect number}(e.g. $ 6 $, $ 28 $, and $ 496 $). If two numbers are the sum of the other one's parts, they are called \textit{amicable}(e.g. $ 220 $ and $ 284 $).
+\end{Definition}
+\begin{Theorem}[Remainder Theorem]
+	For all numbers $ a $ and $ b \neq 0 $, there is an integer $ c $ and a number $ d $ such that
+	\begin{equation}
+		a=bc+d\quad \text{ and }\quad 0 \leqslant d < |b| \nonumber
+	\end{equation}
+	and only one such $ c $ and $ d $ exist. We say that $ a $ divided by $ b $ has \textit{quotient} $ c $ with \textit{remainder} $ d $.
+\end{Theorem}
+\begin{Proposition}
+	For all numbers $ a $ and $ b\neq 0 $, there is an integer $ c^\prime $ and a number $ d^\prime $ such that
+	\begin{equation}
+		a = b c^\prime + d^\prime\quad \text{ and }\quad -\frac{|b|}{2}< d^\prime \leqslant \frac{|b|}{2} \nonumber
+	\end{equation}
+	and only one such $ c^\prime $ and $ d^\prime $.
+\end{Proposition}
+\begin{Theorem}[Four Number Theorem]
+	If $ a $ and $ c $ are numbers and $ b $ and $ d $ are integers such that
+	\begin{equation}
+		ab=cd \nonumber
+	\end{equation} 
+	then there exists a positive number $ r $ and positive integers $ s $, $ t $, and $ u $ such that the following equalities hold:
+	\begin{equation}
+		a=rs,\quad b=tu,\quad c=rt, \quad d=su \nonumber
+	\end{equation}
+	If, in addition, $ a $ and $ c $ are integers, then $ r $ may be taken to be an integer.
+\end{Theorem}
+\begin{Definition}
+	An integer $ a $ is a \textit{divisor} of an integer $ b $ if there exists a number $ c $ such that
+	\begin{equation}
+		b=ac \nonumber
+	\end{equation}
+	In this case we also say that $ b $ is \textit{divisible} by $ a $ and denoted $ a | b $. Otherwise, it is denoted $ a\nmid b$. Among the divisors of $ a $, $ 1 $, $ -1 $, $ a $, and $ -a $ is called its \textit{trivial divisors}. Other positive divisors smaller than $ a $ are called its \textit{proper divisors}. $ 1 $ and $ -1 $ is called \textit{units}.
+\end{Definition}
+\begin{Definition}
+	Two numbers that do not have a common divisor other than the units are called \textit{relatively prime}.
+\end{Definition}
+\begin{Example}
+	for any number $ a $
+	\begin{itemize}
+		\item $ a|0 $; 
+		\item $ 0 $ is only a divisor of $ 0 $.
+		\item If $ a |b$ and $ b|c $, then $ a|c $.
+	\end{itemize}
+\end{Example}
+Division is reflexive and transitive. In general it is not symmetric.\newpara
+If $ b_i $ are integers such that $ a|b_i $, and $ c_i $ are arbitrary integers ($ i=1,2,\cdots,k $), then $ a | \sum_{i=1}^{k}b_i c_i $.
+\begin{Definition}
+	A number $ a $ and $ -a $ is said to be \textit{associates} of each other. Theorems relating to divisibility apply to the classes of associated numbers.
+\end{Definition}
+\begin{Example}
+	If $ a|b $, then $ ca | cb $, and if $ c \neq 0 $, then the first relation follows from the second.
+\end{Example}
+\begin{Lemma}[Euclid's Lemma]
+	If a number divides the product of two numbers and is relatively prime to one of the factors, then it must divide the other factor.
+\end{Lemma}
+
+
+
+\section{Prime Numbers}
+\begin{Definition}
+	If a number only has the trivial ones as its divisors, it's called \textit{prime}. If a number is not prime and not unit, it's called a \textit{composite number}.
+\end{Definition}
+\begin{Theorem}
+	Every  number larger than one has a prime divisor.
+\end{Theorem}
+\begin{Theorem}
+	There are infinitely many prime numbers.
+\end{Theorem}
+\begin{Theorem}
+	Every number different from $ 0 $ and not a unit can be decomposed into the product of finitely many primes.
+\end{Theorem}
+\begin{Definition}
+	For certain number, if it divide a product of numbers, it also divide one of the factors. Numbers of this type that are different from $ 0 $ and the units have the \textit{prime property}.
+\end{Definition}
+\begin{Theorem}
+	The prime numbers are precisely those with the prime property.
+\end{Theorem}
+\begin{Theorem}[Fundamental Theorem of Arithmetic]
+	The prime factorization of a nonzero number that is not a unit is unique up to the order and signs of the factors.
+\end{Theorem}
+\begin{Proposition}
+	If $ a_1,\cdots,a_j $; $ b_1,\cdots,b_k $ are integers such that
+	\begin{equation}
+		a_1 a_2\cdots a_j = b_1 b_2 \cdots b_k \nonumber
+	\end{equation}
+	then there exists integer $ t_{uv} $ ($ 1 \leqslant u \leqslant j,1 \leqslant v \leqslant k $) such that
+	\begin{equation}
+		a_u = \prod_{v=1}^{k}t_{uv},\qquad b_v = \prod_{u=1}^{j}t_{uv}\nonumber
+	\end{equation}
+\end{Proposition}
+	
+	
+	
+	\chapter{Congruences}
+	
+	\chapter{Rational and Irrational Numbers. Approximation of Numbers by Rational Numbers (Diophantine Approximation)}
+	
+	\chapter{Geometric Methods in Number Theory}
+	
+	\chapter{Properties of Prime Numbers}
+	
+	\chapter{Sequences of Integers}
+	
+	\chapter{Diophantine Problems}
+	
+	\chapter{Arithmetic Functions}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
