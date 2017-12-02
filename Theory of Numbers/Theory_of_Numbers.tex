@@ -51,8 +51,8 @@
 	
 	\mainmatter
 	
-	\chapter{Divisibility, the Fundamental Theorem of Number Theory}
-	\section{Divisibility}
+\chapter{Divisibility, the Fundamental Theorem of Number Theory}
+\section{Divisibility}
 	\begin{Definition}
 	The divisors of a number that are less than the number itself is called its \textit{parts}. If a number is the sum of its parts, it's called a \textit{perfect number}(e.g. $ 6 $, $ 28 $, and $ 496 $). If two numbers are the sum of the other one's parts, they are called \textit{amicable}(e.g. $ 220 $ and $ 284 $).
 \end{Definition}
@@ -145,22 +145,273 @@ If $ b_i $ are integers such that $ a|b_i $, and $ c_i $ are arbitrary integers 
 		a_u = \prod_{v=1}^{k}t_{uv},\qquad b_v = \prod_{u=1}^{j}t_{uv}\nonumber
 	\end{equation}
 \end{Proposition}
+
+\begin{Definition}
+	A number can be written in the form
+	\begin{equation}
+		n=e p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_r^{\alpha_r} \nonumber
+	\end{equation}
+	where $ e $ is either $ -1 $ or $ +1 $, depending on the sign of $ n $; $ p_1 \cdots p_r $ are positive distinct prime numbers; and $ \alpha_i $ are positive integral exponents. If this also includes primes to the power of $ 0 $, it will be called a \textit{canonical decomposition}.
+\end{Definition}
+
+
+\section{Divisors, Multiples, and Common Divisors and Multiples}
+\begin{Definition}
+	The \textit{multiples} of $ n $ are those numbers that have $ n $ as a divisor.
+\end{Definition}
+\begin{Theorem}
+	The number $ n $ given its canonical decomposition
+	\begin{equation}
+		n= \prod_{i=1}^{r}p_k^{k_i}\nonumber
+	\end{equation}
+	has divisors given by
+	\begin{equation}
+		a=\prod_{i=1}^{r}p_i^{j_i},\quad \text{ whre }\quad 0 \leqslant j_i \leqslant k_i\quad(1\leqslant i \leqslant r)\nonumber
+	\end{equation}
+	multiples given by
+	\begin{equation}
+		t = \prod_{i=1}^{u}p_i^{s_i},\quad \text{ where }\quad u\geqslant r,\quad \text{ and }\quad k_i \leqslant s_i\quad \text{ for }\quad 1 \leqslant i \leqslant r \nonumber
+	\end{equation}
+	and the number of its divisors given by 
+	\begin{equation}
+		\tau(n)=\prod_{i=1}^{r}(k_i +1)\nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Definition}
+	The number whose divisors are exactly all the common divisors of a series of integers is called \textit{distinguished common divisor}. The number that is a multiple of a series of integers and a divisor of all their common multiples is called \textit{distinguished common multiple}.
+\end{Definition}
+\begin{Theorem}
+	The distinguished common divisor of the numbers
+	\begin{equation}
+			n_i = \prod_{h=1}^{r}p_h^{k_{ih}},\quad i=1,2,\cdots,s \nonumber
+	\end{equation}
+	is
+	\begin{equation}
+			D = \prod_{h=1}^{r}p_h^{m_h},\quad \text{ where }\quad m_h = \min (k_{1h},k_{2h},\cdots,k_{sh}),\quad 1 \leqslant h \leqslant r \nonumber
+	\end{equation}
+	the distinguished common multiple is
+	\begin{equation}
+		t = \prod_{h=1}^{r}p_h^{M_h},\quad \text{ where }\quad M_h = \max (k_{1h},k_{2h},\cdots,k_{sh}),\quad 1 \leqslant h \leqslant r \nonumber
+	\end{equation}
+	If some of the $ n_i $ are $ 0 $, then they are ignored in the case of the distinguished common divisor, unless all of the $ n_i $ are $ 0 $, in which case the distinguished common divisor is also $ 0 $. If at least one of the $ n_i $ is $ 0 $, then the distinguished common multiple is $ 0 $. \\
+	Both the distinguished common divisor and the distinguished common multiple are uniquely defined.\\
+	The distinguished common divisor is equal to the greatest common divisor if the latter exists, and the distinguished common multiple is equal to the least common multiple. \\
+	When considering distinguished common multiples and divisors where $ n_i $ can be arbitrary integers, we use the absolute values of the numbers.
+\end{Theorem}
+The greatest common divisor is abbreviated as \textit{g.c.d}(denoted $ (n_1,n_2,\cdots,n_r) $) and the least common multiple is abbreviated as \textit{l.c.m}(denoted $ [n_1,n_2,\cdots,n_r] $). Unless otherwise stated, these two terms are used to refer to the distinguished ones.
+\begin{Example}
+	$ n_1,n_2,\cdots,n_r $ are relatively prime if
+	\begin{equation}
+		(n_1,n_2,\cdots,n_r)=1 \nonumber
+	\end{equation}
+\end{Example}
+\begin{Theorem}
+	If a positive integer is not a $ k $th power, then its $ k $th root is irrational.
+\end{Theorem}
+\begin{Theorem}
+	The canonical decomposition of $ n! $ is
+	\begin{equation}
+		n! = \prod_{p \leqslant n}p^{k(n,p)},\quad \text{ where }\quad k(n,p)  =\sum_{t=1}^{r}[\frac{n}{p^t}] \nonumber
+	\end{equation}
+	The product is over all primes not larger than $ n $, and $ r=r(n,p) $ is such that
+	\begin{equation}
+		q^r \leqslant n < p^{r+1}\nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Theorem}
+	The canonical decomposition of the binomial coefficient $ \binom{n}{j}=\frac{n!}{j!(n-j)!} $ is
+	\begin{equation}
+		\binom{n}{j} = \prod_{p \leqslant n}p^h,\quad h=\sum_{t=1}^{r}([\frac{n}{p^t}]=[\frac{j}{p^t}]-[\frac{n-j}{p^t}]),\nonumber
+	\end{equation}
+	where $ r = r(n,p) $ satisfies $ p^r \leqslant n < p^{r+1} $.
+\end{Theorem}
+\section{Pythagorean Triples}
+	\begin{Theorem}
+		The number preceding the square of an off integer is divisible by $ 8 $. that is, if $ n $ is odd,
+		\begin{equation}
+			n^2 -1 = 4 (\frac{n-1}{2})(\frac{n+1}{2}) \nonumber
+		\end{equation}
+	\end{Theorem}
+\begin{Definition}
+	Numbers satisfying 
+	\begin{equation}
+		x^2 + y^2 = z^2 \nonumber
+	\end{equation}
+	are called \textit{Pythagorean triples}. If a Pythagorean triple is relatively prime, it's called a \textit{primitive triple}.
+\end{Definition}
+\begin{Theorem}
+	All Pythagorean triples are of the form
+	\begin{equation}
+		x = 2sab,\quad y= s(a^2-b^2),\quad z=s(a^2+b^2)\nonumber
+	\end{equation}
+	where $ s $, $ a $, and $ b $ are positive integers, $ a $ and $ b $ are relatively prime, one of them is even, and $ a>b $(omit this if considering the absolute value of $ y $, since this condition is necessary for $ y $ to be positive).\\
+	The primitive triples are those for which $ s=1 $.
+\end{Theorem}
+	\begin{proof}
+		\exercise
+	\end{proof}
+\begin{Theorem}
+	If $ a $ and $ b $ are integers, then the sum
+	\begin{equation}
+		a^2+b^2 \nonumber
+	\end{equation}
+	cannot have a positive divisor of the form $ 4k-1 $ relatively prime to $ a $ and $ b $.
+\end{Theorem}
+\begin{Definition}
+A proof by \textit{infinite descent} is a particular kind of proof by contradiction that relies on the least integer principle. One typical application is to show that a given equation has no solutions.\newpara
+Typically, one shows that if a solution to a problem existed, which in some sense was related to one or more natural numbers, it would necessarily imply that a second solution existed, which was related to one or more 'smaller' natural numbers. This in turn would imply a third solution related to smaller natural numbers, implying a fourth solution, therefore a fifth solution, and so on. However, there cannot be an infinity of ever-smaller natural numbers, and therefore by mathematical induction (repeating the same step) the original premise—that any solution exists— is incorrect: its correctness produces a contradiction.
+\end{Definition}
+\begin{proof}
+	Assume that there exists a positive number of the form $ 4k-1 $ that has a multiple that is the sum of two squares $ a^2+b^2$, where the bases of the squares are both relatively prime to the number. Let $ c $ be the smallest such number and call the multiple $ a^2_1+b^2_1 $, where
+	\begin{equation}
+		(c,a_1)=(c,b_1)=1 \nonumber
+	\end{equation}
+	The number $ a_1 $ and $ b_1 $ are at a distance of at most $ c/2 $ from the closest multiple of the odd number $ c $. Therefore, there exist integers $ q,r,a_2,b_2 $ such that
+	\begin{equation}
+		a_1=cq+a_2,\quad |a_2| \leqslant \frac{c}{2},\quad b_1 = cr+b_2,\quad |b_2| \leqslant \frac{c}{2} \nonumber
+	\end{equation}
+	by the fact that they are relatively prime, $ a_2 $ and $ b_2 $ are nonzero. Then
+	\begin{equation}
+		a^2_1+b^2_1 =c(cq^2+cr^2+2qa_2+2rb_2)+(a_2^2+b_2^2) \nonumber
+	\end{equation}
+	Since the left-hand side and the first term of the right-hand side are divisible by $ c $, we have that $ (a_2^2+b_2^2)  $ is divisible by $ c $. Here we also have that $ (a_2,c)=(b_2,c)=1 $.\newpara
+	Let $ d $ be the g.c.d of $ a_2 $ and $ b_2 $. Then
+	\begin{equation}
+a_2=da_3,\quad b_2=db_3,\quad (a_3,b_3)=1 \nonumber		
+	\end{equation}
+	It follows that $ (c,d)=1 $ and $ c| d^2(a_3^2+b_3^2) $($ d^2(a_3^2+b_3^2) $ is divisible by $ c $). It is obvious that
+	\begin{equation}
+	|a_3| \leqslant |a_2|,\quad |b_3| \leqslant |b_2| \nonumber
+	\end{equation}
+	then
+	\begin{equation}
+		a_3^2+b_3^2 \leqslant a_2^2+b_2^2 \leqslant \frac{c^2}{4}+\frac{c^2}{4} < c^2 \nonumber
+	\end{equation}
+	Then there is a positive integer $ c^\prime $ such that
+	\begin{equation}
+		c c^\prime = a_3^2+b_3^2 < c^2;\quad c^\prime <c \nonumber
+	\end{equation}
+	Since $ (a_3,b_3)=1 $, at least one of them is odd, and $ a_3^2+b_3^2 $ is of the form $ 4m+1 $ or $ 8m+2 $. \\
+	Additionally $ c^\prime $ is relatively prime to the two squares. \\
+	In conclusion, the existence of $ c^\prime $ contradicts the fact that $ c $ is the smallest such number.
+\end{proof}
+\begin{Theorem}
+	If the integers $ a_1,a_2,\cdots,a_r $ have a distinguished common divisor, then it is unique, and can be written as
+	\begin{equation}
+		\sum_{i=1}^{r}a_i u_i \nonumber
+	\end{equation}
+	where $ u_1,u_2,\cdots,u_r $ are integers. \newpara
+	If $ c $ is such that $ ca_1,ca_2,\cdots,ca_r $ are integers, then the distinguished common divisor of these is $ |c| $ times the distinguished common divisor of the $ a_i $'s.
 	
+\end{Theorem}
+\begin{Theorem}[The Euclidean Algorithm for the case of two numbers]
+	Let $ a $ and $ b $ be integers. If one is zero, then the other is the distinguished common divisor. If neither is zero, then we divide $ a $ by $ b $, with remainder. If the remainder is not zero, we divide $ b $ by the remainder, then the old remainder by the new one, and so on. This procedure must terminate, since the remainders are nonnegative decreasing integers. In this way we get the following formulation:
+	\begin{align}
+		a&=b q_1 + r_1,\quad &0<r_1<|b| \nonumber\\
+		b&=r_1 q_2 + r_2,\quad &0<r_2<r_1\nonumber\\
+		r_{j-1}&=r_j q_j + r_{j+1},\quad &0<r_{j+1}<r_j,\quad j=2,3,\cdots,n-1 \nonumber \\
+		r_{n-1}&=r_n q_{n+1} \nonumber
+	\end{align}
+	and $ (a,b)=r_n $.
+\end{Theorem}
+\begin{Theorem}
+	If an indecomposable number is a divisor of a product, then it is a divisor of one of the factors.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\section{First-order Diophantine equations}
+\begin{Theorem}[First-order Diophantine equations with two unknowns]
+	The equation 
+	\begin{equation}
+		ax +by=c \nonumber
+	\end{equation}
+	has given integer $ a $, $ b $, and $ c $. The goal is to find integers $ x $ and $ y $ satisfying it. The problem has solution iff
+	\begin{equation}
+		(a,b)|c\nonumber
+	\end{equation}
+	If this is satisfied and $ x_0 $, $ y_0 $ is a solution to it, then all solutions are given by the formula
+	\begin{equation}
+		x^\prime = x_0 - \frac{wb}{(a,b)},\quad y^\prime = y_0 + \frac{wa}{(a,b)} \nonumber
+	\end{equation}
+	where $ w $ is any integer. We can find a solution with the help of the Euclidean algorithm.
+\end{Theorem}
+
+
+\chapter{Congruences}
+\section{Congruences}
+\begin{Definition}
+	We say that $ a $ is \textit{congruent to $ b $ modulo $ m $(or just mod $m $)} if $ a $ and $ b $ have the same remainder when divided by $ m $(or by an equivalent statement, if $ a-b $ is divisible by $ m $). This is denoted $ a \equiv b \pmod{m} $. If two numbers that are not congruent are called \textit{incongruent}, and denoted $ a \not\equiv b \pmod{m} $. Congruence is a equivalence relationship.
+\end{Definition}
+\begin{Example}
+	$ m | a $ is equivalent to the expression
+	\begin{equation}
+		a \equiv 0 \pmod{m} \nonumber
+	\end{equation}
+\end{Example}
+\begin{Definition}
+	$ a \equiv b \pmod{0} $ is the same as $ a=b $.
+\end{Definition}
+\begin{Example}
+	Congruence modulo $ 1 $ is not very useful for integers, since in that case all integers are congruent. However, for the real numbers, this says that the fractional parts of the two numbers are equal, and this notation is often used.
+\end{Example}
+\begin{Theorem}
+	If $ a \equiv b \pmod{m} $, $ c \equiv d \pmod{m} $, $ k $ is an integer and $ (k,m)=1 $, then
+	\begin{itemize}
+		\item If $ kc=bk \pmod{m} $, then $ a \equiv b \pmod{m} $, provided $ (k,m)=1 $;
+		\item $ a\pm c \equiv b\pm d \pmod{m}$;
+		\item $ ac \equiv bd \pmod{m} $.
+	\end{itemize}
+That is, adding, subtracting, and multiplying congruent numbers with respect to the same mudulus maintains congruence. Moreover, we have
+\begin{itemize}
+	\item If $ n $ is a positive integer, then $ a^n \equiv b^n \pmod{m}  $;
+	\item If $ f(x) $ is a polynomial with integer coefficients, then $ f(a)\equiv f(b) \pmod{m} $;
+	\item If $ a\equiv b \pmod{mm^\prime} $ and $ m^\prime \neq 0 $, then $ a \equiv b \pmod{m} $.
+\end{itemize}
+\end{Theorem}
+\begin{Example}
+	We see that
+	\begin{equation}
+		10 \equiv 1 \pmod{9},\qquad 10 \equiv -1 \pmod{11}\nonumber
+	\end{equation}
+	Then for integers $ a_0,\cdots,a_n $
+	\begin{equation}
+		\sum_{i=0}^{n}a_i 10^i \equiv \sum_{i=0}^{n}a_i \pmod{9},\qquad \sum_{i=0}^{n}a_i 10^i \equiv \sum_{i=0}^{n}(-1)^i a_i \pmod{9} \nonumber
+	\end{equation}
+\end{Example}
+\begin{Definition}
+	If we choose an arbitrary integer and form a class consists of elements that are congruent modulo $ m $ to it and denoted by $ (a)_m $, where $ a $ is an element of this class, then it is clear that no two arbitrary classes have a common element if they are not the same class. These classes are called the \textit{residue classes modulo $ m $}.
+\end{Definition}
+\begin{Theorem}
+	If $ a \equiv b \pmod{m} $ and $ (b,m)=d $, then $ a \equiv b \equiv 0 \pmod{d} $, i.e., $ d | a $. Since $ (b,m)|m $, we have that
+	\begin{equation}
+		(b,m)|(a,m)\nonumber
+	\end{equation}
+	and from the symmetric property of congruence, it also follows that
+	\begin{equation}
+		(a,m)|(b,m)\nonumber
+	\end{equation}
+	Then
+	\begin{equation}
+		(a,m)=(b,m) \nonumber
+	\end{equation}
+\end{Theorem}
+
 	
+\chapter{Rational and Irrational Numbers. Approximation of Numbers by Rational Numbers (Diophantine Approximation)}
 	
-	\chapter{Congruences}
+\chapter{Geometric Methods in Number Theory}
 	
-	\chapter{Rational and Irrational Numbers. Approximation of Numbers by Rational Numbers (Diophantine Approximation)}
+\chapter{Properties of Prime Numbers}
 	
-	\chapter{Geometric Methods in Number Theory}
+\chapter{Sequences of Integers}
 	
-	\chapter{Properties of Prime Numbers}
+\chapter{Diophantine Problems}
 	
-	\chapter{Sequences of Integers}
-	
-	\chapter{Diophantine Problems}
-	
-	\chapter{Arithmetic Functions}
+\chapter{Arithmetic Functions}
 	
 	
 	
