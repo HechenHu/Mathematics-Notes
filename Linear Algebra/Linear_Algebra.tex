@@ -51,4 +51,258 @@
 	
 	\mainmatter
 	
+	\chapter{Solving Linear Equations}
+	\section{Systems of Linear Equations}
+	\begin{Definition}
+		A \textit{linear equation} in the variables $ x_1,\cdots,x_n $ is an equation that can be written in the form
+		\begin{equation}
+			a_1 x_1 + a_2 x_2 + \cdots + a_n x_n = b \nonumber
+		\end{equation}
+		where $ b $ and coefficients $ a_i $ are real or complex numbers. A \textit{linear system} is a collection of one or more linear equations involving the same variables. A \textit{solution} of the system is a list of numbers that makes each equation a true statement when their values are substituted for $ x_1,\cdots,x_n $ respectively. The set of all possible solutions is called the \textit{solution set} of the linear system. Two linear systems are called \textit{equivalent} if they have the same solution set.
+	\end{Definition}
+\begin{Definition}
+	A linear system is \textit{consistent} if it has either one solution or infinitely many solutions. If it has no solution, it is called \textit{inconsistent}.
+\end{Definition}
+\begin{Definition}
+	The \textit{coefficient matrix} is the matrix where the coefficients of each variable in a system aligned in columns. If additionally the coefficient of the right-hand side of equations are added to the coefficient matrix, a new matrix called \textit{augmented matrix} is generated.
+\end{Definition}
+\begin{Definition}
+\textit{Elementary row operations} on a matrix include:
+\begin{itemize}
+	\item (\textit{Replacement}) Replace one row by the sum of itself and a multiple of another row.
+	\item (\textit{Interchange}) Interchange two rows.
+	\item (\textit{Scaling}) Multiply all entries in a row by a nonzero constant.
+\end{itemize}
+Two matrices are \textit{row equivalent} if there is a sequence of elementary operations that transforms one matrix into the other.
+\end{Definition}
+\begin{Theorem}
+	If the augmented matrices of two linear systems are row equivalent, then the two systems have the same solution set.
+\end{Theorem}
+\section{Row Reduction and Echelon Forms}
+\begin{Definition}
+	A rectangular matrix is in \textit{echelon form} if it has the following properties:
+	\begin{itemize}
+		\item All nonzero rows are above any rows of all zeros;
+		\item Each leading entry of a row is in a column to the right of the leading entry of the row above it;
+		\item All entries in a column below a leading entry are zero.
+	\end{itemize}
+If a matrix in echelon form satisfies the following additional conditions, then it is in \textit{reduced echelon form}:
+\begin{itemize}
+	\item The leading entry in each nonzero row is $ 1 $;
+	\item Each leading $ 1 $ is the only nonzero entry in its column.
+\end{itemize}
+\end{Definition}
+\begin{Theorem}
+	Each matrix is row equivalent to an unique reduced echelon matrix.
+\end{Theorem}
+If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ is called an \textit{(reduced) echelon form of $ A $}. The abbreviation RREF and REF are used for reduced (row) echelon form and (row) echelon form respectively.
+\begin{Definition}
+	A \textit{pivot position} in a matrix $ A $ is a location in $ A $ that corresponds to a leading entry in an echelon form of $ A $. A \textit{pivot column} is a column of $ A $ that contains a pivot position.
+\end{Definition}
+\begin{Theorem}
+	A linear system is consistent iff the rightmost column of the augmented matrix \textbf{is not} a pivot column, that is, iff an echelon form of the augmented matrix has \textbf{no} row of the form
+	\begin{equation}
+		\begin{bmatrix}
+		0 &\cdots &0 &b
+		\end{bmatrix}\qquad \text{ with $ b $ nonzero}
+		\nonumber
+	\end{equation}
+	If a linear system is consistent, then the solution set contains either
+	\begin{itemize}
+		\item a unique solution, when there are no free variables.
+		\item infinitely many solutions, when there is at least one free variable.
+	\end{itemize}
+	
+\end{Theorem}
+
+\section{Vector Equations}
+\begin{Definition}
+	A matrix with only one column is called a \textit{column vector}, or simply a \textit{vector}.
+\end{Definition}
+\begin{Definition}
+	Given vectors $ \vec{v}_1,\vec{v}_2,\cdots,\vec{v}_p $ in $ \Real^n $ and given scalars $ c_1,c_2,\cdots,c_p $, the vector $ \vec{y} $ defined by
+	\begin{equation}
+		\vec{y}=c_1 \vec{v}_1+ \cdots + c_p \vec{v}_p \nonumber
+	\end{equation}
+	is called a \textit{linear combination of $ \vec{v}_1,\vec{v}_2,\cdots,\vec{v}_p  $ using weights $ c_1,c_2,\cdots,c_p $}.
+\end{Definition}
+\begin{Definition}
+	If $ \vec{v}_1,\vec{v}_2,\cdots,\vec{v}_p $ are in $ \Real^n $ , then the set of all linear combinations of them is denoted by $ \spn \{\vec{v}_1,\cdots,\vec{v}_p\} $ and is called the \textit{subset of $ \Real^n $ spanned (or generated) by $ \vec{v}_1,\cdots,\vec{v}_p $}. That is, $ \spn \{\vec{v}_1,\cdots,\vec{v}_p\}$ is the collection of all vectors that can be written in the form
+	\begin{equation}
+		c_1 \vec{v}_1+ \cdots + c_p \vec{v}_p \nonumber
+	\end{equation}
+	with $ c_1,c_2,\cdots,c_p $ scalars.
+	
+\end{Definition}
+
+\section{The Matrix Equation $ \matr{A} \vec{x} =\vec{b} $}
+\begin{Definition}
+	If $ \matr{A} $ is an $ m \times n $ matrix, with columns $ a_1,\cdots,a_n $, and if $ \vec{x} $ is in $ \Real^n $, then the \textit{product of $ \matr{A} $ and $ \vec{x} $}, denoted by $ \matr{A}\vec{x} $, is the \textit{linear combination of the columns of $ \matr{A} $ using the corresponding entries in $ \vec{x} $ as weights}, that is,
+	\begin{equation}
+		\matr{A}\vec{x} = 
+		\begin{bmatrix}
+		a_1 &a_2 &\cdots &a_n
+		\end{bmatrix}
+		\begin{bmatrix}
+		x_1 \\ \cdots \\ x_n
+		\end{bmatrix}
+		=x_1 a_1 + x_2 a_2 + \cdots + x_n a_n \nonumber
+	\end{equation}
+	$ \matr{A}\vec{x} $ is defined only if the number of columns of $ \matr{A} $ equals the number of entries in $ \vec{x} $.
+\end{Definition}
+\begin{Definition}
+	Equations having the form $ \matr{A} \vec{x} =\vec{b} $ are called \textit{matrix equations}.
+\end{Definition}
+\begin{Theorem}
+	If $ \matr{A} $ is an $ m \times n $ matrix, with columns $ a_1,\cdots,a_n $, and $ \vec{b} $ is in $ \Real^m $, the matrix equation
+	\begin{equation}
+		\matr{A} \vec{x} =\vec{b} \nonumber
+	\end{equation}
+	has the same solution set as the vector equation
+	\begin{equation}
+		x_1 a_1 + x_2 a_1 + \cdots + x_n a_n = \vec{b} \nonumber
+	\end{equation}
+	which has the same solution set as the system of linear equations whose augmented matrix is
+	\begin{equation}
+			\begin{bmatrix}
+		a_1 &a_2 &\cdots &a_n &\vec{b}
+		\end{bmatrix}
+		\nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Definition}
+	A set of vectors $ \{\vec{v}_1,\cdots,\vec{v}_p \} $ in $ \Real^m $ \textit{spans (or generates)} $ \Real^m $ if $ \spn \{ \vec{v}_1,\cdots,\vec{v}_p\}=\Real^m $.
+\end{Definition}
+\begin{Theorem}
+	Let $ \matr{A} $ be an $ m \times n $ coefficient matrix. Then the following statements are logically equivalent, that is, for a particular $ \matr{A} $, either they are all true statements or they are all false.
+	\begin{itemize}
+		\item For each $ \vec{b} $ in $ \Real^m $, the equation $ \matr{A} \vec{x} =\vec{b} $ has a solution.
+		\item The columns of $ \matr{A} $ spans $ \Real^m $.
+		\item $ \matr{A} $ has a pivot position in every row.
+	\end{itemize}
+\end{Theorem}
+\begin{Theorem}
+	If $ \matr{A} $ is an $ m \times n $ matrix, $ \vec{u} $ and $ \vec{v} $ are vectors in $ \Real^n $, and $ c $ is a scalar, then
+	\begin{itemize}
+		\item $ \matr{A}(\vec{u}+\vec{v}) =\matr{A}\vec{u} +\matr{A}\vec{v}$.
+		\item $ \matr{A}(c \vec{u})=c ( \matr{A} \vec{u}) $.
+	\end{itemize}
+\end{Theorem}
+
+\section{Solution Sets of Linear Systems}
+\begin{Definition}
+	A system of Linear equations is said to be \textit{homogeneous} if it can be written in the form $  \matr{A} \vec{x} =\vec{0} $. Such a system always has at least one solution, namely, $ \vec{x}=\vec{0} $, and this solution is usually called the \textit{trivial solution}. A homogeneous equation has a nontrivial solution iff the equation has at least one free variable.
+\end{Definition}
+\begin{Definition}
+	Vector addition can be considered as a \textit{translation}. e.g. the vector $ \vec{v} $ is \textit{translated by $ \vec{p} $} to $ \vec{v}+\vec{p} $.
+\end{Definition}
+\begin{Definition}
+	A \textit{parametric vector equation} can be written as
+	\begin{equation}
+		\vec{x}=s \vec{u} + t \vec{v}\qquad (s,t \in \Real) \nonumber
+	\end{equation}
+	which describes explicitly the spanned plane by $ \vec{u} $ and $ \vec{v} $. Whenever a solution set is described explicitly with vectors, we say that the solution is in \textit{parametric vector form}.
+\end{Definition}
+\begin{Theorem}
+	Suppose the equation $ \matr{A} \vec{x} =\vec{b} $ is consistent for some given $ \vec{b} $, and let $ \vec{p} $ be a nonzero solution. Then the solution set of it is the set of all vectors of the form $ \vec{w}=\vec{p}+ \vec{v}_h $, where $ \vec{v_h}  $ is any solution of the homogeneous equation $ \matr{A} \vec{x} =\vec{0}  $.
+\end{Theorem}
+
+\section{Linear Independence}
+\begin{Definition}
+	An indexed set of vectors $ \{\vec{v}_1,\cdots,\vec{v}_p \} $ in $ \Real^n $ is said to be \textit{linearly independent} if the vector equation 
+	\begin{equation}
+		x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_p \vec{v}_p = \vec{0} \nonumber
+	\end{equation}
+	has only the trivial solution. The set $ \{\vec{v}_1,\cdots,\vec{v}_p \} $ is said to be \textit{linearly dependent} if there exist weights $ c_1,\cdots,c_p $, not all zero, such that
+	\begin{equation}
+		c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_p \vec{v}_p = \vec{0} \nonumber
+	\end{equation}
+	and this equation is called a \textit{linear dependence relation} among $ \vec{v}_1,\cdots,\vec{v}_p  $.
+\end{Definition}
+\begin{Theorem}
+	The columns of a matrix $ \matr{A} $ are linearly independent iff the equation $ \matr{A}\vec{x}=\vec{0} $ has \textbf{only} the trivial solution.
+\end{Theorem}
+\begin{Theorem}
+	A set of two vectors $ \{\vec{v}_1,\vec{v}_2 \} $ is linearly dependent iff one of the vectors is a multiple of the other.
+\end{Theorem}
+\begin{Theorem}
+	An indexed set $ S= \{\vec{v}_1,\cdots,\vec{v}_p \}$ of two or more vectors is linearly dependent iff at least one of the vectors in $ S $ is a linear combination of the others.
+\end{Theorem}
+\begin{Theorem}
+	Any set $ \{\vec{v}_1,\cdots,\vec{v}_p \} $ in $ \Real^n $ is linearly dependent if $ p>n $(Same as the criterion for the existence of solutions in a system of equations).
+\end{Theorem}
+\begin{Theorem}
+	If a set $ S= \{\vec{v}_1,\cdots,\vec{v}_p \}$ in $ \Real^n $ contains the zero vector, then the set is linearly dependent.
+\end{Theorem}
+
+\section{Linear Transformations}
+\begin{Definition}
+	A \textit{transformation}(or \textit{function} or \textit{mapping}) from $ \Real^n $ to $ \Real^m $ is a rule that assigns to each vector $ \vec{x} \in \Real^n$ a vector $ T(\vec{x})\in \Real^m $. $ \Real^n $ is called the \textit{domain} of $ T $, and $ \Real^m $ is called the \textit{codomain} of $ T $. For $ \vec{x}\in \Real^n $, the vector $ T(\vec{x})\in \Real^m $ is called the \textit{image} of $ \vec{x} $ under $ T $. The set of all images $ T(\vec{x}) $ is called the \textit{range} of $ T $.
+\end{Definition}
+\begin{Example}
+	Given a scalar $ r $, define $ T: \Real^2 \to \Real^2 $ by $ T(\vec{x})=r \vec{x} $. $ T $ is called a \textit{contraction} when $ 0 \leqslant r \leqslant 1 $ and a \textit{dilation} when $ r>1 $.
+\end{Example}
+\begin{Theorem}
+	Let $ T: \Real^n \to \Real^m $ be a linear transformation. Then there exists a unique matrix $ \matr{A} $ such that
+	\begin{equation}
+		T(\vec{x})=\matr{A}\vec{x}\quad \forall \vec{x}\in \Real^n \nonumber
+	\end{equation}
+	In fact, $ \matr{A} $ is the $ m \times n $ matrix whose $ j $th column is the vector $ T(\vec{e}_j) $, where $ \vec{e}_j $ is the $ j $th column of the identity matrix in $ \Real^n $.
+	\begin{equation}
+		\matr{A}=\begin{bmatrix}
+		T(\vec{e}_1) &\cdots &T(\vec{e}_n) \nonumber
+		\end{bmatrix}
+	\end{equation}
+	The matrix $ \matr{A} $ is called the \textit{standard matrix for the linear transformation $ T $}.
+\end{Theorem}
+\begin{Theorem}
+		Let $ T: \Real^n \to \Real^m $ be a linear transformation. Then $ T $ is injective iff the equation $ T(\vec{x})=\vec{0} $ has only the trivial solution.
+\end{Theorem}
+\begin{Theorem}
+	Let $ T: \Real^n \to \Real^m $ be a linear transformation and let $ \matr{A} $ be the standard matrix for $ T $. Then
+	\begin{itemize}
+		\item $ T $ is surjective iff the columns of $ \matr{A} $ span $ \Real^m $;
+		\item $ T $ is injective iff the columns of $ \matr{A} $ are linearly independent.
+	\end{itemize}
+\end{Theorem}
+\begin{Definition}
+	If there is a matrix $ \matr{A} $ such that 
+	\begin{equation}
+		\vec{x}_{k+1}=\matr{A} \vec{x}_k\quad \text{ for }k=0,1,2,\cdots \nonumber
+	\end{equation}
+	then the equation above is called a \textit{linear difference equation} (or \textit{recurrence relation}).
+\end{Definition}
+
+	\chapter{Vector Spaces and Subspaces}
+	\chapter{Orthogonality}
+	\chapter{Determinants}
+	\chapter{Eigenvalues and Eigenvectors}
+	\chapter{The Singular Value Decomposition(SVD)}
+	\chapter{Linear Transformations}
+	\chapter{Complex Vectors and Matrices}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 \end{document}

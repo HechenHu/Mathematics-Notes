@@ -386,19 +386,11 @@ That is, adding, subtracting, and multiplying congruent numbers with respect to 
 	If we choose an arbitrary integer and form a class consists of elements that are congruent modulo $ m $ to it and denoted by $ (a)_m $, where $ a $ is an element of this class, then it is clear that no two arbitrary classes have a common element if they are not the same class. These classes are called the \textit{residue classes modulo $ m $}.
 \end{Definition}
 \begin{Theorem}
-	If $ a \equiv b \pmod{m} $ and $ (b,m)=d $, then $ a \equiv b \equiv 0 \pmod{d} $, i.e., $ d | a $. Since $ (b,m)|m $, we have that
-	\begin{equation}
-		(b,m)|(a,m)\nonumber
-	\end{equation}
-	and from the symmetric property of congruence, it also follows that
-	\begin{equation}
-		(a,m)|(b,m)\nonumber
-	\end{equation}
-	Then
-	\begin{equation}
-		(a,m)=(b,m) \nonumber
-	\end{equation}
+For all integers in a residue class modulo $ m $ their g.c.d with $ m $ are the same.
 \end{Theorem}
+\begin{proof}
+	If $ a $ is in this class, then all other elements can be expressed in the form of $ a+pm $, where $ p \in \Zahlen $. It is sufficient to show that if $ (a,m)=d $, then $ d|a+pm $ and if $ (a+pm,m)=d^\prime $, then $ d|a $.
+\end{proof}
 
 	
 \chapter{Rational and Irrational Numbers. Approximation of Numbers by Rational Numbers (Diophantine Approximation)}

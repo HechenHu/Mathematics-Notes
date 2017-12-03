@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 NOV 2017 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 DEC 2017 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -974,6 +974,13 @@ Package: empheq 2014/07/16 v2.14 Emphasizing equations
 \EQ_tag_box=\box40
 \g_EQ_temprow_int=\count138
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks41
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
 \c@Theorem=\count139
 \c@Example=\count140
 )
@@ -1026,12 +1033,12 @@ LaTeX Info: Redefining \nameref on input line 43.
 \scratchbox=\box42
 \nofMPsegments=\count143
 \nofMParguments=\count144
-\everyMPshowfont=\toks41
+\everyMPshowfont=\toks42
 \MPscratchCnt=\count145
 \MPscratchDim=\dimen186
 \MPnumerator=\count146
 \makeMPintoPDFobject=\count147
-\everyMPtoPDFconversion=\toks42
+\everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1094,40 +1101,163 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-(./Linear_Algebra.toc)
+(./Linear_Algebra.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 3.
+)
 \tf@toc=\write5
 \openout5 = `Linear_Algebra.toc'.
 
  [3] [4
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
+ 1.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 72.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 72.
+ [1
+
+]
+LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 112.
+
+Overfull \hbox (8.04208pt too wide) in paragraph at lines 123--124
+[]\T1/lmr/bx/n/10.95 Definition. []\T1/lmr/m/n/10.95 Given vec-tors $\OT1/lmr/b
+x/n/10.95 v[]\OML/lmm/m/it/10.95 ; \OT1/lmr/bx/n/10.95 v[]\OML/lmm/m/it/10.95 ;
+ []  ; \OT1/lmr/bx/n/10.95 v[]$ \T1/lmr/m/n/10.95 in $\U/msb/m/n/10.95 R[]$ \T1
+/lmr/m/n/10.95 and given scalars $\OML/lmm/m/it/10.95 c[]; c[]; []  ; c[]$\T1/l
+mr/m/n/10.95 ,
+ []
+
+[2]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 138.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 138.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 138.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 138.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 138.
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{equation.1.
+3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.182 	\end{itemize}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.1.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.182 	\end{itemize}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.1.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.182 	\end{itemize}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.1.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.182 	\end{itemize}
+                    ] [4] [5pdfTeX warning (ext4): destination with the same id
+entifier (name{equation.1.6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.266 	\end{itemize}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.1.7.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.266 	\end{itemize}
+                    ]pdfTeX warning (ext4): destination with the same identifie
+r (name{equation.1.7.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.270 	\begin{equation}
+                        [6]
+ 2.
+[7
+
+] [8
+
+]
+ 3.
+[9] [10
+
+]
+ 4.
+[11] [12
+
+]
+ 5.
+[13] [14
+
+]
+ 6.
+[15] [16
+
+]
+ 7.
+[17] [18
+
+]
+ 8.
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
  (./Linear_Algebra.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
 Package rerunfilecheck Info: File `Linear_Algebra.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
+(rerunfilecheck)             Checksum: 34B29C155B9CC2152F96F6FD0F3B81F5;978.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 308.
  ) 
 Here is how much of TeX's memory you used:
- 17738 strings out of 492995
- 324670 string characters out of 6132704
- 392522 words of memory out of 5000000
- 20951 multiletter control sequences out of 15000+600000
- 37806 words of font info for 39 fonts, out of 8000000 for 9000
+ 17952 strings out of 492995
+ 327353 string characters out of 6132704
+ 399830 words of memory out of 5000000
+ 21076 multiletter control sequences out of 15000+600000
+ 116513 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,6n,56p,415b,365s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/public/lm/lmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
-c/lm/lmro10.pfb>
-Output written on Linear_Algebra.pdf (4 pages, 112420 bytes).
+ 62i,7n,56p,555b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
+17/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/
+fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
+dvips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
+m/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
+/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Linear_Algebra.pdf (23 pages, 287894 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 300 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
