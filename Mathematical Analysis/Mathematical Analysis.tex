@@ -4796,7 +4796,45 @@ is equal to the same order $ k $ at every point $ x \in U $, then
 
 
 \subsection{Local Resolution of a Diffeomorphism into a Composition of Elementary Ones}
+\begin{Definition}
+	A diffeomorphism $ g:U \to \Real^m $ of an open set $ U \subset \Real^m $ will be called \textit{elementary} if its coordinate representation is
+	\begin{equation}
+		\begin{cases}
+		&y^i = x^i, \quad i \in \{1,\cdots,m\},i\neq j, \\
+		&y^j = g^j(x^1,\cdots,x^m)
+		\end{cases}
+		\nonumber
+	\end{equation}
+	that is, under the diffeomorphism only one coordinate of the point being mapped is changed.
+\end{Definition}
+\begin{Proposition}
+	If $ f:G \to \Real^m $ is a diffeomorphism of an open set $ G \subset \Real^m $, then for any point $ x_0 \in G $ there is a neighborhood of the point in which the representation $ f=g_1 \circ g_2 \circ \cdots \circ g_n $ holds, where $ g_1,\cdots,g_n $ are elementary diffeomorphism.
+\end{Proposition}
+\begin{proof}
+	Verified by induction.
+\end{proof}
 \subsection{Morse's Lemma}
+\begin{Definition}
+	Let $ x_0 $ be a critical point of the function $ f \in C^{(2)}(U,\Real) $ defined in a neighborhood $ U $ of this point. \\
+	The critical point $ x_0 $ is a \textit{nondegenerate critical point} of $ f $ if the Hessian of the function at that point (that is, the matrix $ \frac{\partial^2 f}{\partial x^i \partial x^j}(x_0) $ formed from the second-order partial derivatives) has a nonzero determinant.
+\end{Definition}
+\begin{Lemma}[Hadamard's Lemma]
+	Let $ f:U \to \Real $ be a function of class $ C^{(p)}(U,\Real) $, $ p \geqslant 1 $, defined in a convex neighborhood $ U $ of the point $ 0 = (0,\cdots,0) \in \Real^m$ and such that $ f(0)=0 $. Then there exist functions $ g^i \in C^{(p-1)}(U,\Real) (i=1,\cdots,m)$ such that the equality
+	\begin{equation}
+		f(x^1,\cdots,x^m) = \sum_{i=1}^{m}x^i g_i(x^i,\cdots,x^m) \nonumber
+	\end{equation}
+	holds in $ U $, and $ g_i(0)=\frac{\partial f}{\partial x^i}(0) $.
+\end{Lemma}
+\begin{Lemma}[Morse's Lemma]
+	If $ f:G \to \Real $ is a function of class $ C^{(3)}(G,\Real) $ defined on an open set $ G \subset \Real^m $ and $ x_0 \in G $ is a nondegenerate critical point of that function, then there exists a diffeomorphism $ g:V \to U $ of some neighborhood of the origin $ 0 \in \Real^m$ onto a neighborhood $ U $ of $ x_0 $ such that
+	\begin{equation}
+		(f \circ g)(y)=f(x_0)-[(y^1)^2+\cdots +(y^k)^2]+[(y^{k+1})^2+\cdots +(y^m)^2] \nonumber
+	\end{equation}
+	for all $ y \in V $.
+\end{Lemma}
+\begin{proof}
+	\exercise
+\end{proof}
 
 \section{Surfaces in $ \Real^n $ and the Theory of Extrema with Constraint}
 \subsection{$ k $-Dimensional Surfaces in $ \Real^n $}

@@ -273,6 +273,143 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 	then the equation above is called a \textit{linear difference equation} (or \textit{recurrence relation}).
 \end{Definition}
 
+	\chapter{Matrices}
+	\section{Matrices and Arithmetic Operations on Them}
+	\begin{Definition}
+		A \textit{diagonal matrix} is a square matrix whose nondiagonal entries are zero.
+	\end{Definition}
+\begin{Definition}
+	Two matrices are equal if they have the same size and each entries are equal.
+\end{Definition}
+\begin{Definition}
+	The \textit{sum} of two matrices is the sum of each corresponding entries in these two matrices. Thus the sum is defined only when they have the same size.
+\end{Definition}
+\begin{Definition}
+	The \textit{scalar multiple} of a matrix has entries of the product of the scalar and each corresponding original entries.
+\end{Definition}
+\begin{Theorem}
+	The set of matrices of the same size with respect to matrix addition and scalar multiplication over the field of real numbers is a vector space.
+\end{Theorem}
+\begin{Definition}
+	If $ \matr{A} $ is an $ m \times n $ matrix, and if $ \matr{B} $ is an $ n \times p $ matrix with columns $ \vec{b}_1,\cdots,\vec{b}_p $, then the \textit{product} $ \matr{AB} $ is the $ m \times p $ matrix whose columns are $ \matr{A} \vec{b}_1,\cdots,\matr{A}\vec{b}_p $. Multiplication of matrices corresponds to composition of linear transformations.
+\end{Definition}
+\begin{Theorem}
+	The multiplication has the following properties:
+	\begin{itemize}
+		\item Associativity of multiplication;
+		\item Left distribution;
+		\item Right distribution;
+		\item Associativity over scalar multiplication;
+		\item Identity for matrix multiplication; i.e. If $ \matr{A} $ is a matrix of size $ m \times n $, then
+		\begin{equation}
+			\matr{I}_m \matr{A} = \matr{A}=\matr{A}\matr{I}_n \nonumber
+		\end{equation}
+		where $ \matr{I}_n $ is the $ n \times n $  identity matrix.
+	\end{itemize}
+\end{Theorem}
+\begin{Definition}
+	In general, matrix multiplication is not commutative and the cancellation law do not hold. When two matrices' multiplication is commutative, they are said to be \textit{commute} with one another. Also, if a product $ \matr{A}\matr{B} $ is the zero matrix, in general it does not mean that either $ \matr{A}=\matr{0} $ or $ \matr{B}=\matr{0} $.
+\end{Definition}
+\begin{Definition}
+	If $ \matr{A} $ is an $ m \times n $ matrix and $ k $ is a positive integer, then $ \matr{A}^k $ denoted the product of $ k $ copies of $ \matr{A} $, i.e. the $ k $th power of $ \matr{A} $. The $ 0 $th power of a matrix is the identity matrix.
+\end{Definition}
+\begin{Definition}
+	If $ \matr{A} $ is an $ m \times n $ matrix, the \textit{transpose} of $ \matr{A} $ is the $ n \times m $ matrix, denoted $ \matr{A}^T $, whose columns are formed from the corresponding rows of $ \matr{A} $.
+\end{Definition}
+\begin{Theorem}
+	The transpose operation has the following properties:
+	\begin{itemize}
+		\item $ (\matr{A}^T)^T=\matr{A} $;
+		\item $ (\matr{A}+\matr{B})^T = \matr{A}^T+ \matr{B}^T $;
+		\item Associativity with scalar multiplication;
+		\item $ (\matr{AB})^T = \matr{B}^T \matr{A}^T $, that is, the transpose of a product of arbitrary number of matrices equals the product of their transpose in the reverse order.
+	\end{itemize}
+\end{Theorem}
+\section{The Inverse of a Matrix}
+\begin{Definition}
+	If $ \matr{A} $ is an $ n \times n $ matrix, then if
+	\begin{equation}
+		\matr{A}\matr{A}^{-1}=\matr{I}_n\nonumber
+	\end{equation}
+	we say that $ \matr{A} $ is \textit{invertible} and $ \matr{A}^{-1} $ an \textit{inverse} of $ \matr{A} $. The inverse of a matrix is unique. If a matrix is not invertible, it is called a \textit{singular matrix}.
+\end{Definition}
+\begin{Definition}
+	The \textit{determinant} of the matrix $ \matr{A} $
+	\begin{equation}
+		\begin{bmatrix}
+		a &b \\
+		c &d
+		\end{bmatrix} \nonumber
+	\end{equation}
+	denoted $ \det \matr{A} $ and equals $ ad-bc $. Determinant is only defined for a square matrix, but the procedure above can be repeated on higher dimension matrices, for example
+	\begin{equation}
+		\det {\begin{bmatrix}a &b &c &d \\ e &f &g &h \\ i &j &k &l \\ m &n &o &p \end{bmatrix}}
+	=a
+	\det{\begin{bmatrix}f &g &h \\ j &k &l \\ n &o &p \end{bmatrix}}
+	-b
+	\det {\begin{bmatrix}e &g &h \\ i &k &l \\ m &o &p \end{bmatrix}}
+	+c
+	\det {\begin{bmatrix}e &f &h \\ i &j &l \\ m &n &p \end{bmatrix}}
+	-d
+	\det {\begin{bmatrix}e &f &g \\ i &j &k \\ m &n &o \end{bmatrix}} \nonumber
+	\end{equation}
+	By the Leibniz formula for the determinant of an $ n \times n $ matrix $ \matr{A} $ is
+	\begin{equation}
+		\det(\matr{A})= \sum_{\sigma \in S_n}(\sgn(\sigma)\prod_{i=1}^{n}a_{i,\sigma_{i}}) \nonumber
+	\end{equation}
+	Here the sum is computed over all permutations $ \sigma $ of the set $ \{1, 2, …, n\} $. \\
+	A permutation is a function that reorders this set of integers. The value in the $ i $th position after the reordering $ \sigma $ is denoted by $ \sigma_i $. For example, for $ n = 3 $, the original sequence $ 1, 2, 3 $ might be reordered to $ \sigma $ = $ [2, 3, 1] $, with $ \sigma_1  =  2 $, $ \sigma_2  = 3$, and $ \sigma_3  = 1$. The set of all such permutations (also known as the symmetric group on $ n $ elements) is denoted by $ S_n $. \\
+	For each permutation $ \sigma $, $ \sgn(\sigma) $ denotes the signature of $ \sigma $, a value that is $ +1  $ whenever the reordering given by $ \sigma $ can be achieved by successively interchanging two entries an even number of times, and $ -1 $ whenever it can be achieved by an odd number of such interchanges.
+	
+\end{Definition}
+\begin{Definition}
+	If $ \matr{A} $ is a square matrix, then the \textit{minor} of the entry in the $ i $-th row and $ j $-th column (also called the \textit{$ (i,j) $ minor}, or a \textit{first minor}) is the determinant of the submatrix formed by deleting the $ i $-th row and $ j $-th column. This number is often denoted $ M{i,j} $. The $ (i,j) $ cofactor is obtained by multiplying the minor by $ (-1)^{i+j} $. \newpara
+	In general, let A be an $ m \times n $ matrix and $ k $ an integer with $ 0 < k \leqslant m $, and $ k \leqslant n $. A $ k \times k $ minor of $ \matr{A} $, also called minor determinant of order $ k $ of $ \matr{A} $ or, if $ m=n $, $ (n-k) $th minor determinant of $  \matr{A} $, is the determinant of a $ k \times k $ matrix obtained from $ \matr{A} $ by deleting $ m - k $ rows and $ n - k $ columns. 
+\end{Definition}
+\begin{Definition}
+	The matrix formed by all of the cofactors of a square matrix A is called the \textit{cofactor matrix}.
+\end{Definition}
+\begin{Definition}
+	The \textit{adjugate} is the transpose of the cofactor matrix of it, that is, if $ \matr{A} $ is a matrix and $ \matr{C} $ is its cofactor matrix, then
+	\begin{equation}
+		\adj(\matr{A})=\matr{C}^T \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Theorem}
+	A matrix $ \matr{A} $ is invertible only if $ \det(\matr{A}) \neq 0$, and in this case
+	\begin{equation}
+		\matr{A}^{-1}=\frac{1}{\det(\matr{A})} \adj(\matr{A}) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Theorem}
+	For a matrix $ \matr{A} $
+	\begin{equation}
+		\matr{A}\adj(\matr{A}) = \det(\matr{A})\matr{I} \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Theorem}
+	If $ \matr{A} $ is an invertible $ n \times n $ matrix, then for each $ \vec{b} \in \Real^n $, the equation $ \matr{A}\vec{x}=\vec{b} $ has the unique solution $ \vec{x}=\matr{A}^{-1}\vec{b} $.
+\end{Theorem}
+\begin{Theorem}
+	\begin{itemize}
+		\item The inverse of the inverse of a invertible matrix is the matrix itself.
+		\item The inverse of the product of arbitrary number of invertible square matrices is the product of the inverse of themselves multiplied in the reverse order.
+		\item The transpose of a invertible matrix is also invertible. Moreover, the inverse of a matrix's transpose is the transpose of the matrix's inverse.
+	\end{itemize}
+\end{Theorem}
+\begin{Definition}
+	An \textit{elementary matrix} is a matrix obtained by performing a single elementary row operation on a identity matrix.
+\end{Definition}
+\begin{Theorem}
+	If an elementary row operations is performed on an $ m \times n $ matrix $ \matr{A} $, the resulting matrix can be written as $ \matr{EA} $, where the $ m \times m $ matrix $ \matr{E} $ is created by performing the same row operation on $ \matr{I}_m $.
+\end{Theorem}
+\begin{Theorem}
+	Each elementary matrix $ \matr{E} $ is invertible. The inverse of $ \matr{E} $ is the elementary matrix of the same type that transforms $ \matr{E} $ back into $ \matr{I} $.
+\end{Theorem}
+\begin{Theorem}
+	An $ n \times n $ matrix $ \matr{A} $ is invertible iff $ \matr{A} $ is a row equivalent to $ \matr{I}_n $, and in this case, any sequence of elementary row operations that reduces $ \matr{A} $ to $ \matr{I}_n $ also transforms $ \matr{I}_n $ into $ \matr{A}^{-1} $.
+\end{Theorem}
+
 	\chapter{Vector Spaces and Subspaces}
 	\chapter{Orthogonality}
 	\chapter{Determinants}

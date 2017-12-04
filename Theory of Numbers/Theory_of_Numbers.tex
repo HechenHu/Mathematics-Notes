@@ -382,15 +382,42 @@ That is, adding, subtracting, and multiplying congruent numbers with respect to 
 		\sum_{i=0}^{n}a_i 10^i \equiv \sum_{i=0}^{n}a_i \pmod{9},\qquad \sum_{i=0}^{n}a_i 10^i \equiv \sum_{i=0}^{n}(-1)^i a_i \pmod{9} \nonumber
 	\end{equation}
 \end{Example}
+
+
+\section{Residue Classes and Systems}
 \begin{Definition}
 	If we choose an arbitrary integer and form a class consists of elements that are congruent modulo $ m $ to it and denoted by $ (a)_m $, where $ a $ is an element of this class, then it is clear that no two arbitrary classes have a common element if they are not the same class. These classes are called the \textit{residue classes modulo $ m $}.
 \end{Definition}
 \begin{Theorem}
-For all integers in a residue class modulo $ m $ their g.c.d with $ m $ are the same.
+	For all integers in a residue class modulo $ m $ their g.c.d with $ m $ are the same.
 \end{Theorem}
 \begin{proof}
-	If $ a $ is in this class, then all other elements can be expressed in the form of $ a+pm $, where $ p \in \Zahlen $. It is sufficient to show that if $ (a,m)=d $, then $ d|a+pm $ and if $ (a+pm,m)=d^\prime $, then $ d|a $.
+	If $ a \equiv b \pmod{m}$ and $ (b,m)=d $, then $ a \equiv b \equiv 0 \pmod{d} $, i.e., $ d | a $. Since $ (b,m) | m $, we have that
+	\begin{equation}
+	(b,m)|(a,m)\nonumber
+	\end{equation}
+	and by the commutativity of modulus and let $ (a,m)=k $, we have
+	\begin{equation}
+	(a,m)|(b,m) \nonumber
+	\end{equation}
+	then we have
+	\begin{equation}
+	(a,m)=(b,m) \nonumber
+	\end{equation}
 \end{proof}
+\begin{Definition}
+	A set that contains exactly one element from every residue class modulo $ m $ is called a \textit{complete residue system modulo $ m $}.
+\end{Definition}
+\begin{Theorem}
+	If a set of numbers has $ m $ elements that are pairwise incongruent modulo $ m $, then the set is a complete residue system modulo $ m $.
+\end{Theorem}
+\begin{Theorem}
+	If $ a $ and $ m $ are relatively prime integers, $ b $ is an arbitrary integer, and $ r_1,r_2,\cdots,r_, $ is a complete residue system modulo $ m $, then
+	\begin{equation}
+		a r_1 + b,a r_2 + b,\cdots,a r_m +b \nonumber
+	\end{equation}
+	is a complete residue system modulo $ m $.
+\end{Theorem}
 
 	
 \chapter{Rational and Irrational Numbers. Approximation of Numbers by Rational Numbers (Diophantine Approximation)}
