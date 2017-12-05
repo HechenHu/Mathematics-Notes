@@ -4485,7 +4485,7 @@ By virtue of the linearity of the differential $ d f(x_0) $, we have that if $ f
 	\begin{equation}
 		d f(x_0)\vec{v} = \innPro{\vec{\xi}}{\vec{v}}\nonumber
 	\end{equation}
-	is called the \textit{gradient} of the function at that point and is denoted $ \grad{f(x_0)} $ or $ \nabla f(x_0) $. Thus
+	is called the \textit{gradient} of the function at that point and is denoted $ \grad f(x_0) $ or $ \nabla f(x_0) $. Thus
 	\begin{align}
 	\Aboxed{d f(x_0)\vec{v} = \innPro{\nabla f(x_0)}{\vec{v}}}
 	\nonumber
@@ -4838,9 +4838,81 @@ is equal to the same order $ k $ at every point $ x \in U $, then
 
 \section{Surfaces in $ \Real^n $ and the Theory of Extrema with Constraint}
 \subsection{$ k $-Dimensional Surfaces in $ \Real^n $}
+\begin{Definition}
+	A set $ S \subset \Real^n $ is called a \textit{$ k $-dimensional smooth surface(submanifold) in(of) $ \Real^n $} if for every $ x_0 \in S $ there exist a neighborhood $ U(x_0)\in \Real^n $ and a diffeomorphism $ \varphi:U(x_0)\to I^n $ of this neighborhood onto the standard $ n $-dimensional cube $ I^n=\{t \in \Real^n | |t^i|<1,t=1,\cdots,n\} $ of the space $ \Real^n $ under which the image of the set $ S \cap U(x_0) $ is the portion of the $ k $-dimensional plane in $ \Real^n $ defined by the relations $ t^{k+1}=0,\cdots,t^n=0 $ lying inside $ I^n $. \newpara
+	The degree of smoothness of the surface is measured by the degree of smoothness of the diffeomorphism.
+\end{Definition}
 \subsection{The Tangent Space}
-\subsection{Extrema with Constraint}
+\begin{Definition}
+	If a $ k $-dimensional surface $ S \subset \Real^n $, $ 1 \leqslant k \leqslant n $, is defined parametrically in a neighborhood of $ x_0 \in S $ by means of a smooth mapping $ (t^1,\cdots,t^k)=t \mapsto x= (x^1,\cdots,x^n) $ such that $ x_0 = x(0) $ and the matrix $ x^\prime(0) $ has rank $ k $, then the $ k $-dimensional surface in $ \Real^n $ defined parametrically by the matrix equality
+	\begin{equation}
+		x-x_0 = x^\prime(0)t \nonumber
+	\end{equation}
+	or in coordinate form
+	\begin{equation}
+		\begin{cases}
+		&x^1-x_0^1 = \frac{\partial x^1}{\partial t^1}(0)t^1 + \cdots +\frac{\partial x^1}{\partial t^k}(0)t^k \\
+		&\vdots \\
+		&x^n-x_0^n = \frac{\partial x^n}{\partial t^1}(0)t^1 + \cdots +\frac{\partial x^n}{\partial t^k}(0)t^k \\
+		\end{cases}
+		\nonumber
+	\end{equation}
+	is called the \textit{tangent plane} or \textit{tangent space to the surface $ S $ at $ x_0 \in S $} and denoted by $ T S_x $.
+\end{Definition}
+\begin{Proposition}
+	The space $ TS_{x_0} $ tangent to a smooth surface $ S \subset \Real^n $ at a point $ x_0 \in S $ consists if the vectors tangent to smooth curves lying on the surface $ S $ and passing through the point $ x_0 $.
+\end{Proposition}
+\begin{proof}
+	\exercise
+\end{proof}
 
+\subsection{Extrema with Constraint}
+\subsubsection{A Necessary Condition for an Extremum with Constraint}
+\begin{Theorem}
+	Let $ f:D \to \Real $ be a function defined on a open set $ D \subset \Real^n $ and belonging to $ C^{(1)}(D,\Real) $. Let $ S $ be a smooth surface in $ D $. \\
+	A necessary condition for a point $ x_0 \in S $ that is noncritical for $ f $ to be a local extremum of $ f|_S $ is that
+	\begin{align}
+		\Aboxed{&TS_{x_0}\subset TN_{x_0}} \nonumber
+	\end{align}
+	where $ TS_{x_0} $ is the tangent space to the surface $ S $ at $ x_0 $ and $ TN_{x_0} $ is the tangent space to the level surface $ N = \{x \in D |f(x)=f(x_0) \} $ of $ f $ to which $ x_0 $ belongs. This statement is equivalent to the analytic statement that the vector $ \grad f(x_0) $ is a linear combination of the vector $ \grad F^i(x_0)(i=1,\cdots,m) $, that is
+	\begin{equation}
+		\nabla f(x_0)=\sum_{i=1}^{m}\lambda_i \nabla F^i(x_0) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Definition}
+	The auxiliary function
+	\begin{equation}
+		L(x,\lambda) = f(x)-\sum_{i=1}^{m}\lambda_i F^i (x) \nonumber
+	\end{equation}
+	in $ n+m $ variables $ (x,\lambda)=(x^1,\cdots,x^m,\lambda_1,\cdots,\lambda_n) $ is called the \textit{Lagrange function} and the method of using it to find extremum with constraint is called the \textit{method of Lagrange multipliers}.
+\end{Definition}
+\subsubsection{A Sufficient Condition for a Constrained Extremum}
+\begin{Theorem}
+	Let $ f:D \to \Real $ be a function defined on an open set $ D \subset \Real^n $ and belonging to the class $ C^{(2)} (D,\Real)$; Let $ S $ be the surface in $ D $ defined by
+	\begin{equation}
+		\begin{cases}
+		&F^1(x^1,\cdots,x^n)=0\\
+		&\vdots \\
+		&F^m(x^1,\cdots,x^n)=0
+		\end{cases}\nonumber
+	\end{equation}
+	where $ F^i \in C^{(2)} (D,\Real)(i=1,\cdots,m) $ and the rank of the system of functions $ \{F^1,\cdots,F^m\} $ at each point of $ D $ is $ m $.\\
+	Suppose that the parameters $ \lambda_1,\cdots,\lambda_m $ in the Lagrange function
+	\begin{equation}
+		L(x)=L(x,\lambda) = f(x^1,\cdots,x^n)-\sum_{i=1}^{m}\lambda_i F^i (x^1,\cdots,x^n) \nonumber
+	\end{equation}
+	have been chosen in accordance with the necessary criterion for a constrained extremum of the function $ f|_S $ at $ x_0 \in S $. \\
+	A sufficient condition for the point $ x_0 $ to be an extremum of the function $ f|_S $ is that the quadratic form
+	\begin{equation}
+		\frac{\partial^2 L}{\partial x^i \partial x^j}(x_0)\xi^i \xi^j \nonumber
+	\end{equation}
+	be either positive-definite or negative-definite for vectors $ \xi \in TS_{x_0} $.\\
+	If the quadratic form is positive-definite on $ TS_{x_0} $, then $ x_0 $ is a strict local minimum of $ f|_S $; if it is negative-definite, then $ x_0 $ is a strict local maximum.\\
+	A sufficient condition for the point $ x_0 $ not to be an extremum of $ f|_S $ is that the quadratic form assume both positive and negative values on $ TS_{x_0} $.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
 
 
 %VOLUME TWO

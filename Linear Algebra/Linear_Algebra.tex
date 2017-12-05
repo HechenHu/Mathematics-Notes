@@ -409,6 +409,41 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 \begin{Theorem}
 	An $ n \times n $ matrix $ \matr{A} $ is invertible iff $ \matr{A} $ is a row equivalent to $ \matr{I}_n $, and in this case, any sequence of elementary row operations that reduces $ \matr{A} $ to $ \matr{I}_n $ also transforms $ \matr{I}_n $ into $ \matr{A}^{-1} $.
 \end{Theorem}
+\begin{Theorem}
+	Let $ \matr{A} $ be a square $ n \times n $ matrix. Then the following statements are equivalent.
+	\begin{itemize}
+		\item $ \matr{A} $ is an invertible matrix.
+		\item $ \matr{A} $ is row equivalent to the $ n \times n $ identity matrix.
+		\item $ \matr{A} $ has $ n $ pivot positions. \newpara
+		
+		\item The equation $ \matr{A}\vec{x}=\vec{0} $ has only the trivial solution.
+		\item The columns of $ \matr{A} $ form a linearly independent set.
+		\item The linear transformation $ \vec{x} \mapsto \matr{A}\vec{x} $ is injective.\newpara
+		
+		\item The equation $ \matr{A}\vec{x}=\vec{b} $ has at least one solution for each $ \vec{b} $ in $ \Real^n $.
+		\item The columns of $ \matr{A} $ span $ \Real^n $.
+		\item The linear transformation $ \vec{x} \mapsto \matr{A}\vec{x} $ maps $ \Real^n $ onto $ \Real^n $. \newpara
+		
+		\item There is an $ n \times n $ matrix $ \matr{C} $ such that $ \matr{CA}=\matr{I} $.
+		\item There is an $ n \times n $ matrix $ \matr{D} $ such that $ \matr{AD}=\matr{I} $.
+		\item $ \matr{A}^T $ is an invertible matrix.
+		
+	\end{itemize}
+\end{Theorem}
+\begin{Proposition}
+	Let $ \matr{A} $ and $ \matr{B} $ be square matrices. If $ \matr{AB}=\matr{I} $, then $ \matr{A} $ and $ \matr{B} $ are both invertible, with $ \matr{B}=\matr{A}^{-1} $ and $ \matr{A}=\matr{B}^{-1}  $
+\end{Proposition}
+\begin{Definition}
+	A linear transformation $ T: \Real^n \to \Real^n $ is \textit{invertible} if there exists a function $ S: \Real^n \to \Real^n $ such that
+	\begin{align}
+		&(\forall \vec{x}\in \Real^n)\quad S(T(\vec{x}))=\vec{x}\nonumber\\
+		&(\forall \vec{x}\in \Real^n)\quad T(S(\vec{x}))=\vec{x}\nonumber
+	\end{align}
+	and $ S $ is called the \textit{inverse} of $ T $ and denoted $ T^{-1} $.
+\end{Definition}
+\begin{Theorem}
+	A linear transformation is invertible iff its standard matrix is invertible. In this case its inverse is unique.
+\end{Theorem}
 
 	\chapter{Vector Spaces and Subspaces}
 	\chapter{Orthogonality}
