@@ -9,10 +9,7 @@
 \BOOKMARK [0][-]{chapter.2}{Matrices}{}% 9
 \BOOKMARK [1][-]{section.2.1}{Matrices and Arithmetic Operations on Them}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.2}{The Inverse of a Matrix}{chapter.2}% 11
-\BOOKMARK [0][-]{chapter.3}{Vector Spaces and Subspaces}{}% 12
-\BOOKMARK [0][-]{chapter.4}{Orthogonality}{}% 13
-\BOOKMARK [0][-]{chapter.5}{Determinants}{}% 14
-\BOOKMARK [0][-]{chapter.6}{Eigenvalues and Eigenvectors}{}% 15
-\BOOKMARK [0][-]{chapter.7}{The Singular Value Decomposition\(SVD\)}{}% 16
-\BOOKMARK [0][-]{chapter.8}{Linear Transformations}{}% 17
-\BOOKMARK [0][-]{chapter.9}{Complex Vectors and Matrices}{}% 18
+\BOOKMARK [1][-]{section.2.3}{Subspaces of \040Rn }{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Determinants}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Determinants and some other Concepts}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Properties of Determinants}{chapter.3}% 15

@@ -10,10 +10,7 @@
 \contentsline {chapter}{\numberline {2}Matrices}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Matrices and Arithmetic Operations on Them}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}The Inverse of a Matrix}{8}{section.2.2}
-\contentsline {chapter}{\numberline {3}Vector Spaces and Subspaces}{13}{chapter.3}
-\contentsline {chapter}{\numberline {4}Orthogonality}{15}{chapter.4}
-\contentsline {chapter}{\numberline {5}Determinants}{17}{chapter.5}
-\contentsline {chapter}{\numberline {6}Eigenvalues and Eigenvectors}{19}{chapter.6}
-\contentsline {chapter}{\numberline {7}The Singular Value Decomposition(SVD)}{21}{chapter.7}
-\contentsline {chapter}{\numberline {8}Linear Transformations}{23}{chapter.8}
-\contentsline {chapter}{\numberline {9}Complex Vectors and Matrices}{25}{chapter.9}
+\contentsline {section}{\numberline {2.3}Subspaces of $ \mathbb {R}^n $}{10}{section.2.3}
+\contentsline {chapter}{\numberline {3}Determinants}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Determinants and some other Concepts}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Properties of Determinants}{14}{section.3.2}

@@ -291,6 +291,9 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 	The set of matrices of the same size with respect to matrix addition and scalar multiplication over the field of real numbers is a vector space.
 \end{Theorem}
 \begin{Definition}
+	A square matrix is called \textit{lower triangular} if all the entries above the main diagonal are zero. Similarly, a square matrix is called \textit{upper triangular} if all the entries below the main diagonal are zero. A triangular matrix is one that is either lower triangular or upper triangular. A matrix that is both upper and lower triangular is called a \textit{diagonal matrix}.
+\end{Definition}
+\begin{Definition}
 	If $ \matr{A} $ is an $ m \times n $ matrix, and if $ \matr{B} $ is an $ n \times p $ matrix with columns $ \vec{b}_1,\cdots,\vec{b}_p $, then the \textit{product} $ \matr{AB} $ is the $ m \times p $ matrix whose columns are $ \matr{A} \vec{b}_1,\cdots,\matr{A}\vec{b}_p $. Multiplication of matrices corresponds to composition of linear transformations.
 \end{Definition}
 \begin{Theorem}
@@ -333,60 +336,14 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 	\end{equation}
 	we say that $ \matr{A} $ is \textit{invertible} and $ \matr{A}^{-1} $ an \textit{inverse} of $ \matr{A} $. The inverse of a matrix is unique. If a matrix is not invertible, it is called a \textit{singular matrix}.
 \end{Definition}
-\begin{Definition}
-	The \textit{determinant} of the matrix $ \matr{A} $
-	\begin{equation}
-		\begin{bmatrix}
-		a &b \\
-		c &d
-		\end{bmatrix} \nonumber
-	\end{equation}
-	denoted $ \det \matr{A} $ and equals $ ad-bc $. Determinant is only defined for a square matrix, but the procedure above can be repeated on higher dimension matrices, for example
-	\begin{equation}
-		\det {\begin{bmatrix}a &b &c &d \\ e &f &g &h \\ i &j &k &l \\ m &n &o &p \end{bmatrix}}
-	=a
-	\det{\begin{bmatrix}f &g &h \\ j &k &l \\ n &o &p \end{bmatrix}}
-	-b
-	\det {\begin{bmatrix}e &g &h \\ i &k &l \\ m &o &p \end{bmatrix}}
-	+c
-	\det {\begin{bmatrix}e &f &h \\ i &j &l \\ m &n &p \end{bmatrix}}
-	-d
-	\det {\begin{bmatrix}e &f &g \\ i &j &k \\ m &n &o \end{bmatrix}} \nonumber
-	\end{equation}
-	By the Leibniz formula for the determinant of an $ n \times n $ matrix $ \matr{A} $ is
-	\begin{equation}
-		\det(\matr{A})= \sum_{\sigma \in S_n}(\sgn(\sigma)\prod_{i=1}^{n}a_{i,\sigma_{i}}) \nonumber
-	\end{equation}
-	Here the sum is computed over all permutations $ \sigma $ of the set $ \{1, 2, …, n\} $. \\
-	A permutation is a function that reorders this set of integers. The value in the $ i $th position after the reordering $ \sigma $ is denoted by $ \sigma_i $. For example, for $ n = 3 $, the original sequence $ 1, 2, 3 $ might be reordered to $ \sigma $ = $ [2, 3, 1] $, with $ \sigma_1  =  2 $, $ \sigma_2  = 3$, and $ \sigma_3  = 1$. The set of all such permutations (also known as the symmetric group on $ n $ elements) is denoted by $ S_n $. \\
-	For each permutation $ \sigma $, $ \sgn(\sigma) $ denotes the signature of $ \sigma $, a value that is $ +1  $ whenever the reordering given by $ \sigma $ can be achieved by successively interchanging two entries an even number of times, and $ -1 $ whenever it can be achieved by an odd number of such interchanges.
-	
-\end{Definition}
-\begin{Definition}
-	If $ \matr{A} $ is a square matrix, then the \textit{minor} of the entry in the $ i $-th row and $ j $-th column (also called the \textit{$ (i,j) $ minor}, or a \textit{first minor}) is the determinant of the submatrix formed by deleting the $ i $-th row and $ j $-th column. This number is often denoted $ M{i,j} $. The $ (i,j) $ cofactor is obtained by multiplying the minor by $ (-1)^{i+j} $. \newpara
-	In general, let A be an $ m \times n $ matrix and $ k $ an integer with $ 0 < k \leqslant m $, and $ k \leqslant n $. A $ k \times k $ minor of $ \matr{A} $, also called minor determinant of order $ k $ of $ \matr{A} $ or, if $ m=n $, $ (n-k) $th minor determinant of $  \matr{A} $, is the determinant of a $ k \times k $ matrix obtained from $ \matr{A} $ by deleting $ m - k $ rows and $ n - k $ columns. 
-\end{Definition}
-\begin{Definition}
-	The matrix formed by all of the cofactors of a square matrix A is called the \textit{cofactor matrix}.
-\end{Definition}
-\begin{Definition}
-	The \textit{adjugate} is the transpose of the cofactor matrix of it, that is, if $ \matr{A} $ is a matrix and $ \matr{C} $ is its cofactor matrix, then
-	\begin{equation}
-		\adj(\matr{A})=\matr{C}^T \nonumber
-	\end{equation}
-\end{Definition}
+
 \begin{Theorem}
 	A matrix $ \matr{A} $ is invertible only if $ \det(\matr{A}) \neq 0$, and in this case
 	\begin{equation}
 		\matr{A}^{-1}=\frac{1}{\det(\matr{A})} \adj(\matr{A}) \nonumber
 	\end{equation}
 \end{Theorem}
-\begin{Theorem}
-	For a matrix $ \matr{A} $
-	\begin{equation}
-		\matr{A}\adj(\matr{A}) = \det(\matr{A})\matr{I} \nonumber
-	\end{equation}
-\end{Theorem}
+
 \begin{Theorem}
 	If $ \matr{A} $ is an invertible $ n \times n $ matrix, then for each $ \vec{b} \in \Real^n $, the equation $ \matr{A}\vec{x}=\vec{b} $ has the unique solution $ \vec{x}=\matr{A}^{-1}\vec{b} $.
 \end{Theorem}
@@ -444,16 +401,167 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 \begin{Theorem}
 	A linear transformation is invertible iff its standard matrix is invertible. In this case its inverse is unique.
 \end{Theorem}
+\begin{Theorem}
+	If $ \matr{A} $ is $ m \times n $ and $ \matr{B} $ is $ n \times p $, then
+	\begin{align}
+	\matr{AB}&=\begin{bmatrix}
+	\col_1(\matr{A}) &\col_2(\matr{A}) &\cdots &\col_n(\matr{A}) 
+	\end{bmatrix}
+	\begin{bmatrix}
+	\row_1(\matr{B}) \\
+	\row_2(\matr{B}) \\
+	\vdots \\
+	\row_n(\matr{B}) \\
+	\end{bmatrix} \nonumber\\
+	&=\col_1(\matr{A})\row_1(\matr{B})+\cdots \col_n(\matr{A})\row_n(\matr{B}) \nonumber
+	\end{align}
+\end{Theorem}
+\begin{Definition}
+	A \textit{block matrix} is a partitioned matrix with zero blocks off the main diagonal. Such matrix is invertible iff each block on the diagonal is invertible.
+\end{Definition}
+\begin{Definition}
+	A \textit{factorization} of a matrix is an equation that expresses it as a product of two or more matrices.
+\end{Definition}
+\begin{Definition}
+	An square matrix is said to be \textit{strictly diagonally dominant} if the absolute of each diagonal entry exceeds the sum of the absolute values of the other entries in the same row.
+\end{Definition}
 
-	\chapter{Vector Spaces and Subspaces}
-	\chapter{Orthogonality}
+\section{Subspaces of $ \Real^n $}
+\begin{Definition}
+	A \textit{subspace} of $ \Real^n $ is any set $ H \in \Real^n$ that has three properties:
+	\begin{itemize}
+		\item The zero vector is in $ H $;
+		\item For each vector $ \vec{u} $ and $ \vec{v} $ in $ H $, their sum is in $ H $ (addition is closed on $ H $);
+		\item For each $ \vec{u} $ in $ H $ and each scalar $ c $, the vector $ c \vec{u} $ is in $ H $ (scalar multiplication is closed on $ H $).
+	\end{itemize}
+\end{Definition}
+\begin{Definition}
+	The \textit{column space} of a matrix $ \matr{A} $ is the set $ \col \matr{A} $ of all linear combinations of the columns of $ \matr{A} $.
+\end{Definition}
+\begin{Definition}
+	The \textit{null space} of a matrix $ \matr{A} $ is the set $ \nul \matr{A} $ of all solutions to the homogeneous equation $ \matr{A}\vec{x}=\vec{0} $.
+\end{Definition}
+\begin{Theorem}
+	The null space of a $ m \times n $ matrix is a subspace of $ \Real^n $.
+\end{Theorem}
+\begin{Definition}
+	A \textit{basis} for a subspace $ H $ of $ \Real^n $ is a linearly independent set in $ H $ that spans $ H $.
+\end{Definition}
+\begin{Example}
+	The \textit{standard basis} for $ \Real^n $ are vectors $ \vec{e}_1,\cdots,\vec{e}_n $, where
+	\begin{equation}
+		\vec{e}_1 = \begin{bmatrix}
+		1 \\ 0 \\ \vdots \\ 0
+		\end{bmatrix}
+		,\cdots,\vec{e}_n = \begin{bmatrix}
+		0 \\ 0 \\ \vdots \\ 1
+		\end{bmatrix}\nonumber
+	\end{equation}
+\end{Example}
+\begin{Theorem}
+	The pivot columns of a matrix $ \matr{A} $ form a basis for the column space of $ \matr{A} $.
+\end{Theorem}
+\begin{Definition}
+	Suppose the set $ \mathcal{B}=\{\vec{b}_1,\cdots,\vec{b}_p \} $ is the basis for a subspace $ H $. For each $ \vec{x}\in H $, the \textit{coordinates of $ \vec{x} $ relative to the basis $ \mathcal{B} $} are the weights $ c_1,\cdots,c_p $ such that $ \vec{x}=c_1 \vec{b}_1 + \cdots + c_p \vec{b}_p $, and the vector in $ \Real^p $
+	\begin{equation}
+		[\vec{x}]_{\mathcal{B}}=\begin{bmatrix}
+		c_1 \\ \cdots \\ c_p
+		\end{bmatrix}
+		\nonumber
+	\end{equation}
+	is called the \textit{coordinate vector of $ \vec{x} $ relative to $ \mathcal{B} $}.
+\end{Definition}
+\begin{Definition}
+	The \textit{dimension} of a nonzero subspace $ H $, denoted by $ \dim H $, is the number of vectors in any basis for $ H $. The dimension of the zero subspace $ \{\vec{0}\} $ is defined to be zero.
+\end{Definition}
+\begin{Definition}
+	The \textit{rank} of a matrix $ \matr{A} $, denoted by $ \rank \matr{A} $, is the dimension of the column space of $ \matr{A} $.
+\end{Definition}
+\begin{Theorem}[The Rank Theorem]
+	If a matrix $ \matr{A} $ has $ n $ columns, then $ \rank \matr{A}+ \dim \nul \matr{A}=n $.
+\end{Theorem}
+\begin{Theorem}[The Basis Theorem]
+	Let $ H $ be a $ p $-dimensional subspace of $ \Real^n $. Any linearly independent set of exactly $ p $ elements in $ H $ is automatically a basis for $ H $. Also, any set of $ p $ elements of $ H $ that spans $ H $ is a basis for $ H $.
+\end{Theorem}
+
+	
 	\chapter{Determinants}
-	\chapter{Eigenvalues and Eigenvectors}
-	\chapter{The Singular Value Decomposition(SVD)}
-	\chapter{Linear Transformations}
-	\chapter{Complex Vectors and Matrices}
-	
-	
+	\section{Determinants and some other Concepts}
+	\begin{Definition}
+		The \textit{determinant} of the matrix $ \matr{A} $
+		\begin{equation}
+		\begin{bmatrix}
+		a &b \\
+		c &d
+		\end{bmatrix} \nonumber
+		\end{equation}
+		denoted $ \det \matr{A} $ and equals $ ad-bc $. Determinant is only defined for a square matrix, but the procedure above can be repeated on higher dimension matrices, for example
+		\begin{equation}
+		\det {\begin{bmatrix}a &b &c &d \\ e &f &g &h \\ i &j &k &l \\ m &n &o &p \end{bmatrix}}
+		=a
+		\det{\begin{bmatrix}f &g &h \\ j &k &l \\ n &o &p \end{bmatrix}}
+		-b
+		\det {\begin{bmatrix}e &g &h \\ i &k &l \\ m &o &p \end{bmatrix}}
+		+c
+		\det {\begin{bmatrix}e &f &h \\ i &j &l \\ m &n &p \end{bmatrix}}
+		-d
+		\det {\begin{bmatrix}e &f &g \\ i &j &k \\ m &n &o \end{bmatrix}} \nonumber
+		\end{equation}
+		By the Leibniz formula for the determinant of an $ n \times n $ matrix $ \matr{A} $ is
+		\begin{equation}
+		\det(\matr{A})= \sum_{\sigma \in S_n}(\sgn(\sigma)\prod_{i=1}^{n}a_{i,\sigma_{i}}) \nonumber
+		\end{equation}
+		Here the sum is computed over all permutations $ \sigma $ of the set $ \{1, 2, …, n\} $. \\
+		A permutation is a function that reorders this set of integers. The value in the $ i $th position after the reordering $ \sigma $ is denoted by $ \sigma_i $. For example, for $ n = 3 $, the original sequence $ 1, 2, 3 $ might be reordered to $ \sigma $ = $ [2, 3, 1] $, with $ \sigma_1  =  2 $, $ \sigma_2  = 3$, and $ \sigma_3  = 1$. The set of all such permutations (also known as the symmetric group on $ n $ elements) is denoted by $ S_n $. \\
+		For each permutation $ \sigma $, $ \sgn(\sigma) $ denotes the signature of $ \sigma $, a value that is $ +1  $ whenever the reordering given by $ \sigma $ can be achieved by successively interchanging two entries an even number of times, and $ -1 $ whenever it can be achieved by an odd number of such interchanges.
+		
+	\end{Definition}
+	\begin{Definition}
+		If $ \matr{A} $ is a square matrix, then the \textit{minor} of the entry in the $ i $-th row and $ j $-th column (also called the \textit{$ (i,j) $ minor}, or a \textit{first minor}) is the determinant of the submatrix formed by deleting the $ i $-th row and $ j $-th column. This number is often denoted $ M_{i,j} $. The $ (i,j) $ \textit{cofactor} is obtained by multiplying the minor by $ (-1)^{i+j} $ and is denoted $ C_{i,j} $. \newpara
+		In general, let A be an $ m \times n $ matrix and $ k $ an integer with $ 0 < k \leqslant m $, and $ k \leqslant n $. A $ k \times k $ minor of $ \matr{A} $, also called minor determinant of order $ k $ of $ \matr{A} $ or, if $ m=n $, $ (n-k) $th minor determinant of $  \matr{A} $, is the determinant of a $ k \times k $ matrix obtained from $ \matr{A} $ by deleting $ m - k $ rows and $ n - k $ columns. 
+	\end{Definition}
+	\begin{Definition}
+		The matrix formed by all of the cofactors of a square matrix A is called the \textit{cofactor matrix}.
+	\end{Definition}
+	\begin{Definition}
+		The \textit{adjugate} is the transpose of the cofactor matrix of it, that is, if $ \matr{A} $ is a matrix and $ \matr{C} $ is its cofactor matrix, then
+		\begin{equation}
+		\adj(\matr{A})=\matr{C}^T \nonumber
+		\end{equation}
+	\end{Definition}
+\begin{Theorem}
+	For a matrix $ \matr{A} $
+	\begin{equation}
+	\matr{A}\adj(\matr{A}) = \det(\matr{A})\matr{I} \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Theorem}
+	The determinant of an square matrix can be computed by a cofactor expansion across any row or down any column. The expansion across the $ i $th row is
+	\begin{equation}
+		\det \matr{A}=a_{i1}C_{i1}+\cdots +a_{in}C_{in}\nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Theorem}
+	If $ \matr{A} $  is a triangular matrix, then $ \det \matr{A} $ is the product of the entries on the main diagonal of $ \matr{A} $.
+\end{Theorem}
+\section{Properties of Determinants}
+	\begin{Theorem}
+		Let $ \matr{A} $ be a square matrix.
+		\begin{itemize}
+			\item If a multiple of one row of $ \matr{A} $ is added to another row to produce a matrix $ \matr{B} $, then $ \det \matr{A}=\det \matr{B} $.
+			\item If two rows of $ \matr{A} $ are interchanged to produce $ \matr{B} $, then $ \det \matr{B}=-\det \matr{A} $.
+			\item If one row of $ \matr{A} $ is multiplied by $ k $ to produce $ \matr{B} $, then $ \det \matr{B}=k \cdot\det \matr{A} $.
+		\end{itemize}
+	\end{Theorem}
+\begin{Theorem}
+	If $ \matr{A} $ is an $ n \times n $ matrix, then $ \det \matr{A}^T= \det \matr{A}$.
+\end{Theorem}
+	\begin{Theorem}
+		If $ \matr{A} $ and $ \matr{B} $ are $ n \times n $ matrices, then $ \det \matr{AB}=(\det \matr{A})(\det \matr{B} )$.
+	\end{Theorem}
+\begin{Example}
+	If all columns except one are held fixed in a square matrix, then its determinant is a linear function of that one(vector) variable.
+\end{Example}
 	
 	
 	
