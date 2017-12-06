@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 DEC 2017 21:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 DEC 2017 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -981,8 +981,16 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
-\c@Theorem=\count139
-\c@Example=\count140
+(/usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen185
+\enit@toks=\toks42
+\enit@inbox=\box41
+\enitdp@description=\count139
+)
+\c@Theorem=\count140
+\c@Example=\count141
 )
 (./Linear_Algebra.aux)
 \openout1 = `Linear_Algebra.aux'.
@@ -1006,7 +1014,7 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 43.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box41
+\AtBeginShipoutBox=\box42
 Package hyperref Info: Link coloring OFF on input line 43.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1015,7 +1023,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count141
+\c@section@level=\count142
 )
 LaTeX Info: Redefining \ref on input line 43.
 LaTeX Info: Redefining \pageref on input line 43.
@@ -1028,17 +1036,17 @@ LaTeX Info: Redefining \nameref on input line 43.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count142
-\scratchdimen=\dimen185
-\scratchbox=\box42
-\nofMPsegments=\count143
-\nofMParguments=\count144
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count145
-\MPscratchDim=\dimen186
-\MPnumerator=\count146
-\makeMPintoPDFobject=\count147
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count143
+\scratchdimen=\dimen186
+\scratchbox=\box43
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen187
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1294,9 +1302,14 @@ l.534 	\begin{equation}
 ier (name{equation.3.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.540 	\begin{equation}
-                       
-Overfull \hbox (14.86337pt too wide) in paragraph at lines 560--561
+l.538 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.3.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.544 	\begin{equation}
+                        [14]
+Overfull \hbox (14.86337pt too wide) in paragraph at lines 573--574
 [][]\T1/lmr/bx/n/10.95 Theorem 3.2.3. []\T1/lmr/m/it/10.95 If $\OT1/lmr/bx/n/10
 .95 A$ \T1/lmr/m/it/10.95 and $\OT1/lmr/bx/n/10.95 B$ \T1/lmr/m/it/10.95 are $\
 OML/lmm/m/it/10.95 n \OMS/lmsy/m/n/10.95 ^^B \OML/lmm/m/it/10.95 n$ \T1/lmr/m/i
@@ -1305,24 +1318,55 @@ OT1/lmr/m/n/10.95 )([] \OT1/lmr/bx/n/10.95 B\OT1/lmr/m/n/10.95 )$\T1/lmr/m/it/1
 0.95 . 
  []
 
-[14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 588.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 588.
+[15pdfTeX warning (ext4): destination with the same identifier (name{equation.3
+.2.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.601 	\chapter
+               {Vector Spaces}pdfTeX warning (ext4): destination with the same 
+identifier (name{equation.3.2.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.601 	\chapter
+               {Vector Spaces}pdfTeX warning (ext4): destination with the same 
+identifier (name{equation.3.2.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.601 	\chapter
+               {Vector Spaces}] [16
+
+]
+ 4.
+
+Overfull \hbox (6.64134pt too wide) in paragraph at lines 629--630
+[][]\T1/lmr/bx/n/10.95 Theorem 4.0.1. []\T1/lmr/m/it/10.95 If $\OT1/lmr/bx/n/10
+.95 v[]\OML/lmm/m/it/10.95 ; []  ; \OT1/lmr/bx/n/10.95 v[]$ \T1/lmr/m/it/10.95 
+are in a vec-tor space $\OML/lmm/m/it/10.95 V$\T1/lmr/m/it/10.95 , then $[]\OMS
+/lmsy/m/n/10.95 f\OT1/lmr/bx/n/10.95 v[]\OML/lmm/m/it/10.95 ; []  ; \OT1/lmr/bx
+/n/10.95 v[]\OMS/lmsy/m/n/10.95 g$
+ []
+
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 649.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 649.
  (./Linear_Algebra.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 588.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 588.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 649.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 649.
 Package rerunfilecheck Info: File `Linear_Algebra.out' has not changed.
-(rerunfilecheck)             Checksum: DEFF4DEBD2E965B3AC1DD1A770B8DBFA;1031.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 588.
+(rerunfilecheck)             Checksum: 86D33B888D6DBF5CF1D50DCA8B3961C3;1080.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 649.
  ) 
 Here is how much of TeX's memory you used:
- 17986 strings out of 492995
- 327746 string characters out of 6132704
- 401915 words of memory out of 5000000
- 21088 multiletter control sequences out of 15000+600000
+ 18283 strings out of 492995
+ 332637 string characters out of 6132704
+ 407073 words of memory out of 5000000
+ 21363 multiletter control sequences out of 15000+600000
  116513 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,56p,555b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,56p,555b,533s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
 e/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-d
@@ -1344,10 +1388,10 @@ ype1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
 c/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on Linear_Algebra.pdf (18 pages, 315515 bytes).
+Output written on Linear_Algebra.pdf (21 pages, 322193 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 278 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

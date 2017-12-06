@@ -530,9 +530,13 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 		\end{equation}
 	\end{Definition}
 \begin{Theorem}
-	For a matrix $ \matr{A} $
+	For a invertible matrix $ n \times n $ $ \matr{A} $
 	\begin{equation}
 	\matr{A}\adj(\matr{A}) = \det(\matr{A})\matr{I} \nonumber
+	\end{equation}
+	or equivalently
+	\begin{equation}
+	\matr{A}^{-1}=\frac{1}{\det \matr{A}}\adj \matr{A}\nonumber
 	\end{equation}
 \end{Theorem}
 \begin{Theorem}
@@ -545,6 +549,9 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 	If $ \matr{A} $  is a triangular matrix, then $ \det \matr{A} $ is the product of the entries on the main diagonal of $ \matr{A} $.
 \end{Theorem}
 \section{Properties of Determinants}
+\begin{Definition}
+	An elementary matrix is called an \textit{row replacement} if it is obtained from the identity matrix by adding a multiple of one row to another; it's called an \textit{interchange} if it is obtained by interchanging two rows of identity; and it's called a \textit{scale by $ r $} if it is obtained by multiplying a row of identity by a nonzero scalar $ r $.
+\end{Definition}
 	\begin{Theorem}
 		Let $ \matr{A} $ be a square matrix.
 		\begin{itemize}
@@ -552,7 +559,13 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 			\item If two rows of $ \matr{A} $ are interchanged to produce $ \matr{B} $, then $ \det \matr{B}=-\det \matr{A} $.
 			\item If one row of $ \matr{A} $ is multiplied by $ k $ to produce $ \matr{B} $, then $ \det \matr{B}=k \cdot\det \matr{A} $.
 		\end{itemize}
+	or, equivalently, if $ \matr{A} $ is an $ n \times n $ matrix and $ \matr{E} $ is an $ n \times n $ elementary matrix, then
+	\begin{equation}
+		\det \matr{EA}=(\det \matr{E})(\det \matr{A}) \nonumber
+	\end{equation}
+	where $ \det \matr{E} $ assumes $ 1,-1,r $ respectively for $ \matr{E} $ is a row replacement, an interchange, and a scale by $ r $.
 	\end{Theorem}
+
 \begin{Theorem}
 	If $ \matr{A} $ is an $ n \times n $ matrix, then $ \det \matr{A}^T= \det \matr{A}$.
 \end{Theorem}
@@ -562,11 +575,59 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 \begin{Example}
 	If all columns except one are held fixed in a square matrix, then its determinant is a linear function of that one(vector) variable.
 \end{Example}
+	Let $ \matr{A}_i(\vec{b}) $ denote the matrix obtained from $ \matr{A} $ by replacing column $ i $ by the vector $ \vec{b} $.
+\begin{Theorem}
+ If $ \matr{A} $ is an invertible $ n\times n $ matrix. For any $ \vec{b}\in \Real^n $, then unique solution $ \vec{x} $ of $ \matr{A}\vec{x}=\vec{b} $ has entries given by
+ \begin{equation}
+ 	x_i=\frac{\det \matr{A}_i(\vec{b})}{\det \matr{A}},\qquad i=1,2,\cdots,n \nonumber
+ \end{equation}
+\end{Theorem}
+	\begin{Theorem}
+		If $ \matr{A} $ is a $ 2 \times 2 $ matrix, the area of the parallelogram determined by the columns of $ \matr{A} $ is $ |\det \matr{A}| $. If $ \matr{A} $ is a $ 3 \times 3 $ matrix, the volume of the parallelepiped determined by the columns of $ \matr{A} $ is $ |\det \matr{A}| $.
+	\end{Theorem}
+\begin{Theorem}
+	Let $ T:\Real^2 \to \Real^2 $ be the linear transformation determined by a $ 2 \times 2 $ matrix $ \matr{A} $. If $ S $ is a parallelogram in $ \Real^2 $, then
+	\begin{equation}
+		\{\text{area of }T(S) \}=|\det \matr{A}| \cdot 	\{\text{area of }S \} \nonumber
+	\end{equation}
+	and similar, if in $ \Real^3 $ $ S $ is a parallelepiped, then
+	\begin{equation}
+			\{\text{volume of }T(S) \}=|\det \matr{A}| \cdot 	\{\text{volumn of }S \} \nonumber
+	\end{equation}
+	These conclusions hold whenever $ S $ has finite area or finite volume.
+\end{Theorem}
 	
 	
-	
-	
-	
+	\chapter{Vector Spaces}
+	\begin{Definition}
+		A \textit{vector space} over a field $ F $ is a set $ V $ with two closed operations, \textit{vector addition} or simply \textit{addition} and \textit{scalar multiplication}, that satisfy the following axioms:
+		\begin{enumerate}
+			\item Associativity of addition;
+			\item Commutativity of addition;
+			\item Identity element of addition;
+			\item Inverse elements of addition;
+			\item Compatibility of scalar multiplication with field multiplication;
+			\begin{equation}
+			a(b \vec{v})=(ab)\vec{v} \nonumber
+			\end{equation}
+			\item Identity element of scalar multiplication;
+			\item Distributivity of scalar multiplication with respect to vector addition;
+			\item Distributivity of scalar multiplication with respect to field addition.
+		\end{enumerate}
+	\end{Definition}
+
+\begin{Definition}
+	A \textit{subspace} of a vector space $ V $ is a subset $ H $ of $ V $ that has three properties:
+	\begin{itemize}
+		\item The zero vector of $ V $ is in $ H $.
+		\item $ H $ is closed under vector addition.
+		\item $ H $ is closed under multiplication by scalars.
+	\end{itemize}
+If a subspace only contains the zero vector $ \vec{0} $, it is called a \textit{zero subspace} and written as $ \{\vec{0} \} $.
+\end{Definition}
+	\begin{Theorem}
+		If $ \vec{v}_1,\cdots,\vec{v}_p $ are in a vector space $ V $, then $ \spn \{\vec{v}_1,\cdots,\vec{v}_p\} $ is a subspace of $ V $.
+	\end{Theorem}
 	
 	
 	

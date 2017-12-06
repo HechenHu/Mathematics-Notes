@@ -179,40 +179,40 @@
 \contentsline {section}{\numberline {8.2}The Differential of a Function of Several Variables}{120}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Differentiability and the Differential of a Function at a Point}{120}{subsection.8.2.1}
 \contentsline {subsection}{\numberline {8.2.2}The Differential and Partial Derivatives of a Real-Valued Function}{121}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Coordinate Representation of the Differential of a Mapping. The Jacob Matrix}{122}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Continuity, Partial Derivatives, and Differentiability of a Function at a Point}{122}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.3}Coordinate Representation of the Differential of a Mapping. The Jacobi Matrix}{122}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Continuity, Partial Derivatives, and Differentiability of a Function at a Point}{123}{subsection.8.2.4}
 \contentsline {section}{\numberline {8.3}The Basic Laws of Differentiation}{123}{section.8.3}
 \contentsline {subsection}{\numberline {8.3.1}Linearity of the Operation of Differentiation}{123}{subsection.8.3.1}
-\contentsline {subsection}{\numberline {8.3.2}Differentiation of a Composition of Mappings (Chain Rule)}{123}{subsection.8.3.2}
-\contentsline {subsubsection}{The Main Theorem}{123}{section*.63}
-\contentsline {subsubsection}{The Differential and Partial Derivatives of a Composite Real-Valued Function}{123}{section*.64}
+\contentsline {subsection}{\numberline {8.3.2}Differentiation of a Composition of Mappings (Chain Rule)}{124}{subsection.8.3.2}
+\contentsline {subsubsection}{The Main Theorem}{124}{section*.63}
+\contentsline {subsubsection}{The Differential and Partial Derivatives of a Composite Real-Valued Function}{124}{section*.64}
 \contentsline {subsubsection}{The Derivative with Respect to a Vector and the Gradient of a Function at a Point}{124}{section*.65}
-\contentsline {subsection}{\numberline {8.3.3}Differentiation of an Inverse Mapping}{125}{subsection.8.3.3}
-\contentsline {section}{\numberline {8.4}The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}{125}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}The Mean-Value Theorem}{125}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}A Sufficient Condition for Differentiability of a Function of Several Variables}{126}{subsection.8.4.2}
-\contentsline {subsection}{\numberline {8.4.3}Higher-Order Partial Derivatives}{126}{subsection.8.4.3}
-\contentsline {subsection}{\numberline {8.4.4}Taylor's Formula}{127}{subsection.8.4.4}
-\contentsline {subsection}{\numberline {8.4.5}Extrema of Functions of Several Variables}{128}{subsection.8.4.5}
-\contentsline {subsection}{\numberline {8.4.6}Some Geometric Images Connected with Functions of Several Variables}{129}{subsection.8.4.6}
-\contentsline {subsubsection}{The Graph of a Function and Curvilinear Coordinates}{129}{section*.66}
-\contentsline {subsubsection}{The Tangent Plane to the Graph of a Function}{129}{section*.67}
-\contentsline {subsubsection}{The Normal Vector}{129}{section*.68}
-\contentsline {subsubsection}{Tangent Planes and Tangent Vectors}{129}{section*.69}
-\contentsline {section}{\numberline {8.5}The Implicit Function Theorem}{130}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}The Implicit Function Theorem}{130}{subsection.8.5.1}
-\contentsline {section}{\numberline {8.6}Some Corollaries of the Implicit Function Theorem}{130}{section.8.6}
-\contentsline {subsection}{\numberline {8.6.1}The Inverse Function Theorem}{130}{subsection.8.6.1}
-\contentsline {subsection}{\numberline {8.6.2}Local Reduction of a Smooth Mapping to Canonical Form}{131}{subsection.8.6.2}
-\contentsline {subsection}{\numberline {8.6.3}Functional Dependence}{132}{subsection.8.6.3}
-\contentsline {subsection}{\numberline {8.6.4}Local Resolution of a Diffeomorphism into a Composition of Elementary Ones}{132}{subsection.8.6.4}
-\contentsline {subsection}{\numberline {8.6.5}Morse's Lemma}{133}{subsection.8.6.5}
-\contentsline {section}{\numberline {8.7}Surfaces in $ \mathbb {R}^n $ and the Theory of Extrema with Constraint}{133}{section.8.7}
-\contentsline {subsection}{\numberline {8.7.1}$ k $-Dimensional Surfaces in $ \mathbb {R}^n $}{133}{subsection.8.7.1}
-\contentsline {subsection}{\numberline {8.7.2}The Tangent Space}{134}{subsection.8.7.2}
-\contentsline {subsection}{\numberline {8.7.3}Extrema with Constraint}{134}{subsection.8.7.3}
-\contentsline {subsubsection}{A Necessary Condition for an Extremum with Constraint}{134}{section*.70}
-\contentsline {subsubsection}{A Sufficient Condition for a Constrained Extremum}{135}{section*.71}
+\contentsline {subsection}{\numberline {8.3.3}Differentiation of an Inverse Mapping}{126}{subsection.8.3.3}
+\contentsline {section}{\numberline {8.4}The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}{126}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}The Mean-Value Theorem}{126}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}A Sufficient Condition for Differentiability of a Function of Several Variables}{127}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Higher-Order Partial Derivatives}{127}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.4}Taylor's Formula}{128}{subsection.8.4.4}
+\contentsline {subsection}{\numberline {8.4.5}Extrema of Functions of Several Variables}{129}{subsection.8.4.5}
+\contentsline {subsection}{\numberline {8.4.6}Some Geometric Images Connected with Functions of Several Variables}{130}{subsection.8.4.6}
+\contentsline {subsubsection}{The Graph of a Function and Curvilinear Coordinates}{130}{section*.66}
+\contentsline {subsubsection}{The Tangent Plane to the Graph of a Function}{130}{section*.67}
+\contentsline {subsubsection}{The Normal Vector}{130}{section*.68}
+\contentsline {subsubsection}{Tangent Planes and Tangent Vectors}{130}{section*.69}
+\contentsline {section}{\numberline {8.5}The Implicit Function Theorem}{131}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}The Implicit Function Theorem}{131}{subsection.8.5.1}
+\contentsline {section}{\numberline {8.6}Some Corollaries of the Implicit Function Theorem}{131}{section.8.6}
+\contentsline {subsection}{\numberline {8.6.1}The Inverse Function Theorem}{131}{subsection.8.6.1}
+\contentsline {subsection}{\numberline {8.6.2}Local Reduction of a Smooth Mapping to Canonical Form}{132}{subsection.8.6.2}
+\contentsline {subsection}{\numberline {8.6.3}Functional Dependence}{133}{subsection.8.6.3}
+\contentsline {subsection}{\numberline {8.6.4}Local Resolution of a Diffeomorphism into a Composition of Elementary Ones}{133}{subsection.8.6.4}
+\contentsline {subsection}{\numberline {8.6.5}Morse's Lemma}{134}{subsection.8.6.5}
+\contentsline {section}{\numberline {8.7}Surfaces in $ \mathbb {R}^n $ and the Theory of Extrema with Constraint}{134}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}$ k $-Dimensional Surfaces in $ \mathbb {R}^n $}{134}{subsection.8.7.1}
+\contentsline {subsection}{\numberline {8.7.2}The Tangent Space}{135}{subsection.8.7.2}
+\contentsline {subsection}{\numberline {8.7.3}Extrema with Constraint}{135}{subsection.8.7.3}
+\contentsline {subsubsection}{A Necessary Condition for an Extremum with Constraint}{135}{section*.70}
+\contentsline {subsubsection}{A Sufficient Condition for a Constrained Extremum}{136}{section*.71}
 \contentsline {chapter}{\numberline {9}Continuous Mappings}{137}{chapter.9}
 \contentsline {section}{\numberline {9.1}Metric Spaces}{137}{section.9.1}
 \contentsline {section}{\numberline {9.2}Topological Spaces}{137}{section.9.2}

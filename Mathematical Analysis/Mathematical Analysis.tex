@@ -4389,31 +4389,52 @@ This is the definition of \textit{partial derivative}.
 	\end{equation}
 \end{Proposition}
 
-\subsection{Coordinate Representation of the Differential of a Mapping. The Jacob Matrix}
+\subsection{Coordinate Representation of the Differential of a Mapping. The Jacobi Matrix}
+For an mapping $ f:E \to \Real^n $ of a set $ E \subset \Real^m $ that is differentiable at an interior point $ x \in E $, the differential $ d f(x) $ can be written as:
+\begin{align}
+d f(x)h &= \begin{pmatrix}
+d f^1 (x)h \\
+\vdots\\
+d f^n (x)h
+\end{pmatrix} = \begin{pmatrix}
+\partial_i f^i (x)h^i \\
+\vdots\\
+\partial_i f^n (x)h^i
+\end{pmatrix} =\\
+&= \begin{pmatrix}
+\dfrac{\partial f^1}{\partial x^1}(x) &\cdots & \dfrac{\partial f^1}{\partial x^m}(x)\\[2.2ex]
+\vdots & \ddots & \vdots \\[2.2ex]
+\dfrac{\partial f^n}{\partial x^1}(x) &\cdots & \dfrac{\partial f^n}{\partial x^m}(x)
+\end{pmatrix}\begin{pmatrix}
+h^1 \\
+\vdots \\
+h^m
+\end{pmatrix} \nonumber
+\end{align}
 \begin{Definition}
-	For ant mapping $ f:E \to \Real^n $ of a set $ E \subset \Real^m $ that is differentiable at an interior point $ x \in E $, the matrix $ (\partial_i f^j (x))(i=1,\cdots,m,j=1,\cdots,n) $ 
-	\begin{align}
-		d f(x)h &= \begin{pmatrix}
-		d f^1 (x)h \\
-		\vdots\\
-		d f^n (x)h
-		\end{pmatrix} = \begin{pmatrix}
-		\partial_i f^i (x)h^i \\
-		\vdots\\
-		\partial_i f^n (x)h^i
-		\end{pmatrix} =\\
-		&= \begin{pmatrix}
-		\frac{\partial f^1}{\partial x^1}(x) &\cdots & \frac{\partial f^1}{\partial x^m}(x)\\
-		\vdots & \ddots & \vdots \\
-		\frac{\partial f^n}{\partial x^1}(x) &\cdots & \frac{\partial f^n}{\partial x^m}(x)
-		\end{pmatrix}\begin{pmatrix}
-		h^1 \\
-		\vdots \\
-		h^m
-		\end{pmatrix} \nonumber
-	\end{align}
-	of partial derivatives of the coordinate functions of a given mapping at the point $ x \in E $ is called the \textit{Jacobi matrix} or the \textit{Jacobian} of the mapping at the point.
+	The  $ n \times m $ matrix $ (\partial_i f^j (x))(i=1,\cdots,m,j=1,\cdots,n) $ 
+	\begin{equation}
+		\begin{bmatrix}
+		\dfrac{\partial f^1}{\partial x^1} &\cdots & \dfrac{\partial f^1}{\partial x^m}\\[2.2ex]
+		\vdots & \ddots & \vdots \\[2.2ex]
+		\dfrac{\partial f^n}{\partial x^1} &\cdots & \dfrac{\partial f^n}{\partial x^m}
+		\end{bmatrix} \nonumber
+	\end{equation}
+	of partial derivatives of the coordinate functions of a given mapping at the point $ x \in E \subset \Real^m$ is called the \textit{Jacobi matrix} or the \textit{Jacobian} of the mapping at the point and denoted $ \matr{J} $.
 \end{Definition}
+\begin{Definition}
+	Suppose $ f:\Real^n \to \Real $ which takes the vector $ \vec{x} \in \Real^n $ as its argument and output a scalar in $ \Real $. If all second partial derivatives are continuous over the domain of $ f $, then the \textit{Hessian matrix} $ \matr{H} $ is a $ n \times n $ matrix which usually defined as follows:
+	\begin{equation}
+		 \begin{bmatrix}
+		\dfrac{\partial^2 f}{\partial x_1^2} &\dfrac{\partial^2 f}{\partial x_1 \partial x_2} &\cdots &\dfrac{\partial^2 f}{\partial x_1 \partial x_n} \\[2.2ex]
+		\dfrac{\partial^2 f}{\partial x_2 \partial x_1} &\dfrac{\partial^2 f}{\partial x_2^2} &\cdots &\dfrac{\partial^2 f}{\partial x_2 \partial x_n} \\[2.2ex]
+		\vdots &\vdots &\ddots &\vdots \\[2.2ex]
+		\dfrac{\partial^2 f}{\partial x_n \partial x_1} &\dfrac{\partial^2 f}{\partial x_n \partial x_2} &\cdots &\dfrac{\partial^2 f}{\partial x_n^2}
+		\end{bmatrix} \nonumber
+	\end{equation}
+	The Hessian matrix and Jacobian matrix can be considered related to each other by $ \matr{H}(f(\vec{x}))=\matr{J}(\nabla f(\vec{x}))^T $.
+\end{Definition}
+
 \begin{Proposition}
 	If a mapping $ f:E \to \Real^n $ of a set $ E \subset \Real^m $ is differentiable at an interior point $ x \in E $, then it has a unique differential $ d f(x) $ at that point, and the coordinate representation of the mapping $ d f(x): \vec{T}\Real^m_x \to \vec{T}\Real^n_{f(x)} $ is given by the Jacobi Matrix.
 \end{Proposition}
@@ -4458,7 +4479,7 @@ Let $ z =g(y^1,\cdots,y^n) $ be a real-valued function of real functions $ y^j =
 \end{equation}
 or, in notation that shows more detail,
 \begin{equation}
-	\frac{\partial z}{\partial x^i}(x)=\partial_1 g(f(x))\cdot \partial_i f^1(x)+ \cdots +\partial_n g(f(x))\cdot \partial_i f^n(x) \nonumber
+	\dfrac{\partial z}{\partial x^i}(x)=\partial_1 g(f(x))\cdot \partial_i f^1(x)+ \cdots +\partial_n g(f(x))\cdot \partial_i f^n(x) \nonumber
 \end{equation}
 \subsubsection{The Derivative with Respect to a Vector and the Gradient of a Function at a Point}
 \begin{Definition}[Directional Derivatives]
