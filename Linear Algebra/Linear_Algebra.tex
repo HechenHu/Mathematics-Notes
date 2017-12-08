@@ -626,10 +626,53 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 If a subspace only contains the zero vector $ \vec{0} $, it is called a \textit{zero subspace} and written as $ \{\vec{0} \} $.
 \end{Definition}
 	\begin{Theorem}
-		If $ \vec{v}_1,\cdots,\vec{v}_p $ are in a vector space $ V $, then $ \spn \{\vec{v}_1,\cdots,\vec{v}_p\} $ is a subspace of $ V $.
+		If $ \vec{v}_1,\cdots,\vec{v}_p $ are in a vector space $ V $, then $ \spn \{\vec{v}_1,\cdots,\vec{v}_p\} $ is a subspace of $ V $ and is called the \textit{subspace spanned} (or \textit{generated}) by $ \{\vec{v}_1,\cdots,\vec{v}_p\}  $. Given any subspace $ H $ of $ V $, a \textit{spanning} (or \textit{generating}) \textit{set} for $ H $ is a set $ \{\vec{v}_1,\cdots,\vec{v}_p\}  $ in $ H $ such that $ H =   \spn \{\vec{v}_1,\cdots,\vec{v}_p\} $.
 	\end{Theorem}
-	
-	
+\begin{Definition}
+	The \textit{null space} of an $ m \times n $ matrix $ \matr{A} $, written as $ \nul \matr{A} $, is the set of all solutions to the homogeneous equation $ \matr{A}\vec{x}=\vec{0} $.
+\end{Definition}
+\begin{Theorem}
+	The null space of an $ m \times n $ matrix $ \matr{A} $ is a subspace of $ \Real^n $.
+\end{Theorem}
+\begin{Definition}
+	The \textit{column space} of an $ m \times n $ matrix, written as $ \col \matr{A} $, is the set of all linear combinations of the columns of $ \matr{A} $.
+\end{Definition}
+\begin{Theorem}
+	The column space of an $ m \times n $ matrix is a subspace of $ \Real^n $.
+\end{Theorem}
+\begin{Theorem}
+	The column space of an $ m \times n $ matrix $ \matr{A} $ is all of $ \Real^m $ iff the equation $ \matr{A}\vec{x}=\vec{b} $ has a solution for each $ \vec{b}\in \Real^m $.
+\end{Theorem}
+\begin{Definition}
+	For a linear transformation $ T $ from a vector space $ V $ into a vector space $ W $, the \textit{kernel}(or \textit{null space}) of $ T $ is the set of all $ \vec{u}\in V $ such that $ T(\vec{u})=\vec{0} $. The range of $ T $ is the set of all vectors in $ W $ of the form $ T(\vec{x}) $ for some $ \vec{x} \in V$. If $ T $ can be written as a matrix transformation, then the kernel and the range of $ T $ are just the null space and the column space of that matrix. Kernel is a subspace of $ V $, and range is a subspace of $ W $.
+\end{Definition}
+	\begin{Definition}
+		An indexed set of vectors $ \{\vec{v}_1,\cdots,\vec{v}_p \} \in V$ is said to be \textit{linearly independent} if the vector equation
+		\begin{equation}
+			c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots +c_p \vec{v}_p = \vec{0} \nonumber
+		\end{equation}
+		has only the trivial solution.
+	\end{Definition}
+\begin{Theorem}
+	An indexed set $ \{\vec{v}_1,\cdots,\vec{v}_p \} $ of two or more vectors, with $ \vec{v}_1 = \vec{0} $, is linearly dependent iff some $ \vec{v}_j $ with $ j>1 $ is a linear combination of the preceding vectors, $ \vec{v}_1,\cdots,\vec{v}_{j-1} $.
+\end{Theorem}
+\begin{Definition}
+	Let $ H $ be a subspace of a vector space $ V $. An indexed set of vectors $ \mathcal{B}=\{\vec{b}_1,\cdots,\vec{b}_p \} $ in $ V $ is a \textit{basis} for $ H $ if
+	\begin{enumerate}
+		\item $ \mathcal{B} $ is a linearly independent set;
+		\item the subspace spanned by $ \mathcal{B} $ coincides with $ H $.
+	\end{enumerate}
+\end{Definition}
+\begin{Theorem}
+	Let $ S = \{\vec{v}_1,\cdots,\vec{v}_p \} $ be a set in $ V $ and let $ H = \spn \{\vec{v}_1,\cdots,\vec{v}_p \}$.
+	\begin{enumerate}
+		\item If one of the vectors in $ S $ is a linear combination of the remaining vectors in $ S $, then the set formed from $ S $ by removing this vector still spans $ H $.
+		\item If $ H \neq \{\vec{0} \} $, some subset of $ S $ is a basis for $ H $.
+	\end{enumerate}
+\end{Theorem}
+	\begin{Theorem}
+		The pivot columns of a matrix $ \matr{A} $ form a basis for $ \col \matr{A} $.
+	\end{Theorem}
 	
 	
 	
