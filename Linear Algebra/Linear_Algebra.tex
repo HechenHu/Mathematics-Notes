@@ -366,7 +366,7 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 \begin{Theorem}
 	An $ n \times n $ matrix $ \matr{A} $ is invertible iff $ \matr{A} $ is a row equivalent to $ \matr{I}_n $, and in this case, any sequence of elementary row operations that reduces $ \matr{A} $ to $ \matr{I}_n $ also transforms $ \matr{I}_n $ into $ \matr{A}^{-1} $.
 \end{Theorem}
-\begin{Theorem}
+\begin{Theorem}[The Invertible Matrix Theorem]
 	Let $ \matr{A} $ be a square $ n \times n $ matrix. Then the following statements are equivalent.
 	\begin{itemize}
 		\item $ \matr{A} $ is an invertible matrix.
@@ -384,7 +384,14 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 		\item There is an $ n \times n $ matrix $ \matr{C} $ such that $ \matr{CA}=\matr{I} $.
 		\item There is an $ n \times n $ matrix $ \matr{D} $ such that $ \matr{AD}=\matr{I} $.
 		\item $ \matr{A}^T $ is an invertible matrix.
+		\newpara
 		
+		\item The columns of $ \matr{A} $ form a basis of $ \Real^n $.
+		\item $ \col \matr{A}=\Real^n $
+		\item $ \dim \col \matr{A}=n $
+		\item $ \rank \matr{A}=n $
+		\item $ \nul \matr{A}=\{\vec{0} \} $
+		\item $ \dim \nul \matr{A}=0 $
 	\end{itemize}
 \end{Theorem}
 \begin{Proposition}
@@ -673,19 +680,154 @@ If a subspace only contains the zero vector $ \vec{0} $, it is called a \textit{
 	\begin{Theorem}
 		The pivot columns of a matrix $ \matr{A} $ form a basis for $ \col \matr{A} $.
 	\end{Theorem}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+\section{Coordinate Systems}
+\begin{Theorem}
+	Let $ \mathcal{B}= \{\vec{b}_1,\cdots,\vec{b}_p \} $ be a basis for a vector space $ V $. Then for each $ \vec{x} \in V$, there exists a unique set of scalars $ c_1,\cdots,c_n $ such that
+	\begin{equation}
+		\vec{x}=c_1 \vec{b}_1 + \cdots + c_n \vec{b}_n \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Definition}
+	Suppose the set $ \mathcal{B}= \{\vec{b}_1,\cdots,\vec{b}_p \} $ is a basis for $ V $ and $ \vec{x}\in V $. The \textit{coordinate of $ \vec{x} $ relative to the basis $ \mathcal{B} $} (or the \textit{$ \mathcal{B} $-coordinates of $ \vec{x} $}) are the weights $ c_1,\cdots,c_n $ such that $ \vec{x}= c_1 \vec{b}_1 + \cdots + c_n \vec{b}_n $.\newpara
+	 The vector
+	\begin{equation}
+		[\vec{x}]_\mathcal{B}=\begin{bmatrix}
+		c_1 \\
+		\vdots \\
+		c_n
+		\end{bmatrix} \nonumber
+	\end{equation}
+	is the \textit{coordinate vector of $ \vec{x} $(relative to $ \mathcal{B} $)}, or the \textit{$ \mathcal{B} $-coordinate vector of $ \vec{x} $}. The mapping $ \vec{x}\mapsto [\vec{x}]_\mathcal{B} $ is the \textit{coordinate mapping(determined by $ \mathcal{B} $)}.
+\end{Definition}
+\begin{Definition}
+	The matrix
+	\begin{equation}
+		\vec{P}_\mathcal{B}=[\vec{b}_1,\cdots,\vec{b}_p ] \nonumber
+	\end{equation}
+	is called the \textit{change-of-coordinates matrix} from $ \mathcal{B} $ to the standard basis in $ \Real^n $, since for a vector $ \vec{x}= c_1 \vec{b}_1 + \cdots + c_n \vec{b}_n$ we obtain the relationship
+	\begin{equation}
+		\vec{x}=\vec{P}_\mathcal{B} [\vec{x}]_{\mathcal{B}}\nonumber
+	\end{equation}
+\end{Definition}
+\begin{Theorem}
+	Let $ \mathcal{B} $ be a basis for a vector space $ V $. Then the coordinate mapping $  \vec{x}\mapsto [\vec{x}]_\mathcal{B}  $ is an injective linear transformation from $ V $ into $ \Real^n $.
+\end{Theorem}
+	In general, an injective linear transformation from a vector space $ V $ onto another vector space $ W $ is called an \textit{isomorphism} from $ V $ onto $ W $.
+\begin{Theorem}
+	If a vector space $ V $ has a basis $ \mathcal{B}= \vec{b}_1,\cdots,\vec{b}_n $, then any set in $ V $ containing more than $ n $ vectors must be linearly dependent.
+\end{Theorem}
+\begin{Theorem}
+	If a vector space $ V $ has a basis of $ n $ vectors, then every basis of $ V $ must consist of exactly $ n $ vectors.
+\end{Theorem}
+\begin{Definition}
+	If $ V $ is spanned by a finite set, then $ V $ is said to be \textit{finite-dimensional}, and the \textit{dimension} of $ V $, written as $ \dim V $, is the number of vectors in a basis for $ V $. If $ V $ is not spanned by a finite set, then $ V $ is said to be \textit{infinite-dimensional}.
+\end{Definition}
+\begin{Theorem}
+	Let $ H $ be a subspace of a finite-dimensional vector space $ V $. Any linearly independent set in $ H $ can be expanded, if necessary, to a basis for $ H $. Also, $ H $ is finite-dimensional and
+	\begin{equation}
+		\dim H \leqslant \dim V \nonumber
+	\end{equation}
+\end{Theorem}
+	\begin{Theorem}[The Basis Theorem]
+		Let $ V $ be a $ p $-dimensional vector space, $ p \geqslant 1 $. Any linearly independent set of exactly $ p $ elements in $ V $ is automatically a basis for $ V $. Any set of exactly $ p  $ elements that spans $ V $ is a basis for $ V $.
+	\end{Theorem}
+The dimension of $ \nul \matr{A} $ is the number of free variables in $ \matr{A}\vec{x}=\vec{0} $, and the dimension of $ \col \matr{A} $ is the number of pivot columns in $ \matr{A} $.
+\section{Rank}
+\begin{Definition}
+	The set of all linear combinations of the row vectors in $ \matr{A} $ is called the \textit{row space} of $ \matr{A} $ and denoted $ \row \matr{A} $.
+\end{Definition}
+	\begin{Theorem}
+		If two matrices $ \matr{A} $ and $ \matr{B} $ are row equivalent, then their row spaces are the same. If $ \matr{B} $ is in echelon form, the nonzero rows of $ \matr{B} $ form a basis for the row space of $ \matr{A} $ as well as $ \matr{B} $.
+	\end{Theorem}
+\begin{Definition}
+	The \textit{rank} of $ \matr{A} $ is the dimension of the column space of $ \matr{A} $.
+\end{Definition}
+\begin{Theorem}[The Rank Theorem]
+	The dimensions of the column space and the row space of an $ m \times n $ matrix $ \matr{A} $ are equal. This common dimension, the rank of $ \matr{A} $, also equals the number of pivot positions in $ \matr{A} $ and satisfies the equation
+	\begin{equation}
+		\rank \matr{A} + \dim \nul \matr{A} = n\nonumber
+	\end{equation}
+\end{Theorem}
+\section{Change of Basis}
+	\begin{Theorem}
+		Let $ \mathcal{B}= \{\vec{b}_1,\cdots,\vec{b}_n  \}$ and $ \mathcal{C}= \{\vec{c}_1,\cdots,\vec{c}_n  \}$ be bases of a vector space $ V $. Then there is an $ n \times n $ matrix $ \underset{\mathcal{C} \gets \mathcal{B}}{\matr{P}} $, called the \textit{change-of-coordinates matrix from $ \mathcal{B} $ to $ \mathcal{C} $}, such that
+		\begin{equation}
+			[\vec{x}]_{\mathcal{C}}= \underset{\mathcal{C} \gets \mathcal{B}}{\matr{P}} 	[\vec{x}]_{\mathcal{B}}\nonumber
+		\end{equation}
+		The columns of $ \underset{\mathcal{C} \gets \mathcal{B}}{\matr{P}} $ are the $ \mathcal{C} $-coordinate vectors of the vectors in the basis $ \mathcal{B} $, that is 
+		\begin{equation}
+			 \underset{\mathcal{C} \gets \mathcal{B}}{\matr{P}}  = \begin{bmatrix}
+			 [\vec{b}_1]_{\mathcal{C}} &[\vec{b}_2]_{\mathcal{C}} &\cdots &[\vec{b}_n]_{\mathcal{C}}
+			 \end{bmatrix}\nonumber
+		\end{equation}
+	\end{Theorem}
+	Because the columns of this matrix are linearly independent, since they are the coordinate vectors of the linearly independent set $ \mathcal{B} $, it follows that $ \underset{\mathcal{C} \gets \mathcal{B}}{\matr{P}} $ is invertible, and we have
+	\begin{equation}
+		(\underset{\mathcal{C} \gets \mathcal{B}}{\matr{P}})^{-1}=\underset{\mathcal{B} \gets \mathcal{C}}{\matr{P}} \nonumber
+	\end{equation}
+	\chapter{Eigenvalues and Eigenvectors}
+	\section{Definition}
+	\begin{Definition}
+		An \textit{eigenvector} of an $ n \times n $ matrix $ \matr{A} $ is a nonzero vector $ \vec{x} $ such that $ \matr{A}\vec{x}=\lambda \vec{x} $ for some scalar $ \lambda $. A scalar $ \lambda $ is called an \textit{eigenvalue} of $ \matr{A} $ if there is a nontrivial solution $ \vec{x} $ of $ \matr{A}\vec{x}=\lambda \vec{x}  $; such an $ \vec{x} $ is called an \textit{eigenvector corresponding to $ \lambda $}.
+	\end{Definition}
+\begin{Definition}
+	The set of all solutions of
+	\begin{equation}
+		(\matr{A}-\lambda \matr{I})\vec{x}=\vec{0} \nonumber
+	\end{equation}
+	is a subspace of $ \Real^n $ and is called the \textit{eigenspace} of $ \matr{A} $ corresponding to $ \lambda $.
+\end{Definition}
+\begin{Theorem}
+	The eigenvalues of a triangular matrix are the entries on its main diagonal.
+\end{Theorem}
+\begin{Theorem}[The Invertible Matrix Theorem]
+	Let $ \matr{A} $ be an $ n \times n $ matrix. Then $ \matr{A} $ is invertible iff the number $ 0 $ is not an eigenvalue of $ \matr{A} $.
+\end{Theorem}
+	\begin{Theorem}
+		If $ \vec{v}_1,\cdots,\vec{v}_r $ are eigenvectors that corresponding to distinct eigenvalues $ \lambda_1,\cdots,\lambda_r $ of an $ n \times n $ matrix $ \matr{A} $, then the set $ \{\vec{v}_1,\cdots,\vec{v}_r \} $ is linearly independent.
+	\end{Theorem}
+\begin{Definition}
+	The scalar equation $ \det (\matr{A}-\lambda \matr{I})=0 $ is called the \textit{characteristic equation} of $ \matr{A} $. If $ \matr{A} $ is an $ n \times n $ matrix, then $  \det (\matr{A}-\lambda \matr{I}) $ is a polynomial of degree $ n $ called the \textit{characteristic polynomial} of $ \matr{A} $.
+\end{Definition}
+\begin{Theorem}
+	A scalar $ \lambda $ is an eigenvalue of an $ n \times n $ matrix $ \matr{A} $ iff $ \lambda $ satisfies the characteristic equation.
+\end{Theorem}
+	\begin{Definition}
+		If $ \matr{A} $ and $ \matr{B} $ are $ n \times n $ matrices, then $ \matr{A} $ and $ \matr{B} $ are \textit{similar} if there is an invertible matrix $ \matr{P} $ such that $ \matr{P}^{-1}\matr{AP}=\matr{B} $. Changing $ \matr{A} $ into $  \matr{P}^{-1}\matr{AP} $ is called a \textit{similarity transformation}.
+	\end{Definition}
+	\begin{Theorem}
+		If $ n \times n $ matrices $ \matr{A} $ and $ \matr{B} $ are similar, then they have the same characteristic polynomial and hence the same eigenvalues(with the same multiplicities).
+	\end{Theorem}
+\section{Diagonalization}
+\begin{Definition}
+	A square matrix $ \matr{A} $ is said to be \textit{diagonalizable} if $ \matr{A} $ is similar to a diagonal matrix.
+\end{Definition}
+\begin{Theorem}
+	An $ n \times n $ matrix $ \matr{A} $ is diagonalizable iff $ \matr{A} $ has $ n $ linearly independent eigenvectors. In other words, $ \matr{A} $ is diagonalizable iff there are enough eigenvectors to form a basis of $ \Real^n $, and such basis is called an \textit{eigenvector basis}.
+\end{Theorem}	
+\begin{Theorem}
+	An $ n \times n $ matrix with $ n $ distinct eigenvalues is diagonalizable.
+\end{Theorem}
+	\begin{Theorem}
+		Let $ \matr{A} $ be an $ n \times n $ matrix whose distinct eigenvalues are $ \lambda_1,\cdots,\lambda_p $.
+		\begin{enumerate}
+			\item For $ 1 \leqslant k \leqslant p $, the dimension of the eigenspaces for $ \lambda_k $ is less than or equal to the multiplicity of the eigenvalue $ \lambda_k $.
+			\item The matrix $ \matr{A} $ is diagonalizable iff the sum of the dimensions of the distinct eigenspaces equals $ n $, and this happens iff the dimension of the eigenspace for each $ \lambda_k $ equals the multiplicity of $ \lambda_k $.
+			\item If $ \matr{A} $ is diagonalizable and $ \mathcal{B}_k $ is a basis for the eigenspace corresponding to $ \lambda_k $ for each $ k $, then the total collection of vectors in the sets $ \mathcal{B}_1,\cdots,\mathcal{B}_p $ forms an eigenvector basis for $ \Real^n $.
+		\end{enumerate}
+	\end{Theorem}
+	\begin{Definition}
+		The matrix
+		\begin{equation}
+			\matr{M}=\begin{bmatrix}
+			[T(\vec{b}_1)]_{\mathcal{C}} &[T(\vec{b}_2)]_{\mathcal{C}} &\cdots &[T(\vec{b}_n)]_{\mathcal{C}}
+			\end{bmatrix} \nonumber
+		\end{equation}
+		where $ \mathcal{B}=\{\vec{b}_1,\cdots,\vec{b}_n \} $ is a basis for the vector space $ V $, $ \mathcal{C} $ is a basis in $ W $, and $ T $ is a linear transformation from $ V $ to $ W $, is called the \textit{matrix for $ T $ relative to the bases $ \mathcal{B} $ and $ \mathcal{C} $}. If $ W $ is the same as $ V $ and the basis $ \mathcal{C} $ is the same as $ \mathcal{B} $, the matrix $ \matr{M} $ is called the \textit{matrix for $ T $ relative to $ \mathcal{B} $} or the \textit{$ \mathcal{B} $-matrix for $ T $}, and denoted $ [T]_{\mathcal{B}} $.
+	\end{Definition}
+	\begin{Theorem}[Diagonal Matrix Representation]
+		Suppose $ \matr{A}=\matr{PD}\matr{P}^{-1} $, where $ \matr{D} $ is a diagonal $ n \times n $ matrix. If $ \mathcal{B} $ is the basis for $ \Real^n $ formed from the columns of $ \matr{P} $, then $ \matr{D} $ is the $ \mathcal{B} $-matrix of the transformation $ \vec{x}\mapsto \matr{A}\vec{x} $.
+	\end{Theorem}
 	
 	
 	
