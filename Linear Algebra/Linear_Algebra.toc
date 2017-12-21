@@ -21,3 +21,8 @@
 \contentsline {chapter}{\numberline {5}Eigenvalues and Eigenvectors}{21}{chapter.5}
 \contentsline {section}{\numberline {5.1}Definition}{21}{section.5.1}
 \contentsline {section}{\numberline {5.2}Diagonalization}{22}{section.5.2}
+\contentsline {section}{\numberline {5.3}Complex Eigenvalues}{22}{section.5.3}
+\contentsline {chapter}{\numberline {6}Orthogonality}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Orthogonal Sets}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}Orthogonal Projections}{24}{section.6.2}
+\contentsline {chapter}{\numberline {7}Symmetric Matrices and Quadratic Forms}{27}{chapter.7}

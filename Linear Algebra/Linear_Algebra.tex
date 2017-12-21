@@ -828,7 +828,158 @@ The dimension of $ \nul \matr{A} $ is the number of free variables in $ \matr{A}
 	\begin{Theorem}[Diagonal Matrix Representation]
 		Suppose $ \matr{A}=\matr{PD}\matr{P}^{-1} $, where $ \matr{D} $ is a diagonal $ n \times n $ matrix. If $ \mathcal{B} $ is the basis for $ \Real^n $ formed from the columns of $ \matr{P} $, then $ \matr{D} $ is the $ \mathcal{B} $-matrix of the transformation $ \vec{x}\mapsto \matr{A}\vec{x} $.
 	\end{Theorem}
-	
-	
+\section{Complex Eigenvalues}
+The theory of eigenvalues and eigenvectors developed for $ \Real^n $ applies equally well on $ \Complex^n $.
+\begin{Theorem}
+	Let $ \matr{A} $ be a real $ 2 \times 2 $ matrix with a complex eigenvalue $ \lambda=a-b \iu  (b \neq 0)$ and associated eigenvector $ \vec{v}\in \Complex^2 $. Then
+	\begin{equation}
+		\matr{A}=\matr{PC}\matr{P}^{-1},\quad \text{where}\quad \matr{P}=\begin{bmatrix}
+		\Re \vec{v} & \Im \vec{v}
+		\end{bmatrix} \quad \text{and}\quad \vec{C}=\begin{bmatrix}
+		a &-b \\ 
+		b &a
+		\end{bmatrix} \nonumber
+	\end{equation}
+\end{Theorem}
+
+\chapter{Orthogonality}
+\begin{Definition}
+	If a vector $ \vec{z} $ is orthogonal to every vector in a subspace $ W $ of $ \Real^n $, then $ \vec{z} $ is said to be \textit{orthogonal} to $ W $. The set of all vectors $ \vec{z} $ that are orthogonal to $ W $ is called the \textit{orthogonal complement} of $ W $ and denoted by $ W^\perp $.
+\end{Definition}
+\begin{Theorem}
+	\begin{enumerate}
+		\item A vector $ \vec{x} $ is in $ W^\perp $ iff $ \vec{x} $ is orthogonal to every vector in a set that spans $ W $.
+		\item $ W^\perp $ is a subspace of $ \Real^n $.
+	\end{enumerate}
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Theorem}
+	Let $ \matr{A} $ be an $ m \times n $ matrix. Then the orthogonal complement of the row space of $ \matr{A} $ is the nullspace of $ \matr{A} $, and the orthogonal complement of the column space of $ \matr{A} $ is the nullspace of $ \matr{A}^T $:
+	\begin{equation}
+		(\row \matr{A})^\perp = \nul \matr{A},\qquad (\col \matr{A})^\perp = \nul \matr{A}^T \nonumber
+	\end{equation}
+\end{Theorem}
+\section{Orthogonal Sets}
+\begin{Definition}
+	A set of vectors in $ \Real^n $ is said to be an \textit{orthogonal set} if each pair of distinct vectors from the set is orthogonal.
+\end{Definition}
+\begin{Theorem}
+	If $ S=\{\vec{u}_1,\cdots,\vec{u}_p \} $ is an orthogonal set of nonzero vectors in $ \Real^n $, then $ S $ is linearly independent and hence is a basis for the subspace spanned by $ S $.
+\end{Theorem}
+\begin{Definition}
+	An \textit{orthogonal basis} for a subspace $ W $ of $ \Real^n $ is a basis for $ W $ that is also an orthogonal set.
+\end{Definition}
+\begin{Theorem}
+	Each vector in a subspace of $ \Real^n $ has a unique representation as a linear combination of its orthogonal basis.
+\end{Theorem}
+\begin{Definition}
+	The \textit{orthogonal projection} of $\vec{v}$ on an arbitrary non-zero vector $\vec{b}$ can be written as:
+	\begin{equation}
+	\proj_{\vec{b}}\vec{v} = \frac{\vec{v} \cdot \vec{b}}{\norm{\vec{b}}^2}\vec{b}
+	\end{equation}
+	Moreover, we can see that $\vec{v} - proj_{\vec{b}}\vec{v}$ is the vector component of $\vec{v}$ orthogonal to $\vec{b}$. The projection $ proj_{\vec{b}}\vec{v} $ is determined by the subspace $ \spn \{\vec{b}\} $, and we may call it the \textit{orthogonal projection onto} $ \spn \{\vec{b}\} $.
+\end{Definition}
+\begin{Definition}
+	A set is an \textit{orthonormal set} if it is an orthogonal set of unit vectors. It is also an \textit{orthonormal basis} for a subspace spanned by it.
+\end{Definition}
+\begin{Theorem}
+	An $ m \times n $ matrix $ \matr{U} $ has orthonormal columns iff $ \matr{U}^T \matr{U}=\matr{I} $.
+\end{Theorem}
+\begin{Theorem}
+	Let $ \matr{U} $ be an $ m \times n $ matrix with orthonormal columns, and let $ \vec{x},\vec{y} \in \Real^n $. Then
+	\begin{enumerate}
+		\item $ \norm{\matr{U}\vec{x}}=\norm{\vec{x}} $.
+		\item $ \norm{\matr{U}\vec{x}} \cdot \norm{\matr{U}\vec{y}} =\vec{x} \cdot \vec{y}$, and it equals zero iff $ \vec{x}\cdot \vec{y}=0 $.
+	\end{enumerate}
+Equivalently, they say that the linear mapping $ \vec{x}\mapsto  \matr{U}\vec{x} $ preserves lengths and orthogonality.
+\end{Theorem}
+\begin{Definition}
+	An \textit{orthogonal matrix} is a square invertible matrix $ \matr{U} $ such that $ \matr{U}^{-1}=\matr{U}^T $.
+\end{Definition}
+\section{Orthogonal Projections}
+\begin{Theorem}
+	Let $ W $ be a subspace of $ \Real^n $. Then each $ \vec{y}\in \Real^n $ can be written uniquely in the form
+	\begin{equation}
+		\vec{y}=\hat{\vec{y}}+\vec{z} \nonumber
+	\end{equation}
+	where $ \hat{\vec{y}} $ is in $ W $ and $ \vec{z} $ is in $ W^\perp $. In fact, if $ \{\vec{u}_1,\cdots,\vec{u}_p \} $ is any orthogonal basis of $ W $, then
+	\begin{equation}
+		\hat{\vec{y}}= \proj_{\vec{u}_1}\vec{y}+\cdots +\proj_{\vec{u}_p}\vec{y} \nonumber
+	\end{equation}
+	and $ \vec{z}=\vec{y}-\hat{\vec{y}} $.
+\end{Theorem}
+The vector $ \hat{\vec{y}} $ is called the \textit{orthogonal projection of $ \vec{y} $ onto $ W $} and written as $ \proj_{W}\vec{y} $.
+\begin{Theorem}
+	Let $ W $ be a subspace of $ \Real^n $, $ \vec{y}\in\Real^n $, and $ \hat{\vec{y}} $ the orthogonal projection of $ \vec{y} $ onto $ W $. Then $ \hat{\vec{y}} $ is the closest point in $ W $ to $ \vec{y} $, in the sense that
+	\begin{equation}
+		\norm{\vec{y}-\hat{\vec{y}}}<\norm{\vec{y}-\vec{v}} \nonumber
+	\end{equation}
+	for all $ \vec{v}\in W $ distinct from $ \hat{\vec{y}} $.
+\end{Theorem}
+\begin{Theorem}
+	If $ \{\vec{u}_1,\cdots,\vec{u}_p \} $ is an orthonormal basis for a subspace $ W \in \Real^n $, then
+	\begin{equation}
+		\proj_{W}\vec{y}=(\vec{y}\cdot \vec{u}_1)\vec{u}_1 + \cdots +(\vec{y}\cdot \vec{u}_p)\vec{u}_p\nonumber
+	\end{equation}
+	If $ \matr{U} =\begin{bmatrix}
+	\vec{u}_1 &\cdots &\vec{u}_p 
+	\end{bmatrix}$, then
+	\begin{equation}
+		\proj_{W}\vec{y}=\matr{U}\matr{U}^T \vec{y}\nonumber
+	\end{equation}
+\end{Theorem}
+\chapter{Symmetric Matrices and Quadratic Forms}
+\begin{Definition}
+	A \textit{symmetric matrix} is a matrix such that it equals to the transpose of itself.
+\end{Definition}
+\begin{Definition}
+	A \textit{quadratic form} on $ \Real^n $ is a function $ Q $ defined on $ \Real^n $ whose value at a vector $ \vec{x}\in \Real^n $ can be computed by an expression of the form $ Q(\vec{x})=\vec{x}\matr{A}^T \vec{x} $, where $ \matr{A} $ is an $ n \times n $ symmetric matrix. The matrix $ \matr{A} $ is called the \textit{matrix of the quadratic form}. The simplest example of a nonzero quadratic form is where the matrix of the quadratic form is the $ n \times n $ identity matrix.
+\end{Definition}
+\begin{Definition}
+	A quadratic form $ Q $ is:
+	\begin{enumerate}
+		\item \textit{positive definite} if $ Q(\vec{x}) >0$ for all $ \vec{x}\neq \vec{0} $,
+		\item \textit{negative definite} if $ Q(\vec{x}) <0$ for all $ \vec{x}\neq \vec{0} $, 
+		\item \textit{indefinite} if $ Q(\vec{x}) $ assumes both positive and negative values.
+	\end{enumerate}
+\end{Definition}
+\begin{Theorem}
+	Let $ \matr{A} $ be an $ n \times n $ symmetric matrix. Then a quadratic form $ \vec{x}\matr{A}^T \vec{x}  $ is:
+		\begin{enumerate}
+		\item positive definite iff the eigenvalues of $ \matr{A} $ are all positive,
+		\item negative definite iff the eigenvalues of $ \matr{A} $ are all negative, 
+		\item indefinite iff the eigenvalues of $ \matr{A} $ has both positive and negative eigenvalues.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	A \textit{positive definite matrix} $ \matr{A} $ is a symmetric matrix for which the quadratic form is positive definite. The matrix is a \textit{positive semidefinite matrix} if its quadratic form is nonnegative. Other terms are defined analogously.
+\end{Definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 \end{document}

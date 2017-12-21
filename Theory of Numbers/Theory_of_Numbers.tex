@@ -431,7 +431,87 @@ That is, adding, subtracting, and multiplying congruent numbers with respect to 
 \begin{Definition}
 	For a sequence(finite or infinite) of integers $ c_1,c_2,\cdots $, the corresponding function $ z^{c_1}+z^{c_2}+\cdots $ is called the \textit{generating function of the series}.
 \end{Definition}
-
+\begin{Theorem}
+	In a covering system of congruences, the sum of the reciprocals of the moduli is larger than $ 1 $.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Theorem}
+	For integers $ a,b,m $, the congruence
+	\begin{equation}
+		ax \equiv b \pmod m \nonumber
+	\end{equation}
+	has solutions iff
+	\begin{equation}
+		(a,m)|b \nonumber
+	\end{equation}
+	If this holds, then there are $ (a,m) $ residue classes modulo $ m $ that satisfy the congruence.
+\end{Theorem}
+\begin{Theorem}
+	The congruence $ ax \equiv b \pmod m $ has a solution iff the Diophantine equation
+	\begin{equation}
+		ax-my=b \nonumber
+	\end{equation}
+	has a solution, and this has a solution iff
+	\begin{equation}
+		(a,b)|b \nonumber
+	\end{equation}
+	If this holds, then the solution of the congruence is a residue class modulo $ m/(a,m) $; the solution can be found using the Euclidean algorithm with $ a $ and $ m $.
+\end{Theorem}
+\begin{Definition}
+	The general system of congruences
+	\begin{equation}
+		a_i x \equiv b_i \pmod {m_i},\qquad i=1,2,\cdots,k \nonumber
+	\end{equation}
+	is called \textit{simultaneous systems of congruences}.
+\end{Definition}
+\begin{Theorem}
+	If a simultaneous systems of congruences has a solution and the conditions $ (a_i,m_i)=1 $ are satisfied, then all the solutions form a residue class modulo the least common multiple of the moduli.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Theorem}[Chinese Remainder Theorem]
+	If the moduli in the simultaneous congruence system
+	\begin{equation}
+		a_i x \equiv b_i \pmod {m_i},\qquad i=1,2,\cdots,k \nonumber
+	\end{equation}
+	are pairwise relatively prime and 
+	\begin{equation}
+		(a_i,m_i)=1,\qquad i=1,2,\cdots,k \nonumber
+	\end{equation}
+	then the system has a solution. This solution is a residue class modulo the product of the moduli.
+\end{Theorem}
+\begin{Theorem}
+	For any given number $ N $, there exists a prime number that is at least $ N $ greater than the previous prime number and at least $ N $ smaller than the following one.
+\end{Theorem}
+\begin{Theorem}[Dirichlet's Theorem]
+	If $ a $ and $ m $ are integers, relatively prime to each other, then there are infinitely many positive integers $ k $ such that $ a+km $ is prime.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\section{Reduced Residue Systems}
+\begin{Definition}
+	A set of representatives, one from each class relatively prime to the modulus, is called a \textit{reduced residue system} and denoted by $ \varphi(m) $, the number of residue classes relatively prime to $ m $.
+\end{Definition}
+\begin{Definition}
+	The \textit{Euler's $ \varphi $-function} is defined as follows: $ \varphi(m) $ is the number of integers from $ 0 $ to $ m-1 $ that are relatively prime to $ m $.
+\end{Definition}
+\begin{Theorem}
+	For Euler's $ \varphi $-function,
+	\begin{equation}
+		\sum_{d |n}\varphi(d)=n \nonumber
+	\end{equation}
+	In other words, the summation of the values of the $ \varphi $-function for all divisors $ d $ of $ n $ equals to $ n $.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Theorem}
+	If $ \varphi(m) $ integers are relatively prime to $ m $ and are pairwise incongruent modulo $ m $, then they form a reduced residue system modulo $ m $.
+\end{Theorem}
 	
 \chapter{Rational and Irrational Numbers. Approximation of Numbers by Rational Numbers (Diophantine Approximation)}
 	

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 DEC 2017 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 DEC 2017 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -981,8 +981,16 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
-\c@Theorem=\count139
-\c@Example=\count140
+(/usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen185
+\enit@toks=\toks42
+\enit@inbox=\box41
+\enitdp@description=\count139
+)
+\c@Theorem=\count140
+\c@Example=\count141
 )
 (./Theory_of_Numbers.aux)
 \openout1 = `Theory_of_Numbers.aux'.
@@ -1006,7 +1014,7 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 43.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box41
+\AtBeginShipoutBox=\box42
 Package hyperref Info: Link coloring OFF on input line 43.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1015,7 +1023,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count141
+\c@section@level=\count142
 )
 LaTeX Info: Redefining \ref on input line 43.
 LaTeX Info: Redefining \pageref on input line 43.
@@ -1028,17 +1036,17 @@ LaTeX Info: Redefining \nameref on input line 43.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count142
-\scratchdimen=\dimen185
-\scratchbox=\box42
-\nofMPsegments=\count143
-\nofMParguments=\count144
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count145
-\MPscratchDim=\dimen186
-\MPnumerator=\count146
-\makeMPintoPDFobject=\count147
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count143
+\scratchdimen=\dimen186
+\scratchbox=\box43
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen187
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1365,77 +1373,108 @@ ntifier (name{equation.2.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.427 \chapter
-              {Rational and Irrational Numbers. Approximation of Numbers by ...
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.
-1}) has been already used, duplicate ignored
+l.430 \end{proof}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{equation.2.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.427 \chapter
-              {Rational and Irrational Numbers. Approximation of Numbers by ...
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.
-1}) has been already used, duplicate ignored
+l.430 \end{proof}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{equation.2.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.427 \chapter
-              {Rational and Irrational Numbers. Approximation of Numbers by ...
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.2.
-1}) has been already used, duplicate ignored
+l.430 \end{proof}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{equation.2.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.427 \chapter
-              {Rational and Irrational Numbers. Approximation of Numbers by ...
-]
+l.430 \end{proof}
+                 ]pdfTeX warning (ext4): destination with the same identifier (
+name{equation.2.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.442 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.446 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.453 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.457 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.464 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.477 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.481 	\begin{equation}
+                        [11] [12]
  3.
-[11
+[13
 
 ]
 Overfull \hbox (394.82571pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 12  \T1/lmr/m/sl/10.95 3.  RATIONAL AND IRRATIONAL NUMBERS. A
+\T1/lmr/m/n/10.95 14  \T1/lmr/m/sl/10.95 3.  RATIONAL AND IRRATIONAL NUMBERS. A
 PPROXIMATION OF NUMBERS BY RATIONAL NUMBERS (DIOPHANTINE APPROXIMATION)
  []
 
-[12
+[14
 
 ]
  4.
-[13] [14
-
-]
- 5.
 [15] [16
 
 ]
- 6.
+ 5.
 [17] [18
 
 ]
- 7.
+ 6.
 [19] [20
 
 ]
+ 7.
+[21] [22
+
+]
  8.
-[21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 458.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 458.
+[23]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 547.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 547.
  (./Theory_of_Numbers.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 458.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 458.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 547.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 547.
 Package rerunfilecheck Info: File `Theory_of_Numbers.out' has not changed.
-(rerunfilecheck)             Checksum: 5FE1343780B87E8AEDB29D04E43F7898;1071.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 458.
+(rerunfilecheck)             Checksum: E90DD422DF86C31535EFC9F946684537;1141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 547.
  ) 
 Here is how much of TeX's memory you used:
- 17932 strings out of 492995
- 327064 string characters out of 6132704
- 399939 words of memory out of 5000000
- 21055 multiletter control sequences out of 15000+600000
+ 18223 strings out of 492995
+ 331912 string characters out of 6132704
+ 406119 words of memory out of 5000000
+ 21328 multiletter control sequences out of 15000+600000
  79870 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,56p,670b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,8n,56p,670b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-d
@@ -1457,10 +1496,10 @@ pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 /lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on Theory_of_Numbers.pdf (25 pages, 310045 bytes).
+Output written on Theory_of_Numbers.pdf (27 pages, 315916 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 356 PDF objects out of 1000 (max. 8388607)
+ 305 compressed objects within 4 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
