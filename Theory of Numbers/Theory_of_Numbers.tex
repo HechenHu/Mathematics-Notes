@@ -512,7 +512,229 @@ That is, adding, subtracting, and multiplying congruent numbers with respect to 
 \begin{Theorem}
 	If $ \varphi(m) $ integers are relatively prime to $ m $ and are pairwise incongruent modulo $ m $, then they form a reduced residue system modulo $ m $.
 \end{Theorem}
-	
+\begin{Theorem}[Euler-Fermat Theorem]
+	If $ m $ is an integer greater than $ 1 $ and $ a $ is an integer relatively prime to $ m $, then
+	\begin{equation}
+		a^{\varphi(m)}\equiv 1 \pmod{m} \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	Let $ m $ be an integer greater than $ 1 $, $ a $ an integer relatively prime to $ m $, and $ r_1,r_2,\cdots,r_{\varphi(m)} $ a reduced residue system modulo $ m $. Then by the former theorem
+	\begin{equation}
+		ar_1,ar_2,\cdots,ar_{\varphi(m)} 
+	\end{equation}
+	is a reduced residue system, since each of it is a product of two integers relatively prime to $ m $ and it has $ \varphi(m) $ elements that are relatively prime to $ m $. For each element there is exactly one element congruent to it from the original system.
+	\begin{equation}
+		ar_i \equiv r_{j_i} \pmod{m},\quad i=1,2,\cdots,\varphi(m) \nonumber
+	\end{equation}
+	Here $ j_{1},j_2,\cdots,c_{\varphi(m)} $ is a permutation of $ 1,2,\cdots, \varphi(m)$(since $ a $ and $ r_i $ are both relatively prime to $ m $, then their product must be relatively prime to $ m $, and thus congruent to only one other element in the original reduced residue system). Now multiply all the left sides together and all the right sides together
+	\begin{equation}
+		a^{\varphi(m)}r_1 r_2 \cdots r_{\varphi(m)} \equiv r_1 r_2 \cdots r_{\varphi(m)} \pmod{m} \nonumber
+	\end{equation}
+	and since $ (r_1 r_2 \cdots r_{\varphi(m)},m)=1 $, divide the congruence equation by $ r_1 r_2 \cdots r_{\varphi(m)} $, and our proof is complete.
+\end{proof}
+\begin{Theorem}[Fermat's Theorem]
+	If $ p $ is a prime and $ p  \nmid a $, then
+	\begin{equation}
+		a^{p-1} \equiv 1 \pmod{p} \nonumber
+	\end{equation}
+	or equivalently,
+	\begin{equation}
+		a^p \equiv a \pmod{p} \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Example}
+	We can now solve the congruence $ ax \equiv b \pmod{m} $ where $ (a,m)=1 $. We have
+	\begin{equation}
+		x \equiv a^{\varphi(m)-1}b \pmod{m} \nonumber
+	\end{equation}
+	and the solution of it is the residue class
+	\begin{equation}
+		(a^{\varphi(m)-1}b)_m \nonumber
+	\end{equation}
+\end{Example}
+\begin{Definition}
+	The smallest exponent of a number $ c $ for which $ c $ raised to this exponent is congruent to $ 1 $ modulo $ m $ the \textit{order of $ c $ modulo $ m $}. By the Euler-Fermat theorem, there exists such exponent, like $ \varphi(m) $, but the smallest such exponent could be smaller than $ \varphi(m) $.
+\end{Definition}
+\section{Polynomial and Congruences}
+\begin{Theorem}
+	If the coefficients of a polynomial $ f(x) $ are not all congruent to $ 0 $ modulo $ m $ and $ f(a)\equiv 0\pmod m $, then there exists a polynomial $ g(x) $ such that
+	\begin{equation}
+		f(x)\equiv (x-a)g(x)\pmod{m} \nonumber
+	\end{equation}
+	for all $ x $ and the degree of $ g $ is one less than the degree of $ f $.
+\end{Theorem}
+\begin{proof}
+	Consider the polynomial $ F(x)=f(x+a) $, whose constant term is $ c_0 $. Then it can be written as
+	\begin{equation}
+		F(x)=c_0 + xG(x) \nonumber
+	\end{equation}
+	where $ G(x) $ is of degree $ n-1 $, and it follows that
+	\begin{equation}
+		F(0)=c_0 = f(a)\equiv 0 \pmod{m} \nonumber
+	\end{equation}
+	Returning to $ f $, we have
+	\begin{equation}
+		f(x)=F(x-a)=c_0 + (x-a)G(x-a)\equiv (x-a)G(x-a) \pmod{m} \nonumber
+	\end{equation}
+	Hence letting $ g(x)=G(x-a) $, we have found such a polynomial $ g $ satisfying the claim.
+\end{proof}
+\begin{Theorem}
+	For a prime modulus, a nonzero polynomial cannot have more(residue classes as) roots than the degree of the polynomial.
+\end{Theorem}
+\begin{proof}
+	The theorem is true for degree one polynomials. Let $ p $ be a prime, $ k $ an integer greater than $ 1 $, and assume that the theorem is true for polynomials of degree $ k-1 $. If $ f(x) $ is a polynomial of degree $ k $ and 
+	\begin{equation}
+		f(x)\equiv 0 \pmod{m} \nonumber
+	\end{equation}
+	has no solution for an integer $ x $, or the elements of only one residue class satisfy the congruence, then the theorem is true for $ f $ as well. If the congruence holds for $ a $ and $ b $ (from different residue classes) modulo $ p $, then there is a polynomial $ g $ of degree $ k-1 $ for which
+	\begin{equation}
+		f(x)\equiv (x-a)g(x) \pmod{p} \nonumber
+	\end{equation}
+	Substituting in $ b $, we have
+	\begin{equation}
+		(b-a)g(b)\equiv 0 \pmod{p} \nonumber
+	\end{equation}
+	The first factor is not congruent to $ 0 $(since if so they would have been came from the same residue class), and there fore by the prime property, the second factor is divisible by $ p $. Therefore, every solution of $ f(x)\equiv 0 \pmod{m} $ not congruent to $ a $ modulo $ p $ is a solution of
+	\begin{equation}
+		g(x)\equiv 0 \pmod{p} \nonumber
+	\end{equation}
+	The polynomial $ g $ is of degree $ k-1 $, and by induction it has at most $ k-1 $ roots, so $ f $ can have at most $ k $ roots.
+\end{proof}
+\begin{Theorem}[Wilson's Theorem]
+	If $ p $ is a prime number, then
+	\begin{equation}
+		(p-1)!+1 \equiv 0 \pmod{p} \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	For $ p=2 $, the statement is clearly true, and we may assume $ p $ to be an odd prime. The degree of the polynomial
+	\begin{equation}
+		(x-1)(x-2)(x-(p-1))-(x^{p-1}-1)=a_{p-2}x^{p-2}+a_{p-3}x^{p-3}+\cdots+a_0 \nonumber
+	\end{equation}
+	if it exists, is at most $ p-2 $, since the term of degree $ p-1 $ cancels out. However, this polynomial has $ p-1 $ distinct roots, and the second term $ (x^{p-1}-1) $ is congruent to $ 0 $ modulo $ p $ by Fermats' theorem. Therefore, their difference is congruent to $ 0 $ modulo $ p $, which is possible only if the polynomial on the right-hand side is the zero polynomial, \textit{i.e.} $ x=0 $(if not so this polynomial will have more roots than the degree of this polynomial). Substituting this into the congruence, we get
+	\begin{equation}
+		a_0=(-1)^{p-1}(p-1)!-(-1) = (p-1)!+1 \equiv 0 \pmod{p} \nonumber
+	\end{equation}
+	Alternatively, the polynomial on the right is congruent to $ 0 $ modulo $ p $ means that
+	\begin{equation}
+		a_{p-2}\equiv a_{p-3}\equiv \cdots \equiv a_1 \equiv a_0 \equiv 0 \pmod{p} \nonumber
+	\end{equation}
+	and Wilson's theorem follows from $ a_0 \equiv 0 \pmod{p} $.
+\end{proof}
+\begin{Theorem}
+	For all primes $ p $ of the form $ 4k+1 $, there exists an integer $ c $ for which
+	\begin{equation}
+		c^2+1 \equiv 0 \pmod{p} \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Theorem}
+	If $ p $ is an odd prime and $ k|p-1 $, then the congruence
+	\begin{equation}
+		x^{p-1}-1\equiv 0 \pmod{p}\nonumber
+	\end{equation}
+	has $ k $ roots.
+\end{Theorem}
+\begin{proof}
+	If $ k|(p-1) $, then the polynomial $ x^{p-1}-1 $ factors into
+	\begin{equation}
+		x^{p-1}-1=(x^k-1)g(x) \nonumber
+	\end{equation}
+	where $ g(x) $ is some polynomial of degree $ p-1-k $. By Fermat's theorem, the left side has $ p-1 $ roots modulo $ p $. Since the modulus is prime, the right-hand side can be congruent to $ 0 $ modulo $ p $ iff one of its factors is congruent to $ 0 $. The first factor has at most $ k $ roots and the second at most $ p-1-k $ roots.If one of these factors had fewer than this many, then their product would have fewer than $ p-1 $ roots. Therefore, both factors have their maximum number of roots.
+\end{proof}
+\section{Properties of the Order of an Element}
+\begin{Theorem}
+	If a number $ c $ has order $ n $ modulo $ m $, then the numbers $ 1,c,c^2,\cdots,c^{n-1} $ are pairwise incongruent modulo $ m $. If 
+	\begin{equation}
+		c^u \equiv c^v \pmod{m},\quad \text{then}\quad u \equiv v \pmod{n} \nonumber
+	\end{equation}
+	In the special case where $ v=0 $, then $ n | u $.
+\end{Theorem}
+\begin{proof}
+	The first part follows from the Euler-Fermat theorem that $ n | \varphi(m) $. Now we prove the second part. Without loss of generality, we may assume that $ u \geqslant v $. Then $ c^{u-v}\equiv 1 \pmod{m} $. Dividing $ u-v $ by $ n $ with remainder we get
+	\begin{equation}
+		u-v=nq+z \nonumber
+	\end{equation}
+	where $ q $ is an integer and $ 0 \leqslant s < n $. We have
+	\begin{equation}
+		c^{u-v}=(c^n)^q c^s \equiv c^s \equiv 1 \pmod{m} \nonumber
+	\end{equation}
+	Among the positive integral powers of $ c $ the $ n $th is the first that is congruent to $ 1 $ modulo $ m $. Therefore, $ s=0 $, and hence $ n|u-v $.
+\end{proof}
+\begin{Definition}
+	The numbers that have order $ \varphi(m) $ are called \textit{primitive roots of congruence modulo $ m $}. If for a given modulus $ m $ there exists a primitive root $ g $, then for every $ c $ that is relatively prime to $ m $, the smallest nonnegative exponent $ k $ for which
+	\begin{equation}
+		c \equiv g^k \pmod{p} \nonumber
+	\end{equation}
+	is called the \textit{index(with respect to $ g $) of $ c $ modulo $ m $}.
+\end{Definition}
+\begin{Theorem}
+	The number of elements of order $ n $ modulo a prime $ p $ is $ \varphi(n) $ if $ n|p-1 $; otherwise, it is $ 0 $. Based on this, there are $ \varphi(p-1) $ primitive roots modulo $ p $.
+\end{Theorem}
+\begin{proof}
+	By the previous theorem, for an arbitrary $ m>0 $ it follows that only divisors of $ \varphi(m) $ can possibly occur as orders of elements, which proves the second claim.\newpara
+	\exercise
+\end{proof}
+\section{Some Properties of the Euler Function}
+\begin{Definition}
+	A function $ f $ defined on the positive integers is called \textit{multiplicative} if for all pairs of relatively prime integers $ a $ and $ b $, it satisfies $ f(ab)=f(a)f(b) $. If this is satisfied for all $ a $ and $ b $, then the function is called \textit{totally} or \textit{completely multiplicative}.
+\end{Definition}
+\begin{Theorem}
+	Euler's $ \varphi $-function is multiplicative.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Definition}
+	If the congruence
+	\begin{equation}
+		x^2 \equiv c \pmod{p} \nonumber
+	\end{equation}
+	has a solution, then we say that $ c $ is a \textit{quadratic residue} modulo $ p $. If there is no solution, then it is called a \textit{quadratic nonresidue}. Whether or not a number is a quadratic residue is called $ c $'s \textit{quadratic character}.
+\end{Definition}
+\begin{Theorem}
+	The product of two numbers is a quadratic residue if both of the factors are quadratic residues or if both are nonresidues; the product is a quadratic nonresidue if one of the factors is a quadratic residue and the other is a nonresidue. Using the Legendre symbol, the theorem can be restated as
+	\begin{equation}
+		(\frac{ab}{p})=(\frac{a}{p})(\frac{b}{p}) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Definition}
+	The function, written $ (\frac{c}{p}) $, called the \textit{Legendre symbol}, is defined as follows: its value is $ 1 $ if $ c $ is a quadratic residue modulo $ p $, $ -1 $ if $ c $ is a quadratic nonresidue, and $ 0 $ if $ c $ is divisible by $ p $.
+\end{Definition}
+\begin{Theorem}[Euler's Lemma]
+	If $ p $ is an odd prime, then for every $ c $,
+	\begin{equation}
+		(\frac{c}{p})\equiv c^{(p-1)/2} \pmod{p} \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Lemma}[Gauss's Lemma]
+	Let $ p $ be an odd prime and $ c $ an integer not divisible by $ p $. Consider the number of residues of smallest absolute value of the numbers $ c ,2c,\cdots,((p-1)/2)c$ that are negative. Then $ c $ is a residue or nonresidue according to whether this number is even or odd, respectively.
+\end{Lemma}
+\begin{Lemma}
+	The number $ -3 $ is a quadratic residue for primes of the form $ 6k+1 $ and a nonresidue for primes of the form $ 6p-1 $.
+\end{Lemma}
+\begin{Theorem}
+	For a positive number $ c $, whether or not it is a quadratic residue modulo a prime depends only on the residue of the prime modulo $ 4c $; furthermore, those primes with residues $ r $ and $ 4c-r $ agree, or more simply, whose with residues $ r $ and $ -r $ agree.
+\end{Theorem}
+\begin{Theorem}[Reciprocity Theorem]
+	If $ p $ and $ q $ are distinct odd primes, then
+	\begin{equation}
+		(\frac{p}{q})(\frac{q}{p})=(-1)^{\frac{1}{2}(p-1)\cdot \frac{1}{2}(q-1)} \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Theorem}
+	For $ p $ a positive odd prime
+	\begin{equation}
+		(\frac{-1}{p})=(-1)^{(p-1)/2},\qquad (\frac{2}{p})=(-1)^{(p^2-1)/8} \nonumber
+	\end{equation}
+\end{Theorem}
+
 \chapter{Rational and Irrational Numbers. Approximation of Numbers by Rational Numbers (Diophantine Approximation)}
 	
 \chapter{Geometric Methods in Number Theory}
