@@ -929,6 +929,10 @@ The cardinality of $ \Real $ is often denotes as $ \mathfrak{c} $.
 	Now if $ n \in \Natural \Rightarrow card P(X) = 2^{n}  $, let $ X $ be a set that has $ x $ as one of its elements and has the cardinality of $ n+1 $. Therefore $ Y = X \setminus \{x\} $ has $ n $ elements. We can divide $ P(X) $ into two parts: the ones containing $ x $ and the ones don't. If $ x\in A \subset P(X) $, then $ A \setminus \{x\} \subset P(Y) $ and vice versa. Thus we can set up a bijection between $ P(Y) $ and the elements in $ P(X) $ that contains $ x $. Similarly, we can clearly see that a bijection between the subsets of $ P(X) $ that does not contains $ x $ and $ P(Y) $. Thus $ card P(X) = 2^n + 2^n = 2^{n+1} $, and we complete the proof.
 \end{proof}
 
+\section{Construction of Real Numbers}
+\subsection{Decimal expansions(Weierstrass-Stolz model)}
+\subsection{Dedekind's Cut}
+\subsection{Completion by Cauchy Sequences}
 
 
 
@@ -4745,7 +4749,7 @@ A $ C^{(0)} $-diffeomorphism is called a \textit{homeomorphism}.
 \end{Definition}
 \begin{Theorem}[Inverse Function Theorem]
 	If a mapping $ f:G \to \Real^m $ of a domain $ G \subset \Real^m $ is such that
-	\begin{enumerate}[$ 1^0 $]
+	\begin{enumerate}
 		\item $ f \in C^{(p)}(G,\Real^m) $, $ p \geqslant 1 $,
 		\item $ y_0=f(x_0) $ at $ x_0 \in G $,
 		\item $ f^\prime(x_0) $ is invertible,
@@ -4802,7 +4806,7 @@ In other words, the theorem asserts that one can choose coordinates $(u^1,\cdots
 		\end{pmatrix}
 	\end{equation}
 is equal to the same order $ k $ at every point $ x \in U $, then
-\begin{enumerate}[a)]
+\begin{enumerate}
 	\item when $ k=n $, the system is functionally independent in a neighborhood of $ x_0 $;
 	\item when $ k<n $, there exist a neighborhood of $ x_0 $ and $ k $ functions of the system, say $ f^1,\cdots,f^k $ such that the other $ n-k $ functions can be represented as
 	\begin{equation}
