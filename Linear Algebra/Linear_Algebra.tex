@@ -231,6 +231,9 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 \begin{Theorem}
 	Any set $ \{\vec{v}_1,\cdots,\vec{v}_p \} $ in $ \Real^n $ is linearly dependent if $ p>n $(Same as the criterion for the existence of solutions in a system of equations).
 \end{Theorem}
+\begin{proof}
+	Since $ p>n $, there are more variables than equations, and therefore nontrivial solutions exist.
+\end{proof}
 \begin{Theorem}
 	If a set $ S= \{\vec{v}_1,\cdots,\vec{v}_p \}$ in $ \Real^n $ contains the zero vector, then the set is linearly dependent.
 \end{Theorem}
@@ -487,6 +490,9 @@ If a matrix $ A $ is row equivalent to an (reduced)echelon matrix $ U $, $ U $ i
 \begin{Theorem}[The Rank Theorem]
 	If a matrix $ \matr{A} $ has $ n $ columns, then $ \rank \matr{A}+ \dim \nul \matr{A}=n $.
 \end{Theorem}
+\begin{proof}
+	The nonpivot columns correspond to the free variables in $ \matr{Ax}=\vec{0} $, and since the number of pivot columns plus the number of nonpivot columns are the number of columns in the matrix, the proof completes.
+\end{proof}
 \begin{Theorem}[The Basis Theorem]
 	Let $ H $ be a $ p $-dimensional subspace of $ \Real^n $. Any linearly independent set of exactly $ p $ elements in $ H $ is automatically a basis for $ H $. Also, any set of $ p $ elements of $ H $ that spans $ H $ is a basis for $ H $.
 \end{Theorem}

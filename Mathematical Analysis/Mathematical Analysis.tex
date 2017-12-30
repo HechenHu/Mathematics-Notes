@@ -70,93 +70,7 @@
 	$\square$ &End of proof \\
 	\hline
 \end{tabular}
-
-\section{Sets and Operations on Them}
-
-\subsection{Naive Set Theory}
-1$^0$.\quad A set may consist of any distinguishable objects($x\in A\Rightarrow\exists!x\in A$) \\
-2$^0$.\quad A set is unambiguously determined by the collection of objects that comprise it. \\
-3$^0$.\quad Any property defines the set of objects having that property($A = \{x|P(x)\}\Rightarrow P(A)$). \\ \\
-However, this will lead to Russell's Paradox: \\
-Let's have$P(M) \coloneqq M\notin M$ \\
-Consider the class $K = \{M|P(M)\}$. If so $K$ is not a set, since whether $P(K)$ is true or false, contradiction arises.\\
-
-\subsection{ZFC: Zermelo-Fraenkel Axioms and Axiom of Choice}
-1$^0$.\quad \textbf{(Axiom of Extensionality)} Sets $ A $ and $B$ are equal iff they have the same elements. $ (A=B)\Leftrightarrow(\forall x((x\in A)\Leftrightarrow(x \in B))) $\\
-2$^0$. \quad \textbf{(Axiom of Seperation)} To any set $A$ and any property P there corresponds a set $B$ whose elements are those elements of $A$, and only those, having property P(if $A$ is a set, then $B=\{x\in A|P(x)\}$ is also a set). \\
-3$^0$. \quad \textbf{(Union Axiom)} For any set $ M $ whose elements are sets there exists a set $\bigcup M$, called the union of $ M $ and consisting of those elements and only those that belong to some element of $ M $ $ (x\in \bigcup M \Leftrightarrow \exists X((X\in M)\land (x\in X))) $ \\
-Similarly, the intersection of the set $ M $ is defined as:
-\begin{equation}
-	\bigcap M  \coloneqq \{x\in \bigcup M | \forall X((X\in M)\Rightarrow (x\in X))\} \nonumber
-\end{equation}
-4$^0$ \quad \textbf{(Pairing Axiom)} For any sets $ X $ and $ Y $ there exists a set $ Z $ such that $ X $ and $ Y $ are its only elements. \\
-5$^0$ \quad \textbf{(Power Set Axiom)} For any set $ X $ there exists a set $ P(X)$ having each subset of $ X $ as an element, and having no other elements. \\
-\newline
-\begin{Definition}
-The \textit{successor} $X^+$ of the set $ X $ is $X^+ = X\cup \{X\}$.\\
-\end{Definition} 
-\begin{Definition}
-An \textit{inductive} set is a set that $\varnothing$ is one of its elements and the successor of each of its elements aso belongs to it.
-\end{Definition}
-6$^0$ \quad \textbf{(Axiom of Infinity)} There exist inductive sets (Example: $\mathbb{N}_0$).\\ 
-7$^0$ \quad \textbf{(Axiom of Replacement)} Let $ F(x,y) $ be a statement(a formula) such that for every $ x_0 \in X$ there exists a unique object $ y_0 $ such that $ F(x_0,y_0) $ is true. Then the objects $ y $ for which there exists an element $ x\in X $ such that $ F(x,y) $ is true form a set.\\
-And finally, an axiom that is independent of ZF. \\
-\newline
-\begin{Definition}
-A choice function is a function $ f $, defined on a collection $ X $ of nonempty sets, such that for every set $ A $ in $ X $, $ f(A) $ is an element of $ A $.
-\end{Definition}
-8$^0$ \quad \textbf{(Axiom of Choice/Zermelo's Axiom)}  For any set $ X$ of nonempty sets, there exists a choice function $ f $ defined on $ X $.$(\forall X[\varnothing \notin X \Rightarrow \exists f: X\mapsto \bigcup X \quad \forall A\in X(f(A)\in A)])$
-
-\subsection{The \textit{Cardinality} of a Set(\textit{Cardinal Numbers})}
-\begin{Definition}
-The set $ X $ is said to be \textit{equipollent} to the set $ Y $ if there exists a bijective mapping of $ X $ onto $ Y $(then $ X\sim Y $).
-\end{Definition}
-\begin{Definition}
-\textit{Cardinality} is a measure of the number of elements of the set. If $ X \sim Y $, we write $ card X = card Y $.
-\end{Definition}
-If $ X $ is equipollent to some subset of $ Y $, we say $ card X\leqslant card Y $, thus
-\begin{equation}
-	(card X \leqslant card Y)\coloneqq \exists Z\subset Y (card X = card Z) \nonumber
-\end{equation}
-A set is called \textit{finite} if it is not equipollent to any proper subset of itself; otherwise it is called \textit{infinite}. \\
-It has the  properties below:\\
-\newline
-1$^0  \quad (cardX\leqslant card Y)\land(card Y \leqslant card Z)\Rightarrow(card X \leqslant card Z)$.\\
-2$^0 \quad (card X \leqslant card Y)\land(card Y \leqslant card X)\Rightarrow(card X = card Y)$(The Schröder–Bernstein theorem).\\
-3$^0 \quad \forall X\forall Y(card X \leqslant card Y)\lor(card Y \leqslant card X)$(Cantor's theorem).\\
-\newline
-We say $ card X < card Y $ if $ (card X \leqslant card Y) \land (card X \neq card Y)$.\\
-let $ \varnothing $ be the empty set and $ P(X) $ the set of all subsets(thus, the power set) of the set $ X $. Then:
-\begin{Theorem}
-	$ card X < card P(X) $
-\end{Theorem}
-\begin{proof}
-The assertion is obvious for the empty set, and we shall assume that $ X\neq \varnothing $.\\
-Since $ P(X) $ contains all the one-element subsets of $ X $, $ cardX \leqslant cardP(X)$.\\
-Suppose, contrary to the assertion, that there exists a bijective mapping $ f : X \to P(X) $. Let set $ A = \{x\in X:x\notin f(x)\}$ consisting of the elements $ x \in X $ that do not belong to the set $ f(x)\in P(X) $ assigned to them by the bijection. Because $ A \in P(X) $, there exists $ a\in X $ such that $ f(a) = A $. For the element $ a $ the relation $ a \in A $ or $ a \notin A $ is impossible by the definition of $ A $(Similar to Russell's Paradox).
-\end{proof}
-
-
-
-\subsection{Operations on Sets}
-\begin{tabular}{| l | l | l |}
-	\hline
-	Notation &Meaning &Definition \\ \hline
-	$A\subset B$ &$A$ is a subset of $B$ &$\forall x ((x\in A) \Rightarrow(x\in B))$ \\ \hline
-	$A = B$ &$A$ equals to $B$ &$(A \subset B)\land(B \subset A)$ \\ \hline
-	$\varnothing$ &Empty Set & $\{x|x\neq x\}$ \\ \hline
-	$A \cup B$ &The union of $ A $ and $ B $ &$ \{x|x\in A \lor x\in B\} $ \\
-	$ A \cap B $ &The intersection of $ A $ and $ B $ &$ \{x|x\in A \land x\in B\} $ \\ \hline
-	$ A\setminus B $ &The difference between $ A $ and $ B $ &$ \{x|x\in A \land x\notin B\} $ \\ \hline
-	$ C_M A $ &The complement of $A$ in M &$ \{x|x\in M \land x\notin A\} where A\subset M $ \\ \hline
-	$ A \times B $ &The Cartesian Product of $ A $ and $ B $ &$ \{(x,y)|x\in A \land y\in B\} $ \\ \hline
-	$ A^2 $ &$ A \times A $ & \\
-		\hline
-\end{tabular}
- \newline \\
-In the ordered pair$ z = (x_1,x_2) $ where$ Z = X_1 \times X_2 ,z\in Z,x_1 \in X_1, x_2 \in X_2$, $ x_1 $ is called the \textit{first projection} of the pair $ z $ and denoted  pr$_1 z $ while $ x_2 $ is called the \textit{second projection} of the pair $ z $ and denoted  pr$_2 z $.
-
-
+Original content moved to "Point-Set\_Topology"
 
 
 
@@ -240,7 +154,7 @@ The mapping $ f:X \to X $ that assigns each element in $ X $ to itself is called
 	and hence $ g $ is surjective. \\
 	Further, if$ x_1\in X $ and $ x_2 \in X $, then
 	\begin{align}
-		(x_1\neq x_2) &\Rightarrow (e_X(x_1)\neq e_X(x_2))\Rightarrow((g\circ f)(x-1)\neq (g\circ f)(x_2))\Rightarrow \nonumber \\
+		(x_1\neq x_2) &\Rightarrow (e_X(x_1)\neq e_X(x_2))\Rightarrow((g\circ f)(x_1)\neq (g\circ f)(x_2))\Rightarrow \nonumber \\
 							 &\Rightarrow (g(f(x_1))\neq g(f(x_2))) \Rightarrow(f(x_1)\neq f(x_2)) \nonumber
 	\end{align}
 	and therefore $ f $ is injective.
@@ -273,7 +187,7 @@ $ (aRb)\land (bRc) \Rightarrow aRc $ (Transitivity).\\
 An equivalence relation is denoted by the special symbol $ \sim $. $ a\sim b $ means $ a $ is \textit{equivalent} to $ b $.	
 \end{Definition}
 \begin{Definition}
-	Let $ R(~) $ be an equivalence relation on $ A $. If $ a \in A $, the \textit{equivalence class} of $ a $ (denoted $ \bar{a} $) is the class of all those elements of $ A $ that are equivalent to $ a $. The class of all equivalence classes in $ A $ is denoted $ A/R $ and called the \textit{quotient class} of $ A $ by $ R $.
+	Let $ R(\sim) $ be an equivalence relation on $ A $. If $ a \in A $, the \textit{equivalence class} of $ a $ (denoted $ \bar{a} $) is the class of all those elements of $ A $ that are equivalent to $ a $. The class of all equivalence classes in $ A $ is denoted $ A/R $ and called the \textit{quotient class} of $ A $ by $ R $.
 \end{Definition}
 
 \begin{Definition}
@@ -482,8 +396,8 @@ has the unique solution
 \end{Definition}
 \begin{Definition}[Maximal and Minimal Elements]
 	\begin{align}
-	(a= maxX)&\coloneqq(a\in X\land \forall x\in X(x\leqslant a))\nonumber \\
-	(a= minX)&\coloneqq(a\in X\land \forall x\in X(a\leqslant x))\nonumber \\
+	(a= \max X)&\coloneqq(a\in X\land \forall x\in X(x\leqslant a))\nonumber \\
+	(a= \min X)&\coloneqq(a\in X\land \forall x\in X(a\leqslant x))\nonumber \\
 	\end{align}
 	It follows from the order Axiom 1$ _\leqslant $ that if there is a maximal (resp. minimal ) element in a set of numbers, it is the only one. \\
 	However, not every set, not even every bounded set, has a maximal or minimal element(e.g. $ X = \{x\in R|0\leqslant x<1\} $).
@@ -503,7 +417,7 @@ has the unique solution
 \end{Lemma}
 \begin{proof}
 	Since we already know that the minimal element of a set of numbers is unique(the relation $ \leqslant $ is Anti-Symmetric), we need only verify that the least upper bound exists.\\
-	Let $ X\subset \Real $ be a given set and $ Y = \{y\in \Real|\forall x\in X (x \leqslant y)\} $. We know that $ X \neq \varnothing $ and $ Y \neq \varnothing $. Then, by the completeness axiom there exists $ c \in R $ such that $ \forall x \in X \forall y \in Y (x\leqslant c \leqslant y) $. Because $ c $ is  greater than all the elements in $ X $ and smaller than all the elements in $ Y $, we can see that $ c \in Y$ and $ c = min Y $. $ \forall c^\prime < c $ we have $ c^\prime \in X $, and according to the completeness axiom of real numbers, there exists some $ x^\prime \in X$ such that $ c^\prime \leqslant x^\prime \leqslant c $. Thus $ c $ is $ \sup X $.
+	Let $ X\subset \Real $ be a given set and $ Y = \{y\in \Real|\forall x\in X (x \leqslant y)\} $. We know that $ X \neq \varnothing $ and $ Y \neq \varnothing $. Then, by the completeness axiom there exists $ c \in R $ such that $ \forall x \in X \forall y \in Y (x\leqslant c \leqslant y) $. Because $ c $ is  greater than all the elements in $ X $ and smaller than all the elements in $ Y $, we can see that $ c \in Y$ and $ c = \min Y $. $ \forall c^\prime < c $ we have $ c^\prime \in X $, and according to the completeness axiom of real numbers, there exists some $ x^\prime \in X$ such that $ c^\prime \leqslant x^\prime \leqslant c $. Thus $ c $ is $ \sup X $.
 \end{proof}
 The existence of greatest lower bound is analogous with the existence of least upper bound, so
 \begin{Lemma}
@@ -541,7 +455,7 @@ Some properties of the natural numbers:\\
 2$ ^0 $\quad $ (n\in \Natural)\land(n\neq 1)\Rightarrow ((n-1)\in \Natural) $. \\
 3$ ^0 $\quad For any $ n\in \Natural $ the set $ \{x\in \Natural | n <x\} $ contains a minimal element, namely
 \begin{equation}
-	min\{x\in \Natural | n <x\} = n+1 \nonumber
+	\min\{x\in \Natural | n <x\} = n+1 \nonumber
 \end{equation}
 4$ ^0 $\quad $ (n\in\Natural)\land(m \in \Natural)\land(n<m)\Rightarrow(n+1\leqslant m) $.\\
 5$ ^0 $\quad The number $ (n+1)\in\Natural $ is the immediate successor of the number $ n\in \Natural $; that is, if $ n\in \Natural $, there are no natural numbers $ x $ satisfying $ n-1<x<n $. \\
@@ -550,8 +464,8 @@ Some properties of the natural numbers:\\
 \begin{proof}
 	Let $ M \subset \Natural $. \\
 	Case 1: For $ 1\in M $, We'll have $ minM $ = 1, since $ \forall n \in \Natural (1\leqslant n)$. \\
-	Case 2: For $ 1 \notin M $, we find a set $ E $ such that $ 1 \in E = \Natural \setminus M $. If $ n $ is $ max E $, then $ \forall e \in E \Rightarrow e \leqslant n $. However, $ (n+1) \notin E $ because $ \forall n \in \Natural\Rightarrow(n+1)>n $, and thus $ (n+1)\in M $ (If such $ n $ do not exist, then $ E $  which contains $ 1 $ is not bounded from above, and we can see that $ (n\in E) \Rightarrow ((n+1)\in E) $. By the principle of induction, $ E = \Natural $. But this is impossible, since $ \Natural \setminus E = M \neq \varnothing $). \\
-	Therefore, $ (\forall x\in M)\Rightarrow (n\nleqslant x\nleqslant (n+1) ) \Rightarrow  (min M = (n+1)) $ .
+	Case 2: For $ 1 \notin M $, we find a set $ E $ such that $ 1 \in E = \Natural \setminus M $. If $ n $ is $ \max E $, then $ \forall e \in E \Rightarrow e \leqslant n $. However, $ (n+1) \notin E $ because $ \forall n \in \Natural\Rightarrow(n+1)>n $, and thus $ (n+1)\in M $ (If such $ n $ do not exist, then $ E $  which contains $ 1 $ is not bounded from above, and we can see that $ (n\in E) \Rightarrow ((n+1)\in E) $. By the principle of induction, $ E = \Natural $. But this is impossible, since $ \Natural \setminus E = M \neq \varnothing $). \\
+	Therefore, $ (\forall x\in M)\Rightarrow (n\nleqslant x\nleqslant (n+1) ) \Rightarrow  (\min M = (n+1)) $ .
 \end{proof}
 
 \subsection{Rational and Irrational Numbers}
@@ -800,7 +714,7 @@ A subset of $ S $ that is also a system of sets will be called a \textit{subsyst
 \end{Lemma}
 \begin{proof}
 	Let $ S = \{U\} $ be a system of open intervals $ U $ that cover the closed interval $ [a,b] = I_1 $. If the interval $ I_1 $ could not be covered by a finite set of intervals of the system $ S $, then, dividing $ I_1 $ into two halves, we could find that at least one of the two halves, which we denoted by $ I_2 $, does not admit a finite covering. We now repeat this procedure with the interval $ I_2 $, and so on. \newpara
-	In this way a nested sequence $ I_1 \\supset I_2 \\supset \cdots \\supset I_n \\supset \cdots $ of closed intervals arises,none of which admit a covering by a finite subsystem of $ S $. Since the length of the interval $ |I_n|=|I_1|\cdot 2^{-n} $, the sequence $ \{I_n\} $ contains intervals of arbitrarily small length(The second part of \textbf{Cauchy-Contor Principle}), and thus there exists a unique point $ c $ belonging to all the intervals $ I_n,n\in \Natural $. Since $ c \in I_1 = [a,b] $, there exists an open interval $ (\alpha, \beta) = U \in S $ containing $ c $. Let $ \varepsilon = min \{c-\alpha, \beta - c\} $. In the sequence just constructed, we find an interval $ I_n $ such that $ |I_n|<\varepsilon $. Since $ c \in I_n $ and $ |I_n|<\varepsilon $, we conclude that $ I_n \subset (\alpha, \beta) $. But this contradicts the fact that the interval $ I_n $ cannot be covered by a finite set of intervals from the system.
+	In this way a nested sequence $ I_1 \supset I_2 \supset \cdots \supset I_n \supset \cdots $ of closed intervals arises, none of which admit a covering by a finite subsystem of $ S $. Since the length of the interval $ |I_n|=|I_1|\cdot 2^{-n} $, the sequence $ \{I_n\} $ contains intervals of arbitrarily small length(The second part of \textbf{Cauchy-Contor Principle}), and thus there exists a unique point $ c $ belonging to all the intervals $ I_n,n\in \Natural $. Since $ c \in I_1 = [a,b] $, there exists an open interval $ (\alpha, \beta) = U \in S $ containing $ c $. Let $ \varepsilon = min \{c-\alpha, \beta - c\} $. In the sequence just constructed, we find an interval $ I_n $ such that $ |I_n|<\varepsilon $. Since $ c \in I_n $ and $ |I_n|<\varepsilon $, we conclude that $ I_n \subset (\alpha, \beta) $. But this contradicts the fact that the interval $ I_n $ cannot be covered by a finite set of intervals from the system.
 \end{proof}
 
 
@@ -823,117 +737,71 @@ For the set $ \Quoziente $ every point of $ \Real $ is a limit point; for, as we
 \end{proof}
 
 
+Original Content moved to "Point-Set\_Topology"
 
-\section{Countable and Uncountable Sets}
 
-\begin{Definition}
-	A set $ X $ is \textit{countable} if it is equipollent with the set $ \Natural $ of natural numbers, that is, $ card X = card \Natural $.
-\end{Definition}
-
-\begin{Proposition}
- An infinite subset of a countable set is countable.
-\end{Proposition}
-\begin{proof}
-	Let's consider a countable set $ E $. There is a minimal element of $ E_1\coloneqq E $, which we assign to $ 1 \in \Natural $ and denote $ e_1 \in E $. $ E $ is infinite, so $ E_2 \coloneqq E \setminus e_1 $ is not empty. Following the principle of induction, we can construct a injective mapping from $ \{1,2...\} $ to $ \{e_1,e_2,...\} $. \newpara
-	Now we have to prove that this mapping is also surjective. Suppose the contrary, that an element $ e \in E$ does not have a natural number assigned to it. The set $ K=\{n \in E | n \leqslant e\} $ is finite, since it's a subset of $ \Natural $ bounded both from below and above. According to our previous construction, we assign $ 1 $ to $ minK $, denoted as $ e_1 $, and we can acquire a sequence $ e_1, e_2,...e_{k=cardK} $. But $ e_{k=cardK} $ is $ maxK $, and because $ e\in K \land (\forall n\in K (n\leqslant e))$, $ e = maxK$. Therefore $ e = e_k $, or otherwise it will contradict the uniqueness of maximal element.
-\end{proof}
-
-\begin{Proposition}
-	The Union of the sets of a finite or countable system of countable sets is also a countable set.
-\end{Proposition}
-\begin{proof}
-	Let $ X_1,X_2...,X_n,... $ is a countable system of sets and each set $ X_m = \{x^1_m,...,x^n_m,...\} $ is itself countable. Since $ \forall m\in \Natural (card (X=\bigcup_{n \in \Natural}X_n) \geqslant X_m)$, $ X $ is an infinite set. The ordered pair $ (m,n) $ identifies the element $ x^n_m \in X_m $. We can construct a mapping, like $ f : \Natural \times \Natural \to \Natural \coloneqq (m,n) \to \frac{(m+n-2)(m+n-1)}{2}+m $, such that it is bijective. Thus $ X $ is countable. Then because $ card X \leqslant card \Natural $ and the fact that $ X $ is infinite, we conclude that $ card X = card \Natural $.
-\end{proof}
-
-If it is known that a set is either finite or countable, we say it is \textit{at most countable}($ card X \leqslant \Natural $).
-
-\begin{Corollary}
-	$ card \Zahlen = card \Natural $
-\end{Corollary}
-
-\begin{Corollary}
-	$ card \Natural^2 = card \Natural $(The direct product of countable sets is countable).
-\end{Corollary}
-
-\begin{Corollary}
-	$ card \Quoziente = card \Natural $, that is, the set of rational numbers is countable.
-\end{Corollary}
-\begin{proof}
-	Let $ (m,n) $ denote a rational number $ \frac{m}{n} $. It is known that the pair $ (m,n) $ and $ (m^\prime, n^\prime) $ define the same number iff they are proportional. Thus $ \Quoziente $ is equipollent to some infinite subset of the set $ \Zahlen \times \Zahlen $. Since $ card \Zahlen^2 = card \Natural $, we can conclude that $ card \Quoziente = card \Natural $.
-\end{proof}
-
-\begin{Corollary}
-	The set of algebraic numbers is countable.
-\end{Corollary}
-\begin{proof}
-	It can be observed that $ card \Quoziente \times \Quoziente = card \Natural  $. By the principle of induction, $ \forall k \in \Natural (card \Quoziente^k = card \Natural) $. Let $ r \in \Quoziente^k $ be an ordered set $ (r_1,r_2,...,r_k) $ consists of $ k $ rational numbers. \newpara
-	An algebraic equation of degree $ k $ with rational coefficient can be writtne in the reduced form $ x^k + r_1x^{k-1}+ \cdots + r_k = 0 $. Thus there are as many different algebraic equations of degree $ k $ as there are different ordered sets $ (r_1,...,r_k) $ of rational numbers, that is, a countable set. \newpara
-	The algebraic equation with rational coefficients (of arbitrary degree) is the union of sets consisting of algebraic equation (of a fixed degree) which is countable, and this union is countable. Each such equation has only a finite number of roots. Hence the set of algebraic numbers is at most countable. But it is infinite, and therefore countable.
-\end{proof}
-
-\subsection{The Cardinality of the Continuum}
-\begin{Definition}
-	The set $ \Real $ of real numbers is also called the \textit{number continuum}(from Latin \textit{continuum}, meaning continuous, or solid), and its cardinality the \textit{cardinality of the continuum}.
-\end{Definition}
-
-\begin{Theorem}[Cantor]
-	$ card \Natural < card \Real $
-\end{Theorem}
-\begin{proof}[Proof by Nested Interval Lemma]
-	It is sufficient to show that even $ [0,1] $ in an uncountable set. \newpara
-	Assume it is countable, that is, can be written as a sequence $ x_1,x_2,...,x_n,.... $. Take $ x_1 $ on $ I_0 = [0,1] $, and find $ I_1 $ such that $ x_1 \notin I_1 $. Then construct the nested interval $ I_n $ such that $ x_{n+1} \notin I_{n+1} $ and $ |I_n| > 0 $. It follows the nested interval lemma that there exist a point $ c \in [0,1]$ belonging to all $ I_n $. But by our construction, $ c \in \Real $ and $ c $ cannot be any point of the sequence $ x_1,x_2,...,x_n,.... $.
-\end{proof}
-
-\begin{proof}[Proof by Cantor's Diagonal Argument]
-	Let's first consider an the set $ L $ and write out the infinite sequence of distinct binary numbers in it which has the form: 
-	\begin{align}
-		&s1 =	(0,	0,	0,	0,	0,	0,	0,	...) \\
-		&s2 =	(1,	1,	1,	1,	1,	1,	1,	...) \\
-		&s3 =	(0,	1,	0,	1,	0,	1,	0,	...)\\
-		&s4 =	(1,	0,	1,	0,	1,	0,	1,	...)\\
-		&s5 =	(1,	1,	0,	1,	0,	1,	1,	...)\\
-		&s6 =	(0,	0,	1,	1,	0,	1,	1,	...)\\
-		&s7 =	(1,	0,	0,	0,	1,	0,	0,	...)\\
-		&... \\		
-	\end{align}
-	We then constrcut a number $ s $ such that its first digit is the complementary (swapping 0s for 1s and vice versa) of the first digit of $ s_1 $ and etc.
-	\begin{align}
-		&s1 =	(\mathbf{0},	0,	0,	0,	0,	0,	0,	...) \\
-		&s2 =	(1,	\mathbf{1},	1,	1,	1,	1,	1,	...) \\
-		&s3 =	(0,	1,	\textbf{0},	1,	0,	1,	0,	...)\\
-		&s4 =	(1,	0,	1,	\textbf{0},	1,	0,	1,	...)\\
-		&s5 =	(1,	1,	0,	1,	\textbf{0},	1,	1,	...)\\
-		&s6 =	(0,	0,	1,	1,	0,	\textbf{1},	1,	...)\\
-		&s7 =	(1,	0,	0,	0,	1,	0,	\textbf{0},	...)\\
-		&... \\		
-		&s = (\textbf{1},\textbf{0},\textbf{1},\textbf{1},\textbf{1},\textbf{0},\textbf{1},..)
-	\end{align}
-	By construction $ s $ differs from $ s_n $ at the $ n $th digit, so $ s $ is not in this sequence, and thus $ L $ is uncountable. \newpara
-	We can now define a mapping $ f : L \to \Real $.$ f(s_n) = r_n\in \Real $ means that $ s_n $ and $ r_n $ have the same digit while $ r_n $ is under base 10 and $ s_n $ is under base 2. For $ s_n \neq s_m \Rightarrow (r_n=f(s_n)) \neq (r_m=f(s_m)) $, $ f $ is injective, and with the fact that all $ s_n $ corresponds to a $ r_n $ together give us $ cardf(L) = card L $. Since $ f(L) $ is a subset of $ \Real $, we can see that $ \Real $ is also uncountable.
-\end{proof}
-The cardinality of $ \Real $ is often denotes as $ \mathfrak{c} $.
-\begin{Corollary}
-	$ \Quoziente \neq \Real $, and so irrational numbers exist.
-\end{Corollary}
-
-\begin{Corollary}
-	There exist transcendental numbers, since the set of algebraic numbers is countable.
-\end{Corollary}
-
-\subsection{Miscellaneous}
-\begin{Example}
-	The cardinality of $ P(X) $, which is the power set of $ X $, satisfy that if $ card X = n $, $ card P(X) = 2^{n} $.
-\end{Example}
-\begin{proof}
-	We can use the principle of induction to complete the proof. If $ n= 1 $, $ X = \{x\} $, then $ P(X) =\{\varnothing, X\} $, then $ card P(X) = 2^{1} $. \newpara
-	Now if $ n \in \Natural \Rightarrow card P(X) = 2^{n}  $, let $ X $ be a set that has $ x $ as one of its elements and has the cardinality of $ n+1 $. Therefore $ Y = X \setminus \{x\} $ has $ n $ elements. We can divide $ P(X) $ into two parts: the ones containing $ x $ and the ones don't. If $ x\in A \subset P(X) $, then $ A \setminus \{x\} \subset P(Y) $ and vice versa. Thus we can set up a bijection between $ P(Y) $ and the elements in $ P(X) $ that contains $ x $. Similarly, we can clearly see that a bijection between the subsets of $ P(X) $ that does not contains $ x $ and $ P(Y) $. Thus $ card P(X) = 2^n + 2^n = 2^{n+1} $, and we complete the proof.
-\end{proof}
 
 \section{Construction of Real Numbers}
 \subsection{Decimal expansions(Weierstrass-Stolz model)}
+All real numbers are defined as the decimal expansion $ a.a_0 a_1 \cdots $, where $ a $ is any integer and $ a_n $ with $ n\in \Natural \geqslant 0 $ are integers between $ 0-9 $, and we defined that all numbers ending with infinitely many $ 9 $s equal to the number obtained from the original number by adding $ 1 $ to the last non-nine digit and replace all $ 9 $s with $ 0 $s.
 \subsection{Dedekind's Cut}
+\begin{Definition}
+	A proper subset $ \alpha $ of $ \Quoziente $ is said to be a cut if
+	\begin{enumerate}
+		\item $ \alpha \neq \varnothing $.
+		\item if $ p \in \alpha $ and $ q <p \in \Quoziente $, then $ q \in \alpha $ ($ \alpha $ is not bounded below).
+		\item If $ p \in \alpha $, then $ p<r $ for some $ r \in \alpha $ ($ \alpha $ has no largest number).
+	\end{enumerate}
+\end{Definition}
+\begin{Definition}
+	Two cuts $ \alpha $ and $ \beta $ satisfy the relationship $ \alpha<\beta $ if $ \alpha $ is a proper subset of $ \beta $.
+\end{Definition}
+Now let $ \Real $ be the collection of all cuts in $ \Quoziente $. $ \Real $ is an ordered set with the relation $ < $ defined above. Its easy to see that $ \Real $ has the least upper bound property. 
+\begin{Definition}
+	Let $ A $ be a nonempty subset of $ \Real $ which is bounded from above. Let $ \gamma=\bigcup_{\alpha_i \in A}\alpha_i $, and it can be seen that $ \gamma $ has all cuts in $ A $ as its subsets, and $ \gamma $ is a cut. Then $ \gamma = \sup A $.
+\end{Definition}
+Here we defined the supremum of a bounded subset of $ \Real $.
+\begin{Definition}
+	For two cuts $ \alpha, \beta $, their sum is defined as 
+	\begin{equation}
+		\alpha + \beta \coloneqq \{a+b |a\in \alpha\land b \in \beta  \} \nonumber
+	\end{equation}
+	and the additive identity can be defined as
+	\begin{equation}
+		0^+ \coloneqq \{q| q \in \Quoziente \land q<0 \} \nonumber
+	\end{equation}
+	while the additive inverse for $ \alpha $ can be defined as
+	\begin{equation}
+		-\alpha \coloneqq \{q \in \Quoziente | \exists r >0(-(q+r)\notin \alpha) \} \nonumber
+	\end{equation}
+	It's easy to see that all the definition above are cuts.
+\end{Definition}
+Now we first define the product of positive real numbers.
+\begin{Definition}
+	We define the set of positive real numbers be $ \Real_+ \coloneqq \{l \in \Real \land 0^+<l  \} $. For two cuts $ \alpha $ and $ \beta $ in $ \Real_+ $, their product is
+	\begin{equation}
+		\alpha \times\beta \coloneqq \{p \in \Quoziente | (\exists a>0 \in \alpha)(\exists b>0 \in \beta) p \leqslant ab \} \nonumber
+	\end{equation}
+	the multiplicative identity is
+	\begin{equation}
+		1_\times \coloneqq \{ q \in \Quoziente\land q<1 \} \nonumber
+	\end{equation}
+	the multiplicative inverse for $ \alpha $ is
+	\begin{equation}
+		\alpha_\times \coloneqq \{q\in \Quoziente|q\leqslant 0 \}\cup \{q\in \Quoziente|(0<q)\land (\exists r >0)\frac{1}{q}-r \notin \alpha \} \nonumber
+	\end{equation}
+	It's easy to see that all of them are cuts and the product of two positive real is positive. Now we define multiplication for all reals.
+	\begin{equation}
+		\alpha \times\beta =\begin{cases}
+		&(-\alpha)(-\beta)\quad \text{if }\alpha,\beta < 0^+ \\
+		& -[(-\alpha)\beta]\quad \text{if }\alpha < 0^+,\beta > 0^+ \\
+		& -[\alpha(-\beta)]\quad \text{if }\alpha > 0^+,\beta < 0^+
+		\end{cases} \nonumber
+	\end{equation}
+\end{Definition}
+Now each rational numbers $ r \in  \Quoziente$ can be identified with a rational cut $ r^* \coloneqq \{q \in \Quoziente|q<r \} $. This identification preserves addition, multiplication, and order. Moreover, irrational numbers can also be identified with cuts. For example, $ \sqrt{2}$ can be identified with the cut $ \{ q \in \Quoziente|q<0 \}\cup \{q \in \Quoziente |(q \geqslant 0) \land (q^2<2) \} $.
 \subsection{Completion by Cauchy Sequences}
-
+The real numbers can be constructed as the equivalent classes of Cauchy sequences of rational numbers, where the equivalence relation holds if the difference of two Cauchy sequences of rational numbers tends to zero.
 
 
 
@@ -1023,7 +891,7 @@ The sequence $ 1,2,\frac{1}{3},4,\frac{1}{5},6,\frac{1}{7}... $ whose $ n $th te
 	\begin{equation}
 		|(A+B)-(x_n+y_n)| \leqslant \Delta(x_n) + \Delta(y_n) \nonumber
 	\end{equation}
-	Suppose $ \varepsilon > 0 $ is given. Since $ \lim\limits_{n \to \infty}x_n = A $ , there exists $ N^\prime $ such that $ \Delta(x_n)<\varepsilon/2 $ for all $ n > N^\prime $. Similarly, since $ \lim\limits_{n \to \infty}y_n = B $, there exists $ N^{\prime\prime} $ such that $ \Delta(y_n)<\varepsilon/2 $ for all $ n > N^{\prime}\prime $. Then for $ n>max\{N^\prime, N^{\prime\prime} $ we have
+	Suppose $ \varepsilon > 0 $ is given. Since $ \lim\limits_{n \to \infty}x_n = A $ , there exists $ N^\prime $ such that $ \Delta(x_n)<\varepsilon/2 $ for all $ n > N^\prime $. Similarly, since $ \lim\limits_{n \to \infty}y_n = B $, there exists $ N^{\prime\prime} $ such that $ \Delta(y_n)<\varepsilon/2 $ for all $ n > N^{\prime}\prime $. Then for $ n>\max \{N^\prime, N^{\prime\prime}\} $ we have
 	\begin{equation}
 			|(A+B)-(x_n+y_n)| \leqslant \varepsilon \nonumber
 	\end{equation}
@@ -1049,14 +917,14 @@ The sequence $ 1,2,\frac{1}{3},4,\frac{1}{5},6,\frac{1}{7}... $ whose $ n $th te
 	Let $ \{x_n\} $ and $ \{y_n\} $ be two convergent sequences with $ \lim\limits_{n \to \infty}x_n =A$ and $ \lim\limits_{n \to \infty}y_n=B $. If $ A<B $, then there exists an index $ N \in \Natural $ such that $ x_n<y_n $ for all $ n>N $.
 \end{Theorem}
 \begin{proof}
-	Choose a number $ C $ such that $ A<C<B$. By definition of limit, we can find numbers $ N^\prime $  and $ N^{\prime\prime} $ such that $ |x_n-A|<C-A $ for all $ n > N^\prime $ and $ |y_n-B| < B-C $ for all $ n > N^{\prime\prime} $. Then for $ n > N = max\{N^\prime,N^{\prime\prime}\} $ we shall have $ x_n < (A+C-A )= C = (B-(B-C))<y_n $.
+	Choose a number $ C $ such that $ A<C<B$. By definition of limit, we can find numbers $ N^\prime $  and $ N^{\prime\prime} $ such that $ |x_n-A|<C-A $ for all $ n > N^\prime $ and $ |y_n-B| < B-C $ for all $ n > N^{\prime\prime} $. Then for $ n > N = \max \{N^\prime,N^{\prime\prime}\} $ we shall have $ x_n < (A+C-A )= C = (B-(B-C))<y_n $.
 \end{proof}
 
 \begin{Theorem}
 	Suppose the sequences $ \{x_n\} $, $ \{y_n\} $, and $ \{z_n\} $ are such that $ x_n \leqslant y_n \leqslant z_n $ for all $ n >N\in \Natural $. If the sequences $ \{x_n\} $ and $ \{z_n\} $ both converge to the same limit, then the sequence $ \{y_n\} $ also converges to that limit.
 \end{Theorem}
 \begin{proof}
-Suppose $ \lim\limits_{n \to \infty}x_n = \lim\limits_{n \to \infty}z_n=A $. Given $ \varepsilon>0 $ choose $ N^\prime $ and $ N^{\prime\prime} $ such that $ \forall n>N^\prime (A-\varepsilon<x_n) $ and $ \forall n> N^{\prime\prime}(z_n < A+ \varepsilon) $. Then for $ n > N = max\{N^\prime,N^{\prime\prime}\} $ we shall have $ A-\varepsilon < x_n \leqslant y_n \leqslant z_n < A+ \varepsilon $, which says $ |y_n-A| < \varepsilon$, that is $ A = \lim\limits_{n \to \infty}y_n $.
+Suppose $ \lim\limits_{n \to \infty}x_n = \lim\limits_{n \to \infty}z_n=A $. Given $ \varepsilon>0 $ choose $ N^\prime $ and $ N^{\prime\prime} $ such that $ \forall n>N^\prime (A-\varepsilon<x_n) $ and $ \forall n> N^{\prime\prime}(z_n < A+ \varepsilon) $. Then for $ n > N = \max\{N^\prime,N^{\prime\prime}\} $ we shall have $ A-\varepsilon < x_n \leqslant y_n \leqslant z_n < A+ \varepsilon $, which says $ |y_n-A| < \varepsilon$, that is $ A = \lim\limits_{n \to \infty}y_n $.
 \end{proof}
 
 \begin{Corollary}
@@ -1689,7 +1557,7 @@ $ 7^0 $ For $ r^0 \in \Quoziente (\lim\limits_{\Quoziente \ni r \to r_0}a^r=a^{r
 \begin{proof}
 	First we prove that $ a^p\to1 $ as $ \Quoziente \ni p \to 0 $ by use the inequality $ a^{-1/n}<a^p<a^{1/n} $. Then we choose $ \delta $ such that $ 1-\varepsilon a^{-r_0} <a^p < 1 + \varepsilon a^{-r_0}$ for $ |p|<\delta $. If now $ |r-r_0|<\delta $, we have $ a^{r_0}(1-\varepsilon a^{-r_0} )<a^{r_0}\cdot a^{r-r_0} < a^{r_0}(1 + \varepsilon a^{-r_0} )$, which says $ a^{r_0}- \varepsilon < a^r< a^{r_0}+ \varepsilon$.
 \end{proof}
-$ 8^0 $ Let $ x \in \Real $, $ s = \sup_{\Quoziente \ni r <x}a^r $, and $ i = inf_{\Quoziente \ni r >x}a^r  $. We show that $ s=i $.
+$ 8^0 $ Let $ x \in \Real $, $ s = \sup_{\Quoziente \ni r <x}a^r $, and $ i = \inf_{\Quoziente \ni r >x}a^r  $. We show that $ s=i $.
 \begin{proof}
 	\begin{equation}
 		a^{r_1}\leqslant s \leqslant i \leqslant a^{r_2}\nonumber
@@ -2129,7 +1997,7 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	\begin{equation}
 		min\{m_1,\cdots m_n\}\leqslant f(x) \leqslant max\{M_1,\cdots, M_N\} \nonumber
 	\end{equation}
-	Now let $ M = \sup_{x \in E}f(x) $. Set $ f(x) <M $ and contradiction arises by considering the auxiliary function $ \frac{1}{M-f(x)} $, which must be continuous by the local properties of the continuous functions. Similarly, one can prove that there exists a point such that $ f(x_m)=m $.
+	Now let $ M = \sup_{x \in E}f(x) $. Set $ f(x) <M $ and contradiction arises by considering the auxiliary function $ \frac{1}{M-f(x)} $, which must be continuous by the local properties of $ f $, but also unbounded at the same time since $ M $ is the least upper bound and $ f(x) $ can be made arbitrarily close to $ M $ while $ f(x)-M $ does not assume zero. Similarly, one can prove that there exists a point such that $ f(x_m)=m $.
 \end{proof}
 
 \begin{Definition}
@@ -2218,7 +2086,7 @@ The set of all continuous real-valued functions defined on a set $ E $ will be d
 	A monotonic function $ f:E \to \Real $ defined on a closed interval $ E = [a,b] $ is continuous iff its set of values $ f(E) $ is the closed interval with endpoints $ f(a) $ and $ f(b) $.
 \end{Proposition}
 \begin{proof}
-	If $ f $ is a continuous monotonic function, its monotonicity implies that all the values $ f $ assumes on $ [a,b] $ lie between $ f(a) $ and $ f(b) $. Now we consider the converse. Suppose there is a point of discontinuity $ c $. Then one of the open intervals $ (f(c-0),f(c) $ and $ (f(c),f(c+0) $ contains no value of $ f $, but this interval is contained between $ f(a) $ and $ f(b) $ because of its monotonicity.
+	If $ f $ is a continuous monotonic function, its monotonicity implies that all the values $ f $ assumes on $ [a,b] $ lie between $ f(a) $ and $ f(b) $. Now we consider the converse. Suppose there is a point of discontinuity $ c $. Then one of the open intervals $ (f(c-0),f(c)) $ and $ (f(c),f(c+0)) $ contains no value of $ f $, but this interval is contained between $ f(a) $ and $ f(b) $ because of its monotonicity.
 \end{proof}
 
 \begin{Theorem}[The Inverse Function Theorem]
@@ -2291,7 +2159,7 @@ Differentiability of a function at a point is equivalent to the existence of its
 \subsection{The Tangent Line; Geometric Meaning of the Derivative and Differential}
 
 \begin{Proposition}
-	A function $ f:E \to \Real $ that is continuous a t a point $ x_0 \in E $ that is a limit point of $ E \subset \Real $ admits a linear approximation iff it is differentiable at the point.
+	A function $ f:E \to \Real $ that is continuous at a point $ x_0 \in E $ that is a limit point of $ E \subset \Real $ admits a linear approximation iff it is differentiable at the point.
 \end{Proposition}
 \begin{Definition}
 	If a function $ f:E \to \Real $ is defined on a set $ E \subset \Real $ and differentiable at a point $ x_0 \in E $, the line defined by $ y-f(x_0)=f^\prime(x_0)(x-x_0) $ that passing through $ (x_0,f(x_0)) $ and having slope $ f^\prime(x_0) $ is called the \textit{tangent} to the graph of this function at the point $ (x_0,f(x_0)) $.
@@ -2486,7 +2354,7 @@ Since the right-hand side of this equality tends to zero as $ x \to x_0,x\in E $
 \begin{Definition}
 	The \textit{derivative of order $ n $} is defined by the formula 
 	\begin{equation}
-		f^{(x)}(x) \coloneqq (f^(n-1))^\prime(x)\nonumber
+		f^{(n)}(x) \coloneqq (f^{(n-1)})^\prime(x)\nonumber
 	\end{equation}
 	The set of functions $ f:E \to \Real $ having continuous derivatives up to order $ n $ inclusive will be denoted $ C^{(n)}(E,\Real) $ or $ C^{(n)}(E)  $. $ C^{(0)}(E)=C(E) $ by $ f^{(0)}(x)=f(x) $.
 \end{Definition}
@@ -2534,6 +2402,7 @@ Since the right-hand side of this equality tends to zero as $ x \to x_0,x\in E $
 	\end{equation}
 	and apply Rolle's theorem to it.
 \end{proof}
+Note that this is valid only for numerical-valued functions.
 
 \subsubsection{Corollaries of Lagrange's Theorem}
 \begin{Corollary}[Criterion for monotonicity of a function]
@@ -2555,6 +2424,15 @@ If the derivative of two functions are equal on some interval, then the differen
 		\frac{y(\beta)-y(\alpha)}{x(\beta)-x(\alpha)} = \frac{y^\prime(\tau)}{x^\prime(\tau)} \nonumber
 	\end{equation}
 \end{Proposition}
+\begin{proof}
+	Consider the function $ F(t)=x(t)(y(\beta)-y(\alpha))-y(t)(x(\beta)-x(\alpha)) $ which satisfies all the conditions of Rolle's theorem.
+\end{proof}
+\begin{Theorem}[Darboux's Theorem]
+	If a function is defined and differentiable on an open interval $ I $ and $ [a,b]\subset I $, then the function $ x^\prime(x) $, even if it is not continuous, assumes on $ [a,b] $ all the values between $ f^\prime(a) $ and $ f^\prime(b) $.
+\end{Theorem}
+\begin{proof}
+	For an arbitrary value $ \xi  $ between $ f^\prime(a) $ and $ f^\prime(b) $, if $ \xi  $ equals one of $ f^\prime(a) $ and $ f^\prime(b) $, then the theorem is proved. Otherwise, without loss of generality, assume that $ f^\prime(a) <\xi< f^\prime(b) $. Consider the function $ \varphi(t)=f(t)-\xi t $ which maps $ I \to \Real $. The function $ \varphi(t) $ is continuous and bounded on $ [a,b] $, and we have that $ \varphi^\prime(t)=f^\prime(t)-\xi $. $ \varphi(t) $ must assumes an interior extremum, and by Fermat's lemma, the derivative must be zero at that point. Then there exists some $ t_0 \in [a,b] $ such that $ f^\prime(t_0)=\xi $.
+\end{proof}
 
 
 
@@ -2639,7 +2517,30 @@ The Taylor series in this case has all its terms equal to $ 0 $ and hence its su
 	If a function $ \varphi:E \to \Real $, defined on a closed interval $ E $ with endpoint $ x_0 $, is such that it has derivatives up to order $ n $ inclusive at $ x_0 $ and $ \varphi(x_0)=\varphi^\prime(x_0)=\cdots=\varphi^{(n)}(x_0)=0 $, then $ \varphi(x)=o((x-x_0)^n) $ as $ x \to x_0,x\in E $.
 \end{Lemma}
 \begin{proof}
-	content...
+	We prove it by induction. Suppose the assertion has been proved for order $ n=k-1 \geqslant 1 $. We shall show that it is then valid for order $ n=k\geqslant 2 $. Since
+	\begin{equation}
+		\varphi^{(k)}(x_0)=(\varphi^{(k-1)})^\prime (x_0)=\lim\limits_{E \ni x \to x_0}\frac{\varphi^{(k-1)}(x)-\varphi^{(k-1)}(x_0)}{x-x_0} \nonumber
+	\end{equation}
+	and the existence of $ \varphi^{(k)}(x_0) $ presumes that $ \varphi^{(k-1)}(x) $ is defined on $ E $ near $ x_0 $. Shrinking the closed interval $ E $ if necessary and we can assume that the function $ \varphi(x),\varphi^\prime(x),\cdots,\varphi^{(k-1)}(x) $, where $ k\geqslant 2 $, are all defined on the whole closed interval $ E $ with endpoint $ x_0 $. Since $ k \geqslant 2 $, the function $ \varphi(x) $ has a derivative $ \varphi^\prime(x) $ on $ E $, and by hypothesis
+	\begin{equation}
+		(\varphi^\prime)^\prime(x_0)=\cdots=(\varphi^\prime)^{(k-1)}(x_0)=0 \nonumber
+	\end{equation}
+	Therefore, by the induction assumption
+	\begin{equation}
+		\varphi^\prime(x)=o((x-x_0)^{k-1})\quad \text{as }x\to x_0,x \in E \nonumber
+	\end{equation}
+	Then, using Lagrange's theorem, we obtain
+	\begin{equation}
+		\varphi(x)=\varphi(x)-\varphi(x_0)=\varphi^\prime(\xi)(x-x_0)=\alpha(\xi)(\xi-x_0)^{(k-1)}(x-x_0) \nonumber
+	\end{equation}
+	where $ \xi $ lies between $ x_0 $ and $ x $, that is, $ |\xi -x_0|<|x-x_0| $, and $ \alpha(\xi)\to 0 $ as $ \xi \to x_0 $, $ \xi \in E $. Hence as $ x \to x_0 $, $ x \in E $, we have simultaneously $ \xi \to x_0 $, $ \xi \in E $, and $ \alpha(\xi)\to 0 $. Since
+	\begin{equation}
+		|\varphi(x)|\leqslant |\alpha(\xi)||x-x_0|^{k-1}|x-x_0| \nonumber
+	\end{equation}
+	we have verified that
+	\begin{equation}
+		\varphi(x)=o((x-x_0)^k)\quad \text{as }x\to x_0,x \in E \nonumber
+	\end{equation}
 \end{proof}
 The relation is called the \textit{local Taylor formula} since the form of the remainder term given in it (the so-called \textit{Peano form})
 \begin{equation}
@@ -2931,20 +2832,56 @@ The Cauchy Criterion for series and the definition of absolute convergence is th
 
 
 \subsection{Power Series Representation of a Function. Analyticity}
-A function that has complex domain and complex range, thus its graph is a subset of $ \Complex \times \Complex = \Real^4 $ and can not be visualized in the traditional way. To compensate for this loss to some extent, one usually keeps two copies of the complex plane $ \Complex $, indicating points of the domain in one and points of the range of values in the other.\newpara
-The definitions of continuity, derivative, and differentiability for complex-valued functions are identical to those for real-valued functions. Since the arithmetic properties of the fields $ \Complex $ and $ \Real $ are the same, all the general rules for differentiation, such as rules for addition, product, and quotient, are the same.
+\begin{Theorem}
+	\begin{equation}
+		a^n-b^n = (a-b)(a^{n-1} + a^{n-2}b + \cdots + b^{n-1}) \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	\begin{align}
+	(a-b)\sum_{i=0}^{n-1}a^ib^{n-1-i}&=\sum_{i=0}^{n-1}a^{i+1}b^{n-1-i}-\sum_{i=0}^{n-1}a^ib^{n-i}\\
+	&=\sum_{i=0}^{n-1}(a^{i+1}b^{n-(i+1)}-a^ib^{n-i})\\
+	&=a^n-b^n
+	\end{align}
+	an alternative proof uses the fact that for $ x \neq 1 $
+	\begin{equation}
+		1+x+ \cdots + x^{n-1} = {1-x^n \over 1-x} \nonumber
+	\end{equation}
+	If $ a=b $ or $ a=0 $, then the theorem is obviously true. When $ a \neq 0 $ and $ a \neq b $, set $ x=\frac{b}{a} $ in the sum of the geometric series above and multiply the result by $ a^n $.
+\end{proof}
+A complex function has complex domain and complex range, thus its graph is a subset of $ \Complex \times \Complex = \Real^4 $ and can not be visualized in the traditional way. To compensate for this loss to some extent, one usually keeps two copies of the complex plane $ \Complex $, indicating points of the domain in one and points of the range of values in the other.\newpara
+The definitions of continuity, derivative, and differentiability for complex-valued functions are identical to those for real-valued functions. Since the arithmetic properties of the fields $ \Complex $ and $ \Real $ are the same, all the general rules for differentiation, such as rules for addition, product, and quotient also hold.
 \begin{Theorem}
 	The sum $ f(z)= \sum_{n=0}^{\infty} c_n (z-z_0)^n $ of a power series is an infinitely differentiable function inside the entire disk in which convergence occurs. Moreover,
-	\begin{equation}
-		f^{(k)}(z)= \sum_{n=0}^{\infty}\frac{d^k}{d z^k}(c_n (z-z_0)^n), \quad k=0,1,\cdots \nonumber
-	\end{equation}
+	\begin{align}
+	\Aboxed{f^{(k)}(z)= \sum_{n=0}^{\infty}\frac{d^k}{d z^k}(c_n (z-z_0)^n), \quad k=0,1,\cdots}\nonumber
+	\end{align}
 	and 
 	\begin{equation}
 		c_n=\frac{1}{n!}f^{(n)}(z_0),\quad n=0,1,\cdots \nonumber
 	\end{equation}
 \end{Theorem}
 \begin{proof}
-	content...
+	The expressions for the coefficient follows from the expressions for $ f^{(k)}(z) $ for $ k=n $ and $ z=z_0 $. As for the formula for $ f^{(k)}(z) $, it suffices to verify this formula for $ k=1 $, since the function $ f^\prime(z) $ will then be the sum of a power series. Thus, we'll verify that the function $ \varphi(z)=\sum_{n=1}^{\infty}n c_n(z-z_0)^{n-1} $ is the derivative of $ f(z) $. \newpara
+	By the Cauchy-Hadamard formula, the radius of convergence of the derived series is the same as the radius of convergence $ R $ of the original power series. For simplicity of notion we shall assume that $ z_0=0 $ and the series converge for $ |z|<R $. \newpara
+	Since a power series converges absolutely on the interior of its disk of convergence, the estimate $ |nc_n z^{n-1}|=n|c_n||z|^{n-1}\leqslant n|c_n|r^{n-1} $ holds for $ |z| \leqslant r <R $, and that series $ \sum_{n=1}^{\infty}n|c_n|r^{n-1}  $ converges. Hence, for any $ \varepsilon>0 $ there exists an index $ N $ such that
+	\begin{equation}
+		|\sum_{n=N+1}^{\infty}nc_n z^{n-1}|\leqslant |\sum_{n=N+1}^{\infty}nc_n r^{n-1}|\leqslant \frac{\varepsilon}{3} \nonumber
+	\end{equation}
+	for $ |z|\leqslant r $. Thus at any point of the disk $ |z|<r $ the function $ \varphi(z) $ is within $ \frac{\varepsilon}{3} $ of the $ N $th partial sum of the series that defines it.
+	\newpara
+	Now let $ \zeta $ and $ z $ be arbitrary points of this disk. The transformation
+	\begin{align}
+		\frac{f(\zeta)-f(z)}{\zeta - z} &= \sum_{n=1}^{\infty}c_n \frac{\zeta^n-z^n}{\zeta -z}=\\
+		&=\sum_{n=1}^{\infty}c_n(\zeta^{n-1}+\zeta^{n-1}z+\cdots+\zeta z^{n-2}+z^{n-1}) \nonumber
+	\end{align}
+	and the estimation $ |c_n(\zeta^{n-1}+\cdots+z^{n-1})\leqslant |c_n|n r^{n-1} $ enable us to conclude that the difference quotient is equal within $ \frac{\varepsilon}{3} $ to the partial sum of the series that defines it, provided $ |\zeta|<r $ and $ |z|<r $. Hence, for $ |\zeta|<r $ and $ |z|<r $ we have
+	\begin{equation}
+		|\frac{f(\zeta)-f(z)}{\zeta - z} - \varphi(z)|\leqslant |\sum_{n=1}^{N}c_n \frac{\zeta^n-z^n}{\zeta -z}-\sum_{n=1}^{N}n c_n z^{n-1}|+2\frac{\varepsilon}{3} \nonumber
+	\end{equation}
+	If we now fix $ z $ and let $ \zeta $ tend to $ z $, passing to the limit in the finite sum, we see that the right-hand side of this last inequality will be less than $ \varepsilon $ for $ \zeta $ sufficiently close to $ z $, and hence the left-hand side will be also.
+	\newpara
+	Thus, for any point $ z $ in the disk $ |z|<r<R $, we have verified that $ f^\prime(z)=\varphi(z) $. Since $ r $ is arbitrary, this relation holds for any point of the disk $ |z|<R $.
 \end{proof}
 \begin{Definition}
 	A function is \textit{analytic} at a point $ z_0 \in \Complex $ if it can be represented in a neighborhood of the point in the following ("analytic") form:
@@ -2968,7 +2905,25 @@ This means that if a function has one derivative in a neighborhood of a point, i
 	of degree $ n \geqslant 1 $ with complex coefficients has a root in $ \Complex $.
 \end{Theorem}
 \begin{proof}
-	content...
+	Without loss of generality, we may obviously assume that $ c_n=1 $(replace $ 1 $ with $ c_n $ won't cause significant change to the rest of the proof).\newpara
+	Let $ \mu=\inf_{z \in \Complex}|P(z)|$. Since $ P(z)=z^n(1+\frac{c_n-1}{z}+\cdots + \frac{c_0}{z^n}) $, we have
+	\begin{equation}
+		|P(z)|\geqslant |z|^n (1-\frac{|c_{n-1}|}{|z|}-\cdots-\frac{|c_0|}{|z|^n}) \nonumber
+	\end{equation}
+	and obviously $ |P(z)|>\max \{1,2\mu \} $ for $ |z|>R $ if $ R $ is sufficiently large. Consequently, the points of a sequence $ \{z_k \} $ at which $ 0<|P(z_k)|-\mu < \frac{1}{k} $(the sequence converges to $ \mu $) lie inside the disk $ |z|<R $.\newpara
+	Next step is to verify that there is a point $ z_0\in\Complex $(in fact, in this disk) at which $ |P(z_0)|=\mu $. We remark that if $ z_k=x_k+\iu y_k $, then $ \max\{|x_k|,|y_k| \}\leqslant |z_k| \leqslant R $ and hence the sequence of real numbers $ \{x_k\} $ and $ \{y_k\} $ are bounded. By the Bolzano-Weierstrass lemma, choosing first a convergent subsequence $ \{x_{k_{l_m}} \} $ from $ \{x_k\} $ and then a convergent subsequence $ \{y_{k_{l_m}} \} $ from $ \{y_{k} \} $, we obtain a subsequence $ z_{k_{lm}} =x_{k_{l_m}}+\iu y_{k_{l_m}}$ of the sequence $ \{z_k \} $ that has a limit $ \lim\limits_{m \to \infty}z_{k_{l_m}}= \lim\limits_{m\to \infty}x_{k_{l_m}}+\iu \lim\limits_{m \to \infty}y_{k_{l_m}}=x_0 + \iu y_0 = z_0$, and since $ |z_{k_{l_m}} \to |z_0|$ as $ m \to \infty $, it follows that $ |z_0|\leqslant R $. So as to avoid cumbersome notation, and not have to pass to subsequences, we shall assume that the sequence $ \{z_k\} $ itself converges. It follows from the continuity of $ P(z) $ at $ z_0 \in \Complex $ that $ \lim\limits_{k \to \infty}P(z_k)=P(z_0) $. But then $ |P(z_0)|=\lim\limits_{k \to \infty}|P(z_k)|=\mu $. \newpara
+	We shall now assume that $ \mu >0 $, and use this assumption to derive a contradiction. If $ P(z_0)\neq 0 $, consider the polynomial $ Q(z)=\frac{P(z+z_0)}{P(z_0)} $. By construction $ Q(0)=1 $ and $ |Q(z)|=|\frac{P(z+z_0)}{P(z_0)}| \geqslant 1$. \newpara
+	Since $ Q(0) =1$, the polynomial $ Q(z) $ has the form
+	\begin{equation}
+		Q(z)=1+q_k z^k + q_{k+1}z^{k+1}+\cdots + q_n z^n \nonumber
+	\end{equation}
+	where $ |q_k|\neq 0 $ and $ 1 \leqslant k \leqslant n $. If $ q_k=\rho e^{\iu \psi} $, then for $ \varphi = \frac{\pi-\psi}{k} $ we shall have $ q_k \cdot (e^{\iu \varphi})^k = \rho e^{\iu \psi}e^{\iu (\pi-\psi)}=\rho e^{\iu \pi}=-\rho = -|q_k| $. Then, for $ z=re^{\iu \varphi} $ we obtain
+	\begin{align}
+		|Q(re^{\iu \varphi})&\leqslant |1+q_k z^k| + (|q_{k+1}z^{k+1}|+\cdots + |q_n z^n| )=\\
+		&=|1-r^k|q_k||+r^{k+1}(|q_{k+1}|+\cdots+|q_n|r^{n-k-1})=\\
+		&=1-r^k(|q_k|-r|q_{k+1}|-\cdots-r^{n-k}|q_n|)<1 
+	\end{align}
+	if $ r $ is sufficiently close to $ 0 $. But $ |Q(z)|\geqslant 1 $ for $ z \in \Complex $. This contradiction shows that $ P(z_0)=0 $.
 \end{proof}
 \textit{Remark} If $ P(z_0)=0 $, then its conjugate $ \tilde{z_0} $ satisfies $ P(\tilde{z_0})=0 $.
 \begin{Corollary}
@@ -2979,7 +2934,8 @@ This means that if a function has one derivative in a neighborhood of a point, i
 	where $ z_1, \cdots, z_n \in \Complex $(they are not necessarily all distinct). This representation is unique up to the order of the factors.
 \end{Corollary}
 \begin{proof}
-	Use the long division algorithm on $ P(z) $, we find that $ P(z)=q(z)Q(z)+r(z) $, where $ q(z) $ and $ r(z) $ are polynomials, the degree of $ r(z) $ being less than the degree $ m $ of $ Q(z) $. Set $ m=1 $m and find that $ r=0 $, then use the principle of induction.
+	Use the long division algorithm on $ P(z) $, we find that $ P(z)=q(z)Q(z)+r(z) $, where $ q(z) $ and $ r(z) $ are polynomials, the degree of $ r(z) $ being less than the degree $ m $ of $ Q(z) $. Thus if $ m=1 $, then $ r(z) $ is simply a constant. \newpara
+	Let $ z_1 $ be a root of the polynomial $ P(z) $. Then $ P(z)=q(z)(z-z_1)+r $, and since $ P(z_1)=r $, it follows that $ r=0 $. Hence if $ z_1 $ is a root of $ P(z) $, we have the representation $ P(z)=(z-z_1)q(z) $. The degree of the polynomial $ q(z) $ is $ n-1 $, and we can repeat the reasoning with $ q(z) $ if $ n-1 \geqslant 1 $. By induction we find that $ P(z)=c(z-z_1)\cdots(z-z_0) $. Since we must have $ c z_n=c_n z^n $, it follows that $ c=c_n $.
 \end{proof}
 By multiplying out all identical factors, one can rewrite that product:
 \begin{equation}
@@ -3873,6 +3829,38 @@ The case when the point of unboundedness is an interior point of the closed inte
 	and this integral is not convergent.
 \end{Example}
 
+\section{The Riemann-Stieltjes Integral}
+\begin{Definition}
+	Let $ f $, $ g $ be real-, complex-, or vector-valued functions defined over the interval $ [a,b]\subset \Real $. Let $ (P,\xi)=(a=x_0\leqslant \xi_1 \leqslant x_1 \leqslant \cdots \leqslant \xi_n \leqslant x_n = b) $ be a partition of this interval with marked points and parameter $ \lambda(P) $. We consider the sum $ \sum_{i=1}^{n}f(\xi_i)\Delta g_i $, where $ \Delta g_i = g(x_i)-g(x_{i-1}) $. Then the \textit{Riemann-Stieltjes integral of the function $ f $ with respect to the function $ g $ over the interval $ [a,b] $} is defined as the following value:
+	\begin{equation}
+		\int_{a}^{b}f(x)d g(x)\coloneqq \lim\limits_{\lambda(P)\to 0}\sum_{i=1}^{n}f(\xi_i)\Delta g_i  \nonumber
+	\end{equation}
+	if the above limit exists. In particular, when $ g(x)=x $, we return to the standard Riemann integral.
+\end{Definition}
+\begin{Theorem}
+	If the function $ g $ is smooth and $ f $ is Riemann-integrable over $ [a,b] $, then
+	\begin{equation}
+		\int_{a}^{b}f(x)d g(x) = \int_{a}^{b}f(x)g^\prime(x)dx \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	Since real-valued functions and complex-valued functions can be viewed as vector-valued functions($ \Real \to \Real $ and $ \Real^2 \to \Real^2 $), it is sufficient to prove the theorem when $ g(x) $ is a smooth vector-valued function.
+	\newpara
+	Here we use a theorem without proof(see Pg. $ 215 $ for details).
+	\newpara
+	The Riemann-Stieltjes integral on the left satisfies the inequality(we also used the triangle inequality here)
+	\begin{align}
+		\sum_{i=1}^{n}f(\xi_i)\Delta g(x_i)&=\sum_{i=1}^{n}f(\xi_i)(g(x_i)-g(x_{i-1})) \leqslant \sum_{i=1}^{n}f(\xi_i)|(g(x_i)-g(x_{i-1}))| \leqslant\\
+		&\leqslant \sum_{i=1}^{n}f(\xi_i)\sup_{t \in [x_{i-1},x_i]}|g^\prime(t)|(x_i-x_{i-1})\leqslant \\
+		&\leqslant \sum_{i=1}^{n}f(\xi_i)g^\prime(x_{i-1})\Delta x_i+\sum_{i=1}^{n}f(\xi_i)(\sup_{t \in [x_{i-1},x_i]}|g^\prime(t)|-g^\prime(x_{i-1}))\Delta x_i
+	\end{align} 
+	By the smoothness of $ g(x) $, we have that the second term tends to zero when $ \lambda(P)\to0 $, where $ P $ is a partition, since the supremum is just the oscillation of $ g^\prime(x) $ on $ [x_{i-1},x_i] $. Now estimate the difference between $ \sum_{i=1}^{n}f(\xi_i)\Delta g(x_i) $ and $ \sum_{i=1}^{n}f(\xi_i)g^\prime(x_{i-1})\Delta x_i $. Observe that
+	\begin{equation}
+		\Delta g(x_i)=g^\prime(x_{i-1})\Delta x_i + \alpha(\Delta x_i) \nonumber
+	\end{equation}
+	where $ \alpha(\Delta x_i) $ is infinitesimal as $ \Delta x_i \to 0$. Our proof completes now, since the difference between these two sums respectively for the Riemann integral and Riemann-Stieltjes integral tends to $ 0 $ as $ \lambda(P)\to 0 $.
+\end{proof}
+
 
 \chapter{Functions of Several Variables: Their Limits and Continuity}
 \section{The Space $ \Real^m $ and the Most Important Classes of Its Subsets}
@@ -3932,7 +3920,7 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 	\textbf{b$ ^\prime $)} The union $ \bigcap^n_{i=1}F_i $ of a finite number of closed sets in $ \Real^m $ is a closed set. \\
 \end{Proposition}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 \begin{Example}
 	The set $ S(a,r)=\{x \in \Real^m | d(a,x)=r \} $, $ r \geqslant 0 $, is called the \textit{sphere of radius $ r $ with center $ a \in \Real^m $}. By the proposition just proved, the sphere $ S(a,r) $ is closed.
@@ -3972,7 +3960,7 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 	$ (F \text{ is closed in }\Real^m) \Leftrightarrow (F = \bar{F} \text{ in }\Real^m) $. That is, $ F $ is closed in $ \Real^m $ iff it contains all its limit points.
 \end{Proposition}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 
 
@@ -3992,7 +3980,7 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 	which is called an \textit{$ m $-dimensional interval}, or an \textit{$ m $-dimensional block} or an \textit{$ m $-dimensional parallelepiped}. $ I $ is compact in $ \Real^m $.
 \end{Example}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 \begin{Proposition}
 	If $ K $ is a compact space in $ \Real^m $, then\\
@@ -4000,7 +3988,7 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 	\textbf{b)} any closed subset of $ \Real^m $ contained in $ K $ is itself compact.
 \end{Proposition}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 \begin{Definition}
 	The \textit{diameter} of a set $ E \subset \Real^m $ is the quantity
@@ -4015,14 +4003,14 @@ that is, the distance between the points $ x_1,x_2 \in \Real^m $ is small iff th
 	If $ K $ is compact set in $ \Real^m $, then $ K $ is a bounded subset of $ \Real^m $.
 \end{Proposition}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 
 \begin{Proposition}
 	The set $ K \subset \Real^m $ is compact iff $ K $ is closed and bounded in $ \Real^m $.
 \end{Proposition}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 
 \section{Limits and Continuity of Functions of Several Variables}
@@ -4167,7 +4155,7 @@ In other words, it is possible to go from any point $ x_0 \in E $ to any other p
 \textbf{d)} If a function $ f:E \to \Real $ is continuous on a connected set $ E $ and assumes the value $ f(a)=A $ and $ f(b)=B $ at points $ a,b\in E $, then for any $ C $ between $ A $ and $ B $, there is a point $ c\in E  $ at which $ f(c)=C $. \newpara
 All the properties, except \textbf{d)}, can be proved similarly as we did for single variable functions. We now prove property \textbf{d)}.
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 \begin{Example}
 	The sphere $ S(0,r) $ defined in $ \Real^m $ by the equation
@@ -4177,13 +4165,13 @@ All the properties, except \textbf{d)}, can be proved similarly as we did for si
 	is a compact set.
 \end{Example}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 \begin{Example}
 	The open set $ \Real^m \setminus S(0,r) $ for $ r>0 $ is not a domain, since it is not connected.
 \end{Example}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 
 \chapter{The Differential Calculus of Functions of Several Variables}
@@ -4532,6 +4520,47 @@ Geometrically, the rate of increase of the function $ f $ is \textbf{maximal} an
 	\end{equation}
 	Thus, mutually inverse differentiable mappings have mutually inverse tangent mappings at corresponding points.
 \end{Theorem}
+\begin{proof}
+	We use the following notation:
+	\begin{equation}
+		f(x)=y,\qquad f(x+h)=y+t,\qquad t=f(x+h)-f(x)\nonumber
+	\end{equation}
+	so that
+	\begin{equation}
+		f^{-1}(y)=x,\qquad f^{-1}(y+t)=x+h,\qquad h=f^{-1}(y+t)-f^{-1}(y) \nonumber
+	\end{equation}
+	We shall assume that $ h $ is so small that $ x+h \in U(x) $, and hence $ y+t\in V(y) $. It follows from the continuity of $ f $ at $ x $ and $ f^{-1} $ at $ y $ that
+	\begin{equation}
+		t=f(x+h)-f(x)\to 0 \quad \text{as }h\to 0 \nonumber
+	\end{equation}
+	and 
+	\begin{equation}
+		h=f^{-1}(y+t)-f^{-1}(y) \to 0\quad \text{as }t \to 0 \nonumber
+	\end{equation}
+	It follows from the differentiability of $ f $ at $ x $ that
+	\begin{equation}
+		t=f^\prime(x)h+o(h)\quad \text{as }h \to 0\nonumber
+	\end{equation}
+	that is, we can even assert that $ t=O(h) $ as $ h\to 0 $(since $ f^\prime(x)h $ is a linear mapping with respect to $ h $; see Sect.8.1). We shall show that if $ f^\prime(x) $ is an invertible linear mapping, then we also have $ h=O(t) $ as $ t\to 0 $. By the previous relation, we find that
+	\begin{align}
+		[f^\prime(x)]^{-1}t&=h+	[f^\prime(x)]^{-1}o(h) \quad \text{as } h\to 0 \\
+		[f^\prime(x)]^{-1}t&=h+	o(h) \quad \text{as } h\to 0 \\
+		\norm{[f^\prime(x)]^{-1}t}&\geqslant \norm{h}- \norm{o(h)} \quad \text{as } h\to 0 \\
+		\norm{[f^\prime(x)]^{-1}t}&\geqslant \frac{1}{2}\norm{h} \quad \text{for } \norm{h}< \delta
+	\end{align}
+	where the number $ \delta >0 $ is chosen so that $ \norm{o(h)}<\frac{1}{2}\norm{h} $ where $ \norm{h}<\delta  $. Then, taking account of the fact that $ h \to 0 $ as $ t \to 0 $, we find
+	\begin{equation}
+		\norm{h}\leqslant 2\norm{[f^\prime(x)]^{-1}t} = O(\norm{t}) \quad \text{as }h\to 0\nonumber
+	\end{equation}
+	which is equivalent to $ h=O(t) $ as $ t \to 0 $. From this it follows in particular that $ o(h)-o(t) $ as $ t \to 0 $. Now we have that
+	\begin{equation}
+		h = [f^\prime(x)]^{-1}t + o(t) \quad \text{as }t \to 0\nonumber
+	\end{equation}
+	or
+	\begin{equation}
+		f^{-1}(y+t)-f^{-1}(y) = [f^\prime(x)]^{-1}t + o(t) \quad \text{as }t \to 0\nonumber
+	\end{equation}
+\end{proof}
 Moreover, the Jacobi of the function $ f^{-1}(y) $ at $ y $ is the matrix inverse of the Jacobi matrix of $ f(x) $ at $ x $. When $ m=1 $, that is, when $ \Real^m=\Real $ and $ f^\prime(x)\neq 0 $, the matrix of $ [f^\prime(x)]^{-1} $ consists of a single number equal to $ [f^\prime(x)]^{-1} $, that is, the reciprocal of $ f^\prime(x) $.
 
 \section{The Basic Facts of Differential Calculus of Real-Valued Functions of Several Variables}
@@ -4549,7 +4578,7 @@ Moreover, the Jacobi of the function $ f^{-1}(y) $ at $ y $ is the matrix invers
 	If the function $ f:G \to \Real $ is differentiable in the domain $ G \subset \Real^m $ and its differential equals zero at every point $ x \in G $, then $ f $ is constant in the domain $ G $.
 \end{Corollary}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 
 
@@ -4652,7 +4681,7 @@ Now we have the equality, called the \textit{Taylor's formula with the remainder
 	Use the necessary condition for a single variable function to have a local extremum on each variable respectively.
 \end{proof}
 \begin{Definition}
-	The point $ x_0 $ is a \textit{critical point} of the mapping $ f:U(x_0)\to \Real^n $ if the rank of the Jacobi matrix of the mapping at that point is less than $ \min \{m,n\} $, that is, smaller than the maximum possible value it can have. For real-valued functions, the point is also called the \textit{stationary points}.
+	The point $ x_0 $ is a \textit{critical point} of the mapping $ f:U(x_0)\to \Real^n $ if the rank of the Jacobi matrix of the mapping at that point is less than $ \min \{m,n\} $, that is, smaller than the maximum possible value it can have. For real-valued functions, the point is also called the \textit{stationary points}. 
 \end{Definition}
 \begin{Theorem}
 	Let $ f:U(x_0)\to \Real $ be a function of class $ C^{(2)}(U(x_0),\Real) $ defined in a neighborhood $ U(x_0) \subset \Real^m$ of the point $ x_0 = (x^1_0,\cdots,x^m_0)\in \Real^m $, and let $ x_0 $ be a critical point of the function $ f $. \\
@@ -4670,7 +4699,7 @@ Now we have the equality, called the \textit{Taylor's formula with the remainder
 	\textbf{b)} assumes both positive and negative values, then the function does not have an extremum at $ x_0 $.
 \end{Theorem}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 
 \subsection{Some Geometric Images Connected with Functions of Several Variables}
@@ -4733,7 +4762,7 @@ for any point $ (x,y)\in I^m_x \times I^n_y $ and
 \end{equation}
 \end{Theorem}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 
 \section{Some Corollaries of the Implicit Function Theorem}
@@ -4759,6 +4788,9 @@ then there exists a neighborhood $ U(x_0) \subset G$ of $ x_0 $ and a neighborho
 	(f^{-1})^\prime(y)=(f^\prime(x))^{-1}\nonumber
 \end{equation}
 \end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
 \begin{Definition}
 	The spherical coordinates of a point $ P $ are then defined as follows: \\
 	The radius $ \rho $ is the Euclidean distance from the origin $ O $ to $ P $.\\
@@ -4785,7 +4817,7 @@ then there exists a neighborhood $ U(x_0) \subset G$ of $ x_0 $ and a neighborho
 \end{Theorem}
 In other words, the theorem asserts that one can choose coordinates $(u^1,\cdots,u^m)  $ in place of $ (x^1,\cdots,x^m) $ and $ (v^1,\cdots,v^n) $ in place of $ (y^1,\cdots,y^n) $ in such a way that locally the mapping has the form above in the new coordinates, that is, the canonical form for a linear transformation of rank $ k $.
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 
 \subsection{Functional Dependence}
@@ -4816,7 +4848,7 @@ is equal to the same order $ k $ at every point $ x \in U $, then
 \end{enumerate}
 \end{Proposition}
 \begin{proof}
-	content...
+	\exercise
 \end{proof}
 
 

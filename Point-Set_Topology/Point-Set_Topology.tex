@@ -1,0 +1,253 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{/Users/HechenHu/Development/NoteTaking/Mathematics-Notes/Customized}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+
+\renewcommand{\@chapapp}{}% Not necessary...
+
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{Point-Set Topology}}
+% Author
+\author{\textsc{Hechen Hu}}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Auto-generated table of contents, list of figures and list of tables %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\tableofcontents
+	\mainmatter
+	
+	\chapter{Basic Set Theory}
+	
+	\section{Sets and Operations on Them}
+	
+	\subsection{Naive Set Theory}
+	1$^0$.\quad A set may consist of any distinguishable objects($x\in A\Rightarrow\exists!x\in A$) \\
+	2$^0$.\quad A set is unambiguously determined by the collection of objects that comprise it. \\
+	3$^0$.\quad Any property defines the set of objects having that property($A = \{x|P(x)\}\Rightarrow P(A)$). \\ \\
+	However, this will lead to Russell's Paradox: \\
+	Let's have$P(M) \coloneqq M\notin M$ \\
+	Consider the class $K = \{M|P(M)\}$. If so $K$ is not a set, since whether $P(K)$ is true or false, contradiction arises.\\
+	
+	\subsection{ZFC: Zermelo-Fraenkel Axioms and Axiom of Choice}
+	1$^0$.\quad \textbf{(Axiom of Extensionality)} Sets $ A $ and $B$ are equal iff they have the same elements. $ (A=B)\Leftrightarrow(\forall x((x\in A)\Leftrightarrow(x \in B))) $\\
+	2$^0$. \quad \textbf{(Axiom of Seperation)} To any set $A$ and any property P there corresponds a set $B$ whose elements are those elements of $A$, and only those, having property P(if $A$ is a set, then $B=\{x\in A|P(x)\}$ is also a set). \\
+	3$^0$. \quad \textbf{(Union Axiom)} For any set $ M $ whose elements are sets there exists a set $\bigcup M$, called the union of $ M $ and consisting of those elements and only those that belong to some element of $ M $ $ (x\in \bigcup M \Leftrightarrow \exists X((X\in M)\land (x\in X))) $ \\
+	Similarly, the intersection of the set $ M $ is defined as:
+	\begin{equation}
+	\bigcap M  \coloneqq \{x\in \bigcup M | \forall X((X\in M)\Rightarrow (x\in X))\} \nonumber
+	\end{equation}
+	4$^0$ \quad \textbf{(Pairing Axiom)} For any sets $ X $ and $ Y $ there exists a set $ Z $ such that $ X $ and $ Y $ are its only elements. \\
+	5$^0$ \quad \textbf{(Power Set Axiom)} For any set $ X $ there exists a set $ P(X)$ having each subset of $ X $ as an element, and having no other elements. \\
+	\newline
+	\begin{Definition}
+		The \textit{successor} $X^+$ of the set $ X $ is $X^+ = X\cup \{X\}$.\\
+	\end{Definition} 
+	\begin{Definition}
+		An \textit{inductive} set is a set that $\varnothing$ is one of its elements and the successor of each of its elements aso belongs to it.
+	\end{Definition}
+	6$^0$ \quad \textbf{(Axiom of Infinity)} There exist inductive sets (Example: $\mathbb{N}_0$).\\ 
+	7$^0$ \quad \textbf{(Axiom of Replacement)} Let $ F(x,y) $ be a statement(a formula) such that for every $ x_0 \in X$ there exists a unique object $ y_0 $ such that $ F(x_0,y_0) $ is true. Then the objects $ y $ for which there exists an element $ x\in X $ such that $ F(x,y) $ is true form a set.\\
+	And finally, an axiom that is independent of ZF. \\
+	\newline
+	\begin{Definition}
+		A choice function is a function $ f $, defined on a collection $ X $ of nonempty sets, such that for every set $ A $ in $ X $, $ f(A) $ is an element of $ A $.
+	\end{Definition}
+	8$^0$ \quad \textbf{(Axiom of Choice/Zermelo's Axiom)}  For any set $ X$ of nonempty sets, there exists a choice function $ f $ defined on $ X $.$(\forall X[\varnothing \notin X \Rightarrow \exists f: X\mapsto \bigcup X \quad \forall A\in X(f(A)\in A)])$
+	
+	\subsection{The \textit{Cardinality} of a Set(\textit{Cardinal Numbers})}
+	\begin{Definition}
+		The set $ X $ is said to be \textit{equipollent} to the set $ Y $ if there exists a bijective mapping of $ X $ onto $ Y $(then $ X\sim Y $).
+	\end{Definition}
+	\begin{Definition}
+		\textit{Cardinality} is a measure of the number of elements of the set. If $ X \sim Y $, we write $ \card X = \card Y $.
+	\end{Definition}
+	If $ X $ is equipollent to some subset of $ Y $, we say $ \card X\leqslant \card Y $, thus
+	\begin{equation}
+	(\card X \leqslant \card Y)\coloneqq \exists Z\subset Y (\card X = \card Z) \nonumber
+	\end{equation}
+	A set is called \textit{finite} if it is not equipollent to any proper subset of itself; otherwise it is called \textit{infinite}. \\
+	It has the  properties below:\\
+	\newline
+	1$^0  \quad (cardX\leqslant \card Y)\land(\card Y \leqslant \card Z)\Rightarrow(\card X \leqslant \card Z)$.\\
+	2$^0 \quad (\card X \leqslant \card Y)\land(\card Y \leqslant \card X)\Rightarrow(\card X = \card Y)$(The Schröder–Bernstein theorem).\\
+	3$^0 \quad \forall X\forall Y(\card X \leqslant \card Y)\lor(\card Y \leqslant \card X)$(Cantor's theorem).\\
+	\newline
+	We say $ \card X < \card Y $ if $ (\card X \leqslant \card Y) \land (\card X \neq \card Y)$.\\
+	let $ \varnothing $ be the empty set and $ P(X) $ the set of all subsets(thus, the power set) of the set $ X $. Then:
+	\begin{Theorem}
+		$ \card X < \card P(X) $
+	\end{Theorem}
+	\begin{proof}
+		The assertion is obvious for the empty set, and we shall assume that $ X\neq \varnothing $.\\
+		Since $ P(X) $ contains all the one-element subsets of $ X $, $ cardX \leqslant cardP(X)$.\\
+		Suppose, contrary to the assertion, that there exists a bijective mapping $ f : X \to P(X) $. Let set $ A = \{x\in X:x\notin f(x)\}$ consisting of the elements $ x \in X $ that do not belong to the set $ f(x)\in P(X) $ assigned to them by the bijection. Because $ A \in P(X) $, there exists $ a\in X $ such that $ f(a) = A $. For the element $ a $ the relation $ a \in A $ or $ a \notin A $ is impossible by the definition of $ A $(Similar to Russell's Paradox).
+	\end{proof}
+	
+	
+	
+	\subsection{Operations on Sets}
+	\begin{tabular}{| l | l | l |}
+		\hline
+		Notation &Meaning &Definition \\ \hline
+		$A\subset B$ &$A$ is a subset of $B$ &$\forall x ((x\in A) \Rightarrow(x\in B))$ \\ \hline
+		$A = B$ &$A$ equals to $B$ &$(A \subset B)\land(B \subset A)$ \\ \hline
+		$\varnothing$ &Empty Set & $\{x|x\neq x\}$ \\ \hline
+		$A \cup B$ &The union of $ A $ and $ B $ &$ \{x|x\in A \lor x\in B\} $ \\
+		$ A \cap B $ &The intersection of $ A $ and $ B $ &$ \{x|x\in A \land x\in B\} $ \\ \hline
+		$ A\setminus B $ &The difference between $ A $ and $ B $ &$ \{x|x\in A \land x\notin B\} $ \\ \hline
+		$ C_M A $ &The complement of $A$ in M &$ \{x|x\in M \land x\notin A\} where A\subset M $ \\ \hline
+		$ A \times B $ &The Cartesian Product of $ A $ and $ B $ &$ \{(x,y)|x\in A \land y\in B\} $ \\ \hline
+		$ A^2 $ &$ A \times A $ & \\
+		\hline
+	\end{tabular}
+	\newline \\
+	In the ordered pair$ z = (x_1,x_2) $ where$ Z = X_1 \times X_2 ,z\in Z,x_1 \in X_1, x_2 \in X_2$, $ x_1 $ is called the \textit{first projection} of the pair $ z $ and denoted  pr$_1 z $ while $ x_2 $ is called the \textit{second projection} of the pair $ z $ and denoted  pr$_2 z $.
+	
+	
+	
+	
+	
+	
+	
+	\section{Countable and Uncountable Sets}
+	
+	\begin{Definition}
+		A set $ X $ is \textit{countable} if it is equipollent with the set $ \Natural $ of natural numbers, that is, $ \card X = \card \Natural $.
+	\end{Definition}
+	
+	\begin{Proposition}
+		An infinite subset of a countable set is countable.
+	\end{Proposition}
+	\begin{proof}
+		Let's consider a countable set $ E $. There is a minimal element of $ E_1\coloneqq E $, which we assign to $ 1 \in \Natural $ and denote $ e_1 \in E $. $ E $ is infinite, so $ E_2 \coloneqq E \setminus e_1 $ is not empty. Following the principle of induction, we can construct a injective mapping from $ \{1,2...\} $ to $ \{e_1,e_2,...\} $. \newpara
+		Now we have to prove that this mapping is also surjective. Suppose the contrary, that an element $ e \in E$ does not have a natural number assigned to it. The set $ K=\{n \in E | n \leqslant e\} $ is finite, since it's a subset of $ \Natural $ bounded both from below and above. According to our previous construction, we assign $ 1 $ to $ \min K $, denoted as $ e_1 $, and we can acquire a sequence $ e_1, e_2,...e_{k=\card K} $. But $ e_{k=\card K} $ is $ \max K $, and because $ e\in K \land (\forall n\in K (n\leqslant e))$, $ e = \max K$. Therefore $ e = e_k $, or otherwise it will contradict the uniqueness of maximal element.
+	\end{proof}
+	
+	\begin{Proposition}
+		The Union of the sets of a finite or countable system of countable sets is also a countable set.
+	\end{Proposition}
+	\begin{proof}
+		Let $ X_1,X_2...,X_n,... $ is a countable system of sets and each set $ X_m = \{x^1_m,...,x^n_m,...\} $ is itself countable. Since $ \forall m\in \Natural (\card (X=\bigcup_{n \in \Natural}X_n) \geqslant X_m)$, $ X $ is an infinite set. The ordered pair $ (m,n) $ identifies the element $ x^n_m \in X_m $. We can construct a mapping, like $ f : \Natural \times \Natural \to \Natural \coloneqq (m,n) \to \frac{(m+n-2)(m+n-1)}{2}+m $, such that it is bijective. Thus $ X $ is countable. Then because $ \card X \leqslant \card \Natural $ and the fact that $ X $ is infinite, we conclude that $ \card X = \card \Natural $.
+	\end{proof}
+	
+	If it is known that a set is either finite or countable, we say it is \textit{at most countable}($ \card X \leqslant \Natural $).
+	
+	\begin{Corollary}
+		$ \card \Zahlen = \card \Natural $
+	\end{Corollary}
+	
+	\begin{Corollary}
+		$ \card \Natural^2 = \card \Natural $(The direct product of countable sets is countable).
+	\end{Corollary}
+	
+	\begin{Corollary}
+		$ \card \Quoziente = \card \Natural $, that is, the set of rational numbers is countable.
+	\end{Corollary}
+	\begin{proof}
+		Let $ (m,n) $ denote a rational number $ \frac{m}{n} $. It is known that the pair $ (m,n) $ and $ (m^\prime, n^\prime) $ define the same number iff they are proportional. Thus $ \Quoziente $ is equipollent to some infinite subset of the set $ \Zahlen \times \Zahlen $. Since $ \card \Zahlen^2 = \card \Natural $, we can conclude that $ \card \Quoziente = \card \Natural $.
+	\end{proof}
+	
+	\begin{Corollary}
+		The set of algebraic numbers is countable.
+	\end{Corollary}
+	\begin{proof}
+		It can be observed that $ \card \Quoziente \times \Quoziente = \card \Natural  $. By the principle of induction, $ \forall k \in \Natural (\card \Quoziente^k = \card \Natural) $. Let $ r \in \Quoziente^k $ be an ordered set $ (r_1,r_2,...,r_k) $ consists of $ k $ rational numbers. \newpara
+		An algebraic equation of degree $ k $ with rational coefficient can be writtne in the reduced form $ x^k + r_1x^{k-1}+ \cdots + r_k = 0 $. Thus there are as many different algebraic equations of degree $ k $ as there are different ordered sets $ (r_1,...,r_k) $ of rational numbers, that is, a countable set. \newpara
+		The algebraic equation with rational coefficients (of arbitrary degree) is the union of sets consisting of algebraic equation (of a fixed degree) which is countable, and this union is countable. Each such equation has only a finite number of roots. Hence the set of algebraic numbers is at most countable. But it is infinite, and therefore countable.
+	\end{proof}
+	
+	\subsection{The Cardinality of the Continuum}
+	\begin{Definition}
+		The set $ \Real $ of real numbers is also called the \textit{number continuum}(from Latin \textit{continuum}, meaning continuous, or solid), and its cardinality the \textit{cardinality of the continuum}.
+	\end{Definition}
+	
+	\begin{Theorem}[Cantor]
+		$ \card \Natural < \card \Real $
+	\end{Theorem}
+	\begin{proof}[Proof by Nested Interval Lemma]
+		It is sufficient to show that even $ [0,1] $ in an uncountable set. \newpara
+		Assume it is countable, that is, can be written as a sequence $ x_1,x_2,...,x_n,.... $. Take $ x_1 $ on $ I_0 = [0,1] $, and find $ I_1 $ such that $ x_1 \notin I_1 $. Then construct the nested interval $ I_n $ such that $ x_{n+1} \notin I_{n+1} $ and $ |I_n| > 0 $. It follows the nested interval lemma that there exist a point $ c \in [0,1]$ belonging to all $ I_n $. But by our construction, $ c \in \Real $ and $ c $ cannot be any point of the sequence $ x_1,x_2,...,x_n,.... $.
+	\end{proof}
+	
+	\begin{proof}[Proof by Cantor's Diagonal Argument]
+		Let's first consider an the set $ L $ and write out the infinite sequence of distinct binary numbers in it which has the form: 
+		\begin{align}
+		&s1 =	(0,	0,	0,	0,	0,	0,	0,	...) \\
+		&s2 =	(1,	1,	1,	1,	1,	1,	1,	...) \\
+		&s3 =	(0,	1,	0,	1,	0,	1,	0,	...)\\
+		&s4 =	(1,	0,	1,	0,	1,	0,	1,	...)\\
+		&s5 =	(1,	1,	0,	1,	0,	1,	1,	...)\\
+		&s6 =	(0,	0,	1,	1,	0,	1,	1,	...)\\
+		&s7 =	(1,	0,	0,	0,	1,	0,	0,	...)\\
+		&... \\		
+		\end{align}
+		We then constrcut a number $ s $ such that its first digit is the complementary (swapping 0s for 1s and vice versa) of the first digit of $ s_1 $ and etc.
+		\begin{align}
+		&s1 =	(\mathbf{0},	0,	0,	0,	0,	0,	0,	...) \\
+		&s2 =	(1,	\mathbf{1},	1,	1,	1,	1,	1,	...) \\
+		&s3 =	(0,	1,	\textbf{0},	1,	0,	1,	0,	...)\\
+		&s4 =	(1,	0,	1,	\textbf{0},	1,	0,	1,	...)\\
+		&s5 =	(1,	1,	0,	1,	\textbf{0},	1,	1,	...)\\
+		&s6 =	(0,	0,	1,	1,	0,	\textbf{1},	1,	...)\\
+		&s7 =	(1,	0,	0,	0,	1,	0,	\textbf{0},	...)\\
+		&... \\		
+		&s = (\textbf{1},\textbf{0},\textbf{1},\textbf{1},\textbf{1},\textbf{0},\textbf{1},..)
+		\end{align}
+		By construction $ s $ differs from $ s_n $ at the $ n $th digit, so $ s $ is not in this sequence, and thus $ L $ is uncountable. \newpara
+		We can now define a mapping $ f : L \to \Real $.$ f(s_n) = r_n\in \Real $ means that $ s_n $ and $ r_n $ have the same digit while $ r_n $ is under base 10 and $ s_n $ is under base 2. For $ s_n \neq s_m \Rightarrow (r_n=f(s_n)) \neq (r_m=f(s_m)) $, $ f $ is injective, and with the fact that all $ s_n $ corresponds to a $ r_n $ together give us $ \card f(L) = \card L $. Since $ f(L) $ is a subset of $ \Real $, we can see that $ \Real $ is also uncountable.
+	\end{proof}
+	The cardinality of $ \Real $ is often denotes as $ \mathfrak{c} $.
+	\begin{Corollary}
+		$ \Quoziente \neq \Real $, and so irrational numbers exist.
+	\end{Corollary}
+	
+	\begin{Corollary}
+		There exist transcendental numbers, since the set of algebraic numbers is countable.
+	\end{Corollary}
+	
+	\begin{Example}
+		The cardinality of $ P(X) $, which is the power set of $ X $, satisfy that if $ \card X = n $, $ \card P(X) = 2^{n} $.
+	\end{Example}
+	\begin{proof}
+		We can use the principle of induction to complete the proof. If $ n= 1 $, $ X = \{x\} $, then $ P(X) =\{\varnothing, X\} $, then $ \card P(X) = 2^{1} $. \newpara
+		Now if $ n \in \Natural \Rightarrow \card P(X) = 2^{n}  $, let $ X $ be a set that has $ x $ as one of its elements and has the cardinality of $ n+1 $. Therefore $ Y = X \setminus \{x\} $ has $ n $ elements. We can divide $ P(X) $ into two parts: the ones containing $ x $ and the ones don't. If $ x\in A \subset P(X) $, then $ A \setminus \{x\} \subset P(Y) $ and vice versa. Thus we can set up a bijection between $ P(Y) $ and the elements in $ P(X) $ that contains $ x $. Similarly, we can clearly see that a bijection between the subsets of $ P(X) $ that does not contains $ x $ and $ P(Y) $. Thus $ \card P(X) = 2^n + 2^n = 2^{n+1} $, and we complete the proof.
+	\end{proof}
+	
+	
+	
+	
+\end{document}
