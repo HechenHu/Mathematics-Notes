@@ -176,44 +176,7 @@ Any set containing the domain of definition of a relation is called a \textit{do
 Instead writing $ (x,y)\in R $, we write $ xRy $ and say that $ x $ is \textit{connected with} $ y $ \textit{by the relation $ R $}.\\
 If $ R \subset X^2 $, then we say that the relation $ R $ is defined on $ X $.
 
-\subsubsection{Classification of Relations}
-\begin{Definition}
-An \textit{equivalence relation} is a relation that satisfy the following properties: \\
-\newline
-$ aRa $ (Reflexivity);\\
-$ aRb \Rightarrow bRa $ (Symmetry); \\
-$ (aRb)\land (bRc) \Rightarrow aRc $ (Transitivity).\\
-\newline
-An equivalence relation is denoted by the special symbol $ \sim $. $ a\sim b $ means $ a $ is \textit{equivalent} to $ b $.	
-\end{Definition}
-\begin{Definition}
-	Let $ R(\sim) $ be an equivalence relation on $ A $. If $ a \in A $, the \textit{equivalence class} of $ a $ (denoted $ \bar{a} $) is the class of all those elements of $ A $ that are equivalent to $ a $. The class of all equivalence classes in $ A $ is denoted $ A/R $ and called the \textit{quotient class} of $ A $ by $ R $.
-\end{Definition}
 
-\begin{Definition}
-A \textit{partial ordering} on a set $ X^2 $ is a relation $ R $ that have the following properties: \\
-\newline
-$ aRa $ (Reflexivity);\\
-$ (aRb)\land (bRc) \Rightarrow aRc $ (Transitivity).\\
-$ (aRb) \land (bRa )\Rightarrow (a=b) $ (Anti-symmetry);	
-\end{Definition}
-
-We often write $ a\preceq b $ and say that $ b $ \textit{follows} $ a $.
-If the condition
-\begin{equation}
-	\forall a \forall b((aRb)\lor(bRa) \nonumber
-\end{equation}
-holds in addition to transitivity and anti-symmetry defining a partial ordering relation(this means any two elements of $ X $ is comparable), the relation $ R $ is called an \textit{ordering}, and the set $ X $ is said to be \textit{linearly ordered}.
-
-\subsubsection{Functions and Their Graphs}
-\begin{Definition}
-	A relation $ R $ is said to be functional if
-	\begin{equation}
-	(xRy_1)\land(xRy_2)\Rightarrow (y_1=y_2) \nonumber
-	\end{equation}
-	and it is called a \textit{function}.\\
-	$ R\subset X \times Y $ is a \textit{mapping from $ X $ into $ Y $}, or a \textit{function from $ X $ into $ Y $}.\\
-\end{Definition}
 
 \begin{Definition}
 The \textit{graph} of a function $ f:X \to Y $, is the subset $ \Gamma $ of $ X \times Y $.
@@ -322,6 +285,7 @@ and we can say that $ \Real_A $ and $ \Real _B $ are \textit{isomorphic} and the
 \begin{Theorem}
 	The Axiom System of The Real Numbers is categorical.
 \end{Theorem}
+$ \Real $ is an ordered field.
 
 \subsection{Some General Algebraic Properties of Real Numbers}
 \subsubsection{Consequences of the Addition Axioms}
@@ -450,6 +414,9 @@ The existence of greatest lower bound is analogous with the existence of least u
 		(E\subset \Natural)\land(1\in E)\land(x\in E \Rightarrow (x+1)\in E)\Rightarrow E = \Natural \nonumber
 	\end{equation}
 \end{Definition}
+\begin{Definition}[Strong Induction Principle]
+	Let $ A $ be a set of positive integers. Suppose that for each positive integer $ n $, the statement $ S_n \subset A $ implies the statement $ n \in A $. Then $ A = \Natural $.
+\end{Definition}
 Some properties of the natural numbers:\\
 1$ ^0 $\quad The sum and product of natural numbers are natural numbers.\\
 2$ ^0 $\quad $ (n\in \Natural)\land(n\neq 1)\Rightarrow ((n-1)\in \Natural) $. \\
@@ -474,6 +441,12 @@ Some properties of the natural numbers:\\
 	The union of the set of natural numbers, the set of negatives of natural numbers, and zero is called the set of \textit{integers} and is denoted $ \Zahlen $.
 \end{Definition}
 The addition and multiplication of integers do not lead outside of $ \Zahlen $. Thus, $ \Zahlen $ is an Abelian group with respect to addition, but $ \Zahlen $ nor $ \Zahlen \setminus 0 $ is a group with respect to multiplication. \\
+\begin{Definition}
+	The symbol $ S_n $ denotes the set of all positive integers less than $ n $.
+	\begin{equation}
+		S_{n+1}=\{1,\cdots, n \} \nonumber
+	\end{equation}
+\end{Definition}
 \begin{Theorem}[The fundamental theorem of arithmetic]
 	Each natural number admits a representation as a product 
 	\begin{equation}
@@ -567,6 +540,7 @@ The number $ k $ just mentioned is denoted $ [x] $ and is called the \textit{int
 \begin{Theorem}[Triangle Inequality]
 	$ |a+b|\leqslant |a|+|b| $ holds for all $ a,b \in \Real $.
 \end{Theorem}
+This theorem can be connected with triangles when treat $ a $ and $ b $ as two vectors and the absolute values as their norm.
 \begin{proof}
 	We know that $ |x| = max\{x,-x\}  $ and $ \pm x \leqslant |x| $. Thus
 	\begin{align}

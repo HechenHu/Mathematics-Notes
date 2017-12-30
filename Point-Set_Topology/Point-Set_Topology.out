@@ -1,8 +1,10 @@
 \BOOKMARK [0][-]{chapter.1}{Basic Set Theory}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Sets and Operations on Them}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Naive Set Theory}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{ZFC: Zermelo-Fraenkel Axioms and Axiom of Choice}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{The Cardinality of a Set\(Cardinal Numbers\)}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.4}{Operations on Sets}{section.1.1}% 6
-\BOOKMARK [1][-]{section.1.2}{Countable and Uncountable Sets}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.2.1}{The Cardinality of the Continuum}{section.1.2}% 8
+\BOOKMARK [1][-]{section.1.1}{Classification of Relations}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Sets and Operations on Them}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.2.1}{Naive Set Theory}{section.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.2.2}{ZFC: Zermelo-Fraenkel Axioms and Axiom of Choice}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.3}{The Cardinality of a Set\(Cardinal Numbers\)}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.4}{Operations on Sets}{section.1.2}% 7
+\BOOKMARK [1][-]{section.1.3}{Countable and Uncountable Sets}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.3.1}{The Cardinality of the Continuum}{section.1.3}% 9
+\BOOKMARK [0][-]{chapter.2}{Topological Spaces and Continuous Functions}{}% 10
