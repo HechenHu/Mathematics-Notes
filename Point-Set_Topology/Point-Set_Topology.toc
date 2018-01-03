@@ -15,3 +15,8 @@
 \contentsline {section}{\numberline {2.3}The Order Topology}{14}{section.2.3}
 \contentsline {section}{\numberline {2.4}The Product Topology on $ X \times Y $}{14}{section.2.4}
 \contentsline {section}{\numberline {2.5}The Subspace Topology}{15}{section.2.5}
+\contentsline {section}{\numberline {2.6}Closed Sets and Limit Points}{18}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Closed Sets}{18}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Closure and Interior of a Set}{19}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Limit Points}{20}{subsection.2.6.3}
+\contentsline {section}{\numberline {2.7}Hausdorff Spaces}{20}{section.2.7}

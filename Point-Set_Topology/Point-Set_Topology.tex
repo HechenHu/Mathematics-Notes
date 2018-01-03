@@ -591,6 +591,106 @@ The set $ I \times I $ in the dictionary order topology will be  called the \tex
 	Note that any open ray of $ Y $ equals the intersection of an open ray of $ X $ with $ Y $, so it is open in the subspace topology on $ Y $. Since the open rays of $ Y $ are a subbasis for the order topology on $ Y $, this topology is contained in(or finer than) the subspace topology.
 \end{proof}
 To avoid ambiguity, if $ X $ is an ordered set in the order topology and $ Y $ is a subset of $ X $, we shall assume that $ Y $ is given the subspace topology unless specified.
+
+\section{Closed Sets and Limit Points}	
+\subsection{Closed Sets}
+\begin{Theorem}
+	Let $ X $ be a topological space. Then the following conditions hold:
+	\begin{enumerate}
+		\item $ \varnothing $ and $ X $ are closed.
+		\item Arbitrary intersections of closed sets are closed.
+		\item Finite unions of closed sets are closed.
+	\end{enumerate}
+\end{Theorem}	
+\begin{proof}
+	$ (1) $ is obvious. Given a collection of closed sets $ \{A_\alpha \}\alpha \in J $, we have $ X- \bigcap_{\alpha \in J} =\bigcup_{\alpha \in J}(X-A_\alpha)$. Since the set on the right hand side is open, $ \bigcap A_\alpha $ is closed. The third condition can be verified similarly.
+\end{proof}
+If $ Y $ is a subspace of $ X $, we say that a set $ A $ is \textit{closed in $ Y $} if $ A $ is a subset of $ Y $ and if $ A $ is closed in the subspace topology of $ Y $(that is, if $ Y \setminus A $ is open in $ Y $).
+\begin{Theorem}
+	Let $ Y $ be a subspace of $ X $. Then a set $ A $ is closed in $ Y $ iff it equals the intersection of a closed set of $ X $ with $ Y $.
+\end{Theorem}	
+\begin{proof}
+	Assume that $ A=C \cap Y $, where $ C $ is closed in $ X $. Then $ X \setminus C $ is open in $ X $, so that $ (X\setminus C)\cap Y $ is open in $ Y $, but then $ (X\setminus C)\cap Y=Y \setminus A $, and hence $ A $ is closed in $ Y $. Conversely, assume that $ A $ is closed in $ Y $. Then $ Y \setminus A $ is open in $ Y $, and by definition it equals the intersection of an open set $ U $ of $ X $ with $ Y $. The set $ X \setminus U $ is closed in $ X $, so $ A=Y\cap (X \setminus U) $, as desired.
+\end{proof}
+\begin{Theorem}
+	Let $ Y $ be a subspace of $ X $. If $ A $ is closed in $ Y $ and $ Y $ is closed in $ X $, then $ A $ is closed in $ X $.
+\end{Theorem}	
+\subsection{Closure and Interior of a Set}
+\begin{Definition}
+	Given a subset $ A $ of a topological space $ X $, the \textit{interior} of $ A $ is defined as the union of all open sets contained in $ A $, and the \textit{closure} of $ A $ is defined as the intersection of all closed sets containing $ A $. The interior is denoted by $ \Int A $ and the closure of $ A $ is denoted by $ \Cl A $ or $ \bar{A} $. Obviously $ \Int A $ is open and $ \bar{A} $ is closed. Furthermore
+	\begin{equation}
+		\Int A \subset A \subset \bar{A} \nonumber
+	\end{equation}
+	If $ A $ is open, then $ A=\Int A $; if $ A $ is closed, $ A = \bar{A} $.
+\end{Definition}
+\begin{Theorem}
+	Let $ Y $ be a subspace of $ X $; let $ A $ be a subset of $ Y $; let $ \bar{A} $ denote the closure of $ A $ in $ X $. Then the closure of $ A $ in $ Y $ equals $ \bar{A} \cap Y $.
+\end{Theorem}
+\begin{proof}
+	Let $ B $ denote the closure of $ A $ in $ Y $. The set $ \bar{A} $ is closed in $ X $, so $ \bar{A}\cap Y $ is closed. Since $ \bar{A} $ contains $ A $, we have that $ B \subset (\bar{A}\cap Y) $. \newpara
+	On the other hand, $ B $ is closed in $ Y $. Hence $ B=C \cap Y $ for some $ C $ closed in $ X $. Then $ C $ is a closed set of $ X $ containing $ A $; because $ \bar{A} $ is the intersection of all such closed sets, we have $ \bar{A} \subset C$. Then $ (\bar{A}\cap Y)\subset (C \cap Y)=B $.
+\end{proof}
+\begin{Theorem}
+	Let $ A $ be a subset of the topological space $ X $.
+	\begin{enumerate}
+		\item Then $ x \in \bar{A} $ iff every open set $ U $ containing $ x $ intersects $ A $.
+		\item Supposing the topology of $ X $ is given by a basis, then $ x \in \bar{A} $ iff every basis element $ B $ containing $ x $ intersects $ A $.
+	\end{enumerate}
+\end{Theorem}
+\begin{proof}
+	If $ x \notin \bar{A} $, the set $ U=X\setminus \bar{A} $ is an open set containing $ x $ that does not intersect $ A $. Conversely, if there exists an open set $ U $ containing $ x $ which does not intersect $ A $, then $ X \setminus U $ is a closed set containing $ A $. By the definition of the closure, the set $ X \setminus U $ must contain $ \bar{A} $; therefore, $ x \notin \bar{A} $. The second statement follows from our proof, since any basis element is open.
+\end{proof}
+\subsection{Limit Points}
+\begin{Definition}
+	If $ A $ is a subset of the topological space $ X $ and if $ x $ is a point of $ X $, then $ x $ is a \textit{limit point}(or \textit{cluster point} or \textit{point of accumulation}) of $ A $ if every neighborhood of $ x $ intersects $ A $ in some point other than $ x $ itself. Equivalently, $ x $ is a limit point of $ A $ if it belongs to the closure of $ A\setminus{x} $.
+\end{Definition}	
+\begin{Theorem}
+	Let $ A $ be a subset of the topological space $ X $; let $ A^\prime $ be the set of all limit points of $ A $. Then
+	\begin{equation}
+		\bar{A}=A \cup A^\prime \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	If $ x $ is in $ A^\prime $, every neighborhood of $ x $ intersects $ A $. Therefore, $ x $ belongs to $ \bar{A} $. Hence $ A^\prime \subset \bar{A} $. By definition $ A \subset \bar{A} $, and it follows that $ A \cup A^\prime \subset \bar{A} $. \newpara
+	Now let $ x $ be a point of $ \bar{A} $. If $ x $ lies in $ A $, the relation $ x \in A \cup A^\prime $ is trivial; suppose that $ x $ is not in $ A $. Since $ x \in \bar{A}$, we know that every neighborhood $ U $ of $ x $ intersects $ A $. Then $ x \in A^\prime $, so that $ x \in A \cup A^\prime $.
+\end{proof}
+\begin{Corollary}
+	A subset of a topological space is closed iff it contains all its limit points.
+\end{Corollary}
+\section{Hausdorff Spaces}
+\begin{Definition}
+	A topological space is called a \textit{Hausdorff space} if each pair of points has disjoint neighborhoods.
+\end{Definition}	
+\begin{Theorem}
+	Every finite point set in a Hausdorff space is closed.
+\end{Theorem}
+\begin{proof}
+	It's sufficient to prove that the closure of any one-point set is itself, and this is true since for any point of the complement of this one-point set there exists a neighborhood that does not intersect with the original set.
+\end{proof}
+\begin{Definition}
+	The condition that finite point sets be closed is called the \textit{$ T_1 $ axiom}.
+\end{Definition}
+\begin{Theorem}
+	Let $ X $ be a space satisfying the $ T_1 $ axiom; let $ A $ be a subset of $ X $. Then the point $ x $ is a limit point of $ A $ iff every neighborhood of $ x $ contains infinitely many points of $ A $.
+\end{Theorem}
+\begin{proof}
+	If every neighborhood of a limit point $ x $ only intersects $ A $ at finitely many number of points, then by the $ T_1 $ axiom, any neighborhood of $ x $ is closed, and the complement of any deleted neighborhood of $ x $ is open. Then the intersection of the original neighborhood of $ x $ with this complement is a neighborhood of $ x $, but it does not intersect with $ A $ at all, and this contradicts to the fact that $ x $ is a limit point.
+\end{proof}
+\begin{Theorem}
+	If $ X $ is a Hausdorff space, then a sequence of points of $ X $ converges to at most one point of $ X $.
+\end{Theorem}
+\begin{proof}
+	Suppose that $ x_n $ is a sequence of points of $ X $ that converges to $ x $. If $ y \neq x $, let $ U $ and $ V $ be disjoint neighborhoods of $ x $ and $ y $, respectively. Since $ U $ contains $ x_n $ for all but a finitely many values of $ n $, the set $ V $ cannot. Then $ x_n $ cannot converge to $ y $.
+\end{proof}
+\begin{Theorem}
+	Every simply ordered set is a Hausdorff space in the order topology. The product of two Hausdorff spaces is a Hausdorff space. A subspace of a Hausdorff space is a Hausdorff space.
+\end{Theorem}
+\begin{proof}
+	The first two statements can be verified easily. For any pair of points of this subspace, one can choose two disjoint neighborhoods, and thus their intersection with this subspace are disjoint neighborhoods of this two points respectively in the subspace, but since the subspace topology is just the intersection of open sets in the original topological space with the subspace, we had done selecting two disjoint neighborhoods of two points in the subspace topology.
+\end{proof}
+	
+	
+	
 	
 	
 	
