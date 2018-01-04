@@ -688,9 +688,119 @@ If $ Y $ is a subspace of $ X $, we say that a set $ A $ is \textit{closed in $ 
 \begin{proof}
 	The first two statements can be verified easily. For any pair of points of this subspace, one can choose two disjoint neighborhoods, and thus their intersection with this subspace are disjoint neighborhoods of this two points respectively in the subspace, but since the subspace topology is just the intersection of open sets in the original topological space with the subspace, we had done selecting two disjoint neighborhoods of two points in the subspace topology.
 \end{proof}
-	
-	
-	
+\section{Continuous Functions}
+\subsection{Continuity of a Function}
+\begin{Definition}
+	Let $ X $ and $ Y $ be topological spaces. A function $ f:X \to Y $ is said to be \textit{continuous} if for each open subset $ V $ of $ Y $, the set $ f^{-1}(V) $ is an open subset of $ X $. If the topology of $ Y $ is given by a basis $ \mathscr{B} $, then to prove continuity of $ f $ it suffices to show that the inverse image of every basis element is open, since any arbitrary open set of $ Y $ can be written as a union of basis elements. If the topology $ Y $ is given by a subbasis $ \mathscr{S} $, to prove continuity of $ f $ it will suffice to show that the inverse image of each subbasis element is open, since the arbitrary basis element of $ Y $ can be written as a finite intersection of subbasis elements.
+\end{Definition}
+\begin{Theorem}
+	Let $ X $ and $ Y $ be topological spaces; let $ f:X \to Y $. Then the following are equivalent:
+	\begin{enumerate}
+		\item $ f $ is continuous.
+		\item For every subset $ A $ of $ X $, one has $ f(\bar{A})\subset \overline{f(A)}$.
+		\item For every closed set $ B $ of $ Y $, the set $ f^{-1}(B) $ is closed in $ X $.
+		\item For each $ x \in X $ and each neighborhood $ V $ of $ f(x) $, there is a neighborhood $ U $ of $ x $ such that $ f(U)\subset(V) $.
+	\end{enumerate}
+If condition $ (4) $ holds for the point $ x $ of $ X $, we say that $ f $ is \textit{continuous at the point $ x $}.
+\end{Theorem}
+\begin{proof}
+	$ (1)\Rightarrow (2) $. Let $ A $ be a subset of $ X $ and $ V $ be a neighborhood of $ f(x) $. Assume that $ x \in \bar{A} $. Then $ f^{-1}(V) $ is an open set of $ X $ containing $ x $; it must intersect $ A  $ in some point $ y $. Then $ V $ intersects $ f(A) $ in the point $ f(y) $, so that $ f(x)\in \overline{f(A)} $, as desired. \newpara
+	$ (2)\Rightarrow (3) $. Let $ B $ be closed in $ Y $ and let $ A = f^{-1}(B) $. We have $ f(A)= f(f^{-1}(B))\subset B $. Therefore, if $ x \in \bar{A} $,
+	\begin{equation}
+		f(x)\in f(\bar{A}) \subset \overline{f(A)}\subset \bar{B} = B \nonumber
+	\end{equation}
+	so that $ x \in f^{-1}(B)=A $. Thus $ \bar{A} \subset A $, and $ \bar{A} = A $. \newpara
+	$ (3)\Rightarrow(1) $. Let $ V $ be an open set of $ Y $. Set $ B=Y\setminus V $. Then
+	\begin{equation}
+		f^{-1}(B)=f^{-1}(Y)\setminus f^{-1}(V)=X \setminus f^{-1}(V) \nonumber
+	\end{equation}
+	now $ f^{-1}(B) $ is closed by hypothesis, and $ f^{-1}(V) $ is open in $ X $, as desired.\newpara
+	$ (1)\Leftrightarrow(4) $. Let $ x \in X $ and let $ V $ be a neighborhood of $ f(x) $. Then the set $ U=f^{-1}(V) $ is a neighborhood of $ x $ such that $ f(U)\subset V $. Conversely, let $ V $ be an open set of $ Y $; let $ x $ be a point of $ f^{-1}(V) $. Then $ f(x)\in V $, and by hypothesis there is a neighborhood $ U_x $ of $ x $ such that $ f(U_x)\subset V $. Then $ U_x \subset f^{-1}(V)$. It follows that $ f^{-1}(V) $ can be written as the union of the open sets $ U_x $, so that it is open.
+\end{proof}
+\subsection{Homeomorphisms}
+\begin{Definition}
+	If a bijection function between two topological spaces and its inverse function are continuous, the original function is called a \textit{homeomorphism}. Equivalently, it means that a homeomorphism is a bijective mapping such that the image of a set is open iff the original set is open. It is analogous with the concept of isomorphism for algebraic structures, which means a homeomorphism preserves the topological structure involved.
+\end{Definition}	
+\begin{Definition}
+	Suppose $ f:X \to Y $ is an injective continuous mapping between two topological spaces. Let $ Z $ be the image set $ f(X) $, considered as a subspace of $ Y $; then the function $ f^\prime:X \to Z $ obtained by restricting the range of $ f $ is bijective. If $ f^\prime $ happens to be a homeomorphism of $ X $ with $ Z $, it is said that the mapping $ f:X \to Y $ is a \textit{topological imbedding}, or an \textit{imbedding}, of $ X $ in $ Y $.
+\end{Definition}
+\begin{Example}
+	The bijective order-preserving correspondence $ F:(1,-1)\to \Real $ defined by
+	\begin{equation}
+		F(x)=\frac{x}{1-x^2} \nonumber
+	\end{equation}
+	is a homeomorphism between $ (-1,1) $ with $ \Real $. Its inverse $ G $ is
+	\begin{equation}
+		G(y)=\frac{2y}{1+(1+4y^2)^{1/2}} \nonumber
+	\end{equation}
+\end{Example}
+\section{Constructing Continuous Functions}
+\begin{Theorem}[Rules for Constructing Continuous Functions]
+	Let $ X $, $ Y $, and $ Z $ be topological spaces.
+	\begin{enumerate}
+		\item (Constant function) If $ f:X \to Y $ maps all of $ X $ into the single point $ y_0 $ of $ Y $, then $ f $ is continuous.
+		\item (Inclusion) If $ A $ is a subspace of $ X $, the inclusion function $ j:A \to X $ is continuous.
+		\item (Composites) If $ f:X \to Y $ and $ g:Y \to Z $ are continuous, then the map $ g \circ f $ is continuous.
+		\item (Restricting the domain) If $ f:X \to Y $ is continuous, and if $ A $ is a subspace of $ X $, then the restricted function $ f|_A:A \to Y $ is continuous.
+		\item (Restricting or expanding the range) Let $ f:X \to Y $ be continuous. If $ Z $ is a subspace of $ Y $ containing the image set $ f(X) $, then the function $ g:X \to Z $ obtained by restricting the range of $ f $ is continuous. If $ Z $ is a space having $ Y $ as a subspace, then the function $ h:X \to Z $ obtained by expanding the range of $ f $ is continuous.
+		\item (Local formulation of continuity) The map $ f:X \to Y $ is continuous if $ X $ can be written as the union of open sets $ U_\alpha $ such that $ f|_{U_\alpha} $ is continuous for each $ \alpha $.
+	\end{enumerate}
+\end{Theorem}
+\begin{proof}
+	\begin{enumerate}
+		\item Let $ f(x)=y_0 $ for each $ x \in X $ and let $ V $ be open in $ Y $. The set $ f^{-1}(V) $ equals $ X $ or $ \varnothing $, depending on whether $ V $ contains $ y_0 $ or not. In either case, it is open.
+		\item If $ U $ is open in $ X $, then $ j^{-1}(U)=U\cap A $, which is open in $ A $.
+		\item If $ U $ is open in $ Z $, then $ g^{-1}(U) $ is open in $ Y $ and $ f^{-1}(g^{-1}(U)) $ is open in $ X $, but
+		\begin{equation}
+			f^{-1}(g^{-1}(U)) =(g \circ f)^{-1}(U) \nonumber
+		\end{equation}
+		\item The function $ f|_A$ equals the composite of the inclusion mapping $ j:A \to X $ and the mapping $ f:X \to Y $, both of which are continuous.
+		\item Let $ f:X \to Y $ be continuous. If $ f(X)\subset Z \subset Y $, we show that the function $ g:X \to Z $ obtained from $ f $ is continuous. Let $ B $ be open in $ Z $. Then $ B=Z \cap U $ for some open set $ U $ of $ Y $. Because $ Z $ contains the entire image set $ f(X) $,
+		\begin{equation}
+			f^{-1}(U)=g^{-1}(B)\nonumber
+		\end{equation}
+		Since the left side is open by the definition of continuity, so is $ g^{-1}(B) $.\\
+		To show $ h:X \to Z $ is continuous if $ Z $ has $ Y $ as a subspace, note that $ h $ is the composition of the mapping $ f:X \to Y $ and the inclusion map $ j:Y \to Z $.
+		\item By hypothesis, we can write $ X $ as a union of open sets $ U_\alpha $, such that $ f|_{U_\alpha} $, is continuous for each $ \alpha $. Let $ V $ be an open set in $ Y $. Then
+		\begin{equation}
+			f^{-1}(V)\cap U_\alpha = (f|_{U_\alpha})^{-1}(V) \nonumber
+		\end{equation}
+		because both expressions represent the set of those points $ x $ lying in $ U_\alpha $ for which $ f(x)\in V $. Since $ f|_U $ is continuous, this set is open in $ U_\alpha $, and hence open in $ X $. But
+		\begin{equation}
+			f^{-1}(V)=\bigcup_{\alpha}(f^{-1}(V)\cap U_\alpha) \nonumber
+		\end{equation}
+		so that $ f^{-1}(V) $ is also open in $ X $.
+	\end{enumerate}
+\end{proof}	
+\begin{Theorem}[The pasting lemma]
+	Let $ X = A \cup B $, where $ A $ and $ B $ are closed in $ X $. Let $ f:A \to Y $ and $ g:B \to Y $ be continuous. If $ f(x)=g(x) $ for every $ x \in A \cap B $, then $ f $ and $ g $ combine to give a continuous function $ h:X \to Y $, defined by setting $ h(x)=f(x) $ if $ x \in A $, and $ h(x)=g(x) $ if $ x \in B $.
+\end{Theorem}
+\begin{proof}
+	Let $ C $ be a closed subset of $ Y $. Now
+	\begin{equation}
+		h^{-1}(C)=f^{-1}(C)\cup g^{-1}(C) \nonumber
+	\end{equation}
+	The fact that $ f $ and $ g $ are continuous make each term of the right-hand side closed in their respectively domain, and hence they are closed in $ X $, which makes $ h^{-1}(C) $ closed in $ X $.
+\end{proof}
+\begin{Theorem}[Maps into products]
+	Let $ f:A \to X \times Y $ given by the equation
+	\begin{equation}
+		f(a)=(f_1(a),f_2(a))\nonumber
+	\end{equation}
+	Then $ f $ is continuous iff the functions $ f_1 $ and $ f_2 $ are continuous.
+\end{Theorem}
+The mapping $ f_1 $ and $ f_2 $ are called the \textit{coordinate functions} of $ f $.
+\begin{proof}
+	Let $ \pi_1:X \times Y \to X $ and $ \pi_2 :X \times Y \to Y $ be projections onto the first and second factors, respectively. These maps are continuous. For $ \pi_1^{-1}(U)=U \times Y $ and $ \pi_2^{-1}(V)=X \times V $, and these sets are open iff $ U $ and $ V $ are open. Note that for each $ a \in A$
+	\begin{equation}
+		f_1(a)=\pi_1(f(a))\quad \text{and}\quad f_2(a)=\pi_2(f(a)) \nonumber
+	\end{equation}
+	If $ f $ is continuous, then $ f_1 $ and $ f_2 $ are composition of continuous functions and therefore continuous. Conversely, suppose that $ f_1 $ and $ f_2 $ are continuous. We show that for each basis element $ U \times V $ for the topology of $ X \times Y $, its inverse image $ f^{-1}(U \times V) $ is open. A point $ a $ is in $ f^{-1}(U \times V) $ iff $ f(a)\in U \times V $, therefore
+	\begin{equation}
+		f^{-1}(U \times V) = f_1^{-1}(U)\cap f_2^{-1}(V)\nonumber
+	\end{equation}
+	Since both terms of the right-hand side are open, so is their intersection.
+\end{proof}
 	
 	
 	
