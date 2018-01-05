@@ -4947,27 +4947,49 @@ is equal to the same order $ k $ at every point $ x \in U $, then
 
 
 %VOLUME TWO
-\chapter{Continuous Mappings}
-\section{Metric Spaces}
-\section{Topological Spaces}
-\section{Compact Sets}
-\section{Connected Topological Spaces}
-\section{Complete Metric Spaces}
-\section{Continuous Mappings of Topological Spaces}
-\section{The Contraction Mapping Principle}
 
-\chapter{Differential Calculus  from a More General Point of View}
-\section{Normed Vector Spaces}
-\section{Linear and Multilinear Transformations}
-\section{The Differential of a Mapping}
-\section{The Finite-Increment Theorem and Some Examples of Its Usage}
-\section{Higher-Order Derivatives}
-\section{Taylor's Formula and the Study of Extrema}
-\section{The General Implicit Function Theorem}
 
 \chapter{Multiple Integrals}
 \section{The Riemann Integral over an $ n $-Dimensional Interval}
+\subsection{Intervals in $ \Real^n $ and Their Measure}
+\begin{Definition}
+	The set $ I=\{x \in \Real^n | a^i \leqslant x^i \leqslant b^i,i=1,\cdots,n \} $ is called an \textit{interval} or a \textit{coordinate parallelepiped} in $ \Real^n $.
+\end{Definition}
+\begin{Definition}
+	To the interval $ I_{a,b} $ we assign the number $ |I|\coloneqq \prod_{i=1}^{n}(b^i -a^i) $, called the \textit{volume} or \textit{measure} of the interval, also denoted as $ v(I) $ for volume and $ \mu(I) $ for measure.
+\end{Definition}
+\begin{Lemma}
+	The measure of an interval in $ \Real^n $ has the following properties.
+	\begin{enumerate}
+		\item It is homogeneous, that is, if $ \lambda I_{a,b} \coloneqq I_{\lambda a,\lambda b}$, where $ \lambda \geqslant 0 $, then
+		\begin{equation}
+			|\lambda I_{a,b}|=\lambda^n |I_{a,b}| \nonumber
+		\end{equation}
+		\item It is additive, that is, if the intervals $ I,I_1,\cdots,I_k $ are such that $ I= \bigcup_{j=1}^{k}I_j $ and no two of the intervals $ I_1,\cdots,I_k $ have common interior points, then $ |I|=\sum_{j=1}^{k}|I_j| $.
+		\item If the interval $ I $ is covered by a finite system of intervals $ I_1,\cdots,I_k $, that is, $ I \subset \bigcup_{j=1}^{k}I_j $, then $ |I| \leqslant \sum_{j=1}^{k}|I_j|  $.
+	\end{enumerate}
+\end{Lemma}
+\subsection{Partitions of an Interval and a Base in the Set of Partitions}
+\begin{Definition}
+	The representation of the interval $ I $ (as the union $ I= \bigcup_{j=1}^{k}I_j $ of finer intervals $ I_j $) will be called a \textit{partition} of the interval $ I $, and will be denoted by $ P $.
+\end{Definition}
+\begin{Definition}
+	The quantity $ \lambda(P)\coloneqq \max_{1 \leqslant j \leqslant k}d(I_j) $ (the maximum among the diameters of the intervals of the partition $ P $) is called the \textit{mesh} of the partition $ P $.
+\end{Definition}
+\begin{Definition}
+	If in each interval $ I_j $ of the partition we fix a point $ \xi_j \in I_j $, we say that we have a \textit{partition with distinguished points} and denoted by $ (P,\xi) $.
+\end{Definition}
+In the set $ \mathscr{P} =\{(P,\xi) \}$ of partitions with distinguished points on an interval $ I $ we introduce the base $ \lambda(P)\to 0 $ whose elements $ B_d(d>0) $, as in the one-dimensional case, are defined by $ B_d \coloneqq \{ (P,\xi)\in \mathscr{P}|\lambda(P)<d \} $.\newpara
+The definition of Riemann sum, Riemann integral, Darboux Sum and other basic concepts are basically the same as we defined before.
+
+
+
 \section{The Integral over a Set}
+\begin{Definition}
+	A set $ E \subset \Real^n $ is \textit{admissible} if it is bounded in $ \Real^n $ and its boundary is a set of measure zero (in the sense of Lebesgue).
+\end{Definition}
+
+
 \section{General Properties of the Integral}
 \section{Reduction of a Multiple Integral to an Iterated Integral}
 \section{Change of Variable in a Multiple Integral}
