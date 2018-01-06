@@ -920,12 +920,119 @@ The theorem only holds on product topology, and we'll present a counterexample b
 	\end{equation}
 	for all $ n $, a contradiction.
 \end{Example}
+
+\section{The Metric Topology}	
+\begin{Definition}
+	A \textit{metric} on a set $ X $ is a function
+	\begin{equation}
+		d:X \times X \to \Real \nonumber
+	\end{equation}
+	having the following properties:
+	\begin{enumerate}
+		\item $ d(x,y)\geqslant 0 $ for all $ x,y \in X $; equality holds iff $ x=y $.
+		\item $ d(x,y)=d(y,x) $ for all $ x,y \in X $.
+		\item (Triangle inequality) $ d(x,y)+d(y,z)\geqslant d(x,z) $, for all $ x,y,z \in X $.
+	\end{enumerate}
+Given a metric $ d $ on $ X $, the number $ d(x,y) $ is often called the \textit{distance} between $ x $ and $ y $ in the metric $ d $.
+\end{Definition}	
+\begin{Definition}
+	If $ d $ is a metric on the set $ X $, then the collection of all $ \varepsilon $-balls $ B_d(x,\varepsilon) $, for $ x \in X $ and $ \varepsilon >0$, is a basis for a topology on $ X $, called the \textit{metric topology} induced by $ d $.
+\end{Definition}
 	
-	
-	
-	
-	
-	
+\begin{Definition}
+	If $ X $ is a topological space, $ X $ is said to be \textit{metrizable} if there exists a metric $ d $ on the set $ X $ that induces the topology of $ X $. A \textit{metric space} is a metrizable space $ X $ together with a specific metric $ d $ that gives the topology of $ X $.
+\end{Definition}	
+\begin{Definition}
+	Let $ X $ be a metric space with metric $ d $. A subset $ A $ of $ X $ is said to be \textit{bounded} if there is some number $ M $ such that
+	\begin{equation}
+		d(a_1,a_2)\leqslant M \nonumber
+	\end{equation}
+	for every pair $ a_1,a_2 $ of points of $ A $. If $ A $ is bounded and nonempty, the \textit{diameter} of $ A $ is defined to be the number
+	\begin{equation}
+		d(A)=\sup \{d(a_1,a_2)|a_1,a_2 \in A \} \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Theorem}
+	Let $ X $ be a metric space with metric $ d $. Define $ \bar{d}:X \times X \to \Real $ by the equation
+	\begin{equation}
+		\bar{d}(x,y)=\min \{d(x,y),1 \} \nonumber
+	\end{equation}
+	Then $ \bar{d} $ is a metric that induces the same topology as $ d $ and called the \textit{standard bounded metric} corresponding to $ d $.
+\end{Theorem}
+\begin{proof}
+	We only need to check the triangle equality for $ \bar{d} $, and check the case either $ d(x,y)\geqslant 1 $ or $ d(y,z)\geqslant 1 $ as well as $ d(x,y)<1 $ and $ d(y,z)<1 $. Now we note that in any metric space, the collection $ \varepsilon $-balls with $ \varepsilon<1 $ forms a basis for the metric topology, for every basis element containing $ x $ contains such an $ \varepsilon $-ball centered at $ x $. It follows that $ d $ and $ \bar{d} $ induce the same topology on $ X $, because the collection of $ \varepsilon $-balls with $ \varepsilon<1 $ under these two metrices are the same collection.
+\end{proof}
+\begin{Definition}
+	Given $ \vec{x}=(x_1,\cdots,x_n) $ in $ \Real^n $, we define the \textit{norm} of $ \vec{x} $ by the equation
+	\begin{equation}
+		\norm{\vec{x}} = (x_1^2+\cdots +x_n^2)^{1/2} \nonumber
+	\end{equation}
+	and we define the \textit{euclidean metric} $ d $ on $ \Real^n $ by the equation
+	\begin{equation}
+		d(\vec{x},\vec{y})=\norm{\vec{x}-\vec{y}} \nonumber
+	\end{equation}
+	We define the \textit{square metric} $ \rho $ by the equation
+	\begin{equation}
+		\rho(\vec{x},\vec{y}) = \max \{|x_1-y_1|,\cdots, |x_n-y_n|\} \nonumber
+	\end{equation}
+\end{Definition}	
+\begin{Lemma}
+	Let $ d $ and $ d^\prime $ be two metrices on the set $ X $; let $ \mathscr{T} $ and $ \mathscr{T}^\prime $ be the topology they induce, respectively. Then $ \mathscr{T}^\prime $ is finer than $ \mathscr{T} $ iff for each $ x \in X $ and each $ \varepsilon>0 $, there exists a $ \delta >0 $ such that
+	\begin{equation}
+		B_{d^\prime}(x,\delta) \subset B_{d}(x,\varepsilon) \nonumber
+	\end{equation}
+\end{Lemma}
+\begin{Theorem}
+	The topologies on $ \Real^n $ induced by the euclidean metric $ d $ and the square metric $ \rho $ are the same as the product topology on $ \Real^n $.
+\end{Theorem}
+\begin{proof}
+	Let $ \vec{x} $ and $ \vec{y} $ be two points of $ \Real^nn  $. It is easy to check that
+	\begin{equation}
+		\rho(\vec{x},\vec{y})\leqslant d(\vec{x},\vec{y}) \leqslant \sqrt{n} \rho(\vec{x},\vec{y}) \nonumber
+	\end{equation}
+	The first inequality shows that $ B_d(\vec{x},\varepsilon) \subset B_\rho(\vec{x},\varepsilon)$ for all $ \vec{x} $ and $ \varepsilon $. Similarly, the second inequality snows that $ B_\rho (\vec{x},\varepsilon/\sqrt{n}) \subset B_d(\vec{x},\varepsilon)$,and then the two metric topologies are the same. \newpara
+	Now we show that the product topology is the same as that given by the metric $ \rho $. First, let
+	\begin{equation}
+		B=(a_1,b_1)\times \cdots \times (a_n,b_n) \nonumber
+	\end{equation}
+	be a basis element for the product topology, and $ \vec{x}=(x_1,\cdots,x_n) $ be an element of $ B $. For each $ i $, there is an $ \varepsilon_i $ such that
+	\begin{equation}
+		(x_i-\varepsilon_i,x_i+\varepsilon_i)\subset (a_i,b_i) \nonumber
+	\end{equation}
+	choose $ \varepsilon = \min \{\varepsilon_1,\cdots,\varepsilon_n \} $. Then $ B_\rho(\vec{x},\varepsilon)\subset B $. As a result, the $ \rho $-topology is finer than the product topology. \newpara
+	Conversely, let $ B_\rho(\vec{x},\varepsilon) $ be a basis element for the $ \rho $-topology. Given the element $ \vec{y}\in B_\rho(\vec{x},\varepsilon) $, we need to find a basis element $ B $ for the product topology such that
+	\begin{equation}
+		\vec{y}\in B \subset B_\rho(\vec{x},\varepsilon) \nonumber
+	\end{equation}
+	But this is trivial, for
+	\begin{equation}
+		B_\rho(\vec{x},\varepsilon)=(x_1-\varepsilon,x_1+\varepsilon)\times \cdots \times  (x_n-\varepsilon,x_n+\varepsilon) \nonumber
+	\end{equation}
+	is itself a basis element for the product topology.
+\end{proof}	
+\begin{Definition}
+	Given an index set $ J $, and given points $ \vec{x}=(x_\alpha)_{\alpha \in J} $ and $ \vec{y}=(y_\alpha)_{\alpha \in J}$ of $ \Real^J $, let us define a metric $ \bar{\rho} $ on $ \Real^J $ by the equation
+	\begin{equation}
+		\bar{\rho}(\vec{x},\vec{y})=\sup \{\bar{d}(x_\alpha,y_\alpha)|\alpha \in J \}
+	\end{equation}
+	where $ \bar{d} $ is the standard bounded metric on $ \Real $. The metric $ \bar{\rho} $ is called the \textit{uniform metric} on $ \Real^J $, and the topology it induces is called the \textit{uniform topology}.
+\end{Definition}
+\begin{Theorem}
+	The uniform topology on $ \Real^J $ is finer than the product topology and coarser than the box topology; these three topologies are all different if $ J $ is infinite.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Theorem}
+	Let $ \bar{d}(a,b)=\min \{|a-b|,1 \} $ be the standard bounded metric on $ \Real $. If $ \vec{x} $ and $ \vec{y} $ are two points of $ \Real^\omega $, define
+	\begin{equation}
+		D(\vec{x},\vec{y}) =\sup \{ \frac{\bar{d}(x_i,y_i)}{i}\} \nonumber
+	\end{equation}
+	Then $ D $ is a metric that induces the product topology on $ \Real^\omega $.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
 	
 	
 	

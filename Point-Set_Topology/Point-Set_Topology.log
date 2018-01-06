@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 JAN 2018 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 JAN 2018 19:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1344,7 +1344,7 @@ ier (name{equation.2.5.1}) has been already used, duplicate ignored
                    \relax 
 l.560 	\begin{equation}
                        
-<Convex_polygon_illustration1.png, id=290, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration1.png, id=295, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration1.png Graphic file (type png)
 
 <use Convex_polygon_illustration1.png>
@@ -1355,7 +1355,7 @@ Package pdftex.def Info: Convex_polygon_illustration1.png used on input line 57
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Convex_polygon_illustration2.png, id=292, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration2.png, id=297, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration2.png Graphic file (type png)
 
 <use Convex_polygon_illustration2.png>
@@ -1566,27 +1566,103 @@ ier (name{equation.2.10.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.918 	\begin{equation}
-                        [28]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 932.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 932.
+                        [28]pdfTeX warning (ext4): destination with the same id
+entifier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.947 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.951 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.957 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.967 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.971 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.975 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.981 	\begin{equation}
+                        [29]pdfTeX warning (ext4): destination with the same id
+entifier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.990 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.995 	\begin{equation}
+                       
+Underfull \hbox (badness 10000) in paragraph at lines 992--995
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.11
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.999 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1004 	\begin{equation}
+                        
+Underfull \hbox (badness 10000) in paragraph at lines 1001--1004
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.11
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1008 	\begin{equation}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.2.11.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1015 	\begin{equation}
+                         [30] [31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1039.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1039.
  (./Point-Set_Topology.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 932.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 932.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1039.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1039.
+
 Package rerunfilecheck Info: File `Point-Set_Topology.out' has not changed.
-(rerunfilecheck)             Checksum: D0996D1D6D8EA9AE15BFC7FF64226650;1845.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 932.
+(rerunfilecheck)             Checksum: DDD7E8FD3E72D8337D622BDB29A6A898;1912.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1039.
  ) 
 Here is how much of TeX's memory you used:
- 18390 strings out of 492995
- 334320 string characters out of 6132704
+ 18404 strings out of 492995
+ 334474 string characters out of 6132704
  410395 words of memory out of 5000000
- 21398 multiletter control sequences out of 15000+600000
+ 21399 multiletter control sequences out of 15000+600000
  125452 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,14n,56p,904b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-17/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-d
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
+17/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-d
 ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-dist/fonts/
 enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
 msfonts/euler/eufm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
@@ -1605,13 +1681,14 @@ e/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
 blic/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
-sy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb>
-Output written on Point-Set_Topology.pdf (32 pages, 536766 bytes).
+sy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb>
+Output written on Point-Set_Topology.pdf (35 pages, 550416 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
- 451 compressed objects within 5 object streams
- 166 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 547 PDF objects out of 1000 (max. 8388607)
+ 479 compressed objects within 5 object streams
+ 179 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

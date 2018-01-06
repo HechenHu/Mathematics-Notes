@@ -25,3 +25,4 @@
 \contentsline {subsection}{\numberline {2.8.2}Homeomorphisms}{22}{subsection.2.8.2}
 \contentsline {section}{\numberline {2.9}Constructing Continuous Functions}{23}{section.2.9}
 \contentsline {section}{\numberline {2.10}The Product Topology}{25}{section.2.10}
+\contentsline {section}{\numberline {2.11}The Metric Topology}{28}{section.2.11}

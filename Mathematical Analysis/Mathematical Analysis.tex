@@ -4985,10 +4985,74 @@ The definition of Riemann sum, Riemann integral, Darboux Sum and other basic con
 
 
 \section{The Integral over a Set}
+\subsection{Admissible Sets}
 \begin{Definition}
 	A set $ E \subset \Real^n $ is \textit{admissible} if it is bounded in $ \Real^n $ and its boundary is a set of measure zero (in the sense of Lebesgue).
 \end{Definition}
-
+\begin{Lemma}
+	For any sets $ E,E_1,E_2 \subset \Real^n $, the following assertions hold:
+	\begin{enumerate}
+		\item $ \partial E $ is a closed subset of $ \Real^n $;
+		\item $ \partial(E_1\cup E_2)\subset \partial E_1 \cup \partial E_2 $;
+		\item $ \partial(E_1\cap E_2)\subset \partial E_1 \cup \partial E_2 $;
+		\item $ \partial(E_1\setminus E_2)\subset \partial E_1 \cup \partial E_2  $.
+	\end{enumerate}
+where $ \partial E $ is the boundary of a set $ E \subset \Real^n $.
+\end{Lemma}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Lemma}
+	The union or intersection of a finite number of admissible sets is an admissible set; the difference of admissible sets is also an admissible set.
+\end{Lemma}
+We now consider the characteristic function
+\begin{equation}
+	\mathcal{X}_E(x)=\begin{cases}
+	&1 \quad\text{if }x\in E \\
+	&0 \quad\text{if }x\notin E
+	\end{cases} \nonumber
+\end{equation}
+of an admissible set $ E $. This function only has discontinuities at the boundary points of $ E $, and hence is continuous at most all points of $ \Real^n $.
+\subsection{The Integral over a Set}
+The function equal to $ f(x) $ for $ x \in E $ and to $ 0 $ outside $ E $ is denoted by $ f_{\mathcal{X}_E}(x) $.
+\begin{Definition}
+	The \textit{integral of $ f $ over $ E $} is given by
+	\begin{equation}
+		\int_{E}f(x)dx \coloneqq \int_{I \supset E}f_{\mathcal{X}_E}(x) dx \nonumber
+	\end{equation}
+	where $ I $ is any interval containing $ E $.
+\end{Definition}
+If the integral on the right-hand side of this equality does not exist, we say that $ f $ is (Riemann) \textit{nonintegrable over $ E $}. Otherwise $ f $ is (Riemann) \textit{integrable over $ E $}.
+\begin{Lemma}
+	If $ I_1 $ and $ I_2 $ are two intervals, both containing the set $ E $, then the integrals
+	\begin{equation}
+		\int_{I_1}f_{\mathcal{X}_E}(x) dx \quad \text{and }\int_{I_2}f_{\mathcal{X}_E}(x) dx \nonumber
+	\end{equation}
+	either both exist or both fail to exist, and in the first case their values are the same.
+\end{Lemma}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Theorem}
+	A function $ f:E \to \Real $ is integrable over an admissible set iff it is bounded and continuous at almost all points of $ E $.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\subsection{The Measure(Volume) of an Admissible Set}
+\begin{Definition}
+	The (Jordan) \textit{measure} or \textit{content} of a bounded set $ E \subset \Real^n$ is
+	\begin{equation}
+		\mu(E)\coloneqq \int_{E}1 \cdot dx \nonumber
+	\end{equation}
+	provided this Riemann integral exists.
+\end{Definition}
+\begin{Definition}
+	A set $ E \subset \Real^n $ is a set of \textit{measure zero in the sense of Jordan} or a set of \textit{content zero} if for every $ \varepsilon>0 $ it can be covered by a finite system of intervals $ I_1,\cdots,I_k $ such that $ \sum_{i=1}^{k}|I_i|<\varepsilon $.
+\end{Definition}
+\begin{Definition}
+	A set $ E $ is \textit{Jordan-measurable} if it is bounded and its boundary has Jordan measure zero.
+\end{Definition}
 
 \section{General Properties of the Integral}
 \section{Reduction of a Multiple Integral to an Iterated Integral}
