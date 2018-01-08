@@ -1021,7 +1021,14 @@ Given a metric $ d $ on $ X $, the number $ d(x,y) $ is often called the \textit
 	The uniform topology on $ \Real^J $ is finer than the product topology and coarser than the box topology; these three topologies are all different if $ J $ is infinite.
 \end{Theorem}
 \begin{proof}
-	\exercise
+Suppose that we are given a point $ \vec{x} =(x_\alpha)_{\alpha \in J}$ and a product topology basis element $ \prod U_\alpha $ about $ \vec{x} $. Let $ \alpha_1,\cdots,\alpha_n $ be the indices for which $ U_\alpha \neq \Real $. Then for each $ i $, choose $ \varepsilon_i >0 $ so that the $ \varepsilon_i $-ball centered at $ x_\alpha $ in the $ \bar{d} $ matrix is contained in $ U_{\alpha_i} $; this is possible because $ U_{\alpha_i} $ is open in $ \Real $. Let $ \varepsilon=\min \{\varepsilon_1,\cdots,\varepsilon_n \} $; then the $ \varepsilon $-ball centered at $ \bar{\rho} $ metric is contained in $ \prod U_\alpha $. For if $ \vec{z} $ is a point of $ \Real^J $ such that $ \bar{\rho}(\vec{x},\vec{z})<\varepsilon $, then $ \bar{d}(\vec{x},\vec{z})<\varepsilon $ for all $ \alpha $, so that $ \vec{z}\in \prod U_\alpha $. It follows that the uniform topology is finer than the product topology. These two topologies are different since any point in a open set in the uniform topology does not have a neighborhood in the product topology that is contained in this open set(any neighborhood in the product topology is unbounded).   \newpara
+
+On the other hand, let $ B $ be the $ \varepsilon $-ball centered at $ \vec{x} $ in the $ \bar{\rho} $ metric. Then the box neighborhood
+\begin{equation}
+	U=\prod (x_\alpha - \frac{1}{2}\varepsilon,x_\alpha + \frac{1}{2}\varepsilon) \nonumber
+\end{equation}
+of $ \vec{x} $ is contained in $ B $. For if $ \vec{y}\in U $, then $ \bar{d}(x_\alpha,y_\alpha)<\frac{1}{2}\varepsilon $ for all $ \alpha $, so that $ \bar{\rho}(\vec{x},\vec{y})\leqslant \frac{1}{2}\varepsilon $. Now consider the $ \varepsilon $-ball in the box topology for the point $ \vec{x} $. Clearly it is open in the box topology, but it's not open in the uniform topology, for the point $ (x_1+\varepsilon/2,x_2+2\varepsilon/3,x_3+3\varepsilon/4,\cdots) $ does not have any neighborhood that is contained in the previously mentioned $ \varepsilon $-ball in the uniform topology.\newpara
+
 \end{proof}
 \begin{Theorem}
 	Let $ \bar{d}(a,b)=\min \{|a-b|,1 \} $ be the standard bounded metric on $ \Real $. If $ \vec{x} $ and $ \vec{y} $ are two points of $ \Real^\omega $, define
@@ -1031,8 +1038,150 @@ Given a metric $ d $ on $ X $, the number $ d(x,y) $ is often called the \textit
 	Then $ D $ is a metric that induces the product topology on $ \Real^\omega $.
 \end{Theorem}
 \begin{proof}
+	The properties of a metric are satisfied trivially except for the triangle inequality, which is proved by noting that for all $ i $,
+	\begin{equation}
+		\frac{\bar{d}(x_i,z_i)}{i}\leqslant \frac{\bar{d}(x_i,y_i)}{i}+	\frac{\bar{d}(y_i,z_i)}{i} \leqslant D(\vec{x},\vec{y})+D(\vec{y},\vec{z}) \nonumber
+	\end{equation}
+	so that
+	\begin{equation}
+		\sup \{\frac{\bar{d}(x_i,z_i)}{i} \}\leqslant D(\vec{x},\vec{y})+D(\vec{y},\vec{z}) \nonumber
+	\end{equation}
+	
+	Now we prove that $ D $ gives the product topology. First, let $ U $ be open in the metric topology and let $ \vec{x}\in U $; we find an open set $ V $ in the product topology such that $ \vec{x}\in V \subset U $. Choose an $ \varepsilon $-ball $ B_D(\vec{x},\varepsilon) $ lying in $ U $. Then choose $ N $ large enough that $ 1/N < \varepsilon $. Finally, let $ V $ be the basis element for the product topology
+	\begin{equation}
+		V=(x_1-\varepsilon,x_1+\varepsilon)\times \cdots \times (x_N-\varepsilon,x_N+\varepsilon)\times \Real \times \Real \times \cdots \nonumber
+	\end{equation}
+	We assert that $ V \subset B_D(\vec{x}\varepsilon) $: Given any $ \vec{y}\in\Real^\omega $,
+	\begin{equation}
+		\frac{\bar{d}(x_i,y_i)}{i}\leqslant \frac{1}{N} \quad \text{for}\quad i \geqslant N \nonumber
+	\end{equation}
+	Therefore,
+	\begin{equation}
+		D(\vec{x},\vec{y})\leqslant \max\{\frac{\bar{d}(x_1,y_1)}{1},\cdots,\frac{\bar{d}(x_N,y_N)}{N},\frac{1}{N} \} \nonumber
+	\end{equation}
+	If $ \vec{y} $ is in $ V $, this expression is less than $ \varepsilon $, so that $ V \subset B_D(\vec{x},\varepsilon) $, as desired. \newpara
+	Conversely, consider a basis element
+	\begin{equation}
+		U=\prod_{i\in \Zahlen_+}U_i \nonumber
+	\end{equation}
+	for the product topology, where $ U_i $ is open in $ \Real $ for $ i=\alpha_1,\cdots,\alpha_n $ and $ U_i=\Real $ for all other indices $ i $. Given $ \vec{x}\in U $, we find an open set $ V $ of the metric topology such that $ \vec{x}\in V \subset U $. Choose an interval $ (x_i-\varepsilon_i,x_i+\varepsilon_i) $ in $ \Real $ centered about $ x_i $ and lying in $ U_i $ for $ i=\alpha_1,\cdots,\alpha_n $; choose each $ \varepsilon_i \leqslant 1 $. Then define
+	\begin{equation}
+		\varepsilon=\min\{\varepsilon_i/i|i=\alpha_1,\cdots,\alpha_n \} \nonumber
+	\end{equation}
+	We assert that
+	\begin{equation}
+		\vec{x}\in B_D(\vec{x},\varepsilon)\subset U \nonumber
+	\end{equation}
+	Let $ \vec{y} $ be a point of $ B_D(\vec{x},\varepsilon) $. Then for all $ i $,
+	\begin{equation}
+		\frac{\bar{d}(x_i,y_i)}{i}\leqslant D(\vec{x},\vec{y}) < \varepsilon \nonumber
+	\end{equation}
+	Now if $ i=\alpha_1,\cdots,\alpha_n $, then $ \varepsilon \leqslant \varepsilon_i/i $, so that $ \bar{d}(x_i,y_i)<\varepsilon_i \leqslant 1 $; it follows that $ |x_i-y_i|<\varepsilon_i $. Therefore, $ \vec{y}\in \prod U_i $, as desired.
+\end{proof}
+\begin{Proposition}
+	If $ A $ is a subspace of the topological space $ X $ and $ d $ is a metric for $ X $, then the restriction of $ d $ to $ A \times A $ is a metric for the topology of $ A $.
+\end{Proposition}
+The Hausdorff axiom is satisfied by every metric topology. If $ x $ and $ y $ are distinct points of the metric space $ (X,d) $, we let $ \varepsilon = \frac{1}{2}d(x,y) $; then the triangle inequality implies that $ B_d(x,\varepsilon) $ and $ B_d(y,\varepsilon) $ are disjoint. \newpara
+In general, countable products of metrizable spaces are metrizable;
+\begin{proof}
 	\exercise
 \end{proof}
+\begin{Lemma}[The Sequence Lemma]
+	Let $ X $ be a topological space; let $ A \subset X $. If there is a sequence of points of $ A $ converging to $ x $, then $ x \in \bar{A} $; the converse holds if $ X $ is metrizable.
+\end{Lemma}
+\begin{proof}
+	Suppose that $ x_n \to x $, where $ x_n \in A $. Then every neighborhood of $ x $ contains a point of $ A $, so $ x \in \bar{A} $. Conversely, suppose that $ X $ is metrizable and $ x \in \bar{A} $. Let $ d $ be a metric for the topology of $ X $. For each positive integer $ n $, take the neighborhood $ B_d(x,1/n) $ of $ x $, and choose $ x_n $ to be a point of its intersection with $ A $. Then any open set $ U $ containing $ x $ contains an $ \varepsilon $-ball centered at $ x $; if we choose $ N $ so that $ 1/N<\varepsilon $, then $ U $ contains $ x_i $ for all $ i\geqslant N $.
+\end{proof}
+\begin{Theorem}
+	Let $ f:X \to Y $. If the function $ f $ is continuous, then for every convergent sequence $ x_n \to x $ in $ X $, the sequence $ f(x_n) $ converges to $ f(x) $. The converse holds if $ X $ is metrizable.
+\end{Theorem}
+\begin{proof}
+	Assume that $ f $ is continuous. Given $ x_n \to x $, we wish to show that $ f(x_n)\to f(x) $. Let $ V $ be a neighborhood of $ f(x) $. Then $ f^{-1}(V) $ is a neighborhood of $ x $, and so there is an $ N $ such that $ x_n \in f^{-1}(V) $ for $ n \geqslant N $. Then $ f(x_n)\in V $ for $ n \geqslant N $. \newpara
+	To prove the converse, assume that the convergent sequence condition is satisfied. Let $ A $ be a subset of $ X $; we show that $ f(\bar{A})\subset \overline{f(A)} $. If $ x \in \bar{A} $, then there is a sequence $ x_n $ of points of $ A $ converging to $ x $. By assumption the sequence $ f(x_n) $ converges to $ f(x) $. Since $ f(x_n)\in f(A) $, the preceding lemma implies that $ f(x)\in \overline{f(A)} $, and hence $ f(\bar{A})\subset \overline{f(A)} $, as desired.
+\end{proof}
+\begin{Definition}
+	Let $ f_n:X \to Y $ be a sequence of functions from the set $ X $ to the metric space $ Y $. Let $ d $ be the metric for $ Y $. We say that the sequence $ (f_n) $ \textit{converges uniformly} to the function $ f:X \to Y $ if given $ \varepsilon>0 $, there exists and integer $ N $ such that
+	\begin{equation}
+		d(f_n(x),f(x))<\varepsilon \nonumber
+	\end{equation}
+	for all $ n>N $ and all $ x \in X $.
+\end{Definition}
+\begin{Theorem}[Uniform Limit Theorem]
+	Let $ f_n:X \to Y $ be a sequence of continuous functions from the topological space $ X $ to the metric space $ Y $. If $ (f_n) $ converges uniformly to $ f $, then $ f $ is continuous.
+\end{Theorem}
+\begin{proof}
+	Let $ V $ be open in $ Y $; let $ x_0 $ be a point of $ f^{-1}(V) $. We wish to find a neighborhood $ U $ of $ x_0 $ such that $ f(U)\subset V $. \newpara
+	Let $ y_0=f(x_0) $. First choose $ \varepsilon $ so that the $ \varepsilon $-ball $ B(y_0,\varepsilon) $ is contained in $ V $. Then, using uniform convergence, choose $ N $ so that for all $ n \geqslant N $ and all $ x \in X $,
+	\begin{equation}
+		d(f_n(x),f(x))<\varepsilon/3 \nonumber
+	\end{equation}
+	Finally, using continuity of $ f_N $, choose a neighborhood $ U $ of $ x_0 $ such that $ f_N $ carries $ U $ into the $ \varepsilon/3 $-ball in $ Y $ centered at $ f_N(x_0) $. \newpara
+	We claim that $ f $ carries $ U $ into $ B(y_0,\varepsilon) $ and hence into $ V $, as desired. For this purpose, note that if $ x \in U $, then
+	\begin{align}
+		d(f(x),f_N(x))&<\varepsilon/3\quad \text{by choice of }N \nonumber\\
+		d(f_N(x),f_N(x_0))&<\varepsilon/3\quad \text{by choice of }U \nonumber\\
+		d(f_N(x_0),f(x_0))&<\varepsilon/3\quad \text{by choice of }N \nonumber
+	\end{align}
+	Adding and using the triangle inequality, we see that $ d(f(x),f(x_0))<\varepsilon $, as desired.
+\end{proof}
+\begin{Theorem}
+	Let $ \Real^X $ denote the space of all functions $ f:X \to \Real $ and let $ \bar{\rho} $ denote the uniform metric. A sequence of functions $ f_n:X \to \Real $ converges uniformly to $ f $ iff the sequence $ (f_n) $ converges to $ f $ when they are considered as elements of the metric space $ (\Real^X,\bar{\rho}) $.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Example}
+	Let's show that $ \Real^\omega $ in the box topology is not metrizable. \newpara
+	We shall show that the sequence lemma does not hold for $ \Real^\omega $. Let $ A $ be the subset of $ \Real^\omega $ consisting of those points all of whose coordinates are positive.
+	\begin{equation}
+		A=\{(x_1,x_2,\cdots)| \forall i\in \Zahlen_+(x_i>0) \} \nonumber
+	\end{equation}
+	Let $ \vec{0} $ be the origin in $ \Real^\omega $, or the point $ (0,0,\cdots) $. In the box topology, $ \vec{0} $ belongs to $ \bar{A} $, for any basis element containing $ \vec{0} $ intersects $ A $.\\
+	However, we assert that there is no sequence of points of $ A $ converging to $ \vec{0} $. For let $ (\vec{a}_n) $ be a sequence of points of $ A $, where
+	\begin{equation}
+		\vec{a}_n=(x_{1n},x_{2n},\cdots,x_{in},\cdots) \nonumber
+	\end{equation}
+	Every coordinate $ x_{in} $ is positive, so we can construct a basis element $ B^\prime $ for the box topology on $ \Real $ by setting
+	\begin{equation}
+		B^\prime = (-x_{1n},x_{1n})\times (-x_{2n},x_{2n})\times \cdots \nonumber
+	\end{equation}
+	Then $ B^\prime $ contains the origin $ \vec{0} $, but it contains no member of the sequence $ (\vec{a}_n) $; the point $ \vec{a}_n $ cannot belong to $ B^\prime $ because its $ i $th coordinate $ x_{in} $ does not belong to the interval $ (-x_{in},x_{in}) $. Hence the sequence $ (\vec{a}_n) $ cannot converge to $ \vec{0} $ in the box topology.
+\end{Example}
+\begin{Example}
+	We show that an uncountable product of $ \Real $ with itself is not metrizable. \newpara
+	Let $ J $ be an uncountable index set; we show that $ \Real^J $ does not satisfy the sequence lemma (in the product topology).\\
+	Let $ A $ be the subset of $ \Real^J $ consisting of all points $ (x_\alpha) $ such that $ x_\alpha =1 $ for all but finitely many values of $ \alpha $. Let $ \vec{0} $ be the "origin" in $ \Real^J $. \\
+	We assert that $ \vec{0} $ belongs to the closure of $ A $. Let $ \prod U_\alpha $ be a basis element containing $ \vec{0} $. Then $ U_\alpha \neq \Real $ for only finitely many values of $ \alpha $, say for $ \alpha=\alpha_1,\cdots,\alpha_n $. Let $ (x_\alpha) $ be the point of $ A $ defined by letting $ x_\alpha = 0 $ for $ \alpha = \alpha_1,\cdots \alpha_n $ and $ x_\alpha =1 $ for all other values of $ \alpha $; then $ (x_\alpha)\in A \cap \prod U_\alpha $, as desired. \newpara
+	But there is no sequence of points of $ A $ converging to $ \vec{0} $. For let $ \vec{a}_n $ be a sequence of points of $ A $. Given $ n $, let $ J_n $ denote the subset of $ J $ consisting of those indices $ \alpha $ for which the $ \alpha $th coordinate of $ \vec{a}_n $ is different from $ 1 $. The union of all the sets $ J_n $ is a countable union of finite sets and therefore countable. Because $ J $ itself is uncountable, there is an index in $ J $, say $ \beta $, that does not lie in any of the sets $ J_n $. This means that for each of the points $ \vec{a}_n $, its $ \beta $th coordinate equals $ 1 $. \newpara
+	Now let $ U_\beta $ be the open interval $ (-1,1) \subset \Real$, and let $ U $ be the open set $ \pi_\beta^{-1}(U_\beta) $ in $ \Real^J $. The set $ U $ is a neighborhood of $ \vec{0} $ that contains none of the points $ \vec{a}_n $; therefore, the sequence $ \vec{a}_n $ cannot converge to $ \vec{0} $.
+\end{Example}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

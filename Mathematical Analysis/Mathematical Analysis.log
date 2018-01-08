@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 JAN 2018 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 JAN 2018 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1484,7 +1484,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1034--1036
 
  []
 
-[26] <Lim_sup_example_5.png, id=1209, 578.16pt x 433.62pt>
+[26] <Lim_sup_example_5.png, id=1219, 578.16pt x 433.62pt>
 File: Lim_sup_example_5.png Graphic file (type png)
 
 <use Lim_sup_example_5.png>
@@ -1881,7 +1881,7 @@ Overfull \hbox (116.4394pt too wide) has occurred while \output is active
 AL CALCULUS \T1/lmr/m/n/10.95 71
  []
 
-[71] <ConvexFunction.png, id=1492, 682.04813pt x 354.57469pt>
+[71] <ConvexFunction.png, id=1502, 682.04813pt x 354.57469pt>
 File: ConvexFunction.png Graphic file (type png)
 
 <use ConvexFunction.png>
@@ -2690,106 +2690,133 @@ Underfull \hbox (badness 10000) in paragraph at lines 4982--4984
 
  []
 
-[138] [139] [140]
+[138] [139]
+Underfull \hbox (badness 10000) in paragraph at lines 5079--5083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5083--5085
+
+ []
+
+[140]
+Overfull \hbox (59.788pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 9.4.  REDUCTION OF A MULTIPLE INTEGRAL TO AN ITERATED INTEGR
+AL \T1/lmr/m/n/10.95 141
+ []
+
+[141] [142]
+Underfull \hbox (badness 10000) in paragraph at lines 5166--5168
+
+ []
+
+
+Overfull \hbox (59.788pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 9.4.  REDUCTION OF A MULTIPLE INTEGRAL TO AN ITERATED INTEGR
+AL \T1/lmr/m/n/10.95 143
+ []
+
+[143] [144] [145] [146
+
+]
  10.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5062.
+(hyperref)                removing `math shift' on input line 5206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 5062.
+(hyperref)                removing `superscript' on input line 5206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5062.
+(hyperref)                removing `math shift' on input line 5206.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 5062.
+(Font)              <24.88> on input line 5206.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 5062.
+(Font)              <20.74> on input line 5206.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 5062.
+(Font)              <17.28> on input line 5206.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5063.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 5063.
+(hyperref)                removing `math shift' on input line 5207.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5063.
+(hyperref)                removing `superscript' on input line 5207.
 
-[141
 
-] [142
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5207.
 
-]
- 11.
-[143] [144
-
-]
- 12.
-[145] [146
-
-]
- 13.
 [147] [148
 
 ]
+ 11.
+[149] [150
+
+]
+ 12.
+[151] [152
+
+]
+ 13.
+[153] [154
+
+]
  14.
-[149]
+[155]
 Overfull \hbox (294.06761pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 150  \T1/lmr/m/sl/10.95 14.  UNIFORM CONVERGENCE AND THE BASI
+\T1/lmr/m/n/10.95 156  \T1/lmr/m/sl/10.95 14.  UNIFORM CONVERGENCE AND THE BASI
 C OPERATIONS OF ANALYSIS ON SERIES AND FAMILIES OF FUNCTIONS
  []
 
-[150
+[156
 
 ]
  15.
 
-Overfull \hbox (14.10478pt too wide) in paragraph at lines 5095--5095
+Overfull \hbox (14.10478pt too wide) in paragraph at lines 5239--5239
 []\T1/lmr/bx/n/14.4 Convolution of Func-tions and El-e-men-tary Facts 
  []
 
-[151] [152
+[157] [158
 
 ]
  16.
 
-Overfull \hbox (18.71461pt too wide) in paragraph at lines 5099--5099
+Overfull \hbox (18.71461pt too wide) in paragraph at lines 5243--5243
 []\T1/lmr/bx/n/14.4 Basic Gen-eral Con-cepts Con-nected with Fourier
  []
 
-[153] [154
+[159] [160
 
 ]
  17.
 
-Overfull \hbox (23.00279pt too wide) in paragraph at lines 5105--5105
+Overfull \hbox (23.00279pt too wide) in paragraph at lines 5249--5249
 []\T1/lmr/bx/n/14.4 The Asymp-totics of In-te-grals(Laplace's Method) 
  []
 
-[155]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5135.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5135.
+[161]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5279.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5279.
  (./Mathematical Analysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5135.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5135.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5279.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5279.
 
 Package rerunfilecheck Info: File `"Mathematical Analysis".out' has not changed
 .
-(rerunfilecheck)             Checksum: 706F688AAE69EB2B4E51DA98239C732B;17290.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5135.
+(rerunfilecheck)             Checksum: 0508499527705437BE3B0A9D45410829;17451.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5279.
  ) 
 Here is how much of TeX's memory you used:
- 19028 strings out of 492995
- 342197 string characters out of 6132704
- 418484 words of memory out of 5000000
- 21593 multiletter control sequences out of 15000+600000
+ 19044 strings out of 492995
+ 342373 string characters out of 6132704
+ 418490 words of memory out of 5000000
+ 21595 multiletter control sequences out of 15000+600000
  155255 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,56p,1194b,534s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2825,10 +2852,10 @@ al/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive
 -dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Mathematical Analysis.pdf" (163 pages, 896569 bytes).
+Output written on "Mathematical Analysis.pdf" (169 pages, 916142 bytes).
 PDF statistics:
- 2188 PDF objects out of 2487 (max. 8388607)
- 1975 compressed objects within 20 object streams
- 604 named destinations out of 1000 (max. 500000)
- 1543 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2233 PDF objects out of 2487 (max. 8388607)
+ 2013 compressed objects within 21 object streams
+ 618 named destinations out of 1000 (max. 500000)
+ 1559 words of extra memory for PDF output out of 10000 (max. 10000000)
 

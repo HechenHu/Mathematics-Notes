@@ -5031,14 +5031,11 @@ If the integral on the right-hand side of this equality does not exist, we say t
 	either both exist or both fail to exist, and in the first case their values are the same.
 \end{Lemma}
 \begin{proof}
-	\exercise
+	Consider the interval $ I =I_1 \cap I_2$. By hypothesis $ I \supset E $. The points of discontinuity of $ f_{\mathscr{X}_E} $ are either points of discontinuity of $ f $ on $ E $, or the result of discontinuities of $ \mathscr{X}_E $, in which case they lie on $ \partial E $. In any case, all these points lie in $ I= I_1\cap I_2 $. By Lebesgue's criterion it follows that the integral of $ f_{\mathscr{X}_E} $ over the intervals $ I,I_1 $, and $ I_2 $ either all exist or all fail to exist. If they do exist, we may choose partitions of $ I,I_1 $, and $ I_2 $ to suit ourselves. Therefore we shall choose only those partitions of $ I_1 $ and $ I_2 $ obtained as extensions of partitions of $ I $. Since the function is zero outside $ I $, the Riemann sums corresponding to these partitions of $ I_1 $ and $ I_2 $ reduced to Riemann sums for the corresponding partition of $ I $. It then results from passage to the limit that the integrals over $ I_1 $ and $ I_2 $ are equal to the integral of the function in question over $ I $.
 \end{proof}
 \begin{Theorem}
 	A function $ f:E \to \Real $ is integrable over an admissible set iff it is bounded and continuous at almost all points of $ E $.
 \end{Theorem}
-\begin{proof}
-	\exercise
-\end{proof}
 \subsection{The Measure(Volume) of an Admissible Set}
 \begin{Definition}
 	The (Jordan) \textit{measure} or \textit{content} of a bounded set $ E \subset \Real^n$ is
@@ -5055,7 +5052,154 @@ If the integral on the right-hand side of this equality does not exist, we say t
 \end{Definition}
 
 \section{General Properties of the Integral}
+\subsection{The Integral as a Linear Functional}
+\begin{Proposition}
+	\begin{enumerate}
+		\item The set $ \mathcal{R}(E) $ of functions that are Riemann-integrable over a bounded set $ E\subset \Real^n $ is a vector space with respect to the standard operations of addition of functions and multiplication by constants.
+		\item The integral is a linear functional
+		\begin{equation}
+			\int_{E}:\mathcal{R}(E)\to \Real \qquad \text{on the set}\quad \mathcal{R}(E) \nonumber
+		\end{equation}
+	\end{enumerate}
+\end{Proposition}
+All properties of Riemann integral in one-dimensional case hold for the Riemann integral over an admissible set.
+
+
+
+
 \section{Reduction of a Multiple Integral to an Iterated Integral}
+\subsection{Fubini's Theorem}
+\begin{Theorem}
+	Let $ X \times Y $ be an interval in $ \Real^{m+n} $, which is the direct product of intervals $ X \subset \Real^m $ and $ Y \subset \Real^n $. If the function $ f:X \times Y \to \Real $ is integrable over $ X \times Y $, then all three of the integrals
+	\begin{align}
+		\Aboxed{\int_{X \times Y}f(x,y)dx dy,\quad \int_{X}dx\int_{Y}f(x,y)dy,\quad  \int_{Y}dy\int_{X}f(x,y)dx  } \nonumber
+	\end{align}
+	exist and are equal.
+\end{Theorem}
+The iterated integral $ \int_{X}dx\int_{Y}f(x,y)dy $ should be understood as follows: For each fixed $ x \in X $ the integral $ F(x)= \int_{Y}f(x,y)dy$ is computed, and the resulting function $ F:X \to \Real $ is then to be integrated over $ X $. The iterated integral $ \int_{Y}dy\int_{X}f(x,y)dx $ has a similar meaning.\newpara
+If the integral $ \int_{Y}f(x,y)dy $ does not exist for some $ x \in X $, then $ F(x) $ is set equal to any value between the lower and upper Darboux integral $ \underline{\mathscr{J}}(x) $ and $ \bar{\mathscr{J}}(x) $ including the lower and upper integrals themselves.
+Now we give the proof for Fubini's theorem.
+\begin{proof}
+	Every partition $ P $ of the interval $ X\times Y $ is induced by corresponding partitions $ P_X $ and $ P_Y $ of the intervals $ X $ and $ Y $ clearly, and by properties of the volume of an interval we have $ |X_i \times Y_j|=|X_i| \cdot |Y_j| $. \newpara
+	Using the properties of the greatest lower bound and least upper bound and the definition of the lower and upper Darboux sums and integrals, we now carry out the following estimates:
+	\begin{align}
+		s(f,P)&=\sum_{{i,j}}\inf_{\underset{{y\in Y_i}}{x \in X_i}}f(x,y)|X_i \times Y_j| \leqslant \sum_{i}\inf_{x\in X_i}(\sum_{j} \inf_{y\in Y_j}f(x,y)|Y_j|)|X_i| \leqslant \\
+		&\leqslant \sum_{i}\inf_{x\in X_i}(\int_{\bar{Y}} f(x,y)dy)|X_i| \leqslant \sum_{i}\inf_{x \in X_i}F(x)|X_i| \leqslant \\
+		&\leqslant \sum_{i}\sup_{x \in X_i}F(x)|X_i| \leqslant \sum_{i}\sup_{x\in X_i}(\overline{\int_{Y}}f(x,y)dy)|X_i| \leqslant \\
+		&\leqslant \sum_{i}\sup_{x\in X_i}(\sum_{j} \sup_{y\in Y_j}f(x,y)|Y_j|)|X_i| \leqslant \\
+		&\leqslant \sum_{{i,j}}\sup_{\underset{{y\in Y_i}}{x \in X_i}}f(x,y)|X_i \times Y_j| = S(f,P) 
+	\end{align}
+	Since $ f \in \mathcal{R}(X \times Y) $, both of the extreme terms in these inequalities tend to the value of the integral of the function over the interval $ X \times Y $ as $ \lambda(P)\to 0 $. This fact enables us to conclude that $ F \in \mathcal{R}(X) $ and that the following equality holds:
+	\begin{equation}
+		\int_{X\times Y}f(x,y)dx dy = \int_{X}F(x)dx \nonumber
+	\end{equation}
+	We have carried out the proof for the case when the iterated integration is carried out first over $ Y $, then over $ X $. It is clear that similar reasoning can be used in the case when the integration over $ X $ is done first.
+\end{proof}
+\begin{Corollary}
+	If $ f \in \mathcal{R}(X \times Y) $, then for almost all $ x \in X $(in the sense of Lebesgue) the integral $ \int_{Y}f(x,y)dy $ exists, and for almost all $ y \in Y $ the integral $ \int_{X}f(x,y)dx $ exists.
+\end{Corollary}
+\begin{Corollary}
+	If the interval $ I \subset \Real^n $ is the direct product of the closed intervals $ I_i=[a^i,b^i],i=1,\cdots,n $, then
+	\begin{equation}
+		\int_{I}f(x)dx = \int_{a^n}^{b^n}dx^n \int_{a^{n-1}}^{b^{n-1}}dx^{n-1} \cdots \int_{a^1}^{b^1}f(x^1,x^2,\cdots,x^n)dx^1 \nonumber
+	\end{equation}
+\end{Corollary}
+\begin{proof}
+	This result follows immediately from Fubini's theorem, which means that the multiple integral can be computed by compute the iterated integrals of $ 1 $-dimensional intervals repeatedly.
+\end{proof}
+\begin{Example}
+	Let's compute the integral of $ f(x,y,z)=z \sin(x+y) $ under the restriction to the interval $ I \subset \Real^3 $ defined by the relations $ 0 \leqslant x \leqslant \pi ,|y| \leqslant \pi /2,0 \leqslant z \leqslant 1$. By the previous corollary
+	\begin{align}
+		\int \int \int_{I}f(x,y,z)dx dy dz &=\int_{0}^{1}dz \int_{-\pi/2}^{\pi/2}dy \int_{0}^{\pi}z \sin(x+y)dx = \\
+		&=\int_{0}^{1}dz \int_{-\pi/2}^{\pi/2}(-z \cos(x+y)|^{x=\pi}_{x=0})dy =\\
+		&=\int_{0}^{1}dz \int_{-\pi/2}^{\pi/2} 2z \cos (y) dy = \\
+		&=\int_{0}^{1}(2z\sin y|_{y=-\pi/2}^{y=\pi/2})dz = \int_{0}^{1}4z dz = 2 
+	\end{align}
+\end{Example}
+\begin{Corollary}
+	Let $ D $ be a bounded set in $ \Real^{n-1} $ and $ E =\{(x,y)\in \Real^n|(x\in D)\land(\varphi_1(x)\leqslant y \leqslant \varphi_2(x) \}$. If $ f \in \mathcal{R}(E) $, then
+	\begin{equation}
+		\int_{E}f(x,y)dx dy =\int_{D}dx \int_{\varphi_1(x)}^{\varphi_1(x)}f(x,y) dy \nonumber
+	\end{equation}
+\end{Corollary}
+\begin{proof}
+	Let $ E_x = \{y \in \Real | \varphi_1(x)\leqslant y \leqslant \varphi_2(x) \} $ if $ x\in D $ and $ E_x = \varnothing $ if $ x \notin D $. We remark that $ \mathscr{X}_E(x,y)=\mathscr{X}_D(x)\cdot \mathscr{X}_{E_x}(y)$. Recalling the definition of the integral over a set and using Fubini's theorem, we obtain
+	\begin{align}
+		\int_{E}f(x,y)dx dy &= \int_{I \supset E}f_{\mathscr{X}_E}(x,y)dx dy = \\
+		&=\int_{I_x \supset D}dx \int_{I_y \supset E_x} f_{\mathscr{X}_E}(x,y) dy =\\
+		&=\int_{I_x}(\int_{I_y}f(x,y)_{\mathscr{X}_{E_x}}(y)dy)_{\mathscr{X}_D (x) }dx = \\
+		&=\int_{I_x}(\int_{\varphi_1(x)}^{\varphi_2(x)}f(x,y)dy)_{\mathscr{X}_E}(x)dx = \\
+		&=\int_{D}(\int_{\varphi_1(x)}^{\varphi_2(x)}f(x,y)dy)dx
+	\end{align}
+	The inner integral here may also fail to exist on a set of points in $ D  $ of Lebesgue measure zero, and if so it is assigned the same meaning as in the theorem of Fubini proved above.
+\end{proof}
+We remark that If the set $ D $ in the hypotheses is Jordan-measurable and the function $ \varphi_i:D \to \Real ,i=1,2$, are continuous and bounded, then the set $ E \subset \Real^n $ is Jordan measurable.
+\begin{proof}
+	The boundary $ \partial E $ of $ E $ consists of the two graphs of the continuous functions $ \varphi_i:D \to \Real ,i=1,2$(which are sets of measure zero) and the set $ Z $, which is a portion of the product of the boundary $ \partial D $ of $ D \subset \Real^{n-1} $ and a sufficiently large one-dimensional closed interval of length $ l $. By hypothesis $ \partial D $ can be covered by a system of $ (n-1) $-dimensional intervals of total $ (n-1) $-dimensional volume less than $ \varepsilon/l $. The direct product of these intervals and the given one-dimensional interval of length $ l $ gives a covering of $ Z $ by intervals whose total volume is less than $ \varepsilon $.
+\end{proof}
+\begin{Corollary}
+	If the set $ D $ is Jordan-measurable and the function $ \varphi_i:D \to \Real,i=1,2 $, are continuous, then the set $ E $ is measurable and its volume can be computed according to the formula
+	\begin{equation}
+		\mu(E)=\int_{D}(\varphi_2(x)-\varphi_1(x))dx \nonumber
+	\end{equation}
+\end{Corollary}
+\begin{Example}
+	For the disk $ E=\{(x,y)\in \Real^2|x^2+y^2 \leqslant r^2 \} $ we obtain by this formula its volume
+	\begin{align}
+		\mu(E)&=\int_{-r}^{r}(\sqrt{r^2-y^2}-(-\sqrt{r^2-y^2}))dy =2\int_{-r}^{r}\sqrt{r^2-y^2}dy = \\
+		&=4 \int_{0}^{r}\sqrt{r^2-y^2}dy = 4 \int_{0}^{\pi/2}r \cos \varphi d(r \sin \varphi) =\\
+		&=4r \int_{0}^{\pi/2}r \cos^2(\varphi) d\varphi = \pi r^2
+	\end{align}
+\end{Example}
+\begin{Corollary}
+	Let $ E $ be a measurable set contained in the interval $ I \subset \Real^n $. Represent $ I $ as the direct product $ I=I_x \times I_y $ of the $ (n-1) $-dimensional interval $ I_x $ and the closed interval $ I_y $. Then for almost all values $ y_0 \in I_y $ the section $ E_{y_0}=\{(x,y)\in E|y=y_0 \} $ of the set $ E $ by the $ (n-1) $-dimensional hyperplane $ y=y_0 $ is a measurable subset of it, and
+	\begin{equation}
+		\mu(E)=\int_{I_y}\mu(E_y)dy \nonumber
+	\end{equation}
+	where $ \mu(E_y) $ is the $ (n-1) $-dimensional measure of the set $ E_y $ if it is measurable and equal to any number between the numbers $ \int_{\bar{E_y}}1 \cdot dx $ and $ \overline{\int_{E_y}}1\cdot dx $ if $ E_y $ happens to be a nonmeasurable set.
+\end{Corollary}
+\begin{Corollary}[Cavalieri's Principle]
+	Let $ A $ and $ B $ be two solids in $ \Real^3 $ having volume(that is, Jordan-measurable). Let $ A_c = \{(x,y,z)\in A|z=c \} $ and $ B_c=\{(x,y,z)\in B|z=c \} $ be the sections of the solids $ A $ and $ B $ by the plane $ z=c $. If for every $ c \in \Real $ the sets $ A_c $ and $ B_c $ are measurable and have the same area, then the solids $ A $ and $ B $ have the same volumes.
+\end{Corollary}
+It is clear that Cavalieri's principle can be stated for spaces $ \Real^n $ of any dimension.
+\begin{Example}
+	Now we compute the volume $ V_n $ of the ball $ B =\{x\in \Real^n | |x|<r \}$ of radius $ r $ in the Euclidean space $ \Real^n $. \newpara
+	It is obvious that $ V_1=2r $ and $ V_2 =\pi r^2 $. We shall show that $ V_n=c_n r^n $, where $ c_n $ is a constant (which we shall compute below). Let us choose some diameter $ [-r,r] $ of the ball and for each point $ x \in [-r,r] $ consider the section $ B_x $ of the ball by a hyperplane orthogonal to the diameter. Since $ B_x $ is a ball of dimension $ n-1 $, whose radius, by the Pythagorean theorem, equals $ \sqrt{r^2-x^2} $, proceeding by induction, we can write
+	\begin{equation}
+		V_n = \int_{-r}^{r} c_{n-1}(r^2-x^2)^{\frac{n-1}{2}}dx = (c_{n-1}\int_{-\pi/2}^{\pi/2}\cos^n \varphi d\varphi)r^n \nonumber
+	\end{equation}
+	here we make the change of variable $ x=r\sin \varphi $. Thus we have shown that $ V_n = c_n r^n $, and
+	\begin{equation}
+		c_n=c_{n-1}\int_{-\pi/2}^{\pi/2}\cos^n \varphi d\varphi \nonumber
+	\end{equation}
+	We now find the constant $ c_n $ explicitly. We remark that for $ m \geqslant 2 $
+	\begin{align}
+		I_m &= \int_{-\pi/2}^{\pi/2}\cos^m \varphi d\varphi = \int_{-\pi/2}^{\pi/2}\cos^{m-2}\varphi (1-\sin^2\varphi)d\varphi = \\
+		&=I_{m-2}+\frac{1}{m-1}\int_{-\pi/2}^{\pi/2}\sin \varphi d\cos^{m-1}\varphi=I_{m-2}-\frac{1}{m-1}I_m 
+	\end{align}
+	that is, the following recurrence relation holds:
+	\begin{equation}
+		I_m = \frac{m-1}{m}I_{m-2} \nonumber
+	\end{equation}
+	In particular, $ I_2 = \pi/2 $. It is clear immediately fro the definition of $ I_m $ that $ I_1 =2 $. Taking account of these values of $ I_1 $ and $ I_2 $ we find by the recurrence formula that
+	\begin{equation}
+		I_{2k+1}=\frac{(2k)!!}{(2k+1)!!}\cdot 2,\qquad I_{2k}=\frac{(2k-1)!!}{(2k)!!}\pi \nonumber
+	\end{equation}
+	We now obtain
+	\begin{equation}
+		c_{2k+1}=c_{2k} \frac{(2k)!!}{(2k+1)!!}\cdot 2 = c_{2k+1}\frac{(2k)!!}{(2k+1)!!}\cdot \frac{(2k-1)!!}{(2k)!!}\pi = \cdots = c_1 \cdot \frac{(2\pi)^k}{(2k+1)!!} \nonumber
+	\end{equation}
+	and 
+	\begin{equation}
+		c_{2k}=c_{2k-1}\frac{(2k-1)!!}{(2k)!!}\pi =c_{2k-2}\frac{(2k-1)!!}{(2k)!!}\pi\cdot \frac{(2k-2)!!}{(2k-1)!!}\cdot 2 = \cdots = c_2 \frac{(2\pi)^{k-1}}{(2k)!!}\cdot 2 \nonumber
+	\end{equation}
+	But, as we have seen above, $ c_1=2 $ and $ c_2 = \pi $, and hence the final formulas for the required volume $ V_n $ are as follows:
+	\begin{equation}
+		V_{2k+1}=2 \frac{(2\pi)^k}{(2k+1)!!} r^{2k+1},\qquad V_{2k}=\frac{(2\pi)^k}{(2k)!!}r^{2k} \nonumber
+	\end{equation}
+	where $ k \in \Natural $, and the first of these formulas is also valid for $ k=0 $.
+\end{Example}
+
 \section{Change of Variable in a Multiple Integral}
 \section{Improper Multiple Integrals}
 
