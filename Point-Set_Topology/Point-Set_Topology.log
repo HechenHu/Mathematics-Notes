@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 JAN 2018 19:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 JAN 2018 20:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,20 +956,40 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2014/10/30 v0.9e Commutative diagrams with tikz
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
+\pgfarrowinset=\dimen176
+\pgfarrowlength=\dimen177
+\pgfarrowwidth=\dimen178
+\pgfarrowlinewidth=\dimen179
+)))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/empheq.sty
 Package: empheq 2014/07/16 v2.14 Emphasizing equations
 \l_EQ_equationtype_int=\count135
 \l_EQ_alignmentmode_int=\count136
-\l_EQ_totalwidth_dim=\dimen176
-\l_EQ_displaywidth_dim=\dimen177
-\l_EQ_temp_linewidth_dim=\dimen178
-\EmphEqdelimitershortfall=\dimen179
+\l_EQ_totalwidth_dim=\dimen180
+\l_EQ_displaywidth_dim=\dimen181
+\l_EQ_temp_linewidth_dim=\dimen182
+\EmphEqdelimitershortfall=\dimen183
 \EmphEqdelimiterfactor=\count137
-\g_EQ_toptag_height_dim=\dimen180
-\g_EQ_bottomtag_depth_dim=\dimen181
-\g_EQ_toprow_height_dim=\dimen182
-\g_EQ_bottomrow_depth_dim=\dimen183
-\g_EQ_widesttag_dim=\dimen184
+\g_EQ_toptag_height_dim=\dimen184
+\g_EQ_bottomtag_depth_dim=\dimen185
+\g_EQ_toprow_height_dim=\dimen186
+\g_EQ_bottomrow_depth_dim=\dimen187
+\g_EQ_widesttag_dim=\dimen188
 \EQ_mathdisplay_box=\box39
 \EQ_tag_box=\box40
 \g_EQ_temprow_int=\count138
@@ -984,7 +1004,7 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 (/usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip56
-\enit@outerparindent=\dimen185
+\enit@outerparindent=\dimen189
 \enit@toks=\toks42
 \enit@inbox=\box41
 \enitdp@description=\count139
@@ -1042,13 +1062,13 @@ LaTeX Info: Redefining \nameref on input line 44.
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count143
-\scratchdimen=\dimen186
+\scratchdimen=\dimen190
 \scratchbox=\box43
 \nofMPsegments=\count144
 \nofMParguments=\count145
 \everyMPshowfont=\toks43
 \MPscratchCnt=\count146
-\MPscratchDim=\dimen187
+\MPscratchDim=\dimen191
 \MPnumerator=\count147
 \makeMPintoPDFobject=\count148
 \everyMPtoPDFconversion=\toks44
@@ -1344,7 +1364,7 @@ ier (name{equation.2.5.1}) has been already used, duplicate ignored
                    \relax 
 l.560 	\begin{equation}
                        
-<Convex_polygon_illustration1.png, id=295, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration1.png, id=300, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration1.png Graphic file (type png)
 
 <use Convex_polygon_illustration1.png>
@@ -1355,7 +1375,7 @@ Package pdftex.def Info: Convex_polygon_illustration1.png used on input line 57
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Convex_polygon_illustration2.png, id=297, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration2.png, id=302, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration2.png Graphic file (type png)
 
 <use Convex_polygon_illustration2.png>
@@ -1785,25 +1805,126 @@ Underfull \hbox (badness 10000) in paragraph at lines 1151--1157
 
  []
 
+
+Overfull \hbox (16.39694pt too wide) in paragraph at lines 1161--1162
+[]\T1/lmr/bx/n/10.95 Definition. []\T1/lmr/m/n/10.95 A map-ping be-tween two to
+po-log-i-cal spaces is said to be closed(resp.
+ []
+
 [35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1188.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1188.
+Underfull \hbox (badness 10000) in paragraph at lines 1176--1179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1192
+
+ []
+
+[36pdfTeX warning (ext4): destination with the same identifier (name{equation.2
+.12.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1198 	\begin{equation}
+                        ]pdfTeX warning (ext4): destination with the same ident
+ifier (name{equation.2.12.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1205 	\begin{equation}
+                        
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1205
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.12
+.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1210 	\begin{equation}
+                        
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1210
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.12
+.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1215 	\begin{equation}
+                        
+Underfull \hbox (badness 10000) in paragraph at lines 1212--1215
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.12
+.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1222 	\begin{equation}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.2.12.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1229 	\begin{equation}
+                         [37pdfTeX warning (ext4): destination with the same id
+entifier (name{equation.2.12.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1238 		\item I
+                f $ p $ is either an open map or a closed map, then $ q $ is...
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.12
+.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1238 		\item I
+                f $ p $ is either an open map or a closed map, then $ q $ is...
+]pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1
+2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1251 	\begin{equation}
+                        
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1261
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.12
+.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1264 	\begin{equation}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.2.12.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1269 ...$ g $ is a quotient map.\begin{equation}
+                                                   [38]
+Underfull \hbox (badness 10000) in paragraph at lines 1279--1281
+
+ []
+
+[39]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1308.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1308.
  (./Point-Set_Topology.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1188.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1188.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1308.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1308.
 
 Package rerunfilecheck Info: File `Point-Set_Topology.out' has not changed.
-(rerunfilecheck)             Checksum: DDD7E8FD3E72D8337D622BDB29A6A898;1912.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1188.
+(rerunfilecheck)             Checksum: 23AEC688A5D35C41CEE059B5F96DBD64;1981.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1308.
  ) 
 Here is how much of TeX's memory you used:
- 18413 strings out of 492995
- 334566 string characters out of 6132704
- 410395 words of memory out of 5000000
- 21399 multiletter control sequences out of 15000+600000
+ 19453 strings out of 492995
+ 367113 string characters out of 6132704
+ 439126 words of memory out of 5000000
+ 22407 multiletter control sequences out of 15000+600000
  125452 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,56p,1193b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,15n,84p,1193b,1135s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-d
@@ -1829,10 +1950,10 @@ sy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb>
-Output written on Point-Set_Topology.pdf (39 pages, 568607 bytes).
+Output written on Point-Set_Topology.pdf (43 pages, 587802 bytes).
 PDF statistics:
- 575 PDF objects out of 1000 (max. 8388607)
- 502 compressed objects within 6 object streams
- 188 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 608 PDF objects out of 1000 (max. 8388607)
+ 531 compressed objects within 6 object streams
+ 202 named destinations out of 1000 (max. 500000)
+ 239 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -221,6 +221,7 @@
 \contentsline {section}{\numberline {9.4}Reduction of a Multiple Integral to an Iterated Integral}{140}{section.9.4}
 \contentsline {subsection}{\numberline {9.4.1}Fubini's Theorem}{140}{subsection.9.4.1}
 \contentsline {section}{\numberline {9.5}Change of Variable in a Multiple Integral}{145}{section.9.5}
+\contentsline {subsection}{\numberline {9.5.1}Measurable Sets and Smooth Mappings}{145}{subsection.9.5.1}
 \contentsline {section}{\numberline {9.6}Improper Multiple Integrals}{145}{section.9.6}
 \contentsline {chapter}{\numberline {10}Surfaces and Differential Forms in $ \mathbb {R}^n $}{147}{chapter.10}
 \contentsline {section}{\numberline {10.1}Surfaces in $ \mathbb {R}^n $}{147}{section.10.1}

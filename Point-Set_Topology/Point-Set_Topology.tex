@@ -1151,14 +1151,134 @@ In general, countable products of metrizable spaces are metrizable;
 	We show that an uncountable product of $ \Real $ with itself is not metrizable. \newpara
 	Let $ J $ be an uncountable index set; we show that $ \Real^J $ does not satisfy the sequence lemma (in the product topology).\\
 	Let $ A $ be the subset of $ \Real^J $ consisting of all points $ (x_\alpha) $ such that $ x_\alpha =1 $ for all but finitely many values of $ \alpha $. Let $ \vec{0} $ be the "origin" in $ \Real^J $. \\
-	We assert that $ \vec{0} $ belongs to the closure of $ A $. Let $ \prod U_\alpha $ be a basis element containing $ \vec{0} $. Then $ U_\alpha \neq \Real $ for only finitely many values of $ \alpha $, say for $ \alpha=\alpha_1,\cdots,\alpha_n $. Let $ (x_\alpha) $ be the point of $ A $ defined by letting $ x_\alpha = 0 $ for $ \alpha = \alpha_1,\cdots \alpha_n $ and $ x_\alpha =1 $ for all other values of $ \alpha $; then $ (x_\alpha)\in A \cap \prod U_\alpha $, as desired. \newpara
+	We assert that $ \vec{0} $ belongs to the closure of $ A $. Let $ \prod U_\alpha $ be a basis element containing $ \vec{0} $. Then $ U_\alpha \neq \Real $ for only finitely many values of $ \alpha $, say for $ \alpha=\alpha_1,\cdots,\alpha_n $. Let $ (x_\alpha) $ be the point of $ A $ defined by letting $ x_\alpha = 0 $ for $ \alpha = \alpha_1,\cdots, \alpha_n $ and $ x_\alpha =1 $ for all other values of $ \alpha $; then $ (x_\alpha)\in A \cap \prod U_\alpha $, as desired. \newpara
 	But there is no sequence of points of $ A $ converging to $ \vec{0} $. For let $ \vec{a}_n $ be a sequence of points of $ A $. Given $ n $, let $ J_n $ denote the subset of $ J $ consisting of those indices $ \alpha $ for which the $ \alpha $th coordinate of $ \vec{a}_n $ is different from $ 1 $. The union of all the sets $ J_n $ is a countable union of finite sets and therefore countable. Because $ J $ itself is uncountable, there is an index in $ J $, say $ \beta $, that does not lie in any of the sets $ J_n $. This means that for each of the points $ \vec{a}_n $, its $ \beta $th coordinate equals $ 1 $. \newpara
 	Now let $ U_\beta $ be the open interval $ (-1,1) \subset \Real$, and let $ U $ be the open set $ \pi_\beta^{-1}(U_\beta) $ in $ \Real^J $. The set $ U $ is a neighborhood of $ \vec{0} $ that contains none of the points $ \vec{a}_n $; therefore, the sequence $ \vec{a}_n $ cannot converge to $ \vec{0} $.
 \end{Example}
 	
-	
-	
-	
+\section{The Quotient Topology}	
+\begin{Definition}
+	A mapping between two topological spaces is said to be closed(resp. opened) if for each closed(resp. opened) set in its domain the image of it is closed(resp. opened).
+\end{Definition}
+\begin{Definition}
+	Let $ X $ and $ Y $ be topological spaces; let $ p:X \to Y $ be a surjective map. The map $ p $ is said to be a \textit{quotient map} provided a subset $ U $ of $ Y $ is open in $ Y $ iff $ p^{-1}(U) $ is open in $ X $. It follows that if $ p:X \to Y $ is a surjective continuous map that is either open or closed, then $ p $ is a quotient map. However, there are quotient maps that are neither open or closed.
+\end{Definition}	
+\begin{Definition}
+	A subset $ C $ of $ X $ is \textit{saturated}(with respect to the surjective map $ p:X \to Y $) if $ C $ contains every set $ p^{-1}(\{y\}) $ that it intersects. Thus $ C $ is saturated if it equals the complete inverse image of a subset of $ Y $.
+\end{Definition}
+\begin{Example}
+	Let $ X $ be the subspace $ [0,1]\cup [2,3] $ of $ \Real $, and let $ Y $ be the subspace $ [0,2] $ of $ \Real $. The map $ p:X \to Y $ defined by
+	\begin{equation}
+		p(x)=\begin{cases}
+		x &\quad \text{for }x\in [0,1]\\
+		x-1 &\quad \text{for }x\in [2,3]
+		\end{cases}\nonumber
+	\end{equation}
+	is readily seen to be surjective, continuous, and closed. Therefore it is a quotient map. It is not, however, an open map; the image of the open set $ [0,1] $ of $ X $(its complement is the empty set; or think that $ [0,1] $ does not contain all of its boundary points in $ X$) is not open in $ Y $. \newpara
+	Note that if $ A $ is the subspace $ [0,1)\cup [2,3] $ of $ X $, then the map $ q:A \to Y $ obtained by restricting $ p $ is continuous and surjective, but it is not a quotient map. For the set $ [2,3] $ is open in $ A $ and is saturated with respect to $ q $(it equals the inverse of $ [1,2] $ in $ Y $), but its image is not open in $ Y $.
+\end{Example}
+\begin{Definition}
+	If $ X $ is a space and $ A $ is a set and if $ p:X \to A $ is a surjective map, then there exists exactly one topology $ \mathscr{T} $ on $ A $ relative to which $ p $ is a quotient map; it is called the \textit{quotient topology} induced by $ p $.
+\end{Definition}
+The topology $ \mathscr{T} $ is defined by letting it consist of those subsets $ U $ of $ A $ such that $ p^{-1}(U) $ is open in $ X $. Now we check the condition for the forming the topology $ \mathscr{T} $. The sets $ \varnothing $ and $ A $ and open because $ p^{-1} (\varnothing)=\varnothing$ and $ p^{-1}(A)=X $. The other two conditions follow from the equations
+\begin{equation}
+	p^{-1}(\bigcup_{\alpha \in J}U_\alpha) = \bigcup_{\alpha \in J}p^{-1}(U_\alpha),\qquad p^{-1}(\bigcap_{i=1}^{n}U_i)=\bigcap_{i=1}^{n}p^{-1}(U_i) \nonumber
+\end{equation}
+\begin{Definition}
+	Let $ X $ be a topological space, and let $ X^\ast $ be a partition of $ X $ into disjoint subsets whose union is $ X $. Let $ p:X \to X^\ast $ be the surjective map that carries each point of $ X $ to the element of $ X^\ast $ containing it. In the quotient topology induced by $ p $, the space $ X^\ast $ is called a \textit{quotient space} of $ X $.
+\end{Definition}
+Given $ X^\ast $, there is an equivalence relation on $ X $ of which the elements of $ X^\ast $ are the equivalence classes. One can think of $ X^\ast $ as having been obtained by "identifying" each pair of equivalent points. For this reason, the quotient space $ X^\ast $ is often called an \textit{identification space}, or a \textit{decomposition space}, of the space $ X $. \newpara
+We can describe the topology of $ X^\ast $ in another way. A subset $ U $ of $ X^\ast $ is a collection of equivalence classes, and the set $ p^{-1}(U) $ is just the union of equivalence classes belonging to $ U $. Thus the typical open set of $ X^\ast $ is a collection of equivalence classes whose union is an open set of $ X $.
+\begin{Example}
+	Let $ X $ be the closed unit ball
+	\begin{equation}
+		\{x \times y|x^2+y^2\leqslant 1 \} \nonumber
+	\end{equation}
+	in $ \Real^2 $, and let $ X^\ast $ be the partition of $ X $ consisting of all the one-point sets $ \{x \times y \} $ for which $ x^2+y^2<1 $, along with the set $ S^1=\{x\times y|x^2+y^2=1 \} $. One can show that $ X^\ast $ is homeomorphic with the subspace of $ \Real^3 $ called the unit 2-sphere, defined by
+	\begin{equation}
+		S^2=\{(x,y,z)|x^2+y^2+z^2=1 \} \nonumber
+	\end{equation}
+\end{Example}	
+\begin{proof}
+	We will prove a similar statement. I believe that this proof can be modified slightly to apply to the original problem.\newpara
+	 "There is a equivalence relation on a $ n $-dimensional closed unit ball $ D^n $:
+	\begin{equation}
+		(x \sim y) \Leftrightarrow (x=y)\lor(\norm{x}=\norm{y}=1) \nonumber
+	\end{equation}
+	Prove that $ D^n/\sim $ is homeomorphic to $ S^n $, the unit sphere in $ \Real^n $."\newpara
+	Define the function $ \theta:\Real^n \to S^n $
+	\begin{equation}
+		\theta(x_1, \ldots, x_n)=\bigg(\frac{S-1}{S+1}, \frac{2x_1}{S+1},\cdots,\frac{2x_n}{S+1}\bigg) \nonumber
+	\end{equation}
+	where $ S=\sum x_i^2 $. This map is also known as the \textit{stereographic projection}(more accurately, its inverse). Note that the image consists of all points on the sphere except $ (1,0,0,\cdots,0) $. Also it is injective.\newpara
+	Now we define a mapping $ g:B^n \to \Real^n $ from the open disk to $ \Real^n $
+	\begin{equation}
+		g(x)=\begin{cases}
+		\tan(\frac{\pi}{2}\norm{x})\frac{x}{\norm{x}}&\quad \text{if }x\neq 0 \\
+		0 &\quad \text{if }x=0 
+		\end{cases}\nonumber
+	\end{equation}
+	This a homeomorphism. It's inverse is given by scalar multiplication by $ \arctan $, which is $ x=\frac{2}{\pi}\arctan(\norm{y})\frac{y}{\norm{y}} $. Finally we define our function $ D^n \to S^n $
+	\begin{equation}
+		f(x)=\begin{cases}
+		 \theta(g(x)) &\quad \text{if }  \norm{x}<1 \\
+		 (1,0,\cdots,0) &\quad \text{otherwise}
+		\end{cases}\nonumber
+	\end{equation}
+	In particular, $ f $ induces the mapping $ \bar{f}:B^n/\sim \to S^n $
+	\begin{equation}
+		\bar{f}([x])=f(x)\nonumber
+	\end{equation}
+	and $ \bar{f} $ is a homeomorphism. This mapping is closed, injective and surjective. Since $ B^n $ is compact, so is $ B^n / \sim $ and thus $ \bar{f} $ is also closed and therefore its inverse is continuous.
+\end{proof}
+\begin{Theorem}
+	Let $ p:X \to Y $ be a quotient map; let $ A $ be a subspace of $ X $ that is saturated with respect to $ p $; let $ q:A \to p(A) $ be the map obtained by restricting $ p $.
+	\begin{enumerate}
+		\item If $ A $ is either open or closed in $ X $, then $ q $ is a quotient map.
+		\item If $ p $ is either an open map or a closed map, then $ q $ is a quotient map.
+	\end{enumerate}
+\end{Theorem}
+\begin{proof}
+	We first verify the following two equations:
+	\begin{align}
+		q^{-1}(V)&=p^{-1}(V) \qquad &\text{if }V\subset p(A)\nonumber\\
+		p(U \cap A)&=p(U)\cap p(A)\qquad&\text{if }U \subset X\nonumber
+	\end{align}
+	Then suppose $ A $ is open or $ p $ is open. Given the subset $ V $ of $ p(A) $, we assume that $ q^{-1}(V) $ is open in $ A $ and show that $ V $ is open in $ p(A) $. Finally, replace all "opened" with "closed" to complete the other part of the proof.
+\end{proof}
+\begin{Theorem}
+	Let $ p:X \to Y $ be a quotient map. Let $ Z $ be a space and let $ g:X \to Z $ be a map that is constant on each set $ p^{-1}(\{y\}) $, for $ y \in Y $. Then $ g $ induces a map $ f:Y \to Z $ such that $ f \circ p = g $. The induced map $ f $ is continuous iff $ g $ is continuous; $ f $ is a quotient map iff $ g $ is a quotient map.
+	\begin{equation}
+			\begin{tikzcd}[column sep = large, row sep=large]
+		X \arrow[dr,"g"] \arrow[d,"p"]\\
+		Y \arrow[r,dotted,"f"] &Z 
+		\end{tikzcd} \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	For each $ y \in Y $, the set $ g(p^{-1}(\{y \})) $ is a one-point set in $ Z $(since $ g $ is constant on it). If we let $ f(y) $ denote this point, then we have defined a map $ f:Y \to Z $ such that for each $ x\in X $, $ f(p(x))=g(x) $. If $ f $ is continuous, then $ g=f \circ p $ is continuous. Conversely, suppose $ g $ is continuous. Given an open set $ V $ of $ Z $, $ g^{-1}(V) $ is open in $ X $. But $ g^{-1}(V)=p^{-1}(f^{-1}(V)) $; because $ p $ is a quotient map, it follows that $ f^{-1}(V) $ is open in $ Y $. Hence $ f $ is continuous. \newpara
+	If $ f $ is a quotient map, then $ g $ is the composite of two quotient maps and is thus a quotient map. Conversely, suppose that $ g $ is a quotient map. Since $ g $ is surjective, so is $ f $. Let $ V $ be a subset of $ Z $; we show that $ V $ is open in $ Z $ if $ f^{-1}(V) $ is open in $ Y $. Now the set $ p^{-1}(f^{-1}(V)) $ is open in $ X $ because $ p $ is continuous. Since this set equals $ g^{-1}(V) $, the latter is open in $ X $. Then because $ g $ is a quotient map, $ V $ is open in $ Z $.
+\end{proof}	
+\begin{Corollary}
+	Let $ g:X \to Z $ be a surjective continuous map. Let $ X^\ast $ be the following collection of subsets of $ X $:
+	\begin{equation}
+		X^\ast = \{g^{-1}(\{z\})|z \in Z \} \nonumber
+	\end{equation}
+	Give $ X^\ast $ the quotient topology.
+	\begin{enumerate}
+		\item The map $ g $ induces a bijective continuous map $ f:X^\ast \to Z $, which is a homeomorphism iff $ g $ is a quotient map.\begin{equation}
+			\begin{tikzcd}[column sep = large, row sep=large]
+X \arrow[dr,"g"] \arrow[d,"p"]\\
+X^\ast \arrow[r,"f"] &Z 
+\end{tikzcd} \nonumber
+		\end{equation}
+		\item If $ Z $ is Hausdorff, so is $ X^\ast $.
+	\end{enumerate}
+\end{Corollary}
+\begin{proof}
+	By the preceding theorem, $ g $ induces a continuous map $ f:X^\ast \to Z $; it is clear that $ f $ is bijective. Suppose that $ f $ is a homeomorphism. Then both $ f $ and the projection map $ p:X \to X^\ast $ are quotient maps, so that their composite $ q $ is a quotient map. Conversely, suppose that $ g $ is a quotient map. Then it follows from the preceding theorem that $ f $ is a quotient map. Being bijective, $ f $ is thus a hoemomorphism. \newpara
+	Suppose $ Z $ is Hausdorff. Given distinct points of $ X^\ast $, their images under $ f $ are distinct and thus possess disjoint neighborhoods $ U $ and $ V $. Then $ f^{-1}(U) $ and $ f^{-1}(V) $ are disjoint neighborhoods of the two given points of $ X^\ast $.
+\end{proof}
 	
 	
 	

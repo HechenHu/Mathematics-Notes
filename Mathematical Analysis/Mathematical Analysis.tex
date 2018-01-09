@@ -5201,6 +5201,18 @@ It is clear that Cavalieri's principle can be stated for spaces $ \Real^n $ of a
 \end{Example}
 
 \section{Change of Variable in a Multiple Integral}
+\begin{Definition}
+	The \textit{support} of a function $ f:D \to \Real $ defined in a domain $ D \subset \Real^n $ is the closure in $ D $ of the set of points of $ x \in D $ at which $ f(x) \neq 0 $ and denoted $ \supp f $.
+\end{Definition}
+\begin{Theorem}
+	If $ \varphi:D_t \to D_x $ is a diffeomorphism of a bounded open set $ D_t \subset \Real^n $ onto a set $ D_x = \varphi(D_t)\subset \Real^n $ of the same type, $ f\in \mathcal{R}(D_x) $, and $ \supp f $ is a compact subset of $ D_x $, then $ f \circ \varphi |\det \varphi^\prime| \in \mathcal{R}(D_t) $, and the following formula holds:
+	\begin{align}
+		\Aboxed{\int_{D_x = \varphi(D_t)}f(x)dx = \int_{D_t}f \circ\varphi(t) |\det \varphi^\prime(t)|dt   } \nonumber
+	\end{align}
+\end{Theorem}
+
+\subsection{Measurable Sets and Smooth Mappings}
+
 \section{Improper Multiple Integrals}
 
 \chapter{Surfaces and Differential Forms in $ \Real^n $}
