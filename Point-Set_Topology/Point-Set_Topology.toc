@@ -27,3 +27,5 @@
 \contentsline {section}{\numberline {2.10}The Product Topology}{25}{section.2.10}
 \contentsline {section}{\numberline {2.11}The Metric Topology}{28}{section.2.11}
 \contentsline {section}{\numberline {2.12}The Quotient Topology}{35}{section.2.12}
+\contentsline {chapter}{\numberline {3}Connectedness and Compactness}{41}{chapter.3}
+\contentsline {section}{\numberline {3.1}Connected Spaces}{41}{section.3.1}

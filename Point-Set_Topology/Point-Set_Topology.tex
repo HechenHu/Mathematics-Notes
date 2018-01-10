@@ -1279,10 +1279,55 @@ X^\ast \arrow[r,"f"] &Z
 	By the preceding theorem, $ g $ induces a continuous map $ f:X^\ast \to Z $; it is clear that $ f $ is bijective. Suppose that $ f $ is a homeomorphism. Then both $ f $ and the projection map $ p:X \to X^\ast $ are quotient maps, so that their composite $ q $ is a quotient map. Conversely, suppose that $ g $ is a quotient map. Then it follows from the preceding theorem that $ f $ is a quotient map. Being bijective, $ f $ is thus a hoemomorphism. \newpara
 	Suppose $ Z $ is Hausdorff. Given distinct points of $ X^\ast $, their images under $ f $ are distinct and thus possess disjoint neighborhoods $ U $ and $ V $. Then $ f^{-1}(U) $ and $ f^{-1}(V) $ are disjoint neighborhoods of the two given points of $ X^\ast $.
 \end{proof}
-	
-	
-	
-	
+
+\chapter{Connectedness and Compactness}
+\section{Connected Spaces}
+\begin{Definition}
+	Let $ X $ be a topological space. A \textit{separation} of $ X $ is a pair $ U ,V$ of disjoint nonempty open subsets of $ X $ whose union is $ X $. The space $ X $ is said to be \textit{connected} if there does not exist a separation of $ X $.
+\end{Definition}
+Equivalently, a space $ X $ is connected iff the only subsets of $ X $ that are both open and closed in $ X $ are the empty set and $ X $ itself.
+\begin{Lemma}
+	If $ Y $ is a subspace of $ X $, a separation of $ Y $ is a pair of disjoint nonempty sets $ A $ and $ B $ whose union is $ Y $, neither of which contains a limit point of the other. The space $ Y $ is connected if there exists no separation of $ Y $.
+\end{Lemma}	
+\begin{proof}
+	Suppose $ A $ and $ B $ form a separation of $ Y $. Then $ A $ is both open and closed in $ Y $. The closure of $ A $ in $ Y $ is the set $ \bar{A} \cap Y$. Since $ A $ is closed, $ A=\bar{A} \cap Y $. Since $ \bar{A} $ is the union of $ A $ and its limit points, $ B $ contains no limit points of $ A $. A similar argument shows that $ A $ contains no limit points of $ B $. \newpara
+	Conversely, suppose that $ A $ and $ B $ are disjoint nonempty sets whose union is $ Y $, neither of which contains a limit point of the other. Then $ \bar{A}\cap B = \varnothing $ and $ A \cap \bar{B}=\varnothing $, and we conclude that $ \bar{A}\cap Y = A $ and $ \bar{B}\cap Y = B $. Thus both $ A $ and $ B $ are closed in $ Y $, and they are both open because they are each other's complement in $ Y $.
+\end{proof}
+\begin{Lemma}
+	If the sets $ C $ and $ D $ form a separation of $ X $, and if $ Y $ is a connected subspace of $ X $, then $ Y $ lies entirely within either $ C $ or $ D $.
+\end{Lemma}	
+\begin{proof}
+	Since $ C $ and $ D $ are both open in $ X $, the sets $ C \cap Y $ and $ D \cap Y $ are open in $ Y $. These two sets are disjoint and their union is $ Y $; if they were both nonempty, they would constitute a separation of $ Y $. Therefore, one of them is empty. Hence $ Y $ must lie entirely in $ C $ or in $ D $.
+\end{proof}
+\begin{Theorem}
+	The union of a collection of connected subspaces of $ X $ that have a point in common is connected.
+\end{Theorem}
+\begin{proof}
+	Let $ \{A_\alpha \} $ be a collection of connected subspaces of a space $ X $; let $ p $ be a point of $ \bigcap A_\alpha $. We prove that the space $ Y= \bigcup A_\alpha $ is connected. Suppose that $ Y= C \cup D $ is a separation of $ Y $. The point $ p $ is in one of the sets $ C $ or $ D $; suppose $ p \in C $. Since $ A_\alpha $ is connected, it must lie entirely in either $ C $ or $ D $, and it cannot lie in $ D $ because it contains the point $ p $ of $ C $. Hence $ A_\alpha \subset C $ for every $ \alpha $, so that $ \bigcup A_\alpha \subset C $, contradicting the fact that $ D $ is nonempty.
+\end{proof}	
+\begin{Theorem}
+	Let $ A $ be a connected subspace of $ X $. If $ A \subset B \subset \bar{A} $, then $ B $ is also connected. Said differently: If $ B $ is formed by adjoining to the connected subspace $ A $ some or all of its limit points, then $ B $ is connected.
+\end{Theorem}
+\begin{proof}
+	Let $ A $ be connected and $ A \subset B \subset \bar{A} $. Suppose that $ B=C \cup D $ is a separation of $ B $. Then the set $ A $ must lie entirely in $ C $ or in $ D $; suppose that $ A \subset C $. Then $ \bar{A}\subset \bar{C} $; since $ \bar{C} $ and $ D $ are disjoint, $ B $ cannot intersect $ D $. This contradicts the fact that $ D $ is a nonempty subset of $ B $.
+\end{proof}
+\begin{Theorem}
+	The image of a connected space under a continuous map is connected.
+\end{Theorem}
+\begin{proof}
+	Let $ f:X \to Y $ be a continuous map; let $ X $ be connected. We wish to prove the image space $ Z=f(X) $ is connected. Since the map obtained from $ f $ by restricting its range to the space $ Z $ is also continuous, it suffices to consider the case of a continuous surjective map
+	\begin{equation}
+		g:X \to Z \nonumber
+	\end{equation}
+	Suppose that $ Z = A \cup B $ is a separation of $ Z $ into two disjoint nonempty sets open in $ Z $. Then $ g^{-1}(A) $ and $ g^{-1}(B) $ are disjoint sets whose union is $ X $; they are open in $ X $ because $ g $ is continuous, and nonempty because $ g $ is surjective. Therefore, they form a separation of $ X $, contradicting the assumption that $ X $ is connected.
+\end{proof}
+\begin{Theorem}
+	We prove the theorem first for the product of two connected spaces $ X $ and $ Y $. Choose a base point $ a \times b $ in the product $ X \times Y $. Now $ X \times b $ is connected, being homeomorphic with $ X $, and $ x \times Y $ is connected, being homeomorphic with $ Y $. As a result, the space
+	\begin{equation}
+		T_x = (X \times b)\cup (x \times Y) \nonumber
+	\end{equation}
+	is connected, being the union of two connected spaces that have the point $ x \times b $ in common. Now from the union $ \bigcup_{x \in X}T_x $ of all these spaces. This union is connected because it is the union of a collection of connected spaces that have the point $ a \times b $ in common, Since this union equals $ X \times Y $, the space $ X \times Y $ is connected. The proof for any finite product of connected spaces follows by induction, using the fact that $ X_1 \times \cdots \times X_n $ is homeomorphic with $ (X_1 \times \cdots \times X_{n-1})\times X_n $.
+\end{Theorem}
 	
 	
 	
