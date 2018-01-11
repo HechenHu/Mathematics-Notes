@@ -5210,8 +5210,99 @@ It is clear that Cavalieri's principle can be stated for spaces $ \Real^n $ of a
 		\Aboxed{\int_{D_x = \varphi(D_t)}f(x)dx = \int_{D_t}f \circ\varphi(t) |\det \varphi^\prime(t)|dt   } \nonumber
 	\end{align}
 \end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
 
 \subsection{Measurable Sets and Smooth Mappings}
+\begin{Lemma}
+	Let $ \varphi:D_t \to D_x $ be a diffeomorphism of an open set $ D_t \subset \Real^n $ onto a set $ D_x \subset \Real^n $ of the same type. Then the following assertions hold.
+	\begin{enumerate}
+		\item If $ E_t \subset D_t $ is a set of(Lebesgue) measure zero, its image $ \varphi(E_t)\subset D_x $ is also a set of measure zero.
+		\item If a set $ E_t $ contained in $ D_t $ along with its closure $ \bar{E_t} $ has Jordan measure zero, its image $ \varphi(E_t)=E_x $ is contained in $ D_x $ along with its closure and also has measure zero.
+		\item If a(Jordan) measurable set $ E_t $ is contained in the domain $ D_t $ along with its closure $ \bar{E_t} $, its image $ E_x=\varphi(E_t) $ is Jordan measurable and $ \bar{E_x} \subset D_x$.
+	\end{enumerate}
+\end{Lemma}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Corollary}
+	Under the hypotheses of the theorem the integral on the right-hand side of Theorem $ 9.5.1 $ exists.
+\end{Corollary}
+\begin{proof}
+	\exercise
+\end{proof}
+\subsection{The One-Dimensional Case}
+\begin{Lemma}
+	\begin{enumerate}
+		\item If $ \varphi:I_t \to I_x $ is a diffeomorphism of a closed interval $ I_t \subset \Real^1 $ onto a closed interval $ I_x \subset \Real^1 $ and $ f \in \mathcal{R}(I_x) $, then $ f \circ \varphi \cdot |\varphi^\prime| \in \mathcal{R}(I_t) $ and
+		\begin{equation}
+			\int_{I_x}f(x)dx = \int_{I_t}(f \circ \varphi \cdot |\varphi^\prime|)(t)dt \nonumber
+		\end{equation}
+		\item Theorem $ 9.5.1 $ holds in $ \Real^1 $.
+	\end{enumerate}
+\end{Lemma}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Corollary}
+	In the one-dimensional case theorem $ 9.5.1 $ remains valid for any bounded function $ f $ if the integrals in it are understood as upper or lower Darboux integrals.
+\end{Corollary}
+\begin{proof}
+	\exercise
+\end{proof}
+
+\subsection{The Case of an Elementary Diffeomorphism in $ \Real^n $}
+\begin{Definition}
+	A diffeomorphism is \textit{elementary} if only one of its input's coordinates is changed under the mapping.
+\end{Definition}
+\begin{Lemma}
+	Theorem $ 9.5.1 $ holds for an elementary diffeomorphism.
+\end{Lemma}
+\begin{proof}
+	\exercise
+\end{proof}
+
+\subsection{Composite Mappings and the Formula for Change of Variable}
+\begin{Lemma}
+	If $ D_\tau \overset{\Psi} {\to} D_t \overset{\varphi}{\to} D_x$ are two diffeomorphisms for each of which theorem $ 9.5.1 $ for change of variable in the integral holds, then it holds also for the composition $ \varphi\circ \Psi:D_\tau \to D_x $ of these mappings.
+\end{Lemma}
+\begin{proof}
+	\exercise
+\end{proof}
+
+\subsection{Corollaries and Generalizations of the Formula for Change of Variable in a Multiple Integral}
+\subsubsection{Change of Variable Under Mappings of Measurable Sets}
+\begin{Proposition}
+	Let $ \varphi:D_t \to D_x $ be a diffeomorphism of a bounded open set $ D_t \subset \Real^n $ onto a set $ D_x \subset \Real^n $ of the same type; let $ E_t $ and $ E_x $ be subsets of $ D_t $ and $ D_x $ respectively and such that $ \bar{E_t}\subset D_t $, $ \bar{E_x}\subset D_x $, and $ E_x =\varphi(E_t)$. If $ f \in \mathcal{R}(E_x) $, then $ f \circ \varphi |\det \varphi^\prime| \in \mathcal{R}(E_t) $, and the following equality holds:
+	\begin{equation}
+		\int_{E_x}f(x)dx = \int_{E_t}(f \circ \varphi |\det \varphi^\prime|)(t)dt \nonumber
+	\end{equation}
+\end{Proposition}
+\begin{proof}
+	\exercise
+\end{proof}
+\subsubsection{Invariance of the Integral}
+\begin{Proposition}
+	The value of the integral of a function $ f $ over a set $ E \subset \Real^n $ is independent of the choice of Cartesian coordinate system in $ \Real^n $.
+\end{Proposition}
+\begin{proof}
+	\exercise
+\end{proof}
+\subsubsection{Negligible Sets}
+\begin{Theorem}
+	Let $ \varphi:D_t \to D_x $ be a mapping of a(Jordan) measurable set $ D_t \subset \Real^n_t $ onto a set $ D_x \subset \Real^n_x $ of the same type. Suppose that there are subsets $ S_t $ and $ S_x $ of $ D_t $ and $ D_x $ respectively having(Lebesgue) measure zero and such that $ D_t \setminus S_t $ and $ D_x \setminus S_x $ are open sets and $ \varphi $ maps the former diffeomorphically onto the latter and with a bounded Jacobian. Then for any function $ f\in \mathcal{R}(D_x) $ the function $ (f \circ \varphi)|\det \varphi^\prime| $ also belongs to $ \mathcal{R}(D_t \setminus S_t) $ and
+	\begin{equation}
+		\int_{D_x}f(x)dx = \int_{D_t \setminus S_t}((f \circ \varphi)|\det \varphi^\prime|)(t)dt \nonumber
+	\end{equation}
+	If, in addition, the quantity $ |\det \varphi^\prime| $ is defined and bounded in $ D_t $, then
+	\begin{equation}
+		\int_{D_t}f(x)dx = \int_{D_t}((f \circ \varphi)|\det \varphi^\prime|)(t)dt \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
 
 \section{Improper Multiple Integrals}
 

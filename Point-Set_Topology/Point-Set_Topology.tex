@@ -1328,6 +1328,21 @@ Equivalently, a space $ X $ is connected iff the only subsets of $ X $ that are 
 	\end{equation}
 	is connected, being the union of two connected spaces that have the point $ x \times b $ in common. Now from the union $ \bigcup_{x \in X}T_x $ of all these spaces. This union is connected because it is the union of a collection of connected spaces that have the point $ a \times b $ in common, Since this union equals $ X \times Y $, the space $ X \times Y $ is connected. The proof for any finite product of connected spaces follows by induction, using the fact that $ X_1 \times \cdots \times X_n $ is homeomorphic with $ (X_1 \times \cdots \times X_{n-1})\times X_n $.
 \end{Theorem}
+\begin{Example}
+	Consider the cartesian product $ \Real^\omega $ in the box topology. We can write $ \Real^\omega $ as the union of the set $ A $ consisting of all bounded sequences of real numbers, and the set $ B $ of all unbounded sequences. These sets are disjoint, and each is open in the box topology. For if $ \vec{a} $ is a point of $ \Real^\omega $, the open set
+	\begin{equation}
+		U=(a_1-1,a_1+1)\times (a_2-1,a_2+1)\times \cdots \nonumber
+	\end{equation}
+	consists entirely of bounded sequences if $ \vec{a} $ is bounded, and of unbounded sequences if $ \vec{a} $ is unbounded. Thus, even though $ \Real $ is connected, $ \Real^\omega $ is not connected in the box topology.
+\end{Example}
+\begin{Example}
+	Consider $ \Real^\omega $ in the product topology. Assuming that $ \Real $ is connected, we show that $ \Real^\omega $ is connected. Let $ \tilde{\Real^n} $  denote the subspace of $ \Real^\omega $ consisting of all sequences $ \vec{x}=(x_1,\cdots) $ such that $ x_i=0 $ for $ i>n $. The space $ \tilde{\Real^n} $ is clearly homeomorphic to $ \Real^n $, so that it is connected. It follows that the space $ \Real^\infty $ that is the union of the spaces $ \tilde{\Real^n} $ is connected, for these spaces have the point $ \vec{0}=(0,0,\cdots) $ in common. We show that the closure of $ \Real^\infty $ equals all of $ \Real^\omega $, for which it follows that $ \Real^\omega $ is connected as well. \newpara
+	Let $ \vec{a}=(a_1,a_2,\cdots) $ be a point of $ \Real^\omega $. Let $ U=\prod U_i $ be a basis element for the product topology that contains $ \vec{a} $. We show that $ U $ intersects $ \Real^n $. There is an integer $ N $ such that $ U_i = \Real $ for $ i>N $. Then the point
+	\begin{equation}
+		\vec{x}=(a_1,\cdots,a_n,0,0,\cdots) \nonumber
+	\end{equation}
+	of $ \Real^\infty $ belongs to $ U $, since $ a_i \in U_i $ for all $ i $, and $ 0 \in U_i $ for $ i>N $.
+\end{Example}
 	
 	
 	

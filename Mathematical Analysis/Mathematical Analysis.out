@@ -153,41 +153,45 @@
 \BOOKMARK [2][-]{subsection.9.4.1}{Fubini's Theorem}{section.9.4}% 153
 \BOOKMARK [1][-]{section.9.5}{Change of Variable in a Multiple Integral}{chapter.9}% 154
 \BOOKMARK [2][-]{subsection.9.5.1}{Measurable Sets and Smooth Mappings}{section.9.5}% 155
-\BOOKMARK [1][-]{section.9.6}{Improper Multiple Integrals}{chapter.9}% 156
-\BOOKMARK [0][-]{chapter.10}{Surfaces and Differential Forms in \040Rn }{}% 157
-\BOOKMARK [1][-]{section.10.1}{Surfaces in \040Rn }{chapter.10}% 158
-\BOOKMARK [1][-]{section.10.2}{Orientation of a Surface}{chapter.10}% 159
-\BOOKMARK [1][-]{section.10.3}{The Boundary of a Surface and Its Orientation}{chapter.10}% 160
-\BOOKMARK [1][-]{section.10.4}{The Area of a Surface in Euclidean Space}{chapter.10}% 161
-\BOOKMARK [1][-]{section.10.5}{Elementary Facts About Differential Forms}{chapter.10}% 162
-\BOOKMARK [0][-]{chapter.11}{Line and Surface Integrals}{}% 163
-\BOOKMARK [1][-]{section.11.1}{The Integral of a Differential Form}{chapter.11}% 164
-\BOOKMARK [1][-]{section.11.2}{The Volume Element. Integrals of First and Second Kind}{chapter.11}% 165
-\BOOKMARK [1][-]{section.11.3}{The Fundamental Integral Formulas of Analysis}{chapter.11}% 166
-\BOOKMARK [0][-]{chapter.12}{Elements of Vector Analysis and Field Theory}{}% 167
-\BOOKMARK [1][-]{section.12.1}{The Differential Operations of Vector Analysis}{chapter.12}% 168
-\BOOKMARK [1][-]{section.12.2}{The Integral Formulas of Field Theory}{chapter.12}% 169
-\BOOKMARK [1][-]{section.12.3}{Potential Fields}{chapter.12}% 170
-\BOOKMARK [1][-]{section.12.4}{Examples of Applications}{chapter.12}% 171
-\BOOKMARK [0][-]{chapter.13}{Integration of Differential Forms on Manifolds}{}% 172
-\BOOKMARK [1][-]{section.13.1}{Manifolds}{chapter.13}% 173
-\BOOKMARK [1][-]{section.13.2}{Differential Forms and Integration on Manifolds}{chapter.13}% 174
-\BOOKMARK [1][-]{section.13.3}{Closed and Exact Forms on Manifolds}{chapter.13}% 175
-\BOOKMARK [0][-]{chapter.14}{Uniform Convergence and the Basic Operations of Analysis on Series and Families of Functions}{}% 176
-\BOOKMARK [1][-]{section.14.1}{Pointwise and Uniform Convergence}{chapter.14}% 177
-\BOOKMARK [1][-]{section.14.2}{Uniform Convergence of Series of Functions}{chapter.14}% 178
-\BOOKMARK [1][-]{section.14.3}{Functional Properties of a Limit Function}{chapter.14}% 179
-\BOOKMARK [1][-]{section.14.4}{Compact and Dense Subsets of the Space of Continuous Functions}{chapter.14}% 180
-\BOOKMARK [0][-]{chapter.15}{Integrals Depending on a Parameter}{}% 181
-\BOOKMARK [1][-]{section.15.1}{Proper Integrals Depending on a Parameter}{chapter.15}% 182
-\BOOKMARK [1][-]{section.15.2}{Improper Integrals Depending on a Parameter}{chapter.15}% 183
-\BOOKMARK [1][-]{section.15.3}{The Eulerian Integrals}{chapter.15}% 184
-\BOOKMARK [1][-]{section.15.4}{Convolution of Functions and Elementary Facts}{chapter.15}% 185
-\BOOKMARK [1][-]{section.15.5}{Multiple Integrals Depending on a Parameter}{chapter.15}% 186
-\BOOKMARK [0][-]{chapter.16}{Fourier Series and the Fourier Transform}{}% 187
-\BOOKMARK [1][-]{section.16.1}{Basic General Concepts Connected with Fourier Series}{chapter.16}% 188
-\BOOKMARK [1][-]{section.16.2}{Trigonometric Fourier Series}{chapter.16}% 189
-\BOOKMARK [1][-]{section.16.3}{The Fourier Transform}{chapter.16}% 190
-\BOOKMARK [0][-]{chapter.17}{Asymptotic Expansions}{}% 191
-\BOOKMARK [1][-]{section.17.1}{Asymptotic Formulas and Asymptotic Series}{chapter.17}% 192
-\BOOKMARK [1][-]{section.17.2}{The Asymptotics of Integrals\(Laplace's Method\)}{chapter.17}% 193
+\BOOKMARK [2][-]{subsection.9.5.2}{The One-Dimensional Case}{section.9.5}% 156
+\BOOKMARK [2][-]{subsection.9.5.3}{The Case of an Elementary Diffeomorphism in \040Rn }{section.9.5}% 157
+\BOOKMARK [2][-]{subsection.9.5.4}{Composite Mappings and the Formula for Change of Variable}{section.9.5}% 158
+\BOOKMARK [2][-]{subsection.9.5.5}{Corollaries and Generalizations of the Formula for Change of Variable in a Multiple Integral}{section.9.5}% 159
+\BOOKMARK [1][-]{section.9.6}{Improper Multiple Integrals}{chapter.9}% 160
+\BOOKMARK [0][-]{chapter.10}{Surfaces and Differential Forms in \040Rn }{}% 161
+\BOOKMARK [1][-]{section.10.1}{Surfaces in \040Rn }{chapter.10}% 162
+\BOOKMARK [1][-]{section.10.2}{Orientation of a Surface}{chapter.10}% 163
+\BOOKMARK [1][-]{section.10.3}{The Boundary of a Surface and Its Orientation}{chapter.10}% 164
+\BOOKMARK [1][-]{section.10.4}{The Area of a Surface in Euclidean Space}{chapter.10}% 165
+\BOOKMARK [1][-]{section.10.5}{Elementary Facts About Differential Forms}{chapter.10}% 166
+\BOOKMARK [0][-]{chapter.11}{Line and Surface Integrals}{}% 167
+\BOOKMARK [1][-]{section.11.1}{The Integral of a Differential Form}{chapter.11}% 168
+\BOOKMARK [1][-]{section.11.2}{The Volume Element. Integrals of First and Second Kind}{chapter.11}% 169
+\BOOKMARK [1][-]{section.11.3}{The Fundamental Integral Formulas of Analysis}{chapter.11}% 170
+\BOOKMARK [0][-]{chapter.12}{Elements of Vector Analysis and Field Theory}{}% 171
+\BOOKMARK [1][-]{section.12.1}{The Differential Operations of Vector Analysis}{chapter.12}% 172
+\BOOKMARK [1][-]{section.12.2}{The Integral Formulas of Field Theory}{chapter.12}% 173
+\BOOKMARK [1][-]{section.12.3}{Potential Fields}{chapter.12}% 174
+\BOOKMARK [1][-]{section.12.4}{Examples of Applications}{chapter.12}% 175
+\BOOKMARK [0][-]{chapter.13}{Integration of Differential Forms on Manifolds}{}% 176
+\BOOKMARK [1][-]{section.13.1}{Manifolds}{chapter.13}% 177
+\BOOKMARK [1][-]{section.13.2}{Differential Forms and Integration on Manifolds}{chapter.13}% 178
+\BOOKMARK [1][-]{section.13.3}{Closed and Exact Forms on Manifolds}{chapter.13}% 179
+\BOOKMARK [0][-]{chapter.14}{Uniform Convergence and the Basic Operations of Analysis on Series and Families of Functions}{}% 180
+\BOOKMARK [1][-]{section.14.1}{Pointwise and Uniform Convergence}{chapter.14}% 181
+\BOOKMARK [1][-]{section.14.2}{Uniform Convergence of Series of Functions}{chapter.14}% 182
+\BOOKMARK [1][-]{section.14.3}{Functional Properties of a Limit Function}{chapter.14}% 183
+\BOOKMARK [1][-]{section.14.4}{Compact and Dense Subsets of the Space of Continuous Functions}{chapter.14}% 184
+\BOOKMARK [0][-]{chapter.15}{Integrals Depending on a Parameter}{}% 185
+\BOOKMARK [1][-]{section.15.1}{Proper Integrals Depending on a Parameter}{chapter.15}% 186
+\BOOKMARK [1][-]{section.15.2}{Improper Integrals Depending on a Parameter}{chapter.15}% 187
+\BOOKMARK [1][-]{section.15.3}{The Eulerian Integrals}{chapter.15}% 188
+\BOOKMARK [1][-]{section.15.4}{Convolution of Functions and Elementary Facts}{chapter.15}% 189
+\BOOKMARK [1][-]{section.15.5}{Multiple Integrals Depending on a Parameter}{chapter.15}% 190
+\BOOKMARK [0][-]{chapter.16}{Fourier Series and the Fourier Transform}{}% 191
+\BOOKMARK [1][-]{section.16.1}{Basic General Concepts Connected with Fourier Series}{chapter.16}% 192
+\BOOKMARK [1][-]{section.16.2}{Trigonometric Fourier Series}{chapter.16}% 193
+\BOOKMARK [1][-]{section.16.3}{The Fourier Transform}{chapter.16}% 194
+\BOOKMARK [0][-]{chapter.17}{Asymptotic Expansions}{}% 195
+\BOOKMARK [1][-]{section.17.1}{Asymptotic Formulas and Asymptotic Series}{chapter.17}% 196
+\BOOKMARK [1][-]{section.17.2}{The Asymptotics of Integrals\(Laplace's Method\)}{chapter.17}% 197
