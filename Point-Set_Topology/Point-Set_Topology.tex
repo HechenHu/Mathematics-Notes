@@ -1343,9 +1343,58 @@ Equivalently, a space $ X $ is connected iff the only subsets of $ X $ that are 
 	\end{equation}
 	of $ \Real^\infty $ belongs to $ U $, since $ a_i \in U_i $ for all $ i $, and $ 0 \in U_i $ for $ i>N $.
 \end{Example}
-	
-	
-	
+\section{Connected Subspaces of the Real Line}	
+\begin{Definition}
+	A simply ordered set $ L $ having more than one element is called a \textit{linear continuum} if the following hold:
+	\begin{enumerate}
+		\item $ L $ has the least upper bound property.
+		\item If $x<y  $, there exists $ z $ such that $ x<z<y $.
+	\end{enumerate}
+\end{Definition}
+\begin{Theorem}
+	If $ L $ is a linear continuum in the order topology, then $ L $ is connected, and so are intervals and rays in $ L $.
+\end{Theorem}
+\begin{proof}
+	Suppose $ Y $ is a convex subspace of $ L $ and is the union of the disjoint nonempty sets $ A $ and $ B $, each of which is open in $ Y $. Choose $ a \in A $ and $ b \in B $; suppose for convenience that $ a<b $. The interval $ [a,b] $ of points of $ L $ is contained in $ Y $. Hence $ [a,b] $ is the union of the disjoint sets
+	\begin{equation}
+		A_0 = A \cap [a,b]\quad\text{and}\quad B_0 = B\cap [a,b] \nonumber
+	\end{equation}
+	each of which is open in $ [a,b] $ in the subspace topology, which is the same as the order topology. The sets $ A_0 $ and $ B_0 $ are nonempty because $ a \in A_0 $ and $ b \in B_0 $. Thus, $ A_0 $ and $ B_0 $ constitute a separation of $ [a,b] $. Let $ c= \sup A_0 $. \newpara
+	Suppose that $ c \in B_0 $. Then $ c \neq a $, so either $ c=b $ or $ a<c<b $. In either case, it follows from the fact that $ B_0 $ is open in $ [a,b] $ that there is some interval of the form $ (d,c] $ contained in $ B_0 $. If $ c=b $, we have a contradiction at once, for $ d $ is a smaller upper bound on $ A_0 $ than $ c $. If $ c<b $, we note that $ (c,b] $ does not intersect $ A_0 $. Then
+	\begin{equation}
+		(d,b] = (d,c] \cup (c,b] \nonumber
+	\end{equation}
+	does not intersect $ A_0 $. Again, $ d $ is a smaller upper bound on $ A_0 $ than $ c $, contrary to construction. \newpara
+	The case when $ c $ belongs to $ A_0 $ can be proved similarly.
+\end{proof}
+\begin{Corollary}
+	The real line $ \Real $ is connected and so are intervals and rays in $ \Real $.
+\end{Corollary}
+\begin{Theorem}[Intermediate Value Theorem]
+	Let $ f:X \to Y $ be a continuous map, where $ X $ is a connected space and $ Y $ is an ordered set in the order topology. If $ a $ and $ b $ are two points of $ X $ and if $ r $ is a point of $ Y $ lying between $ f(a) $ and $ f(b) $, then there exists a point $ c $ of $ X $ such that $ f(c)=r $.
+\end{Theorem}
+\begin{proof}
+	Assume the hypotheses of the theorem. The sets
+	\begin{equation}
+		A=f(X)\cap (-\infty,r)\quad \text{and}\quad B=f(X)\cap (r,+\infty) \nonumber
+	\end{equation}
+	are disjoint and nonempty. Each is open in $ f(X) $ because they are the intersection of an open ray in $ Y $ with $ f(X) $. If there were no point $ c $ of $ X $ such that $ f(c)=r $, then $ f(X) $ would be the union of the sets $ A $ and $ B $, and this contradicts to the fact that the image of a connected space under a continuous map is connected.
+\end{proof}
+\begin{Definition}
+	Given points $ x $ and $ y $ of the space $ X $, a \textit{path} in $ X $ from $ x $ to $ y $ is a continuous map $ f:[a,b]\to X $ of some closed interval in the real line into $ X $, such that $ f(a)=x $ and $ f(b)=y $. A space $ X $ is said to be \textit{path connected} if every pair of points of $ X $ can be joined by a path in $ X $.
+\end{Definition}
+Every path-connected space $ X $ is connected, but the converse does not hold.
+\begin{Example}
+	Let $ S $ denote the following subset of the plane
+	\begin{equation}
+		S=\{x \times \sin(1/x)|0<x \leqslant 1 \} \nonumber
+	\end{equation}
+	Because $ S $ is the image of the connected set $ (0,1] $ under a continuous map, $ S $ is connected. Therefore, its closure $ \bar{S} $ in $ \Real^2 $ is also connected. The set $ \bar{S} $ is called the \textit{topologist's sine curve}. However, $ \bar{S}  $ is not path connected. \newpara
+	Suppose there is a path $ f:[a,c]\to \bar{S} $ beginning at the origin and ending at a point of $ S $. The set of those $ t $ for which $ f(t)\in 0 \times [-1,1] $ is closed, so it has a largest element $ b $. Then $ f:[b,c]\to \bar{S} $ is a path that maps $ b $ into the vertical interval $ 0 \times [-1,1] $ and maps the other points of $ [b,c] $ to points of $ S $. \newpara
+	Replace $ [b,c] $ by $ [0,1] $ for convenience; let $ f(t)=(x(t),y(t)) $. Then $ x(0)=0 $, while $ x(t)>0 $ and $ y(t)=\sin(1/x) $ for $ t>0 $. We show there is a sequence of points $ t_n \to 0 $ such that $ y(t_n)=(-1)^n $. Then the sequence $ y(t_n) $ does not converge, contradicting continuity of $ f $.\newpara
+	To find $ t_n $, we proceed as follows: Given $ n $, choose $ u $ with $ 0<u<x(1/n) $ such that $ \sin(1/u)=(-1)^n $. Then use the intermediate value theorem to find $ t_n $ with $ 0<t_n<1/n $ such that $ x(t_n)=u $.
+\end{Example}	
+\section{Components and Local Connectedness}	
 	
 	
 	

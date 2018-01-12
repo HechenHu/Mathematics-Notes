@@ -230,40 +230,40 @@
 \contentsline {subsubsection}{Invariance of the Integral}{146}{section*.71}
 \contentsline {subsubsection}{Negligible Sets}{147}{section*.72}
 \contentsline {section}{\numberline {9.6}Improper Multiple Integrals}{147}{section.9.6}
-\contentsline {chapter}{\numberline {10}Surfaces and Differential Forms in $ \mathbb {R}^n $}{149}{chapter.10}
-\contentsline {section}{\numberline {10.1}Surfaces in $ \mathbb {R}^n $}{149}{section.10.1}
-\contentsline {section}{\numberline {10.2}Orientation of a Surface}{149}{section.10.2}
-\contentsline {section}{\numberline {10.3}The Boundary of a Surface and Its Orientation}{149}{section.10.3}
-\contentsline {section}{\numberline {10.4}The Area of a Surface in Euclidean Space}{149}{section.10.4}
-\contentsline {section}{\numberline {10.5}Elementary Facts About Differential Forms}{149}{section.10.5}
-\contentsline {chapter}{\numberline {11}Line and Surface Integrals}{151}{chapter.11}
-\contentsline {section}{\numberline {11.1}The Integral of a Differential Form}{151}{section.11.1}
-\contentsline {section}{\numberline {11.2}The Volume Element. Integrals of First and Second Kind}{151}{section.11.2}
-\contentsline {section}{\numberline {11.3}The Fundamental Integral Formulas of Analysis}{151}{section.11.3}
-\contentsline {chapter}{\numberline {12}Elements of Vector Analysis and Field Theory}{153}{chapter.12}
-\contentsline {section}{\numberline {12.1}The Differential Operations of Vector Analysis}{153}{section.12.1}
-\contentsline {section}{\numberline {12.2}The Integral Formulas of Field Theory}{153}{section.12.2}
-\contentsline {section}{\numberline {12.3}Potential Fields}{153}{section.12.3}
-\contentsline {section}{\numberline {12.4}Examples of Applications}{153}{section.12.4}
-\contentsline {chapter}{\numberline {13}Integration of Differential Forms on Manifolds}{155}{chapter.13}
-\contentsline {section}{\numberline {13.1}Manifolds}{155}{section.13.1}
-\contentsline {section}{\numberline {13.2}Differential Forms and Integration on Manifolds}{155}{section.13.2}
-\contentsline {section}{\numberline {13.3}Closed and Exact Forms on Manifolds}{155}{section.13.3}
-\contentsline {chapter}{\numberline {14}Uniform Convergence and the Basic Operations of Analysis on Series and Families of Functions}{157}{chapter.14}
-\contentsline {section}{\numberline {14.1}Pointwise and Uniform Convergence}{157}{section.14.1}
-\contentsline {section}{\numberline {14.2}Uniform Convergence of Series of Functions}{157}{section.14.2}
-\contentsline {section}{\numberline {14.3}Functional Properties of a Limit Function}{157}{section.14.3}
-\contentsline {section}{\numberline {14.4}Compact and Dense Subsets of the Space of Continuous Functions}{157}{section.14.4}
-\contentsline {chapter}{\numberline {15}Integrals Depending on a Parameter}{159}{chapter.15}
-\contentsline {section}{\numberline {15.1}Proper Integrals Depending on a Parameter}{159}{section.15.1}
-\contentsline {section}{\numberline {15.2}Improper Integrals Depending on a Parameter}{159}{section.15.2}
-\contentsline {section}{\numberline {15.3}The Eulerian Integrals}{159}{section.15.3}
-\contentsline {section}{\numberline {15.4}Convolution of Functions and Elementary Facts}{159}{section.15.4}
-\contentsline {section}{\numberline {15.5}Multiple Integrals Depending on a Parameter}{159}{section.15.5}
-\contentsline {chapter}{\numberline {16}Fourier Series and the Fourier Transform}{161}{chapter.16}
-\contentsline {section}{\numberline {16.1}Basic General Concepts Connected with Fourier Series}{161}{section.16.1}
-\contentsline {section}{\numberline {16.2}Trigonometric Fourier Series}{161}{section.16.2}
-\contentsline {section}{\numberline {16.3}The Fourier Transform}{161}{section.16.3}
-\contentsline {chapter}{\numberline {17}Asymptotic Expansions}{163}{chapter.17}
-\contentsline {section}{\numberline {17.1}Asymptotic Formulas and Asymptotic Series}{163}{section.17.1}
-\contentsline {section}{\numberline {17.2}The Asymptotics of Integrals(Laplace's Method)}{163}{section.17.2}
+\contentsline {chapter}{\numberline {10}Surfaces and Differential Forms in $ \mathbb {R}^n $}{151}{chapter.10}
+\contentsline {section}{\numberline {10.1}Surfaces in $ \mathbb {R}^n $}{151}{section.10.1}
+\contentsline {section}{\numberline {10.2}Orientation of a Surface}{151}{section.10.2}
+\contentsline {section}{\numberline {10.3}The Boundary of a Surface and Its Orientation}{151}{section.10.3}
+\contentsline {section}{\numberline {10.4}The Area of a Surface in Euclidean Space}{151}{section.10.4}
+\contentsline {section}{\numberline {10.5}Elementary Facts About Differential Forms}{151}{section.10.5}
+\contentsline {chapter}{\numberline {11}Line and Surface Integrals}{153}{chapter.11}
+\contentsline {section}{\numberline {11.1}The Integral of a Differential Form}{153}{section.11.1}
+\contentsline {section}{\numberline {11.2}The Volume Element. Integrals of First and Second Kind}{153}{section.11.2}
+\contentsline {section}{\numberline {11.3}The Fundamental Integral Formulas of Analysis}{153}{section.11.3}
+\contentsline {chapter}{\numberline {12}Elements of Vector Analysis and Field Theory}{155}{chapter.12}
+\contentsline {section}{\numberline {12.1}The Differential Operations of Vector Analysis}{155}{section.12.1}
+\contentsline {section}{\numberline {12.2}The Integral Formulas of Field Theory}{155}{section.12.2}
+\contentsline {section}{\numberline {12.3}Potential Fields}{155}{section.12.3}
+\contentsline {section}{\numberline {12.4}Examples of Applications}{155}{section.12.4}
+\contentsline {chapter}{\numberline {13}Integration of Differential Forms on Manifolds}{157}{chapter.13}
+\contentsline {section}{\numberline {13.1}Manifolds}{157}{section.13.1}
+\contentsline {section}{\numberline {13.2}Differential Forms and Integration on Manifolds}{157}{section.13.2}
+\contentsline {section}{\numberline {13.3}Closed and Exact Forms on Manifolds}{157}{section.13.3}
+\contentsline {chapter}{\numberline {14}Uniform Convergence and the Basic Operations of Analysis on Series and Families of Functions}{159}{chapter.14}
+\contentsline {section}{\numberline {14.1}Pointwise and Uniform Convergence}{159}{section.14.1}
+\contentsline {section}{\numberline {14.2}Uniform Convergence of Series of Functions}{159}{section.14.2}
+\contentsline {section}{\numberline {14.3}Functional Properties of a Limit Function}{159}{section.14.3}
+\contentsline {section}{\numberline {14.4}Compact and Dense Subsets of the Space of Continuous Functions}{159}{section.14.4}
+\contentsline {chapter}{\numberline {15}Integrals Depending on a Parameter}{161}{chapter.15}
+\contentsline {section}{\numberline {15.1}Proper Integrals Depending on a Parameter}{161}{section.15.1}
+\contentsline {section}{\numberline {15.2}Improper Integrals Depending on a Parameter}{161}{section.15.2}
+\contentsline {section}{\numberline {15.3}The Eulerian Integrals}{161}{section.15.3}
+\contentsline {section}{\numberline {15.4}Convolution of Functions and Elementary Facts}{161}{section.15.4}
+\contentsline {section}{\numberline {15.5}Multiple Integrals Depending on a Parameter}{161}{section.15.5}
+\contentsline {chapter}{\numberline {16}Fourier Series and the Fourier Transform}{163}{chapter.16}
+\contentsline {section}{\numberline {16.1}Basic General Concepts Connected with Fourier Series}{163}{section.16.1}
+\contentsline {section}{\numberline {16.2}Trigonometric Fourier Series}{163}{section.16.2}
+\contentsline {section}{\numberline {16.3}The Fourier Transform}{163}{section.16.3}
+\contentsline {chapter}{\numberline {17}Asymptotic Expansions}{165}{chapter.17}
+\contentsline {section}{\numberline {17.1}Asymptotic Formulas and Asymptotic Series}{165}{section.17.1}
+\contentsline {section}{\numberline {17.2}The Asymptotics of Integrals(Laplace's Method)}{165}{section.17.2}

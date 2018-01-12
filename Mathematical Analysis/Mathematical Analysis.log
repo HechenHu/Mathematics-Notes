@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  10 JAN 2018 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  11 JAN 2018 20:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2762,104 +2762,137 @@ Overfull \hbox (17.24184pt too wide) in paragraph at lines 5274--5274
 e
  []
 
-[146] [147] [148
+[146]
+Overfull \hbox (7.32559pt too wide) in paragraph at lines 5322--5327
+[]\T1/lmr/m/n/10.95 For as-ser-tion $\OML/lmm/m/it/10.95 a\OT1/lmr/m/n/10.95 )$
+\T1/lmr/m/n/10.95 , we only need to show that the in-equal-ity $[] \OML/lmm/m/i
+t/10.95 ^^V\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 E[]\OT1/lmr/m/n/10.95 ) \U/m
+sa/m/n/10.95 >
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5322--5327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5322--5327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5322--5327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5322--5327
+
+ []
+
+[147]
+Underfull \hbox (badness 10000) in paragraph at lines 5329--5332
+
+ []
+
+[148] [149] [150
 
 ]
  10.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5309.
+(hyperref)                removing `math shift' on input line 5365.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 5309.
+(hyperref)                removing `superscript' on input line 5365.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5309.
+(hyperref)                removing `math shift' on input line 5365.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 5309.
+(Font)              <24.88> on input line 5365.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 5309.
+(Font)              <20.74> on input line 5365.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 5309.
+(Font)              <17.28> on input line 5365.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5310.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 5310.
+(hyperref)                removing `math shift' on input line 5366.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5310.
+(hyperref)                removing `superscript' on input line 5366.
 
-[149] [150
 
-]
- 11.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 5366.
+
 [151] [152
 
 ]
- 12.
+ 11.
 [153] [154
 
 ]
- 13.
+ 12.
 [155] [156
 
 ]
+ 13.
+[157] [158
+
+]
  14.
-[157]
+[159]
 Overfull \hbox (294.06761pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10.95 158  \T1/lmr/m/sl/10.95 14.  UNIFORM CONVERGENCE AND THE BASI
+\T1/lmr/m/n/10.95 160  \T1/lmr/m/sl/10.95 14.  UNIFORM CONVERGENCE AND THE BASI
 C OPERATIONS OF ANALYSIS ON SERIES AND FAMILIES OF FUNCTIONS
  []
 
-[158
+[160
 
 ]
  15.
 
-Overfull \hbox (14.10478pt too wide) in paragraph at lines 5342--5342
+Overfull \hbox (14.10478pt too wide) in paragraph at lines 5398--5398
 []\T1/lmr/bx/n/14.4 Convolution of Func-tions and El-e-men-tary Facts 
- []
-
-[159] [160
-
-]
- 16.
-
-Overfull \hbox (18.71461pt too wide) in paragraph at lines 5346--5346
-[]\T1/lmr/bx/n/14.4 Basic Gen-eral Con-cepts Con-nected with Fourier
  []
 
 [161] [162
 
 ]
+ 16.
+
+Overfull \hbox (18.71461pt too wide) in paragraph at lines 5402--5402
+[]\T1/lmr/bx/n/14.4 Basic Gen-eral Con-cepts Con-nected with Fourier
+ []
+
+[163] [164
+
+]
  17.
 
-Overfull \hbox (23.00279pt too wide) in paragraph at lines 5352--5352
+Overfull \hbox (23.00279pt too wide) in paragraph at lines 5408--5408
 []\T1/lmr/bx/n/14.4 The Asymp-totics of In-te-grals(Laplace's Method) 
  []
 
-[163]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5382.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5382.
+[165]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5438.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5438.
  (./Mathematical Analysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5382.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5382.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5438.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5438.
 
 Package rerunfilecheck Info: File `"Mathematical Analysis".out' has not changed
 .
 (rerunfilecheck)             Checksum: F371F549809F469305442BDA773EA1BC;17985.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5382.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5438.
  ) 
 Here is how much of TeX's memory you used:
- 19965 strings out of 492995
- 371799 string characters out of 6132704
+ 19970 strings out of 492995
+ 371840 string characters out of 6132704
  446239 words of memory out of 5000000
  22481 multiletter control sequences out of 15000+600000
  155455 words of font info for 119 fonts, out of 8000000 for 9000
@@ -2897,10 +2930,10 @@ al/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive
 -dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Mathematical Analysis.pdf" (171 pages, 924892 bytes).
+Output written on "Mathematical Analysis.pdf" (173 pages, 931639 bytes).
 PDF statistics:
- 2281 PDF objects out of 2487 (max. 8388607)
- 2059 compressed objects within 21 object streams
- 635 named destinations out of 1000 (max. 500000)
+ 2293 PDF objects out of 2487 (max. 8388607)
+ 2069 compressed objects within 21 object streams
+ 640 named destinations out of 1000 (max. 500000)
  1599 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5305,6 +5305,62 @@ It is clear that Cavalieri's principle can be stated for spaces $ \Real^n $ of a
 \end{proof}
 
 \section{Improper Multiple Integrals}
+\begin{Definition}
+	An \textit{exhaustion} of a set $ E \subset \Real^m $ is a sequence of measurable sets $ \{E_n\} $ such that $ E_n \subset E_{n+1}\subset E $ for any $ n \in \Natural $ and $ \bigcup_{n=1}^{\infty}E_n=E $.
+\end{Definition}
+\begin{Lemma}
+	If $ \{E_n\} $ is an exhaustion of a measurable set $ E $, then
+	\begin{enumerate}
+		\item $ \lim\limits_{n \to \infty}\mu(E_n)=\mu(E) $;
+		\item for every function $ f \in \mathcal{R}(E) $ the function $ f|_{E_n} $ also belongs to $ \mathcal{R}(E_n) $, and
+		\begin{equation}
+			\lim\limits_{n \to \infty}\int_{E_n}f(x)dx = \int_{E}f(x)dx \nonumber
+		\end{equation}
+	\end{enumerate}
+\end{Lemma}
+\begin{proof}
+	For assertion $ a) $, we only need to show that the inequality $ \lim\limits_{n \to \infty}\mu(E_n)\geqslant \mu(E) $ holds, since this inequality in the reverse order can be derived from the definition of measure. \newpara
+	The boundary $ \partial E $ of $ E $ has content zero, and hence can be covered by a finite number of open intervals of total content less than any preassigned number $ \varepsilon>0 $. Let $ \Delta $ be the union of all these open intervals. Then the set $ \tilde{E}\coloneqq E \cup \Delta $ is open in $ \Real^m $ and by construction $ \tilde{E} $ contains the closure of $ E $ and $ \mu(\tilde{E})\leqslant \mu(E)+\mu(\Delta)<\mu(E)+\varepsilon $. \newpara
+	For every set $ E_n $ of the exhaustion $ \{E_n\} $ the construction just described can be repeated with the value $ \varepsilon_n=\varepsilon/2^n $. We then obtain a sequence of open sets $ \tilde{E}=E_n \cup \Delta_n $ such that $ E_n \subset \tilde{E_n} $, $ \mu(\bar{E_n}) \leqslant \mu(E_n)+\mu(\Delta_n)<\mu(E_n)+\varepsilon_n $, and $ \bigcup_{n=1}^{\infty}\tilde{E_n}\supset \bigcup_{n=1}^{\infty}E_n \supset E $. \newpara
+	The system of open sets $ \Delta,\tilde{E_1},\tilde{E_2},\cdots $ forms an open covering of the compact set $ \bar{E} $. \newpara
+	Let $ \Delta,\tilde{E_1},\tilde{E_2},\cdots,\tilde{E_k}  $ be a finite covering of $ \bar{E} $ extracted from this covering. Since $ E_1 \subset E_2 \subset \cdots \subset E_k $, the sets $ \Delta,\Delta_1,\cdots,\Delta_k,E_k $ also form a covering of $ \bar{E} $ and hence
+	\begin{equation}
+		\mu(E)\leqslant \mu(\bar{E}) \leqslant \mu(E_k)+\mu(\Delta)+\mu(\Delta_1)+\cdots+\mu(\Delta_k)<\mu(E_k)+2\varepsilon \nonumber		
+	\end{equation}
+	It follows from this that $ \mu(E)\leqslant \lim\limits_{n \to \infty}\mu(E_n) $.\newpara
+	By hypotheses $ f(x) $ is bounded on $ E $, and let us denote that number be $ M $ such that $ |f(x)|\leqslant M $. From the additivity of the integral and the general estimate for the integral we obtain
+	\begin{equation}
+		|\int_{E}f(x)dx-\int_{E_n}f(x)dx|=|\int_{E \setminus E_n}f(x)dx|\leqslant M \mu(E \setminus E_n) \nonumber
+	\end{equation}
+\end{proof}
+\begin{Definition}
+	Let $ \{E_n\} $ be an exhaustion of the set $ E $ and suppose the function $ f:E \to \Real $ is integrable on the sets $ E_n \in \{E_n\} $. If the limit
+	\begin{equation}
+		\int_{E}f(x)dx \coloneqq \lim\limits_{n \to \infty}\int_{E_n}f(x)dx \nonumber
+	\end{equation}
+	exists and has a value independent of the choice of the sets in the exhaustion of $ E $, this limit is called the \textit{improper integral of $ f $ over $ E $}.
+\end{Definition}
+\begin{Proposition}
+	If a function $ f:E \to \Real $ is nonnegative and the limit of the improper integral exists for even one exhaustion $ \{E_n\} $ of the set $ E $, then the improper integral of $ f $ over $ E $ converges.
+\end{Proposition}
+\begin{proof}
+	Let $ \{E_k^\prime\} $ be a second exhaustion of $ E $ into elements on which $ f $ is integrable. The sets $ E_n^k \coloneqq E_k^\prime \cap E_n ,n=1,2,\cdots$ from an exhaustion of the set $ E^\prime_k $, and so it follows that
+\begin{equation}
+	\int_{E^\prime_k}f(x)dx = \lim\limits_{E^k_n}f(x)dx \leqslant \lim\limits_{n \to \infty}\int_{E_n}f(x)dx = A \nonumber
+\end{equation}
+Since $ f \geqslant 0 $ and $ E^\prime_k \subset E^\prime_{k+1}\subset E $, it follows that
+\begin{equation}
+	\exists \lim\limits_{k \to \infty}\int_{E^\prime_k}f(x)dx = B \leqslant A \nonumber
+\end{equation}
+But there is symmetry between the exhaustions $ \{E_n\} $ and $ \{E^\prime_k\} $, so that $ A \leqslant B $ also, and hence $ A = B $.
+\end{proof}
+\begin{Example}
+	Let's find the improper integral $ \int \int_{\Real^2}e^{-(x^2+y^2)}dx dy $ by using the sequence of disks $ E_n=\{(x,y)\in \Real^2|x^2+y^2<n^2 \} $ to exhaust $ \Real^2 $. After passing to polar coordinates we find easily that
+	\begin{equation}
+		\int\int_{E_n}e^{-(x^2+y^2)}dx dy = \int_{0}^{2 \pi}d\varphi \int_{0}^{n}e^{-r^2}dr = \pi (1-e^{-n^2})
+	\end{equation}
+	which tends to $ \pi $ as $ n \to \infty $.
+\end{Example}
 
 \chapter{Surfaces and Differential Forms in $ \Real^n $}
 \section{Surfaces in $ \Real^n $}
