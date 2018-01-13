@@ -1395,7 +1395,44 @@ Every path-connected space $ X $ is connected, but the converse does not hold.
 	To find $ t_n $, we proceed as follows: Given $ n $, choose $ u $ with $ 0<u<x(1/n) $ such that $ \sin(1/u)=(-1)^n $. Then use the intermediate value theorem to find $ t_n $ with $ 0<t_n<1/n $ such that $ x(t_n)=u $.
 \end{Example}	
 \section{Components and Local Connectedness}	
-	
+\begin{Definition}
+	Given $ X $, define an equivalence relation on $ X $ by setting $ x \sim y $ if there is a connected subspace of $ X $ containing both $ x $ and $ y $. The equivalence classes are called the \textit{components}(or the \textit{connected components}) of $ X $.
+\end{Definition}	
+\begin{Theorem}
+	The components of $ X $ are connected disjoint subspaces of $ X $ whose union is $ X $, such that each nonempty connected subspace of $ X $ intersects only one of them.
+\end{Theorem}
+\begin{Definition}
+	We define another equivalence relation on the space $ X $ by defining $ x \sim y $ if there is a path in $ X $ from $ x $ to $ y $. The equivalence classes are called the \textit{path components} of $ X $.
+\end{Definition}
+\begin{Theorem}
+	The path components of $ X $ are path-connected disjoint subspaces of $ X $ whose union is $ X $, such that each nonempty path-connected subspace of $ X $ intersects only one of them.
+\end{Theorem}	
+\begin{Example}
+	If $ \Quoziente $ is the subspace of $ \Real $ consisting of the rational numbers, then each component of $ \Quoziente $ consists of a single point. None of the components of $ \Quoziente $ are open in $ \Quoziente $.
+\end{Example}
+\begin{Definition}
+	A space $ X $ is said to ve \textit{locally connected at $ x $} if for every neighborhood $ U $ of $ x $, there is a connected neighborhood $ V $ of $ x $ contained in $ U $. If $ X $ is locally connected at each of its points, it is said simply to be \textit{locally connected}. Similarly, a space $ X $ is said to be \textit{locally path connected at $ x $} if for every neighborhood $ U $ of $ x $, there is a path-connected neighborhood $ V $ of $ x $ contained in $ U $. If $ X $ is locally path connected at each of its points, then it is said to be \textit{locally path connected}.
+\end{Definition}
+\begin{Theorem}
+	A space $ X $ is locally connected iff for every open set $ U $ of $ X $, each component of $ U $ is open in $ X $.
+\end{Theorem}
+\begin{proof}
+	Suppose that $ X $ is locally connected; let $ U $ be an open set in $ X $; let $ C $ be a component of $ U $. If $ x $ is a point of $ C $, we can choose a connected neighborhood $ V $ of $ x $ such that $ V \subset U $. Since $ V $ is connected, it must lie entirely in the component $ C $ of $ U $. Therefore, $ C $ is open in $ X $. \newpara
+	Conversely, suppose that components of open sets in $ X $ are open. Given a point $ x $ of $ X $ and a neighborhood $ U $ of $ x $, let $ C $ be the component of $ U $ containing $ x $. Now $ C $ is connected; since it is open in $ X $ by hypothesis, $ X $ is locally connected at $ x $.
+\end{proof}
+\begin{Theorem}
+	A space $ X $ is locally path connected iff for every open set $ U $ of $ X $, each path component of $ U $ is open in $ X $.
+\end{Theorem}
+\begin{Theorem}
+	If $ X $ is a topological space, each path component of $ X $ lies in a component of $ X $. If $ X $ is locally path connected, then the components and the path components of $ X $ are the same.
+\end{Theorem}
+\begin{proof}
+	Let $ C $ be a component of $ X $; let $ x $ be a point of $ C $; let $ P $ be the path component of $ X $ containing $ x $. Since $ P $ is connected, $ P \subset C $. We wish to show that if $ X $ is locally path connected, $ P=C $. Suppose that $ P \subsetneq C$. Let $ Q $ denote the union of all the path components of $ X $ that are different from $ P $ and intersect $ C $; each of them necessarily lies in $ C $, so that
+	\begin{equation}
+		C = P \cup Q \nonumber
+	\end{equation}
+	Because $ X $ is locally path connected, each path component of $ X $ is open in $ X $. Therefore, $ P $ and $ Q $ are open in $ X $, so they constitute a separation of $ C $. This contradicts the fact that $ C $ is connected.
+\end{proof}
 	
 	
 	

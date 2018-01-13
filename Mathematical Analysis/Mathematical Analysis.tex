@@ -5361,6 +5361,32 @@ But there is symmetry between the exhaustions $ \{E_n\} $ and $ \{E^\prime_k\} $
 	\end{equation}
 	which tends to $ \pi $ as $ n \to \infty $.
 \end{Example}
+\subsection{The Comparison Test for Convergence of an Improper Integral}
+\begin{Proposition}
+	Let $ f $ and $ g $ be functions defined on the set $ E $ and integrable over exactly the same measurable subsets of it, and suppose $ |f(x)| \leqslant g(x) $ on $ E $. If the improper integral $ \int_{E}g(x)dx $ converges, then the integrals $ \int_{E}|f|(x)dx $ and $ \int_{E}f(x)dx $ also converge.
+\end{Proposition}
+\begin{proof}
+	Let $ \{E_n\} $ be an exhaustion of $ E $ on whose elements both $ g $ and $ f $ are integrable. It follows from the Lebesgue criterion that the function $ |f| $ is integrable on the set $ E_n ,n\in \Natural$, and so we can write
+	\begin{align}
+		\int_{E_{n+k}}|f|(x)dx - \int_{E_n}|f|(x)dx &= \int_{E_{n+k}\setminus E_n}|f|(x)dx \leqslant \\
+		&\leqslant \int_{E_{n+k}\setminus E_n} = 	\int_{E_{n+k}}g(x)dx - \int_{E_n}g(x)dx \nonumber
+	\end{align}
+	where $ k $ and $ n $ are any natural numbers. Then the integral $ \int_{E}|f|(x)dx $ converges. \newpara
+	Now consider the functions $ f_+ \coloneqq \frac{1}{2}(|f|+f) $ and $ f_-\coloneqq \frac{1}{2}(|f|-f) $. Obviously $ 0 \leqslant f_+ \leqslant |f| $ and $ 0 \leqslant f_- \leqslant |f| $. By what has just been proved, the improper integral of $ f_+ $ and $ f_- $ over $ E $ both converge. But $ f=f_+ - f_- $, and hence the improper integral of $ f $ over the same set converges as well and is equal to the difference of the integrals of $ f_+ $ and $ f_- $.
+\end{proof}
+\subsection{Change of Variable in an Improper Integral}
+\begin{Theorem}
+	Let $ \varphi:D_t \to D_x $ be a diffeomorphism of the open set $ D_t \subset \Real_t^n $ onto the set $ D_x \subset \Real_x^n $ of the same type, and let $ f:D_x  \to \Real $ be a integrable on all measurable compact subsets of $ D_x $. If the improper integral $ \int_{D_x}f(x)dx $ converges, then the integral $ \int_{D_t}((f \circ \varphi)|\det \varphi^\prime|)(t)dt $ also converges and has the same value.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Theorem}
+	Let $ \varphi:D_t \to D_x $ be a mapping of the open sets $ D_t $ and $ D_x $. Assume that there are subsets $ S_t $ and $ S_x $ of measure zero contained in $ D_t $ and $ D_x $ respectively such that $ D_t \setminus S_t $ and $ D_x \setminus S_x $ are open sets and $ \varphi $ is a diffeomorphism of the former onto the latter.Under these hypotheses, if the improper integral $ \int_{D_x}f(x)dx $ converges, then the integral $ \int_{D_t \setminus S_t}((f \circ \varphi)|\det \varphi^\prime|)(t)dt $ also converges to the same value. If in addition $ |\det \varphi^\prime| $ is defined and bounded on compact subsets of $ D_t $, then $ (f \circ \varphi)|\det \varphi^\prime| $ is improperly integrable over the set $ D_t $, and the following equality holds:
+	\begin{equation}
+		\int_{D_x}f(x)dx = \int_{D_t \setminus S_t}((f \circ \varphi)|\det \varphi^\prime|)(t)dt \nonumber
+	\end{equation}
+\end{Theorem}
 
 \chapter{Surfaces and Differential Forms in $ \Real^n $}
 \section{Surfaces in $ \Real^n $}

@@ -230,6 +230,8 @@
 \contentsline {subsubsection}{Invariance of the Integral}{146}{section*.71}
 \contentsline {subsubsection}{Negligible Sets}{147}{section*.72}
 \contentsline {section}{\numberline {9.6}Improper Multiple Integrals}{147}{section.9.6}
+\contentsline {subsection}{\numberline {9.6.1}The Comparison Test for Convergence of an Improper Integral}{149}{subsection.9.6.1}
+\contentsline {subsection}{\numberline {9.6.2}Change of Variable in an Improper Integral}{149}{subsection.9.6.2}
 \contentsline {chapter}{\numberline {10}Surfaces and Differential Forms in $ \mathbb {R}^n $}{151}{chapter.10}
 \contentsline {section}{\numberline {10.1}Surfaces in $ \mathbb {R}^n $}{151}{section.10.1}
 \contentsline {section}{\numberline {10.2}Orientation of a Surface}{151}{section.10.2}
