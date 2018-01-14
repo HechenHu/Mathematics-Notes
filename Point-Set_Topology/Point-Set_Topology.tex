@@ -1433,7 +1433,120 @@ Every path-connected space $ X $ is connected, but the converse does not hold.
 	\end{equation}
 	Because $ X $ is locally path connected, each path component of $ X $ is open in $ X $. Therefore, $ P $ and $ Q $ are open in $ X $, so they constitute a separation of $ C $. This contradicts the fact that $ C $ is connected.
 \end{proof}
-	
+
+\section{Compact Spaces}
+\begin{Definition}
+	A space $ X $ is said to be \textit{compact} if every open covering $ \mathscr{A} $ of $ X $ contains a finite subcollection that also covers $ X $.
+\end{Definition}
+\begin{Definition}
+	If $ Y $ is a subspace of $ X $, a collection $ \mathscr{A} $ of subsets of $ X $ is said to \textit{cover} $ Y $ if the union of its elements contains $ Y $.
+\end{Definition}
+\begin{Lemma}
+	Let $ Y $ be a subspace of $ X $. Then $ Y $ is compact iff every covering of $ Y $ by sets open in $ X $ contains a finite subcollection covering $ Y $.
+\end{Lemma}
+\begin{Theorem}
+	Every closed subspace of a compact space is compact.
+\end{Theorem}
+\begin{proof}
+	Let $ Y $ be a closed subspace of the compact space $ X $. Given a covering $ \mathscr{A} $ of $ Y $ by sets open in $ X $, let us form an open covering $ \mathscr{B} $ of $ X $ by adjoining to $ \mathscr{A} $ the single open set $ X \setminus Y $, that is,
+	\begin{equation}
+		\mathscr{B}=\mathscr{A}\cup \{X \setminus Y \} \nonumber
+	\end{equation}
+	Some finite subcollection of $ \mathscr{B} $ covers $ X $. If this subcollection contains the set $ X \setminus Y $, discard $ X \setminus Y $; otherwise, leave the subcollection alone. The resulting collection is a finite subcollection of $ \mathscr{A} $ that covers $ Y $.
+\end{proof}	
+\begin{Theorem}
+	Every compact subspace of a Hausdorff space is closed.
+\end{Theorem}
+\begin{proof}
+	Let $ Y $ be a compact subspace of the Hausdorff space $ X $. We show that $ X \setminus Y $ is open. \newpara
+	Let $ x_0 $ be a point of $ X \setminus Y $. We show there is a neighborhood of $ x_0 $ that is disjoint from $ Y $. For each point $ y $ of $ Y $, let us choose disjoint neighborhoods $ U_y $ and $ V_y $ of the points $ x_0 $ and $ y $, respectively. The collection $ \{V_y|y\in Y \} $ is a covering of $ Y $ by sets open in $ X $; therefore, finitely many of them $ V_{y1},\cdots,V_{yn} $ cover $ Y $. The open set
+	\begin{equation}
+		V=V_{y1}\cup \cdots \cup V_{yn} \nonumber
+	\end{equation}
+	contains $ Y $, and it is disjoint from the open set
+	\begin{equation}
+		U=U_{y1}\cap \cdots \cap U_{yn} \nonumber
+	\end{equation}
+	formed by taking the intersection of the corresponding neighborhoods of $ x_0 $. Then $ U $ is a neighborhood of $ x_0 $ disjoint from $ Y $, as desired.
+\end{proof}
+\begin{Theorem}
+	The image of a compact space under a continuous map is compact.
+\end{Theorem}
+\begin{proof}
+	Let $ f:X \to Y $ be continuous; let $ X $ be compact. Let $ \mathscr{A} $ be a covering of the set $ f(X) $ by sets open in $ Y $. The collection
+	\begin{equation}
+		\{f^{-1}(A)|A \in \mathscr{A} \} \nonumber
+	\end{equation}
+	is a collection of sets covering $ X $; these sets are open in $ X $ because $ f $ is continuous. Hence finitely many of them, say
+	\begin{equation}
+		f^{-1}(A_1),\cdots,f^{-1}(A_n) \nonumber
+	\end{equation}
+	cover $ X $. Then the sets $ A_1,\cdots,A_n $ cover $ f(X) $.
+\end{proof}
+\begin{Theorem}
+	Let $ f:X \to Y $ be a bijective continuous function. If $ X $ is compact and $ Y $ is Hausdorff, then $ f $ is a homeomorphism.
+\end{Theorem}
+\begin{proof}
+	We shall prove that images of closed sets of $ X $ under $ f $ are closed in $ Y $; this will prove continuity of the map $ f^{-1} $. If $ A $ is closed in $ X $, then $ A $ is compact, and $ f(A) $ is compact. Since $ Y $ is Hausdorff, $ f(A) $ is closed in $ Y $.
+\end{proof}
+\begin{Lemma}[The Tube Lemma]
+	Consider the product space $ X \times Y $, where $ Y $ is compact. If $ N $ is an open set of $ X \times Y $ containing the slice $ x_0 \times Y $ of $ X \times Y $, then $ N $ contains some \textit{tube} $ W \times Y $ about $ x_0 \times Y $, where $ W $ is a neighborhood of $ x_0 $ in $ X $.
+\end{Lemma}
+\begin{proof}
+	Let us cover $ x_0 \times Y $ by basis elements $ U \times V $ for the topology of $ X \times Y $ lying in $ N $. The space $ x_0 \times Y $ is compact, being homeomorphic to $ Y $. Therefore, we can cover $ x_0 \times Y $ by finitely many such basis elements
+	\begin{equation}
+		U_1 \times V_1 ,\cdots ,U_n \times V_n \nonumber
+	\end{equation}
+	Now we assume that each of the basis elements $ U_i \times V_i $ actually intersects $ x_0 \times Y $, since otherwise that basis element would be superfluous; we could discard it from the finite collection and still have a covering of $ x_0 \times Y $. Define
+	\begin{equation}
+		W = U_1 \cap \cdots \cap U_n \nonumber
+	\end{equation}
+	The set $ W $ is open, and it contains $ x_0 $ because each set $ U_i \times V_i $ intersects $ x_0 \times Y $. \newpara
+	We assert that the sets $ U_i \times V_i $, which were chosen to cover the slice $ x_0 \times Y $, actually cover the tube $ W \times Y $. Let $ x \times y $ be a point of $ W \times Y $. Consider the point $ x_0 \times y $ of the slice $ x_0 \times Y $ having the same $ y $-coordinate as this point. Now $ x_0 \times y $ belongs to $ U_i \times V_i $ for some $ i $, so that $ y \in V_i $. But $ x \in U_j $ for every $ j $ since $ x \in W $. Therefore, we have $ x \times y \in U_i \times V_i $, as desired.\newpara
+	Since all the sets $ U_i \times V_i $ lie in $ N $, and since they cover $ W \times Y $, the tube $ W \times Y $ lies in $ N $ also.
+\end{proof}
+\begin{Theorem}
+	The product of finitely many compact spaces in compact.
+\end{Theorem}
+\begin{proof}
+	Let $ X $ and $ Y $ be compact spaces. Let $ \mathscr{A} $ be an open covering of $ X \times Y $. Given $ x_0 \in X $, the slice $ x_0 \times Y $ is compact and may therefore be covered by finitely many elements $ A_1,\cdots,A_m $ of $ \mathscr{A}  $. Their union $ N= A_1 \cup \cdots \cup A_m $ is an open set containing $ x_0 \times Y $; by the preceding lemma, the open set $ N $ contains a tube $ W \times Y $ about $ x_0 \times Y $, where $ W $ is open in $ X $. Then $ W \times Y $ is covered by finitely many elements $ A_1,\cdots,A_m $ of $ \mathscr{A} $. \newpara
+	Thus, for each $ x \in X $, we can choose a neighborhood $ W_x $ of $ x $ such that the tube $ W_x \times Y $ can be covered by finitely many elements of $ \mathscr{A} $. The collection of all the neighborhoods $ W_x $ is an open covering of $ X $; therefore by compactness of $ X $, there exists a finite subcollection
+	\begin{equation}
+		\{W_1,\cdots,W_k \} \nonumber
+	\end{equation}
+	covering $ X $. The union of the tubes
+	\begin{equation}
+		W_1 \times Y,\cdots,W_k \times Y \nonumber
+	\end{equation}
+	is all of $ X \times Y $; since each may be covered by finitely many elements of $ \mathscr{A} $, so may $ X \times Y $ be covered. The theorem itself follows by induction.
+\end{proof}
+\begin{Definition}
+	A collection $ \mathscr{C} $ of subsets of $ X $ is said to have te \textit{finite intersection property} if for every finite subcollection
+	\begin{equation}
+		\{C_1,\cdots,C_n \} \nonumber
+	\end{equation}
+	of $ \mathscr{C} $, the intersection $ C_1 \cap \cdots \cap C_n $ is nonempty.
+\end{Definition}
+\begin{Theorem}
+	Let $ X $ be a topological space. Then $ X $ is compact iff for every collection $ \mathscr{C} $ of closed sets in $ X $ having the finite intersection property, the intersection $ \bigcap_{C \in \mathscr{C}C} $ of all the elements of $ \mathscr{C} $ is nonempty.
+\end{Theorem}
+\begin{proof}
+	Given a collection $ \mathscr{A} $ of subsets of $ X $, let
+	\begin{equation}
+		\mathscr{C}=\{X \setminus A|A \in \mathscr{A} \} \nonumber
+	\end{equation}
+	be the collection of their complements. Then the following statements hold:
+	\begin{enumerate}
+		\item $ \mathscr{A} $ is a collection of open sets iff $ \mathscr{C} $ is a collection of closed sets. 
+		\item The collection $ \mathscr{A} $ covers $ X $ iff the intersection $ \bigcap_{C \in \mathscr{C}}C $ of all the elements of $ \mathscr{C} $ is empty.
+		\item The finite subcollection $ \{A_1,\cdots,A_n \} $ of $ \mathscr{A} $ covers $ X $ iff the intersection of the corresponding elements $ C_i = X \setminus A_i $ of $ \mathscr{C} $ is empty.
+	\end{enumerate}
+The first statement is trivial, while the second and third follow from DeMorgan's law
+\begin{equation}
+	X \setminus(\bigcup_{\alpha \in J}A_\alpha) = \bigcap_{\alpha \in J}(X \setminus A_\alpha) \nonumber
+\end{equation}
+The contrapositive statement of compactness is that "Given any collection $ \mathscr{A} $ of open sets, if no finite subcollection of $ \mathscr{A} $ covers $ X $, then $ \mathscr{A} $ does not cover $ X $." Letting $ \mathscr{C} $ be, as earlier, the collection $ \{X\setminus A|A \in \mathscr{A} \} $ and applying $ (1)-(3) $, we see that this statement is equivalent to the condition of our theorem.
+\end{proof}
 	
 	
 	

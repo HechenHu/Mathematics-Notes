@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 JAN 2018 19:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 JAN 2018 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1141,9 +1141,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `Point-Set_Topology.toc'.
 
- [3] [4
-
-]
+ [3] [4]
  1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 57--64
@@ -1161,6 +1159,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--78
  []
 
 [1
+
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1
 .1}) has been already used, duplicate ignored
@@ -1364,7 +1363,7 @@ ier (name{equation.2.5.1}) has been already used, duplicate ignored
                    \relax 
 l.560 	\begin{equation}
                        
-<Convex_polygon_illustration1.png, id=320, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration1.png, id=325, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration1.png Graphic file (type png)
 
 <use Convex_polygon_illustration1.png>
@@ -1375,7 +1374,7 @@ Package pdftex.def Info: Convex_polygon_illustration1.png used on input line 57
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Convex_polygon_illustration2.png, id=322, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration2.png, id=327, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration2.png Graphic file (type png)
 
 <use Convex_polygon_illustration2.png>
@@ -1985,21 +1984,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 1420--1422
  []
 
 [46]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1454.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1454.
+Underfull \hbox (badness 10000) in paragraph at lines 1461--1463
+
+ []
+
+[47pdfTeX warning (ext4): destination with the same identifier (name{equation.3
+.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1491 \end{proof}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.3.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1491 \end{proof}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.3.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1491 \end{proof}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{equation.3.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1491 \end{proof}
+                  ]pdfTeX warning (ext4): destination with the same identifier 
+(name{equation.3.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1497 	\begin{equation}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.3.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1501 	\begin{equation}
+                        
+Underfull \hbox (badness 10000) in paragraph at lines 1503--1507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1503--1507
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.4.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1514 	\begin{equation}
+                        
+Underfull \hbox (badness 10000) in paragraph at lines 1512--1514
+
+ []
+
+[48]pdfTeX warning (ext4): destination with the same identifier (name{equation.
+3.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1518 	\begin{equation}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.3.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1525 	\begin{equation}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.3.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1535 	\begin{equation}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.3.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1545 \begin{equation}
+                        [49]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1567.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1567.
  (./Point-Set_Topology.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1454.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1454.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1567.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1567.
 
 Package rerunfilecheck Info: File `Point-Set_Topology.out' has not changed.
-(rerunfilecheck)             Checksum: 5C7F7306163E624A81BDE852887E33EC;2273.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1454.
+(rerunfilecheck)             Checksum: 45EF2907FF7B72A6057A03B5B01044E4;2334.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1567.
  ) 
 Here is how much of TeX's memory you used:
- 19490 strings out of 492995
- 367506 string characters out of 6132704
+ 19505 strings out of 492995
+ 367664 string characters out of 6132704
  439144 words of memory out of 5000000
- 22413 multiletter control sequences out of 15000+600000
+ 22414 multiletter control sequences out of 15000+600000
  125452 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,84p,1193b,1135s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2028,10 +2106,10 @@ sy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb>
-Output written on Point-Set_Topology.pdf (50 pages, 610488 bytes).
+Output written on Point-Set_Topology.pdf (53 pages, 622301 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
- 601 compressed objects within 7 object streams
- 233 named destinations out of 1000 (max. 500000)
- 271 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 716 PDF objects out of 1000 (max. 8388607)
+ 628 compressed objects within 7 object streams
+ 247 named destinations out of 1000 (max. 500000)
+ 279 words of extra memory for PDF output out of 10000 (max. 10000000)
 
