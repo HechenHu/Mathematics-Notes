@@ -1547,9 +1547,101 @@ The first statement is trivial, while the second and third follow from DeMorgan'
 \end{equation}
 The contrapositive statement of compactness is that "Given any collection $ \mathscr{A} $ of open sets, if no finite subcollection of $ \mathscr{A} $ covers $ X $, then $ \mathscr{A} $ does not cover $ X $." Letting $ \mathscr{C} $ be, as earlier, the collection $ \{X\setminus A|A \in \mathscr{A} \} $ and applying $ (1)-(3) $, we see that this statement is equivalent to the condition of our theorem.
 \end{proof}
-	
-	
-	
+\section{Compact Subspaces of the Real Line}
+\begin{Theorem}
+	Let $ X $ be a simply ordered set having the least upper bound property. In the order topology, each closed interval in $ X $ is compact.
+\end{Theorem}
+\begin{proof}
+	Given $ a<b $, let $ \mathscr{A} $ be a covering of $ [a,b] $ by sets open in $ [a,b] $ in the subspace topology. We wish to prove the existence of a finite subcollection of $ \mathscr{A} $ covering $ [a,b] $.
+	\begin{enumerate}
+		\item We prove that if $ x $ is a point of $ [a,b] $ different from $ b $, then there is a point $ y>x $ of $ [a,b] $ such that the interval $ [x,y] $ can be covered by at most two elements of $ \mathscr{A} $. If $ x$ has an immediate successor in $ X $, let $ y $ be this immediate successor. Then $ [x,y] $ consists of the two points $ x $ and $ y $, so that it can be covered by at most two elements of $ \mathscr{A} $. If $ x $ has no immediate successor in $ X $, choose an element $ A $ of $ \mathscr{A} $ containing $ x $. Since $ A $ is open and $ x \neq b $, there is an interval of the form $ [x,c) $ for some $ c $ in $ [a,b] $. Choose a point $ y $ in $ (x,c) $; then the interval $ [x,y] $ is covered by the single element $ A $ of $ \mathscr{A} $.
+		\item Let $ C $ be the set of all points $ y>a $ of $ [a,b] $ such that the interval $ [a,y] $ can be covered by finitely many elements of $ \mathscr{A} $. Applying step $ 1 $ to the case $ x=a $, we see that $ C $ is not empty. Let $ c $ be the least upper bound of $ C $. Then $ a<c \leqslant b $.
+		\item We show that $ c $ belongs to $ C $; that is, we show that the interval $ [a,c] $ can be covered by finitely many elements of $ \mathscr{A} $. Choose an element $ A $ of $ \mathscr{A} $ containing $ c $; since $ A $ is open, it contains an interval of the form $ (d,c] $ for some $ d $ in $ [a,b] $. If $ c $ is not in $ C $, there must be a point $ z $ of $ C $ lying in the interval $ (d,c) $, because otherwise $ d $ would be a smaller upper bound on $ C $ than $ c $. Since $ z $ is in $ C $, the interval $ [a,z] $ can be covered by finitely many, say $ n $, elements of $ \mathscr{A} $. Now $ [z,c] $ lies in the single element $ A $ of $ \mathscr{A} $(since $ A $ contains $ (d,c] $), hence $ [a,c]=[a,z]\cup[z,c] $ can be covered by $ n+1 $ elements of $ \mathscr{A} $. Thus $ c $ is in $ C $, contrary to assumption.
+		\item We show that $ c=b $, and our theorem is proved. Suppose that $ c<b $. Applying step $ 1 $ to the case $ x=c $, we conclude that there exists a point $ y>c $ of $ [a,b] $ such that the interval $ [c,y] $ can be covered by finitely many elements of $ \mathscr{A} $. We proved in step $ 3 $ that $ c $ is in $ C $, so $ [a,c] $ can be covered by finitely many elements of $ \mathscr{A} $. Therefore, the interval $ [a,y]=[a,c]\cup[c,y] $ can also be covered by finitely many elements of $ \mathscr{A} $. This means that $ y $ is in $ C $, contradicting the fact that $ c $ is an upper bound on $ C $.
+	\end{enumerate}
+\end{proof}
+\begin{Corollary}
+	Every closed interval in $ \Real $ is compact.
+\end{Corollary}
+
+\begin{Theorem}
+	A subspace $ A $ of $ \Real^n $ is compact iff it is closed and is bounded in the euclidean metric $ d $ or the square metric $ \rho $.
+\end{Theorem}
+\begin{proof}
+	It will suffice to consider only the metric $ \rho $; the inequalities
+	\begin{equation}
+		\rho(x,y) \leqslant d(x,y)\leqslant \sqrt{n}\rho(x,y) \nonumber
+	\end{equation}
+	imply that $ A $ is bounded under $ d $ iff it is bounded under $ \rho $. \newpara
+	Suppose that $ A $ is compact. Then it is closed. Consider the collection of open sets
+	\begin{equation}
+		\{B_\rho(\vec{0},m)|m \in \Zahlen_+ \} \nonumber
+	\end{equation}
+	whose union is all of $ \Real^n $. Some finite subcollection covers $ A $. It follows that $ A \subset B_{\rho}(\vec{0},M) $ for some $ M $. Therefore, for any two points $ x $ and $ y $ of $ A $, we have $ \rho(x,y)\leqslant 2M $. Thus $ A $ is bounded under $ \rho $. \newpara
+	Conversely, suppose that $ A $ is closed and bounded under $ \rho $; suppose that $ \rho(x,y)\leqslant N $ for every pair $ x,y $ of points of $ A $. Choose a point $ x_0 $ of $ A $, and let $ \rho(x_0,\vec{0}) =b$ . The triangle inequality implies that $ \rho(x,\vec{0})\leqslant N+b $ for every $ x $ in $ A $. If $ P=N+b $, then $ A $ is a subset of the cube $ [-P,P]^n $, which is compact. Being closed, $ A $ is also compact.
+\end{proof}
+\begin{Theorem}[Extreme Value Theorem]
+	Let $ f:X \to Y $ be continuous, where $ Y $ is an ordered set in the order topology. If $ X $ is compact, the there exist points $ c $ and $ d $ in $ X $ such that $ f(c)\leqslant f(x)\leqslant f(d) $ for every $ x \in X $.
+\end{Theorem}	
+\begin{proof}
+	Since $ f $ is continuous and $ X $ is compact, $ A=f(X) $ is compact. We show that $ A $ has a largest element $ M $ and a smallest element $ m $. \newpara
+	If $ A $ has no largest element, then the collection
+	\begin{equation}
+		\{(-\infty,a)|a \in A \} \nonumber
+	\end{equation}
+	forms a covering of $ A $. Since $ A $ is compact, some finite subcollection
+	\begin{equation}
+		\{(-\infty,a_1),\cdots,(-\infty,a_n) \} \nonumber
+	\end{equation}
+	covers $ A $. If $ a_i $ is the largest of the elements $ a_1,\cdots,a_n $, then $ a_i $ belongs to none of these sets, contrary to the fact that they cover $ A $. A similar argument shows that $ A $ has a smallest element.
+\end{proof}
+\begin{Definition}
+	Let $ (X,d) $ be a metric space; let $ A $ be a nonempty subset of $ X $. For each $ x \in X $, we define the \textit{distance from $ x $ to $ A $} by the equation
+	\begin{equation}
+		d(x,A)=\inf\{d(x,a)|ain A \}  \nonumber
+	\end{equation}
+\end{Definition}
+For a fixed $ A $, the function $ d(x,A) $ is a continuous function of $ x $.
+\begin{Lemma}[The Lebesgue Number Lemma]
+	Let $ \mathscr{A} $ be an open covering of the metric space $ (X,d) $. If $ X $ is compact, there is a $ \delta>0 $ such that for each subset of $ X $ having diameter less than $ \delta $, there exists an element of $ \mathscr{A} $ containing it.
+\end{Lemma}
+The number $ \delta $ is called a \textit{Lebesgue number} for the covering $ \mathscr{A} $.
+\begin{proof}
+	Let $ \mathscr{A} $ be an open covering of $ X $ and assume that $ X $ is not one of its elements.\newpara
+	Choose a finite subcollection $ \{A_1,\cdots,A_n \} $ of $ \mathscr{A} $ that covers $ X $. For each $ i $, set $ C_i = X \setminus A_i $, and define $ f:X \to \Real $ by letting $ f(x) $ be the average of the numbers, that is
+	\begin{equation}
+		f(x)=\frac{1}{n}\sum_{i=1}^{n}d(x,C_i) \nonumber
+	\end{equation}
+	We show that $ f(x) >0$ for all $ x $. Given $ x \in X $, choose $ i $ so that $ x \in A_i $. Then choose $ \varepsilon $ so that the $ \varepsilon $-neighborhood of $ x $ lies in $ A_i $. Then $ d(x,C_i)\geqslant \varepsilon $, so that $ f(x)\geqslant \varepsilon/n $. Alternatively, suppose that $ f(x)=0 $ for some $ x $. Then it follows that $ x $ has to be belong to all $ C_i $. However, since $ A_i $ form a finite covering of $ X $, it turns out that the intersection of all $ C_i $ must be empty.\newpara
+	Since $ f $ is continuous. it has a minimum value $ \delta $; we show that $ \delta $ is our required Lebesgue number. Let $ B $ be a subset of $ X $ of diameter less than $ \delta $. Choose a point $ x_0 \in B $; then $ B $ lies in the $ \delta $-neighborhood of $ x_0 $. Now
+	\begin{equation}
+		\delta \leqslant f(x_0) \leqslant d(x_0,C_m) \nonumber
+	\end{equation}
+	where $ d(x_0,C_m) $ is the largest of the numbers $ d(x_0,C_i) $. Then the $ \delta $-neighborhood of $ x_0 $ is contained in the element $ A_m=X \setminus C_m $ of the covering $ \mathscr{A} $.
+\end{proof}
+\begin{Theorem}[Uniform Continuity Theorem]
+	Let $ f:X \to Y $ be a continuous map of the compact metric space $ (X,d_X) $ to the metric space $ (Y,d_Y) $. Then $ f $ is uniformly continuous.
+\end{Theorem}	
+\begin{proof}
+	Given $ \varepsilon>0 $, take the open covering of $ Y $ by balls $ B(y,\varepsilon/2) $. Let $ \mathscr{A} $ be the open covering of $ X $ by the inverse images of these balls under $ f $. Choose $ \delta $ to be a Lebesgue number for the covering $ \mathscr{A} $. Then if $ x_1 $ and $ x_2 $ are two points of $ X $ such that $ d_X(x_1,x_2)<\delta $, the two-point set $ \{x_1,x_2\} $ has diameter less than $ \delta $, so that its image $ \{f(x_1),f(x_2) \} $ lies in some ball $ B_(y,\varepsilon/2) $. Then $ d_Y(f(x_1),f(x_2) <\varepsilon$, as desired.
+\end{proof}
+\begin{Definition}
+	If $ X $ is a space, a point $ x $ of $ X $ is said to be an \textit{isolated point} of $ X $ if the one-point set $ \{x\} $ is open in $ X $.
+\end{Definition}
+\begin{Theorem}
+	Let $ X $ be a nonempty compact Hausdorff space. If $ X $ has no isolated points, then $ X $ is uncountable.
+\end{Theorem}
+\begin{proof}
+	\begin{enumerate}
+		\item We show first that given any nonempty open set $ U $ of $ X $ and any point $ x $ of $ X $, there exists a nonempty open set $ V $ contained in $ U $ such that $ x \notin \bar{V} $.\newpara
+		Choose a point $ y $ of $ U $ different from $ x $; this is possible if $ x $ is in $ U $ because $ x $ is not an isolated point of $ X $ and it is possible if $ x $ is not in $ U $ simply because $ U $ is nonempty. Now choose disjoint open sets $ W_1 $ and $ W_2 $ about $ x $ and $ y $, respectively. Then the set $ V=W_2 \cap U $ is the desired open set; it is contained in $ U $, it is nonempty because it contains $ y $, and its closure does not contain $ x $(if not so, then $ x $ must be a boundary point, and in this case every neighborhood of $ x $ intersects $ V $, contradicts our construction). 
+		\item We show that given $ f:\Zahlen_+ \to X $, the function $ f $ is not surjective. It follows that $ X $ is uncountable. \newpara
+		Let $ x_n=f(n) $. Apply step $ 1 $ to the nonempty open set $ U=X $ to choose a nonempty open set $ V_1\subset X $ such that $ \bar{V_1} $ does not contain $ x_1 $. In general, given $ V_{n-1} $ open and nonempty, choose $ V_n $ to be a nonempty open set such that $ V_n \subset V_{n-1} $ and $ \bar{V_n} $ does not contain $ x_n $. Consider the nested sequence formed by the closure of $ V_i $. Because $ X $ is compact, there is a point $ x \in \bigcap \bar{V_n} $. Now $ x $ cannot equal $ x_n $ for any $ n $, since $ x $ belongs to $ \bar{V_n} $ and $ x_n $ does not.
+	\end{enumerate}
+\end{proof}
+\begin{Corollary}
+	Every closed interval in $ \Real $ is uncountable.
+\end{Corollary}
 	
 	
 	
