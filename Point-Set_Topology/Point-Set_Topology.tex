@@ -1644,6 +1644,74 @@ The number $ \delta $ is called a \textit{Lebesgue number} for the covering $ \m
 \end{Corollary}
 	
 	
+\section{Limit Point Compactness}	
+\begin{Definition}
+	A space $ X $ is said to be \textit{limit point compact} if every infinite subset of $ X $ has a limit point. Sometimes this property is also called the "Fr\'echet compactness"  or the "Bolzano-Weierstrass property".
+\end{Definition}
+\begin{Theorem}
+	Compactness implies limit point compactness, but not conversely.
+\end{Theorem}
+\begin{proof}
+	Let $ X $ be a compact space. Given a subset $ A $ of $ X $, we prove the contrapositive--if $ A $ has no limit point, then $ A $ must be finite. \newpara
+	Suppose $ A $ has no limit point. Then $ A $ contains all its limit points, so that $ A $ is closed. Furthermore, for each $ a \in A $ we can choose a neighborhood $ U_a $ of $ a $ such that $ U_a $ intersects $ A $ in the point $ a $ alone. The space $ X $ is covered by the open set $ X \setminus A $ and the open sets $ U_a $; being compact, it can be covered by finitely many of these sets. Since $ X \setminus A $ does not intersect $ A $, and each set $ U_a $ contains only one point of $ A $, the set $ A $ must be finite.
+\end{proof}
+\begin{Example}
+	Let $ Y $ consist of two points; give $ Y $ the trivial topology. Then the space $ X = \Zahlen_+ \times Y $ is limit point compact, for every nonempty subset of $ X $ has a limit point. It is not compact, for the covering of $ X $ by the open sets $ U_n = \{n\}\times Y $ has no finite subcollection covering $ X $.
+\end{Example}
+\begin{Definition}
+	The topological space $ X $ is said to be \textit{sequentially compact} if every sequence of points of $ X $ has a convergent subsequence.
+\end{Definition}	
+\begin{Theorem}
+Let $ X $ be a metrizable space. Then the following are equivalent:
+\begin{enumerate}
+	\item $ X $ is compact.
+	\item $ X $ is limit point compact.
+	\item $ X $ is sequentially compact.
+\end{enumerate}
+\end{Theorem}
+\begin{proof}
+	We show that $ (2)\Rightarrow(3) $. Assume that $ X $ is limit point compact. Given a sequence $ (x_n) $, consider the set $ A=\{x_n|n \in \Zahlen_+ \} $. If the set $ A $ is finite, then there is a point $ x $ such that $ x=x_n $ for infinitely many values of $ n $. In this case, the sequence itself converges trivially. On the other hand, if $ A $ is infinite, then $ A $ has a limit point $ x $. We define a subsequence of $ (x_n) $ converging to $ x $ as follows: First choose $ n_1 $ so that
+	\begin{equation}
+		x_{n_1}\in B(x,1) \nonumber
+	\end{equation}
+	Then suppose that the positive integer $ n_{i-1} $ is given. Because the ball $ B(x,1/i) $ intersects $ A $ in infinitely many points, we can choose an index $ n_i > n_{i-1} $ such that
+	\begin{equation}
+		x_{n_i} \in B(x,1/i) \nonumber
+	\end{equation}
+	Then the subsequence $ x_{n_1},x_{n_2},\cdots $ converges to $ x $. \newpara
+	Finally, we show that $ (3)\Rightarrow(1) $.
+	\begin{enumerate}
+		\item We show that if $ X $ is sequentially compact, then the Lebesgue number lemma holds for $ X $. Let $ \mathscr{A} $ be an open covering of $ X $. We assume that there is no $ \delta>0 $ such that each set of diameter less than $ \delta $ has an element of $ \mathscr{A} $ containing it, and derive a contradiction. Our assumption relies in particular that for each positive integer $ n $, there exists a set of diameter less than $ 1/n $ that is not contained in any element of $ \mathscr{A} $; let $ C_n $ be such a set. Choose a point $ x_n \in C_n $, for each $ n $. By hypothesis, some subsequence $ (x_{n_1}) $ of the sequence $ (x_n) $ converges, say to the point $ a $. Now $ a $ belongs to some element $ A $ of the collection $ \mathscr{A} $; because $ A $ is open, we may choose an $ \varepsilon>0 $ such that $ B(a,\varepsilon)\subset A $. If $ i $ is large enough that $ 1/n_{i} <\varepsilon/2$, then the set $ C_{n_i} $ lies in the $ \varepsilon/2 $ neighborhood of $ x_{n_i} $; if $ i $ is large enough that $ d(x_{n_i},a) < \varepsilon/2 $, then $ C_{n_i} $ lies in the $ \varepsilon $-neighborhood of $ a $. But this means that $ C_{n_i}\subset A $, contrary to hypothesis. 
+		\item We show that if $ X $ is sequentially compact, then given $ \varepsilon>0 $, there exists a finite covering of $ X $ by open $ \varepsilon $-balls. We will assume that there exists an $ \varepsilon>0 $ such that $ X $ cannot be covered by finitely many $ \varepsilon $-balls and use it to derive a contradiction. Construct a sequence of points $ x_n $ of $ X $ as follows: First, choose $ x_1 $ to be any point of $ X $. Noting that the ball $ B_(x_1,\varepsilon) $ is not all of $ X $(otherwise $ X $ could be covered by a single ball), choose $ x_2 $ to be a point of $ X $ not in $ B(x_1,\varepsilon) $. In general, given $ x_1,\cdots,x_n $, choose $ x_{n+1} $ to be a point not in the union
+		\begin{equation}
+			B(x_1,\varepsilon)\cup \cdots \cup B(x_n, \varepsilon) \nonumber
+		\end{equation}
+		using the fact that these balls do not cover $ X $. Note that by construction $ d(x_{n+1},x_i)\geqslant \varepsilon $ for $ i=1,\cdots,n $. Therefore, the sequence $ (x_n) $ can have no convergent subsequence; in fact, any ball of radius $ \varepsilon/2 $ can contain $ x_n $ for at most one value of $ n $.
+		\item Finally, we show that if $ X $ is sequentially compact, then $ X $ is compact. Let $ \mathscr{A} $ be an open covering of $ X $. Because $ X $ is sequentially compact, the open covering $ \mathscr{A} $ has a Lebesgue number $ \delta $. Let $ \varepsilon=\delta/3 $; use sequential compactness of $ X $ to find a finite covering of $ X $ by open $ \varepsilon $-balls. Each of these balls has diameter at most $ 2\delta/3 $, so it lies in an element of $ \mathscr{A} $. Choosing one such element of $ \mathscr{A} $ for each of these $ \varepsilon $-balls, we obtain a finite subcollection of $ \mathscr{A} $ that covers $ X $.
+	\end{enumerate}
+\end{proof}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

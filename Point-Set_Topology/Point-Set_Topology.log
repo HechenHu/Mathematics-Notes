@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 JAN 2018 20:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 JAN 2018 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1363,7 +1363,7 @@ ier (name{equation.2.5.1}) has been already used, duplicate ignored
                    \relax 
 l.560 	\begin{equation}
                        
-<Convex_polygon_illustration1.png, id=330, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration1.png, id=335, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration1.png Graphic file (type png)
 
 <use Convex_polygon_illustration1.png>
@@ -1374,7 +1374,7 @@ Package pdftex.def Info: Convex_polygon_illustration1.png used on input line 57
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Convex_polygon_illustration2.png, id=332, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration2.png, id=337, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration2.png Graphic file (type png)
 
 <use Convex_polygon_illustration2.png>
@@ -2140,22 +2140,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 1638--1640
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1655--1657
+
+ []
+
 [53]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1659.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1659.
+Underfull \hbox (badness 10000) in paragraph at lines 1680--1684
+
+ []
+
+[54pdfTeX warning (ext4): destination with the same identifier (name{equation.3
+.6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1721 \end{document}
+                     ]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1721.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1721.
  (./Point-Set_Topology.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1659.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1659.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1721.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1721.
 
 Package rerunfilecheck Info: File `Point-Set_Topology.out' has not changed.
-(rerunfilecheck)             Checksum: D388C4B0B740DA35A61763AE77781942;2415.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1659.
+(rerunfilecheck)             Checksum: D51E99F555BF896D0E9BA78EDB5EB512;2485.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1721.
  ) 
 Here is how much of TeX's memory you used:
- 19523 strings out of 492995
- 367837 string characters out of 6132704
+ 19534 strings out of 492995
+ 367947 string characters out of 6132704
  439144 words of memory out of 5000000
- 22415 multiletter control sequences out of 15000+600000
+ 22416 multiletter control sequences out of 15000+600000
  125452 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,84p,1193b,1135s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2184,10 +2200,10 @@ sy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb>
-Output written on Point-Set_Topology.pdf (57 pages, 636513 bytes).
+Output written on Point-Set_Topology.pdf (58 pages, 653834 bytes).
 PDF statistics:
- 753 PDF objects out of 1000 (max. 8388607)
- 661 compressed objects within 7 object streams
- 264 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 772 PDF objects out of 1000 (max. 8388607)
+ 679 compressed objects within 7 object streams
+ 274 named destinations out of 1000 (max. 500000)
+ 295 words of extra memory for PDF output out of 10000 (max. 10000000)
 
