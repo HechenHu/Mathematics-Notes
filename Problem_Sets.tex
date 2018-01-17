@@ -4,7 +4,7 @@
 \usepackage{/Users/HechenHu/Development/NoteTaking/Mathematics-Notes/Customized}
 
 \newenvironment{problem}[2][Problem]{\begin{trivlist}
-		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 
 \begin{document}
 	
@@ -12,59 +12,103 @@
 	\author{Hechen Hu}
 	\maketitle
 	
-	\section{Mathematical Analysis}
-	\begin{problem}{1}
-		Let $ f \in C^{(\infty)}(\Real) $. Show that for $ x \neq 0 $
-		\begin{equation}
-			\frac{1}{x^{n+1}}f^{(n)}(\frac{1}{x}) = (-1)^n \frac{d^n}{d x^n}(x^{n-1} f (\frac{1}{x})) \nonumber
-		\end{equation}
-	\end{problem}
-\begin{problem}{2}
-	Show that the function
-	\begin{equation}
-		f(x)=\begin{cases}
-		&\exp(-\frac{1}{(1+x)^2}-\frac{1}{(1-x)^2}) \text{ for }-1<x<1,\\
-		&0\quad \text{ for }1 \leqslant |x|
-		\end{cases}\nonumber
-	\end{equation}
-	is infinitely differentiable on $ \Real $.
+\section{Mathematical Analysis}
+\begin{problem}{1}
+	These questions deal with measure.
+	\begin{enumerate}
+		\item Show that a set of measure zero has no interior points.
+		\item Show that not having interior points by no means guarantees that a set is of measure zero.
+		\item Construct a set having measure zero whose closure is the entire space $ \Real^n $.
+	\end{enumerate}
 \end{problem}
-\begin{problem}{3}
-	Find $ \lim\limits_{x \to \infty} x[\frac{1}{e}-(\frac{x}{x+1})^x] $.
+\begin{problem}{2}
+	These questions deal with Riemann integrals.
+	\begin{enumerate}
+		\item Construct the analogue of the Dirichlet function in $ \Real^n $ and show that a bounded function $ f:I \to \Real $ equal to zero at almost every point of the interval $ I $ may still fail to belong to $ \mathcal{R}(I) $. 
+		\item Show that if $ f \in \mathcal{R}(I) $ and $ f(x)=0 $ at almost all points of the interval $ I $, then $ \int_{I}f(x)dx = 0 $.
+	\end{enumerate}
+\end{problem}
+\begin{problem}{3}(The Brunn-Minkowski inequality)
+	Given two nonempty sets $ A,B \subset \Real^n $, we form their vector sum in the sense of Minkowski $ A+B \coloneqq \{a+b|a \in A,b \in B \} $. Let $ V(E) $ denote the content of a set $ V(E)\subset \Real^n $.
+	\begin{enumerate}
+		\item Verify that if $ A $ and $ B $ are standard $ n $-dimensional intervals(parallelepipeds), then
+		\begin{equation}
+			V^{1/n}(A+B)\geqslant V^{1/n}(A)+V^{1/n}(B) \nonumber
+		\end{equation}
+		\item Now prove the preceding inequality for arbitrary measurable compact sets $ A $ and $ B $.
+	\end{enumerate}
 \end{problem}
 \begin{problem}{4}
-	Show that if a function $ f $ is defined and differentiable on an open interval $ I $ and $ [a,b]\subset I $, then\\
-	\textbf{a)} the function $ f^\prime(x) $ (even if it is not continuous) assumes on $ [a,b] $ all the values between $ f^\prime(a) $ and $ f^\prime (b) $ (\textit{the theorem of Darboux}). \\
-	\textbf{b)} if $ f^{\prime\prime} $ also exists in $ (a,b) $, then there is a point $ \xi \in (a,b) $ such that $ f^{\prime}(b)-f^\prime (a)=f^{\prime\prime}(\xi)(b-a) $.
+	These questions deal with functions and sets.
+	\begin{enumerate}
+		\item Construct a subset of the square $ I \subset \Real^2 $ such that on the one hand its intersection with any vertical line and any horizontal line consists of at most one point, while on the other hand its closure equals $ I $.
+		\item Construct a function $ f:I \to \Real $ for which both of the iterated integrals that occur in Fubini's theorem exist and equal, yet $ f \notin \mathcal{R}(I) $.
+	\end{enumerate}
+\end{problem}
+\begin{problem}{5}
+	Consider the sequence of integrals
+	\begin{equation}
+		F_0(x)=\int_{0}^{x}f(y)dy\qquad F_n(x)=\int_{0}^{x}\frac{(x-y)^n}{n!}f(y)dy \quad n\in \Natural \nonumber
+	\end{equation}
+	where $ f \in C(\Real,\Real) $.
+	\begin{enumerate}
+		\item Verify that $ F_n^\prime(x)=F_{n-1}(x) $, $ F_n^{(k)}(0)=0 $ if $ k \leqslant n $, and $ F_n^{n+1}(x)=f(x) $.
+		\item Show that
+		\begin{equation}
+			\int_{0}^{x}dx_1 \int_{0}^{x_1}dx_2 \cdots \int_{0}^{x_{n-1}}f(x_n)dx_n = \frac{1}{n!}\int_{0}^{x}(x-y)^n f(y)dy \nonumber
+		\end{equation}
+	\end{enumerate}
 \end{problem}
 
-\begin{problem}{5}
-	Let $ x=(x_1,\cdots,x_n) $ and $ \alpha = (\alpha_1,\cdots,\alpha_n) $, where $ x_i >0,\alpha_i>0 $ and $ \sum_{i=1}^{n}\alpha_i=1 $. For any number $ t \neq 0 $ we consider the \textit{mean of order $ t $ of the numbers $ x_1,\cdots,x_n $ with weight $ \alpha_i $}:
-	\begin{equation}
-		M_t(x,\alpha) = (\sum_{i=1}^{n}\alpha_i x^t_i)^{1/t} \nonumber
-	\end{equation} 
-	In particular, when $ \alpha_1 = \cdots = \alpha_n = \frac{1}{n} $, we obtain the harmonic, arithmetic, and quadratic means for $ t=-1,1,2 $ respectively.\newpara
-	Show that \\
-	\textbf{a)} $ \lim\limits_{t \to 0}M_t(x,\alpha)=x_1^{\alpha_1}\cdots x_n^{\alpha_n} $, that is, in the limit one can obtain the geometric mean; \\
-	\textbf{b)} $ \lim\limits_{t \to + \infty} M_t(x,\alpha)=\max_{1 \leqslant i \leqslant n}x_i$;\\
-	\textbf{c)} $ \lim\limits_{t \to - \infty} M_t(x,\alpha)=\min_{1 \leqslant i \leqslant n}x_i$;\\
-	\textbf{d)} $ M_t(x,\alpha) $ is a nondecreasing function of $ t $ on $ \Real $ and is strictly increasing if $ n>1 $ and the numbers $ x_i $ are all nonzero.\\
-	
-\end{problem}	
-	
-	
-\section{Abstract Algebra}	
+
+
+\section{Topology}
 \begin{problem}{1}
-	Prove the following proposition:
-	\begin{Proposition}
-		Let $ G $ be a semigroup. $ G $ is a group iff for all $ a,b\in G $ the equations $ ax=b $ and $ ya=b $ have solutions in $ G $.
-	\end{Proposition}
+Let $ X $ be a set.
+\begin{enumerate}
+		\item If $ \{\mathscr{T}_\alpha \} $ is a family of topologies on $ X $, show that $ \bigcap \mathscr{T}_\alpha $ is a topology on $ X $. Is $ \bigcup \mathscr{T}_\alpha $ a topology on $ X $?
+		\item Let $ \{\mathscr{T}_\alpha \} $ be a family of topologies on $ X $. Show that there is a unique smallest topology on $ X $ containing all the collections $ \mathscr{T}_\alpha $, and a unique largest topology contained in all $ \mathscr{T}_\alpha $.
+		\item If $ X=\{a,b,c \} $, let
+		\begin{equation}
+			\mathscr{T}_1 = \{\varnothing, X, \{ a\},\{a,b\} \}\quad \text{and}\quad \mathscr{T}_1 = \{\varnothing, X, \{ a\},\{b,c\} \} \nonumber
+		\end{equation}
+		Find the smallest topology containing $ \mathscr{T}_1 $ and $ \mathscr{T}_2 $, and the largest topology contained in $ \mathscr{T}_1 $ and $ \mathscr{T}_2 $.
+\end{enumerate}
 \end{problem}
 \begin{problem}{2}
-	Prove the following theorem:
-	\begin{Theorem}[Generalized Commutative Law]
-		If $ G $ is a commutative semigroup and $ a_1,\cdots,a_n \in G $, then for any permutation $ i_1,\cdots,i_n $ of $ 1,2,\cdots,n $, $ a_1 a_2 \cdots a_n = a_{i_1}a_{i_2}\cdots a_{i_n} $.
-	\end{Theorem}
+	Show that $ X $ is Hausdorff iff the diagonal $ \Delta = \{x \times x | x \in X \} $ is closed in $ X \times X $.
 \end{problem}
-	
+\begin{problem}{3}(Kuratowski)
+	Consider the collection of all subsets $ A $ of the topological space $ X $. The operations of closure $ A \to \bar{A} $ and complementation $ A \to X \setminus A $ are functions from this collection to itself.
+	\begin{enumerate}
+		\item Show that starting with a given $ A $, one can form no more than $ 14 $ distinct sets by applying these two operations successively.
+		\item Find a subset $ A $ of $ \Real $ (in its usual topology) for which the maximum of $ 14 $ is obtained.
+	\end{enumerate}
+\end{problem}
+\begin{problem}{4}
+	Find a function $ f:\Real \to \Real $ that is continuous at precisely one point.
+\end{problem}
+\begin{problem}{5}
+	Let $ X $ be the subset of $ \Real^\omega $ consisting of all sequences $ \vec{x} $ such that $ \sum x_i^2 $ converges. Then the formula
+	\begin{equation}
+		d(\vec{x},\vec{y}) = \begin{bmatrix}
+\sum_{i=1}^{\infty}(x_i-y_i)^2
+		\end{bmatrix}^{1/2}\nonumber
+	\end{equation}
+	defines a metric on $ X $. On $ X $ we have the three topologies inherits from the box, uniform, and product topologies on $ \Real^\omega $. We have also the topology given by the metric $ d $, which we call the $ \ell^2 $-topology.
+	\begin{enumerate}
+		\item Show that on $ X $, we have the inclusions
+		\begin{equation}
+			\text{box topology}\supset \ell^2\text{-topology} \supset \text{uniform topology} \nonumber
+		\end{equation}
+		\item The set $ \Real^\infty $ of all sequences that are eventually zero is contained in $ X $. Show that the four topologies that $ \Real^\infty $ inherits as a subspace of $ X $ are all distinct.
+		\item The set
+		\begin{equation}
+			H = \prod_{n \in \Zahlen_+}[0,1/n] \nonumber
+		\end{equation}
+		is contained in $ X $; it is called the \textit{Hilbert cube}. Compare the four topologies that $ H $ inherits as a subspace of $ X $.
+	\end{enumerate}
+\end{problem}
+
+
 \end{document}

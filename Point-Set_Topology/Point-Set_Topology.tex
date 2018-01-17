@@ -1705,7 +1705,29 @@ Let $ X $ be a metrizable space. Then the following are equivalent:
 If $ Y $ and $ Y^\prime $ are two spaces satisfying these conditions, then there is a homeomorphism of $ Y $ with $ Y^\prime $ that equals the identity map on $ X $.
 \end{Theorem}
 \begin{proof}
-	content...
+	\begin{enumerate}
+		\item We first verify uniqueness. Let $ Y $ and $ Y^\prime $ be two spaces satisfying these conditions. Define $ h:Y \to Y^\prime $ by letting $ h $ map the single point $ p $ of $ Y \setminus X $ to the point $ q^\prime $ of $ Y^\prime \setminus X $, and letting $ h $ equal the identity on $ X $. We show that if $ U $ is open in $ Y $, then $ h(U) $ is open in $ Y^\prime $. Symmetry then implies that $ h $ is a homeomorphism. \newpara
+		First consider the case where $ U $ does not contain $ p $. Then $ h(U)=U $. Since $ U $ is open in $ Y $ and is contained in $ X $, it is open in $ X $. Because $ X $ is open in $ Y^\prime $, the set $ U $ is also open in $ Y^\prime $, as desired. \newpara
+		Second, suppose that $ U $ contains $ p $. Since $ C=Y \setminus U $ is closed in $ Y $, it is compact as a subspace of $ Y $. Because $ C $ is contained in $ X $, it is a compact subspace of $ X $. Then because $ X $ is a subspace of $ Y^\prime $, the space $ C $ is also a compact subspace of $ Y^\prime $. Because $ Y^\prime $ is Hausdorff, $ C $ is closed in $ Y^\prime $, so that $ h(U)=Y^\prime \setminus C $ is open in $ Y^\prime $, as desired.
+		\item Now we suppose $ X $ is locally compact Hausdorff and construct the space $ Y $. Let us take some object that is not a point of $ X $, denote it by the symbol $ \infty $ and adjoin it to $ X $, forming the set $ Y=X \cup \{\infty \} $. Topologize $ Y $ by defining the collection of open sets of $ Y $ to consist of $ (1) $ all sets $ U $ that are open in $ X $, and $ (2) $ all sets of the form $ Y \setminus C $, where $ C $ is a compact subspace of $ X $. \newpara
+		The empty set is a set of type $ (1) $, and the space $ Y $ is a set of type $ (2) $. Checking that the intersection of two open sets is open involves three cases:
+		\begin{align}
+			U_1 &\cap U_2 \qquad &\text{is of type }(1)\nonumber\\
+			(Y \setminus C_1)\cap (Y \setminus C_2)&= Y \setminus(C_1 \cup C_2)\qquad &\text{is of type }(2)\nonumber\\
+			U_1 \cap (Y \setminus C_1)&=U_1 \cap (X \setminus C_1)\qquad &\text{is of type }(1)\nonumber
+		\end{align}
+	because $ C_1 $ is closed in $ X $. Similarly, one check that the union of any collection of open sets is open
+	\begin{align}
+		\bigcup U_\alpha &= U \qquad &\text{is of type }(1)\nonumber\\
+		\bigcup(Y \setminus C_\beta)=Y \setminus(\bigcap C_\beta)&=Y \setminus C\qquad &\text{is of type }(2)\nonumber\\
+		(\bigcup U_\alpha)\cup(\bigcup(Y \setminus C_\beta))=U \cup (Y \setminus C)&=Y \setminus(C \setminus U)\nonumber
+	\end{align}
+which is of type $ (2) $ because $ C \setminus U $ is a closed subspace of $ C $ and therefore compact. \newpara
+Now we show that $ X $ is a subspace of $ Y $. Given any open set of $ Y $, we show its intersection with $ X $ is open in $ X $. If $ U $ is of type $ (1) $, then $ U \cap X = U $; if $ Y \setminus C $ is of type $ (2) $, then $ (Y \setminus C)\cap X = X \cap C $; both of these sets are open in $ X $. Conversely, any set open in $ X $ is a set of type $ (1) $ and therefore open in $ Y $ by definition. \newpara
+To show that $ Y $ is compact, let $ \mathscr{A} $ be an open covering of $ Y $. The collection $ \mathscr{A} $ must contain an open set of type $ (2) $, say $ Y \setminus C $, since none of the open sets of type $ (1) $ contain the point $ \{\infty \} $. Take all the members of $ \mathscr{A} $ different from $ Y \setminus C $ and intersect them with $ X $; they form a collection of open sets of $ X $ covering $ C $. Because $ C $ is compact, finitely many of them cover $ C $; the corresponding finite collection of elements of $ \mathscr{A} $ will, along with the element $ Y \setminus C $, cover all of $ Y $. \newpara
+To show that $ Y $ is Hausdorff, let $ x $ and $ y $ be two points of $ Y $. If both of them lie in $ X $, there are disjoint sets $ U $ and $ V $ open in $ X $ containing them, respectively. On the other hand, if $ x \in X $ and $ y=\infty $, we can choose a compact set $ C $ in $ X $ containing a neighborhood $ U $ of $ x $. Then $ U $ and $ Y \setminus C $ are disjoint neighborhoods of $ x $ and $ \infty $, respectively, in $ Y $.
+\item Finally, we prove the converse. Suppose a space $ Y $ satisfying conditions $ (1)-(3) $ exists. Then $ X $ is Hausdorff because it is a subspace of the Hausdorff space $ Y $. Given $ x \in X $, we show $ X $ is locally compact at $ x $. Choose disjoint open sets $ U $ and $ V $ of $ Y $ containing $ x $ and the single point of $ Y \setminus X $, respectively. Then the set $ C = Y \setminus V $ is closed in $ Y $, so it is a compact subspace of $ Y $. Since $ C $ lies in $ X $, it is also compact as a subspace of $ X $; it contains the neighborhood $ U $ of $ x $.
+	\end{enumerate}
 \end{proof}
 \begin{Definition}
 	If $ Y $ is a compact Hausdorff space and $ X $ is a proper subspace of $ Y $ whose closure equals $ Y $, then $ Y $ is said to be a \textit{compactification} of $ X $. If $ Y \setminus X $ equals a single point, then $ Y $ is called the \textit{one-point compactification} of $ X $.
@@ -1714,13 +1736,14 @@ If $ Y $ and $ Y^\prime $ are two spaces satisfying these conditions, then there
 	Let $ X $ be a Hausdorff space. Then $ X $ is locally compact iff given $ x $ in $ X $, and given a neighborhood $ U $ of $ x $, there is a neighborhood $ V $ of $ x $ such that $ \bar{V} $ is compact and $ \bar{V}\subset U $.
 \end{Theorem}
 \begin{proof}
-	content...
+	The set $ C = \bar{V} $ is the desired compact set containing a neighborhood of $ x $. To prove the converse, suppose $ X $ is locally compact; let $ x $ be a point of $ X $ and let $ U $ be a neighborhood of $ x $. Take the one-point compactification $ Y $ of $ X $, and let $ C $ be the set $ Y \setminus U $. Then $ C $ is closed in $ Y $, so that $ C $ is a compact subspace of $ Y $. Choose disjoint open sets $ V $ and $ W $ containing $ x $ and $ C $, respectively. Then the closure $ \bar{V} $ of $ V $ in $ Y $ is compact; furthermore, $ \bar{V} $ is disjoint from $ C $, so that $ \bar{V}\subset U $, as desired.
 \end{proof}	
 \begin{Corollary}
 	Let $ X $ be locally compact Hausdorff; let $ A $ be a subspace of $ X $. If $ A $ is closed in $ X $ or open in $ X $, then $ A $ is locally compact.
 \end{Corollary}
 \begin{proof}
-	content...
+	Suppose that $ A $ is closed in $ X $. Given $ x \in A $, let $ C $ be a compact subspace of $ X $ containing the neighborhood $ U $ of $ x $ in $ X $. Then $ C \cap A $ is closed in $ C $ and thus compact, and it contains the neighborhood $ U \cap A $ of $ x $ in $ A $.\newpara
+	Suppose now that $ A $ is open in $ X $. Given $ x \in A $, we apply the preceding theorem to choose a neighborhood $ V $ of $ x $ in $ X $ such that $ \bar{V} $ is compact and $ \bar{V}\subset A $. Then $ C = \bar{V} $ is a compact subspace of $ A $ containing the neighborhood $ V $ of $ x $ in $ A $.
 \end{proof}
 \begin{Corollary}
 	A space $ X $ is homeomorphic to an open subspace of a compact Hausdorff space iff $ X $ is locally compact Hausdorff.
