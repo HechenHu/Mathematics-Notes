@@ -34,3 +34,6 @@
 \contentsline {section}{\numberline {3.4}Compact Spaces}{46}{section.3.4}
 \contentsline {section}{\numberline {3.5}Compact Subspaces of the Real Line}{50}{section.3.5}
 \contentsline {section}{\numberline {3.6}Limit Point Compactness}{53}{section.3.6}
+\contentsline {section}{\numberline {3.7}Local Compactness}{55}{section.3.7}
+\contentsline {section}{\numberline {3.8}Nets}{56}{section.3.8}
+\contentsline {chapter}{\numberline {4}Countability and Separation Axioms}{57}{chapter.4}

@@ -1690,9 +1690,49 @@ Let $ X $ be a metrizable space. Then the following are equivalent:
 		\item Finally, we show that if $ X $ is sequentially compact, then $ X $ is compact. Let $ \mathscr{A} $ be an open covering of $ X $. Because $ X $ is sequentially compact, the open covering $ \mathscr{A} $ has a Lebesgue number $ \delta $. Let $ \varepsilon=\delta/3 $; use sequential compactness of $ X $ to find a finite covering of $ X $ by open $ \varepsilon $-balls. Each of these balls has diameter at most $ 2\delta/3 $, so it lies in an element of $ \mathscr{A} $. Choosing one such element of $ \mathscr{A} $ for each of these $ \varepsilon $-balls, we obtain a finite subcollection of $ \mathscr{A} $ that covers $ X $.
 	\end{enumerate}
 \end{proof}
-	
-	
-	
+
+\section{Local Compactness}
+\begin{Definition}
+	A space $ X $ is said to be \textit{locally compact at $ x $} if there is some compact subspace $ C $ of $ X $ that contains a neighborhood of $ x $. If $ X $ is locally compact at each of its points, $ X $ is said to be \textit{locally compact}.
+\end{Definition}
+\begin{Theorem}
+	Let $ X $ be a space. Then $ X $ is locally compact Hausdorff iff there exists a space $ Y $ satisfying the following conditions:
+	\begin{enumerate}
+		\item $ X $ is a subspace of $ Y $.
+		\item The set $ Y \setminus X $ consists of a single point.
+		\item $ Y $ is a compact Hausdorff space.
+	\end{enumerate}
+If $ Y $ and $ Y^\prime $ are two spaces satisfying these conditions, then there is a homeomorphism of $ Y $ with $ Y^\prime $ that equals the identity map on $ X $.
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+\begin{Definition}
+	If $ Y $ is a compact Hausdorff space and $ X $ is a proper subspace of $ Y $ whose closure equals $ Y $, then $ Y $ is said to be a \textit{compactification} of $ X $. If $ Y \setminus X $ equals a single point, then $ Y $ is called the \textit{one-point compactification} of $ X $.
+\end{Definition}	
+\begin{Theorem}
+	Let $ X $ be a Hausdorff space. Then $ X $ is locally compact iff given $ x $ in $ X $, and given a neighborhood $ U $ of $ x $, there is a neighborhood $ V $ of $ x $ such that $ \bar{V} $ is compact and $ \bar{V}\subset U $.
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}	
+\begin{Corollary}
+	Let $ X $ be locally compact Hausdorff; let $ A $ be a subspace of $ X $. If $ A $ is closed in $ X $ or open in $ X $, then $ A $ is locally compact.
+\end{Corollary}
+\begin{proof}
+	content...
+\end{proof}
+\begin{Corollary}
+	A space $ X $ is homeomorphic to an open subspace of a compact Hausdorff space iff $ X $ is locally compact Hausdorff.
+\end{Corollary}
+
+
+\section{Nets}
+
+
+
+
+\chapter{Countability and Separation Axioms}	
 	
 	
 	
