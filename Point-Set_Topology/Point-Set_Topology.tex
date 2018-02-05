@@ -1751,12 +1751,69 @@ To show that $ Y $ is Hausdorff, let $ x $ and $ y $ be two points of $ Y $. If 
 
 
 \section{Nets}
-
+\begin{Definition}
+	A \textit{directed set} $ J $ is a set with a partial order $ \preceq $ such that for each pair $ \alpha $, $ \beta $ of elements of $ J $, there exists an element $ \gamma $ of $ J $ having the property that $ \alpha \preceq \gamma $ and $ \beta \preceq \gamma $.
+\end{Definition}
+\begin{Definition}
+	A subset $ K $ of $ J $ is said to be \textit{cofinal} in $ J $ if for each $ \alpha \in J $, there exists $ \beta \in K $ such that $ \alpha \preceq \beta $.
+\end{Definition}
+If $ J $ is a directed set and $ K $ is cofinal in $ J $, then $ K $ is a directed set.
+\begin{Definition}
+	Let $ X $ be a topological space. A \textit{net} in $ X $ is a function $ f $ from a directed set $ J $ into $ X $. If $ \alpha \in J $, we usually denote $ f(\alpha) $ by $ x_\alpha $. We denote the net $ f $ itself by the symbol $ (x_\alpha)_{\alpha \in J} $, or by $ (x_\alpha) $ if the index set is understood.
+\end{Definition}
+\begin{Definition}
+	The net $ (x_\alpha) $ is said to \textit{converge} to the point $ x $ of $ X $ (written $ x_\alpha \to x $) if for each neighborhood $ U $ of $ x $, there exists $ \alpha \in J $ such that
+	\begin{equation}
+		\alpha \preceq \beta \Rightarrow x_\beta \in U \nonumber
+	\end{equation}
+\end{Definition}
+Now we can see that the concept of net is a direct generalization of sequences when the directed set is chosen to be $ \Zahlen_+ $.
+\begin{Proposition}
+	If $ (x_\alpha)_{\alpha \in J}\to x \in X $ and $ (y_\alpha)_{\alpha \in J}\to y \in Y $, then $ (x_\alpha \times y_\alpha) \to x \times y \in X \times Y $.
+\end{Proposition}
+\begin{Theorem}
+	Let $ A \in X $. Then $ x \in \bar{A} $ iff there is a net of points of $ A $ converging to $ x $.
+\end{Theorem}
+\begin{proof}
+	The implication $ \Leftarrow $ is trivial since it implies that $ x $ is a limit point of $ A $. To prove the implication $ \Rightarrow $, consider the collection of all neighborhoods of $ x $ partially ordered by reverse inclusion. On this directed set there is a net on itself. Since $ x\in \bar{A} $, $ x $ is a limit point of $ A $. Then we can select one point from each neighborhood of $ x $, then this net converges to $ x $.
+\end{proof}
+\begin{Theorem}
+	Let $ f:X \to Y $. Then $ f $ is continuous iff for every convergent net $ (x_\alpha) $ in $ X $ converging to $ x $ the net $ (f(x_\alpha)) $ converges to $ f(x) $.
+\end{Theorem}
+\begin{proof}
+	Consider the same directed set from our last theorem.
+\end{proof}
+\begin{Definition}
+	Let $ f:J \to X $ be a net in $ X $; let $ f(\alpha)=x_\alpha $. If $ K $ is a directed set and $ g:K \to J $ is a function such that 
+	\begin{enumerate}
+		\item $ i \preceq j \Rightarrow g(i)\preceq g(j) $.
+		\item $ g(K) $ is cofinal in $ J $.
+	\end{enumerate}
+then the composition $ f \circ g:K \to X $ is called a \textit{subnet} of $ (x_\alpha) $.
+\end{Definition}
+\begin{Proposition}
+	If the net $ (x_\alpha) $ converges to $ x $, so does any subnet.
+\end{Proposition}
+\begin{Definition}
+	Let $ (x_\alpha)_{\alpha \in J} $ be a net in $ X $. We say that $ x $ is an \textit{accumulation point} of the net $ (x_\alpha) $ if for each neighborhood $ U $ of $ x $, the set of those $ \alpha $ for which $ x_\alpha \in U $ is cofinal in $ J $.
+\end{Definition}
+\begin{Lemma}
+	The net $ (x_\alpha) $ has the point $ x $ as an accumulation point iff some subnet of $ (x_\alpha) $ converges to $ x $.
+\end{Lemma}
+\begin{proof}
+	\exercise
+\end{proof}
+\begin{Theorem}
+	$ X $ is compact iff for every net in $ X $ has a convergent subnet.
+\end{Theorem}
+\begin{proof}
+	\exercise
+\end{proof}
 
 
 
 \chapter{Countability and Separation Axioms}	
-	
+\section{The Countability Axioms}	
 	
 	
 	

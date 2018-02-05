@@ -5224,7 +5224,7 @@ It is clear that Cavalieri's principle can be stated for spaces $ \Real^n $ of a
 	\end{enumerate}
 \end{Lemma}
 \begin{proof}
-	\exercise
+\exercise
 \end{proof}
 \begin{Corollary}
 	Under the hypotheses of the theorem the integral on the right-hand side of Theorem $ 9.5.1 $ exists.
@@ -5357,7 +5357,7 @@ But there is symmetry between the exhaustions $ \{E_n\} $ and $ \{E^\prime_k\} $
 \begin{Example}
 	Let's find the improper integral $ \int \int_{\Real^2}e^{-(x^2+y^2)}dx dy $ by using the sequence of disks $ E_n=\{(x,y)\in \Real^2|x^2+y^2<n^2 \} $ to exhaust $ \Real^2 $. After passing to polar coordinates we find easily that
 	\begin{equation}
-		\int\int_{E_n}e^{-(x^2+y^2)}dx dy = \int_{0}^{2 \pi}d\varphi \int_{0}^{n}e^{-r^2}dr = \pi (1-e^{-n^2})
+		\int\int_{E_n}e^{-(x^2+y^2)}dx dy = \int_{0}^{2 \pi}d\varphi \int_{0}^{n}e^{-r^2}dr = \pi (1-e^{-n^2}) \nonumber
 	\end{equation}
 	which tends to $ \pi $ as $ n \to \infty $.
 \end{Example}
@@ -5390,6 +5390,61 @@ But there is symmetry between the exhaustions $ \{E_n\} $ and $ \{E^\prime_k\} $
 
 \chapter{Surfaces and Differential Forms in $ \Real^n $}
 \section{Surfaces in $ \Real^n $}
+\begin{Definition}
+	A \textit{surface of dimension $ k $}(or \textit{$ k $-dimensional surface} or \textit{$ k $-dimensional manifold}) in $ \Real^n $ is a subset $ S \subset \Real^n $ each point of which has a neighborhood $ U_S(x) $\footnote{To simplify the notation, if no confusion can rise, we write $ U $ or $ U(x) $ instead of $ U_S(x) $} in $ S $ homeomorphic\footnote{On $ S \subset \Real^n $ there is a unique metric induced from $ \Real^n $, so that one can speak of a topological mapping of $ U $ into $ \Real^k $.} to $ \Real^k $.
+\end{Definition}
+\begin{Definition}
+	The mapping $ \varphi: \Real^k \to U \subset S $ provided by the homeomorphism referred to in the definition of a surface is called a \textit{chart} or a \textit{local chart} of the surface $ S $, $ \Real^k $ is called the \textit{parameter domain}, and $ U $ is the \textit{range} or \textit{domain of action of the chart on the surface $ S $}.
+\end{Definition}
+A local chart introduces curvilinear coordinates in $ U $ by assigning to the point $ x=\varphi(t)\in U $ the set of numbers $ t=(t^1,\cdots,t^k)\in \Real^k $. To carry out certain analogies and in order to make a number of the following constructions easier to visualize, we shall as a rule take a cube $ I^k $ as the canonical parameter domain for local charts on a surface. Thus a chart gives a local parametric equation $ x = \varphi(t) $ for the surface $ S \subset \Real^n $, and the $ k $-dimensional surface itself thus has the local structure of a deformed standard $ k $-dimensional interval $ I_k \subset \Real^n $.
+\begin{Definition}
+	A set $ A(S)\coloneqq \{\varphi_i:I^k_i \to U_i,i \in \Natural \} $ of local charts of a surface $ S $ whose domains of action together cover the entire surface is called an \textit{atlas of the surface $ S $}.
+\end{Definition}
+\begin{Proposition}
+	If a local parametric chart belongs to class $ C^{(1)}(I^k,\Real^n) $ and has maximal rank at each point of the cube $ I_k $, there exists a number $ \varepsilon>0 $ and a diffeomorphism $ \varphi_\varepsilon :I^n_\varepsilon \to \Real^n $ of the cube $ I_\varepsilon^n \coloneqq \{t \in \Real^n | |t^i| \leqslant \varepsilon_i,i=1,\cdots,n \} $ of dimension $ n $ in $ \Real^n $ such that $ \varphi|_{I^k \cap I^n_\varepsilon}=\varphi_\varepsilon |_{I^k \cap I^n_\varepsilon} $.
+\end{Proposition}
+In other words, it is asserted that under these hypotheses the local parametric chart are locally the restrictions of diffeomorphisms of the full dimensional cubes $ I^n_\varepsilon $ to the $ k $-dimensional cubes $ I^k_\varepsilon = I^k \cap I^n_\varepsilon  $.
+\begin{proof}
+	Suppose for definiteness that the first $ k $ of the $ n $ coordinate functions $ x^k = \varphi^i(t^1,\cdots,t^k) ,i=1,\cdots, n$, of the mapping $ x = \varphi(t) $ are such that $ \det(\frac{\partial \varphi^i}{\partial t^j})(0)\neq 0 ,i,j = 1,\cdots,k$. Then by the implicit function theorem the relations
+	\begin{equation}
+		\begin{cases}
+		x^1 = \varphi^1(t^1,\cdots,t^k),\\
+		\vdots \\
+		x^k = \varphi^k(t^1,\cdots,t^k),\\
+		x^{k+1}=\varphi^{k+1}(t^1,\cdots,t^k),\\
+		\vdots \\
+		x^n = \varphi^n(t^1,\cdots,t^k)
+		\end{cases} \nonumber
+	\end{equation}
+	near the point $ (t_0,x_0) = (0,\varphi(0)) $ are equivalent to relations
+	\begin{equation}
+		\begin{cases}
+t^1 = f^1(x^1,\cdots,x^k),\\
+\vdots \\
+t^k = f^k(x^1,\cdots,x^k),\\
+x^{k+1}=f^{k+1}(x^1,\cdots,x^k),\\
+\vdots \\
+x^n = f^n(x^1,\cdots,x^k)
+\end{cases} \nonumber
+	\end{equation}
+	In this case the mapping
+		\begin{equation}
+	\begin{cases}
+	t^1 = f^1(x^1,\cdots,x^k),\\
+	\vdots \\
+	t^k = f^k(x^1,\cdots,x^k),\\
+	t^{k+1}=x^{k+1}-f^{k+1}(x^1,\cdots,x^k),\\
+	\vdots \\
+	t^n = x^n- f^n(x^1,\cdots,x^k)
+	\end{cases} \nonumber
+	\end{equation}
+	is a diffeomorphism of full-dimensional neighborhood of the point $ x_0 \in \Real^n $. As $ \varphi_\varepsilon $ we can now take the restriction to some cube $ I^n_\varepsilon $ of the diffeomorphism inverse to it.
+\end{proof}
+Thus we have shown that for a smooth surface in $ \Real^n $ one can adopt the following definition, which is equivalent to the previous one.
+\begin{Definition}
+	The $ k $-dimensional surface in $ \Real^n $ introduced by our first definition in this section is \textit{smooth}(of class $ C^{(m)},m\geqslant 1 $) if it has an atlas whose local charts are smooth mappings(of class $ C^{(m)},m\geqslant 1 $) and have rank $ k $ at each point of their domains of definition.
+\end{Definition}
+The condition on the rank of the mappings is essential. For example, the analytic mapping $ \Real \ni t \mapsto (x^1,x^2)\in \Real^2 $  defined by $ x^1 = t^2, x^2 = t^3 $ defines a curve in the plane $ \Real^2 $ having a cusp at $ (0,0) $. It is clear that this curve is not a smooth one-dimensional surface in $ \Real^2 $.
 \section{Orientation of a Surface}
 \section{The Boundary of a Surface and Its Orientation}
 \section{The Area of a Surface in Euclidean Space}
