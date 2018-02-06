@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 FEB 2018 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 FEB 2018 20:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1363,7 +1363,7 @@ ier (name{equation.2.5.1}) has been already used, duplicate ignored
                    \relax 
 l.560 	\begin{equation}
                        
-<Convex_polygon_illustration1.png, id=350, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration1.png, id=355, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration1.png Graphic file (type png)
 
 <use Convex_polygon_illustration1.png>
@@ -1374,7 +1374,7 @@ Package pdftex.def Info: Convex_polygon_illustration1.png used on input line 57
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Convex_polygon_illustration2.png, id=352, 1735.48375pt x 1641.13126pt>
+<Convex_polygon_illustration2.png, id=357, 1735.48375pt x 1641.13126pt>
 File: Convex_polygon_illustration2.png Graphic file (type png)
 
 <use Convex_polygon_illustration2.png>
@@ -2198,26 +2198,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1745--1747
 
  []
 
-[57] [58]
- 4.
-[59
+[57] [58] [59] [60
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1818.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1818.
+ 4.
+[61] [62]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1889.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1889.
  (./Point-Set_Topology.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1818.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1818.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1889.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1889.
 
 Package rerunfilecheck Info: File `Point-Set_Topology.out' has not changed.
-(rerunfilecheck)             Checksum: DD427D46CF1AC7622A0BA7753BBF1350;2670.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1818.
+(rerunfilecheck)             Checksum: 4A43F6232AFEE2872C57E9F26050ED3B;2740.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1889.
  ) 
 Here is how much of TeX's memory you used:
- 19559 strings out of 492995
- 368185 string characters out of 6132704
- 439144 words of memory out of 5000000
- 22419 multiletter control sequences out of 15000+600000
+ 19575 strings out of 492995
+ 368325 string characters out of 6132704
+ 439147 words of memory out of 5000000
+ 22420 multiletter control sequences out of 15000+600000
  125452 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,84p,1239b,1135s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2246,10 +2246,10 @@ sy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb>
-Output written on Point-Set_Topology.pdf (63 pages, 670690 bytes).
+Output written on Point-Set_Topology.pdf (66 pages, 677460 bytes).
 PDF statistics:
- 828 PDF objects out of 1000 (max. 8388607)
- 729 compressed objects within 8 object streams
- 296 named destinations out of 1000 (max. 500000)
- 319 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 858 PDF objects out of 1000 (max. 8388607)
+ 756 compressed objects within 8 object streams
+ 311 named destinations out of 1000 (max. 500000)
+ 327 words of extra memory for PDF output out of 10000 (max. 10000000)
 

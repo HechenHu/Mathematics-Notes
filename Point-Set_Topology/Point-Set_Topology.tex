@@ -1814,7 +1814,49 @@ then the composition $ f \circ g:K \to X $ is called a \textit{subnet} of $ (x_\
 
 \chapter{Countability and Separation Axioms}	
 \section{The Countability Axioms}	
-	
+\begin{Definition}
+	A space $ X $ is said to have a \textit{countable basis at $ x $} if there is a countable collection $ \mathscr{B} $ of neighborhoods of $ x $ such that each neighborhood of $ x $ contains at least one of the elements of $ \mathscr{B} $. A space that has a countable basis at each of its points is said to satisfy the \textit{first countability axiom}, or to be \textit{first-countable}.
+\end{Definition}
+\begin{Theorem}
+	Let $ X $ be a topological space.
+	\begin{enumerate}
+		\item Let $ A $ be a subset of $ X $. If there is a sequence of points of $ A $ converging to $ x $, then $ x \in \bar{A} $; the converse holds if $ X $ is first-countable.
+		\item Let $ f:X \to Y $. If $ f $ is continuous, then for every convergent sequence $ x_n \to x $ in $ X $, the sequence $ f(x_n) $ converges to $ f(x) $. The converse holds if $ X $ is first-countable.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	If a space $ X $ has a countable basis for its topology, then $ X $ is said to satisfy the \textit{second countability axiom}, or to be \textit{second-countable}. The second axiom implies the first.
+\end{Definition}
+\begin{Theorem}
+	A subspace of a first-countable space is first countable, and a countable product of first-countable spaces is first-countable. A subspace of a second-countable space is second-countable, and a countable-product of second-countable spaces is second-countable.
+\end{Theorem}	
+\begin{proof}
+	The proof is trivial -- just consider the basis for subspace topology and product topology.
+\end{proof}
+\begin{Definition}
+	A subset $ A $ of a space $ X $ is said to be \textit{dense} in $ X $ if $ \bar{A}=X $.
+\end{Definition}
+\begin{Theorem}
+	Suppose that $ X $ has a countable basis. Then:
+	\begin{enumerate}
+		\item Every open covering of $ X $ contains a countable subcollection covering $ X $.
+		\item There exists a countable subset of $ X $ that is dense in $ X $.
+	\end{enumerate}
+\end{Theorem}
+\begin{proof}
+	Let $ \{B_n \} $ be a countable basis for $ X $.
+	\begin{enumerate}
+		\item Since $ \{B_n \} $ itself covers $ X $, one can choose elements from an open covering $ \mathscr{A} $ of $ X $ such that each $ A_n $ contains the basis element $ B_n $, and the result is a countable open covering of $ X $. 
+		\item For each nonempty basis element $ B_n $, choose a point $ x_n $. Let $ D $ be the set consisting of the points $ x_n $. Then $ D $ is dense in $ X $: Given any point $ x $ of $ X $, every basis element containing $ x $ intersects $ D $, so $ x $ belongs to $ \bar{D} $.
+	\end{enumerate}
+\end{proof}
+\begin{Definition}
+	A space for which every open covering contains a countable subcovering is called a \textit{Lindel\"of space}.
+\end{Definition}
+\begin{Definition}
+	A space having a countable dense subset is often said to be \textit{separable}.
+\end{Definition}
+Each of these properties is equivalent to the second countability axiom when the space is metrizable.
 	
 	
 	
