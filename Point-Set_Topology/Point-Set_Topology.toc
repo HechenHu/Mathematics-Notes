@@ -38,3 +38,5 @@
 \contentsline {section}{\numberline {3.8}Nets}{58}{section.3.8}
 \contentsline {chapter}{\numberline {4}Countability and Separation Axioms}{61}{chapter.4}
 \contentsline {section}{\numberline {4.1}The Countability Axioms}{61}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Separation Axioms}{62}{section.4.2}
+\contentsline {section}{\numberline {4.3}Normal Spaces}{63}{section.4.3}

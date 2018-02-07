@@ -1857,9 +1857,37 @@ then the composition $ f \circ g:K \to X $ is called a \textit{subnet} of $ (x_\
 	A space having a countable dense subset is often said to be \textit{separable}.
 \end{Definition}
 Each of these properties is equivalent to the second countability axiom when the space is metrizable.
+
+\section{The Separation Axioms}
+\begin{Definition}
+	Suppose that one-point sets are closed in $ X $. Then $ X $ is said to be \textit{regular} if for each pair consisting of a point $ x $ and a closed set $ B $ disjoint from $ x $, there exist disjoint open sets containing $ x $ and $ B $, respectively. The space $ X $ is said to be \textit{normal} if for each pair $ A,B $ of disjoint closed sets of $ X $, there exist disjoint open sets containing $ A $ and $ B $, respectively.
+\end{Definition}
+It's clear that a regular space if Hausdorff, and that a normal space is regular(for this to be the case, one must include the condition that one-point sets be closed as part of the definition of regularity and normality; counterexamples include a two-point space in the indiscrete topology satisfies the other part of the definitions of regularity and normality, even though it is not Hausdorff).
+\begin{Lemma}
+	Let $ X $ be a topological space. Let one-point sets in $ X $ be closed.
+	\begin{enumerate}
+		\item $ X $ is regular iff for a given point $ x $ of $ X $ and a neighborhood $ U $ of $ x $, there is a neighborhood $ V $ of $ x $ such that $ \bar{V}\subset U $.
+		\item $ X $ is normal iff for a given closed set $ A $ and an open set $ U $ containing $ A $, there is an open set $ V $ containing $ A $ such that $ \bar{V}\subset U $.
+	\end{enumerate}
+\end{Lemma}	
+\begin{proof}
+	We will only give a proof for the condition for regularity, since proof for normality can be easily derived from replacing the point $ x $ with set $ A $ throughout. \newpara
+	Suppose that $ X $ is regular, and suppose that the point $ x $ and the neighborhood $ U $ of $ x $ are given. Let $ B=X \setminus U $; then $ B $ is a closed set. By hypothesis, there exist disjoint open sets $ V $ and $ W $ containing $ x $ and $ B $, respectively. The set $ \bar{V} $ is disjoint from $ B $, since if $ y \in B $, the set $ W $ is a neighborhood of $ y $ disjoint from $ V $. Therefore, $ \bar{V}\subset U $, as desired.\newpara
+	To prove the converse, suppose the point $ x $ and the closed set $ B $ not containing $ x $ are given. Let $ U=X \setminus B $. By hypothesis, thre is a neighborhood $ V $ of $ x $ such that $ \bar{V}\subset U $. The open sets $ V $ and $ X \setminus \bar{V} $ are disjoint open sets containing $ x $ and $ B $, respectively. Thus $ X $ is regular.
+\end{proof}
+\begin{Theorem}
+	\begin{enumerate}
+		\item A subspace of a Hausdorff space is Hausdorff; a product of Hausdorff spaces is Hausdorff.
+		\item A subspace of a regular space is regular; a product of regular spaces is regular.
+	\end{enumerate}
+\end{Theorem}
+\begin{proof}
+	The proofs for the two results for Hausdorff space are trivial.\newpara
+	Let $ Y $ be a subspace of the regular space $ X $. Then one-point sets are closed in $ Y $. Let $ x $ be a point of $ Y $ and let $ B $ be a closed subset of $ Y $ disjoint from $ x $. Now $ \bar{B}\cap Y=B $, where $ \bar{B} $ denotes the closure of $ B $ in $ X $. Therefore $ x \notin \bar{B} $. Using the regularity of $ X $ to find two disjoint neighborhoods of $ x $ and $ \bar{B} $ and consider them in the subspace topology. \newpara
+	Let $ \{X_\alpha \} $ be a family of regular spaces; let $ X = \prod X_\alpha $. It's easy to see that $ X $ is Hausdorff. We'll use the preceding lemma to prove regularity of $ X $. Let $ \vec{x}=(x_\alpha) $ be a point of $ X $ and let $ U $ be a neighborhood of $ \vec{x} $ in $ X $. Choose a basis element $ \prod U_\alpha $ about $ \vec{x} $ contained in $ U $. Choose, for each $ \alpha $, a neighborhood $ V_\alpha $ of $ x_\alpha $ in $ X_\alpha $ such that $ \bar{V_\alpha}\subset U_\alpha $; if $ U_\alpha = X_\alpha $, choose $ V_\alpha = X_\alpha $. Then $ V = \prod V_\alpha $ is a neighborhood of $ x $ in $ X $. Since $ \bar{V}=\prod \bar{V_\alpha} $, it follows that $ \bar{V}\subset \prod U_\alpha \subset U $, so that $ X $ is regular.
+\end{proof}
 	
-	
-	
+\section{Normal Spaces}	
 	
 	
 	
