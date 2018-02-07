@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 FEB 2018 08:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 FEB 2018 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1136,7 +1136,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 (./Linear_Algebra.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 4.
+(Font)              <10.95> on input line 3.
  [3])
 \tf@toc=\write5
 \openout5 = `Linear_Algebra.toc'.
@@ -1165,194 +1165,254 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--89
 
  []
 
-[2pdfTeX warning (ext4): destination with the same identifier (name{equation.1.
-1.1}) has been already used, duplicate ignored
+LaTeX Font Info:    Try loading font information for U+eus on input line 111.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+) [2pdfTeX warning (ext4): destination with the same identifier (name{equation.
+1.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.105 	\chapter
-               {Solving Linear Equations}]
- 2.
-[3
+l.122 \end{Theorem}
+                   ]
+Overfull \hbox (26.42136pt too wide) in paragraph at lines 131--133
+\T1/lmr/m/n/10.95 af-ter a suit-able renum-ber-ing of $\OT1/lmr/bx/n/10.95 v[]\
+OML/lmm/m/it/10.95 ; []  ; \OT1/lmr/bx/n/10.95 v[]$\T1/lmr/m/n/10.95 , the el-e
+-ments $\OT1/lmr/bx/n/10.95 w[]\OML/lmm/m/it/10.95 ; []  ; \OT1/lmr/bx/n/10.95 
+w[]\OML/lmm/m/it/10.95 ; \OT1/lmr/bx/n/10.95 v[]\OML/lmm/m/it/10.95 ; []  ; \OT
+1/lmr/bx/n/10.95 v[]$
+ []
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{equation.1.
+3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.156 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.1.3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.156 	\begin{equation}
+                       ] [4pdfTeX warning (ext4): destination with the same ide
+ntifier (name{equation.1.3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.197 	\begin
+             {equation}pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.1.3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.197 	\begin
+             {equation}pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.1.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.197 	\begin
+             {equation}]pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.1.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.197 	\begin{equation}
+                       
+Overfull \hbox (16.92563pt too wide) in paragraph at lines 202--203
+\T1/lmr/m/n/10.95 lec-tion of vec-tors in $\OML/lmm/m/it/10.95 U \OMS/lmsy/m/n/
+10.95 ^^B \OML/lmm/m/it/10.95 W$ \T1/lmr/m/n/10.95 con-sists of $\OMS/lmsy/m/n/
+10.95 f\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 u[]\OML/lmm/m/it/10.95 ; \OT1/lm
+r/bx/n/10.95 0\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 ; []  ; \OT1/lmr/m/n/10.9
+5 (\OT1/lmr/bx/n/10.95 u[]\OML/lmm/m/it/10.95 ; \OT1/lmr/bx/n/10.95 0\OT1/lmr/m
+/n/10.95 )\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 0\OML/l
+mm/m/it/10.95 ; \OT1/lmr/bx/n/10.95 w[]\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 
+; []  ; \OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 0\OML/lmm/m/it/10.95 ; \OT1/lmr
+/bx/n/10.95 w[]\OT1/lmr/m/n/10.95 )\OMS/lmsy/m/n/10.95 g$
+ []
+
+[5] [6
 
 ]
+ 2.
+[7]
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 163.
- [4]
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 269.
+ [8]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 183.
+(Font)              <14.4> on input line 289.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 183.
+(Font)              <10> on input line 289.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 183.
+(Font)              <7> on input line 289.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 183.
+(hyperref)                removing `math shift' on input line 289.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 183.
+(hyperref)                removing `math shift' on input line 289.
 
-[5pdfTeX warning (ext4): destination with the same identifier (name{equation.2.
+[9pdfTeX warning (ext4): destination with the same identifier (name{equation.2.
 4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.234 	\end{itemize}
+l.340 	\end{itemize}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{equation.2.4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.234 	\end{itemize}
+l.340 	\end{itemize}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{equation.2.4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.234 	\end{itemize}
-                    ] [6pdfTeX warning (ext4): destination with the same identi
-fier (name{equation.2.6.1}) has been already used, duplicate ignored
+l.340 	\end{itemize}
+                    ] [10pdfTeX warning (ext4): destination with the same ident
+ifier (name{equation.2.6.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.275 \end{Theorem}
-                   ] [7pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.2.7.1}) has been already used, duplicate ignored
+l.381 \end{Theorem}
+                   ] [11pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.2.7.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.320 	\end{equation}
-                     ] [8pdfTeX warning (ext4): destination with the same ident
-ifier (name{equation.2.7.1}) has been already used, duplicate ignored
+l.426 	\end{equation}
+                     ] [12pdfTeX warning (ext4): destination with the same iden
+tifier (name{equation.2.7.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.324 	\chapter
+l.430 	\chapter
                {Matrices}]
  3.
-[9
+[13
 
-] [10pdfTeX warning (ext4): destination with the same identifier (name{equation
+] [14pdfTeX warning (ext4): destination with the same identifier (name{equation
 .3.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.401 		\item T
+l.507 		\item T
                he inverse of the product of arbitrary number of invertible s...
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 422--423
+Underfull \hbox (badness 10000) in paragraph at lines 528--529
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 422--423
+Underfull \hbox (badness 10000) in paragraph at lines 528--529
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 536--537
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 536--537
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 434--436
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 540--542
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--436
+Underfull \hbox (badness 10000) in paragraph at lines 540--542
 
  []
 
-[12]
+[16]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 484.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 484.
+(hyperref)                removing `math shift' on input line 590.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 484.
+(hyperref)                removing `superscript' on input line 590.
 
-[13pdfTeX warning (ext4): destination with the same identifier (name{equation.3
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 590.
+
+[17pdfTeX warning (ext4): destination with the same identifier (name{equation.3
 .3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.534 \end{Definition}
-                      ] [14]
+l.640 \end{Definition}
+                      ] [18]
  4.
 
-Overfull \hbox (84.37381pt too wide) detected at line 567
+Overfull \hbox (84.37381pt too wide) detected at line 673
 [] [] \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 a [] [] \OMS/lmsy/m/n/10.95 ^^@ 
 \OML/lmm/m/it/10.95 b [] [] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/10.95 c [] [] \O
 MS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 d [] []
  []
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 572.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 678.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--580
+Underfull \hbox (badness 10000) in paragraph at lines 684--686
 
  []
 
-[15
+[19
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.580 	\end{Definition}
+l.686 	\end{Definition}
                        pdfTeX warning (ext4): destination with the same identif
 ier (name{equation.4.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.580 	\end{Definition}
+l.686 	\end{Definition}
                        ]pdfTeX warning (ext4): destination with the same identi
 fier (name{equation.4.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.586 		\begin{equation}
+l.692 		\begin{equation}
                         pdfTeX warning (ext4): destination with the same identi
 fier (name{equation.4.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.592 	\begin{equation}
+l.698 	\begin{equation}
                        pdfTeX warning (ext4): destination with the same identif
 ier (name{equation.4.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.596 	\begin{equation}
+l.702 	\begin{equation}
                        pdfTeX warning (ext4): destination with the same identif
 ier (name{equation.4.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.602 	\begin{equation}
-                        [16]
-Overfull \hbox (14.86337pt too wide) in paragraph at lines 631--632
+l.708 	\begin{equation}
+                        [20]
+Overfull \hbox (14.86337pt too wide) in paragraph at lines 737--738
 [][]\T1/lmr/bx/n/10.95 Theorem 4.2.3. []\T1/lmr/m/it/10.95 If $\OT1/lmr/bx/n/10
 .95 A$ \T1/lmr/m/it/10.95 and $\OT1/lmr/bx/n/10.95 B$ \T1/lmr/m/it/10.95 are $\
 OML/lmm/m/it/10.95 n \OMS/lmsy/m/n/10.95 ^^B \OML/lmm/m/it/10.95 n$ \T1/lmr/m/i
@@ -1361,30 +1421,30 @@ OT1/lmr/m/n/10.95 )([] \OT1/lmr/bx/n/10.95 B\OT1/lmr/m/n/10.95 )$\T1/lmr/m/it/1
 0.95 . 
  []
 
-[17pdfTeX warning (ext4): destination with the same identifier (name{equation.4
+[21pdfTeX warning (ext4): destination with the same identifier (name{equation.4
 .2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.659 	\chapter
+l.765 	\chapter
                {Vector Spaces}pdfTeX warning (ext4): destination with the same 
 identifier (name{equation.4.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.659 	\chapter
+l.765 	\chapter
                {Vector Spaces}pdfTeX warning (ext4): destination with the same 
 identifier (name{equation.4.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.659 	\chapter
-               {Vector Spaces}] [18
+l.765 	\chapter
+               {Vector Spaces}] [22
 
 ]
  5.
 
-Overfull \hbox (6.64134pt too wide) in paragraph at lines 664--665
+Overfull \hbox (6.64134pt too wide) in paragraph at lines 770--771
 [][]\T1/lmr/bx/n/10.95 Theorem 5.0.1. []\T1/lmr/m/it/10.95 If $\OT1/lmr/bx/n/10
 .95 v[]\OML/lmm/m/it/10.95 ; []  ; \OT1/lmr/bx/n/10.95 v[]$ \T1/lmr/m/it/10.95 
 are in a vec-tor space $\OML/lmm/m/it/10.95 V$\T1/lmr/m/it/10.95 , then $[]\OMS
@@ -1392,8 +1452,8 @@ are in a vec-tor space $\OML/lmm/m/it/10.95 V$\T1/lmr/m/it/10.95 , then $[]\OMS
 /n/10.95 v[]\OMS/lmsy/m/n/10.95 g$
  []
 
-[19]
-Overfull \hbox (34.65067pt too wide) in paragraph at lines 702--704
+
+Overfull \hbox (34.65067pt too wide) in paragraph at lines 802--804
 [][]\T1/lmr/bx/n/10.95 Theorem 5.0.6. []\T1/lmr/m/it/10.95 Let $\OML/lmm/m/it/1
 0.95 S \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/n/10.95 f\OT1/lmr/bx/n/10.95 v[]\OML/lm
 m/m/it/10.95 ; []  ; \OT1/lmr/bx/n/10.95 v[]\OMS/lmsy/m/n/10.95 g$ \T1/lmr/m/it
@@ -1403,135 +1463,128 @@ m/m/it/10.95 ; []  ; \OT1/lmr/bx/n/10.95 v[]\OMS/lmsy/m/n/10.95 g$ \T1/lmr/m/it
 lmr/m/it/10.95 . 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 719--721
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 819--821
 
  []
 
-[20pdfTeX warning (ext4): destination with the same identifier (name{equation.5
+[24pdfTeX warning (ext4): destination with the same identifier (name{equation.5
 .1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.749 \end{Theorem}
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{equation.5.1.1}) has been already used, duplicate ignored
+l.852 \end{Definition}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.5.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.749 \end{Theorem}
-                   pdfTeX warning (ext4): destination with the same identifier 
-(name{equation.5.1.1}) has been already used, duplicate ignored
+l.852 \end{Definition}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.5.1.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.749 \end{Theorem}
-                   ]pdfTeX warning (ext4): destination with the same identifier
- (name{equation.5.1.1}) has been already used, duplicate ignored
+l.852 \end{Definition}
+                      ]pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.5.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.755 	\begin{equation}
-                        [21] [22pdfTeX warning (ext4): destination with the sam
-e identifier (name{equation.5.3.1}) has been already used, duplicate ignored
+l.855 	\begin{equation}
+                        [25]pdfTeX warning (ext4): destination with the same id
+entifier (name{equation.5.3.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.893 	\begin{equation}
+                        [26pdfTeX warning (ext4): destination with the same ide
+ntifier (name{equation.5.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.796 	\chapter
-               {Eigenvalues and Eigenvectors}pdfTeX warning (ext4): destination
- with the same identifier (name{equation.5.3.1}) has been already used, duplica
-te ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.796 	\chapter
+l.896 	\chapter
                {Eigenvalues and Eigenvectors}]
  6.
-[23
+[27
 
-] [24]
+] [28]
  7.
-[25
+[29
 
-] [26pdfTeX warning (ext4): destination with the same identifier (name{equation
+] [30pdfTeX warning (ext4): destination with the same identifier (name{equation
 .7.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.959 	\end{equation}
-                     pdfTeX warning (ext4): destination with the same identifie
-r (name{equation.7.2.2}) has been already used, duplicate ignored
+l.1059 	\end{equation}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.7.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.959 	\end{equation}
-                     ] [27pdfTeX warning (ext4): destination with the same iden
-tifier (name{equation.7.2.2}) has been already used, duplicate ignored
+l.1059 	\end{equation}
+                      ] [31pdfTeX warning (ext4): destination with the same ide
+ntifier (name{equation.7.2.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.961 \chapter
-              {Symmetric Matrices and Quadratic Forms}pdfTeX warning (ext4): de
-stination with the same identifier (name{equation.7.2.2}) has been already used
-, duplicate ignored
+l.1061 \chapter
+               {Symmetric Matrices and Quadratic Forms}pdfTeX warning (ext4): d
+estination with the same identifier (name{equation.7.2.2}) has been already use
+d, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.961 \chapter
-              {Symmetric Matrices and Quadratic Forms}] [28
+l.1061 \chapter
+               {Symmetric Matrices and Quadratic Forms}] [32
 
 ]
  8.
-[29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 991.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 991.
+[33]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1091.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1091.
  (./Linear_Algebra.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 991.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 991.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1091.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1091.
 
-
-Package rerunfilecheck Warning: File `Linear_Algebra.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Linear_Algebra.out':
-(rerunfilecheck)             Before: FF7FC9309C37079E4D39A0A89EC46017;1810
-(rerunfilecheck)             After:  ACB6E378D412055C46C3190A3FF15D9D;1920.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 991.
+Package rerunfilecheck Info: File `Linear_Algebra.out' has not changed.
+(rerunfilecheck)             Checksum: 713204A454D3C4B00C41ED19FFDB6C47;2061.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1091.
  ) 
 Here is how much of TeX's memory you used:
- 19305 strings out of 492995
- 363156 string characters out of 6132704
- 436022 words of memory out of 5000000
- 22274 multiletter control sequences out of 15000+600000
- 116513 words of font info for 82 fonts, out of 8000000 for 9000
+ 19342 strings out of 492995
+ 363691 string characters out of 6132704
+ 435026 words of memory out of 5000000
+ 22289 multiletter control sequences out of 15000+600000
+ 117913 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,84p,596b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,15n,84p,787b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-17/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-dist/fonts/
-enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
-m/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
-/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
-lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
-10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb>
-Output written on Linear_Algebra.pdf (33 pages, 375563 bytes).
+17/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/
+fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
+dvips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/euler/eusm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
+lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
+c/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+am10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on Linear_Algebra.pdf (37 pages, 389117 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
- 495 compressed objects within 5 object streams
- 193 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 608 PDF objects out of 1000 (max. 8388607)
+ 543 compressed objects within 6 object streams
+ 209 named destinations out of 1000 (max. 500000)
+ 269 words of extra memory for PDF output out of 10000 (max. 10000000)
 
