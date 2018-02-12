@@ -4,30 +4,31 @@
 \contentsline {section}{\numberline {1.2}Bases}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Dimension of a Vector Space}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Sums and Direct Sums}{4}{section.1.4}
-\contentsline {chapter}{\numberline {2}Solving Linear Equations}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Systems of Linear Equations}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}Row Reduction and Echelon Forms}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}Vector Equations}{8}{section.2.3}
-\contentsline {section}{\numberline {2.4}The Matrix Equation $ \mathbf {A} \mathbf {x} =\mathbf {b} $}{9}{section.2.4}
-\contentsline {section}{\numberline {2.5}Solution Sets of Linear Systems}{10}{section.2.5}
-\contentsline {section}{\numberline {2.6}Linear Independence}{10}{section.2.6}
-\contentsline {section}{\numberline {2.7}Linear Transformations}{11}{section.2.7}
-\contentsline {chapter}{\numberline {3}Matrices}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Matrices and Arithmetic Operations on Them}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}The Inverse of a Matrix}{14}{section.3.2}
-\contentsline {section}{\numberline {3.3}Subspaces of $ \mathbb {R}^n $}{17}{section.3.3}
-\contentsline {chapter}{\numberline {4}Determinants}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Determinants and some other Concepts}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Properties of Determinants}{20}{section.4.2}
-\contentsline {chapter}{\numberline {5}Vector Spaces}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Coordinate Systems}{24}{section.5.1}
-\contentsline {section}{\numberline {5.2}Rank}{25}{section.5.2}
-\contentsline {section}{\numberline {5.3}Change of Basis}{25}{section.5.3}
-\contentsline {chapter}{\numberline {6}Eigenvalues and Eigenvectors}{27}{chapter.6}
-\contentsline {section}{\numberline {6.1}Definition}{27}{section.6.1}
-\contentsline {section}{\numberline {6.2}Diagonalization}{28}{section.6.2}
-\contentsline {section}{\numberline {6.3}Complex Eigenvalues}{28}{section.6.3}
-\contentsline {chapter}{\numberline {7}Orthogonality}{29}{chapter.7}
-\contentsline {section}{\numberline {7.1}Orthogonal Sets}{29}{section.7.1}
-\contentsline {section}{\numberline {7.2}Orthogonal Projections}{30}{section.7.2}
-\contentsline {chapter}{\numberline {8}Symmetric Matrices and Quadratic Forms}{33}{chapter.8}
+\contentsline {chapter}{\numberline {2}Matrices}{7}{chapter.2}
+\contentsline {chapter}{\numberline {3}Solving Linear Equations}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Systems of Linear Equations}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Row Reduction and Echelon Forms}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}Vector Equations}{10}{section.3.3}
+\contentsline {section}{\numberline {3.4}The Matrix Equation $ \mathbf {A} \mathbf {x} =\mathbf {b} $}{11}{section.3.4}
+\contentsline {section}{\numberline {3.5}Solution Sets of Linear Systems}{12}{section.3.5}
+\contentsline {section}{\numberline {3.6}Linear Independence}{12}{section.3.6}
+\contentsline {section}{\numberline {3.7}Linear Transformations}{13}{section.3.7}
+\contentsline {chapter}{\numberline {4}Matrices}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Matrices and Arithmetic Operations on Them}{15}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Inverse of a Matrix}{16}{section.4.2}
+\contentsline {section}{\numberline {4.3}Subspaces of $ \mathbb {R}^n $}{19}{section.4.3}
+\contentsline {chapter}{\numberline {5}Determinants}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Determinants and some other Concepts}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Properties of Determinants}{22}{section.5.2}
+\contentsline {chapter}{\numberline {6}Vector Spaces}{25}{chapter.6}
+\contentsline {section}{\numberline {6.1}Coordinate Systems}{26}{section.6.1}
+\contentsline {section}{\numberline {6.2}Rank}{27}{section.6.2}
+\contentsline {section}{\numberline {6.3}Change of Basis}{27}{section.6.3}
+\contentsline {chapter}{\numberline {7}Eigenvalues and Eigenvectors}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}Definition}{29}{section.7.1}
+\contentsline {section}{\numberline {7.2}Diagonalization}{30}{section.7.2}
+\contentsline {section}{\numberline {7.3}Complex Eigenvalues}{30}{section.7.3}
+\contentsline {chapter}{\numberline {8}Orthogonality}{31}{chapter.8}
+\contentsline {section}{\numberline {8.1}Orthogonal Sets}{31}{section.8.1}
+\contentsline {section}{\numberline {8.2}Orthogonal Projections}{32}{section.8.2}
+\contentsline {chapter}{\numberline {9}Symmetric Matrices and Quadratic Forms}{35}{chapter.9}
