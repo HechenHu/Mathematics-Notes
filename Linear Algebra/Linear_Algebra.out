@@ -4,30 +4,31 @@
 \BOOKMARK [1][-]{section.1.3}{Dimension of a Vector Space}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.4}{Sums and Direct Sums}{chapter.1}% 5
 \BOOKMARK [0][-]{chapter.2}{Matrices}{}% 6
-\BOOKMARK [0][-]{chapter.3}{Solving Linear Equations}{}% 7
-\BOOKMARK [1][-]{section.3.1}{Systems of Linear Equations}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.2}{Row Reduction and Echelon Forms}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.3}{Vector Equations}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.4}{The Matrix Equation \040A x =b }{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.5}{Solution Sets of Linear Systems}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.6}{Linear Independence}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.7}{Linear Transformations}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Matrices}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Matrices and Arithmetic Operations on Them}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{The Inverse of a Matrix}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{Subspaces of \040Rn }{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Determinants}{}% 19
-\BOOKMARK [1][-]{section.5.1}{Determinants and some other Concepts}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.2}{Properties of Determinants}{chapter.5}% 21
-\BOOKMARK [0][-]{chapter.6}{Vector Spaces}{}% 22
-\BOOKMARK [1][-]{section.6.1}{Coordinate Systems}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.2}{Rank}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.3}{Change of Basis}{chapter.6}% 25
-\BOOKMARK [0][-]{chapter.7}{Eigenvalues and Eigenvectors}{}% 26
-\BOOKMARK [1][-]{section.7.1}{Definition}{chapter.7}% 27
-\BOOKMARK [1][-]{section.7.2}{Diagonalization}{chapter.7}% 28
-\BOOKMARK [1][-]{section.7.3}{Complex Eigenvalues}{chapter.7}% 29
-\BOOKMARK [0][-]{chapter.8}{Orthogonality}{}% 30
-\BOOKMARK [1][-]{section.8.1}{Orthogonal Sets}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.2}{Orthogonal Projections}{chapter.8}% 32
-\BOOKMARK [0][-]{chapter.9}{Symmetric Matrices and Quadratic Forms}{}% 33
+\BOOKMARK [1][-]{section.2.1}{Matrices and Arithmetic Operations on Them}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{The Inverse of a Matrix}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{Linear Mappings}{}% 9
+\BOOKMARK [0][-]{chapter.4}{Solving Linear Equations}{}% 10
+\BOOKMARK [1][-]{section.4.1}{Systems of Linear Equations}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.2}{Row Reduction and Echelon Forms}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.3}{Vector Equations}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.4}{The Matrix Equation \040A x =b }{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.5}{Solution Sets of Linear Systems}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.6}{Linear Independence}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.7}{Linear Transformations}{chapter.4}% 17
+\BOOKMARK [0][-]{chapter.5}{Matrices}{}% 18
+\BOOKMARK [1][-]{section.5.1}{Subspaces of \040Rn }{chapter.5}% 19
+\BOOKMARK [0][-]{chapter.6}{Determinants}{}% 20
+\BOOKMARK [1][-]{section.6.1}{Determinants and some other Concepts}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.2}{Properties of Determinants}{chapter.6}% 22
+\BOOKMARK [0][-]{chapter.7}{Vector Spaces}{}% 23
+\BOOKMARK [1][-]{section.7.1}{Coordinate Systems}{chapter.7}% 24
+\BOOKMARK [1][-]{section.7.2}{Rank}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.3}{Change of Basis}{chapter.7}% 26
+\BOOKMARK [0][-]{chapter.8}{Eigenvalues and Eigenvectors}{}% 27
+\BOOKMARK [1][-]{section.8.1}{Definition}{chapter.8}% 28
+\BOOKMARK [1][-]{section.8.2}{Diagonalization}{chapter.8}% 29
+\BOOKMARK [1][-]{section.8.3}{Complex Eigenvalues}{chapter.8}% 30
+\BOOKMARK [0][-]{chapter.9}{Orthogonality}{}% 31
+\BOOKMARK [1][-]{section.9.1}{Orthogonal Sets}{chapter.9}% 32
+\BOOKMARK [1][-]{section.9.2}{Orthogonal Projections}{chapter.9}% 33
+\BOOKMARK [0][-]{chapter.10}{Symmetric Matrices and Quadratic Forms}{}% 34

@@ -372,7 +372,45 @@ The notion of direct sum and direct product can be extended to several factors w
 	An square matrix is said to be \textit{strictly diagonally dominant} if the absolute of each diagonal entry exceeds the sum of the absolute values of the other entries in the same row.
 \end{Definition}
 \chapter{Linear Mappings}
+\begin{Definition}
+	Let $ V,W $ be vector spaces over $ K $, and let $ F:V \to W $ be a linear map. The \textit{kennel} of $ F $, denoted $ \Ker F $, is the set of elements $ \vec{v} \in V $ such that $ F(\vec{v}=\vec{0}) $.
+\end{Definition}	
+The kernel of a linear map on vector space is a subspace of the vector space.
+\begin{Proposition}
+	The following two conditions are equivalent
+	\begin{enumerate}
+		\item The kernel of $ F $ is $ \{\vec{0} \} $.
+		\item $ F $ is injective.
+	\end{enumerate}
+\end{Proposition}
+\begin{proof}
 	
+\end{proof}
+\begin{Theorem}
+	Let $ F:V \to W $ be a linear map whose kernel is $ \{\vec{0} \} $. If $ \vec{v}_1,\cdots,\vec{v}_n $ are linearly independent elements of $ V $, then $ F(\vec{v}_1),\cdots,F(\vec{v}_n) $ are linearly independent elements of $ W $.
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+\begin{Theorem}
+	Let $ V $ be a vector space. Let $ L:V \to W $ be a linear map of $ V $ into another space $ W $. Then
+	\begin{equation}
+		\dim V = \dim \Ker L + \dim \Im L \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{proof}
+	content...
+\end{proof}
+\begin{Theorem}
+	Let $ L:V \to W $ be a linear map. Assume that
+	\begin{equation}
+		\dim V = \dim W \nonumber
+	\end{equation}
+	If $ \Ker L = \{\vec{0} \} $, or if $ \Im L = W $, then $ L $ is bijective.
+\end{Theorem}
+\begin{proof}
+	
+\end{proof}
 %Obsolete
 
 	\chapter{Solving Linear Equations}
