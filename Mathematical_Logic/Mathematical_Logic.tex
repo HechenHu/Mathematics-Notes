@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{/Users/HechenHu/Development/NoteTaking/Mathematics-Notes/Customized}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+
+\renewcommand{\@chapapp}{}% Not necessary...
+
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{Mathematical Logic}}
+% Author
+\author{\textsc{Hechen Hu}}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Auto-generated table of contents, list of figures and list of tables %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\tableofcontents
+	
+	\mainmatter
+	\chapter{The Nature of Mathematical Logic}
+	\section{Axiom Systems}
+	\begin{Definition}
+		\textit{Axioms} are laws we accept without proof. \textit{Theorems} are derived from axioms. \textit{Basic concepts} are concepts not defined using other concepts, and \textit{derived concepts} are defined in terms of these.
+	\end{Definition}
+\begin{Definition}
+	The entire edifice consists of basic concepts, derived concepts, axioms, and theorems is called an \textit{axiom system}.
+\end{Definition}
+\section{Formal Systems}
+\begin{Definition}
+	Proofs which deal with concrete objects in a constructive manner are said to be \textit{finitary}. For example, proof by contradiction is \textbf{not} finitary.
+\end{Definition}
+\begin{Definition}
+	The study of axioms and theorems as sentences is called the \textit{syntactical study} of axioms systems; the study of the meaning of these sentences is called the \textit{semantical study} of axiom systems.
+\end{Definition}
+\begin{Definition}
+	Any finite sequence of symbols of a language is called an \textit{expression} of that language. In each language, certain expressions of the language are designated as the \textit{formulas} of the language; it is intended that these be the expressions which assert some fact.
+\end{Definition}
+The language of a formal system $ F $ is denoted by $ L(F) $.
+\begin{Definition}
+	A \textit{rules of inference}, or \textit{rules}, states that under certain conditions, one formula, called the \textit{conclusion} of the rule, can be \textit{inferred} from certain other formulas, called the \textit{hypotheses} of the rule.
+\end{Definition}
+\begin{Definition}
+	The theorems of a formal system $ F $ can be defined using a \textit{generalized inductive definition}, that is
+	\begin{enumerate}
+		\item The axioms of $ F $ are theorems of $ F $.
+		\item If all the hypotheses of a rule of $ F $ are theorems of $ F $, then the conclusion of the rule is a theorem of $ F $.
+	\end{enumerate}
+If we replace ``are theorems of $ F $" with ``have property $ P $", this is called \textit{induction on theorems}, and it can be used to prove that every theorem of $ F $ has property $ P $. The second part of our definition is called the \textit{induction hypotheses}. \newpara
+If a collection of objects is defined by a generalized inductive definition, the in order to prove that every object in it has property $ P $, it suffices to prove that the objects having property $ P $ satisfy the laws of the definition.
+\end{Definition}	
+\begin{Definition}
+	A rule in formal system if \textit{finite} if it has only finitely many hypotheses.
+\end{Definition}
+\begin{Definition}
+	Let $ F $ be a formal system in which all the rules are finite. By a \textit{proof} in $ F $, we mean a finite sequence of formulas, each of which either is an axiom or is the conclusion of a rule whose hypotheses precede that formula in the proof. If $ A $ is the last formula in a proof $ P $, we say that $ P $ is a proof of $ A $.
+\end{Definition}
+\begin{Theorem}
+	A formula $ A $ is a theorem of $ F $ iff there is a proof of $ A $.
+\end{Theorem}
+\begin{proof}
+	If $ A $ is an axiom of $ F $, then certainly it has a proof. Now suppose that $ A $ can be inferred from $ B_1,\cdots,B_n $ by some rule of $ F $. By the induction hypothesis, each of the $ B_i $ has a proof. If we put these proofs one after the other, and add $ A $ to the end of this sequence, we obtain a proof for $ A $.
+\end{proof}
+We write $ \vdash_F A $ as an abbreviation for $ A $ is a theorem of $ F $. The subscript $ F $ can be omitted if no confusion results.
+\begin{Definition}
+	The symbols added to a language are called \textit{defined symbols}. Each such symbol is to be combined in certain ways with symbols of the language and previously introduced defined symbols to form expressions called \textit{defined formulas}. Each defined formula is to be an abbreviation of some formula of the language. With each defined symbol, one must give a \textit{definition} of that symbol; that is a rule which tells how to form defined formulas with the new symbol and how to find, for each such defined formula, the formula of the given language which it abbreviates.
+\end{Definition}
+The defined symbols are \textbf{not} symbols of the language, and the defined formulas are \textbf{not} formulas of the language. When we say about a defined formula, we are talking about the formula of the language which it abbreviates. Thus the length of a defined formula is not the number of occurrences of symbols in the defined formula, but the number of occurrences of symbols in the formula which the defined formula abbreviates.
+\section{Syntactical Variables}
+\begin{Definition}
+	\textit{Syntactical variables} behave the same as variables in analysis. They vary through the expressions of the language being discussed and are fixed throughout one context. Syntactical variables are denoted with boldface letters. In particular, $ \mathbf{u} $ and $ \mathbf{v} $ would vary through all expressions, and $ \mathbf{A} $, $ \mathbf{B} $,$ \mathbf{C} $, and $ \mathbf{D} $ would vary through formulas. New syntactical variables may be formed from old ones by adding primes or subscripts, and these new syntactical variables vary through the same expressions as the old ones. Two different syntactical variables occur in the same context do not necessarily represent different expressions, and they are \textbf{not} symbols of the language.
+\end{Definition}
+\begin{Example}
+	Suppose that $ x $ is a symbol of the formal system $ F $ and suppose that it turns out that whenever we add the symbol $ x $ to the right of a formula of $ F $, we obtain a new formula of $ F $. If $ \mathbf{u} $ has been agreed to be used as a syntactical variable, the fact can be expressed as follows: if $ \mathbf{u} $ is a formula, then the expression obtained by adding $ x $ to the right of $ \mathbf{u} $ is a formula.
+\end{Example}
+\begin{Definition}
+	If $ \mathbf{u} $ and $ \mathbf{v} $ are two syntactical variables, $ \mathbf{uv} $ stands for the expression obtained by juxtaposing $ \mathbf{u} $ and $ \mathbf{v} $, that is, by writing down $ \mathbf{v} $ immediately after writing $ \mathbf{u} $. Then the last part of the statement of the previous example can be shorten to ``$ \mathbf{u}x $ is a formula".
+\end{Definition}
+\chapter{First-Order Theories}
+\section{Functions and Predicates}
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
