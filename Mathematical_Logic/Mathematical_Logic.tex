@@ -110,6 +110,97 @@ The defined symbols are \textbf{not} symbols of the language, and the defined fo
 \end{Definition}
 \chapter{First-Order Theories}
 \section{Functions and Predicates}
+\begin{Definition}
+	A subset of the set of $ n $-tuples in $ A $ is called an \textit{$ n $-ary predicate}. If $ P $ represents such predicate, then $ P(a_1,\cdots,a_n) $ means that the $ n $-tuple $ (a_1,\cdots,a_n) $ is in $ P $.
+\end{Definition}
+\begin{Definition}
+	A certain set of objects in a mathematical axiom system that contains the objects ``manipulated"(e.g. $ \Natural $) is called the \textit{universe} of the axiom system, and its elements are called the \textit{individuals} of the system. Functions from the universe to the universe are called \textit{individual functions}; predicates in the universe are called \textit{individual predicates}.
+\end{Definition}
+Among the symbols needed in formalizing the axiom system are names for certain individuals, individual functions, and individual predicates.
+\begin{Definition}
+	The binary predicate whose first and second elements are the same element of a set, called the \textit{equality predicate} in this set, is denoted by $ = $.
+\end{Definition}
+\section{Truth Functions}
+\begin{Definition}
+	A \textit{truth function} is the function from the set of \textit{truth values} (usually $ \True $ and $ \False $) to the set of truth values. For example, the symbol $ \land $ can be defined by a binary truth function $ H_\land(a,b) $ that can be described by the equations
+	\begin{align}
+		&H_\land(\True,\True)=\True \nonumber \\
+		&H_\land(\True,\False)= H_\land(\False,\True) = H_\land(\False,\False)=\False \nonumber
+	\end{align}
+\end{Definition}
+\section{Variables and Quantifiers}
+\begin{Definition}
+	A \textit{free variable} is a notation that specifies a place in an expression where substitution may take place. A \textit{bound variable} is a variable that no substitution (with an individual in the universe) can take place. For example, in the expression
+	\begin{equation}
+		\sum_{x=1}^{10}f(x,y) \nonumber
+	\end{equation}
+	we can change $ x $ to any variable other than $ y $ without altering the value of this expression. However, change $ x $ to $ 2 $ result in a meaningless expression. On the other hand, $ y $ can be substitute to any individual, such as $ 5 $, while the new expression still makes sense. Thus the value of this expression depends on $ y $, the free variable, not the bound variable $ x $.\newpara
+	Formally, an occurrence of $ \mathbf{x} $ in $ \mathbf{A} $ is \textit{bound} in $ \mathbf{A} $ if it occurs in a part of $ \mathbf{A} $ of the form $ \exists \mathbf{xB} $; otherwise, it is \textit{free} in $ \mathbf{A} $.
+	
+\end{Definition}
+\begin{Definition}
+	The process of \textit{quantification} specifies the quantity of specimens in the universe that satisfies a open formula. A language element that generates a quantification is called a \textit{quantifier}, such as $ \forall $ and $ \exists $.
+\end{Definition}
+\section{First-Order Languages}
+\begin{Definition}
+	A \textit{first-order language} has as symbols the following:
+	\begin{enumerate}
+		\item The variables $ x,y,z,w,x^\prime,y^\prime,\cdots $;
+		\item for each $ n $, the $ n $-ary function symbols and the $ n $-ary predicate symbols;
+		\item the symbols $ \neg $, $ \lor $, and $ \exists $.
+	\end{enumerate}
+\end{Definition}
+\begin{Definition}
+	A $ 0 $-ary function symbol is called a \textit{constant}. A function symbol or a predicate symbol other than $ = $ is called a \textit{nonlogical} symbol; other symbols are called \textit{logical} symbols.
+\end{Definition}
+\begin{Definition}
+	With the symbols in a language, the \textit{terms} can be defined by the following rules:
+	\begin{enumerate}
+		\item a variable is a term;
+		\item the combination of a $ n $-ary and $ n $ terms is a term.
+	\end{enumerate}
+This combination is also called an \textit{atomic formula}.
+\end{Definition}
+\begin{Definition}
+	The \textit{formulas} are defined as:
+	\begin{enumerate}
+		\item an atomic formula is a formula;
+		\item if $ \mathbf{u} $ is a formula, $ \neg \mathbf{u} $ is a formula;
+		\item if $ \mathbf{u} $ and $ \mathbf{v} $ are formulas, then $ \lor \mathbf{uv} $ is a formula;
+		\item if $ \mathbf{u} $ is a formula, then $ \exists \mathbf{xu} $ is a formula.
+	\end{enumerate}
+The \textit{height} of a formula is defined to be the number of occurrences of $ \neg $, $ \lor $, and $ \exists $ in the formula.
+\end{Definition}
+\begin{Definition}
+	A \textit{designator} is an expression which is either a term or a formula. Every designator has the form $ \mathbf{u v_1\cdots v_n} $, where $ \mathbf{u} $ is a symbol, the rest of $ \mathbf{v}_i $ are designators, and $ n $ is determined by $ \mathbf{u} $. $ n $ is called the \textit{index} of $ \mathbf{u} $. For example, if $ \mathbf{u} $ is a variable, then $ n=0 $; if $ \mathbf{u} $ is a $ k $-ary function symbol, then $ n=k $; if $ \mathbf{u} $ is $ \exists $, then $ n=2 $. \newpara
+	 Two expressions are \textit{compatible} if one of them can be obtained by adding some expression (possibly the empty expression) to the right end of the other.
+\end{Definition}
+\begin{Lemma}
+	If $ \mathbf{u}_1,\cdots,\mathbf{u}_n $, $ \mathbf{u}^\prime_1,\cdots,\mathbf{u}^\prime_n $ are designators and $ \mathbf{u}_1 \cdots \mathbf{u}_n $ and $ \mathbf{u}^\prime_1 \cdots \mathbf{u}^\prime_n $ are compatible, then $ \mathbf{u}_i $ is $ \mathbf{u}^\prime_i $ for $ i=1,\cdots,n $.
+\end{Lemma}
+\begin{proof}
+	Prove by induction.
+\end{proof}
+\begin{Theorem}[Formation Theorem]
+	Every designator can be written in the form $ \mathbf{u v_1\cdots v_n} $, where $ \mathbf{u} $ is a symbol, the rest of $ \mathbf{v}_i $ are designators, and $ n $ is the index of $ \mathbf{u} $, in one and only one way.
+\end{Theorem}
+\begin{proof}
+	$ \mathbf{u} $ is the first symbol of it, so it must be uniquely determined, and thus $ n $ is unique. The previous lemma shows that if the combination of $ \mathbf{u} $ and two sets of $ \mathbf{v}_i $ are identical, the two sets of $ \mathbf{v}_i $ must be identical.
+\end{proof}
+\begin{Lemma}
+	Every occurrence of a symbol in a designator $ \mathbf{u} $ begins with an occurrence of a designator in $ \mathbf{u} $.
+\end{Lemma}
+\begin{proof}
+	Use induction on the length of $ \mathbf{u} $.
+\end{proof}
+\begin{Theorem}[Occurrence Theorem]
+	Let $ \mathbf{u} $ be a symbol of index $ n $, and let $ \mathbf{v}_1,\cdots,\mathbf{v}_n $ be designators. Then any occurrence of a designator $ \mathbf{v} $ in $ \mathbf{u v_1\cdots v_n} $ is either all of $ \mathbf{u v_1\cdots v_n} $ or a part of one of the $ \vec{v}_i $.
+\end{Theorem}
+\begin{proof}
+	If the initial symbol occurred in $ \mathbf{v} $ is $ \mathbf{u} $, then clearly $ \mathbf{v} $ is compatible with $ \mathbf{u} $, thus $ \mathbf{v} $ is all of $ \mathbf{u v_1\cdots v_n} $. \newpara
+	If the initial symbol of occurrence of $ \mathbf{v} $ is within $ \mathbf{v}_i $. This symbol begins an occurrence of a designator $ \mathbf{v}^\prime $ in $ \mathbf{v}_i $ by the previous lemma. Apparently $ \mathbf{v} $ and $ \mathbf{v}^\prime $ are compatible, so $ \mathbf{v} $ is $ \mathbf{v}^\prime$. Hence $ \mathbf{v} $ is a part of $ \mathbf{v}_i $.
+\end{proof}
+
 
 
 

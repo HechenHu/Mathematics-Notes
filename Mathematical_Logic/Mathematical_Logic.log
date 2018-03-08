@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 FEB 2018 22:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 MAR 2018 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1157,48 +1157,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--83
 ]
  2.
 [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 144.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 144.
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 175--177
+
+ []
+
+
+Overfull \hbox (7.24054pt too wide) in paragraph at lines 179--180
+[]\T1/lmr/bx/n/10.95 Lemma. []\T1/lmr/m/it/10.95 If $\OT1/lmr/bx/n/10.95 u[]\OM
+L/lmm/m/it/10.95 ; []  ; \OT1/lmr/bx/n/10.95 u[]$\T1/lmr/m/it/10.95 , $\OT1/lmr
+/bx/n/10.95 u[]\OML/lmm/m/it/10.95 ; []  ; \OT1/lmr/bx/n/10.95 u[]$ \T1/lmr/m/i
+t/10.95 are des-ig-na-tors and $\OT1/lmr/bx/n/10.95 u[] [] u[]$ \T1/lmr/m/it/10
+.95 and $\OT1/lmr/bx/n/10.95 u[] [] u[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--202
+
+ []
+
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
  (./Mathematical_Logic.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 144.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 144.
-
-
-Package rerunfilecheck Warning: File `Mathematical_Logic.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Mathematical_Logic.out':
-(rerunfilecheck)             Before: E8B2D38A150D6C4FEA25A62E14255087;253
-(rerunfilecheck)             After:  45A0EED84FF1F2D3702A9E5F8DEFA900;378.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 144.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
+Package rerunfilecheck Info: File `Mathematical_Logic.out' has not changed.
+(rerunfilecheck)             Checksum: F75A7053B8C051B9A3E8749DC021EED5;577.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  ) 
 Here is how much of TeX's memory you used:
- 19042 strings out of 492995
- 360122 string characters out of 6132704
- 433048 words of memory out of 5000000
- 22201 multiletter control sequences out of 15000+600000
+ 19066 strings out of 492995
+ 360335 string characters out of 6132704
+ 434063 words of memory out of 5000000
+ 22208 multiletter control sequences out of 15000+600000
  74186 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,6n,84p,800b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/t
-exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/
-fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
-m/lmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/lm/lmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
-ri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmro10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Mathematical_Logic.pdf (9 pages, 221764 bytes).
+ 63i,8n,84p,800b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
+17/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-d
+ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
+dvips/lm/lm-mathit.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
+m/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
+/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb>
+Output written on Mathematical_Logic.pdf (11 pages, 264647 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

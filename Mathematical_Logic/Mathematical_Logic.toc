@@ -5,3 +5,6 @@
 \contentsline {section}{\numberline {1.3}Syntactical Variables}{3}{section.1.3}
 \contentsline {chapter}{\numberline {2}First-Order Theories}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Functions and Predicates}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Truth Functions}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Variables and Quantifiers}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}First-Order Languages}{6}{section.2.4}
