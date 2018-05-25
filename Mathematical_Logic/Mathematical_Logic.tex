@@ -200,10 +200,115 @@ The \textit{height} of a formula is defined to be the number of occurrences of $
 	If the initial symbol occurred in $ \mathbf{v} $ is $ \mathbf{u} $, then clearly $ \mathbf{v} $ is compatible with $ \mathbf{u} $, thus $ \mathbf{v} $ is all of $ \mathbf{u v_1\cdots v_n} $. \newpara
 	If the initial symbol of occurrence of $ \mathbf{v} $ is within $ \mathbf{v}_i $. This symbol begins an occurrence of a designator $ \mathbf{v}^\prime $ in $ \mathbf{v}_i $ by the previous lemma. Apparently $ \mathbf{v} $ and $ \mathbf{v}^\prime $ are compatible, so $ \mathbf{v} $ is $ \mathbf{v}^\prime$. Hence $ \mathbf{v} $ is a part of $ \mathbf{v}_i $.
 \end{proof}
+\begin{Definition}
+	The notation $ \mathbf{b_x[a]} $, which is a term, designates the expression obtained from $ \mathbf{b} $ by replacing each occurrence of $ \mathbf{x} $ by $ \mathbf{a} $. The notation $ \mathbf{A_x[a]} $, which is a formula, designates the expression obtained from $ \mathbf{A} $ by replacing each \textit{free} occurrence of $ \mathbf{x} $ by $ \mathbf{a} $. We say that $ \mathbf{a} $ is \textit{substitutible for $ \mathbf{x} $ in $ \mathbf{A} $} if for each variable $ \mathbf{y} $ occurring in $ \mathbf{a} $ no part of $ \mathbf{A} $ of the form $ \mathbf{\exists y B} $ contains an occurrence of $ \mathbf{x} $ which is free in $ \mathbf{A} $. The notations above can be easily extended to several variables, \textit{e.g.} $ \mathbf{b_{x_1,\cdots,x_n}[a_1, \cdots, a_n]} $.
+\end{Definition}
+Here $ \mathbf{u} $ is a binary predicate or function symbol. \newpara
 
-
-
-
+\begin{tabular}{ |c|c| }
+	\hline
+	\text{Symbols} &Meaning \\
+	\hline
+	$ (\mathbf{A \lor B}) $ &$ \mathbf{\lor A B} $ \\
+	\hline
+	$ (\mathbf{A \Rightarrow B}) $ &$ (\mathbf{\lnot A \lor B}) $\\
+	\hline
+	$ (\mathbf{A \land B}) $ &$ \neg(A \Rightarrow \lnot B) $ \\
+	\hline
+	$ (\mathbf{A \Leftrightarrow B}) $ &$ (\mathbf{(A \Rightarrow B)\land (B \Rightarrow A)}) $ \\
+	\hline
+	$ \forall \mathbf{x A} $ &$ \mathbf{\neg \exists x \neg A }$ \\
+	\hline
+	$ \mathbf{(aub)} $ &$ (\mathbf{uab}) $ \\
+	\hline
+	$\mathbf{(a\cancel{u}b)}  $ &$ \neg(\mathbf{aub}) $ \\
+	\hline
+\end{tabular}
+\begin{Definition}
+	$ \mathbf{\neg A} $ is called the \textit{negation} of $ \mathbf{A} $; $ \mathbf{A \lor B} $ is the \textit{disjunction} of $ \mathbf{A} $ and $ \mathbf{B} $, $ \mathbf{A \land B} $ the \textit{conjunction}, $ \mathbf{A \Rightarrow B} $ the \textit{implication}, $ \mathbf{A \Leftrightarrow B} $ the \textit{equivalence}, $ \mathbf{\exists x A} $ the \textit{instantiation} of $ \mathbf{A} $ by $ \mathbf{x} $, and $ \mathbf{\forall x A} $ the \textit{generalization} of $ \mathbf{A} $ by $ \mathbf{x} $. $ \forall $ is called the \textit{universal quantifier}, and $ \exists $ is called the \textit{existential quantifier}.
+\end{Definition}
+\section{Structures}
+\begin{Definition}
+	Let $ L $ be a first-order language. A \textit{structure} $ \mathscr{S} $ for $ L $ consists of the following things:
+	\begin{enumerate}
+		\item A nonempty set $ |\mathscr{S}| $, called the \textit{universe} of $ \mathscr{S} $, whose elements are called the \textit{individuals} of $ \mathscr{S} $.
+		\item For each $ n $-ary function symbol $ \mathbf{f} $ of $ L $, and $ n $-ary function $ \mathbf{f_\mathscr{S}} $ from $ |\mathscr{S}| $ to $ |\mathscr{S}| $. \textit{e.g.} for each constant $ \mathbf{e}  $ of $ L $, $ \mathbf{e_\mathscr{S}} $ is an individual of $ \mathscr{S} $.
+		\item For each $ n $-ary predicate symbol $ \mathbf{p} $ of $ L $ other then $ = $, and $ n $-ary predicate $ \mathbf{p_\mathscr{S}} $ in $ |\mathscr{S}| $.
+	\end{enumerate}
+\end{Definition}
+\begin{Definition}
+	Let $ \mathscr{S} $ be a structure for $ L $. For each individual of it we choose a new constant called the \textit{name} of this individual. Different names are chosen for different individuals. The first-order Language obtained from $ L $ by adding all the names of individuals of $ \mathscr{S} $ is designated by $ L(\mathscr{S}) $.
+\end{Definition}
+\begin{Definition}
+	An expression is \textit{variable-free} if it contains no variables. The individual $ \mathscr{S}(\mathbf{a}) $ of $ \mathscr{S} $ for each variable-free term $ \mathbf{a} $ of $ L(\mathscr{S}) $ is defined as follows: if $ \mathbf{a} $ is a name, $ \mathscr{S}(\mathbf{a}) $ is the individual of which $ \mathbf{a} $ is the name; if $ \mathbf{a} $ is not a name, then since it is variable-free it must be $ \mathbf{f a_1 \cdots a_n} $ with $ \mathbf{f} $ as a function symbol of $ L $, and we then let $ \mathscr{S}(\mathbf{a}) $ be $ \mathbf{f_\mathscr{S}(\mathscr{S}(\mathbf{a_1}),\cdots,\mathscr{S}(a_n))} $.
+\end{Definition}
+\begin{Definition}
+	A formula $ \mathbf{A} $ is \textit{closed} if no variable is free in $ \mathbf{A} $. Intuitively, this formula has no ``open" interpretation so that in any circumstances the meaning of it is fixed.
+\end{Definition}
+We now define a truth value $ \mathscr{S}(\mathbf{A}) $ for each closed formula $ \mathbf{A} $ in $ L(\mathscr{S}) $. \begin{tabular}{ |c|c|}
+	\hline
+	$ \mathbf{A} =...$ &Truth Value \\
+	\hline
+	$ \mathbf{a = b} $ &$ \mathscr{S}(\mathbf{A})=T \Leftrightarrow \mathscr{S}(\mathbf{a})=\mathscr{S}(\mathbf{b}) $ \\
+	\hline
+$ 	\mathbf{p a_1 \cdots a_n} $, where $ \mathbf{p} $ is not $ = $ &$ \mathscr{S}(\mathbf{A})=T \Leftrightarrow \mathbf{p_\mathscr{S}(\mathscr{S}(a_1),\cdots,\mathscr{S}(a_n))} $ \\
+\hline
+$ \neg \mathbf{B} $ &$ H_\neg(\mathbf{\mathscr{S}(B)}) $ \\
+\hline
+$ \mathbf{B \lor C} $ &$ H_\lor(\mathscr{S}(\mathbf{B}), \mathscr{S}(\mathbf{C})) $ \\
+\hline
+$ \exists \mathbf{x B} $ &$ \mathbf{S}(\mathbf{A})=T $ iff $ \mathscr{S}(\mathbf{B_x[i]}) =T$ for some $ \mathbf{i} $ in $ L(\mathscr{S}) $\\
+\hline
+\end{tabular}
+Now we have 
+\begin{enumerate}
+	\item $ \mathscr{S}(\mathbf{A_1\lor \cdots \lor A_n})=T $ iff $ \mathscr{S}(\mathbf{A}_i)=T $ for at least one $ i $.
+	\item $ \mathscr{S}(\mathbf{A_1\land \cdots \land A_n})=T $ iff $ \mathscr{S}(\mathbf{A}_i)=T $ for all $ i $.
+	\item $ \mathscr{S}(\forall \mathbf{x A})=T $ iff $ \mathscr{S}(\mathbf{A_x[i]})=T $ for every $ \mathbf{i} $ in $ L(\mathscr{S}) $.
+\end{enumerate}
+\begin{Definition}
+	If $ \mathbf{A} $ is a formula of $ L $, and \textit{$ \mathscr{S} $-instance} of $ \mathbf{A} $ is a closed formula of the form $ \mathbf{A[i_1,\cdots,i_n]} $ in $ L(\mathscr{S}) $. A formula $ \mathbf{A} $ of $ L $ is \textit{valid} in $ \mathscr{S} $ if $ \mathscr{S}(\mathbf{A^\prime})=T $ for every $ \mathscr{S} $-instance $ \mathbf{A^\prime} $ of $ \mathbf{A} $.
+\end{Definition}
+\begin{Lemma}
+	Let $ \mathscr{S} $ be a structure for $ L $; $ \mathbf{a} $ a variable-free term in $ L(\mathscr{S}) $; $ \mathbf{i}  $ the name of $ \mathscr{S}(\mathbf{a}) $. If $ \mathbf{b} $ is a term of $ L(\mathscr{S}) $ in which no variable except $ \mathbf{x} $ occurs, then $ \mathscr{S}(\mathbf{b_x[a]})=\mathscr{S}(\mathbf{b_x[i]}) $. If $ \mathbf{A} $ is a formula of $ L(\mathscr{S}) $ in which no variable except $ \mathbf{x} $ is free, then $ \mathscr{S}(\mathbf{A_x[a]})=\mathscr{S}(\mathbf{A_x[i]}) $
+\end{Lemma}
+\begin{proof}
+	If $ \mathbf{b} $ is a name or a variable (in this case it would only involve $ \mathbf{x} $), the first conclusion holds obviously. If $ \mathbf{b} $ is a function symbol $ \mathbf{f b_1 \cdots b_n} $, we would have
+	\begin{align}
+		\mathscr{S}(\mathbf{b_x[a]})&=\mathscr{S}(\mathbf{f b_1[a]\cdots b_n[a]}) \nonumber \\
+		&= \mathbf{f(\mathscr{S}(b_1[a])\cdots \mathscr{S}(b_n[a]))} \nonumber \\
+		&= \mathbf{f(\mathscr{S}(b_1[i])\cdots \mathscr{S}(b_n[i]))}\quad \text{by the induction hypothesis}\nonumber \\
+		&=\mathscr{S}(\mathbf{f b_1[i]\cdots b_n[i]}) \nonumber \\
+		&=\mathscr{S}(\mathbf{b_x[i]}) \nonumber
+	\end{align}
+	\newpara
+	For a formula $ \mathbf{A} $, the assertion can be verified for the case when $ \mathbf{A} $ is: $ \mathbf{b=c} $, $ \neg \mathbf{B} $, $ \mathbf{B \lor C} $, and $ \exists\mathbf{y B} $(we may suppose $ \mathbf{y} $ is not $ \mathbf{x} $ or otherwise $ \mathbf{A_x[a]} $ and $ \mathbf{A_x[i]} $ would both be $ \mathbf{A} $), in a similar way.
+\end{proof}
+\section{Logical Axioms and Rules}
+\begin{Definition}
+	Let $ L $ be a first-order language. A \textit{propositional axiom} is a formula of the form $ \neg \mathbf{A\lor A} $. A \textit{substitution axiom} is a formula of the form $ \mathbf{A_x[a]}\Rightarrow \exists \mathbf{xA} $. An \textit{identity axiom} is a formula of the form $ \mathbf{x = x} $. An \textit{equality axiom} is a formula of the form
+	\begin{equation}
+		\mathbf{x_1 = y_1 \Rightarrow \cdots \Rightarrow x_n=y_n \Rightarrow fx_1\cdots x_n = fy_1\cdots y_n    } \nonumber
+	\end{equation}
+	or of the form
+		\begin{equation}
+	\mathbf{x_1 = y_1 \Rightarrow \cdots \Rightarrow x_n=y_n \Rightarrow px_1\cdots x_n = py_1\cdots y_n} \nonumber
+	\end{equation}
+	A \textit{logical axiom} is a formula which is a propositional axiom, a substitution axiom, an identity axiom, or an equality axiom.
+\end{Definition}
+The logical axioms are valid. The proofs for a propositional axiom, a identity axiom, and a equality axiom is obvious. An $ \mathscr{S} $-instance of a substitution axiom has the form $ \mathbf{A_x[a]}\Rightarrow \exists \mathbf{xA} $. Suppose that $ \mathscr{S}(\mathbf{A_x[a]}\Rightarrow \exists \mathbf{xA}) =F$. Then $ \mathscr{S}(\mathbf{A_x[a]})=T $ and $ \mathscr{S}(\exists \mathbf{xA})=F $. If $ \mathbf{i} $ is the name of $ \mathscr{S}(\mathbf{a}) $, the latter implies that $ \mathscr{S}(\mathbf{A_x[i]})=F $ while the former with the previous lemma implies that $ \mathscr{S}(\mathbf{A_x[i]})=T $, a contradiction.\newpara
+We now introduce five rules of inference (note that these rules are finite).
+\begin{enumerate}
+	\item \textit{Expansion Rule}: Infer $ \mathbf{B \lor A} $ from $ \mathbf{A} $.
+	\item \textit{Contraction Rule}: Infer $ \mathbf{A} $ from $ \mathbf{A \lor A} $. 
+	\item \textit{Associative Rule}: Infer $ \mathbf{(A \lor B)\lor C} $ from $ \mathbf{A \lor (B \lor C) }$.
+	\item \textit{Cut Rule}: Infer $ \mathbf{B \lor C} $ from $ \mathbf{A \lor B} $ and $ \mathbf{ \neg A \lor C} $.
+	\item \textit{$ \exists $-Introduction Rule}: If $ \mathbf{x} $ is not free in $ \mathbf{B} $, infer $ \exists \mathbf{xA\Rightarrow B} $ from $ \mathbf{A \Rightarrow B} $.
+\end{enumerate}
+We now prove that all the rules are valid.
+\begin{proof}
+	content...
+\end{proof}
 
 
 	

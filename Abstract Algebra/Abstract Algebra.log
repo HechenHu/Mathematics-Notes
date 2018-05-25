@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 NOV 2017 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 MAY 2018 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,26 +956,66 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2014/10/30 v0.9e Commutative diagrams with tikz
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
+\pgfarrowinset=\dimen176
+\pgfarrowlength=\dimen177
+\pgfarrowwidth=\dimen178
+\pgfarrowlinewidth=\dimen179
+)))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/mathtools/empheq.sty
 Package: empheq 2014/07/16 v2.14 Emphasizing equations
 \l_EQ_equationtype_int=\count135
 \l_EQ_alignmentmode_int=\count136
-\l_EQ_totalwidth_dim=\dimen176
-\l_EQ_displaywidth_dim=\dimen177
-\l_EQ_temp_linewidth_dim=\dimen178
-\EmphEqdelimitershortfall=\dimen179
+\l_EQ_totalwidth_dim=\dimen180
+\l_EQ_displaywidth_dim=\dimen181
+\l_EQ_temp_linewidth_dim=\dimen182
+\EmphEqdelimitershortfall=\dimen183
 \EmphEqdelimiterfactor=\count137
-\g_EQ_toptag_height_dim=\dimen180
-\g_EQ_bottomtag_depth_dim=\dimen181
-\g_EQ_toprow_height_dim=\dimen182
-\g_EQ_bottomrow_depth_dim=\dimen183
-\g_EQ_widesttag_dim=\dimen184
+\g_EQ_toptag_height_dim=\dimen184
+\g_EQ_bottomtag_depth_dim=\dimen185
+\g_EQ_toprow_height_dim=\dimen186
+\g_EQ_bottomrow_depth_dim=\dimen187
+\g_EQ_widesttag_dim=\dimen188
 \EQ_mathdisplay_box=\box39
 \EQ_tag_box=\box40
 \g_EQ_temprow_int=\count138
 )
-\c@Theorem=\count139
-\c@Example=\count140
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks41
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen189
+\enit@toks=\toks42
+\enit@inbox=\box41
+\enitdp@description=\count139
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/euscript.sty
+Package: euscript 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+)
+\c@Theorem=\count140
+\c@Example=\count141
 )
 (./Abstract Algebra.aux)
 \openout1 = `"Abstract Algebra.aux"'.
@@ -999,7 +1039,7 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 43.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box41
+\AtBeginShipoutBox=\box42
 Package hyperref Info: Link coloring OFF on input line 43.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1008,7 +1048,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count141
+\c@section@level=\count142
 )
 LaTeX Info: Redefining \ref on input line 43.
 LaTeX Info: Redefining \pageref on input line 43.
@@ -1021,17 +1061,17 @@ LaTeX Info: Redefining \nameref on input line 43.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count142
-\scratchdimen=\dimen185
-\scratchbox=\box42
-\nofMPsegments=\count143
-\nofMParguments=\count144
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count145
-\MPscratchDim=\dimen186
-\MPnumerator=\count146
-\makeMPintoPDFobject=\count147
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count143
+\scratchdimen=\dimen190
+\scratchbox=\box43
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen191
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1130,91 +1170,141 @@ ier (name{equation.1.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.130 	\begin{equation}
-                        [3] [4] [5] [6] [7] [8
+                        [3] [4] [5] [6] [7] [8] [9]pdfTeX warning (ext4): desti
+nation with the same identifier (name{equation.1.5.1}) has been already used, d
+uplicate ignored
+<to be read again> 
+                   \relax 
+l.372 	\begin{equation}
+                        [10]
+Overfull \hbox (14.49896pt too wide) in paragraph at lines 430--431
+[]\T1/lmr/bx/n/10.95 Definition. []\T1/lmr/m/n/10.95 Let $\OML/lmm/m/it/10.95 i
+[]; i[]; []  ; i[]$\T1/lmr/m/n/10.95 , $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95
+ r < n\OT1/lmr/m/n/10.95 )$ \T1/lmr/m/n/10.95 be dis-tinct el-e-ments of $\OML/
+lmm/m/it/10.95 I[] \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/n/10.95 f\OT1/lmr/m/n/10.95
+ 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2\OML/lmm/m/it/10.95 ; []  ; n\OMS/l
+msy/m/n/10.95 g$\T1/lmr/m/n/10.95 .
+ []
 
-]
+[11] [12]
+LaTeX Font Info:    Try loading font information for U+eus on input line 507.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+Overfull \hbox (16.37563pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 1.7.  CATEGORIES: PRODUCTS, COPRODUCTS, AND FREE OBJECTS \T1
+/lmr/m/n/10.95 13
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 536--545
+
+ []
+
+[14pdfTeX warning (ext4): destination with the same identifier (name{equation.1
+.7.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.547 \end{Theorem}
+                   ]
+Underfull \hbox (badness 10000) in paragraph at lines 572--575
+
+ []
+
+
+Overfull \hbox (16.37563pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 1.7.  CATEGORIES: PRODUCTS, COPRODUCTS, AND FREE OBJECTS \T1
+/lmr/m/n/10.95 15
+ []
+
+[15] [16]
  2.
-[9] [10
+[17
+
+] [18
 
 ]
  3.
-[11] [12
+[19] [20
 
 ]
  4.
 
-Overfull \hbox (13.47063pt too wide) in paragraph at lines 328--328
+Overfull \hbox (13.47063pt too wide) in paragraph at lines 619--619
 []\T1/lmr/bx/n/14.4 Modules, Ho-mo-mor-phisms and Ex-act Se-quences 
- []
-
-[13] [14
-
-]
- 5.
-[15] [16
-
-]
- 6.
-[17] [18
-
-]
- 7.
-[19] [20
-
-]
- 8.
-
-Overfull \hbox (11.7925pt too wide) in paragraph at lines 367--367
-[]\T1/lmr/bx/n/14.4 The Prime Rad-i-cal; Prime and Semiprime Rings 
  []
 
 [21] [22
 
 ]
+ 5.
+[23] [24
+
+]
+ 6.
+[25] [26
+
+]
+ 7.
+[27] [28
+
+]
+ 8.
+
+Overfull \hbox (11.7925pt too wide) in paragraph at lines 658--658
+[]\T1/lmr/bx/n/14.4 The Prime Rad-i-cal; Prime and Semiprime Rings 
+ []
+
+[29] [30
+
+]
  9.
-[23]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
+[31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 671.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 671.
  (./Abstract Algebra.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 671.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 671.
 Package rerunfilecheck Info: File `"Abstract Algebra".out' has not changed.
 (rerunfilecheck)             Checksum: 5FCED5B4153C335521D08D8DC8896B2B;4613.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 380.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 671.
  ) 
 Here is how much of TeX's memory you used:
- 17962 strings out of 492995
- 327365 string characters out of 6132704
- 399589 words of memory out of 5000000
- 21054 multiletter control sequences out of 15000+600000
- 79870 words of font info for 55 fonts, out of 8000000 for 9000
+ 19475 strings out of 492995
+ 367611 string characters out of 6132704
+ 437090 words of memory out of 5000000
+ 22477 multiletter control sequences out of 15000+600000
+ 89298 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,56p,590b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
-cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
+ 63i,17n,84p,1256b,1079s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
+texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-d
 ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
-dvips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
-m/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
-/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
-/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb>
-Output written on "Abstract Algebra.pdf" (27 pages, 319804 bytes).
+dvips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/euler/eusm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
+lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
+c/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+am10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on "Abstract Algebra.pdf" (35 pages, 393231 bytes).
 PDF statistics:
- 585 PDF objects out of 1000 (max. 8388607)
- 532 compressed objects within 6 object streams
- 115 named destinations out of 1000 (max. 500000)
+ 681 PDF objects out of 1000 (max. 8388607)
+ 617 compressed objects within 7 object streams
+ 166 named destinations out of 1000 (max. 500000)
  541 words of extra memory for PDF output out of 10000 (max. 10000000)
 

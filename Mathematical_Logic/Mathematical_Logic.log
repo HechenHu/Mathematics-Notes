@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 MAR 2018 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 MAR 2018 09:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -998,9 +998,6 @@ Package: empheq 2014/07/16 v2.14 Emphasizing equations
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks41
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/cancel/cancel.sty
-Package: cancel 2013/04/12 v2.2 Cancel math terms
-)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip56
@@ -1008,6 +1005,9 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@toks=\toks42
 \enit@inbox=\box41
 \enitdp@description=\count139
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/euscript.sty
 Package: euscript 2009/06/22 v3.00 Euler Script fonts
@@ -1181,46 +1181,83 @@ Underfull \hbox (badness 10000) in paragraph at lines 200--202
  []
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+eus on input line 232.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+) [8]
+Overfull \hbox (15.39682pt too wide) in paragraph at lines 248--265
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 299--302
+
+ []
+
+[10pdfTeX warning (ext4): destination with the same identifier (name{equation.2
+.6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.340 \end{document}
+                    ]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
  (./Mathematical_Logic.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
 Package rerunfilecheck Info: File `Mathematical_Logic.out' has not changed.
-(rerunfilecheck)             Checksum: F75A7053B8C051B9A3E8749DC021EED5;577.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
+(rerunfilecheck)             Checksum: 3A77A67CA3A49F9DD5FA473545C7FC23;705.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
  ) 
 Here is how much of TeX's memory you used:
- 19066 strings out of 492995
- 360335 string characters out of 6132704
- 434063 words of memory out of 5000000
- 22208 multiletter control sequences out of 15000+600000
- 74186 words of font info for 54 fonts, out of 8000000 for 9000
+ 19101 strings out of 492995
+ 360779 string characters out of 6132704
+ 436063 words of memory out of 5000000
+ 22219 multiletter control sequences out of 15000+600000
+ 80766 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,8n,84p,800b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,19n,84p,825b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-d
 ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
-dvips/lm/lm-mathit.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
-m/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
-/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb>
-Output written on Mathematical_Logic.pdf (11 pages, 264647 bytes).
+dvips/lm/lm-mathit.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/euler/eusm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/amsfonts/latxfont/line10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
+ublic/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/l
+mbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx6.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr
+10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msbm10.pfb>
+Output written on Mathematical_Logic.pdf (14 pages, 300975 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
