@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 MAY 2018 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 JUN 2018 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1175,9 +1175,9 @@ nation with the same identifier (name{equation.1.5.1}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.372 	\begin{equation}
+l.375 	\begin{equation}
                         [10]
-Overfull \hbox (14.49896pt too wide) in paragraph at lines 430--431
+Overfull \hbox (14.49896pt too wide) in paragraph at lines 433--434
 []\T1/lmr/bx/n/10.95 Definition. []\T1/lmr/m/n/10.95 Let $\OML/lmm/m/it/10.95 i
 []; i[]; []  ; i[]$\T1/lmr/m/n/10.95 , $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95
  r < n\OT1/lmr/m/n/10.95 )$ \T1/lmr/m/n/10.95 be dis-tinct el-e-ments of $\OML/
@@ -1187,7 +1187,7 @@ msy/m/n/10.95 g$\T1/lmr/m/n/10.95 .
  []
 
 [11] [12]
-LaTeX Font Info:    Try loading font information for U+eus on input line 507.
+LaTeX Font Info:    Try loading font information for U+eus on input line 510.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
@@ -1197,7 +1197,7 @@ Overfull \hbox (16.37563pt too wide) has occurred while \output is active
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 536--545
+Underfull \hbox (badness 10000) in paragraph at lines 539--548
 
  []
 
@@ -1206,9 +1206,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 536--545
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.547 \end{Theorem}
+l.550 \end{Theorem}
                    ]
-Underfull \hbox (badness 10000) in paragraph at lines 572--575
+Underfull \hbox (badness 10000) in paragraph at lines 575--578
 
  []
 
@@ -1219,62 +1219,97 @@ Overfull \hbox (16.37563pt too wide) has occurred while \output is active
  []
 
 [15] [16]
- 2.
-[17
+Overfull \hbox (30.1226pt too wide) in paragraph at lines 658--659
+[]$[][] \OML/lmm/m/it/10.95 N[]$ \T1/lmr/m/it/10.95 is a nor-mal sub-group of $
+[][] \OML/lmm/m/it/10.95 G[]$ \T1/lmr/m/it/10.95 and $[][] \OML/lmm/m/it/10.95 
+G[]= [][] N[] [] [][] G[]=N[]$\T1/lmr/m/it/10.95 . 
+ []
 
-] [18
+
+Overfull \hbox (30.1226pt too wide) in paragraph at lines 659--660
+[]$[][] \OML/lmm/m/it/10.95 N[]$ \T1/lmr/m/it/10.95 is a nor-mal sub-group of $
+[][] \OML/lmm/m/it/10.95 G[]$ \T1/lmr/m/it/10.95 and $[][] \OML/lmm/m/it/10.95 
+G[]= [][] N[] [] [][] G[]=N[]$\T1/lmr/m/it/10.95 . 
+ []
+
+[17] [18]
+Overfull \hbox (31.35399pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 1.9.  FREE GROUPS, FREE PRODUCTS, GENERATORS AND RELATIONS \
+T1/lmr/m/n/10.95 19
+ []
+
+[19] [20]
+ 2.
+[21
+
+] [22
 
 ]
  3.
-[19] [20
+[23]pdfTeX warning (ext4): destination with the same identifier (name{equation.
+3.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.778 		\begin{equation}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.3.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.782 		\begin{equation}
+                        pdfTeX warning (ext4): destination with the same identi
+fier (name{equation.3.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.790 	\begin{equation}
+                        [24] [25] [26
 
 ]
  4.
 
-Overfull \hbox (13.47063pt too wide) in paragraph at lines 619--619
+Overfull \hbox (13.47063pt too wide) in paragraph at lines 824--824
 []\T1/lmr/bx/n/14.4 Modules, Ho-mo-mor-phisms and Ex-act Se-quences 
  []
 
-[21] [22
+[27] [28
 
 ]
  5.
-[23] [24
+[29] [30
 
 ]
  6.
-[25] [26
+[31] [32
 
 ]
  7.
-[27] [28
+[33] [34
 
 ]
  8.
 
-Overfull \hbox (11.7925pt too wide) in paragraph at lines 658--658
+Overfull \hbox (11.7925pt too wide) in paragraph at lines 863--863
 []\T1/lmr/bx/n/14.4 The Prime Rad-i-cal; Prime and Semiprime Rings 
  []
 
-[29] [30
+[35] [36
 
 ]
  9.
-[31]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 671.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 671.
+[37]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 876.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 876.
  (./Abstract Algebra.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 671.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 671.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 876.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 876.
 Package rerunfilecheck Info: File `"Abstract Algebra".out' has not changed.
 (rerunfilecheck)             Checksum: 5FCED5B4153C335521D08D8DC8896B2B;4613.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 671.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 876.
  ) 
 Here is how much of TeX's memory you used:
- 19475 strings out of 492995
- 367611 string characters out of 6132704
- 437090 words of memory out of 5000000
- 22477 multiletter control sequences out of 15000+600000
+ 19530 strings out of 492995
+ 368106 string characters out of 6132704
+ 437105 words of memory out of 5000000
+ 22479 multiletter control sequences out of 15000+600000
  89298 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,17n,84p,1256b,1079s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1301,10 +1336,10 @@ c/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8
 .pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on "Abstract Algebra.pdf" (35 pages, 393231 bytes).
+Output written on "Abstract Algebra.pdf" (41 pages, 422237 bytes).
 PDF statistics:
- 681 PDF objects out of 1000 (max. 8388607)
- 617 compressed objects within 7 object streams
- 166 named destinations out of 1000 (max. 500000)
+ 768 PDF objects out of 1000 (max. 8388607)
+ 698 compressed objects within 7 object streams
+ 219 named destinations out of 1000 (max. 500000)
  541 words of extra memory for PDF output out of 10000 (max. 10000000)
 

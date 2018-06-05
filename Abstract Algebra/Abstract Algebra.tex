@@ -237,6 +237,9 @@ If $ a $ has inite order $ m>0 $, then
 \begin{Theorem}
 	Let $ G = \angbracket{a} $ be a cyclic group. If $ G $ is infinite, then $ a $ and $ a^{-1} $ are the only generators of $ G $. If $ G $ is finite of order $ m $, then $ a^k $ is a generator of $ G $ iff $ (k,m)=1 $.
 \end{Theorem}
+\begin{Definition}
+	The \textit{center} $ C $ of a group $ G $ is defined as $ C=\{a \in G |(\forall x \in G)ax=xa \} $. In other words, it contains the members of $ G $ that are commutative under the binary operation on $ G $. The center of a group is an abelian subgroup of it.
+\end{Definition}
 
 \section{Cosets and Counting}
 \begin{Definition}
@@ -588,12 +591,138 @@ We have seen that two products(resp. coproducts) for a given family of objects a
 \begin{Example}
 	The trivial group is both universal and couniversal in the category of groups.
 \end{Example}
+\begin{Definition}
+	In the category of sets, the \textit{disjoint union} of the sets $ A_i $ is defined on a family of sets $ \{A_i | i \in I \} $ as $ \bigcup A_i=\{(a,i)\in (\bigcup_{i \in I}A_i) \times I|a\in A_i \} $(notice the subscript under the union sign).
+\end{Definition}
 
 
 
 
 \section{Direct Products and Direct Sums}
+\begin{Definition}
+	We extend the definition of the \textit{product} $ G \times H $ of groups $ G $ and $ H $ to an arbitrary family $ \{G_i| i\in I \} $ of groups, in which the multiplication is still defined component-wise. It is called the \textit{direct product}(or \textit{complete direct sum}) of the family of groups. If $ I=\{1,2,\cdots,n \} $, $ \prod_{i\in I}G_i $ is usually denoted $ G_1 \times G_2 \times G_3 \times \cdots \times G_n$ (or in additive notation, $ G_1 \bigoplus G_2 \bigoplus G_3 \bigoplus \cdots \bigoplus G_n$).
+\end{Definition}
+
+\begin{Theorem}
+	If $ \{G_i | i \in I \} $ is a family of groups, then
+	\begin{enumerate}
+		\item the direct product is a group;
+		\item for each $ k \in I $, the map $ \pi_k:\prod_{i\in I} G_i \to G_k $ given by $ f \mapsto f(k) $(here $ f: I \to \bigcup_{i \in I}G_i $ and $ f(i)\in G_i $ for each $ i $)[or $ \{a_i \}\mapsto a_k $] is an epimorphism of groups.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	The mappings $ \pi_k $ previously mentioned are called the \textit{canonical projections} of the direct product.
+\end{Definition}
+\begin{Theorem}
+	$ \prod_{i=1} G_i $ is a product in the category of groups.
+\end{Theorem}
+\begin{Definition}
+	The \textit{(external) weak direct product} of a family of groups $ \{G_i | i\in I \} $, denoted $ \prod_{i \in I}^{w}G_i $, is the set of all $ f \in \prod_{i \in I}G_i $ such that $ f(i)=e_i $ for all but a finite number of $ i \in I $. In other words $ \{g_ i\} (g_i \in G_i)$ is $ e_i $ for all but a finite number of $ i \in I $. If all the groups $ G_i $ are (additive) abelian, $ \prod_{i \in I}^{w}G_i $ is usually called the \textit{(external) direct sum} and is denoted $ \sum_{i \in I}G_i $.
+\end{Definition}
+\begin{Theorem}
+	If $ \{G_i | i \in I \} $ is a family of groups, then
+	\begin{enumerate}
+		\item $ \prod_{i \in I}^{w}G_i $ is a normal subgroup of $ \prod_{i \in I} G_i $;
+		\item for each $ k \in I $, the map $ \iota_k:G_k \to \prod_{i \in I}^{w}G_i  $ given by $ \iota_k(a)=\{a_i \}_{i \in I} $, where $ a_i=e $ for $ i \neq k $ and $ a_k = a $, is a monomorphism of groups;
+		\item for each $ i \in I $, $ \iota_i(G_i) $ is a normal subgroup of $ \prod_{i \in I} G_i $.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	The map $ \iota_k $ mentioned above are called the \textit{canonical injections}.
+\end{Definition}
+\begin{Theorem}
+	$ \sum_{i \in I}A_i $ is a coproduct in the category of abelian groups.
+\end{Theorem}
+The theorem is false if the word abelian is omitted.
+\begin{Theorem}
+	Let $ \{N_i | i\in I \} $ be a family of normal subgroups of a group $ G $ such that
+	\begin{enumerate}
+		\item $ G=\angbracket{\bigcup_{i \in I}N_i } $;
+		\item for each $ k \in I $, $ N_k\cap \angbracket{\bigcup_{i \neq k}N_i} =\angbracket{e}$.
+	\end{enumerate}
+Then $ G \cong \prod_{i \in I}^{w}N_i $.
+\end{Theorem}
+\begin{Definition}
+	Let $ \{N_i | i \in I \} $ be a family of normal subgroups of a group $ G $ such that $ G=\angbracket{\bigcup_{i \in I}N_i } $ and for each $ k \in I $, $ N_k\cap \angbracket{\bigcup_{i \neq k}N_i} =\angbracket{e}$. Then $ G $ is said to be the \textit{internal weak direct product} of the family $ \{N_i | i \in I \} $ (or the \textit{internal direct sum} if $ G $ is (additive) abelian). Notation-wise $ G=\prod_{i \in I}^{w}N_i $ means that $ G $ is the internal weak direct product of the family of its subgroups $ \{N_i | i\in I \} $.
+\end{Definition}
+\begin{Theorem}
+	Let $ \{N_i | i \in I \} $ be a family of normal subgroups of a group $ G $. $ G $ is the internal weak direct product of the family $ \{N_i | i\in I \} $ iff every nonidentity element of $ G $ is a unique product $ a_{i_1}a_{i_2}\cdots a_{i_n} $ with $ i_1,\cdots,i_n $ distinct elements of $ I $ and $ e \neq a_{i_k}\in N_{i_k} $ for each $ k = 1,2,\cdots, n $.
+\end{Theorem}
+
+\begin{Theorem}
+	Let $ \{f_i:G_i \to H_i | i \in I \} $ be a family of homomorphisms of groups and let $ f=\prod f_i $ be the map $ \prod_{i=1} G_i \to \prod_{i \in I} H_i $, given by $ \{a_i \} \mapsto \{f_i(a_i) \}$. Then $ f $ is a homomorphism of groups such that $ f(\prod_{i \in I}^{w}G_i)\subset \prod_{i \in I}^{w}H_i $, $ \Ker f = \prod_{i \in I} \Ker f_i $ and $ \Im f = \prod_{i \in I}\Im f_i $. Consequently $ f $ is a monomorphism (resp. epimorphism) iff each $ f_i $ is.
+\end{Theorem}
+\begin{Corollary}
+	Let $ \{G_i | i \in I \} $ and $ \{N_i | i\in I \} $ be families of groups such that $ N_i $ is a normal subgroup of $ G_i $ for each $ i \in I $.
+	\begin{enumerate}
+		\item $ \prod_{i \in I} N_i $ is a normal subgroup of $ \prod_{i \in I} G_i  $ and $ \prod_{i \in I} G_i/\prod_{i \in I} N_i  \cong \prod_{i \in I} G_i/N_i $.
+		\item $ \prod_{i \in I}^w N_i $ is a normal subgroup of $ \prod_{i \in I}^w G_i  $ and $ \prod_{i \in I}^w G_i/\prod_{i \in I}^w N_i  \cong \prod_{i \in I}^w G_i/N_i $.
+	\end{enumerate}
+\end{Corollary}
+\begin{proof}
+	Use the First Isomorphism Theorem.
+\end{proof}
+\begin{Definition}
+	A normal subgroup $ H $ of a group $ G $ is said to be a \textit{direct factor}(\textit{direct summand} if $ G $ is additive abelian) if there exists a (normal) subgroup $ K $ of $ G $ such that $ G = H \times K $.
+\end{Definition}
+
+
+
+
+
 \section{Free Groups, Free Products, Generators and Relations}
+\begin{Definition}
+	Given a set $ X $ and a group $ F $ that is free on $ X $ can be constructed in the following way: If $ X= \varnothing $, $ F $ is the trivial group; otherwise let $ X^{-1} $  be a set disjoint from $ X $ such that $ |X| = |X^{-1}| $. Choose a bijection $ X \to X^{-1} $ and denote the image of $ x \in X $ by $ x^{-1} $; finally choose a set that is disjoint from $ X \cup X^{-1} $ and has exactly one element, denote this element by $ 1 $. A \textit{word} on $ X $ is a sequence $ (a_1,a_2,\cdots) $ with $ a_i \in X \cup X^{-1} \cup \{1 \} $ such that for some $ n \in \Natural $, $ a_k=1 $ for all $ k \geqslant n $. The constant sequence $ (1,1,\cdots) $ is called the \textit{empty word} and is denoted $ 1 $. A word $ (a_1,a_2,\cdots) $ on $ X $ is said to be \textit{reduced} provided that
+	\begin{enumerate}
+		\item for all $ x \in X $, $ x $ and $ x^{-1} $ are not adjacent;
+		\item $ a_k=1 $ implies $ a_i=1 $ for all $ i \geqslant k $(that is, $ 1 $s only "appear at the end`` of the word).
+	\end{enumerate} 
+A nonempty reduced word is denoted $ x_1^{\lambda_1}x_2^{\lambda_2}\cdots x_n^{\lambda_n} $, where $ n \in \Natural $, $ x_i \in X $ and $ \lambda_i = \pm 1 $. Two reduced words are equal iff both are the empty word or they have the same length and their individual components and exponents are the same. Consequently the map from $ X $ into the set $ F(X) $ of all reduced words on $ X $ given by $ x \mapsto x^1 = x $ is injective. Now we define a binary operation on the set $ F = F(X) $. The empty word $ 1 $ act as the identity element. The product of nonempty reduced words is given by juxtaposition(If in the final product an entry $ x_i $ is adjacent to its image $ x_i^{-1} $, they are "cancelled``). Thus the definition ensures that the product of reduced words is a reduced word.
+\end{Definition}
+\begin{Theorem}
+	If $ X $ is a nonempty set and $ F=F(X) $ is the set of all reduced words on $ X $, then $ F $ is a group under the binary operation defined above and $ F = \angbracket{X} $.
+\end{Theorem}
+The group $ F=F(X) $ is called the \textit{free group on the set $ X $}.
+\begin{Theorem}
+	$ F $ is free on the set $ X $ in the category of groups.
+\end{Theorem}
+
+\begin{Corollary}
+	Every group $ G $ is the homomorphic image of a free group.
+\end{Corollary}
+
+\begin{Definition}
+	If $ G=\angbracket{X} $ is a group, $ F $ is the free group on $ X $ and $ N $ is the kernel of the epimorphism $ F \to G $ of previous Corollary, the equation $ x_1^{\delta_1}\cdots x_n^{\delta_n}=e \in G $(where $ x_1^{\delta_1}\cdots x_n^{\delta_n} \in F$ is a generator of $ N $) is called a \textit{relation} on the generators $ x_i $.
+\end{Definition}
+A given group $ G $ can be completely described by specifying a set $ X $ of generators of $ G $ and a suitable set $ R $ of relations on these generators.
+\begin{Definition}
+	Let $ X $ be a set and $ Y $ a set of (reduced) words on $ X $. A group $ G $ is said to be the \textit{group defined by the generators $ x \in X $ and relations $ w =e_G (w \in Y) $} provided $ G \cong F/N $, where $ F $ is the free group on $ X $ and $ N $ the normal subgroup of $ F $ generated by $ Y $. One says that $ (X|Y) $ is a \textit{presentation} of $ G $.
+\end{Definition}
+\begin{Example}
+	A finite cyclic group $ \angbracket{a} $ has presentation $ (a|a^n=e) $.
+\end{Example}
+\begin{Example}
+	The presentation of a free group on that set is $(F|\varnothing) $(that's why it's called "free``: the terminology comes from free of relations ).
+\end{Example}
+\begin{Example}
+	The dihedral group $ D_n $ has presentation $ (\{a,b \}|a^n=e, b^2=e,abab=e(\text{or } ba=a^{-1}b)) $
+\end{Example}
+\begin{Theorem}[Van Dyck]
+	Let $ X $ be a set, $ Y $ a set of (reduced) words on $ X $ and $ G $ the group defined by the generators $ x \in X $ and relations $ w = e(w \in Y) $. If $ H $ is any group such that $ H = \angbracket{X} $ and $ H $ satisfies all the relations $ w = e(w \in Y)  $(that is, these two groups $ G $ and $ H $ has the same presentation), then there is an epimorphism $ G \to H $.
+\end{Theorem}
+\begin{Definition}
+	Given a family of groups $ \{G_i|i \in I \} $ we may assume (by relabeling their elements if necessary) that the $ G_i $ are mutually disjoint sets. Let $ X=\bigcup_{i \in I} G_i $ and let $ \{1 \} $ be a one-element set disjoint from $ X $. A \textit{word} on $ X $ is any sequence $ (a_1,a_2,\cdots) $ such that $ a_i \in X \cup \{ 1\} $ and for some $ n \in \Natural $, $ a_i =1 $ for all $ i \geqslant n $. A word is \textit{reduced} provided:
+	\begin{enumerate}
+		\item no $ a_i \in X $ is the identity element in its group $ G_j $;
+		\item for all $ i,j \geqslant 1 $, $ a_i $ and $ a_{i+1} $ are not in the same group $ G_j $;
+		\item $ a_k=1 $ implies $ a_i=1 $ for all $ i \geqslant k $.
+	\end{enumerate}
+Let $ \prod_{i \in I}^{\ast}G_i $(or $ G_1 \ast G_2 \ast \cdots \ast G_n $ if $ I $ is finite) be the set of all reduced words on $ X $. $ \prod_{i \in I}^{\ast}G_i $ forms a group, called the \textit{free product} of the family $ \{G_i | i\in I \} $, under the binary operation defined as follows. $ 1 $ is the identity element and the product of reduced words to be given by juxtaposition and necessary cancellation as well as contraction. Finally for each $ k \in I $ the map $ \iota_k:G_k \to \prod_{i \in I}^{\ast}G_i $ given by $ e \mapsto 1 $ and $ a \mapsto a = (a,1,1,\cdots) $ is a monomorphism of groups.
+\end{Definition}
+\begin{Theorem}
+	The free product $ \prod_{i \in I}^{\ast}G_i $ with $ \iota_i $ is a coproduct in the category of groups.
+\end{Theorem}
+
 
 
 \chapter{The Structure of Groups}
@@ -609,6 +738,82 @@ We have seen that two products(resp. coproducts) for a given family of objects a
 
 \chapter{Rings}
 \section{Rings and Homomorphisms}
+\begin{Definition}
+	A \textit{ring} is a nonempty set $ R $ together with two binary operations (usually denoted as addition $ (+) $ and multiplication) such that:
+	\begin{enumerate}
+		\item $ (R,+) $ is an abelian group;
+		\item the multiplication is associative;
+		\item $ a(b+c)=ab+ac $ and $ (a+b)c = ac + bc $ (left and right distributive laws).
+	\end{enumerate}
+If in addition the multiplication is commutative, $ R $ is said to be a \textit{commutative ring}. If $ R $ contains an identity element for multiplication, $ R $ is said to be a \textit{ring with identity}.
+\end{Definition}
+The additive identity of the ring is called the zero element and denoted $ 0 $.
+\begin{Theorem}
+	Let $ R $ be a ring. Then
+	\begin{enumerate}
+		\item $ 0a = a0 = 0 $ for all $ a \in R $;
+		\item $ (-a)b=a(-b)=-(ab) $ for all $ a,b \in R$;
+		\item $ -(a)(-b)=ab $ for all $ a,b \in R $;
+		\item $ (na)b=a(nb)=n(ab) $ for all $ n \in Z $ and all $ a,b \in R $;
+		\item \begin{equation}
+		(\sum_{i=1}^{n}a_i)(\sum_{j=1}^{m}b_j) = \sum_{i=1}^{n} \sum_{j=i}^{m}a_i b_j \qquad \text{for all}\qquad a_i,b_j \in R \nonumber
+		\end{equation}
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	A nonzero element $ a $ in a ring $ R $ is said to be \textit{left} (resp. \textit{right}) \textit{zero divisor} if there exists a nonzero $ b \in R$ such that $ ab=0 $ (resp. $ ba=0 $). A \textit{zero divisor} is an element of $ R $ which is both a left and a right zero divisor.
+\end{Definition}
+A ring has no zero divisors iff the right and left cancellation laws hold in this ring.
+\begin{Definition}
+	An element $ a $ in a ring $ R $ with identity is said to be \textit{left} (resp. \textit{right}) \textit{invertible} if there exists $ c \in R $ (resp. $ b \in R $) such that $ ca= 1_R $ (resp. $ ab = 1_R $). The element $ c $ (resp. $ b $) is called a \textit{left} (resp. \textit{right}) \textit{inverse} of $ a $. An element $ a \in R $ that is both left and right invertible is said to be \textit{invertible} or to be a \textit{unit}.
+\end{Definition}
+A unit's left and right inverses necessarily coincide. The set of units in a ring $ R $ with identity forms a group under multiplication.
+\begin{Definition}
+	A commutative ring $ R $ with identity $ 1_R \neq 0 $ and no zero divisors is called an \textit{integral domain}. A ring $ D $ with identity $ 1_D \neq 0 $ in which every nonzero element is a unit is called a \textit{division ring}. A \textit{field is a commutative division ring}.
+\end{Definition}
+\begin{Theorem}[Binomial Theorem]
+	Let $ R $ be a ring with identity, $ n $ a positive integer, and $ a,b, a_1,a_2,\cdots, a_s \in R $.
+	\begin{enumerate}
+		\item If $ ab=ba $, then
+		\begin{equation}
+			(a+b)^n = \sum_{k=0}^{n}\binom{n}{k}a^k b^{n-k}  \nonumber
+		\end{equation}
+		\item If $ a_i a_j = a_j a_i $ for all $ i $ and $ j $, then
+		\begin{equation}
+			(a_1+a_2+\cdots +a_s)^n = \sum \frac{n!}{(i_1!)\cdots (i_s!)}a_1^{i_1}  a_2^{i_2} \cdots a_s^{i_s} \nonumber
+		\end{equation}
+		where the sum is over all s-tuples $ (i_1,i_2,\cdots,i_s) $ such that $ i_1 + i_2 + \cdots +i_s = n $.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	A \textit{homomorphism of rings} $ f :R \to S$ between two rings $ R $ and $ S $ is a mapping that preserves the ring structure, that is
+	\begin{equation}
+		f(r_1)f(r_2)=f(r_1 r_2) \qquad \text{and}\qquad f(r_1 + r_2)= f(r_1)+f(r_2) \nonumber
+	\end{equation}
+	for all $ r_1, r_2 \in R $. Because of its similarity with respect to the homomorphisms of groups, the same terminology (like monomorphisms, epimorphisms and isomorphisms for injective, surjective and bijective homomorphisms respectively) will also apply. A monomorphism of rings $ R \to S $ is sometimes called an \textit{embedding of $ R $ in $ S $}. The \textit{kernel} and \textit{image} of homomorphisms of rings are defined similar to those of group homomorphisms -- the only difference is that the homomorphism maps the elements in its kernel to the identity element $ 0 $ of the additive abelian group. \textbf{In fact if $ R $ and $ S $ both have identities $ 1_R $ and $ 1_S $ it is not required that a homomorphism maps $ 1_R $ to $ 1_S $.}
+\end{Definition}
+\begin{Example}
+	The canonical map $ \Zahlen \to \Zahlen_m $ defined by $ k \mapsto \bar{k} $ is an epimorphism of rings.
+\end{Example}
+\begin{Definition}
+	Let $ R $ be a ring. If there is a least positive integer $ n $ such that $ na=0 $ for all $ a \in R $, then $ R $ is said to \textit{have characteristic $ n $}. If no such $ n $ exists $ R $ is said to \textit{have characteristic $ 0 $}.(Notation: $ \Char R = n $)
+\end{Definition}
+\begin{Theorem}
+	Let $ R $ be a ring with identity $ 1_R $ and characteristic $ n > 0 $.
+	\begin{enumerate}
+		\item If $ \varphi:Z \to R $ is the map given by $ m \mapsto m 1_R $, then $ \varphi $ is a homomorphism with kernel $ \angbracket{n} $.
+		\item $ n $ is the least positive integer such that $ n 1_r = 0 $.
+		\item If $ R $ has no zero divisors($ R $ is an integral domain), then $ n $ is prime.
+	\end{enumerate}
+\end{Theorem}
+\begin{Theorem}
+	Every ring $ R $ may be embedded in a ring $ S $ with identity. The ring $ S $ (which is not unique) may be chosen to be either of characteristic zero or of the same characteristic as $ R $.
+\end{Theorem}
+
+
+
+
+
 \section{Ideals}
 \section{Factorization in Commutative Rings}
 \section{Rings of Quotients and Localization}
