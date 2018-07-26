@@ -240,6 +240,9 @@ If $ a $ has inite order $ m>0 $, then
 \begin{Definition}
 	The \textit{center} $ C $ of a group $ G $ is defined as $ C=\{a \in G |(\forall x \in G)ax=xa \} $. In other words, it contains the members of $ G $ that are commutative under the binary operation on $ G $. The center of a group is an abelian subgroup of it.
 \end{Definition}
+\begin{Definition}
+	The Klein Four Group, defined as the symmetries on rectangle that preserves distance, is the smallest non-cyclic group(all its elements has order $ 2 $) and is isomorphic to $ Z_2 \oplus Z_2 $(which says that the Klein Four Group is abelian)
+\end{Definition}
 
 \section{Cosets and Counting}
 \begin{Definition}
@@ -665,6 +668,15 @@ Then $ G \cong \prod_{i \in I}^{w}N_i $.
 \begin{Definition}
 	A normal subgroup $ H $ of a group $ G $ is said to be a \textit{direct factor}(\textit{direct summand} if $ G $ is additive abelian) if there exists a (normal) subgroup $ K $ of $ G $ such that $ G = H \times K $.
 \end{Definition}
+\begin{Theorem}
+	If $ GCD(m,n)=1 $, then $ \Zahlen_{mn}\cong \Zahlen_m \times \Zahlen_{n} $
+\end{Theorem}
+\begin{Theorem}
+	If in a finite group $ G $ all elements(except the identity) are of order $ 2 $, $ |G|=2^n $ for some $ n $ and
+	\begin{equation}
+		G\cong \Zahlen_2 \times \cdots \times \Zahlen_2 \nonumber
+	\end{equation}
+\end{Theorem}
 
 
 
@@ -730,6 +742,48 @@ Let $ \prod_{i \in I}^{\ast}G_i $(or $ G_1 \ast G_2 \ast \cdots \ast G_n $ if $ 
 \section{Finitely Generated Abelian Groups}
 \section{The Krull-Schmidt Theorem}
 \section{The Action of a Group on a Set}
+\begin{Definition}
+	An \textit{action} of a group $ G $ on a set $ S $ is a function $ G \times S \to S $(usually denoted by $ (g,x)\mapsto gx $) such that for all $ x\in S $ and $ g_1,g_2\in G $:
+	\begin{enumerate}
+		\item $ ex=x $;
+		\item $ (g_1g_2)x=g_1(g_2 x) $.
+	\end{enumerate}
+When such an action is given, $ G $ \textit{acts on the set $ S $}.
+\end{Definition}
+\begin{Definition}
+	Let $ G $ be a group and $ H $ a subgroup. An action of the group $ H $ on the set $ G $ is given by $ (h,x)\mapsto hx $, where $ hx $ is the product in $ G $. The action of $ h\in H $ on $ G $ is called a \textit{(left) translation}.
+\end{Definition}
+\begin{Definition}
+		Let $ G $ be a group and $ H $ a subgroup. An action of $ H $ on the set $ G $, given by $ (h,x)\mapsto hxh^{-1} $, is called \textit{conjugation by $ h $} and $ hxh^{-1} $ is said to be a \textit{conjugate of $ x $}. $ H $ can also act on the set $ S $ of all subgroups of $ G $ by conjugation $ (h,K)\mapsto hKh^{-1} $. The group $ hKh^{-1} $ is said to be \textit{conjugate to $ K $}.
+\end{Definition}
+\begin{Theorem}
+	Let $ G $ be a group that acts on a set $ S $.
+	\begin{enumerate}
+		\item The relation on $ S $ defined by
+		\begin{equation}
+			x \sim x^{\prime}\Leftrightarrow gx=x^{\prime}\qquad \text{for some}\qquad g\in G\nonumber
+		\end{equation}
+		is an equivalence relation.
+		\item For each $ x \in S $, $ G_x=\{g\in G|gx=x \} $ is a subgroup of $ G $.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	The equivalence classes of the equivalence relation previously mentioned are called the \textit{orbits} of $ G $ on $ S $; the orbit of $ x \in S $ is denoted $ \bar{x} $. The subgroup $ G_x$ is called the \textit{subgroup fixing $ x $}, the \textit{isotropy group of $ x $}, or the \textit{stabilizer of $ x $}.
+\end{Definition}
+\begin{Lemma}
+	If $ G $ acts on $ S $, then for any $ x\in S $
+	\begin{equation}
+		|[G:\Stab x]|=| \Orb x|\nonumber
+	\end{equation}
+\end{Lemma}
+\begin{Theorem}
+		If $ G $ acts on $ S $, then for any $ x\in S $
+	\begin{equation}
+	|G|=|\Stab x| |\Orb x|\nonumber
+	\end{equation}
+\end{Theorem}
+
+
 \section{The Sylow Theorem}
 \section{Classification of Finite Groups}
 \section{Nilpotent and Solvable Groups}
@@ -809,15 +863,354 @@ A unit's left and right inverses necessarily coincide. The set of units in a rin
 \begin{Theorem}
 	Every ring $ R $ may be embedded in a ring $ S $ with identity. The ring $ S $ (which is not unique) may be chosen to be either of characteristic zero or of the same characteristic as $ R $.
 \end{Theorem}
+\begin{Definition}
+	A ring $ R $ such that $ a^2 =a  $ for all $ a \in R $ is called a \textit{Boolean Ring}. Every Boolean ring is commutative and $ a+a =0 $ for all $ a \in R $.
+\end{Definition}
+\begin{Theorem}[a.k.a The Freshman's Dream]
+	If $ R $ is a commutative ring with identity of prime characteristic $ p $ and $ a, b \in R $, then $ (a \pm b)^{p^n}=a^{p^n}\pm b^{p^n} $ for all $ n \geqslant 0 \in \Zahlen $ (note that $ b = -b $ if $ p=2 $).
+\end{Theorem}
+\begin{Definition}
+	An element $ a $ of a ring is \textit{nilpotent} if $ a^n=0 $ for some integer $ n $.
+\end{Definition}
+\begin{Theorem}
+	In a commutative ring $ a+b $ is nilpotent if $ a $ and $ b $ are.
+\end{Theorem}
+However, the theorem is not necessarily true in a non-commutative ring. For example, in the ring over all $ 2 \times 2 $ matrices over $ \Real $ where addition and multiplication are defined respectively by matrix addition and multiplication the elements $ \begin{pmatrix}
+0 &1 \\
+0 &0
+\end{pmatrix} $ and $ \begin{pmatrix}
+0 &0 \\
+1 &0
+\end{pmatrix} $ are nilpotent(their square equals to the additive zero in this ring), but their sum is not.
+\begin{Theorem}
+	A finite ring with more than one element and no zero divisors is a division ring.
+\end{Theorem}
+\begin{proof}
+	For each non-zero element $ a \in R $ define the map $ \varphi_a : R \to R $ given by $ x \mapsto ax (x \in R)$. Show that the map is a bijection and thus an identity exists as well as $ a $ is invertible.
+\end{proof}
+\begin{Definition}
+	The homomorphism $ R \to R $ defined on a commutative ring $ R $ with identity and prime characteristic $ p $ given by $ r \mapsto r^p $ is called the \textit{Frobenius homomorphism}.
+\end{Definition}
+\begin{Definition}
+	If $ R $ is a ring, then so is $ R^{op} $, where $ R^{op} $ is defined as follows: their underlying set is the same; their addition coincide; the multiplication in $ R^{op} $ is defined by $ a \circ b = ba $, where $ ba $ is the product in $ R $. The ring $ R^{op} $ is called the \textit{opposite ring} of $ R $.
+\end{Definition}
+\begin{Theorem}
+	If $ R $ and $ S $ are rings and $ R^{op} $ and $ S^{op} $ are their respective opposite rings, then
+	\begin{enumerate}
+	\item	$ R $ has an identity iff $ R^{op} $ does;
+	\item $ R $ is a division ring iff $ R^{op} $ is;
+	\item $ (R^{op})^{op}=R $;
+	\item If $ S $ is a ring, then $ R \cong S $ iff $ R^{op}\cong S^{op} $.
+	\end{enumerate}
+\end{Theorem}
 
 
 
 
 
 \section{Ideals}
+\begin{Definition}
+	Let $ R $ be a ring and $ S $ a nonempty subset of $ R $ that is closed under addition and multiplication in $ R $. If $ S $ is itself a ring under these operations then $ S $ is called a \textit{subring} of $ R $. A subring $ I $ of $ R $ is a \textit{left ideal}(resp. \textit{right ideal}) provided for $ r \in R $ and $ x \in I $ we have $ rx \in I $(resp. $ xr\in I $). $ I $ is an \textit{ideal} if it is both a left and right ideal.
+\end{Definition}
+It can be seen that ideal is the analogous definition of a normal subgroup of a group.
+\begin{Example}
+	The \textit{center} of a ring $ R $ is the set $ C = \{c \in R | cr=rc \text{ for all }r \in R\} $. $ C $ is a subring of $ R $ but it may not be an ideal.
+\end{Example}
+\begin{Example}
+	The cyclic group generated by any integer $ n $ is an ideal in $ \Zahlen $.
+\end{Example}
+\begin{Definition}
+	The ideal of a ring that only contains $ 0 $ is called the \textit{trivial ideal}(denoted $ 0 $). An ideal $ I $ of $ R $ such that $ I $ is not trivial and $ I \neq R $ is called a \textit{proper ideal}.
+\end{Definition}
+If $ R $ has an identity $ 1_R $ and $ I $ is an ideal of $ R $, then $ I=R $ iff $ 1_R \in I $. Consequently a nonzero ideal $ I $ is proper iff $ I $ contains no units of $ R $. In particular, a division ring has no proper ideals.
+\begin{Theorem}
+	A nonempty subset $ I $ of $ R $ is a left (resp. right) ideal iff for all $ a,b \in I $ and $ r \in R $:
+	\begin{enumerate}
+		\item $ a,b \in I \Rightarrow a-b\in I $;
+		\item $ a \in I, r \in R \Rightarrow ra \in I $(resp. $ ar \in I $).
+	\end{enumerate}
+\end{Theorem}
+\begin{Corollary}
+	Let $ \{A_i | i \in I \} $ be a family of [left] ideals in a ring $ R $. Then $ \bigcap_{i \in I}A_i $ is also a [left] ideal.
+\end{Corollary}
+\begin{Definition}
+	Let $ X $ be a subset of a ring $ R $. Let $ \{A_i | i \in I \} $ be the family of all [left] ideals in $ R $ which contain $ X $. Then $ \bigcap_{i \in I} A_i $ is called the [left] \textit{ideal generated by $ X $}. This ideal is denoted $ (X) $. The elements of $ X $ are called \textit{generators} of $ (X) $. If $ X $ is finite, then $ (X) $ is said to be \textit{finitely generated}. An ideal $ (x) $ generated by a single element is called a \textit{principal ideal}. A \textit{principle ideal ring} is a ring in which every ideal is principal. A principal ideal ring which is an integral domain is called a \textit{principal ideal domain}.
+\end{Definition}
+\begin{Theorem}
+	Let $ R $ be a ring, $ a \in R $ and $ X \subset R $.
+	\begin{enumerate}
+	\item The principal ideal $ a $ consists of all elements of the form $ ra + as+ na + \sum_{i=1}^{m}r_i a s_i $($ r,s,r_i,s_i\in R $; $ m \in \Natural $; and $ n \in \Zahlen $).
+	\item If $ R $ has an identity, then $ (a)=\{\sum_{i=1}^{n}r_i a s_i |r_i, s_i \in R; n \in \Natural \} $.
+	\item If $ a $ is in the center of $ R $, then $ (a)=\{ra+na|r \in R, n\in Z \} $.
+	\item $ Ra = \{ra|r \in R \} $(resp. $ aR = \{ar|r \in R \} $) is a left(resp. right) ideal in $ R $(which may not contain $ a $). If $ R $ has an identity, then $ a \in Ra $ and $ a \in aR $.
+	\item If $ R $ has an identity and $ a $ is in the center of $ R $, then $ Ra = (a)=aR $.
+	\item If $ R $ has an identity and $ X $ is in the center of $ R $, then the ideal $ (X) $ consists of all finite sums $ r_1 a_1 + \cdots + r_n a_n(n \in \Natural; r_i \in R; a_i \in X)$.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	Let $ A_1,A_2,\cdots,A_n $ be nonempty subsets of a ring $ R $. Denote by $ A_1 + A_2 + \cdots + A_n $ the set $ \{a_1+a_2+\cdots +a_n|a_i \in A_i\text{ for all } i \} $. If $ A $ and $ B $ are nonempty subsets of $ R $ let $ AB $ denote the set of all finite sums $ \{a_1 b_1 + \cdots +a_n b_n |n\in \Natural, a_i \in A, b_i \in B \} $. The definition of $ AB $ can be extended to an arbitrary number of factors. If all factors are the same set $ A $ it is denoted by $ A^n $.
+\end{Definition}
+\begin{Theorem}
+	Let $ A,A_1,A_2,\cdots, A_n $, $ B $ and $ C $ be [left] ideals in a ring $ R $.
+	\begin{enumerate}
+		\item $ A_1 + A_2 + \cdots + A_n $ and $ A_1  A_2  \cdots A_n  $ are [left] ideals;
+		\item $ (A+B)+C = A+(B+C) $;
+		\item $ (AB)C = A(BC)=ABC $;
+		\item $ B(A_1+A_2+\cdots + A_n) =BA_1+BA_2+\cdots + BA_n $ and $ (A_1+A_2+\cdots + A_n)C = A_1 C+A_2 C+\cdots + A_n C $(distributivity).
+	\end{enumerate}
+\end{Theorem}
+Since $ R $ is additively abelian, any ideal of it is also a normal subgroup. Thus the quotient $ R/I $ group can be defined in which addition is given by $ (a+I)+(b+I) =(a+b)+I$. Moreover, $ R/I $ can be made into a ring.
+\begin{Theorem}
+	Let $ R $ be a ring and $ I $ an ideal of $ R $. Then the additive quotient group $ R/I $ is a ring with multiplication given by
+	\begin{equation}
+		(a+I)(b+I)=(ab+I) \nonumber
+	\end{equation}
+	If $ R $ is commutative or has an identity, then the same is true of $ R/I $.
+\end{Theorem}
+\begin{Theorem}
+	If $ f:R \to S $ is a homomorphism of rings, then the kernel of $ f $ is an ideal in $ R $. Conversely if $ I $ is an ideal in $ R $, then the map $ \pi:R \to R/I $ given by $ r \mapsto r +I $ is an epimorphism of rings with kernel $ I $.
+\end{Theorem}
+The map $ \pi $ is called the \textit{canonical epimorphism}(or \textit{projection}).
+\begin{Theorem}
+	If $ f:R \to S $ is a homomorphism of rings and $ I $ is an ideal of $ R $ which is contained in the kernel of $ f $, then there is a unique homomorphism of rings $ \bar{f}:R/I \to S $ such that $ \bar{f}(a+I)=f(a) $ for all $ a \in R $. $ \Im \bar{f}=\Im f $ and $ \Ker \bar{f}=(\Ker f)/I $. $ \bar{f} $ is an isomorphism iff $ f$ is an epimorphism and $ I = \Ker f $.
+\end{Theorem}
+\begin{Corollary}[First Isomorphism Theorem]
+	If $ f:R \to S $ is a homomorphism of rings, then $ f $ induces an isomorphism of rings $ R/\Ker f \cong \Im f $.
+\end{Corollary}
+\begin{Corollary}
+	If $ f:R \to S $ is a homomorphism of rings, $ I $ is an ideal in $ R $ and $ J $ is an ideal in $ S $ such that $ f(I)\subset J $, then $ f $ induces a homomorphism of rings $ \bar{f}:R/I \to S/J $, given by $ a+I \mapsto f(a)+J $. $ \bar{f} $ is an isomorphism iff $ \Im f +J = S $ and $ f^{-1}(J)\subset I $. In particular, if $ f $ is an epimorphism such that $ f(I)=J $ and $ \Ker f \subset I $, then $ \bar{f} $ is an isomorphism.
+\end{Corollary}
+\begin{Theorem}
+	Let $ I $ and $ J $ be ideals in a ring $ R $.
+	\begin{enumerate}
+		\item (Second Isomorphism Theorem) There is an isomorphisms of rings $ I/(I \cap J)\cong (I+J)/J $;
+		\item (Third Isomorphism Theorem) if $ I \subset J $, then $ J/I $ is an ideal in $ R/I $ and there is an isomorphism of rings $ (R/I)/(J/I)\cong R/J $.
+	\end{enumerate}
+\end{Theorem}
+\begin{Theorem}
+	If $ I $ is an ideal in a ring $ R $, then there is a bijection between the set of all ideals of $ R $ which contain $ I $ and the set of all ideas of $ R/I $, given by $ J \mapsto J/I $. Hence every ideal in $ R/I $ is of the form $ J/I $, where $ J $ is an ideal of $ R $ which contains $ I $.
+\end{Theorem}
+\begin{Definition}
+	An ideal $ P $ in a ring $ R $ is said to be \textit{prime} if $ P \neq R $ and for any ideals $ A,B  $ in $ R $
+	\begin{equation}
+		AB \subset P \quad\Rightarrow\quad  A \subset P \quad \text{ or }\quad B \subset P \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Theorem}
+	If $ P $ is an ideal in a ring $ R $ such that $ P \neq R $ and for all $ a,b \in R $
+	\begin{equation}
+		ab \in P \quad \Rightarrow \quad a \in P \quad \text{or} \quad b \in P \nonumber
+	\end{equation}
+	then $ P $ is prime. Conversely if $ P $ is prime and $ R $ is commutative, then $ P $ satisfies the condition above.
+\end{Theorem}
+\begin{Example}
+	The zero ideal in any integral domain is prime. If $ p $ is a prime integer, then the principal ideal $ (p) $ in $ \Zahlen $ is prime.
+\end{Example}
+\begin{Theorem}
+	In a commutative ring $ R $ with identity $ 1_R \neq 0 $ and ideal $ P $ is prime iff the quotient ring $ R/P $ is an integral domain.
+\end{Theorem}
+\begin{Definition}
+	An ideal [resp. left ideal] $ M $ in a ring $ R $ is said to be \textit{maximal} if $ M \neq R $ and for every ideal [resp. left ideal] $ N $ such that $ M \subset  N \subset R$, either $ N = M $ or $ N = R $.
+\end{Definition}
+If $ R $ is a ring and $ \mathscr{S} $ is the set of all ideals $ I $ of $ R $ such that $ I \neq R $, then $ \mathscr{S} $ is partially ordered by set-theoretic inclusion. Consequently the following theorem can be proved using Zorn's Lemma.
+\begin{Theorem}
+	In a nonzero ring $ R $ with identity maximal [left] ideals always exist. In fact every [left] ideal in $ R $ except $ R $ itself is contained in a maximal [left] ideal.
+\end{Theorem}
+\begin{Theorem}
+	If $ R $ is a commutative ring such that $ R^2 = R $(in particularly if $ R $ has an identity), then every maximal ideal $ M $ in $ R $ is prime.
+\end{Theorem}
+\begin{Theorem}
+	Let $ M $ be an ideal in a ring $ R $ with identity $ 1_R \neq 0 $.
+	\begin{enumerate}
+	\item If $ M $ is maximal and $ R $ is commutative, then the quotient ring $ R/M $ is a field.
+	\item If the quotient ring $ R/M $ is a division ring, then $ M $ is maximal.
+	\end{enumerate}
+\end{Theorem}
+\begin{Corollary}
+	The following conditions on a commutative ring $ R $ with identity $ 1_R \neq 0 $ are equivalent.
+	\begin{enumerate}
+		\item $ R $ is a field;
+		\item $ R $ has no proper ideals;
+		\item $ 0 $ is a maximal ideal in $ R $;
+		\item every nonzero homomorphism of rings $ R \to S $ is a monomorphism.
+	\end{enumerate}
+\end{Corollary}
+\begin{Theorem}
+	Let $ \{R_i | i\in I \} $ be a nonempty family of rings and $ \prod_{i \in I} R_i $ the direct product of the additive abelian group $ R_i $;
+	\begin{enumerate}
+		\item $ \prod_{i \in I}R_i $ is a ring with multiplication defined by $ \{a_i \}_{i \in I} \{a_i \}_{i \in I} = \{a_i b_i\}_{i \in I} $;
+		\item if $ R_i $ has an identity[resp. is commutative] for every $ i \in I $, then $ \prod_{i \in I} R_i $ has an identity [resp. is commutative];
+		\item for each $ k \in I $ the canonical projection $ \pi_k: \prod_{i \in I} R_i \to R_k $ given by $ \{a_i \}\mapsto a_k $ is an epimorphism of rings;
+		\item for each $ k \in I $ the canonical injection $ \iota_k: R_k \to \prod_{i \in I} R_i $ given by $ a_k \mapsto \{a_i \} $(where $ a_i = 0 $ for $ i \neq k $) is a monomorphism of rings.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	$ \prod_{i \in I} R_i $ is called the \textit{(external) direct product} of the family of rings. Its notation is analogous with it of the direct product of groups.
+\end{Definition}
+\begin{Theorem}
+	$ \prod_{i \in I} R_i$ is a product in the category of rings.
+\end{Theorem}
+\begin{Theorem}
+	Let $ A_1, A_2,\cdots,A_n $ be ideals in a ring $ R $ such that
+	\begin{enumerate}
+		\item $ A_1 + A_2 + \cdots + A_n = R $;
+		\item for each $ k(1 \leqslant k \leqslant n) $, $ A_k \cap (A_1 + \cdots + A_{k-1}+A_{k+1}+\cdots + A_n)=0 $.
+	\end{enumerate}
+Then there is a ring isomorphism $ R \cong A_1 \times A_2 \times \cdots \times A_n $.
+\end{Theorem}
+If a ring and a family of its ideals satisfies the conditions in the theorem above, the ring is said to be the \textit{(internal) direct product} of this family of ideals. The notation of (internal) direct product for a ring is analogous to it of (internal) direct product for a group.
+\begin{Definition}
+	Let $ A $ be an ideal in a ring $ R $ and $ a,b\in R $. The element $ a $ is said to be \textit{congruent to $ b $ modulo $ A $}(denoted $ a\equiv b \pmod{A} $) if $ a-b \in A $. Thus
+	\begin{equation}
+		a \equiv b \pmod{A} \Leftrightarrow a-b \in A \Leftrightarrow a+A = b+A \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Theorem}[Chinese Remainder Theorem]
+	Let $ A_1,\cdots, A_n $ be ideals in a ring $ R $ such that $ R^2 + A_i =R$ for all $ i $ and $ A_i + A_j = R $ for all $ i \neq j $. If $ b_1,\cdots,b_n \in R $, then there exists $ b\in R $ such that
+	\begin{equation}
+		b \equiv b_i \pmod{A_i}\qquad (i=1,2,\cdots,n) \nonumber
+	\end{equation}
+	Furthermore $ b $ is uniquely determined up to congruence modulo the ideal
+	\begin{equation}
+		A_1 \cap A_2 \cap \cdots \cap A_n \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Corollary}
+	Let $ m_1,\cdots,m_n $ be positive integers such that $ (m_i,m_j)=1 $ for $ i \neq j $. If $ b_1, b_2,\cdots, b_n $ are any integers, then the system of congruences
+	\begin{equation}
+		x \equiv b_1 \pmod{m_1}; x \equiv b_2 \pmod{m_2};\cdots;x \equiv b_n \pmod{m_n} \nonumber
+	\end{equation}
+	has an integral solution that is uniquely determined up to modulo $ m = m_1 m_2 \cdots m_n $.
+\end{Corollary}
+\begin{Corollary}
+	If $ A_1,A_2,\cdots,A_n $ are ideals in a ring $ R $, then there is a monomorphism of rings
+	\begin{equation}
+		\theta: R/(A_1 \cap \cdots \cap A_n)\to R/A_1 \times R/A_2 \times \cdots \times R/A_n \nonumber
+	\end{equation}
+	If $ R^2 + A_i = R $ for all $ i $ and $ A_i + A_j = R $ for all $ i \neq j $, then $ \theta $ is an isomorphism of rings.
+\end{Corollary}
+
+
+
 \section{Factorization in Commutative Rings}
 \section{Rings of Quotients and Localization}
+\begin{Definition}
+	A nonempty subset $ S $ of a ring $ R $ is \textit{multiplicative} if $ a,b\in S \Rightarrow ab\in S $.
+\end{Definition}
+\begin{Theorem}
+	Let $ S $ be a multiplicative subset of a commutative ring $ R $. The relation defined on the set $ R \times S $ by
+	\begin{equation}
+		(r,s)\sim (r^\prime ,s^\prime)\Leftrightarrow s_1 (rs^\prime-r^\prime s)=0\quad \text{for some}\quad s_1 \in S\nonumber
+	\end{equation}
+	is an equivalence relation. Furthermore if $ R $ has no zero divisors and $ 0\notin S $, then
+	\begin{equation}
+		(r,s)\sim (r^\prime ,s^\prime)\Leftrightarrow  rs^\prime-r^\prime s=0\nonumber
+	\end{equation}
+\end{Theorem}
+$ (r,s) $ will be denoted as $ r/s $ from now on.
+\begin{Theorem}
+	Let $ S $ be a multiplicative subset of a commutative ring $ R $ and let $ S^{-1}R $ be the set of equivalence classes of $ R\times S $ under the equivalence relation defined previously.
+	\begin{enumerate}
+		\item $ S^{-1}R $ is a commutative ring with identity, where addition and multiplication are defined similarly to the addition and multiplication of rationals.
+		\item If $ R $ is a nonzero ring with no zero divisors and $ 0\notin S $, then $ S^{-1}R $ is an integral domain.
+		\item If $ R $ is a nonzero ring with no zero divisors and $ S $ is the set of all nonzero elements in $ R $, then $ S^{-1}R $ is a field.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	$ S^{-1}R $ is called the \textit{ring of quotients} or \textit{ring of fractions} or \textit{quotient ring} of $ R $ by $ S $. If $ S $ is the nonzero elements of $ R $, $ S^{-1}R $ is called the \textit{quotient field of the integral domain $ R $}(as in the third statement of the previous theorem). More generally if $ R $ is any non-zero commutative ring and $ S $ is the non-empty set of all nonzero elements of $ R $ that are not zero divisors, $ S^{-1}R $ is called the \textit{complete}(or \textit{full}) \textit{ring of quotients}(or \textit{fractions}) of the ring $ R $.
+\end{Definition}
+\begin{Theorem}
+	Let $ S $ be a multiplicative subset of a commutative ring $ R $.
+	\begin{enumerate}
+		\item The map $ \varphi_S:R \mapsto S^{-1}R $ given by $ r\mapsto rs/s $(for any $ s\in S $) is a well-defined homomorphism of rings such that $ \varphi_S(s) $ is a unit in $ S^{-1}R $ for every $ s\in S $.
+		\item If $ 0\notin S $ and $ S $ contains no zero divisors, then $ \varphi_S $ is a monomorphism. In particular, any integral domain may be embedded in its quotient field.
+		\item If $ R $ has an identity and $ S $ consists of units, then $ \varphi_S $ is an isomorphism. In particular, the complete ring of quotient, or the quotient field, of a field $ F $ is isomorphic to $ F $.
+	\end{enumerate}
+\end{Theorem}
+\begin{Theorem}
+	Let $ S $ be a multiplicative subset of a commutative ring $ R $ and let $ T $ be any commutative ring with identity. If $ f:R\to T $ is a homomorphism of rings such that $ f(s) $ is a unit in $ T $ for all $ s \in S $, then there exists a unique homomorphism of rings $ \bar{f}:S^{-1}R\to T $ such that $ \bar{f}\varphi_S=f $. The ring $ S^{-1}R $ is completely determined(up to isomorphism) by this property.
+\end{Theorem}
+\begin{Corollary}
+	Let $ R $ be an integral domain considered as a subring of its quotient field $ F $. If $ E $ is a field and $ f:R\to E $ a monomorphism of rings, then there is a unique monomorphism of fields $ \bar{f}:F \to E $ such that $ \bar{f}|R=f $. In particular any field $ E_1 $ containing $ R $ contains an isomorphic copy $ F_1 $ of $ F $ with $ R \subset F_1 \subset E_1 $.
+\end{Corollary}
+\begin{Theorem}
+	Let $ S $ be a multiplicative subset of a commutative ring $ R $.
+	\begin{enumerate}
+		\item If $ I $ is an ideal in $ R $, then $ S^{-1}I=\{a/s|a\in I;s \in S \} $ is an ideal is $ S^{-1}R $.
+		\item If $ J $ is another ideal in $ R $, then
+		\begin{align}
+			S^{-1}(I+J)&=S^{-1}I+S^{-1}J\nonumber\\
+			S^{-1}(IJ)&=(S^{-1}I)(S^{-1}J)\nonumber\\
+			S^{-1}(I\cap J)&=S^{-1}I \cap S^{-1}J\nonumber
+		\end{align}
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	$ S^{-1}I $ is called the \textit{extension} of $ I $ in $ S^{-1}R $.
+\end{Definition}
+\begin{Theorem}
+	Let $ S $ be a multiplicative subset of a commutative ring $ R $ with identity and let $ I $ be an ideal of $ R $. Then $ S^{-1}I=S^{-1}R $ iff $ S \cap I \neq \varnothing $.
+\end{Theorem}
+\begin{Definition}
+	If $ J $ is an ideal in a ring of quotients $ S^{-1}R $, then $ \varphi_S^{-1}(J) $ is an ideal in $ R $ and is sometimes called the \textit{contraction} of $ J $ in $ R $.
+\end{Definition}
+\textbf{Incomplete}
+
 \section{Rings of Polynomials and Formal Power Series}
+\begin{Theorem}
+	Let $ R $ be a ring and let $ R[x] $ denote the set of all sequences of elements of $ R $ $ (a_0,a_1,\cdots) $ such that $ a_i=0 $ for all but a finite number of indices $ i $.
+	\begin{enumerate}
+		\item $ R[x] $ is a ring with addition and multiplication defined similarly to the addition and multiplication of polynomials in $ \Real $.
+		\item If $ R $ is commutative(resp. a ring with identity or a ring without zero divisors or an integral domain), then so is $ R[x] $.
+		\item The map $ R\to R[x] $ given by $ r \mapsto (r,0,0,\cdots) $ is a monomorphism of rings.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	The ring $ R[x] $ is called the \textit{ring of polynomials} over $ R $.
+\end{Definition}
+\begin{Theorem}
+	Let $ R $ be a ring with identity and denote by $ x $ the element $ (0,1_R,0,\cdots) $ of $ R[x] $.
+	\begin{enumerate}
+		\item $ x^n=(0,0,\cdots,0,1^R,0,\cdots) $, where $ 1_R $ is the $ (n+1) $st coordinate.
+		\item If $ r\in R $, then for each $ n \geqslant 0 $, $ rx^n=x^nr=(0,\cdots,0,r,0,\cdots) $, where $ r $ is the $ (n+1) $st coordinate.
+		\item For every nonzero polynomial $ f\in R[x] $ there exists an integer $ n $ and elements $ a_0,\cdots,a_n\in R $ such that $ f=a_0 x^0+a_1 x^1 + \cdots + a_n x^n $. The integer $ n $ and elements $ a_i $ are unique.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	If $ f=\sum_{i=0}^{n}a_i x^i \in R[x]$, then $ a_i $ are called the \textit{coefficients} of $ f $. $ a_0 $ is the constant term. Elements of $ R[x] $ whose only nonzero coordinates is the first one are called \textit{constant polynomials}. $ a_n $ is called the \textit{leading coefficient} of $ f $. If $ R $ has an identity and the leading coefficient of $ f $ is $ 1_R $ , $ f $ is said to be a \textit{monic polynomial}. The element $ x=(0,1_R,\cdots) $ is called an \textit{indeterminate}.
+\end{Definition}
+\begin{Theorem}
+	Let $ R $ be a ring and denote by $ R[x_1,x\cdots,x_n] $ the set of all functions $ f:\Natural^n \to R $ such that $ f(u)\neq 0 $ for at most a finite number of elements $ u $ of $ \Natural^n $.
+	\begin{enumerate}
+		\item $ R[x_1,\cdots,x_n] $ is a ring with addition and multiplication defined by
+		\begin{equation}
+			(f+g)(u)=f(u)+g(u)\quad \text{and}\quad (fg)(u)=\sum_{v+w=n; v,w\in \Natural^n}f(v)g(w)\nonumber
+		\end{equation}
+		where $ f,g \in R[x_1,x\cdots,x_n] $ and $ u \in \Natural^n $.
+		\item If $ R $ is commutative(resp. a ring with identity or a ring without zero divisors or an integral domain), then so is $ R[x_1,\cdots,x_n] $.
+		\item The map $ R\to R[x_1,\cdots,x_n] $ given by $ r \mapsto f_r $, where $ f_r(0,0,\cdots,0)=r $ and $ f(u)=0 $ for all other $ u \in \Natural^n $, is a monomorphism of rings.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	The ring $ R[x_1,\cdots,x_n] $ is called the \textit{ring of polynomials in $ n $ indeterminates over $ R $}.
+\end{Definition}
+\textbf{Incomplete}
+\begin{Proposition}
+	Let $ R $ be a ring and denote by $ R[[x]] $ the set of all sequences of elements of $ R $ $ (a_0,a_1,\cdots) $.
+	\begin{enumerate}
+		\item $ R[[x]] $ is a ring with component-wise addition and multiplication defined by 
+		\begin{equation}
+			(a_0,a_1,\cdots)(b_0,b_1,\cdots)=(c_0,c_1,\cdots)\nonumber
+		\end{equation}
+		where $ c_n =\sum_{k+j=n}a_k b_j$.
+		\item $ R[x] $ is a subring of $ R[[x]] $ .
+		\item If $ R $ is commutative(resp. a ring with identity or a ring without zero divisors or an integral domain), then so is $ R[[x]] $.
+	\end{enumerate}
+\end{Proposition}
+\begin{Definition}
+	$ R[[x]] $ is called the \textit{ring of formal power series} over the ring $ R $.
+\end{Definition}
+\textbf{Incomplete}
 \section{Factorization in Polynomial Rings}
 
 \chapter{Modules}
@@ -869,7 +1262,115 @@ A unit's left and right inverses necessarily coincide. The set of units in a rin
 \section{Functors and Natural Transformations}
 \section{Adjoint Functors}
 \section{Morphisms}
-	
+
+\chapter{Applications}	
+\section{Euclidean Motions}
+\begin{Definition}
+	An \textit{isometry} of $ \Real^n $ is a transformation $ f:\Real^n \to \Real^n $ which is continuous and a symmetry(bijection). An isometry preserves the inner product(dot product on $ \Real^n $), thus preserves length and angle. Isometries are ``Rigid Motions'' os $ \Real^n $. The group of all isometries of $ \Real^n $ is called the \textit{Euclidean Group of $ \Real^n $} and is denoted $ E(n) $.
+\end{Definition}
+\begin{Definition}
+	The \textit{orthogonal group}, denoted $ O(n) $, is a subgroup of $ E(n) $ consisting of all linear transformations that preserves inner products, which says that it is a group of matrices. The fact that these matrices preserve length implies that they have orthonormal columns: each column has unit length and two different columns have their dot product equal to zero.
+\end{Definition}
+\begin{Lemma}
+	If $ \matr{A}\in O(n) $, then $ \matr{A}\times \matr{A}^T=I $.
+\end{Lemma}
+\begin{Proposition}
+	$ O(n)=\{\matr{A} \in E(n),\matr{A}(\vec{0})=(\vec{0}) \} $(If an isometry maps $ \vec{0} $ to $ \vec{0} $, then it is a linear transformation).
+\end{Proposition}
+\begin{Definition}
+	Let $ T(n) $, the \textit{group of translations}, be the subgroup of $ E(n) $ such that if $ \alpha(\vec{v})=\vec{v}-\vec{v}_0 $ for some fixed $ \vec{v_0}\in \Real^n $.
+\end{Definition}
+\begin{Proposition}
+	There is a epimorphism from $ E(n) $ to $ O(n) $, defined by $ \varphi:E(n) \to O(n)$ and $ \varphi(\alpha)(\vec{v})=\alpha(\vec{v})-\alpha(\vec{0}) $, whose kernel is $ T(n) $.
+\end{Proposition}
+\begin{Corollary}
+	$ T(n) $ is a normal subgroup of $ E(n) $ and $ E(n)/T(n)\cong O(n) $.
+\end{Corollary}
+\begin{Proposition}
+	Every finite subgroup $ G $ of $ E(n) $ fixes at least one point, i.e. there exists a vector $ \vec{v}\in\Real^n $ such that $ g(\vec{v})=\vec{v} $ for all $ g\in G $.
+\end{Proposition}
+\section{Matrix Groups}
+\begin{Definition}
+	Let $ GL(n,\Real) $ denote the set of all nonsingular matrices with real entries and $ GL(n,\Complex) $ be the set of all nonsingular matrices with complex entries. These groups are called \textit{General Linear Groups}(and hence the derivation of the abbreviations).
+\end{Definition}
+\begin{Proposition}
+	Let $ G $ be a finite subgroup of $ GL(n,\Real) $(or $ GL(n,\Complex) $). Then $ \det (g) $ is a root of unity for any $ g\in G $.
+\end{Proposition}
+The function $\det: O(n) \to \{1,-1\}\cong \Zahlen_2 $, mapping a matrix to its determinant, is an epimorphism between groups.
+\begin{Definition}
+	$ SO(n) $, or the \textit{Special Orthogonal Group}, is the subgroup of $ O(n) $ such that $ \det(a)=1 $ for $ a\in SO(n) $(an equivalent way is that $ SO(n) $ is the kernel of $ \det :O(n) \to \{1,-1\}\cong \Zahlen_2$ defined above). It is the group of proper rotations in $ \Real^n $.
+\end{Definition}
+\begin{Definition}
+	Let $ U(n) $ be the subgroup of $ GL(n,\Complex) $ of complex unitary transformations
+	\begin{equation}
+		U(n)=\{\matr{A}\in GL(n,\Complex)|\angbracket{\matr{A}(\vec{u}),\matr{A}(\vec{v})}=\angbracket{\vec{u},\vec{v}} \}\nonumber
+	\end{equation}
+	where $ \angbracket{(x_1,\cdots,x_n),(y_1,\cdots,y_n)}=x_1 \bar{y_1}+\cdots+x_n \bar{y_n} $, $ \bar{y} $ denotes the complex conjugate of $ y$. $ \matr{A}\in U(n) $ iff $ \matr{A}\overline{\matr{A}^T}=\matr{I} $. The length of $ \det(\matr{A}) $ is an element of the circle group $ S^1\subset \Complex $. The function $ \det:U(n)\to S^1 $ is in fact an epimorphism. The kernel of this epimorphism is those matrices having determinant $ 1 $, which composed of the set of \textit{Special Unitary Matrices} $ SU(n) $, a subgroup of $ U(n) $.
+\end{Definition}
+\begin{Definition}
+	The \textit{representation} of a group $ G $ is a homomorphism from $ G $ to $ GL(n,K) $, where $ K=\Real $ or $ \Complex $. Every $ g \in G $ is represented as a matrix acting on $ \Real^n $ or $ \Complex^n $. The homomorphism is called \textit{faithful} if it is injective.
+\end{Definition}
+\section{The $ 2 \times 2 $ Matrix Group}
+\begin{Theorem}
+	$ O(2) $ consists of matrices of the form
+	\begin{equation}
+		\begin{pmatrix}
+		\cos \theta &-\sin \theta \\
+		\sin \theta &\cos \theta
+		\end{pmatrix}\qquad \text{and}\qquad
+		\begin{pmatrix}
+		\cos \theta &\sin \theta \\
+		\sin \theta &-\cos \theta
+		\end{pmatrix} \nonumber
+	\end{equation}
+	where $0 \leqslant \theta \leqslant 2\pi $. Moreover $ SO(2)= \begin{pmatrix}
+	\cos \theta &-\sin \theta \\
+	\sin \theta &\cos \theta
+	\end{pmatrix},0 \leqslant \theta \leqslant 2\pi $, and $ SO(2)\cong S^1 $.
+\end{Theorem}
+\begin{Theorem}
+	If $ G $ is a finite subgroup of $ SO(2) $, then $ G \cong \Zahlen_n $ for some $ n $.
+\end{Theorem}
+\begin{Theorem}
+	If $ G $ is a finite subgroup of $ O(2) $, then $ G \cong \Zahlen_n $ or $ G \cong D_n $ for some $ n $.
+\end{Theorem}
+\section{Rotation of Regular Solids}
+\begin{Theorem}
+	If $ \matr{A}\in SO(3) $, then $ \matr{A} $ has a fixed axis(a line through the origin) and $ \matr{A} $ is just rotation about the axis.
+\end{Theorem}
+\begin{Theorem}
+	The group $ G $ of proper rotations of the tetrahedron is isomorphic to $ A_4 $.
+\end{Theorem}
+\begin{Theorem}
+	The group of proper rotations of a cube is isomorphic to $ S_4 $.
+\end{Theorem}
+\begin{Example}
+	The group of proper rotations of a regular dodecahedron and the group of proper rotations of a regular icosahedron are both isomorphic to $ A_5 $.
+\end{Example}
+\begin{Example}
+	The group of proper rotations of a octahedron is isomorphic to $ S_4 $.
+\end{Example}
+\section{Finite Rotation Groups and Crystallographic Groups}
+\begin{Theorem}
+	Any finite subgroup of $ SO(3) $ is isomorphic to one of the following: $ \Zahlen_n $($ n\geqslant 1 $), $ D_n $($ n\geqslant 2 $), $ A_4 $, $ S_4 $, $ A_5 $.
+\end{Theorem}
+\begin{Definition}
+	An \textit{ideal crystallite lattice $ L $} is a subset of $ \Real^3 $ of the form
+	\begin{equation}
+		L=\{n_1 \vec{v}_1 +n_2 \vec{v}_2 + n_3 \vec{v}_3|n_i \in \Zahlen \}\nonumber
+	\end{equation}
+	where $ \vec{v}_i $ is a fixed basis of $ \Real^3 $.
+\end{Definition}
+\begin{Definition}
+	A subgroup of $ SO(3) $ or $ O(3) $ that leaves a crystallite lattice invariant is called a \textit{crystallographic point group}.
+\end{Definition}
+\section{Polya-Burnside Method}
+\begin{Theorem}[Burnside]
+	Let $ G $ be a finite group acting on a finite set $ X $. For $ g\in G $ let $ \Fix g $ be the set $ \{x\in X| g(x)=x \} $. If $ N $ is the number of orbits of $ X $ under $ G $, then
+	\begin{equation}
+	N=	\frac{1}{|G|}\sum_{g\in G}|\Fix g|\nonumber
+	\end{equation}
+\end{Theorem}
 	
 	
 	
