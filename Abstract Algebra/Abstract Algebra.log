@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 JUL 2018 16:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 JUL 2018 11:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1335,91 +1335,118 @@ Overfull \hbox (4.12102pt too wide) in paragraph at lines 1086--1087
 5 R$\T1/lmr/m/it/10.95 , then there is a monomor-
  []
 
-[30] [31pdfTeX warning (ext4): destination with the same identifier (name{equat
-ion.3.4.1}) has been already used, duplicate ignored
+
+Overfull \hbox (24.45068pt too wide) in paragraph at lines 1096--1097
+[][]\T1/lmr/bx/n/10.95 Theorem 3.2.19. []\T1/lmr/m/it/10.95 The con-gru-ence $\
+OML/lmm/m/it/10.95 ax \OMS/lmsy/m/n/10.95 ^^Q \OML/lmm/m/it/10.95 b[]  n$ \T1/l
+mr/m/it/10.95 has a so-lu-tion iff $\OML/lmm/m/it/10.95 GCD\OT1/lmr/m/n/10.95 (
+\OML/lmm/m/it/10.95 a; n\OT1/lmr/m/n/10.95 )\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/
+10.95 b$\T1/lmr/m/it/10.95 .
+ []
+
+[30] [31] [32] [33pdfTeX warning (ext4): destination with the same identifier (
+name{equation.3.4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1128 	\end{enumerate}
-                       ] [32] [33] [34pdfTeX warning (ext4): destination with t
-he same identifier (name{equation.3.5.1}) has been already used, duplicate igno
-red
+l.1211 \end{Theorem}
+                    ] [34] [35]
+Overfull \hbox (85.61096pt too wide) in paragraph at lines 1295--1296
+[]\T1/lmr/bx/n/10.95 Definition. []\T1/lmr/m/n/10.95 Let $\OML/lmm/m/it/10.95 R
+$ \T1/lmr/m/n/10.95 be a ring. The \T1/lmr/m/it/10.95 de-gree of a nonzero mono
+-mial $\OML/lmm/m/it/10.95 ax[]x[] [] x[]inR\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/1
+0.95 x[]; []  ; x[]\OT1/lmr/m/n/10.95 ]$
+ []
+
+[36pdfTeX warning (ext4): destination with the same identifier (name{equation.3
+.5.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1216 \chapter
-               {Modules}]
+l.1321 \end{Corollary}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.3.6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1321 \end{Corollary}
+                      ]pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.3.6.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1351 	\begin{equation}
+                         [37] [38
+
+]
  4.
 
-Overfull \hbox (13.47063pt too wide) in paragraph at lines 1217--1217
+Overfull \hbox (13.47063pt too wide) in paragraph at lines 1369--1369
 []\T1/lmr/bx/n/14.4 Modules, Ho-mo-mor-phisms and Ex-act Se-quences 
  []
 
-[35
-
-] [36
-
-]
- 5.
-[37] [38
-
-]
- 6.
 [39] [40
 
 ]
- 7.
+ 5.
 [41] [42
+
+]
+ 6.
+[43] [44
+
+]
+ 7.
+[45] [46
 
 ]
  8.
 
-Overfull \hbox (11.7925pt too wide) in paragraph at lines 1256--1256
+Overfull \hbox (11.7925pt too wide) in paragraph at lines 1408--1408
 []\T1/lmr/bx/n/14.4 The Prime Rad-i-cal; Prime and Semiprime Rings 
  []
 
-[43] [44
+[47] [48
 
 ]
  9.
-[45] [46
+[49] [50
 
 ]
  10.
-[47]
+[51]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 1313.
+(Font)              <14.4> on input line 1465.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 1313.
+(Font)              <10> on input line 1465.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 1313.
+(Font)              <7> on input line 1465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1313.
+(hyperref)                removing `math shift' on input line 1465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 1313.
+(hyperref)                removing `\times' on input line 1465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1313.
+(hyperref)                removing `math shift' on input line 1465.
 
-[48] [49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1377.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1377.
+[52] [53]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1529.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1529.
  (./Abstract Algebra.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1377.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1377.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1529.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1529.
 
 Package rerunfilecheck Info: File `"Abstract Algebra".out' has not changed.
 (rerunfilecheck)             Checksum: 2B27B7B5F49F10C869F6A2D775865F21;5111.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1377.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1529.
  ) 
 Here is how much of TeX's memory you used:
- 19704 strings out of 492995
- 369909 string characters out of 6132704
+ 19750 strings out of 492995
+ 370348 string characters out of 6132704
  437169 words of memory out of 5000000
  22517 multiletter control sequences out of 15000+600000
  110781 words of font info for 82 fonts, out of 8000000 for 9000
@@ -1448,10 +1475,10 @@ c/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8
 .pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on "Abstract Algebra.pdf" (55 pages, 475810 bytes).
+Output written on "Abstract Algebra.pdf" (59 pages, 490072 bytes).
 PDF statistics:
- 1002 PDF objects out of 1200 (max. 8388607)
- 915 compressed objects within 10 object streams
- 350 named destinations out of 1000 (max. 500000)
+ 1068 PDF objects out of 1200 (max. 8388607)
+ 977 compressed objects within 10 object streams
+ 396 named destinations out of 1000 (max. 500000)
  597 words of extra memory for PDF output out of 10000 (max. 10000000)
 

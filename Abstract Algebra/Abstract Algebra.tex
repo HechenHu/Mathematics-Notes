@@ -1089,10 +1089,89 @@ If a ring and a family of its ideals satisfies the conditions in the theorem abo
 	\end{equation}
 	If $ R^2 + A_i = R $ for all $ i $ and $ A_i + A_j = R $ for all $ i \neq j $, then $ \theta $ is an isomorphism of rings.
 \end{Corollary}
-
+\begin{Theorem}
+	The equation $ ax+ny=b $ has solutions for $ x,y \in \Zahlen $ iff $ GCD(a,n)|b $.
+\end{Theorem}
+\begin{Theorem}
+	The congruence $ ax \equiv b \mod n $ has a solution iff $ GCD(a,n)|b $. Moreover, if this congruence does have at least one solution, the number of noncongruent solutions modulo $ n $ is $ GCD(a,n) $; that is, if $ [a][x]=[b] $ has a solution in $ \Zahlen_n $, then it has $ GCD(a,n) $ different solutions in $ \Zahlen_n $.
+\end{Theorem}
+\begin{Definition}
+	Let $ m = m_1 m_2 \cdots m_r $, where the integers $ m_i $ are coprime in pairs. The \textit{residue representation} or \textit{modular representation} of any number $ x $ in $ \Zahlen_m $ is the $ r $-tuple $ (a_1,a_2,\cdots,a_r) $ where $ x\equiv a_i \mod m_i $.
+\end{Definition}
 
 
 \section{Factorization in Commutative Rings}
+\begin{Definition}
+	A nonzero element $ a $ of a commutative ring $ R $ is said to \textit{divide} an element $ b $ in $ R $(written $ a|b $) if there exists $ x \in R $ such that $ ax=b $. Elements $ a,b $ of $ R $ are said to be \textit{associates} if $ a|b $ and $ b|a $.
+\end{Definition}
+\begin{Theorem}
+	Let $ a,b $ and $ u $ be elements of a commutative ring $ R $ with identity.
+	\begin{enumerate}
+		\item $ a|b $ iff $ (b)\subset (a) $.
+		\item $ a $ and $ b $ are associates iff $ (a)=(b) $.
+		\item $ u $ is a unit iff $ u|r $ for all $ r \in R $.
+		\item $ u $ is a unit iff $ (u)=R $.
+		\item The relation ``$ a $ is an associate of $ b $'' is an equivalence relation on $ R $.
+		\item If $ a=br $ with $ r \in R $ a unit, then $ a $ and $ b $ are associates. If $ R $ is an integral domain, the converse is true.
+	\end{enumerate}
+\end{Theorem}
+\begin{Definition}
+	Let $ R $ be a commutative ring with identity. An element $ c $ of $ R $ is \textit{irreducible} provided that
+	\begin{enumerate}
+		\item $ c $ is a nonzero element;
+		\item $ c=ab $ implies that $ a $ or $ b $ is a unit.
+	\end{enumerate}
+An element $ p $ of $ R $ is \textit{prime} provided that
+\begin{enumerate}
+	\item $ p $ is a nonzero nonunit;
+	\item $ p|ab $ implies $ p|a $ or $ p|b $.
+\end{enumerate}
+\end{Definition}
+\textbf{[Incomplete]}
+\begin{Definition}
+	An integral domain $ R $ is a \textit{unique factorization domain} provided that every nonzero nonunit element can be written as a unique finite product of irreducibles up to re arrangements and up to multiplication by units.
+\end{Definition}
+\begin{Definition}
+	Let $ \Natural $ be the set of natural numbers and $ R $ a commutative ring. $ R $ is a \textit{Euclidean ring} if there is a function $ \varphi:R-{0}\to \Natural $ such that:
+	\begin{enumerate}
+		\item If $ a,b\in R $ and $ ab\neq 0 $, then $ \varphi(a)\leqslant \varphi(ab) $;
+		\item If $ a,b\in R $ and $ b \neq 0 $, then there exist $ q,r\in R $ such that $ a=qb+r $ with $ r=0 $ or $ r \neq 0 $ and $ \varphi(r)<\varphi(b) $.
+	\end{enumerate}
+A Euclidean ring which is an integral domain is called a \textit{Euclidean domain}.
+\end{Definition}
+\begin{Theorem}
+	An Euclidean domain is a unique factorization domain.
+\end{Theorem}
+\begin{Example}
+	Let $ \Zahlen[i] $ be $ \{a+bi|a,b \in \Zahlen \} $. $ \Zahlen[i] $ is an integral domain called the domain of Gaussian integers. Clearly $ \Zahlen[i] $ is an Euclidean domain provided $ \varphi(a+bi)=a^2+b^2 $.
+\end{Example}
+\begin{Definition}
+	Let $ X $ be a nonempty subset of a commutative ring $ R $. An element $ d\in R $ is a \textit{greatest common divisor} of $ X $ provided:
+	\begin{enumerate}
+		\item $ d|a $ for all $ a \in X $;
+		\item $ c|a $ for all $ a \in X $ implies that $ c|d $.
+	\end{enumerate}
+If $ R $ has an identity and $ 1_R $ is the greatest common divisor of $ X $, then elements of $ X $ are said to be \textit{relatively prime}.
+\end{Definition}
+\begin{Definition}
+		Let $ X $ be a nonempty subset of a commutative ring $ R $. An element $ l\in R $ is a \textit{least common multiple} of $ X $ provided:
+	\begin{enumerate}
+		\item $ a|l $ for all $ a \in X $;
+		\item $ a|f $ for all $ a \in X $ implies that $ l|f $.
+	\end{enumerate}
+\end{Definition}
+\begin{Theorem}
+	Let $ R $ be a Euclidean domain. Any two elements $ a $ and $ b $ in $ R $ have a greatest common divisor $ g $. Moreover, there exist $ s,t \in R $ such that
+	\begin{equation}
+		g=sa+tb \nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Lemma}
+	If $ r_{i-1}=r_i q_{i+1}+r_{i+1} $, then $ GCD(r_{i-1},r_i)=GCD(r_{i},r_{i+1}) $.
+\end{Lemma}
+\begin{Theorem}
+	$ \Zahlen_n $ is a field iff $ n $ is prime.
+\end{Theorem}
 \section{Rings of Quotients and Localization}
 \begin{Definition}
 	A nonempty subset $ S $ of a ring $ R $ is \textit{multiplicative} if $ a,b\in S \Rightarrow ab\in S $.
@@ -1212,7 +1291,80 @@ $ (r,s) $ will be denoted as $ r/s $ from now on.
 \end{Definition}
 \textbf{Incomplete}
 \section{Factorization in Polynomial Rings}
-
+\begin{Definition}
+	Let $ R $ be a ring. The \textit{degree of a nonzero monomial} $ a x_1^{k_1}x_2^{k_2}\cdots x_n^{k_n} in R[x_1,\cdots,x_n]$ is the nonnegative integer $ k_1 + k_2 + \cdots + k_n $. The \textit{(total) degree of the polynomial $ f $}, denoted $ \deg f $, is the maximum of the degrees of the monomials $ a_i x_1^{k_{i_1}}x_2^{k_{i_2}}\cdots x_n^{k_{i_n}} $ such that $ a_i \neq 0 $. A polynomial which is a sum of monomials, each of which has degree $ k $, is said to be \textit{homogeneous of degree $ k $}. The \textit{degree of $ f $ in $ x_k $} is the degree of $ f $ considered as a polynomial in one indeterminate $ x_k $ over the ring $ R[x_1,\cdots,x_{k-1},x_{k+1},\cdots,x_n] $.
+\end{Definition}
+\begin{Theorem}
+	Let $ R $ be a ring and $ f,g \in R[x_1,\cdots,x_n] $.
+	\begin{enumerate}
+		\item $ \deg(f+g) \leqslant \max (\deg f, \deg g)$.
+		\item $ \deg (fg)\leqslant \deg f + \deg g $.
+		\item If $ R $ has no zero divisors, $ \deg(fg)=\deg f+ \deg g $.
+		\item If $ n=1 $ and the leading coefficient of $ f $ or $ g $ is not a zero divisor in $ R $( in particular, if it is a unit), then $ \deg(fg)=\deg f+ \deg g  $.
+	\end{enumerate}
+\end{Theorem}
+\begin{Theorem}[The Division Algorithm]
+	If $ R $ is a ring with identity and $ f,g\in R[x] $ are nonzero polynomials such that the leading coefficient of $ g $ is a unit in $ R $, there exist unique polynomials $ q,r\in R[x] $ such that
+	\begin{equation}
+		f=qg+r\qquad \text{and}\qquad \deg r < \deg g\nonumber
+	\end{equation}
+\end{Theorem}
+\begin{Corollary}[Remainder Theorem]
+	Let $ R $ be a ring with identity and
+	\begin{equation}
+		f(x)=\sum_{i=0}^{n}a_i x^i \in R[x]\nonumber
+	\end{equation}
+	For any $ c \in R $ there exists a unique $ q(x) \in R[x]$  such that $ f(x)=q(x)(x-c)+f(c) $.
+\end{Corollary}
+\begin{Corollary}
+	If $ F $ is a field, then $ F[x] $ is a Euclidean domain, whence $ F[x] $ is a principal ideal domain and a unique factorization domain. The units in $ F[x] $ are precisely the nonzero constant polynomials.
+\end{Corollary}
+\begin{Corollary}
+	$ (x-\alpha) $ is a factor of $ f(x) $ in $ F[x] $ iff $ f(\alpha)=0 $.
+\end{Corollary}
+\begin{Corollary}
+	A polynomial of degree $ n $ in $ F[x] $ has at most $ n $ roots in $ F $.
+\end{Corollary}
+\begin{Theorem}[Fundamental Theorem of Algebra]
+	If $ f(x) $ is a polynomial in $ \Complex[x] $ of positive degree, then $ f(x) $ has a root in $ \Complex $.
+\end{Theorem}
+\begin{Theorem}
+\begin{enumerate}
+	\item 	If $ z $ is a complex root of the real polynomial $ f(x)\in \Real[x] $, then its conjugate $ \overline{z} $ is also a root.
+	\item If $ a,b,c \in \Quoziente $ and $ a+b\sqrt{c} $ is an irrational root of the rational polynomial $ f(x)\in \Quoziente[x] $, then $ a-b \sqrt{c} $ is also a root.
+\end{enumerate}
+\end{Theorem}
+\begin{Theorem}
+	\begin{enumerate}
+		\item The irreducible polynomials in $ \Complex[x] $ are the polynomials of degree one.
+		\item The irreducible polynomials in $ \Real[x] $ are the polynomials of degree $ 1 $ together with the polynomials of degree $ 2 $ of the form $ ax^2 + bx + c $, where $ b^2 < 4ac $.
+	\end{enumerate}
+\end{Theorem}
+\begin{Theorem}
+	Let $ p(x)=a_0+ a_1 x + \cdots +a_n x^n \in \Zahlen[x]$. If $ r/s $ is a rational root of $ p(x) $ and $ GCD(r,s)=1 $, then $ r|a_0 $ and $ s|a_n $.
+\end{Theorem}
+\begin{Lemma}[Gauss's Lemma]
+	Let $ P(x) =a_0 + a_1 x + \cdots +a_n x^n \in \Zahlen[x]$. If $ P(x) $ can be factored in $ \Quoziente[x] $ as $ P(x)=q(x)r(x) $, then $ P(x) $ can also be factored in $ \Zahlen[x] $.
+\end{Lemma}
+\begin{Theorem}[Eisenstein's Criterion]
+	Let $ D $ be a unique factorization domain with quotient field $ F $. If $ f=\sum_{i=0}^{n}a_i x^i \in D[x] $, $ \deg f \geqslant 1 $ and $ p $ is an irreducible element of $ D $ such that
+	\begin{equation}
+		p\nmid a_n;\quad p|a_i\quad \text{for}\quad i=0,1,\cdots,n-1;\quad p^2 \nmid a_0\nonumber
+	\end{equation}
+	then $ f $ is irreducible in $ F[x] $. If $ f $ is primitive, then $ f $ is irreducible in $ D[x] $.
+\end{Theorem}
+\begin{Corollary}
+	Let $ f(x)= \sum_{i=0}^{n}a_i x^i \in \Zahlen[x] $. If, for some prime $ p $,
+	\begin{enumerate}
+		\item $ p|a_i,\quad i=0,1,\cdots,n-1 $;
+		\item $ p \nmid a_n $;
+		\item $ p^2 \nmid a_0 $.
+	\end{enumerate}
+then $ f(x) $ is irreducible over $ \Quoziente $.
+\end{Corollary}
+\begin{Example}
+	For any prime $ p $ the polynomial $ \varphi(x) =x^{p-1}+x^{p-1}+\cdots + x + 1$ is irreducible over $ \Quoziente $. This polynomial is called a \textit{cyclotomic polynomial} and can be written $ \varphi(x)=\frac{(x^p-1)}{x-1} $.
+\end{Example}
 \chapter{Modules}
 \section{Modules, Homomorphisms and Exact Sequences}
 \section{Free Modules and Vector Spaces}
