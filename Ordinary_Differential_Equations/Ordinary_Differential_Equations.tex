@@ -1,0 +1,317 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{/Users/HechenHu/Development/NoteTaking/Mathematics-Notes/Customized}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+
+\renewcommand{\@chapapp}{}% Not necessary...
+
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{Ordinary Differential Equations}}
+% Author
+\author{\textsc{Hechen Hu}}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% Auto-generated table of contents, list of figures and list of tables %
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\tableofcontents
+	
+	\mainmatter
+	\chapter{First Order ODEs}
+	\section{Definitions}
+	\begin{Definition}
+		A \textit{differential equation} is an equation that involves derivatives. It is \textit{ordinary} if the equation does not involve partial derivatives, otherwise it is called a \textit{partial differential equation}. The \textit{order} of a differential equation is the order of the highest derivative appears in it. The \textit{solutions} to a differential equation is a function that satisfies the equation after substitution. The \textit{general solution} to an equation is a formula giving all possible solutions. A \textit{particular solution} is a solution that is definite(does not contain arbitrary constants). An \textit{integral curve} for the ODE is the graph of a particular solution of it. Since ODE involves derivatives, it can be graphed as a \textit{direction field}. Thus integral curves are the curves that are tangent to a vector field(direction field).
+	\end{Definition}
+	\begin{Definition}
+		An $ n $th order ODE is \textit{Linear} if the function $ F $ in
+		\begin{equation}
+			F(t,y,y^\prime,\cdots,y^{(n)})=0\nonumber
+		\end{equation}
+		is linear with respect to its variables $ y^{(i)} $, $ 0\leqslant i\leqslant n $. Otherwise it is called \textit{nonlinear}. The process of converting a nonlinear equation to a linear one is called \textit{linearization}.
+	\end{Definition}
+	\begin{Definition}
+		Consider a process that is described by differential equations. The process is said to be \textit{deterministic} if its entire future course and its entire past are uniquely determined by its current state. The set of all states is called the \textit{phase space} of the process(like the phase space in classical mechanics). A process is \textit{finite-dimensional} if its phase space is finite-dimensional(its state can be described using a finite number of parameters). A process is \textit{differentiable} if its phase space has the structure of a differentiable manifold and the change of state with time is described by differentiable functions.
+	\end{Definition}
+\section{First Order Linear ODEs}
+\begin{Definition}
+	A first order linear equation is one of the form
+	\begin{equation}
+		y^\prime + p(t)y=g(t)\nonumber
+	\end{equation}
+\end{Definition}
+\begin{Example}
+	Consider the general solutions to all first order linear equations $ y^\prime + p(t)y=g(t) $, where $ g $ and $ t $ are continuous on some interval $ I $. Define $ \mu(t)=\exp(\int p(t)dt) $, which is called the \textit{integrating factor}. It's easy to see that $ \mu^\prime = p\mu $. Multiplying the original equation by $ \mu(t) $
+	\begin{equation}
+		y^\prime \mu(t)+p(t)\mu(t)y=\mu(t)g(t)\nonumber
+	\end{equation}
+	Hence $ (y\mu(t))^\prime = g(t)\mu(t) $. Integrating yields
+	\begin{align}
+		\mu(t)y&=\int \mu(t)g(t)dt+c\nonumber\\
+		y&=\frac{1}{\mu(t)}(\int \mu(t)g(t)dt+c)\nonumber
+	\end{align}
+	The general solution can be written as
+	\begin{equation}
+		y=\frac{1}{\mu(t)}(\int^t_{t_0} \mu(s)g(s)ds+c)\nonumber
+	\end{equation}
+	$ t_0 $ can be chosen as any point in $ I $.
+\end{Example}
+\begin{Definition}
+	Additional constraints to the value of $ f $ at some point $ t_0 $($ y(t_0)=y_0 $) is called an \textit{initial condition}. An \textit{initial value problem} is a differential equation together with an initial condition. Observe that $ \mu(t_0)=1 $ since $ \mu(t)=\exp(\int_{t_0}^{t}p(s)ds) $. Thus if $ y(t_0)=y_0 $ one must has $ c=y_0 $.
+\end{Definition}
+\section{Separable Equations}
+\begin{Definition}
+	A \textit{Separable Equation} is an equation of the form
+	\begin{equation}
+		\frac{dy}{dx}=\frac{f(x)}{g(y)}\rightarrow g(y)dy=f(x)dx\nonumber
+	\end{equation}
+	The basic strategy to solve it is separate and integrate.
+\end{Definition}
+\section{Existence and Uniqueness Theorem}
+\begin{Theorem}
+	If the functions $ f $ and $ \frac{\partial f}{\partial y} $ is continuous in some rectangle $ \alpha < t <\beta $, $ a<y<b $, containing the point $ (t_0,y_0) $. Then in some interval $ (t_0-h,t_0+h)\subset (\alpha,\beta) $, there is a unique solution $ y=\varphi(t) $ of the initial value problem
+	\begin{equation}
+		y^\prime=f(t,y),\qquad y(t_0)=y_0\nonumber
+	\end{equation}
+	In particular, if all the coefficients in a first order linear equation is continuous on some open interval, then there exists a unique function $ y=\varphi(t) $ that satisfies the equation as well as the initial condition $ y(t_0)=y_0 $ for any arbitrary $ y_0 $.
+\end{Theorem}
+\section{Examples of First Order ODEs}
+\begin{Example}
+	If the rate of reproduction of some species is proportional to its current population, then
+	\begin{equation}
+		\frac{dP}{dt}=kP\rightarrow P=P_0e^{kt}\nonumber
+	\end{equation}
+	where $ P_0=P(0) $ and $ k $ is the natural growth rate. However this equation is unrealistic because it fails to consider the carrying capacity of the environment and as $ t\to \infty $ the population also goes to infinity. Moreover the rate of growth should also be a function of $ P $ since as population increases competition for resources also increases.\newpara
+	Define $ K $ as the carrying capacity of the environment, $ r $ as the intrinsic growth rate. Taken the considerations above into account yields the \textbf{logistic equation}
+	\begin{equation}
+		\frac{dP}{dt}=r(1-\frac{P}{K})P\nonumber
+	\end{equation}
+	Solving shows that
+	\begin{equation}
+		\frac{P}{P-K}=C e^{rt}\nonumber
+	\end{equation}
+	and
+	\begin{equation}
+	P=\begin{cases}
+	\frac{P_0K}{(K-P_0)e^{-rt}+P_0}\qquad \text{for }P_0>K\\
+	\frac{P_0K}{(P_0-K)e^{-rt}+P_0}\qquad \text{for }P_0<K
+	\end{cases}
+		\nonumber
+	\end{equation}
+	The constant solution $ P=K $ is called an \textbf{asymptotically stable solution} since all nonzero solutions $ P $ approaches it as $ t \to \infty $. On the other hand the constant solution $ P=0 $ is called an \textbf{unstable solution} because all nonzero solutions $ P $ move away from it as $ t \to \infty $. If the population's death rate(or any rate of change due to some external factors, not necessarily negative) is a constant $ d $, then
+	\begin{equation}
+		\frac{dP}{dt}=kP-d\rightarrow P(t)=P_0e^{kt}+\frac{d}{r}(e^{rt}-1)\nonumber
+	\end{equation}
+\end{Example}
+\begin{Example}
+	If the growth of population is proportional to the number of pairs in it, that is,
+	\begin{equation}
+		\frac{dP}{dt}=kP^2\nonumber
+	\end{equation}
+	Although this kind of relationship usually occurs in physical chemistry where the rate of reaction is proportional to the concentration of the two reagents, the population of some species(such as certain species of whales) can be described using this relation since their population is so few. The solution to this equation is
+	\begin{equation}
+		P=\frac{P_0}{1-ktP_0}\nonumber
+	\end{equation}
+	It's easy to see that the graph of this function(from its physical implication $ P $ must be positive so $ t<\frac{1}{k P_0} $) is one branch of a hyperbola that has a vertical asymptote $ t=\frac{1}{k P_0} $. Hence \textbf{$ P $ grows to infinity in finite time!}
+\end{Example}
+\begin{Definition}
+	Consider a first order ODE $ y^\prime = f(y,t) $. If for some $ y $ one has $ y^\prime = 0 $, $ y $ is said to be an \textit{equilibrium solution}.
+\end{Definition}
+\begin{Definition}
+	If a constant equilibrium solution of an ODE has the property that solutions on its one side tend to approach it but solutions on the other side depart from it, the constant equilibrium solution is said to be \textit{semistable}.
+\end{Definition}
+\section{Exact Equations and Integrating Factors}
+\begin{Definition}
+	Differential Equations of the form
+	\begin{equation}
+		M(x,y)+N(x,y)y^\prime = 0\nonumber
+	\end{equation}
+	are said to be \textit{exact} if there exist a function $ \Psi(x,y) $ such that
+	\begin{equation}
+		\frac{\partial\Psi}{\partial x}=M(x,y),\qquad \frac{\partial\Psi}{\partial y}=N(x,y)\nonumber
+	\end{equation}
+	and such that $ \Psi(x,y)=c $ defines $ y=\phi(x) $ implicitly as a differentiable function of $ x $.
+\end{Definition}
+\begin{Definition}
+	Let the functions $ M,N,M_y,N_x $, where subscripts denote partial derivatives, be continuous in a simply connected region. Then the equation
+		\begin{equation}
+	M(x,y)+N(x,y)y^\prime = 0\nonumber
+	\end{equation}
+	is an exact differential equation in this region iff at each point of it
+	\begin{equation}
+		M_y=N_x \nonumber
+	\end{equation}
+\end{Definition}
+\begin{Definition}
+	The function $ \mu(x,y) $ is called an \textit{integrating factor} such that the equation
+	\begin{equation}
+		M(x,y)dx+N(x,y)dy=0\nonumber
+	\end{equation}
+	becomes an exact equation after multiplication by $ \mu $.
+\end{Definition}
+\begin{Theorem}
+	If 
+	\begin{equation}
+		\frac{M_y-N_x}{N}\nonumber
+	\end{equation}
+	is a function of $ x $ only, there is an integrating factor $ \mu $ that only depends on $ x $. The equation involving $ \mu $ is
+	\begin{equation}
+		\frac{d \mu}{dx}=\frac{M_y-N_x}{N}\mu \nonumber
+	\end{equation}
+	and by solving this linear as well as separable equation one finds $ \mu $.
+\end{Theorem}
+\section{Sketch of Proof of the Existence and Uniqueness Theorem}
+\begin{proof}
+	To prove the Existence and Uniqueness Theorem, one first show that proving the initial condition $ y(0)=0 $ is sufficient, then ``translate'' the differential equation into an equivalent integral equation. The first statement is trivial since one can always shift the coordinate axis to make $ (t_0,y_0) $ at the origin. Suppose that $ y=\phi(t) $ is a solution to the initial value problem $ y^\prime=f(t,y) $. Thus
+	\begin{equation}
+		\phi(t)=\int_{0}^{t}f[s,\phi(s)]ds\nonumber
+	\end{equation}
+In order to proceed one employs the \textit{method of successive approximations} or \textit{Picard's iteration method}. The method works by choosing a sequence of function and use them to approximate the solution to the integral equation:
+\begin{equation}
+	\phi_0(t)=0,\qquad \phi_1(t)=\int_{0}^{t}f[s,\phi_0(s)]ds,\qquad \phi_{n+1}(t)=\int_{0}^{t}f[s,\phi_n(s)]ds\nonumber
+\end{equation}
+It is not necessary that $ \phi_0(t)=0 $ -- it's just the simplest choice of function that satisfies the initial condition. If at some stage $ \phi_{k+1}(t)=\phi_k(t) $, then a solution to the integral equation is found. In general this is not true so one must consider the convergence of the infinite series $ \phi_n $. It can be proved that the sequence $ \phi_n $ converges uniformly. Thus a solution exists and can be shown to be unique(see offline exercises).
+\end{proof}
+
+\section{First Order Difference Equations}
+\begin{Definition}
+	A \textit{first order difference equation} is an equation of the form $ y_{n+1}=f(n,y_n) $ whose solution is a sequence of function $ y_0,y_1,\cdots $. It is called \textit{first order} because $ y_{n+1} $ depends only on $ y_n $, not $ y_{n-1},y_{n-2} $, or etc. Difference equations can be think as ``discretized differential equations''.
+\end{Definition}
+\begin{Definition}
+	An \textit{equilibrium solution} is a solution that $ y_n $ has the same value for all $ n $.
+\end{Definition}
+\begin{Example}
+	 If $ f $ is a function of $ y_n $ only, the difference equation can be written as
+	 \begin{equation}
+	 	y_n=f^{n}(y_0)\nonumber
+	 \end{equation}
+\end{Example}
+\begin{Example}
+	If $ f $ is a linear function of $ y_n $ only, that is, of the form $ y_{n+1}=\rho y_n+b_n $, one has
+	\begin{equation}
+		y_n=\rho^n y_0 + \sum_{j=0}^{n-1}\rho^{n-1-j}b_j\nonumber
+	\end{equation}
+	if $ |\rho|<1 $, $ y_n $ as $ n $ grows indefinitely is $ \frac{b}{1-\rho} $(all solutions approach $ \frac{b}{1-\rho} $). If $ \rho = 1 $, $ \lim\limits_{n\to \infty}y_n $ diverges unless $ b=0 $, in which case $ y_0 $ is the equilibrium solution. If $ |\rho|>1 $, the only convergent solution is the equilibrium solution $ \frac{b}{1-\rho} $.
+\end{Example}
+\begin{Example}
+	Consider the non-linear first order logistic difference equation $ y_{n+1}=\rho y_n(1-\frac{y_n}{k}) $. Make the change of variable $ u_n=\frac{y_n}{k} $ so the equation becomes $ u_{n+1}=\rho u_0(1-u_n) $. The equilibrium solutions to this equation is $ u_0=0 $(stable for $ 0\leqslant \rho <1$) and $ u_0=\frac{\rho-1}{\rho} $(stable for $ 1<\rho<3 $). One says that at $ 1 $ there is an \textit{exchange of stability} from one equilibrium solution to the other.
+\end{Example}
+\begin{Definition}
+	\textit{Bifurcation} is the appearance of a new solution at a certain parameter value for a family of differential equations.
+\end{Definition}
+\begin{Definition}
+	If no predictable pattern of solutions exist, the equation is said to be \textit{chaotic}. Chaotic solutions are extremely sensitive to initial conditions.
+\end{Definition}
+\chapter{Second Order ODEs}
+\begin{Definition}
+	A \textit{second order linear equations} is an equation of the form
+	\begin{equation}
+		P(t)y^{\prime\prime}+Q(t)y^\prime+R(t)y=G(t)\nonumber
+	\end{equation}
+	It is said to be \textit{homogeneous} if $ G(t) $ is zero for all $ t $. Since differentiation is linear, the solutions to a homogeneous equation form a vector space.
+\end{Definition}
+\begin{Example}
+	If the functions $ P(t),Q(t),R(t) $ are all constants, the equation becomes
+	\begin{equation}
+		ay^{\prime\prime}+by^\prime+cy=0\nonumber
+	\end{equation}
+	Observe that if $ r $ is a root of the polynomial $ ar^2+br+c $, then $ e^{rt} $ is a solution to the original ODE. The equation $ ar^2+br+c=0 $ is called the \textbf{characteristic equation for} $ ay^{\prime\prime}+by^\prime+cy=0 $.
+\end{Example}
+\begin{Theorem}
+	For the initial value problem
+	\begin{equation}
+		y^{\prime\prime}+p(t)y^\prime+q(t)y=g(t),\qquad y(t_0)=y_0,\qquad y^\prime(t_0)=y^\prime_0\nonumber
+	\end{equation}
+	if $ p,q,g $ are continuous on an open interval $ I $ that contains the point $ t_0 $, then a solution $ y=\phi(t) $ exists and is unique throughout $ I $.
+\end{Theorem}
+\begin{Definition}
+	Let $ L[\phi] $ denote the function on $ I $, which $ \phi(t) $ is $ n $th differentiable, defined as follows
+	\begin{equation}
+		L[\phi]=\sum_{i=1}^{n}f_i(t)\phi^{(i)}\nonumber
+	\end{equation}
+	Then the second order homogeneous ODE can be generally phrased as $ L[\phi](t)=0 $.
+\end{Definition}
+\begin{Definition}
+	The \textit{Wronskian (determinant)} $ W(f_1,f_2,\cdots,f_n) $ for $ n $ $ n-1 $th differentiable functions are
+	\begin{equation}
+		\begin{vmatrix}
+		f_1 &f_2 &\cdots &f_n \\
+		f_1^\prime &f_2^\prime &\cdots &f_n^\prime \\ 
+		\vdots &\vdots &\ddots &\vdots \\
+		f_1^{(n-1)} &f_2^{(n-1)} &\cdots &f_n^{(n-1)}
+		\end{vmatrix}=\det \begin{pmatrix}
+		f_1 &f_2 &\cdots &f_n \\
+		f_1^\prime &f_2^\prime &\cdots &f_n^\prime \\ 
+		\vdots &\vdots &\ddots &\vdots \\
+		f_1^{(n-1)} &f_2^{(n-1)} &\cdots &f_n^{(n-1)}
+		\end{pmatrix}\nonumber
+	\end{equation}
+	The matrix itself is also called the \textit{fundamental matrix}. The solutions to $ n $th homogeneous linear ODEs form a $ n $ dimensional vector space and the Wronskian can be used to determine whether a set of solutions form a basis. Such basis is said to form a \textit{fundamental set of solutions}. The linear combination of the fundamental set of solutions with arbitrary scalars is called the \textit{general solution} of the equation.
+\end{Definition}
+\begin{Theorem}[Abel's Theorem]
+	If $ y_1 $ and $ y_2 $ are solutions of the differential equation
+	\begin{equation}
+		L[y]=y^{\prime \prime}+p(t)y+q(t)y=0\nonumber
+	\end{equation}
+	where $ p $ and $ q $ are continuous on an open interval $ I $, then $ W(y_1,y_2)(t) $ is given by
+	\begin{equation}
+		W(y_1,y_2)(t)=c \exp(-\int p(t)dt)\nonumber
+	\end{equation}
+	where $ c $ is a constant that depends on $ y_1 $ and $ y_2 $, but not on $ t $. Further, $ W(y_1,y_2)(t) $ either is zero for all $ t\in I $(if $ c=0 $ and $ y_1 $ $ y_2 $ are linearly dependent) or else is never zero in $ I $(if $ c \neq 0 $ and $ y_1 $ with $ y_2 $ span all the solutions).
+\end{Theorem}
+\section{Characteristic Equations with Complex Roots or Repeated Roots}
+\begin{Example}
+	Suppose that the roots of the characteristic equation of $ ay^{\prime\prime}+by^\prime+cy=0 $ are $ \lambda\pm \mu i $. Then $ e^{(\lambda+\mu i)t} $ is a solution to the original ODE. From this complex solution one can finds two real solutions. By Euler's Formula
+	\begin{equation}
+		e^{(\lambda+\mu i)t}=e^{\lambda t} e^{(\mu i)t}=e^{\lambda t}(\cos \mu t + i\sin \mu t)\nonumber
+	\end{equation}
+	Since differentiation keeps the constants unchanged and two complex numbers are equal iff both their real part and complex part are equal, the term $ e^{\lambda t}\cos \mu t $ and $ e^{\lambda t}\sin \mu t $ must also satisfy the original ODE as real solutions. Their Wronskian is $ \mu e^{2\lambda t} $, which is always non-zero if $ \mu \neq 0 $(but if $ \mu \neq 0 $, $ \lambda+\mu i $ is real rather than complex). Thus $ e^{\lambda t}\cos \mu t $ and $ e^{\lambda t}\sin \mu t $ form a fundamental set of solution to the ODE.
+\end{Example}
+\begin{Example}
+	Suppose that the repeated root of the characteristic equation of $ y^{\prime\prime}+p(t)y^\prime+q(t)y=0 $ is $ r $. Then clearly $ e^{rx} $ is a solution to this equation. In general, if $ y_1 $ is a solution to this equation, then $ y=y_1 v(t) $ is also a solution if(substituting back into the ODE)
+	\begin{align}
+		y_1^{\prime\prime}+2y_1^\prime v^\prime+y_1 v^{\prime \prime}+p(t)(y_1^\prime + y_1 v^\prime)+q(t)y_1v&=0\nonumber\\
+		v(y_1^{\prime\prime}+p(t)y_1^\prime+q(t)y_1)+v^{\prime\prime}y_1+v^\prime(2y_1^\prime+p(t)y_1)&=0\nonumber\\
+		v^{\prime\prime}y_1+v^\prime(2y_1^\prime+p(t)y_1)&=0\nonumber
+	\end{align}
+	Despite the appearance, the last equation can be viewed as a first order linear(and separable) ODE of $ v^\prime $. Thus solving for $ v^\prime $ and integrating gives the solution $ y_1 v $ to the original ODE. This procedure is called \textbf{reduction of order}.
+\end{Example}
+
+
+
+
+
+
+\end{document}

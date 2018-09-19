@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 AUG 2018 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 SEP 2018 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Abstract Algebra.tex"
-(./Abstract Algebra.tex
+**Ordinary_Differential_Equations.tex
+(./Ordinary_Differential_Equations.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
@@ -1017,8 +1017,8 @@ LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 \c@Theorem=\count140
 \c@Example=\count141
 )
-(./Abstract Algebra.aux)
-\openout1 = `"Abstract Algebra.aux"'.
+(./Ordinary_Differential_Equations.aux)
+\openout1 = `Ordinary_Differential_Equations.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
@@ -1054,10 +1054,9 @@ LaTeX Info: Redefining \ref on input line 43.
 LaTeX Info: Redefining \pageref on input line 43.
 LaTeX Info: Redefining \nameref on input line 43.
 
-(./Abstract Algebra.out) (./Abstract Algebra.out)
+(./Ordinary_Differential_Equations.out) (./Ordinary_Differential_Equations.out)
 \@outlinefile=\write4
-\openout4 = `"Abstract Algebra.out"'.
-
+\openout4 = `Ordinary_Differential_Equations.out'.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1134,369 +1133,215 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-(./Abstract Algebra.toc
+(./Ordinary_Differential_Equations.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 3.
- [3] [4])
+)
 \tf@toc=\write5
-\openout5 = `"Abstract Algebra.toc"'.
+\openout5 = `Ordinary_Differential_Equations.toc'.
 
- [5] [6
+ [3] [4
 
 ]
  1.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 78.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmr.fd
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 78.
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 89.
- [1
+[1
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 114--116
-
- []
-
-[2pdfTeX warning (ext4): destination with the same identifier (name{equation.1.
-1.1}) has been already used, duplicate ignored
+] [2pdfTeX warning (ext4): destination with the same identifier (name{equation.
+1.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.127 \end{Definition}
-                      ]pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.1.1.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.130 	\begin{equation}
-                        [3] [4] [5] [6] [7] [8] [9]pdfTeX warning (ext4): desti
-nation with the same identifier (name{equation.1.5.1}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.378 	\begin{equation}
-                        [10]
-Overfull \hbox (14.49896pt too wide) in paragraph at lines 436--437
-[]\T1/lmr/bx/n/10.95 Definition. []\T1/lmr/m/n/10.95 Let $\OML/lmm/m/it/10.95 i
-[]; i[]; []  ; i[]$\T1/lmr/m/n/10.95 , $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95
- r < n\OT1/lmr/m/n/10.95 )$ \T1/lmr/m/n/10.95 be dis-tinct el-e-ments of $\OML/
-lmm/m/it/10.95 I[] \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/n/10.95 f\OT1/lmr/m/n/10.95
- 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2\OML/lmm/m/it/10.95 ; []  ; n\OMS/l
-msy/m/n/10.95 g$\T1/lmr/m/n/10.95 .
- []
-
-[11] [12]
-LaTeX Font Info:    Try loading font information for U+eus on input line 513.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
-File: ueus.fd 2013/01/14 v3.01 Euler Script
-)
-Overfull \hbox (16.37563pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 1.7.  CATEGORIES: PRODUCTS, COPRODUCTS, AND FREE OBJECTS \T1
-/lmr/m/n/10.95 13
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 542--551
-
- []
-
-[14pdfTeX warning (ext4): destination with the same identifier (name{equation.1
-.7.1}) has been already used, duplicate ignored
+l.109 \end{Theorem}
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{equation.1.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.553 \end{Theorem}
+l.109 \end{Theorem}
                    ]
-Underfull \hbox (badness 10000) in paragraph at lines 578--581
+Underfull \hbox (badness 10000) in paragraph at lines 115--118
 
  []
 
+[3pdfTeX warning (ext4): destination with the same identifier (name{equation.1.
+5.1}) has been already used, duplicate ignored
 
-Overfull \hbox (16.37563pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 1.7.  CATEGORIES: PRODUCTS, COPRODUCTS, AND FREE OBJECTS \T1
-/lmr/m/n/10.95 15
- []
-
-[15] [16]
-Overfull \hbox (30.1226pt too wide) in paragraph at lines 661--662
-[]$[][] \OML/lmm/m/it/10.95 N[]$ \T1/lmr/m/it/10.95 is a nor-mal sub-group of $
-[][] \OML/lmm/m/it/10.95 G[]$ \T1/lmr/m/it/10.95 and $[][] \OML/lmm/m/it/10.95 
-G[]= [][] N[] [] [][] G[]=N[]$\T1/lmr/m/it/10.95 . 
- []
-
-
-Overfull \hbox (30.1226pt too wide) in paragraph at lines 662--663
-[]$[][] \OML/lmm/m/it/10.95 N[]$ \T1/lmr/m/it/10.95 is a nor-mal sub-group of $
-[][] \OML/lmm/m/it/10.95 G[]$ \T1/lmr/m/it/10.95 and $[][] \OML/lmm/m/it/10.95 
-G[]= [][] N[] [] [][] G[]=N[]$\T1/lmr/m/it/10.95 . 
- []
-
-[17] [18]
-Overfull \hbox (31.35399pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 1.9.  FREE GROUPS, FREE PRODUCTS, GENERATORS AND RELATIONS \
-T1/lmr/m/n/10.95 19
- []
-
-[19] [20]
- 2.
-[21
-
-]pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4
-.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.775 	\begin{equation}
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.144 	\begin{equation}
                        pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.781 	\begin{equation}
-                        [22]
- 3.
-[23
-
-]pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1
-.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.832 		\begin{equation}
-                        pdfTeX warning (ext4): destination with the same identi
-fier (name{equation.3.1.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.836 		\begin{equation}
-                        pdfTeX warning (ext4): destination with the same identi
-fier (name{equation.3.1.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.844 	\begin{equation}
-                        [24] [25]
-Overfull \hbox (9.274pt too wide) in paragraph at lines 917--918
-[][]\T1/lmr/bx/it/10.95 Example \T1/lmr/bx/n/10.95 3.2. []\T1/lmr/m/it/10.95 Th
-e cen-ter of a ring $\OML/lmm/m/it/10.95 R$ \T1/lmr/m/it/10.95 is the set $\OML
-/lmm/m/it/10.95 C \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95
- c \OMS/lmsy/m/n/10.95 2 \OML/lmm/m/it/10.95 R\OMS/lmsy/m/n/10.95 j\OML/lmm/m/i
-t/10.95 cr \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 rc[]r \OMS/lmsy/m/n/10.95 2
-
- []
-
-[26] [27] [28pdfTeX warning (ext4): destination with the same identifier (name{
-equation.3.2.1}) has been already used, duplicate ignored
+ier (name{equation.1.5.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1008 \end{Example}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{equation.3.2.1}) has been already used, duplicate ignored
+l.144 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.1.5.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1008 \end{Example}
-                    ]
-Overfull \hbox (13.71094pt too wide) in paragraph at lines 1041--1042
-[]$[][] \OML/lmm/m/it/10.95 R[]$ \T1/lmr/m/it/10.95 is a ring with mul-ti-pli-c
-a-tion de-fined by $\OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 a[]\OMS/lmsy/m/n/1
-0.95 g[]f\OML/lmm/m/it/10.95 a[]\OMS/lmsy/m/n/10.95 g[] \OT1/lmr/m/n/10.95 = \O
-MS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 a[]b[]\OMS/lmsy/m/n/10.95 g[]$\T1/lmr/m/
-it/10.95 ; 
- []
-
-[29]pdfTeX warning (ext4): destination with the same identifier (name{equation.
-3.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1064 	\begin{equation}
-                        pdfTeX warning (ext4): destination with the same identi
-fier (name{equation.3.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1070 	\begin{equation}
-                        pdfTeX warning (ext4): destination with the same identi
-fier (name{equation.3.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1074 	\begin{equation}
-                        pdfTeX warning (ext4): destination with the same identi
-fier (name{equation.3.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1080 	\begin{equation}
-                        pdfTeX warning (ext4): destination with the same identi
-fier (name{equation.3.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1087 	\begin{equation}
-                        
-Overfull \hbox (4.12102pt too wide) in paragraph at lines 1086--1087
-[]\T1/lmr/bx/n/10.95 Corollary. []\T1/lmr/m/it/10.95 If $\OML/lmm/m/it/10.95 A[
-]; A[]; []  ; A[]$ \T1/lmr/m/it/10.95 are ide-als in a ring $\OML/lmm/m/it/10.9
-5 R$\T1/lmr/m/it/10.95 , then there is a monomor-
- []
-
-
-Overfull \hbox (24.45068pt too wide) in paragraph at lines 1096--1097
-[][]\T1/lmr/bx/n/10.95 Theorem 3.2.19. []\T1/lmr/m/it/10.95 The con-gru-ence $\
-OML/lmm/m/it/10.95 ax \OMS/lmsy/m/n/10.95 ^^Q \OML/lmm/m/it/10.95 b[]  n$ \T1/l
-mr/m/it/10.95 has a so-lu-tion iff $\OML/lmm/m/it/10.95 GCD\OT1/lmr/m/n/10.95 (
-\OML/lmm/m/it/10.95 a; n\OT1/lmr/m/n/10.95 )\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/
-10.95 b$\T1/lmr/m/it/10.95 .
- []
-
-[30] [31] [32] [33pdfTeX warning (ext4): destination with the same identifier (
-name{equation.3.4.1}) has been already used, duplicate ignored
+l.144 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.1.5.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1214 \end{Theorem}
-                    ] [34] [35]
-Overfull \hbox (85.61096pt too wide) in paragraph at lines 1298--1299
-[]\T1/lmr/bx/n/10.95 Definition. []\T1/lmr/m/n/10.95 Let $\OML/lmm/m/it/10.95 R
-$ \T1/lmr/m/n/10.95 be a ring. The \T1/lmr/m/it/10.95 de-gree of a nonzero mono
--mial $\OML/lmm/m/it/10.95 ax[]x[] [] x[]inR\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/1
-0.95 x[]; []  ; x[]\OT1/lmr/m/n/10.95 ]$
- []
-
-[36pdfTeX warning (ext4): destination with the same identifier (name{equation.3
-.5.1}) has been already used, duplicate ignored
+l.144 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.1.5.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1324 \end{Corollary}
+l.144 	\begin{equation}
+                       ] [4pdfTeX warning (ext4): destination with the same ide
+ntifier (name{equation.1.5.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.192 	\end{equation}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{equation.1.6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.192 	\end{equation}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{equation.1.6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.192 	\end{equation}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{equation.1.6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.192 	\end{equation}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{equation.1.6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.192 	\end{equation}
+                     ]
+Overfull \hbox (48.68842pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 1.7.  SKETCH OF PROOF OF THE EXISTENCE AND UNIQUENESS THEORE
+M \T1/lmr/m/n/10.95 5
+ []
+
+[5pdfTeX warning (ext4): destination with the same identifier (name{equation.1.
+6.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.219 	 \end{equation}
                       pdfTeX warning (ext4): destination with the same identifi
-er (name{equation.3.6.1}) has been already used, duplicate ignored
+er (name{equation.1.6.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1324 \end{Corollary}
+l.219 	 \end{equation}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.1.7.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.219 	 \end{equation}
+                      ] [6pdfTeX warning (ext4): destination with the same iden
+tifier (name{equation.1.8.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.237 \chapter
+              {Second Order ODEs}]
+ 2.
+[7
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.0.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.282 \end{Definition}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.2.0.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.282 \end{Definition}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.2.0.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.282 \end{Definition}
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.2.0.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.282 \end{Definition}
                       ]pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.3.6.1}) has been already used, duplicate ignored
+ier (name{equation.2.0.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1354 	\begin{equation}
-                        pdfTeX warning (ext4): destination with the same identi
-fier (name{equation.3.6.1}) has been already used, duplicate ignored
+l.285 	\begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.2.0.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1373 	\begin{equation}
-                         [37] [38]
- 4.
-
-Overfull \hbox (13.47063pt too wide) in paragraph at lines 1379--1379
-[]\T1/lmr/bx/n/14.4 Modules, Ho-mo-mor-phisms and Ex-act Se-quences 
+l.289 	\begin{equation}
+                        [8]
+Overfull \hbox (97.35402pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 2.1.  CHARACTERISTIC EQUATIONS WITH COMPLEX ROOTS OR REPEATE
+D ROOTS \T1/lmr/m/n/10.95 9
  []
 
-[39
-
-] [40
-
-]
- 5.
-[41] [42] [43pdfTeX warning (ext4): destination with the same identifier (name{
-equation.5.5.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1481 \chapter
-               {The Structure of Fields}pdfTeX warning (ext4): destination with
- the same identifier (name{equation.5.5.1}) has been already used, duplicate ig
-nored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1481 \chapter
-               {The Structure of Fields}] [44
-
-]
- 6.
-[45] [46
-
-]
- 7.
-[47] [48
-
-]
- 8.
-
-Overfull \hbox (11.7925pt too wide) in paragraph at lines 1499--1499
-[]\T1/lmr/bx/n/14.4 The Prime Rad-i-cal; Prime and Semiprime Rings 
- []
-
-[49] [50
-
-]
- 9.
-[51] [52
-
-]
- 10.
-[53]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 1556.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 1556.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 1556.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1556.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\times' on input line 1556.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1556.
-
-[54] [55]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1620.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1620.
- (./Abstract Algebra.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1620.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1620.
-
-Package rerunfilecheck Info: File `"Abstract Algebra".out' has not changed.
-(rerunfilecheck)             Checksum: 2B27B7B5F49F10C869F6A2D775865F21;5111.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1620.
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 317.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 317.
+ (./Ordinary_Differential_Equations.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 317.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 317.
+Package rerunfilecheck Info: File `Ordinary_Differential_Equations.out' has not
+ changed.
+(rerunfilecheck)             Checksum: DEBDE0331BAFA842546D247673373733;819.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 317.
  ) 
 Here is how much of TeX's memory you used:
- 19767 strings out of 492995
- 370530 string characters out of 6132704
- 437169 words of memory out of 5000000
- 22517 multiletter control sequences out of 15000+600000
- 110781 words of font info for 82 fonts, out of 8000000 for 9000
+ 19081 strings out of 492995
+ 360671 string characters out of 6132704
+ 435262 words of memory out of 5000000
+ 22213 multiletter control sequences out of 15000+600000
+ 73890 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,17n,84p,1256b,1079s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-17/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-d
-ist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
-dvips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/euler/eusm10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
-/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
-lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
-c/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on "Abstract Algebra.pdf" (61 pages, 500810 bytes).
+ 63i,9n,84p,931b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
+e/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2017/texmf-dist/fonts/
+enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
+m/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
+/lmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
+10.pfb>
+Output written on Ordinary_Differential_Equations.pdf (13 pages, 310413 bytes).
+
 PDF statistics:
- 1097 PDF objects out of 1200 (max. 8388607)
- 1003 compressed objects within 11 object streams
- 413 named destinations out of 1000 (max. 500000)
- 597 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

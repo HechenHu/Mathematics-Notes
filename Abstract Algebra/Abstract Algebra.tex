@@ -1140,7 +1140,7 @@ An element $ p $ of $ R $ is \textit{prime} provided that
 A Euclidean ring which is an integral domain is called a \textit{Euclidean domain}.
 \end{Definition}
 \begin{Theorem}
-	An Euclidean domain is a unique factorization domain.
+	Every Euclidean ring $ R $ is a principal ideal ring with identity. Consequently every Euclidean domain is a unique factorization domain.
 \end{Theorem}
 \begin{Example}
 	Let $ \Zahlen[i] $ be $ \{a+bi|a,b \in \Zahlen \} $. $ \Zahlen[i] $ is an integral domain called the domain of Gaussian integers. Clearly $ \Zahlen[i] $ is an Euclidean domain provided $ \varphi(a+bi)=a^2+b^2 $.
@@ -1171,6 +1171,9 @@ If $ R $ has an identity and $ 1_R $ is the greatest common divisor of $ X $, th
 \end{Lemma}
 \begin{Theorem}
 	$ \Zahlen_n $ is a field iff $ n $ is prime.
+\end{Theorem}
+\begin{Theorem}
+	Let $ a $ be an element of the Euclidean ring $ R $. The quotient ring $ R/(a) $ is a field iff $ a $ is irreducible over $ R $.
 \end{Theorem}
 \section{Rings of Quotients and Localization}
 \begin{Definition}
@@ -1365,6 +1368,13 @@ then $ f(x) $ is irreducible over $ \Quoziente $.
 \begin{Example}
 	For any prime $ p $ the polynomial $ \varphi(x) =x^{p-1}+x^{p-1}+\cdots + x + 1$ is irreducible over $ \Quoziente $. This polynomial is called a \textit{cyclotomic polynomial} and can be written $ \varphi(x)=\frac{(x^p-1)}{x-1} $.
 \end{Example}
+\begin{Theorem}
+	Let $ P $ be the ideal $ (p(x)) $ in the polynomial ring of the field $ F[x] $, in which $ p(x) $ has a positive degree. The different elements of $ F[x]/(p(x)) $ are those of the form
+	\begin{equation}
+		P+a_0+a_1 x+\cdots + a_{n-1}x^{n-1}\nonumber
+	\end{equation}
+	where $ a_i \in F $.
+\end{Theorem}
 \chapter{Modules}
 \section{Modules, Homomorphisms and Exact Sequences}
 \section{Free Modules and Vector Spaces}
@@ -1377,10 +1387,91 @@ then $ f(x) $ is irreducible over $ \Quoziente $.
 
 \chapter{Fields and Galois Theory}
 \section{Field Extensions}
+\begin{Definition}
+	A field $ F $ is said to be an \textit{extension field} of $ K $(or simply an \textit{extension} of $ k $) provided that $ K $ is a subfield of $ F $.
+\end{Definition}
+If $ F $ is an extension field of $ K $, $ F $ is a vector space over $ K $. The \textit{dimension} of the $ K $-vector space $ F $ will be denoted by $ [F:K] $. $ F $ is said to be a \textit{finite dimensional extension} or \textit{infinite dimensional extension} of $ K $ according as $ [F:K] $ is finite or infinite.
+\begin{Theorem}
+	Let $ F $ be an extension field of $ E $ and $ E $ an extension field of $ K $. Then $ [F:K]=[F:E][E:K] $. $ [F:K] $ is finite iff $ [F:E] $ and $ [E:K] $ are finite.
+\end{Theorem}
+\begin{Example}
+	$ [\Complex:\Real]=2 $.
+\end{Example}
+\begin{Example}
+	If $ p(x) $ is irreducible over the field $ F $, then $ K=F[x]/(p(x)) $ is an extension field of $ F $. Furthermore $ [K:F]=\deg p(x) $.
+\end{Example}
+\textbf{[Incomplete]}
+\begin{Definition}
+	Let $ F $ be an extension of $ K $. An element $ u $ of $ F $ is said to be \textit{algebraic} over $ K $ if $ u $ is a root of some nonzero polynomial $ f\in K[x] $. Otherwise $ u $ is \textit{transcendental} over $ K $. $ F $ is called an \textit{algebraic extension} of $ K $ if every element of $ F $ is algebraic over $ K $. $ F $ is called a \textit{transcendental extension} if at least one element of $ F $ is transcendental over $ K $.
+\end{Definition}
+\begin{Example}
+	If $ K $ is a field, then $ K[x_1,\cdots,x_n] $ is an integral domain. The quotient field of $ K[x_1,\cdots,x_n] $ is denoted $ K(x_1,\cdots,x_n) $, which consists of all fractions of elements in $ K[x_1,\cdots,x_n] $. $ K(x_1,\cdots,x_n) $ is called the \textit{field of rational fractions} in $ x_1,\cdots,x_n $ over $ K $. Every element of $ K(x_1,\cdots,x_n) $ is transcendental over $ K $.
+\end{Example}
+\begin{Theorem}
+	If $ F $ is an extension field of $ K $ and $ u\in F $ is algebraic over $ K $, then
+	\begin{enumerate}
+		\item $ K(u)=K[u] $;
+		\item $ K(u)\cong F[x]/(p(x)) $, where $ f\in K[x] $ is an irreducible monic polynomial of degree $ n\geqslant 1 $ uniquely determined by the conditions that $ f(u)=0 $ and $ g(u)=0 $($ g\in K[x] $) iff $ f $ divides $ g $;
+		\item $ [K(u):K]=n $;
+		\item $ \{1_K,u,u^2,\cdots,u^{n-1} \} $ is a basis of the vector space $ K(u) $ over $ K $;
+	\end{enumerate}
+\end{Theorem}
+\begin{Lemma}
+	Let $ p(x) $ be an irreducible polynomial over the field $ F $. Then $ F $ has a finite extension field $ K $ in which $ p(x) $ has a root.
+\end{Lemma}
+\begin{Theorem}
+	If $ f(x) $ is any polynomial over the field $ F $, there is an extension field $ K $ of $ F $ over which $ f(x) $ splits into linear factors.
+\end{Theorem}
+\begin{Proposition}
+	If $ [K:F] =2$ where $ F \subset \Quoziente $, then $ K=F(\sqrt{\gamma}) $ for some $ \gamma \in F $.
+\end{Proposition}
+\begin{Proposition}
+	If $ F $ is an finite extension of $ \Real $, then $ F $ is isomorphic to $ \Real $ or $ \Complex $.
+\end{Proposition}
+\begin{Example}
+	$ [R:\Quoziente] $ is infinite.
+\end{Example}
 \section{The Fundamental Theorem}
 \section{Splitting Fields, Algebraic Closure and Normality}
 \section{The Galois Group of a Polynomial}
 \section{Finite Fields}
+\begin{Proposition}
+	The characteristic of an integral domain is either zero or prime.
+\end{Proposition}
+\begin{Corollary}
+	If $ F $ is a finite field, then $ \Char F=p\neq 0 $ for some prime $ p $ and $ |F|=p^n $ for some integer $  n\geqslant 1 $.
+\end{Corollary}
+\begin{Theorem}
+	If $ F $ is a field and $ G $ is a finite subgroup of the multiplicative group of nonzero elements of $ F $, then $ G $ is a cyclic group.
+\end{Theorem}
+\begin{Proposition}
+	If the field $ F $ has prime characteristic $ p $, then $ F $ contains a subfield isomorphic to $ \Zahlen_p $. If the field $ F $ has zero characteristic, then $ F $ contains a subfield isomorphic to the rational numbers.
+\end{Proposition}
+\begin{Definition}
+	A finite field with $ p^m $ elements is called a \textit{Galois field} of order $ p^m $ and is denoted by $ GF(p^m) $. It can be shown that for a given prime $ p $ and positive integer $ m $, a Galois field $ GF(p^m) $ exists and that all fields of order $ p^m $ are isomorphic. Moreover
+	\begin{equation}
+		GF(p^m)=\Zahlen_p[x]/(q(x))\nonumber
+	\end{equation}
+	where $ q(x) $ is a degree $ m $ polynomial irreducible in $ \Zahlen_p[x] $.
+\end{Definition}
+\begin{Definition}
+	Elements of a Galois field $ GF(p^m) $ can be written as
+	\begin{equation}
+		\{a_0+a_i\alpha+\cdots+a_{m-1}\alpha^{m-1}|a_i\in\Zahlen_p \}\nonumber
+	\end{equation}
+	where $ \alpha $ is a root of a polynomial $ q(x) $ of degree $ m $ irreducible over $ \Zahlen_p $. With judicious choice of $ \alpha $ the elements of $ GF(p^m) $ can be written as 
+	\begin{equation}
+		\{0,1,\alpha,\alpha^2,\alpha^3,\cdots,\alpha^{p^m-2} \}\quad \text{where}\quad \alpha^{p^m-1}=1\nonumber
+	\end{equation}
+	The element $ \alpha $ is called a \textit{primitive element} of $ GF(p^m) $. Equivalently a generator of the cyclic group $ (GF(q)^\ast,\cdot) $ is called a \textit{primitive element of $ GF(q) $ }.
+\end{Definition}
+\begin{Definition}
+	An irreducible polynomial $ g(x) $ of degree $ m $ over $ \Zahlen_p $ is called a \textit{primitive polynomial} if $ g(x)|x^k-1 $ for $ k=p^m-1 $ and for no smaller $ k $.
+\end{Definition}
+\begin{Proposition}
+	The irreducible polynomial $ g(x)\in \Zahlen_p[x] $ is primitive iff $ x $ is a primitive element in $ \Zahlen_p[x]/(g(x)) =GF(p^m)$.
+\end{Proposition}
+
 \section{Separability}
 \section{Cyclic Extensions}
 \section{Cyclotomic Extensions}
