@@ -10,3 +10,5 @@
 \contentsline {section}{\numberline {1.8}First Order Difference Equations}{5}{section.1.8}
 \contentsline {chapter}{\numberline {2}Second Order ODEs}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Characteristic Equations with Complex Roots or Repeated Roots}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Undetermined Coefficients}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Variation of Parameters}{9}{section.2.3}

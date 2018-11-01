@@ -308,8 +308,44 @@ It is not necessary that $ \phi_0(t)=0 $ -- it's just the simplest choice of fun
 	\end{align}
 	Despite the appearance, the last equation can be viewed as a first order linear(and separable) ODE of $ v^\prime $. Thus solving for $ v^\prime $ and integrating gives the solution $ y_1 v $ to the original ODE. This procedure is called \textbf{reduction of order}.
 \end{Example}
-
-
+\section{Undetermined Coefficients}
+\begin{Theorem}
+	Consider the non-homogeneous equation with continuous coefficients on some interval $ I $
+	\begin{equation}
+		L[y]=y^{\prime \prime}+p(t)y^\prime + q(t)y=g(t)\nonumber
+	\end{equation}
+	whose corresponding homogeneous equation is
+	\begin{equation}
+		L[y]=y^{\prime \prime}+p(t)y^\prime + q(t)y=0\nonumber
+	\end{equation}
+	If $ Y_1 $ and $ Y_2 $ are solutions of the non-homogeneous equation, then $ Y_1-Y_2 $ is a solution of the corresponding homogeneous equation.
+\end{Theorem}
+\begin{Theorem}
+	Consider the non-homogeneous equation $ L[y]=g(t) $. If $ Y $ is a solution of it and $ y_1 $, $ y_2 $ is a fundamental set of solutions to the corresponding homogeneous equation $ L[y]=0 $, then the general solutions of $ L[y]=g(t) $ is $ c_1 y_1 + c_2 y_2+Y $.
+\end{Theorem}
+Let $ L[y]=g(t) $, where $ g(t)=g_1(t)+g_2(t)+\cdots + g_n(t) $ and all $ g_i(t) $ only involves the sum and product of exponential, sines, cosines, and polynomials. The following table gives the general solution $ Y_i(t) $ of $ L[y]=g_i(t) $.
+\begin{tabular}{|c|c|}
+	\hline
+	$ g_i(t) $ &$ Y_i(t) $\\
+	\hline
+	$ P^a_n(t)=a_0 t^n+a_1 t^{n-1}+\cdots + a_n $ &$ t^s P_n^A(t) $\\
+	\hline
+	$ P^a_n(t)e^{\alpha t} $ &$ t^s P_n^A(t)e^{\alpha t} $\\
+	\hline
+	$ P^a_n(t)e^{\alpha t}\begin{cases}
+	\sin \beta t\\
+	\cos \beta t
+	\end{cases} $ &$ t^se^{\alpha t}[P_n^A(t)\cos \beta t+P_n^B(t) \sin \beta t] $\\
+	\hline
+\end{tabular}\newpara
+where $ s $ is the smallest non-negative integer $ 0\leqslant s \leqslant 2 $ that will ensure that no term in $ Y_i(t) $ is a solution of the corresponding homogeneous equation. Equivalently, for the three cases, $ s $ is the number of times $ 0 $ is a root of the characteristic equation, $ \alpha $ is a root of the characteristic equation, and $ \alpha + i\beta $ is a root of the characteristic equation, respectively.
+\section{Variation of Parameters}
+\begin{Theorem}
+	If the second order non-homogeneous equation $ L[y]=g(t) $ have continuous coefficients on an open interval $ I $ containing $ t_0 $, and if $ y_1 $ and $ y_2 $ are a fundamental set of solutions of $ L[y]=0 $, then a particular solution to $ L[y]=0 $ is
+	\begin{equation}
+		Y(t)=-y_1(t)\int_{t_0}^{t}\frac{y_2(s)g(s)}{W(y_1,y_2)(s)} ds + y_2(t)\int_{t_0}^{t}\frac{y_1(s)g(s)}{W(y_1,y_2)(s)} ds\nonumber
+	\end{equation}
+\end{Theorem}
 
 
 

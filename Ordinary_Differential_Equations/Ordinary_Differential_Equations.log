@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 SEP 2018 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 SEP 2018 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1292,30 +1292,35 @@ ier (name{equation.2.0.1}) has been already used, duplicate ignored
                    \relax 
 l.289 	\begin{equation}
                         [8]
-Overfull \hbox (97.35402pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 2.1.  CHARACTERISTIC EQUATIONS WITH COMPLEX ROOTS OR REPEATE
-D ROOTS \T1/lmr/m/n/10.95 9
+Underfull \hbox (badness 10000) in paragraph at lines 326--342
+
  []
 
-[9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 317.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 317.
+[9pdfTeX warning (ext4): destination with the same identifier (name{equation.2.
+2.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.353 \end{document}
+                    ]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
  (./Ordinary_Differential_Equations.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 317.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 317.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
 Package rerunfilecheck Info: File `Ordinary_Differential_Equations.out' has not
  changed.
-(rerunfilecheck)             Checksum: DEBDE0331BAFA842546D247673373733;819.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 317.
+(rerunfilecheck)             Checksum: 9DF2EEDAE7A11FFE70E531832CB42120;961.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
  ) 
 Here is how much of TeX's memory you used:
- 19081 strings out of 492995
- 360671 string characters out of 6132704
+ 19090 strings out of 492995
+ 360786 string characters out of 6132704
  435262 words of memory out of 5000000
- 22213 multiletter control sequences out of 15000+600000
+ 22215 multiletter control sequences out of 15000+600000
  73890 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,9n,84p,931b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,14n,84p,931b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
 e/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/texmf-d
@@ -1337,11 +1342,11 @@ pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 /lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.p
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 10.pfb>
-Output written on Ordinary_Differential_Equations.pdf (13 pages, 310413 bytes).
+Output written on Ordinary_Differential_Equations.pdf (13 pages, 315362 bytes).
 
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
